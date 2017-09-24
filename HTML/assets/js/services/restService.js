@@ -23,7 +23,6 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
             //             return $q.reject(errResponse);
             //         }
             //     );
-            console.log(username + " "+ password + " login");
             $http({
                 method: 'POST',
                 url: login,
@@ -35,7 +34,11 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
             }).then(
                 function (response) {
                 console.log(response.data);
-            });
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+            );
         },
 
         fetchTshirt: function(code) {
