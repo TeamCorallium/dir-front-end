@@ -32,6 +32,7 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                 },
                 data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
             }).then(
+                console.log("Entra al then");
                 function (response) {
                 console.log(response.data);
                 },
