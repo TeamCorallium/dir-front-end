@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('RestService', ['$http', '$q','$cookies', function($http, $q, $cookies) {
+app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', function($http, $q, $cookies, $httpParamSerializer) {
 
     var tshirt = 'http://www.dir.com/tshirts/';
     var users = 'http://www.dir.com/users/';
@@ -31,13 +31,11 @@ app.factory('RestService', ['$http', '$q','$cookies', function($http, $q, $cooki
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Cookie': 'csrftoken='+$cookies.get('csrftoken')
                 },
-                transformRequest: function(obj) {
-                    var str = [];
-                    for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {username: username, password: password, csrfmiddlewaretoken:$cookies.get('csrftoken')} }).success(
+                // transformRequest: $httpParamSerializer,
+                // transformResponse: function (x) {
+                //   return angular.fromJson(angular.fromJson(x));
+                // },
+                data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')} }).success(
                     function (response) {
                 console.log(response);
             }).error(
