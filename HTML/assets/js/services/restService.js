@@ -31,10 +31,8 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Cookie': 'csrftoken='+$cookies.get('csrftoken')
                 },
-                data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')} }).success(
-                    function (response) {
-                console.log(response);
-            }).error(
+                data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(
                 function (response) {
                 console.log(response);
             });
