@@ -27,14 +27,17 @@ app.factory('RestService', ['$http', '$q','$cookies', function($http, $q, $cooki
             $http({
                 method: 'POST',
                 url: login,
-                headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'Cookie': 'csrftoken='+$cookies.get('csrftoken')
+                },
                 transformRequest: function(obj) {
                     var str = [];
                     for(var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {username: username, password: password} }).success(
+                data: {username: username, password: password, csrfmiddlewaretoken:$cookies.get('csrftoken')} }).success(
                     function (response) {
                 console.log(response);
             }).error(
