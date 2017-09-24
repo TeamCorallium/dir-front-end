@@ -32,9 +32,9 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                     'Cookie': 'csrftoken='+$cookies.get('csrftoken')
                 },
                 data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
-            }).success(
+            }).then(
                 function (response) {
-                console.log(response);
+                console.log(response.data);
             });
         },
 
