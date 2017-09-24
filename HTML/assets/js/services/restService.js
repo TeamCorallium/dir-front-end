@@ -37,7 +37,7 @@ app.factory('RestService', ['$http', '$q','$cookies', function($http, $q, $cooki
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {username: username, password: password, csrfmiddlewaretoken:$cookies.get('csrftoken')} }).success(
+                data: {username: username, password: password, csrfmiddlewaretoken: $cookies.get('csrftoken')} }).success(
                     function (response) {
                 console.log(response);
             }).error(
