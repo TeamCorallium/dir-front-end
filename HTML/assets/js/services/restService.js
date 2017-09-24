@@ -31,10 +31,6 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'Cookie': 'csrftoken='+$cookies.get('csrftoken')
                 },
-                // transformRequest: $httpParamSerializer,
-                // transformResponse: function (x) {
-                //   return angular.fromJson(angular.fromJson(x));
-                // },
                 data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')} }).success(
                     function (response) {
                 console.log(response);
