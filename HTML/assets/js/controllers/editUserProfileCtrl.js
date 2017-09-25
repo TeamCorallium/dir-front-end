@@ -83,7 +83,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             }
         };
 
-        var getSnippets = function (urls) {
+        $scope.getSnippets = function (urls) {
             for (var i=0; i<urls.length; i++){
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
@@ -124,7 +124,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 }
                 return lParens + "<a href='" + url + "'>" + url + "</a>" + rParens;
             });
-        }
+        };
 
         if ($cookies.get('sessionid') && $cookies.get('username')){
             $scope.getUser($cookies.get('username'));
