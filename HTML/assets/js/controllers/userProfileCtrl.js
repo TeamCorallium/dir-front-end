@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('UserProfileCtrl',["$scope", "$stateParams", "RestService", "$state",
-    function ($scope, $stateParams,RestService, $state) {
+app.controller('UserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies",
+    function ($scope, $stateParams,RestService, $state, $cookies) {
 
         $scope.user = {
             username: '',
@@ -36,7 +36,12 @@ app.controller('UserProfileCtrl',["$scope", "$stateParams", "RestService", "$sta
                 );
         };
 
-        $scope.getTshirts();
+        if ($cookies.get('sessionid') == undefined){
+            $scope.getTshirts();
+        } else {
+            getUser($rootScope.userdata.username);
+        }
+
 
         var getUser = function (username) {
             RestService.fetchUserByUser(username)
