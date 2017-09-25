@@ -9,7 +9,8 @@ app.run(['$rootScope','$cookies',
     function ($rootScope, $cookies) {
 
         $rootScope.userdata = {
-            username: ''
+            username: '',
+            connected: false
         };
 
         if($cookies.get('username') != undefined)
@@ -17,9 +18,11 @@ app.run(['$rootScope','$cookies',
 
         $rootScope.$on('connected',function (event, data) {
             $rootScope.userdata.username = $cookies.get('username');
+            $rootScope.userdata.connected = true;
         });
 
-        $rootScope.$on('removeusername',function (event, data) {
+        $rootScope.$on('logout',function (event, data) {
             $rootScope.userdata.username = '';
+            $rootScope.userdata.connected = false;
         });
     }]);

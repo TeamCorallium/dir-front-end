@@ -6,8 +6,6 @@
 app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
-        $scope.connected = false;
-
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl('http://www.dir.com/api-auth/login/?next=/')
                 .then(
@@ -28,7 +26,6 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         };
 
         $rootScope.$on('connected',function (event, data) {
-            $scope.connected = true;
             $('#errorBox').hide();
             $('#myModal').modal('hide');
         });
@@ -36,12 +33,11 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         $scope.logout = function () {
             $cookies.remove("sessionid",{path: '/'});
             $cookies.remove("username",{path: '/'});
-            $rootScope.$broadcast('removeusername');
-            $scope.connected = false;
+            $rootScope.$broadcast('logout');
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
             console.log('error al conectarse');
             $('#errorBox').show();
-        })
+        });
     }]);
