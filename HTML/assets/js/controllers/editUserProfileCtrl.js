@@ -128,7 +128,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         };
 
         if ($cookies.get('username')){
-            console.log("llega aqui");
             $scope.getUser($cookies.get('username'));
         } else {
             $('#myModal').modal('show');
