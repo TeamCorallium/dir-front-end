@@ -39,7 +39,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 if (result['users'] != undefined && $cookies.get('sessionid')!= undefined) {
                     $rootScope.$broadcast('connected',username);
                 } else {
-                    console.log(" error error");
+                    $rootScope.$broadcast('wrongLogin',username);
                 }
             }).error(function(response){
                 console.log("Entra al error");

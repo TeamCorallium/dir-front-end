@@ -39,4 +39,9 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
             $rootScope.userdata.username = '';
             $scope.connected = false;
         };
+
+        $rootScope.$on('wrongLogin',function (event, data) {
+            console.log('error al conectarse');
+            $('#errorBox').show();
+        })
     }]);
