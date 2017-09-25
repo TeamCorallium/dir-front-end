@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$http",
-    function ($scope, RestService, $state, $rootScope, $http) {
+app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$cookies',
+    function ($scope, RestService, $state, $rootScope, $cookies) {
 
         $scope.connected = false;
 
@@ -32,6 +32,10 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$ht
             $scope.connected = true;
             $('#myModal').modal('hide');
             $rootScope.userdata.username = data;
-            console.log(data + " data " + $rootScope.userdata.username);
         });
+
+        $scope.logout = function () {
+            $cookies.remove('sessionid');
+            $rootScope.userdata.username = '';
+        };
     }]);
