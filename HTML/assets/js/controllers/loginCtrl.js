@@ -6,7 +6,7 @@
 app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$http",
     function ($scope, RestService, $state, $rootScope, $http) {
 
-    $scope.connected = false;
+        $scope.connected = false;
 
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl('http://www.dir.com/api-auth/login/?next=/')
@@ -28,10 +28,10 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$ht
         };
 
         $rootScope.$on('connected',function (event, data) {
-           console.log('se conecto');
+            console.log('se conecto');
             $scope.connected = true;
             $('#myModal').modal('hide');
             $rootScope.userdata.username = data;
-            console.log(data + " data");
+            console.log(data + " data " + $rootScope.userdata.username);
         });
     }]);
