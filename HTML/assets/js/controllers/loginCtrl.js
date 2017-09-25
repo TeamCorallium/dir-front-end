@@ -31,6 +31,6 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$ht
            console.log('se conecto');
             $scope.connected = true;
             $('#myModal').modal('hide');
-            $rootScope.user.username = data;
+            $rootScope.userdata.username = data;
         });
     }]);
