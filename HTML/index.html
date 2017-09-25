@@ -50,12 +50,7 @@
 						<div class="navbar-collapse collapse inline margin-left-0">
                             <a class="margin-top-10 text-white" ui-sref="home">&#60;DIR&#62;</a>
 							<ul class="nav navbar-nav navbar-right">
-								<li>
-									<a><i class="ti-shopping-cart"></i> Buy </a>
-								</li>
-								<li>
-									<a><i class="ti-email"></i> Inbox </a>
-								</li>
+
 								<li class="dropdown">
 									<a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
                                         <i class="ti-user"></i>  User </a>
@@ -65,6 +60,12 @@
 										<li>
 											<a ui-sref="profile" ng-show="connected"> My Profile</a>
 										</li>
+                                        <li>
+                                            <a><i class="ti-email" ng-show="connected"></i> Inbox </a>
+                                        </li>
+                                        <li>
+                                            <br>
+                                        </li>
 										<li>
 											<a data-toggle="modal" data-target="#myModal" ng-hide="connected"> Log In</a>
 										</li>
@@ -74,7 +75,7 @@
 									</ul>
 								</li>
                                 <li>
-                                    <a ui-sref="home"><i class="ti-home"></i> Home </a>
+                                    <a><i class="ti-shopping-cart"></i> Buy </a>
                                 </li>
 							</ul>
 							<!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
@@ -125,9 +126,6 @@
                                                 <input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
                                             </div>
                                             <div class="alert alert-danger" id="errorBox" hidden>
-                                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                                    <span aria-hidden="true">×</span>
-                                                </button>
                                                 Wrong username or password. Sorry, try again.
                                             </div>
                                             <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>

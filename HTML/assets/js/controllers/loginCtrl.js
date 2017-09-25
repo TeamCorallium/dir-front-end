@@ -39,7 +39,6 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
             $cookies.remove("sessionid",{path: '/'});
             $rootScope.userdata.username = '';
             $scope.connected = false;
-            $('#errorBox').hide();
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
