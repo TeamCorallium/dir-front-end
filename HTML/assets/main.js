@@ -5,8 +5,8 @@
 
 var app = angular.module('dirApp',['pulloverDir']);
 
-app.run(['$rootScope',
-    function ($rootScope) {
+app.run(['$rootScope','$cookies',
+    function ($rootScope, $cookies) {
 
         $rootScope.userdata = {
             username: ''
