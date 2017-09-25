@@ -38,6 +38,7 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
             }).success(function (result) {
                 // console.log(result);
                 // console.log("Entra al response");
+                console.log($cookies.get('sessionid'));
                 if (result['users'] != undefined && $cookies.get('sessionid')!= undefined) {
                     return true;
                 } else {
