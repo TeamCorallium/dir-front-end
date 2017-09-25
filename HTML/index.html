@@ -57,17 +57,19 @@
 									<a><i class="ti-email"></i> Inbox </a>
 								</li>
 								<li class="dropdown">
-									<a data-toggle="dropdown" href="#" class="dropdown-toggle">
+									<a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
                                         <i class="ti-user"></i>  User </a>
+                                    <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username != ''">
+                                        <i class="ti-user"></i>  {{user.username}} </a>
 									<ul class="dropdown-menu">
 										<li>
 											<a ui-sref="profile"> My Profile</a>
 										</li>
 										<li>
-											<a data-toggle="modal" data-target="#myModal"> Log In</a>
+											<a data-toggle="modal" data-target="#myModal" ng-hide="connected"> Log In</a>
 										</li>
                                         <li>
-                                            <a data-toggle="modal"> Log Out</a>
+                                            <a ng-show="connected"> Log Out</a>
                                         </li>
 									</ul>
 								</li>
@@ -102,9 +104,9 @@
                     <div class="modal-dialog modal-sm">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <button type="button" class="close" data-dismiss="modal">
+                                <a type="button" class="close" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
-                                </button>
+                                </a>
                                 <ul class="nav nav-tabs">
                                     <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
                                     <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>

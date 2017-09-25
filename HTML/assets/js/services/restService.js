@@ -5,7 +5,6 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
     var tshirt = 'http://www.dir.com/tshirts/';
     var users = 'http://www.dir.com/users/';
     var login = 'http://www.dir.com/api-auth/login/';
-    // var token = 'http://www.dir.com/api-auth/login/?next=/';
 
     return {
         getCookie: function (name) {
@@ -37,15 +36,17 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                 },                
                 data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
             }).success(function (result) {
-                console.log(result);
-                console.log("Entra al response");
-                if (result['users'] != undefined) {
-                    console.log("ok ok");
+                // console.log(result);
+                // console.log("Entra al response");
+                if (result['users'] != undefined && $cookies.get('sessionid')!= undefined) {
+                    return true;
                 } else {
                     console.log(" error error");
+                    return false;
                 }
             }).error(function(response){
                 console.log("Entra al error");
+                return false;
             });
         },
 

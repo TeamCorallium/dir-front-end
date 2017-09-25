@@ -8,4 +8,8 @@ var app = angular.module('dirApp',['pulloverDir']);
 app.run(['$rootScope',
     function ($rootScope) {
 
+    $rootScope.userdata = {
+        username: ''
+    }
+
     }]);
