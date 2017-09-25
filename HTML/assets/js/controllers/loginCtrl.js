@@ -37,5 +37,6 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         $scope.logout = function () {
             $cookies.remove('sessionid');
             $rootScope.userdata.username = '';
+            $scope.connected = false;
         };
     }]);
