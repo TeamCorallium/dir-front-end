@@ -5,7 +5,7 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
     var tshirt = 'http://www.dir.com/tshirts/';
     var users = 'http://www.dir.com/users/';
     var login = 'http://www.dir.com/api-auth/login/';
-    var token = 'http://www.dir.com/api-auth/login/?next=/';
+    // var token = 'http://www.dir.com/api-auth/login/?next=/';
 
     return {
         getCookie: function (name) {
@@ -77,18 +77,18 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                 );
         },
 
-        fetchAllUsers: function() {
-            return $http.get(users)
-                .then(
-                    function(response){
-                        return response.data;
-                    },
-                    function(errResponse){
-                        console.error('Error while fetching all users');
-                        return $q.reject(errResponse);
-                    }
-                );
-        },
+        // fetchAllUsers: function() {
+        //     return $http.get(users)
+        //         .then(
+        //             function(response){
+        //                 return response.data;
+        //             },
+        //             function(errResponse){
+        //                 console.error('Error while fetching all users');
+        //                 return $q.reject(errResponse);
+        //             }
+        //         );
+        // },
         //
         // fetchConnectedUsers: function(userId) {
         //     return $http.get(serverUrl + 'connectedUsers/' + userId)
