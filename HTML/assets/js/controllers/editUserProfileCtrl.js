@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state",
-    function ($scope, $stateParams,RestService, $state) {
+app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies",
+    function ($scope, $stateParams,RestService, $state, $cookies) {
 
         $scope.user = {
             username: '',
@@ -20,25 +20,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             snippets: []
         };
 
-        $scope.getTshirts = function () {
-            RestService.fetchTshirt($stateParams.id)
-                .then(
-                    function (data) {
-                        if (data.length > 0){
-                            getUser(data[0].owner);
-                        } else {
-                            console.log("t-shirt no exists");
-                        }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
-
-        $scope.getTshirts();
-
-        var getUser = function (username) {
+        $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
@@ -50,10 +32,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             $scope.user.email = data[0].email;
 
                             if (data[0].profiles.length > 0) {
-                                getProfile(data[0].profiles[0]);
+                                $scope.getProfile(data[0].profiles[0]);
                             }
-                            getTshirts(data[0].tshirts);
-                            getSnippets(data[0].snippets);
+                            $scope.getTshirts(data[0].tshirts);
+                            $scope.getSnippets(data[0].snippets);
 
                         } else {
                             //    Show Autentication
@@ -66,7 +48,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 );
         };
 
-        var getProfile = function (url) {
+        $scope.getProfile = function (url) {
             RestService.fetchObjectByUrl(url)
                 .then(
                     function (data) {
@@ -87,7 +69,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 );
         };
 
-        var getTshirts = function (urls) {
+        $scope.getTshirts = function (urls) {
             for (var i=0; i<urls.length; i++){
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
@@ -142,5 +124,11 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 }
                 return lParens + "<a href='" + url + "'>" + url + "</a>" + rParens;
             });
+        }
+
+        if ($cookies.get('sessionid') && $cookies.get('username')){
+            $scope.getUser($cookies.get('username'));
+        } else {
+            $('#myModal').modal('show');
         }
     }]);
