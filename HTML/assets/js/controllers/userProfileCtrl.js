@@ -25,7 +25,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 .then(
                     function (data) {
                         if (data.length > 0){
-                            getUser(data[0].owner);
+                            $scope.getUser(data[0].owner);
                         } else {
                             $('#myModal').modal('show');
                         }
@@ -36,14 +36,14 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 );
         };
 
-        if ($cookies.get('sessionid') == undefined){
+        if ($cookies.get('sessionid') == undefined && $cookies.get('username')){
             $scope.getTshirts();
         } else {
-            getUser($rootScope.userdata.username);
+            $scope.getUser($cookies.get('username'));
         }
 
 
-        var getUser = function (username) {
+        $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {

@@ -28,16 +28,15 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         };
 
         $rootScope.$on('connected',function (event, data) {
-            console.log('se conecto');
             $scope.connected = true;
             $('#errorBox').hide();
             $('#myModal').modal('hide');
-            $rootScope.userdata.username = data;
         });
 
         $scope.logout = function () {
             $cookies.remove("sessionid",{path: '/'});
-            $rootScope.userdata.username = '';
+            $cookies.remove("username",{path: '/'});
+            $rootScope.$broadcast('removeusername');
             $scope.connected = false;
         };
 
