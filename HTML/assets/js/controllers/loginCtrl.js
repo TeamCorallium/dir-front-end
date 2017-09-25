@@ -24,14 +24,13 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope","$ht
         }
 
         $scope.loginModal = function (username, pass) {
-            if (RestService.login(username,pass)){
-                console.log("se conecto");
-                $scope.connected = true;
-                $('#myModal').modal('hide');
-                $rootScope.user.username = username;
-            } else {
-                console.log("no se conecto");
-                $scope.connected = false;
-            }
+            RestService.login(username,pass);
         };
+
+        $rootScope.$on('connected',function (event, data) {
+           console.log('se conecto');
+            $scope.connected = true;
+            $('#myModal').modal('hide');
+            $rootScope.user.username = data;
+        });
     }]);

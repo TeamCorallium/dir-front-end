@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', function($http, $q, $cookies, $httpParamSerializer) {
+app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', function($rootScope,$http, $q, $cookies, $httpParamSerializer) {
 
     var tshirt = 'http://www.dir.com/tshirts/';
     var users = 'http://www.dir.com/users/';
@@ -40,14 +40,12 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                 // console.log("Entra al response");
                 console.log($cookies.get('sessionid'));
                 if (result['users'] != undefined && $cookies.get('sessionid')!= undefined) {
-                    return true;
+                    $rootScope.$broadcast('connected',username);
                 } else {
                     console.log(" error error");
-                    return false;
                 }
             }).error(function(response){
                 console.log("Entra al error");
-                return false;
             });
         },
 
