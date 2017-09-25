@@ -56,6 +56,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                         } else {
                             //    Show Autentication
                             console.log("Show Autentication");
+                            $('#myModal').modal('show');
                         }
                     },
                     function (errResponse) {

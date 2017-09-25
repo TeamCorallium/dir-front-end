@@ -23,6 +23,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
 
         $scope.loginModal = function (username, pass) {
             RestService.login(username,pass);
+            $state.go('profile');
         };
 
         $rootScope.$on('connected',function (event, data) {
