@@ -30,6 +30,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         $rootScope.$on('connected',function (event, data) {
             console.log('se conecto');
             $scope.connected = true;
+            $('#errorBox').hide();
             $('#myModal').modal('hide');
             $rootScope.userdata.username = data;
         });
@@ -38,6 +39,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
             $cookies.remove("sessionid",{path: '/'});
             $rootScope.userdata.username = '';
             $scope.connected = false;
+            $('#errorBox').hide();
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
