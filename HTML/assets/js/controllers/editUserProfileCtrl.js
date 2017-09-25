@@ -40,6 +40,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                         } else {
                             //    Show Autentication
                             console.log("Show Autentication");
+                            $('#myModal').modal('show');
                         }
                     },
                     function (errResponse) {
@@ -126,7 +127,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             });
         };
 
-        if ($cookies.get('sessionid') && $cookies.get('username')){
+        if ($cookies.get('username')){
             $scope.getUser($cookies.get('username'));
         } else {
             $('#myModal').modal('show');
