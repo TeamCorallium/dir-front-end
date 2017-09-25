@@ -23,18 +23,19 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
 
         $scope.loginModal = function (username, pass) {
             RestService.login(username,pass);
-            $state.go('profile');
         };
 
         $rootScope.$on('connected',function (event, data) {
             $('#errorBox').hide();
             $('#myModal').modal('hide');
+            $state.go('profile');
         });
 
         $scope.logout = function () {
             $cookies.remove("sessionid",{path: '/'});
             $cookies.remove("username",{path: '/'});
             $rootScope.$broadcast('logout');
+            $state.go('home');
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
