@@ -13,8 +13,10 @@ app.run(['$rootScope','$cookies',
             connected: false
         };
 
-        if($cookies.get('username') != undefined)
+        if($cookies.get('username') != undefined){
             $rootScope.userdata.username = $cookies.get('username');
+            $rootScope.userdata.connected = true;
+        }
 
         $rootScope.$on('connected',function (event, data) {
             $rootScope.userdata.username = $cookies.get('username');
