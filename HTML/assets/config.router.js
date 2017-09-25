@@ -141,6 +141,6 @@ app.config(["$httpProvider", function ($httpProvider) {
         };
     }];
 
-    $httpProvider.interceptors.push(interceptor);
+    // $httpProvider.interceptors.push(interceptor);
 
 }]);

@@ -27,15 +27,26 @@ app.factory('RestService', ['$http', '$q','$cookies', '$httpParamSerializer', fu
                 method: 'POST',
                 url: login,
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'Cookie': 'csrftoken='+$cookies.get('csrftoken')
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                    str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },                
                 data: {'username': username, 'password': password, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
-            }).then(
-                function (response) {
+            }).success(function (result) {
+                console.log(result);
                 console.log("Entra al response");
+                if (result['users'] != undefined) {
+                    console.log("ok ok");
+                } else {
+                    console.log(" error error");
                 }
-            );
+            }).error(function(response){
+                console.log("Entra al error");
+            });
         },
 
         fetchTshirt: function(code) {
