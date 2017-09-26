@@ -55,7 +55,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     return str.join("&");
                 },
                 data: {'username': username, 'password': password, 'first_name': first_name, 'last_name': last_name,
-                    'email': email, 'pin': pin, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+                    'email': email, 'pin': pin}
             }).success(function (data) {
                 console.log(data);
                 if (data['response'] == 'ok') {
