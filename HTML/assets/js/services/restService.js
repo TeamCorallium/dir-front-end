@@ -8,6 +8,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var tshirt = 'http://10.58.20.225/tshirts/';
     var users = 'http://10.58.20.225/users/';
     var login = 'http://10.58.20.225/api-auth/login/';
+    var register = 'http://10.58.20.225/api-auth/register/';
     
     return {
         getCookie: function (name) {
@@ -15,16 +16,6 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         },
 
         login: function (username, password) {
-            // return $http.post(login + "?username=" + username + "&password=" + password)
-            //     .then(
-            //         function(response){
-            //             console.log(response.data);
-            //         },
-            //         function(errResponse){
-            //             console.error('no login');
-            //             return $q.reject(errResponse);
-            //         }
-            //     );
             $http({
                 method: 'POST',
                 url: login,
@@ -44,6 +35,37 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     $rootScope.$broadcast('connected',username);
                 } else {
                     $rootScope.$broadcast('wrongLogin',username);
+                }
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        register: function (username, password, first_name, last_name, email, pin) {
+            $http({
+                method: 'POST',
+                url: register,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {'username': username, 'password': password, 'first_name': first_name, 'last_name': last_name,
+                    'email': email, 'pin': pin, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(function (data) {
+                console.log(data);
+                if (data['response'] == 'ok') {
+                    var register = {
+                        username: username,
+                        password: password
+                    };
+                    $rootScope.$broadcast('register',register);
+                } else {
+                    $rootScope.$broadcast('wrongRegister');
                 }
             }).error(function(response){
                 console.log("Entra al error");

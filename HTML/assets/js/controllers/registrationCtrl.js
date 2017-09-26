@@ -21,7 +21,16 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function (name, username, pass, passAgain, code) {
-
+        $scope.registerModal = function (firstname, lastname, username, password, passAgain, email, pin) {
+            if (password === passAgain) {
+                RestService.register(username, password,firstname,lastname,email,pin);
+            } else {
+                //show error
+            }
         };
+
+        $rootScope.$on('register',function (event, data) {
+            $('#myModal').modal('hide');
+            RestService.login(data.username,data.password);
+        });
     }]);
