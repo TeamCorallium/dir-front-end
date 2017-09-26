@@ -2,10 +2,13 @@
 
 app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', function($rootScope,$http, $q, $cookies, $httpParamSerializer) {
 
-    var tshirt = 'http://www.dir.com/tshirts/';
-    var users = 'http://www.dir.com/users/';
-    var login = 'http://www.dir.com/api-auth/login/';
-
+    // var tshirt = 'http://www.dir.com/tshirts/';
+    // var users = 'http://www.dir.com/users/';
+    // var login = 'http://www.dir.com/api-auth/login/';
+    var tshirt = 'http://10.58.20.225/tshirts/';
+    var users = 'http://10.58.20.225/users/';
+    var login = 'http://10.58.20.225/api-auth/login/';
+    
     return {
         getCookie: function (name) {
             return $cookies.get('csrftoken');
