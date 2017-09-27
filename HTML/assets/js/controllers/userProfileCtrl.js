@@ -25,8 +25,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 .then(
                     function (data) {
                         if (data.length > 0){
-                            console.log(data[0].owner);
-                            $scope.getUser(data[0].owner);
+                            console.log(data[0]['owner']);
+                            $scope.getUser(data[0]['owner']);
                         } else {
                             $('#myModal').modal('show');
                         }
