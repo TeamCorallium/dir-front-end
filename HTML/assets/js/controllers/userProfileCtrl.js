@@ -24,8 +24,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             RestService.fetchTshirt($stateParams.id)
                 .then(
                     function (data) {
-                        console.log(data);
                         if (data.length > 0){
+                            console.log(data[0].owner);
                             $scope.getUser(data[0].owner);
                         } else {
                             $('#myModal').modal('show');
@@ -42,7 +42,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 .then(
                     function (data) {
                         if (data.length > 0){
-
                             $scope.user.username = data[0].username;
                             $scope.user.firtname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
