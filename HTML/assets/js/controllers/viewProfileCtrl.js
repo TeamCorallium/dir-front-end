@@ -145,6 +145,10 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.openModalSnippets = function () {
-          $('#modalSnippets').modal('show');
+            if($cookies.get('sessionid') != undefined){
+                $('#modalSnippets').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
         };
     }]);
