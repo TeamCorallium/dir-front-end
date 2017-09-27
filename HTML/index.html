@@ -157,6 +157,9 @@
                                                 <label for="pin">PIN:</label>
                                                 <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
                                             </div>
+                                            <div class="alert alert-danger" id="errorRegisterBox" hidden>
+                                                The information provided is not correct. Sorry, try again
+                                            </div>
                                             <button class="btn btn-default" ng-click="registerModal(firstname,lastname,username,pass,againPass,email,pin)">Register</button>
                                         </form>
                                     </div>

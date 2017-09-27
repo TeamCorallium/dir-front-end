@@ -20,10 +20,11 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
-        $scope.getTshirts = function () {
+        $scope.getTshirt = function () {
             RestService.fetchTshirt($stateParams.id)
                 .then(
                     function (data) {
+                        console.log(data);
                         if (data.length > 0){
                             $scope.getUser(data[0].owner);
                         } else {
@@ -144,7 +145,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         if ($cookies.get('sessionid') == undefined && $cookies.get('username')){
-            $scope.getTshirts();
+            $scope.getTshirt();
         } else {
             $scope.getUser($cookies.get('username'));
         }

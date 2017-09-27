@@ -31,6 +31,11 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
 
         $rootScope.$on('register',function (event, data) {
             $('#myModal').modal('hide');
+            $('#errorRegisterBox').hide();
             RestService.login(data.username,data.password);
+        });
+
+        $rootScope.$on('wrongRegister', function (event, data) {
+            $('#errorRegisterBox').show();
         });
     }]);
