@@ -127,10 +127,26 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $scope.getUser($cookies.get('username'));
 
         $scope.openModalSnippets = function () {
-            $('#modalSnippets').modal('show');
+            if($cookies.get('sessionid') != undefined){
+                $('#modalSnippets').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
         };
 
         $rootScope.$on('addsnippets', function (event, data) {
+            $scope.user.username =  '';
+            $scope.user.firstname = '';
+            $scope.user.lastname = '';
+            $scope.user.email = '';
+            $scope.user.info = '';
+            $scope.user.score = '';
+            $scope.user.rating = '';
+            $scope.user.avatar = '';
+            $scope.user.socialnetworks = [];
+            $scope.user.tshirts = [];
+            $scope.user.snippets = [];
+
             $('#modalSnippets').modal('hide');
             $state.go('profile');
             $scope.getUser($cookies.get('username'));
