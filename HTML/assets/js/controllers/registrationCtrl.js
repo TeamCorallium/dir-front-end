@@ -7,7 +7,7 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
         if (RestService.getCookie('csrftoken') == null) {
-            RestService.fetchObjectByUrl('http://10.8.25.244/api-auth/login/?next=/')
+            RestService.fetchObjectByUrl('http://10.58.20.244/api-auth/login/?next=/')
                 .then(
                     function (data) {
                         console.log('get get ' + RestService.getCookie('csrftoken'));
