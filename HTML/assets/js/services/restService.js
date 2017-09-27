@@ -89,7 +89,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {'title': title, 'body': body }
+                data: {'title': title, 'body': body, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
                 console.log(data);
             }).error(function(response){

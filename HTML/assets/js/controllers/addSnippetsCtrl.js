@@ -10,6 +10,8 @@ app.controller('AddSnippetsCtrl',["$rootScope", "$scope", "RestService", "$state
 
     $scope.addSnippets = function (title,body) {
         RestService.addSnippet(title,body);
+        $('#modalSnippets').modal('hide');
+        $state.go('profile');
     };
 
     }]);
