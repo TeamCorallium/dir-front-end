@@ -40,8 +40,8 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             resolve: loadSequence('editUserProfileCtrl')
         }).state('tshirts',{
             url: '/tshirts/:id',
-            templateUrl: 'views/userProfile.html',
-            resolve: loadSequence('userProfileCtrl')
+            templateUrl: 'views/viewProfile.html',
+            resolve: loadSequence('viewProfileCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)

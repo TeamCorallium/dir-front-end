@@ -13,7 +13,8 @@ app.constant('JS_REQUIRED',{
     scripts: {
         //Controllers
         'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
-        'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js'
+        'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js',
+        'viewProfileCtrl': 'assets/js/controllers/viewProfileCtrl.js'
     },
     modules:[{
 
