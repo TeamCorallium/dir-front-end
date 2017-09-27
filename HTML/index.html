@@ -175,7 +175,7 @@
                 <!-- end: MODAL-->
 
                 <!-- start: MODAL SNIPPETS-->
-                <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
                     <div class="modal-dialog">
                         <div class="modal-content">
                             <div class="modal-header padding-15">
@@ -185,14 +185,15 @@
                                 <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
                             </div>
                             <div class="modal-body padding-15">
-                                <textarea placeholder="Default Text" id="form-field-22" class="form-control"></textarea>
+                                <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
+                                <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
                             </div>
                             <div class="modal-footer padding-15">
                                 <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
                                     Close
                                 </button>
-                                <button type="button" class="btn btn-primary">
-                                    Save changes
+                                <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                                    Add
                                 </button>
                             </div>
                         </div>
@@ -338,6 +339,7 @@
         <!-- start: CONTROLLERS-->
         <script src="assets/js/controllers/loginCtrl.js"></script>
         <script src="assets/js/controllers/registrationCtrl.js"></script>
+        <script src="assets/js/controllers/addSnippetsCtrl.js"></script>
         <script src="assets/js/controllers/topNavBarCtrl.js"></script>
         <!-- end: CONTROLLERS-->
 		<script>

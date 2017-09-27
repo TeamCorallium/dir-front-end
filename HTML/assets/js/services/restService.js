@@ -6,11 +6,14 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var users = 'http://10.58.20.225/users/';
     // var login = 'http://10.58.20.225/api-auth/login/';
     // var register = 'http://10.58.20.225/api-auth/register/';
+    // var snippets = 'http://10.58.20.225/snippets/';
     
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
     var login = 'http://10.8.25.244/api-auth/login/';
-    var register = 'http://10.8.25.244/api-auth/register/';    
+    var register = 'http://10.8.25.244/api-auth/register/';
+    var snippets = 'http://10.8.25.244/snippets/';
+
     return {
         getCookie: function (name) {
             return $cookies.get('csrftoken');
@@ -68,6 +71,27 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 } else {
                     $rootScope.$broadcast('wrongRegister');
                 }
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        addSnippet: function (title, body) {
+            $http({
+                method: 'POST',
+                url: snippets,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {'title': title, 'body': body }
+            }).success(function (data) {
+                console.log(data);
             }).error(function(response){
                 console.log("Entra al error");
             });
