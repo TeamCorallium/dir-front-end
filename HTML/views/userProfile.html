@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="testimonial-container col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
+                        <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
                             <img src="assets/images/team-1.jpg" class="img-circle testimonial-thumb image_middle"/>
                             <a type="button" class="btn btn-success btn-wide margin-top-10" ui-sref="edit-profile">
                                 <i class="ti-reload"></i> Edit Profile
@@ -13,70 +13,68 @@
                             <h4>@{{user.username}}</h4>
                             <h5 class="testimonial-text" data-appears-class="fadeInUp"
                                 data-appears-delay="100">{{user.info}}
-                            </h5>                            
-                        </div>
-                        <div class="testimonial-container col-xs-12 col-sm-9 col-md-9 col-lg-9 padding-top-15 padding-left-15">
-                            <h4>Who I'm?</h4>
-                            <h5 class="testimonial-text" data-appears-class="fadeInUp"
-                                data-appears-delay="100">{{user.info}}
                             </h5>
                         </div>
-                    </div>
-                    <div class="row padding-top-15">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <h4>My social networks</h4>
-                        </div>
-                        <div class="social-icons center col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3 margin-top-10">
-                            <ul>
-                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
-                                    <a href="http://www.twitter.com" target="_blank"> Twitter </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
-                                    <a href="http://dribbble.com" target="_blank"> Dribbble </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
-                                    <a href="http://facebook.com" target="_blank"> Facebook </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
-                                    <a href="http://google.com" target="_blank"> Google+ </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                    <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="YouTube" class="social-youtube tooltips">
-                                    <a href="http://youtube.com/" target="_blank"> YouTube </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="RSS" class="social-rss tooltips">
-                                    <a href="#" target="_blank"> RSS </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row padding-top-40">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <h4 class="inline-block">Snippets</h4>
-                            <!--<a type="button" class="btn btn-primary btn-sm inline-block pull-right">-->
-                                <!--<i class="ti-plus"></i>-->
-                                <!--Add Snippets-->
-                            <!--</a>-->
-                        </div>
-                        <div class="panel-body col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <ul class="ltwt">
-                                <li ng-repeat="snippet in user.snippets">
-                                    <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body">
-
-                                    </h5>
-                                    <span class="block text-light margin-bottom-20"><i class="fa fa-fw fa-clock-o"></i> 2 minuts ago</span>
-                                </li>
-                            </ul>
+                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                            <div class="tabbable">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs nav-justified">
+                                        <li class="active">
+                                            <a href="#socialnetworks" data-toggle="tab"> Social Networks</a>
+                                        </li>
+                                        <li>
+                                            <a href="#snippets" data-toggle="tab"> Snippets </a>
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="socialnetworks">
+                                            <ul>
+                                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                                    <a href="http://www.twitter.com" target="_blank"> Twitter </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
+                                                    <a href="http://dribbble.com" target="_blank"> Dribbble </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+                                                    <a href="http://facebook.com" target="_blank"> Facebook </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+                                                    <a href="http://google.com" target="_blank"> Google+ </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+                                                    <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="YouTube" class="social-youtube tooltips">
+                                                    <a href="http://youtube.com/" target="_blank"> YouTube </a>
+                                                </li>
+                                                <li data-placement="bottom" data-original-title="RSS" class="social-rss tooltips">
+                                                    <a href="#" target="_blank"> RSS </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="tab-pane" id="snippets">
+                                            <ul class="ltwt">
+                                                <li ng-repeat="snippet in user.snippets">
+                                                    <h4>{{snippet.title}}</h4>
+                                                    <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
+                                                    <span class="block text-light margin-bottom-20"><i class="fa fa-fw fa-clock-o"></i> 2 minuts ago</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <button type="button" ng-click="openModalSnippets()"
-                            class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-shopping-cart col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-bottom-20">
-                        <span>Add Snippet</span>
-                    </button>
+                    <div class="margin-bottom-20">
+                        <button type="button" ng-click="openModalSnippets()"
+                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-shopping-cart col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <span>Add Snippet</span>
+                        </button>
+                    </div>
+                    <hr>
                     <aside class="sidebar">
                         <div class="tabbable">
                             <div class="tabs">
