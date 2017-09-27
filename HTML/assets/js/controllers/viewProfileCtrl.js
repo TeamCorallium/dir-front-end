@@ -143,4 +143,8 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 return lParens + "<a href='" + url + "'>" + url + "</a>" + rParens;
             });
         };
+
+        $scope.openModalSnippets = function () {
+          $('#modalSnippets').modal('show');
+        };
     }]);

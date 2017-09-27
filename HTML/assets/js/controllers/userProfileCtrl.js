@@ -148,4 +148,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         } else {
             $scope.getUser($cookies.get('username'));
         }
+
+        $scope.openModalSnippets = function () {
+            $('#modalSnippets').modal('show');
+        };
     }]);

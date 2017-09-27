@@ -132,4 +132,9 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         } else {
             $('#myModal').modal('show');
         }
+
+        $scope.openModalSnippets = function () {
+            $('#modalSnippets').modal('show');
+        };
+
     }]);
