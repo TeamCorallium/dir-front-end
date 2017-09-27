@@ -20,23 +20,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
-        $scope.getTshirt = function () {
-            RestService.fetchTshirt($stateParams.id)
-                .then(
-                    function (data) {
-                        if (data.length > 0){
-                            console.log(data[0]['owner']);
-                            $scope.getUser(data[0]['owner']);
-                        } else {
-                            $('#myModal').modal('show');
-                        }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
-
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -54,8 +37,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             getSnippets(data[0].snippets);
 
                         } else {
-                            //    Show Autentication
-                            console.log("Show Autentication");
                             $('#myModal').modal('show');
                         }
                     },
@@ -143,13 +124,15 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             });
         };
 
-        if ($cookies.get('sessionid') == undefined && $cookies.get('username')){
-            $scope.getTshirt();
-        } else {
-            $scope.getUser($cookies.get('username'));
-        }
+        $scope.getUser($cookies.get('username'));
 
         $scope.openModalSnippets = function () {
             $('#modalSnippets').modal('show');
         };
+
+        $rootScope.$on('addsnippets', function (event, data) {
+            $('#modalSnippets').modal('hide');
+            $state.go('profile');
+            $scope.getUser($cookies.get('username'));
+        })
     }]);

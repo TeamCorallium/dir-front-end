@@ -9,9 +9,11 @@ app.controller('AddSnippetsCtrl',["$rootScope", "$scope", "RestService", "$state
     $scope.snippets = '';
 
     $scope.addSnippets = function (title,body) {
-        RestService.addSnippet(title,body);
-        $('#modalSnippets').modal('hide');
-        $state.go('profile');
+        if($cookies.get('sessionid')!= undefined){
+            RestService.addSnippet(title,body);
+        } else {
+            $('#myModal').modal('show');
+        }
     };
 
     }]);

@@ -91,7 +91,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 },
                 data: {'title': title, 'body': body, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
-                console.log(data);
+                $rootScope.$broadcast('addsnippets');
             }).error(function(response){
                 console.log("Entra al error");
             });
