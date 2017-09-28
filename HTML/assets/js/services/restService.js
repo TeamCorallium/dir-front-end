@@ -113,7 +113,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 },
                 data: {'name': name, 'url': url, 'type': type, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
-                $rootScope.$broadcast('addsnippets');
+                $rootScope.$broadcast('addsocialnetwork');
             }).error(function(response){
                 console.log("Entra al error");
             });

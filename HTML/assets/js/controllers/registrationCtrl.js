@@ -23,8 +23,6 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
 
         $scope.registerModal = function (firstname, lastname, username, password, passAgain, email, pin) {
             if (password === passAgain) {
-                $cookies.remove("sessionid",{path: '/'});
-                $cookies.remove("csrftoken",{path: '/'});
                 RestService.register(username, password,firstname,lastname,email,pin);
             } else {
                 //show error

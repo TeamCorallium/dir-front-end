@@ -167,6 +167,24 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.getUser($cookies.get('username'));
         });
 
+        $rootScope.$on('addsocialnetwork', function (event, data) {
+            $scope.user.username =  '';
+            $scope.user.firstname = '';
+            $scope.user.lastname = '';
+            $scope.user.email = '';
+            $scope.user.info = '';
+            $scope.user.score = '';
+            $scope.user.rating = '';
+            $scope.user.avatar = '';
+            $scope.user.socialnetworks = [];
+            $scope.user.tshirts = [];
+            $scope.user.snippets = [];
+
+            $('#modalSocialNetwork').modal('hide');
+            $state.go('profile');
+            $scope.getUser($cookies.get('username'));
+        });
+
         $scope.openAddSocialNetworkModal = function () {
             if($cookies.get('sessionid') != undefined){
                 $('#modalSocialNetwork').modal('show');

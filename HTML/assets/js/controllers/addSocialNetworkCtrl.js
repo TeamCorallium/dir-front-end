@@ -21,7 +21,6 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if (name == 'Reddit'){
                 type = 'social-reddit';
             }
-
             RestService.addSocialNetwork(name,url,type);
         };
 
