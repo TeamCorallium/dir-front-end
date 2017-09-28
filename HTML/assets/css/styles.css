@@ -7695,7 +7695,7 @@ Social Icons
 }
 
 .social-icons-block{
-    display: none !important;
+    display: block !important;
 }
 
 .social-icons ul li a {
