@@ -168,6 +168,10 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         });
 
         $scope.openAddSocialNetworkModal = function () {
-            $('#modalSocialNetwork').modal('show');
+            if($cookies.get('sessionid') != undefined){
+                $('#modalSocialNetwork').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
         };
     }]);

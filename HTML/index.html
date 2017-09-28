@@ -202,7 +202,7 @@
         <!-- end: MODAL SNIPPETS-->
 
         <!-- start: MODAL SOCIAL NETWORK-->
-        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header padding-15">
@@ -212,21 +212,22 @@
                         <h4 class="modal-title">Add Social Network</h4>
                     </div>
                     <div class="modal-body padding-15">
-                        <div class="form-group">
-                            <select class="cs-select cs-skin-slide width-200">
-                                <option value="sightseeing">Sight Seeing</option>
-                                <option value="business">Business</option>
-                                <option value="honeymoon">Honeymoon</option>
-                                <option value="food">Gourmet</option>
-                                <option value="shopping">Shopping</option>
+                        <div class="form-group form-inline">
+                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork">
+                                <option value="sightseeing">Facebook</option>
+                                <option value="business">LinkedIn</option>
+                                <option value="honeymoon">Twitter</option>
+                                <option value="food">Instagram</option>
+                                <option value="shopping">Reddit</option>
                             </select>
                         </div>
+                        <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url">
                     </div>
                     <div class="modal-footer padding-15">
                         <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
                             Close
                         </button>
-                        <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                        <button type="button" class="btn btn-primary" ng-click="addSocialNetwork(socialnetwork,url)">
                             Add
                         </button>
                     </div>

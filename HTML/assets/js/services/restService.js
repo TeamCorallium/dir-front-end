@@ -13,6 +13,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var login = 'http://10.8.25.244/api-auth/login/';
     var register = 'http://10.8.25.244/api-auth/register/';
     var snippets = 'http://10.8.25.244/snippets/';
+    var socialnetwork = 'http://10.8.25.244/socialnetworks/';
 
     return {
         getCookie: function (name) {
@@ -90,6 +91,27 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     return str.join("&");
                 },
                 data: {'title': title, 'body': body, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
+            }).success(function (data) {
+                $rootScope.$broadcast('addsnippets');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        addSocialNetwork: function (name, url, type) {
+            $http({
+                method: 'POST',
+                url: socialnetwork,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {'name': name, 'url': url, 'type': type, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
                 $rootScope.$broadcast('addsnippets');
             }).error(function(response){
