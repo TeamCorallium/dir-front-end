@@ -165,5 +165,9 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $('#modalSnippets').modal('hide');
             $state.go('profile');
             $scope.getUser($cookies.get('username'));
-        })
+        });
+
+        $scope.openAddSocialNetworkModal = function () {
+            $('#modalSocialNetwork').modal('show');
+        };
     }]);

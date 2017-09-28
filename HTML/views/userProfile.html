@@ -33,7 +33,7 @@
                                     <div class="tab-pane fade in active" id="socialnetworks">
                                         <ul class="list-unstyled">
                                             <li ng-repeat="sn in user.socialnetworks">
-                                                <div class="social-icons">
+                                                <div class="social-icons-block">
                                                     <ul class="list-inline">
                                                         <li data-placement="bottom" class="{{sn.type}} tooltips">
                                                             <a></a>
@@ -49,7 +49,8 @@
                                                 <hr class="tall">
                                             </li>
                                         </ul>
-                                        <button type="button" class="btn btn-success btn-wide btn-scroll btn-scroll-left ti-plus">
+                                        <button type="button" ng-click="openAddSocialNetworkModal()"
+                                                class="btn btn-success btn-wide btn-scroll btn-scroll-left ti-plus">
                                             <span>Add Social Network</span>
                                         </button>
                                     </div>
