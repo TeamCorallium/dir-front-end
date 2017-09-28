@@ -3,398 +3,383 @@
 <!--[if IE 8]><html class="ie8" lang="en"><![endif]-->
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
 <html lang="en" ng-app="dirApp">
-	<!-- start: HEAD -->
-	<head>
-		<title>Clip-Two | Front End</title>
-		<!-- start: META -->
-		<!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black">
-		<meta content="" name="description" />
-		<meta content="" name="author" />
-		<!-- end: META -->
-		<!-- start: MAIN CSS -->
-		<link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
-		<link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
-		<link href="../bower_components/themify-icons/themify-icons.css" rel="stylesheet" media="screen">
-		<link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" media="screen">
-		<link href="../bower_components/slick.js/slick/slick.css" rel="stylesheet" media="screen" />
-		<link href="../bower_components/slick.js/slick/slick-theme.css" rel="stylesheet" media="screen" />
-		<link href="../bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet" media="screen" />
-		<link href="../bower_components/magnific-popup/dist/magnific-popup.css" rel="stylesheet" media="screen" />
-		<link href="assets/css/styles.css" rel="stylesheet" media="screen">
-		<link href="assets/css/plugins.css" rel="stylesheet" media="screen">
-        <link href="assets/css/css.css" rel="stylesheet" media="screen">
-		<!-- end: MAIN CSS -->
-		<!-- start: FAVICON -->
-		<link rel="shortcut icon" href="favicon.ico"/>
-		<!-- end: FAVICON -->
-	</head>
-	<!-- end: HEAD -->
-	<body>
-		<div id="app">
-			<!-- start: HEADER -->
-			<header class="small-header">
-				<div class="navbar navbar-dark" role="navigation">
-					<!-- start: TOP NAVIGATION CONTAINER -->
-					<div class="container">
-						<div class="navbar-header">
-							<!-- start: RESPONSIVE MENU TOGGLER -->
-							<a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <i class="ti-align-justify"></i> </a>
-							<!-- end: RESPONSIVE MENU TOGGLER -->
-							<!-- start: RESPONSIVE MENU SEARCH -->
-						</div>
-						<!-- start: NAVBAR -->
-						<div class="navbar-collapse collapse inline margin-left-0">
-                            <a class="margin-top-10 text-white" ui-sref="home">&#60;DIR&#62;</a>
-							<ul class="nav navbar-nav navbar-right">
-								<li class="dropdown">
-									<a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
-                                        <i class="ti-user"></i>  User </a>
-                                    <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username != ''">
-                                        <i class="ti-user"></i>  {{userdata.username}} </a>
-									<ul class="dropdown-menu" ng-controller="LoginCtrl">
-										<li>
-											<a ui-sref="profile" ng-show="userdata.connected"> My Profile</a>
-										</li>
-                                        <li>
-                                            <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
-                                        </li>
-										<li>
-											<a data-toggle="modal" data-target="#myModal" ng-hide="userdata.connected"> Log In</a>
-										</li>
-                                        <li>
-                                            <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
-                                        </li>
-									</ul>
-								</li>
+<!-- start: HEAD -->
+<head>
+    <title>Clip-Two | Front End</title>
+    <!-- start: META -->
+    <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta content="" name="description" />
+    <meta content="" name="author" />
+    <!-- end: META -->
+    <!-- start: MAIN CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/themify-icons/themify-icons.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/animate.css/animate.min.css" rel="stylesheet" media="screen">
+    <link href="../bower_components/slick.js/slick/slick.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/slick.js/slick/slick-theme.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/magnific-popup/dist/magnific-popup.css" rel="stylesheet" media="screen" />
+    <link href="assets/css/styles.css" rel="stylesheet" media="screen">
+    <link href="assets/css/plugins.css" rel="stylesheet" media="screen">
+    <link href="assets/css/css.css" rel="stylesheet" media="screen">
+    <!-- end: MAIN CSS -->
+    <!-- start: FAVICON -->
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <!-- end: FAVICON -->
+</head>
+<!-- end: HEAD -->
+<body>
+<div id="app">
+    <!-- start: HEADER -->
+    <header class="small-header">
+        <div class="navbar navbar-dark" role="navigation">
+            <!-- start: TOP NAVIGATION CONTAINER -->
+            <div class="container">
+                <div class="navbar-header">
+                    <!-- start: RESPONSIVE MENU TOGGLER -->
+                    <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <i class="ti-align-justify"></i> </a>
+                    <!-- end: RESPONSIVE MENU TOGGLER -->
+                    <!-- start: RESPONSIVE MENU SEARCH -->
+                </div>
+                <!-- start: NAVBAR -->
+                <div class="navbar-collapse collapse inline margin-left-0">
+                    <a class="margin-top-10 text-white" ui-sref="home">&#60;DIR&#62;</a>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
+                                <i class="ti-user"></i>  User </a>
+                            <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username != ''">
+                                <i class="ti-user"></i>  {{userdata.username}} </a>
+                            <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                 <li>
-                                    <a><i class="ti-shopping-cart"></i> Buy </a>
+                                    <a ui-sref="profile" ng-show="userdata.connected"> My Profile</a>
                                 </li>
-							</ul>
-							<!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
-							<div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-								<div class="arrow-left"></div>
-								<div class="arrow-right"></div>
-							</div>
-							<!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
-						</div>
-						<!-- end: NAVBAR -->
+                                <li>
+                                    <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#myModal" ng-hide="userdata.connected"> Log In</a>
+                                </li>
+                                <li>
+                                    <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a><i class="ti-shopping-cart"></i> Buy </a>
+                        </li>
+                    </ul>
+                    <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                    <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                        <div class="arrow-left"></div>
+                        <div class="arrow-right"></div>
+                    </div>
+                    <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                </div>
+                <!-- end: NAVBAR -->
+            </div>
+            <!-- end: TOP NAVIGATION CONTAINER -->
+            <div id="overlay-search">
+                <form method="get" action="search.html">
+                    <input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
+                </form>
+                <a href="#" class="pull-right margin-right-20 close-search mobile-button" data-toggle-target="body" data-toggle-class="search-open"> <i class="ti-close"></i> </a>
+            </div>
+        </div>
+    </header>
+    <div class="app-content">
+        <div ui-view></div>
+        <!-- start: FOOTER -->
+
+        <!-- start: MODAL-->
+        <div class="modal fade login-register-form" id="myModal" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <a type="button" class="close" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
+                            <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-content">
+                            <div id="login-form" class="tab-pane fade in active">
+                                <form ng-controller="LoginCtrl">
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input ng-model="username" type="text" class="form-control" id="username" placeholder="Enter username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
+                                    </div>
+                                    <div class="alert alert-danger" id="errorBox" hidden>
+                                        Wrong username or password. Sorry, try again.
+                                    </div>
+                                    <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
+                                </form>
+                            </div>
+                            <div id="registration-form" class="tab-pane fade">
+                                <form ng-controller="RegistrationCtrl">
+                                    <div class="form-group">
+                                        <label for="firstname">First Name:</label>
+                                        <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" name="firstname" ng-model="firstname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lastname">Last Name:</label>
+                                        <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" name="lastname" ng-model="lastname">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email:</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="newusername">Username:</label>
+                                        <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass">Password:</label>
+                                        <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="againPass">Password again:</label>
+                                        <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pin">PIN:</label>
+                                        <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
+                                    </div>
+                                    <div class="alert alert-danger" id="errorRegisterBox" hidden>
+                                        The information provided is not correct. Sorry, try again
+                                    </div>
+                                    <button class="btn btn-default" ng-click="registerModal(firstname,lastname,username,pass,againPass,email,pin)">Register</button>
+                                </form>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!--                                    <div class="modal-footer">-->
+                    <!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+                    <!--                                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!-- end: MODAL-->
+
+        <!-- start: MODAL SNIPPETS-->
+        <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header padding-15">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
+                    </div>
+                    <div class="modal-body padding-15">
+                        <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
+                        <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
+                    </div>
+                    <div class="modal-footer padding-15">
+                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: MODAL SNIPPETS-->
+
+        <!-- start: MODAL SOCIAL NETWORK-->
+        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header padding-15">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">Add Social Network</h4>
+                    </div>
+                    <div class="modal-body padding-15">
+                        <select class="cs-select cs-skin-slide">
+                            <option value=""></option>
+                            <option value="sightseeing">Sight Seeing</option>
+                            <option value="business">Business</option>
+                            <option value="honeymoon">Honeymoon</option>
+                            <option value="food">Gourmet</option>
+                            <option value="shopping">Shopping</option>
+                        </select>
+                    </div>
+                    <div class="modal-footer padding-15">
+                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
+                            Close
+                        </button>
+                        <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                            Add
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: MODAL SOCIAL NETWORK-->
+        
+        <!-- start: FOOTER-->
+		<footer id="footer">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 padding-bottom-25">
+						<a class="logo" href="index.html"> <img alt="Clip-Two" src="assets/images/logo2.png"> </a>
+						<p class="padding-top-20">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Nulla consequat massa quis enim. Donec pede justo fringilla vel, aliquet nec, vulputate eget, arcu...
+						</p>
+						<button type="button" class="btn btn-red margin-top-15 btn-block btn-scroll btn-scroll-top fa-shopping-cart">
+							<span>Buy a TShirt Now</span>
+						</button>
 					</div>
-					<!-- end: TOP NAVIGATION CONTAINER -->
-					<div id="overlay-search">
-						<form method="get" action="search.html">
-							<input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
-						</form>
-						<a href="#" class="pull-right margin-right-20 close-search mobile-button" data-toggle-target="body" data-toggle-class="search-open"> <i class="ti-close"></i> </a>
+					<div class="col-md-3 padding-bottom-25">
+						<h4 class="margin-bottom-25">Latest Tweet</h4>
+						<div class="twitter margin-bottom-15" id="tweet">
+							<i class="fa fa-twitter pull-left"></i>
+							<p class="padding-left-30">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+								<a href="#" class="time"> 12 Dec </a>
+							</p>
+						</div>
+						<div class="twitter margin-bottom-15" id="tweet1">
+							<i class="fa fa-twitter pull-left"></i>
+							<p class="padding-left-30">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+								<a href="#" class="time"> 12 Dec </a>
+							</p>
+						</div>
+					</div>
+					<div class="col-md-3 padding-bottom-25">
+						<div class="contact-details">
+							<h4 class="margin-bottom-25">Recent Snippets</h4>
+							<ul class="posts">
+								<li>
+									<a href="#"> MVC directory structure </a>
+								</li>
+								<li>
+									<a href="#"> Dependency injection </a>
+								</li>
+								<li>
+									<a href="#"> Service vs Factory </a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-3 padding-bottom-25">
+						<h4 class="margin-bottom-25">Follow Us</h4>
+						<div class="social-icons">
+							<ul>
+								<li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
+									<a target="_blank" href="#"> Twitter </a>
+								</li>
+								<li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
+									<a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
+								</li>
+								<li class="social-google tooltips" data-original-title="LinkedIn" data-placement="bottom">
+									<a target="_blank" href="#" data-original-title="LinkedIn"> Google + </a>
+								</li>
+								<li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
+									<a target="_blank" href="#" data-original-title="LinkedIn"> LinkedIn </a>
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-			</header>
-			<div class="app-content">
-                    <div ui-view></div>
-				<!-- start: FOOTER -->
-
-                <!-- start: MODAL-->
-                <div class="modal fade login-register-form" id="myModal" role="dialog">
-                    <div class="modal-dialog modal-sm">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <a type="button" class="close" data-dismiss="modal">
-                                    <span class="glyphicon glyphicon-remove"></span>
-                                </a>
-                                <ul class="nav nav-tabs">
-                                    <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                                    <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
-                                </ul>
-                            </div>
-                            <div class="modal-body">
-                                <div class="tab-content">
-                                    <div id="login-form" class="tab-pane fade in active">
-                                        <form ng-controller="LoginCtrl">
-                                            <div class="form-group">
-                                                <label for="username">Username:</label>
-                                                <input ng-model="username" type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pwd">Password:</label>
-                                                <input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                                            </div>
-                                            <div class="alert alert-danger" id="errorBox" hidden>
-                                                Wrong username or password. Sorry, try again.
-                                            </div>
-                                            <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
-                                        </form>
-                                    </div>
-                                    <div id="registration-form" class="tab-pane fade">
-                                        <form ng-controller="RegistrationCtrl">
-                                            <div class="form-group">
-                                                <label for="firstname">First Name:</label>
-                                                <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" name="firstname" ng-model="firstname">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="lastname">Last Name:</label>
-                                                <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" name="lastname" ng-model="lastname">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="email">Email:</label>
-                                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="newusername">Username:</label>
-                                                <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pass">Password:</label>
-                                                <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="againPass">Password again:</label>
-                                                <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
-                                            </div>
-                                            <div class="form-group">
-                                                <label for="pin">PIN:</label>
-                                                <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
-                                            </div>
-                                            <div class="alert alert-danger" id="errorRegisterBox" hidden>
-                                                The information provided is not correct. Sorry, try again
-                                            </div>
-                                            <button class="btn btn-default" ng-click="registerModal(firstname,lastname,username,pass,againPass,email,pin)">Register</button>
-                                        </form>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <!--                                    <div class="modal-footer">-->
-                            <!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                            <!--                                    </div>-->
-                        </div>
-                    </div>
-                </div>
-                <!-- end: MODAL-->
-
-                <!-- start: MODAL SNIPPETS-->
-                <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header padding-15">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
-                            </div>
-                            <div class="modal-body padding-15">
-                                <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
-                                <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
-                            </div>
-                            <div class="modal-footer padding-15">
-                                <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: MODAL SNIPPETS-->
-
-                <!-- start: MODAL SOCIAL NETWORK-->
-                <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header padding-15">
-                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">&times;</span>
-                                </button>
-                                <h4 class="modal-title">Add Social Network</h4>
-                            </div>
-                            <div class="modal-body padding-15">
-                                <div class="form-group">
-                                    <div class="cs-select cs-skin-slide" tabindex="0">
-                                        <span class="cs-placeholder"></span>
-                                        <div class="cs-options">
-                                            <ul>
-                                                <li data-option="" data-value=""><span></span></li>
-                                                <li class="fa fa-apple" data-option="" data-value="sightseeing"><span>Sight Seeing</span></li>
-                                                <li class="fa fa-android" data-option="" data-value="business"><span>Business</span></li>
-                                                <li class="fa fa-windows" data-option="" data-value="honeymoon"><span>Honeymoon</span></li>
-                                                <li class="fa fa-dropbox" data-option="" data-value="food"><span>Gourmet</span></li>
-                                                <li class="fa fa-github" data-option="" data-value="shopping"><span>Shopping</span></li>
-                                            </ul>
-                                        </div>
-                                        <select class="cs-select cs-skin-slide">
-                                        <option value=""></option>
-                                        <option value="sightseeing" data-class="fa fa-apple">Sight Seeing</option>
-                                        <option value="business" data-class="fa fa-android">Business</option>
-                                        <option value="honeymoon" data-class="fa fa-windows">Honeymoon</option>
-                                        <option value="food" data-class="fa fa-dropbox">Gourmet</option>
-                                        <option value="shopping" data-class="fa fa-github">Shopping</option>
-                                    </select>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-footer padding-15">
-                                <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                                    Close
-                                </button>
-                                <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
-                                    Add
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- end: MODAL SOCIAL NETWORK-->
-
-                <!-- start: FOOTER-->
-				<footer id="footer">
-					<div class="container">
-						<div class="row">
-							<div class="col-md-3 padding-bottom-25">
-								<a class="logo" href="index.html"> <img alt="Clip-Two" src="assets/images/logo2.png"> </a>
-								<p class="padding-top-20">
-									Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Nulla consequat massa quis enim. Donec pede justo fringilla vel, aliquet nec, vulputate eget, arcu...
-								</p>
-								<button type="button" class="btn btn-red margin-top-15 btn-block btn-scroll btn-scroll-top fa-shopping-cart">
-									<span>Buy a TShirt Now</span>
-								</button>
-							</div>
-							<div class="col-md-3 padding-bottom-25">
-								<h4 class="margin-bottom-25">Latest Tweet</h4>
-								<div class="twitter margin-bottom-15" id="tweet">
-									<i class="fa fa-twitter pull-left"></i>
-									<p class="padding-left-30">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-										<a href="#" class="time"> 12 Dec </a>
-									</p>
-								</div>
-								<div class="twitter margin-bottom-15" id="tweet1">
-									<i class="fa fa-twitter pull-left"></i>
-									<p class="padding-left-30">
-										Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-										<a href="#" class="time"> 12 Dec </a>
-									</p>
-								</div>
-							</div>
-							<div class="col-md-3 padding-bottom-25">
-								<div class="contact-details">
-									<h4 class="margin-bottom-25">Recent Snippets</h4>
-									<ul class="posts">
-										<li>
-											<a href="#"> MVC directory structure </a>
-										</li>
-										<li>
-											<a href="#"> Dependency injection </a>
-										</li>
-										<li>
-											<a href="#"> Service vs Factory </a>
-										</li>
-									</ul>
-								</div>
-							</div>
-							<div class="col-md-3 padding-bottom-25">
-								<h4 class="margin-bottom-25">Follow Us</h4>
-								<div class="social-icons">
-									<ul>
-										<li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
-											<a target="_blank" href="#"> Twitter </a>
-										</li>
-										<li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
-											<a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
-										</li>
-										<li class="social-google tooltips" data-original-title="LinkedIn" data-placement="bottom">
-											<a target="_blank" href="#" data-original-title="LinkedIn"> Google + </a>
-										</li>
-										<li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
-											<a target="_blank" href="#" data-original-title="LinkedIn"> LinkedIn </a>
-										</li>
-									</ul>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div class="footer-copyright">
-						<div class="container">
-							<div class="row">
-								<div class="col-md-8">
-									<p>
-										&copy; Copyright <span class="current-year"></span> by DIR. All Rights Reserved.
-									</p>
-								</div>
-								<div class="col-md-4">
-									<nav id="sub-menu">
-										<ul>
-											<li>
-												<a href="#"> FAQ's </a>
-											</li>
-											<li>
-												<a href="#"> Sitemap </a>
-											</li>
-											<li>
-												<a href="#"> Contact </a>
-											</li>
-										</ul>
-									</nav>
-								</div>
-							</div>
-						</div>
-					</div>
-				</footer>
-				<a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
-				<!-- end: FOOTER -->
 			</div>
-			<!-- end: APP CONTENT -->
-		</div>
-		<!-- start: MAIN JAVASCRIPTS -->
-		<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-		<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-		<script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
-		<script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
-		<script src="../bower_components/slick.js/slick/slick.min.js"></script>
-		<script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
-		<script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
-		<script src="../bower_components/countto/jquery.countTo.js"></script>
-		<script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-		<script src="assets/js/main.js"></script>
+			<div class="footer-copyright">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-8">
+							<p>
+								&copy; Copyright <span class="current-year"></span> by DIR. All Rights Reserved.
+							</p>
+						</div>
+						<div class="col-md-4">
+							<nav id="sub-menu">
+								<ul>
+									<li>
+										<a href="#"> FAQ's </a>
+									</li>
+									<li>
+										<a href="#"> Sitemap </a>
+									</li>
+									<li>
+										<a href="#"> Contact </a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
+		<!-- end: FOOTER -->
+	</div>
+	<!-- end: APP CONTENT -->
+</div>
+<!-- start: MAIN JAVASCRIPTS -->
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+<script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
+<script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
+<script src="../bower_components/slick.js/slick/slick.min.js"></script>
+<script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+<script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+<script src="../bower_components/countto/jquery.countTo.js"></script>
+<script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+<script src="assets/js/main.js"></script>
 
-		<!-- end: MAIN JAVASCRIPTS -->
-        <!-- start: ANGULAR SCRIPTS-->
-        <script src="../bower_components/angular/angular.js"></script>
-        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-        <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-        <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-        <!-- end: ANGULAR SCRIPTS-->
-		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<script src="assets/js/index.js"></script>
-        <script src="assets/app.js"></script>
-        <script src="assets/main.js"></script>
-        <script src="assets/config.constant.js"></script>
-        <script src="assets/config.router.js"></script>
-		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<!-- end: MAIN JAVASCRIPTS -->
+<!-- start: ANGULAR SCRIPTS-->
+<script src="../bower_components/angular/angular.js"></script>
+<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+<!-- end: ANGULAR SCRIPTS-->
+<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<script src="assets/js/index.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/main.js"></script>
+<script src="assets/config.constant.js"></script>
+<script src="assets/config.router.js"></script>
+<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 
-        <!-- oclazyload -->
-        <script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+<!-- oclazyload -->
+<script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
-        <!-- start: SERVICES-->
-        <script src="assets/js/services/restService.js"></script>
-        <!-- end: SERVICES-->
+<!-- start: SERVICES-->
+<script src="assets/js/services/restService.js"></script>
+<!-- end: SERVICES-->
 
-        <!-- start: CONTROLLERS-->
-        <script src="assets/js/controllers/loginCtrl.js"></script>
-        <script src="assets/js/controllers/registrationCtrl.js"></script>
-        <script src="assets/js/controllers/addSnippetsCtrl.js"></script>
-        <script src="assets/js/controllers/topNavBarCtrl.js"></script>
-        <!-- end: CONTROLLERS-->
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				Index.init();
-			});
-		</script>
-	</body>
+<!-- start: CONTROLLERS-->
+<script src="assets/js/controllers/loginCtrl.js"></script>
+<script src="assets/js/controllers/registrationCtrl.js"></script>
+<script src="assets/js/controllers/addSnippetsCtrl.js"></script>
+<script src="assets/js/controllers/topNavBarCtrl.js"></script>
+<!-- end: CONTROLLERS-->
+<script>
+    jQuery(document).ready(function() {
+        Main.init();
+        Index.init();
+    });
+</script>
+</body>
 </html>
