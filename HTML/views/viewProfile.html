@@ -4,8 +4,8 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="testimonial-container col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
-                            <img src="assets/images/team-1.jpg" class="img-circle image_middle"/>
+                        <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
+                            <img src="assets/images/team-1.jpg" class="img-circle image_middle col-xs-12"/>
                             <h4 class="col-xs-12 padding-0">{{user.firstname}} {{user.lastname}}</h4>
                             <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                             <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
@@ -29,29 +29,17 @@
                                 <div class="tab-content">
                                     <div class="tab-pane fade in active" id="socialnetworks">
                                         <ul class="list-unstyled">
-                                            <li>
-                                                <div class="social-icons">
+                                            <li ng-repeat="sn in user.socialnetworks">
+                                                <div class="social-icons social-icons-block">
                                                     <ul class="list-inline">
-                                                        <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                                        <li data-placement="bottom" class="{{sn.type}} tooltips">
                                                             <a></a>
                                                         </li>
                                                         <li>
-                                                            <h4 class="margin-top-5 margin-left-10">Twitter</h4>
-                                                            <h4 class="margin-top-5 margin-left-10">http://www.twitter.com/</h4>
-                                                        </li>
-                                                    </ul>
-                                                </div>
-                                                <hr class="tall">
-                                            </li>
-                                            <li>
-                                                <div class="social-icons">
-                                                    <ul class="list-inline">
-                                                        <li class="social-facebook" tooltip="Facebook" tooltip-placement="top">
-                                                            <a></a>
-                                                        </li>
-                                                        <li>
-                                                            <h4 class="margin-top-5 margin-left-10">Facebook</h4>
-                                                            <h4 class="margin-top-5 margin-left-10">http://www.facebook.com/</h4>
+                                                            <h4 class="margin-top-5 margin-left-10">{{sn.name}}</h4>
+                                                            <h5 class="margin-top-5 margin-left-10 style-link">
+                                                                {{sn.url}}
+                                                            </h5>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -77,8 +65,14 @@
                     <div class="row">
                         <div class="margin-bottom-20">
                             <button type="button" ng-click="openModalSnippets()"
-                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-shopping-cart col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-bottom-20">
+                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <span>Add Snippet</span>
+                            </button>
+                        </div>
+                        <div class="margin-bottim-20">
+                            <button type="button" ng-click="openAddSocialNetworkModal()"
+                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-left ti-mobile">
+                                <span>Add Social Network</span>
                             </button>
                         </div>
                         <div class="padding-top-25">
