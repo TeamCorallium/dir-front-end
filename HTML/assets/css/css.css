@@ -26,3 +26,12 @@
 .modal-body .form-group {
     margin-bottom: 10px;
 }
+
+.style-link{
+    color: #007aff;
+}
+
+.style-link:hover{
+    cursor: pointer !important;
+    color: #337ab7;
+}
