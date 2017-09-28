@@ -7695,61 +7695,7 @@ Social Icons
 }
 
 .social-icons-block{
-    list-style: none;
-    margin: 0 0 -1px 0;
-    padding: 0;
-}
-
-.social-icons-block ul li {
-    margin: 0;
-    padding: 0;
-    height: 50px;
-    overflow: hidden;
-}
-
-.social-icons-block ul li a {
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    display: block;
-    height: 50px;
-    opacity: 0.6;
-    text-indent: -9999px;
-    width: 50px;
-    top: 0;
-    font-size: 30px;
-    position: relative;
-    -moz-transition: all, 0.3s, ease;
-    -o-transition: all, 0.3s, ease;
-    -webkit-transition: all, 0.3s, ease;
-    transition: all, 0.3s, ease;
-}
-
-.social-icons-block ul li a:hover {
-    top: -50px;
-}
-.social-icons-block ul li a:before {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    font-family: FontAwesome;
-    text-indent: 0;
-    line-height: 50px;
-    top: 0;
-    left: 0;
-    text-align: center;
-    color: #999999;
-}
-.social-icons-block ul li a:after {
-    position: absolute;
-    width: 50px;
-    height: 50px;
-    font-family: FontAwesome;
-    text-indent: 0;
-    line-height: 50px;
-    top: 50px;
-    left: 0;
-    text-align: center;
-    color: #FFFFFF;
+    display: none !important;
 }
 
 .social-icons ul li a {
