@@ -149,6 +149,14 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             }
         };
 
+        $scope.openAddSocialNetworkModal = function () {
+            if($cookies.get('sessionid') != undefined){
+                $('#modalSocialNetwork').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
+        };
+
         $rootScope.$on('addsnippets', function (event, data) {
             $scope.user.username =  '';
             $scope.user.firstname = '';
@@ -184,12 +192,4 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $state.go('profile');
             $scope.getUser($cookies.get('username'));
         });
-
-        $scope.openAddSocialNetworkModal = function () {
-            if($cookies.get('sessionid') != undefined){
-                $('#modalSocialNetwork').modal('show');
-            } else {
-                $('#myModal').modal('show');
-            }
-        };
     }]);

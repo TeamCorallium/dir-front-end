@@ -151,4 +151,12 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 $('#myModal').modal('show');
             }
         };
+
+        $scope.openAddSocialNetworkModal = function () {
+            if($cookies.get('sessionid') != undefined){
+                $('#modalSocialNetwork').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
+        };
     }]);

@@ -133,12 +133,4 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $('#myModal').modal('show');
         }
 
-        $scope.openModalSnippets = function () {
-            if($cookies.get('sessionid') != undefined){
-                $('#modalSnippets').modal('show');
-            } else {
-                $('#myModal').modal('show');
-            }
-        };
-
     }]);
