@@ -7690,19 +7690,19 @@ Social Icons
   /*display: inline-block;*/
   margin: 0;
   padding: 0;
-  height: 80px;
+  height: 50px;
   overflow: hidden;
 }
 .social-icons ul li a {
   background-position: 0 0;
   background-repeat: no-repeat;
   display: block;
-  height: 80px;
+  height: 50px;
   opacity: 0.6;
   text-indent: -9999px;
-  width: 80px;
+  width: 50px;
   top: 0;
-  font-size: 60px;
+  font-size: 30px;
   position: relative;
   -moz-transition: all, 0.3s, ease;
   -o-transition: all, 0.3s, ease;
@@ -7710,15 +7710,15 @@ Social Icons
   transition: all, 0.3s, ease;
 }
 .social-icons ul li a:hover {
-  top: -80px;
+  top: -50px;
 }
 .social-icons ul li a:before {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   font-family: FontAwesome;
   text-indent: 0;
-  line-height: 80px;
+  line-height: 50px;
   top: 0;
   left: 0;
   text-align: center;
@@ -7726,12 +7726,12 @@ Social Icons
 }
 .social-icons ul li a:after {
   position: absolute;
-  width: 80px;
-  height: 80px;
+  width: 50px;
+  height: 50px;
   font-family: FontAwesome;
   text-indent: 0;
-  line-height: 80px;
-  top: 80px;
+  line-height: 50px;
+  top: 50px;
   left: 0;
   text-align: center;
   color: #FFFFFF;
