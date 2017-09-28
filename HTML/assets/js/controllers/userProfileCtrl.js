@@ -35,6 +35,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             }
                             getTshirts(data[0].tshirts);
                             getSnippets(data[0].snippets);
+                            getSocialNetworks(data[0].socialnetworks);
 
                         } else {
                             $('#myModal').modal('show');
@@ -88,6 +89,20 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                         function (data) {
                             data.body = replaceURLWithHTMLLinks(data.body);
                             $scope.user.snippets.push(data);
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+            }
+        };
+
+        var getSocialNetworks = function (urls) {
+            for (var i=0; i<urls.length; i++){
+                RestService.fetchObjectByUrl(urls[i])
+                    .then(
+                        function (data) {
+                            $scope.user.socialnetworks.push(data);
                         },
                         function (errResponse) {
                             console.log(errResponse);
