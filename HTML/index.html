@@ -201,6 +201,54 @@
                 </div>
                 <!-- end: MODAL SNIPPETS-->
 
+                <!-- start: MODAL SOCIAL NETWORK-->
+                <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="">
+                    <div class="modal-dialog">
+                        <div class="modal-content">
+                            <div class="modal-header padding-15">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title">Add Social Network</h4>
+                            </div>
+                            <div class="modal-body padding-15">
+                                <div class="form-group">
+                                    <div class="cs-select cs-skin-slide" tabindex="0">
+                                        <span class="cs-placeholder"></span>
+                                        <div class="cs-options">
+                                            <ul>
+                                                <li data-option="" data-value=""><span></span></li>
+                                                <li class="fa fa-apple" data-option="" data-value="sightseeing"><span>Sight Seeing</span></li>
+                                                <li class="fa fa-android" data-option="" data-value="business"><span>Business</span></li>
+                                                <li class="fa fa-windows" data-option="" data-value="honeymoon"><span>Honeymoon</span></li>
+                                                <li class="fa fa-dropbox" data-option="" data-value="food"><span>Gourmet</span></li>
+                                                <li class="fa fa-github" data-option="" data-value="shopping"><span>Shopping</span></li>
+                                            </ul>
+                                        </div>
+                                        <select class="cs-select cs-skin-slide">
+                                        <option value=""></option>
+                                        <option value="sightseeing" data-class="fa fa-apple">Sight Seeing</option>
+                                        <option value="business" data-class="fa fa-android">Business</option>
+                                        <option value="honeymoon" data-class="fa fa-windows">Honeymoon</option>
+                                        <option value="food" data-class="fa fa-dropbox">Gourmet</option>
+                                        <option value="shopping" data-class="fa fa-github">Shopping</option>
+                                    </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal-footer padding-15">
+                                <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
+                                    Close
+                                </button>
+                                <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                                    Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end: MODAL SOCIAL NETWORK-->
+
                 <!-- start: FOOTER-->
 				<footer id="footer">
 					<div class="container">
