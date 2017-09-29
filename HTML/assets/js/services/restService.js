@@ -125,26 +125,41 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         },
 
         updateProfile: function (profileurl, info, rating, score, avatar) {
-            var fd = new FormData();
-            fd.append('avatar', avatar);
+            // var fd = new FormData();
+            // fd.append('avatar', avatar);
             $http({
                 method: 'PUT',
                 url: profileurl,
                 headers: {
                     'Content-Type': undefined
                 },
-                transformRequest: function(obj) {
-                    var str = [];
-                    for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {'info': info, 'rating': rating, 'score': score, 'avatar': fd, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
+                transformRequest: transformImageRequest,
+                data: {'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
                $state.go('profile');
             }).error(function(response){
                 console.log("Entra al error");
             });
+        },
+
+        transformImageRequest: function (data) {
+            if (data === undefined)
+                return data;
+            var fd = new FormData();
+            angular.forEach(data, function (value, key) {
+                if (value instanceof FileList) {
+                    if (value.length == 1) {
+                        fd.append(key, value[0]);
+                    } else {
+                        angular.forEach(value, function (file, index) {
+                            fd.append(key + '_' + index, file);
+                        });
+                    }
+                } else {
+                    fd.append(key, value);
+                }
+            });
+            return fd;
         },
 
         fetchTshirt: function(code) {
