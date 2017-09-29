@@ -27,7 +27,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                         if (data.length > 0){
 
                             $scope.user.username = data[0].username;
-                            $scope.user.firtname = data[0].first_name;
+                            $scope.user.firstname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
                             $scope.user.email = data[0].email;
 

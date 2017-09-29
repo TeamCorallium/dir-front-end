@@ -2,20 +2,25 @@
 
 app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', function($rootScope,$http, $q, $cookies, $httpParamSerializer) {
 
-    // var tshirt = 'http://10.58.20.225/tshirts/';
-    // var users = 'http://10.58.20.225/users/';
-    // var login = 'http://10.58.20.225/api-auth/login/';
-    // var register = 'http://10.58.20.225/api-auth/register/';
-    // var snippets = 'http://10.58.20.225/snippets/';
-    
-    var tshirt = 'http://10.8.25.244/tshirts/';
-    var users = 'http://10.8.25.244/users/';
-    var login = 'http://10.8.25.244/api-auth/login/';
-    var register = 'http://10.8.25.244/api-auth/register/';
-    var snippets = 'http://10.8.25.244/snippets/';
-    var socialnetwork = 'http://10.8.25.244/socialnetworks/';
+    var tshirt = 'http://10.58.20.225/tshirts/';
+    var users = 'http://10.58.20.225/users/';
+    var login = 'http://10.58.20.225/api-auth/login/';
+    var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
+    var register = 'http://10.58.20.225/api-auth/register/';
+    var snippets = 'http://10.58.20.225/snippets/';
+    var socialnetwork = 'http://10.58.20.225/socialnetworks/';
+
+    // var tshirt = 'http://192.168.63.103/tshirts/';
+    // var users = 'http://192.168.63.103/users/';
+    // var login = 'http://192.168.63.103/api-auth/login/';
+    // var loginNext = 'http://192.168.63.103/api-auth/login/?next=/';
+    // var register = 'http://192.168.63.103/api-auth/register/';
+    // var snippets = 'http://192.168.63.103/snippets/';
+    // var socialnetwork = 'http://192.168.63.103/socialnetworks/';
 
     return {
+        loginNext: loginNext,
+
         getCookie: function (name) {
             return $cookies.get('csrftoken');
         },
