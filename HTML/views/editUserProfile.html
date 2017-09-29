@@ -6,14 +6,17 @@
                     <div class="row">
                         <div class="testimonial-container col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
                             <form class="form" name="form" ng-submit="uploadImage()">
-                                <img ng-show="form.file.$valid" ngf-thumbnail="user.avatar" class="img-circle image_middle"/>
-                                <input type="file" ngf-select  ng-model="user.avatar" name="file"
-                                       class="form-control margin-top-10" accept="image/*" ngf-max-size="10MB" required
-                                       ngf-model-invalid="errorFile">
-                                <i ng-show="form.file.$error.maxSize">File too large {{ errorFile.size / 1000000 | number:1 }} MB: max 10M</i>
-                                <a type="button" class="btn btn-danger btn-wide margin-top-10" ng-click="user.avatar = null" ng-show="user.avatar">
-                                    <i class="ti-close"></i> Remove
-                                </a>
+                                <img ngf-thumbnail="user.avatar" class="img-circle image_middle"/>
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <span type="file" ngf-select  ng-model="user.avatar" name="file"
+                                          class="btn btn-success fileinput-button margin-top-10 col-xs-5 col-sm-5 col-md-5 col-lg-5" accept="image/*" ngf-max-size="10MB" required
+                                          ngf-model-invalid="errorFile">
+                                        <i class="ti-pencil-alt"></i>
+                                    </span>
+                                    <span type="button" class="btn btn-danger margin-top-10 col-xs-5 col-xs-offset-2 col-sm-5 col-sm-offset-2 col-md-5 col-md-offset-2 col-lg-5 col-lg-offset-2" ng-click="user.avatar = 'assets/images/default-user.png'" ng-show="(user.avatar != 'assets/images/default-user.png') && (user.avatar)">
+                                        <i class="ti-close"></i>
+                                    </span>
+                                </div>
                             </form>
                             <a type="button" class="btn btn-success btn-wide margin-top-10">
                                 <i class="ti-save"></i> Save Profile

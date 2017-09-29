@@ -14,7 +14,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             info: '',
             score: '',
             rating: '',
-            avatar: '',
+            avatar: 'assets/images/default-user.png',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -56,7 +56,11 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
 
                         if (data != undefined){
                             $scope.user.info = data.info;
-                            $scope.user.avatar = data.avatar;
+                            if (data.avatar != ''){
+                                $scope.user.avatar = data.avatar;
+                            } else {
+                                $scope.user.avatar = 'assets/images/default-user.png';
+                            }
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                         } else {
