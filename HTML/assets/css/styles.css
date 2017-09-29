@@ -7698,10 +7698,6 @@ Social Icons
     overflow: hidden;
 }
 
-.social-icons-block{
-    display: block !important;
-}
-
 .social-icons ul li a {
     background-position: 0 0;
     background-repeat: no-repeat;

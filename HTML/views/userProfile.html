@@ -5,7 +5,7 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
-                            <img src="user.avatar" class="img-circle image_middle col-xs-12"/>
+                            <img ng-src="user.avatar" class="img-circle image_middle col-xs-12"/>
                             <h4 class="col-xs-12 padding-0">{{user.firstname}} {{user.lastname}}</h4>
                             <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                             <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
@@ -14,25 +14,15 @@
                         </div>
                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <h3>Social Networks</h3>
-                                <ul class="list-unstyled">
-                                    <li ng-repeat="sn in user.socialnetworks">
-                                        <div class="social-icons">
-                                            <ul class="list-inline">
-                                                <li data-placement="bottom" class="{{sn.type}} tooltips">
-                                                    <a></a>
-                                                </li>
-                                                <li>
-                                                    <h4 class="margin-top-5 margin-left-10">{{sn.name}}</h4>
-                                                    <h5 class="margin-top-5 margin-left-10 style-link">
-                                                        {{sn.url}}
-                                                    </h5>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <hr class="tall">
-                                    </li>
-                                </ul>
+                                <hr class="tall">
+                                <div class="social-icons">
+                                    <ul class="list-inline">
+                                        <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
+                                            <a target="_blank"> {{sn.name}} </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr class="tall">
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <h3>Snippets</h3>
