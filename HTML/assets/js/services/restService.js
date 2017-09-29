@@ -131,7 +131,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 method: 'PUT',
                 url: profileurl,
                 headers: {
-                    'Content-Type': undefined
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
                 },
                 transformRequest: function (data) {
                     if (data === undefined)
