@@ -5,10 +5,7 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
-                            <img src="assets/images/team-1.jpg" class="img-circle image_middle col-xs-12"/>
-                            <a type="button" class="btn btn-success btn-wide margin-top-10 margin-bottom-10 col-xs-12" ui-sref="edit-profile">
-                                <i class="ti-reload"></i> Edit Profile
-                            </a>
+                            <img src="user.avatar" class="img-circle image_middle col-xs-12"/>
                             <h4 class="col-xs-12 padding-0">{{user.firstname}} {{user.lastname}}</h4>
                             <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                             <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
@@ -66,6 +63,11 @@
                 </div>
                 <div class="col-md-3">
                     <div class="row">
+                        <div>
+                            <button type="button" class="btn btn-success margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12" ui-sref="edit-profile">
+                                <i class="ti-reload"></i> Edit Profile
+                            </button>
+                        </div>
                         <div>
                             <button type="button" ng-click="openModalSnippets()"
                                     class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus col-lg-12 col-md-12 col-sm-12 col-xs-12">
