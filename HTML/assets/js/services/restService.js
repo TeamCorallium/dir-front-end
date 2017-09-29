@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', function($rootScope,$http, $q, $cookies, $httpParamSerializer) {
+app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', '$state', function($rootScope,$http, $q, $cookies, $httpParamSerializer, $state) {
 
     var tshirt = 'http://10.58.20.225/tshirts/';
     var users = 'http://10.58.20.225/users/';
