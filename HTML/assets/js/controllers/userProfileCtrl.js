@@ -14,7 +14,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             info: '',
             score: '',
             rating: '',
-            avatar: '',
+            avatar: 'assets/images/default-user.png',
+            profileurl: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -54,9 +55,14 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
                         if (data != undefined){
                             $scope.user.info = data.info;
-                            $scope.user.avatar = data.avatar;
+                            if (data.avatar != ''){
+                                $scope.user.avatar = data.avatar;
+                            } else {
+                                $scope.user.avatar = 'assets/images/default-user.png';
+                            }
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
+                            $scope.user.profileurl = data.url;
                         } else {
                             //    Show Autentication
                             console.log("profile no exist");

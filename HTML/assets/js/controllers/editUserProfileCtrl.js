@@ -15,6 +15,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             score: '',
             rating: '',
             avatar: 'assets/images/default-user.png',
+            profileurl: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -63,9 +64,9 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             }
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
+                            $scope.user.profileurl = data.url;
                         } else {
-                            //    Show Autentication
-                            console.log("profile no exist");
+                            $('#myModal').modal('show');
                         }
                     },
                     function (errResponse) {
@@ -136,5 +137,9 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         } else {
             $('#myModal').modal('show');
         }
+
+        $scope.saveProfile = function () {
+            RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
+        };
 
     }]);

@@ -124,6 +124,27 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
+        updateProfile: function (profileurl, info, rating, score, avatar) {
+            $http({
+                method: 'POST',
+                url: profileurl,
+                headers: {
+                    'Content-Type': undefined
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
+            }).success(function (data) {
+               $state.go('profile');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
         fetchTshirt: function(code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(
