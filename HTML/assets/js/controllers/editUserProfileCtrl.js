@@ -62,7 +62,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
-                            $scope.user.score = data.score;
+                            console.log($scope.user.avatar + " avatar")
+;                            $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
                         } else {
