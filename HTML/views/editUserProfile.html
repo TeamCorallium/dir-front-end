@@ -8,9 +8,8 @@
                             <form class="form" name="form" ng-submit="uploadImage()">
                                 <img ng-show="form.file.$valid" ngf-thumbnail="user.avatar" class="img-circle image_middle"/>
                                 <input type="file" ngf-select  ng-model="user.avatar" name="file"
-                                       class="form-control" accept="image/*" ngf-max-size="10MB" required
+                                       class="form-control margin-top-10" accept="image/*" ngf-max-size="10MB" required
                                        ngf-model-invalid="errorFile">
-                                </input>
                                 <i ng-show="form.file.$error.maxSize">File too large {{ errorFile.size / 1000000 | number:1 }} MB: max 10M</i>
                                 <a type="button" class="btn btn-danger btn-wide margin-top-10" ng-click="user.avatar = null" ng-show="user.avatar">
                                     <i class="ti-close"></i> Remove
