@@ -39,8 +39,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             $scope.getSnippets(data[0].snippets);
 
                         } else {
-                            //    Show Autentication
-                            console.log("Show Autentication");
                             $('#myModal').modal('show');
                         }
                     },
