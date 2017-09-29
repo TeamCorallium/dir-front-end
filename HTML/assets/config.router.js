@@ -20,7 +20,7 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             modules: jsRequires.modules
         });
 
-        // $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/home');
 
         $stateProvider.state('blank',{
             url: '',
