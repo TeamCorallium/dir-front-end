@@ -125,8 +125,10 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         },
 
         updateProfile: function (profileurl, info, rating, score, avatar) {
+            var fd = new FormData();
+            fd.append('avatar', avatar);
             $http({
-                method: 'POST',
+                method: 'PUT',
                 url: profileurl,
                 headers: {
                     'Content-Type': undefined
@@ -137,7 +139,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
+                data: {'info': info, 'rating': rating, 'score': score, 'avatar': fd, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
                $state.go('profile');
             }).error(function(response){

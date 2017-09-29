@@ -11489,8 +11489,8 @@ div.portfolio-info {
 
 .image_middle {
     float: left !important;
-    height: 130px !important;
-    margin-left: 15% !important;
-    width: 130px !important;
+    height: 180px !important;
+    /*margin-left: 15% !important;*/
+    width: 180px !important;
     padding: 0px !important;
 }
