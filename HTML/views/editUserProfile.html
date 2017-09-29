@@ -5,11 +5,23 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="testimonial-container col-xs-6 col-xs-offset-3 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
-                            <img src="assets/images/team-1.jpg" class="img-circle testimonial-thumb image_middle"/>
+                            <img src="assets/images/team-1.jpg" class="img-circle image_middle"/>
                             <a type="button" class="btn btn-success btn-wide margin-top-10">
                                 <i class="ti-save"></i> Save Profile
                             </a>
                         </div>
+                        <form class="form" name="form" ng-submit="uploadImage()">
+                            <div class="form-group"><label for="file">Select an Image</label> <input type="file" ngf-select
+                                                                                                     ng-model="user.avatar" name="file"
+                                                                                                     class="form-control" accept="image/*"
+                                                                                                     ngf-max-size="10MB" required
+                                                                                                     ngf-model-invalid="errorFile"> <i
+                                    ng-show="form.file.$error.maxSize">File too large {{ errorFile.size / 1000000 | number:1 }} MB: max
+                                10M</i> <img ng-show="form.file.$valid" ngf-thumbnail="user.avatar" class="img-responsive"
+                                             style="max-width: 50%">
+                                <button class="btn btn-warning" ng-click="user.avatar = null" ng-show="user.avatar">Remove</button>
+                            </div>
+                        </form>
                         <div class="testimonial-container col-xs-12 col-sm-9 col-md-9 col-lg-9 padding-top-15 padding-left-15">
                             <h4>Who I'm?</h4>
                             <textarea ng-model="user.info" class="form-control"></textarea>

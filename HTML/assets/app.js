@@ -8,5 +8,6 @@ angular.module("pulloverDir",[
     'ui.bootstrap',
     'oc.lazyLoad',
     'ngSanitize',
-    'ngCookies'
+    'ngCookies',
+    'ngFileUpload'
 ]);
