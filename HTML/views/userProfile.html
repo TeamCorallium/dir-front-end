@@ -6,7 +6,7 @@
                     <div class="row">
                         <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
                             <img ng-src="{{user.avatar}}" class="img-circle image_middle col-xs-12"/>
-                            <h4 class="col-xs-12 padding-0">{{user.firstname}} {{user.lastname}}</h4>
+                            <h4 class="col-xs-12 padding-0 margin-top-10">{{user.firstname}} {{user.lastname}}</h4>
                             <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                             <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
                                 data-appears-delay="100">{{user.info}}
@@ -14,7 +14,7 @@
                         </div>
                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr class="tall">
+                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
                                 <div class="social-icons">
                                     <ul class="list-inline">
                                         <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
@@ -22,10 +22,9 @@
                                         </li>
                                     </ul>
                                 </div>
-                                <hr class="tall">
+                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
-                                <h3>Snippets</h3>
                                 <ul class="ltwt">
                                     <li ng-repeat="snippet in user.snippets">
                                         <h4>{{snippet.title}}</h4>
