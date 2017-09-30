@@ -7,6 +7,11 @@ app.controller('ImageDownloadCtrl',["$scope", "$state", "$cookies",
     function ($scope, $state, $cookies) {
 
         $scope.downloadImage  = function (url) {
-            $('#ImageDownloadCtrl').attr("href",url).attr("download","output.png");
+        	console.log(url);
+			var a = $("<a>").attr("href", url).attr("download", "img.jpg").appendTo("body");
+
+			a[0].click();
+
+			a.remove();
         };
     }]);
