@@ -21,8 +21,10 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
+        $scope.profileQRCode = '';
+
         $rootScope.viewEditProfile = false;
-        
+
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -204,5 +206,9 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
         $scope.goToLink = function (link) {
             $window.open(link, '_blank');
+        };
+
+        $scope.makeQRCode = function () {
+            RestService.imageDownload();
         };
     }]);

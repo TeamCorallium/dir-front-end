@@ -11,6 +11,14 @@
                             <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
                                 data-appears-delay="100">{{user.info}}
                             </h5>
+                            <a type="button" ng-click="makeQRCode()" ng-show="profileQRCode == ''"
+                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span>Make QR Code</span>
+                            </a>
+                            <a type="button" href="{{user.avatar}}" download ng-show="profileQRCode != ''"
+                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span>Obtain QR Code</span>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -38,11 +46,6 @@
                 </div>
                 <div class="col-md-3">
                     <div class="row">
-                        <div>
-                            <a type="button" href="{{user.avatar}}" download class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span>Obtain QR Code</span>
-                            </a>
-                        </div>
                         <div>
                             <button type="button" ng-click="openModalSnippets()"
                                     class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">

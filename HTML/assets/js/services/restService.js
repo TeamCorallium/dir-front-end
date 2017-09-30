@@ -10,6 +10,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var snippets = 'http://10.8.25.244/snippets/';
     var socialnetwork = 'http://10.8.25.244/socialnetworks/';
     var imageDir = 'http://10.8.25.244:8080/images/';
+    var imageDownload = 'http://10.8.25.244/api/qrcode';
 
     // var tshirt = 'http://192.168.63.103/tshirts/';
     // var users = 'http://192.168.63.103/users/';
@@ -123,6 +124,27 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 data: {'name': name, 'url': url, 'type': type, 'csrfmiddlewaretoken':$cookies.get('csrftoken') }
             }).success(function (data) {
                 $rootScope.$broadcast('addsocialnetwork');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        imageDownload: function () {
+            $http({
+                method: 'POST',
+                url: imageDownload,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                }
+            }).success(function (data) {
+                console.log(data.qrfilename + ' qrfilename');
+                // $rootScope.$broadcast('imageDownloadSuccesfull',);
             }).error(function(response){
                 console.log("Entra al error");
             });
