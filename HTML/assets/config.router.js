@@ -33,7 +33,7 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
         }).state('profile',{
             url: '/profile',
             templateUrl: 'views/userProfile.html',
-            resolve: loadSequence('userProfileCtrl','imageDownloadCtrl')
+            resolve: loadSequence('userProfileCtrl')
         }).state('edit-profile',{
             url: '/editprofile',
             templateUrl: 'views/editUserProfile.html',
