@@ -59,7 +59,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
 
                         if (data != undefined){
                             $scope.user.info = data.info;
-                            console.log(data.avatar + " avatar");
                             if (data.avatar != '' && data.avatar != null){
                                 var avatarArray = data.avatar.split("/");
                                 $scope.user.avatar = RestService.imageDir+avatarArray[avatarArray.length-1];
@@ -69,7 +68,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
-                            console.log($scope.user.profileurl + " profileurl");
                         } else {
                             $('#myModal').modal('show');
                         }

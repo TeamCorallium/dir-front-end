@@ -72,8 +72,8 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
                         if (data != undefined){
                             $scope.user.info = data.info;
-                            if (data.avatar != ''){
-                                var avatarArray =data.avatar.split("/");
+                            if (data.avatar != '' && data.avatar != null){
+                                var avatarArray = data.avatar.split("/");
                                 $scope.user.avatar = RestService.imageDir+avatarArray[avatarArray.length-1];
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
