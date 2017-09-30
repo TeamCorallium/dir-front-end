@@ -35,3 +35,34 @@
     cursor: pointer !important;
     color: #337ab7;
 }
+
+.button-image-left{
+    margin-top: -105px !important;
+    position: absolute !important;
+    border-radius: 100% !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding-left: 10px!important;
+    opacity: 0.5 !important;
+    padding-top: 07px !important;
+}
+
+.button-image-right{
+    margin-top: -105px !important;
+    position: absolute !important;
+    border-radius: 100% !important;
+    width: 35px !important;
+    height: 35px !important;
+    padding-left: 10px!important;
+    opacity: 0.5 !important;
+    margin-left: 130px !important;
+    padding-top: 07px !important;
+}
+
+.button-image-left:hover{
+    opacity: 1.0 !important;
+}
+
+.button-image-right:hover{
+    opacity: 1.0 !important;
+}
