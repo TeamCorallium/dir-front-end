@@ -20,6 +20,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             tshirts: [],
             snippets: []
         };
+
+        $rootScope.viewEditProfile = false;
         
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)

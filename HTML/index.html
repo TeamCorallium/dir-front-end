@@ -62,6 +62,9 @@
                                     <a ui-sref="profile" ng-show="userdata.connected"> My Profile</a>
                                 </li>
                                 <li>
+                                    <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewEditProfile == false))"> Edit Profile</a>
+                                </li>
+                                <li>
                                     <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
                                 </li>
                                 <li>

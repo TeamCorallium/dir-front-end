@@ -20,6 +20,8 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
+        $rootScope.viewEditProfile = false;
+
         $scope.getTshirt = function (param) {
             RestService.fetchTshirt(param)
                 .then(
