@@ -24,6 +24,7 @@
     <link href="../bower_components/slick.js/slick/slick-theme.css" rel="stylesheet" media="screen" />
     <link href="../bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet" media="screen" />
     <link href="../bower_components/magnific-popup/dist/magnific-popup.css" rel="stylesheet" media="screen" />
+
     <link href="assets/css/styles.css" rel="stylesheet" media="screen">
     <link href="assets/css/plugins.css" rel="stylesheet" media="screen">
     <link href="assets/css/css.css" rel="stylesheet" media="screen">
@@ -179,8 +180,8 @@
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                         <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
+                            <li class="active"><a data-toggle="tab" href="#login-formHome"> Login <span class="glyphicon glyphicon-user"></span></a></li>
+                            <li><a data-toggle="tab" href="#registration-formHome"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
                         </ul>
                     </div>
                     <div class="modal-body">
@@ -267,8 +268,8 @@
                     </div>
                     <div class="modal-body padding-15">
                         <div class="form-group">
-                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork">
-                                <option selected value="Facebook">Facebook</option>
+                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" ng-init="Facebook">
+                                <option value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
                                 <option value="Twitter">Twitter</option>
                                 <option value="Instagram">Instagram</option>
