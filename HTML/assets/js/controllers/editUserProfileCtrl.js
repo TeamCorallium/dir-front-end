@@ -68,6 +68,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
+                            console.log($scope.user.profileurl + " profileurl");
                         } else {
                             $('#myModal').modal('show');
                         }
