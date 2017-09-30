@@ -9,6 +9,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var register = 'http://10.8.25.244/api-auth/register/';
     var snippets = 'http://10.8.25.244/snippets/';
     var socialnetwork = 'http://10.8.25.244/socialnetworks/';
+    var imageDir = 'http://10.8.25.244:8080/images/';
 
     // var tshirt = 'http://192.168.63.103/tshirts/';
     // var users = 'http://192.168.63.103/users/';
@@ -17,9 +18,12 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var register = 'http://192.168.63.103/api-auth/register/';
     // var snippets = 'http://192.168.63.103/snippets/';
     // var socialnetwork = 'http://192.168.63.103/socialnetworks/';
+    // var imageDir = 'http://192.168.63.103:8080/images/';
 
     return {
         loginNext: loginNext,
+
+        imageDir: imageDir,
 
         getCookie: function (name) {
             return $cookies.get('csrftoken');
