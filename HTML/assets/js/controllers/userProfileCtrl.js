@@ -199,4 +199,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $state.go('profile');
             $scope.getUser($cookies.get('username'));
         });
+
+        $scope.goToLink = function (link) {
+            $window.open(link, '_blank');
+        };
     }]);

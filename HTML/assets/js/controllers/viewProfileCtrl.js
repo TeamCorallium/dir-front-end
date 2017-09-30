@@ -177,4 +177,8 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 $('#myModal').modal('show');
             }
         };
+
+        $scope.goToLink = function (link) {
+            $window.open(link, '_blank');
+        };
     }]);

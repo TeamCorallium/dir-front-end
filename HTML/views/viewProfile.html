@@ -18,7 +18,7 @@
                                 <div class="social-icons center">
                                     <ul class="list-inline">
                                         <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
-                                            <a target="_blank"> {{sn.name}} </a>
+                                            <a ng-click="goToLink(sn.url)"> {{sn.name}} </a>
                                         </li>
                                     </ul>
                                 </div>
