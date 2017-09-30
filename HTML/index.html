@@ -101,8 +101,8 @@
         <div class="modal fade login-register-form" id="myModal" role="dialog">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <a type="button" class="close" data-dismiss="modal">
+                    <div class="modal-header" ng-controller="CloseCtrl">
+                        <a type="button" class="close" ng-click="closeModal()">
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                         <ul class="nav nav-tabs">
@@ -380,6 +380,7 @@
 
 <!-- start: CONTROLLERS-->
 <script src="assets/js/controllers/loginCtrl.js"></script>
+<script src="assets/js/controllers/closeCtrl.js"></script>
 <script src="assets/js/controllers/registrationCtrl.js"></script>
 <script src="assets/js/controllers/addSnippetsCtrl.js"></script>
 <script src="assets/js/controllers/addSocialNetworkCtrl.js"></script>
