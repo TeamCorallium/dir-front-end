@@ -3,11 +3,16 @@
  */
 'use strict';
 
-app.controller('CloseCtrl',["$scope", "$state",
-    function ($scope, $state) {
+app.controller('CloseCtrl',["$scope", "$state", "$cookies",
+    function ($scope, $state, $cookies) {
 
-        $scope.closeModal = function() {
-            $('#myModal').modal('hide');
-            $state.go('home');
-        };
+        $("#myModal").on('hidden.bs.modal', function () {
+            if (!$cookies.get('sessionid'))
+                $state.go('home');
+        });
+
+        $("#myModalHome").on('hidden.bs.modal', function () {
+            if (!$cookies.get('sessionid'))
+                $state.go('home');
+        });
     }]);
