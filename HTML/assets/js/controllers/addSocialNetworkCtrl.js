@@ -29,7 +29,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
                 type = 'social-rss';
             } else if (name == 'Behance'){
                 type = 'social-behance';
-            } else if (name == 'DropBox'){
+            } else if (name == 'Dropbox'){
                 type = 'social-dropbox';
             } else if (name == 'GitHub'){
                 type = 'social-github';
@@ -51,7 +51,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
                 type = 'social-yahoo';
             } else if (name == 'VK'){
                 type = 'social-vk';
-            } else if (name == 'FourSquare'){
+            } else if (name == 'Foursquare'){
                 type = 'social-foursquare';
             } else if (name == 'Flickr'){
                 type = 'social-flickr';
