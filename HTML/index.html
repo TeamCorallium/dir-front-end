@@ -64,7 +64,7 @@
                                     <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#myModal" ng-hide="userdata.connected"> Log In</a>
+                                    <a data-toggle="modal" data-target="#myModalHome" ng-hide="userdata.connected"> Log In</a>
                                 </li>
                                 <li>
                                     <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
@@ -164,12 +164,66 @@
                                     <button class="btn btn-default" ng-click="registerModal(firstname,lastname,username,pass,againPass,email,pin)">Register</button>
                                 </form>
                             </div>
-
                         </div>
                     </div>
-                    <!--                                    <div class="modal-footer">-->
-                    <!--                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
-                    <!--                                    </div>-->
+                </div>
+            </div>
+        </div>
+        <!-- end: MODAL-->
+
+        <!-- start: MODAL-->
+        <div class="modal fade login-register-form" id="myModalHome" role="dialog">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header" ng-controller="CloseCtrl">
+                        <a type="button" class="close" ng-click="closeModal()">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                        <ul class="nav nav-tabs">
+                            <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
+                            <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="modal-body">
+                        <div class="tab-content">
+                            <div id="login-formHome" class="tab-pane fade in active">
+                                <form ng-controller="LoginCtrl">
+                                    <div class="form-group">
+                                        <label for="username">Username:</label>
+                                        <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pwd">Password:</label>
+                                        <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
+                                    </div>
+                                    <div class="alert alert-danger" id="errorBoxHome" hidden>
+                                        Wrong username or password. Sorry, try again.
+                                    </div>
+                                    <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
+                                </form>
+                            </div>
+                            <div id="registration-formHome" class="tab-pane fade">
+                                <form ng-controller="RegistrationCtrl">
+                                    <div class="form-group">
+                                        <label for="newusername">Username:</label>
+                                        <input type="text" class="form-control" id="newusernameHome" placeholder="Enter new username" name="newusername" ng-model="usernameHome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="pass">Password:</label>
+                                        <input type="password" class="form-control" id="passHome" placeholder="New password" name="pass" ng-model="passHome">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="againPass">Password again:</label>
+                                        <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPass" ng-model="againPassHome">
+                                    </div>
+                                    <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
+                                        The information provided is not correct. Sorry, try again
+                                    </div>
+                                    <button class="btn btn-default" ng-click="registerModalHome(usernameHome,passHome,againPassHome)">Register</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

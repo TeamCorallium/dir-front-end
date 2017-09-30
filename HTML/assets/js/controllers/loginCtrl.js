@@ -28,6 +28,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
 
         $rootScope.$on('connected',function (event, data) {
             $('#errorBox').hide();
+            $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
             $state.go('profile');
         });
@@ -40,7 +41,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
-            console.log('error al conectarse');
+            $('#errorBoxHome').show();
             $('#errorBox').show();
         });
     }]);

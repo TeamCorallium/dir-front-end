@@ -25,7 +25,15 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
             if (password === passAgain) {
                 RestService.register(username, password,firstname,lastname,email,pin);
             } else {
-                //show error
+                $('#errorRegisterBox').show();
+            }
+        };
+
+        $scope.registerModalHome = function (username, password, passAgain) {
+            if (password === passAgain) {
+                RestService.register(username, password,"","","","");
+            } else {
+                $('#errorRegisterBoxHome').show();
             }
         };
 
