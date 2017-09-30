@@ -134,7 +134,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 method: 'POST',
                 url: imageDownload,
                 headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': $cookies.get('csrftoken')
                 },
                 transformRequest: function(obj) {
                     var str = [];
