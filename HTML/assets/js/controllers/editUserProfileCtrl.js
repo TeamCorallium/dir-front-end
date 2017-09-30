@@ -156,6 +156,9 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         }
 
         $scope.saveProfile = function () {
+            if ($scope.user.avatar == 'assets/images/default-user.png'){
+                $scope.user.avatar = '';
+            }
             RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
         };
 
