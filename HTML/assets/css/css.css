@@ -66,3 +66,7 @@
 .button-image-right:hover{
     opacity: 1.0 !important;
 }
+
+.resize-none{
+    resize: none !important;
+}

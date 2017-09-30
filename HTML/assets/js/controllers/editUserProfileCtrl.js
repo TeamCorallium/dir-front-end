@@ -21,6 +21,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             snippets: []
         };
 
+        $scope.name = '';
+
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -31,6 +33,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             $scope.user.firstname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
                             $scope.user.email = data[0].email;
+                            $scope.name = $scope.user.firstname+" "+$scope.user.lastname;
 
                             if (data[0].profiles.length > 0) {
                                 $scope.getProfile(data[0].profiles[0]);
