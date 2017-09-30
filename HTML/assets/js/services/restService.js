@@ -144,8 +144,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     return str.join("&");
                 }
             }).success(function (data) {
-                console.log(data.qrfilename + ' qrfilename');
-                // $rootScope.$broadcast('imageDownloadSuccesfull',);
+                $rootScope.$broadcast('imageDownloadSuccesfull', imageDir+data.qrfilename);
             }).error(function(response){
                 console.log("Entra al error");
             });
