@@ -39,10 +39,9 @@
                 <div class="col-md-3">
                     <div class="row">
                         <div ng-controller="ImageDownloadCtrl">
-                            <button type="button" id="imageDownload" ng-click="downloadImage(user.avatar)"
-                                    class="btn btn-success btn-wide btn-scroll btn-scroll-top ti-reload col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <a type="button" href="{{user.avatar}}" download>
                                 <span>Obtain QR Code</span>
-                            </button>
+                            </a>
                         </div>
                         <div>
                             <button type="button" ng-click="openModalSnippets()"
