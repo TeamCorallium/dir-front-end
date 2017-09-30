@@ -159,7 +159,27 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.deleteSocialNetwork(id);
         };
 
+        $scope.deleteSnippets = function (url) {
+            RestService.deleteSnippet(url);
+        };
+
         $rootScope.$on('deleteSocialNetwork', function (event, data) {
+            $scope.user.username =  '';
+            $scope.user.firstname = '';
+            $scope.user.lastname = '';
+            $scope.user.email = '';
+            $scope.user.info = '';
+            $scope.user.score = '';
+            $scope.user.rating = '';
+            $scope.user.avatar = '';
+            $scope.user.socialnetworks = [];
+            $scope.user.tshirts = [];
+            $scope.user.snippets = [];
+
+            $scope.getUser($cookies.get('username'));
+        });
+
+        $rootScope.$on('deleteSnippet', function (event, data) {
             $scope.user.username =  '';
             $scope.user.firstname = '';
             $scope.user.lastname = '';

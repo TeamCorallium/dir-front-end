@@ -180,6 +180,27 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
+        deleteSnippet: function (url) {
+            $http({
+                method: 'DELETE',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for(var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                }
+            }).success(function (result) {
+                $rootScope.$broadcast('deleteSnippet');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
         fetchTshirt: function(code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(
