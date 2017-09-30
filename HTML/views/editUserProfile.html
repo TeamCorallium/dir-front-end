@@ -24,62 +24,33 @@
                                 data-appears-delay="100">{{user.info}}
                             </h5>
                         </div>
-                    </div>
-                    <div class="row padding-top-15">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <h4>My social networks</h4>
-                        </div>
-                        <div class="social-icons col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3 margin-top-10">
-                            <ul>
-                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
-                                    <a href="http://www.twitter.com" target="_blank"> Twitter </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
-                                    <a href="http://dribbble.com" target="_blank"> Dribbble </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
-                                    <a href="http://facebook.com" target="_blank"> Facebook </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
-                                    <a href="http://google.com" target="_blank"> Google+ </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                    <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="YouTube" class="social-youtube tooltips">
-                                    <a href="http://youtube.com/" target="_blank"> YouTube </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="RSS" class="social-rss tooltips">
-                                    <a href="#" target="_blank"> RSS </a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="ADD" class="social-add tooltips pull-right">
-                                    <a href="#" target="_blank"> ADD </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="row padding-top-40">
-                        <div class="col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <h4 class="inline-block">Snippets</h4>
-                            <!--<a type="button" class="btn btn-primary btn-sm inline-block pull-right">-->
-                            <!--<i class="ti-plus"></i>-->
-                            <!--Add Snippets-->
-                            <!--</a>-->
-                        </div>
-                        <div class="panel-body col-xs-12 col-sm-9 col-sm-offset-3 col-md-9 col-md-offset-3 col-lg-9 col-lg-offset-3">
-                            <ul class="ltwt">
-                                <li ng-repeat="snippet in user.snippets">
-                                    <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
-                                        <button class="btn btn-red">
-                                            <i class="ti-trash"></i>
-                                        </button>
-                                    </div>
-                                    <div class="col-xs-10 col-sm-11 col-md-11 col-lg-11">
-                                        <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
-                                        <span class="block text-light margin-bottom-20"><i class="fa fa-fw fa-clock-o"></i> 2 minuts ago</span>
-                                    </div>
-                                </li>
-                            </ul>
+                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
+                                <div class="social-icons">
+                                    <ul class="list-inline">
+                                        <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
+                                            <a target="_blank" ng-click="deleteSocialNetwork(sn.id)"> {{sn.name}} </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
+                            </div>
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
+                                <ul class="ltwt">
+                                    <li ng-repeat="snippet in user.snippets">
+                                        <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1">
+                                            <button class="btn btn-red">
+                                                <i class="ti-trash"></i>
+                                            </button>
+                                        </div>
+                                        <div class="col-xs-10 col-sm-11 col-md-11 col-lg-11">
+                                            <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
+                                            <span class="block text-light margin-bottom-20"><i class="fa fa-fw fa-clock-o"></i> 2 minuts ago</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

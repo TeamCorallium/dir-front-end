@@ -140,4 +140,12 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
         };
 
+        $scope.deleteSocialNetwork = function (id) {
+            RestService.deleteSocialNetwork(id);
+        };
+
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {
+            $scope.getUser($cookies.get('username'));
+        });
+
     }]);
