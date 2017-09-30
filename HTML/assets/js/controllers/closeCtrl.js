@@ -11,7 +11,12 @@ app.controller('CloseCtrl',["$scope", "$state", "$cookies",
                 $state.go('home');
         });
 
-        $("#myModalHome").on('hidden.bs.modal', function () {
+        $("#myModalLoginHome").on('hidden.bs.modal', function () {
+            if (!$cookies.get('sessionid'))
+                $state.go('home');
+        });
+
+        $("#myModalRegisterHome").on('hidden.bs.modal', function () {
             if (!$cookies.get('sessionid'))
                 $state.go('home');
         });

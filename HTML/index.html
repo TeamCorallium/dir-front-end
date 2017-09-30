@@ -65,7 +65,10 @@
                                     <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
                                 </li>
                                 <li>
-                                    <a data-toggle="modal" data-target="#myModalHome" ng-hide="userdata.connected"> Log In</a>
+                                    <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
+                                </li>
+                                <li>
+                                    <a data-toggle="modal" data-target="#myModalRegisterHome" ng-hide="userdata.connected"> Register</a>
                                 </li>
                                 <li>
                                     <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
@@ -171,241 +174,255 @@
         </div>
         <!-- end: MODAL-->
 
-        <!-- start: MODAL-->
-        <div class="modal fade login-register-form" id="myModalHome" role="dialog">
+        <!-- start: MODAL LOGIN HOME-->
+        <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header" ng-controller="CloseCtrl">
+                        <div class="modal-header padding-15">
+                            <a type="button" class="close" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <h4 class="modal-title"><i class="ti-user"></i> Login</h4>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form ng-controller="LoginCtrl">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pwd">Password:</label>
+                                <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
+                            </div>
+                            <div class="alert alert-danger" id="errorBoxHome" hidden>
+                                Wrong username or password. Sorry, try again.
+                            </div>
+                            <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL LOGIN HOME-->
+
+    <!-- start: MODAL LOGIN HOME-->
+    <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header" ng-controller="CloseCtrl">
+                    <div class="modal-header padding-15">
                         <a type="button" class="close" data-dismiss="modal">
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#login-formHome"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a data-toggle="tab" href="#registration-formHome"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
+                        <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <form ng-controller="RegistrationCtrl">
+                        <div class="form-group">
+                            <label for="newusername">Username:</label>
+                            <input type="text" class="form-control" id="newusernameHome" placeholder="Enter new username" name="newusername" ng-model="usernameHome">
+                        </div>
+                        <div class="form-group">
+                            <label for="pass">Password:</label>
+                            <input type="password" class="form-control" id="passHome" placeholder="New password" name="pass" ng-model="passHome">
+                        </div>
+                        <div class="form-group">
+                            <label for="againPass">Password again:</label>
+                            <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPass" ng-model="againPassHome">
+                        </div>
+                        <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
+                            The information provided is not correct. Sorry, try again
+                        </div>
+                        <button class="btn btn-default" ng-click="registerModalHome(usernameHome,passHome,againPassHome)">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end: MODAL LOGIN HOME-->
+
+    <!-- start: MODAL SNIPPETS-->
+    <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header padding-15">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
+                </div>
+                <div class="modal-body padding-15">
+                    <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
+                    <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
+                </div>
+                <div class="modal-footer padding-15">
+                    <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL SNIPPETS-->
+
+    <!-- start: MODAL SOCIAL NETWORK-->
+    <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header padding-15">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    <h4 class="modal-title">Add Social Network</h4>
+                </div>
+                <div class="modal-body padding-15">
+                    <div class="form-group">
+                        <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" ng-init="Facebook">
+                            <option value="Facebook">Facebook</option>
+                            <option value="LinkedIn">LinkedIn</option>
+                            <option value="Twitter">Twitter</option>
+                            <option value="Instagram">Instagram</option>
+                            <option value="Reddit">Reddit</option>
+                            <option value="Google">Google+</option>
+                            <option value="YouTube">YouTube</option>
+                            <option value="RSS">RSS</option>
+                            <option value="Behance">Behance</option>
+                            <option value="Dropbox">Dropbox</option>
+                            <option value="GitHub">GitHub</option>
+                            <option value="Skype">Skype</option>
+                            <option value="Spotify">Spotify</option>
+                            <option value="StumbleUpon">StumbleUpon</option>
+                            <option value="Tumblr">Tumblr</option>
+                            <option value="Vimeo">Vimeo</option>
+                            <option value="WordPress">WordPress</option>
+                            <option value="Xing">Xing</option>
+                            <option value="Yahoo">Yahoo</option>
+                            <option value="VK">VK</option>
+                            <option value="Flickr">Flickr</option>
+                            <option value="Foursquare">Foursquare</option>
+                        </select>
+                    </div>
+                    <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url">
+                </div>
+                <div class="modal-footer padding-15">
+                    <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
+                        Close
+                    </button>
+                    <button type="button" class="btn btn-primary" ng-click="addSocialNetwork(socialnetwork,url)">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL SOCIAL NETWORK-->
+
+    <!-- start: FOOTER-->
+    <footer id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 padding-bottom-25">
+                    <a class="logo" href="index.html"> <img alt="Clip-Two" src="assets/images/logo2.png"> </a>
+                    <p class="padding-top-20">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Nulla consequat massa quis enim. Donec pede justo fringilla vel, aliquet nec, vulputate eget, arcu...
+                    </p>
+                    <button type="button" class="btn btn-red margin-top-15 btn-block btn-scroll btn-scroll-top fa-shopping-cart">
+                        <span>Buy a TShirt Now</span>
+                    </button>
+                </div>
+                <div class="col-md-3 padding-bottom-25">
+                    <h4 class="margin-bottom-25">Latest Tweet</h4>
+                    <div class="twitter margin-bottom-15" id="tweet">
+                        <i class="fa fa-twitter pull-left"></i>
+                        <p class="padding-left-30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+                            <a href="#" class="time"> 12 Dec </a>
+                        </p>
+                    </div>
+                    <div class="twitter margin-bottom-15" id="tweet1">
+                        <i class="fa fa-twitter pull-left"></i>
+                        <p class="padding-left-30">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
+                            <a href="#" class="time"> 12 Dec </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-3 padding-bottom-25">
+                    <div class="contact-details">
+                        <h4 class="margin-bottom-25">Recent Snippets</h4>
+                        <ul class="posts">
+                            <li>
+                                <a href="#"> MVC directory structure </a>
+                            </li>
+                            <li>
+                                <a href="#"> Dependency injection </a>
+                            </li>
+                            <li>
+                                <a href="#"> Service vs Factory </a>
+                            </li>
                         </ul>
                     </div>
-                    <div class="modal-body">
-                        <div class="tab-content">
-                            <div id="login-formHome" class="tab-pane fade in active">
-                                <form ng-controller="LoginCtrl">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd">Password:</label>
-                                        <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
-                                    </div>
-                                    <div class="alert alert-danger" id="errorBoxHome" hidden>
-                                        Wrong username or password. Sorry, try again.
-                                    </div>
-                                    <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
-                                </form>
-                            </div>
-                            <div id="registration-formHome" class="tab-pane fade">
-                                <form ng-controller="RegistrationCtrl">
-                                    <div class="form-group">
-                                        <label for="newusername">Username:</label>
-                                        <input type="text" class="form-control" id="newusernameHome" placeholder="Enter new username" name="newusername" ng-model="usernameHome">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pass">Password:</label>
-                                        <input type="password" class="form-control" id="passHome" placeholder="New password" name="pass" ng-model="passHome">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="againPass">Password again:</label>
-                                        <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPass" ng-model="againPassHome">
-                                    </div>
-                                    <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
-                                        The information provided is not correct. Sorry, try again
-                                    </div>
-                                    <button class="btn btn-default" ng-click="registerModalHome(usernameHome,passHome,againPassHome)">Register</button>
-                                </form>
-                            </div>
-                        </div>
+                </div>
+                <div class="col-md-3 padding-bottom-25">
+                    <h4 class="margin-bottom-25">Follow Us</h4>
+                    <div class="social-icons">
+                        <ul>
+                            <li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
+                                <a target="_blank" href="#"> Twitter </a>
+                            </li>
+                            <li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
+                                <a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
+                            </li>
+                            <li class="social-google tooltips" data-original-title="LinkedIn" data-placement="bottom">
+                                <a target="_blank" href="#" data-original-title="LinkedIn"> Google + </a>
+                            </li>
+                            <li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
+                                <a target="_blank" href="#" data-original-title="LinkedIn"> LinkedIn </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end: MODAL-->
-
-        <!-- start: MODAL SNIPPETS-->
-        <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header padding-15">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
+        <div class="footer-copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <p>
+                            &copy; Copyright <span class="current-year"></span> by DIR. All Rights Reserved.
+                        </p>
                     </div>
-                    <div class="modal-body padding-15">
-                        <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
-                        <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
-                    </div>
-                    <div class="modal-footer padding-15">
-                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
-                            Add
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL SNIPPETS-->
-
-        <!-- start: MODAL SOCIAL NETWORK-->
-        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header padding-15">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title">Add Social Network</h4>
-                    </div>
-                    <div class="modal-body padding-15">
-                        <div class="form-group">
-                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" ng-init="Facebook">
-                                <option value="Facebook">Facebook</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Twitter">Twitter</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="Reddit">Reddit</option>
-                                <option value="Google">Google+</option>
-                                <option value="YouTube">YouTube</option>
-                                <option value="RSS">RSS</option>
-                                <option value="Behance">Behance</option>
-                                <option value="Dropbox">Dropbox</option>
-                                <option value="GitHub">GitHub</option>
-                                <option value="Skype">Skype</option>
-                                <option value="Spotify">Spotify</option>
-                                <option value="StumbleUpon">StumbleUpon</option>
-                                <option value="Tumblr">Tumblr</option>
-                                <option value="Vimeo">Vimeo</option>
-                                <option value="WordPress">WordPress</option>
-                                <option value="Xing">Xing</option>
-                                <option value="Yahoo">Yahoo</option>
-                                <option value="VK">VK</option>
-                                <option value="Flickr">Flickr</option>
-                                <option value="Foursquare">Foursquare</option>
-                            </select>
-                        </div>
-                        <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url">
-                    </div>
-                    <div class="modal-footer padding-15">
-                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary" ng-click="addSocialNetwork(socialnetwork,url)">
-                            Add
-                        </button>
+                    <div class="col-md-4">
+                        <nav id="sub-menu">
+                            <ul>
+                                <li>
+                                    <a href="#"> FAQ's </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Sitemap </a>
+                                </li>
+                                <li>
+                                    <a href="#"> Contact </a>
+                                </li>
+                            </ul>
+                        </nav>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- end: MODAL SOCIAL NETWORK-->
-        
-        <!-- start: FOOTER-->
-		<footer id="footer">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-3 padding-bottom-25">
-						<a class="logo" href="index.html"> <img alt="Clip-Two" src="assets/images/logo2.png"> </a>
-						<p class="padding-top-20">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Nulla consequat massa quis enim. Donec pede justo fringilla vel, aliquet nec, vulputate eget, arcu...
-						</p>
-						<button type="button" class="btn btn-red margin-top-15 btn-block btn-scroll btn-scroll-top fa-shopping-cart">
-							<span>Buy a TShirt Now</span>
-						</button>
-					</div>
-					<div class="col-md-3 padding-bottom-25">
-						<h4 class="margin-bottom-25">Latest Tweet</h4>
-						<div class="twitter margin-bottom-15" id="tweet">
-							<i class="fa fa-twitter pull-left"></i>
-							<p class="padding-left-30">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-								<a href="#" class="time"> 12 Dec </a>
-							</p>
-						</div>
-						<div class="twitter margin-bottom-15" id="tweet1">
-							<i class="fa fa-twitter pull-left"></i>
-							<p class="padding-left-30">
-								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-								<a href="#" class="time"> 12 Dec </a>
-							</p>
-						</div>
-					</div>
-					<div class="col-md-3 padding-bottom-25">
-						<div class="contact-details">
-							<h4 class="margin-bottom-25">Recent Snippets</h4>
-							<ul class="posts">
-								<li>
-									<a href="#"> MVC directory structure </a>
-								</li>
-								<li>
-									<a href="#"> Dependency injection </a>
-								</li>
-								<li>
-									<a href="#"> Service vs Factory </a>
-								</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3 padding-bottom-25">
-						<h4 class="margin-bottom-25">Follow Us</h4>
-						<div class="social-icons">
-							<ul>
-								<li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
-									<a target="_blank" href="#"> Twitter </a>
-								</li>
-								<li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
-									<a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
-								</li>
-								<li class="social-google tooltips" data-original-title="LinkedIn" data-placement="bottom">
-									<a target="_blank" href="#" data-original-title="LinkedIn"> Google + </a>
-								</li>
-								<li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
-									<a target="_blank" href="#" data-original-title="LinkedIn"> LinkedIn </a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="footer-copyright">
-				<div class="container">
-					<div class="row">
-						<div class="col-md-8">
-							<p>
-								&copy; Copyright <span class="current-year"></span> by DIR. All Rights Reserved.
-							</p>
-						</div>
-						<div class="col-md-4">
-							<nav id="sub-menu">
-								<ul>
-									<li>
-										<a href="#"> FAQ's </a>
-									</li>
-									<li>
-										<a href="#"> Sitemap </a>
-									</li>
-									<li>
-										<a href="#"> Contact </a>
-									</li>
-								</ul>
-							</nav>
-						</div>
-					</div>
-				</div>
-			</div>
-		</footer>
-		<a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
-		<!-- end: FOOTER -->
-	</div>
-	<!-- end: APP CONTENT -->
+    </footer>
+    <a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
+    <!-- end: FOOTER -->
+</div>
+<!-- end: APP CONTENT -->
 </div>
 <!-- start: MAIN JAVASCRIPTS -->
 <script src="../bower_components/jquery/dist/jquery.min.js"></script>

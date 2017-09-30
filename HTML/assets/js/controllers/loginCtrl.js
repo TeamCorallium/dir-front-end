@@ -30,7 +30,7 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
-            $('#myModalHome').modal('hide');
+            $('#myModalLoginHome').modal('hide');
             $state.go('profile');
         });
 
