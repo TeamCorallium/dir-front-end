@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies",
-    function ($scope, $stateParams,RestService, $state, $cookies) {
+app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
+    function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
 
         $scope.user = {
             username: '',
