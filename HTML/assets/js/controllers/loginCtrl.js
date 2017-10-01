@@ -7,7 +7,6 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
         if (RestService.getCookie('csrftoken') == null) {
-            console.log(RestService.loginNext);
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
                     function (data) {

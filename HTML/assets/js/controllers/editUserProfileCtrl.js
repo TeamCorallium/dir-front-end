@@ -40,7 +40,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             if (data[0].profiles.length > 0) {
                                 $scope.getProfile(data[0].profiles[0]);
                             }
-                            $scope.getTshirts(data[0].tshirts);
+                            // $scope.getTshirts(data[0].tshirts);
                             $scope.getSnippets(data[0].snippets);
                             getSocialNetworks(data[0].socialnetworks);
 

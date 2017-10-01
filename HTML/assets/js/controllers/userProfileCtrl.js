@@ -38,7 +38,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             if (data[0].profiles.length > 0) {
                                 getProfile(data[0].profiles[0]);
                             }
-                            getTshirts(data[0].tshirts);
+                            // getTshirts(data[0].tshirts);
                             getSnippets(data[0].snippets);
                             getSocialNetworks(data[0].socialnetworks);
 
