@@ -234,4 +234,9 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.getPopularUsers();
+
+        $scope.goToProfile = function (owner) {
+          $cookies.set('exploreUser',owner);
+          $state.go('tshirts');
+        };
     }]);

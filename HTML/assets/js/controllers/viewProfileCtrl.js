@@ -24,19 +24,24 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.viewProfile = false;
 
         $scope.getTshirt = function (param) {
-            RestService.fetchTshirt(param)
-                .then(
-                    function (data) {
-                        if (data.length > 0){
-                            $scope.getUser(data[0].owner);
-                        } else {
-                            $('#myModal').modal('show');
+            if($cookies.get('exploreUser')) {
+                $scope.getUser($cookies.get('exploreUser'));
+                $cookies.remove("exploreUser",{path: '/'});
+            } else {
+                RestService.fetchTshirt(param)
+                    .then(
+                        function (data) {
+                            if (data.length > 0){
+                                $scope.getUser(data[0].owner);
+                            } else {
+                                $('#myModal').modal('show');
+                            }
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
                         }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
-                );
+                    );
+            }
         };
 
         $scope.getTshirt($stateParams.id);

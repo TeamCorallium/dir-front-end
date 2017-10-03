@@ -23,7 +23,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'Google'){
                 $scope.url = 'social-google';
             } else if ($scope.socialnetwork == 'YouTube'){
-                $scope.url = 'social-youtube';
+                $scope.url = 'https://www.youtube.com/user/';
             } else if ($scope.socialnetwork == 'RSS'){
                 $scope.url = 'social-rss';
             } else if ($scope.socialnetwork == 'Behance'){
