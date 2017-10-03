@@ -71,9 +71,8 @@
     resize: none !important;
 }
 
-@media  (max-width: 480px) {
+@media  (min-width: 768px) {
     .image_middle {
-        margin-left: 25% !important;
         float: left !important;
         height: 180px !important;
         width: 180px !important;
@@ -91,8 +90,9 @@
     }
 }
 
-@media  (min-width: 768px) {
+@media  (max-width: 480px) {
     .image_middle {
+        margin-left: 25% !important;
         float: left !important;
         height: 180px !important;
         width: 180px !important;
