@@ -71,7 +71,7 @@
     resize: none !important;
 }
 
-@media  (max-width: 412px) {
+@media  (max-width: 480px) {
     .image_middle {
         margin-left: 25% !important;
         float: left !important;
@@ -83,7 +83,7 @@
 
 @media  (max-width: 767px) {
     .image_middle {
-        margin-left: 35% !important;
+        margin-left: 30% !important;
         float: left !important;
         height: 250px !important;
         width: 250px !important;
