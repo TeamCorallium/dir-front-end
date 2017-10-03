@@ -11,15 +11,15 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
 
         $scope.updateUrl = function () {
             if ($scope.socialnetwork == 'Facebook'){
-                $scope.url = 'social-facebook';
+                $scope.url = 'https://www.facebook.com/';
             } else if ($scope.socialnetwork == 'Twitter'){
-                $scope.url = 'social-twitter';
-            } else if ($scope.socialnetwork == 'LinkeIn'){
-                $scope.url = 'social-linkedin';
+                $scope.url = 'https://twitter.com/';
+            } else if ($scope.socialnetwork == 'LinkedIn'){
+                $scope.url = 'https://www.linkedin.com/in/';
             } else if ($scope.socialnetwork == 'Instagram'){
                 $scope.url = 'social-instagram';
             } else if ($scope.socialnetwork == 'Reddit'){
-                $scope.url = 'social-reddit';
+                $scope.url = 'https://www.reddit.com/user/';
             } else if ($scope.socialnetwork == 'Google'){
                 $scope.url = 'social-google';
             } else if ($scope.socialnetwork == 'YouTube'){
@@ -64,7 +64,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
                 type = 'social-facebook';
             } else if (name == 'Twitter'){
                 type = 'social-twitter';
-            } else if (name == 'LinkeIn'){
+            } else if (name == 'LinkedIn'){
                 type = 'social-linkedin';
             } else if (name == 'Instagram'){
                 type = 'social-instagram';

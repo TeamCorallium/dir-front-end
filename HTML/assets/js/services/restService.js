@@ -4,6 +4,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
 
     var tshirt = 'http://10.58.20.225/tshirts/';
     var users = 'http://10.58.20.225/users/';
+    var profiles = 'http://10.58.20.225/profiles/';
     var login = 'http://10.58.20.225/api-auth/login/';
     var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
     var register = 'http://10.58.20.225/api-auth/register/';
@@ -27,6 +28,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         imageDir: imageDir,
 
         usersDir: users,
+
+        profileDir: profiles,
 
         getCookie: function (name) {
             return $cookies.get('csrftoken');

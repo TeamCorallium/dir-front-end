@@ -222,10 +222,10 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         });
 
         $scope.getPopularUsers = function () {
-            RestService.fetchObjectByUrl(RestService.usersDir)
+            RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
                     function (data) {
-                        $scope.users = data.results;
+                        $scope.users = data;
                     },
                     function (errResponse) {
                         console.log(errResponse);
