@@ -81,7 +81,7 @@
     }
 
     .button-image-left{
-        margin-top: -47% !important;
+        margin-top: -50% !important;
         margin-left: 10% !important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -93,8 +93,8 @@
     }
 
     .button-image-right{
-        margin-top: -47% !important;
-        margin-left: 58% !important;
+        margin-top: -50% !important;
+        margin-left: 70% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -411,7 +411,7 @@
 
     .button-image-left{
         margin-top: -35% !important;
-        margin-left: 25% !important;
+        margin-left: 23% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
