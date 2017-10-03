@@ -74,7 +74,7 @@
                                     <div class="tab-content">
                                         <div class="tab-pane active" id="popularUsers">
                                             <ul class="post-list">
-                                                <li ng-repeat="popularUser in users">
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
                                                         <div class="img-thumbnail">
                                                             <a ng-click="goToLink(popularUser.profiles[0])"> <img ng-src="{{popularUser.avatar}}" class="img-circle img-responsive"> </a>

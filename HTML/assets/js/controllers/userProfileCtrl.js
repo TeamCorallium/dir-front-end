@@ -28,10 +28,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = false;
 
-        console.log("llego aqui");
-
         $scope.getUser = function (username) {
-            console.log(username + "username");
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
@@ -50,7 +47,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             getSocialNetworks(data[0].socialnetworks);
 
                         } else {
-                            console.log("llego al error");
                             $state.go('home');
                             $('#myModal').modal('show');
                         }
@@ -225,15 +221,17 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.profileQRCode = data;
         });
 
-        $scope.getUsers = function () {
-            RestService.fetchObjectByUrl(RestService.imageDir)
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.usersDir)
                 .then(
                     function (data) {
-                        $scope.users = data;
+                        $scope.users = data.results;
                     },
                     function (errResponse) {
                         console.log(errResponse);
                     }
                 );
         };
+
+        $scope.getPopularUsers();
     }]);
