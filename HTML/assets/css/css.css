@@ -99,3 +99,21 @@
         padding: 0px !important;
     }
 }
+
+@media (min-width: 768px) {
+    .maxWidthButton {
+        width: 180px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .maxWidthButton {
+        width: 250px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .maxWidthButton {
+        width: 180px !important;
+    }
+}
