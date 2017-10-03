@@ -28,7 +28,10 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = false;
 
+        console.log("llego aqui");
+
         $scope.getUser = function (username) {
+            console.log(username + "username");
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
@@ -46,6 +49,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             getSocialNetworks(data[0].socialnetworks);
 
                         } else {
+                            console.log("llego al error");
                             $state.go('home');
                             $('#myModal').modal('show');
                         }
