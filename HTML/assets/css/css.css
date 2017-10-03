@@ -71,6 +71,12 @@
     resize: none !important;
 }
 
+@media (max-width: 991px) {
+    .profile-padding {
+        padding-bottom: 0px !important;
+    }
+}
+
 @media  (min-width: 768px) {
     .image_middle {
         float: left !important;
@@ -81,11 +87,6 @@
 
     .center-text {
         text-align: left !important;
-    }
-
-    .maxWidthButton {
-        width: 148px !important;
-        margin-left: 17px !important;
     }
 
     .well {
@@ -107,11 +108,6 @@
         text-align: center !important;
     }
 
-    .maxWidthButton {
-        width: 250px !important;
-        margin-left: 25% !important;
-    }
-
     .well {
         min-height: 180px !important;
         margin-top: 200px !important;
@@ -129,11 +125,6 @@
 
     .center-text {
         text-align: center !important;
-    }
-
-    .maxWidthButton {
-        width: 200px !important;
-        margin-left: 22% !important;
     }
 
     .well {
@@ -155,11 +146,6 @@
         text-align: center !important;
     }
 
-    .maxWidthButton {
-        width: auto !important;
-        margin-left: 0% !important;
-    }
-
     .well {
         min-height: 180px !important;
         margin-top: 200px !important;
@@ -177,11 +163,6 @@
 
     .center-text {
         text-align: center !important;
-    }
-
-    .maxWidthButton {
-        width: auto !important;
-        margin-left: 0% !important;
     }
 
     .well {
