@@ -26,6 +26,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
 
         imageDir: imageDir,
 
+        usersDir: users,
+
         getCookie: function (name) {
             return $cookies.get('csrftoken');
         },

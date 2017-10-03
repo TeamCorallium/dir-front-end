@@ -21,9 +21,12 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
+        $scope.users = [];
+
         $scope.profileQRCode = '';
 
         $rootScope.viewEditProfile = false;
+        $rootScope.viewProfile = false;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -216,4 +219,16 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
             $scope.profileQRCode = data;
         });
+
+        $scope.getUsers = function () {
+            RestService.fetchObjectByUrl(RestService.imageDir)
+                .then(
+                    function (data) {
+                        $scope.users = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
     }]);

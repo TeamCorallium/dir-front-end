@@ -24,6 +24,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.name = '';
 
         $rootScope.viewEditProfile = true;
+        $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
