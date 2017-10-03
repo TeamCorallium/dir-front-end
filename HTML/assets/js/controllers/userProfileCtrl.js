@@ -43,6 +43,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             getSocialNetworks(data[0].socialnetworks);
 
                         } else {
+                            $state.go('home');
                             $('#myModal').modal('show');
                         }
                     },

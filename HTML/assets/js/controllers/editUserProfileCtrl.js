@@ -45,6 +45,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             getSocialNetworks(data[0].socialnetworks);
 
                         } else {
+                            $state.go('home');
                             $('#myModal').modal('show');
                         }
                     },
