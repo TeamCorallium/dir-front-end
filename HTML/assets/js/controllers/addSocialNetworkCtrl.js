@@ -6,7 +6,56 @@
 app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$state", "$cookies",
     function ($rootScope, $scope,RestService, $state, $cookies) {
 
-        $scope.snippets = '';
+    $scope.socialnetwork = '';
+    $scope.url = '';
+
+        $scope.updateUrl = function () {
+            if ($scope.socialnetwork == 'Facebook'){
+                $scope.url = 'social-facebook';
+            } else if ($scope.socialnetwork == 'Twitter'){
+                $scope.url = 'social-twitter';
+            } else if ($scope.socialnetwork == 'LinkeIn'){
+                $scope.url = 'social-linkedin';
+            } else if ($scope.socialnetwork == 'Instagram'){
+                $scope.url = 'social-instagram';
+            } else if ($scope.socialnetwork == 'Reddit'){
+                $scope.url = 'social-reddit';
+            } else if ($scope.socialnetwork == 'Google'){
+                $scope.url = 'social-google';
+            } else if ($scope.socialnetwork == 'YouTube'){
+                $scope.url = 'social-youtube';
+            } else if ($scope.socialnetwork == 'RSS'){
+                $scope.url = 'social-rss';
+            } else if ($scope.socialnetwork == 'Behance'){
+                $scope.url = 'social-behance';
+            } else if ($scope.socialnetwork == 'Dropbox'){
+                $scope.url = 'social-dropbox';
+            } else if ($scope.socialnetwork == 'GitHub'){
+                $scope.url = 'social-github';
+            } else if ($scope.socialnetwork == 'Skype'){
+                $scope.url = 'social-skype';
+            } else if ($scope.socialnetwork == 'Spotify'){
+                $scope.url = 'social-spotify';
+            } else if ($scope.socialnetwork == 'StumbleUpon'){
+                $scope.url = 'social-stumbleupon';
+            } else if ($scope.socialnetwork == 'Tumblr'){
+                $scope.url = 'social-tumblr';
+            } else if ($scope.socialnetwork == 'Vimeo'){
+                $scope.url = 'social-vimeo';
+            } else if ($scope.socialnetwork == 'WordPress'){
+                $scope.url = 'social-wordpress';
+            } else if ($scope.socialnetwork == 'Xing'){
+                $scope.url = 'social-xing';
+            } else if ($scope.socialnetwork == 'Yahoo'){
+                $scope.url = 'social-yahoo';
+            } else if ($scope.socialnetwork == 'VK'){
+                $scope.url = 'social-vk';
+            } else if ($scope.socialnetwork == 'Foursquare'){
+                $scope.url = 'social-foursquare';
+            } else if ($scope.socialnetwork == 'Flickr'){
+                $scope.url = 'social-flickr';
+            }
+        };
 
         $scope.addSocialNetwork = function (name,url) {
             var type = '';

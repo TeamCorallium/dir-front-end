@@ -286,7 +286,7 @@
                     </div>
                     <div class="modal-body padding-15">
                         <div class="form-group">
-                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" ng-init="Facebook">
+                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork">
                                 <option value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
                                 <option value="Twitter">Twitter</option>
