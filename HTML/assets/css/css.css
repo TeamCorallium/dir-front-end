@@ -90,7 +90,7 @@
     }
 }
 
-@media  (max-width: 120px) {
+@media  (max-width: 480px) {
     .image_middle {
         margin-left: 22% !important;
         float: left !important;
@@ -114,7 +114,7 @@
     }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 480px) {
     .maxWidthButton {
         width: 180px !important;
         margin-left: 22% !important;
