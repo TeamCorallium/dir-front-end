@@ -102,18 +102,21 @@
 
 @media (min-width: 768px) {
     .maxWidthButton {
-        width: 180px !important;
+        width: 148px !important;
+        margin-left: 17px !important;
     }
 }
 
 @media (max-width: 767px) {
     .maxWidthButton {
         width: 250px !important;
+        margin-left: 30% !important;
     }
 }
 
 @media (max-width: 480px) {
     .maxWidthButton {
         width: 180px !important;
+        margin-left: 25% !important;
     }
 }
