@@ -82,7 +82,7 @@
 
 @media  (max-width: 767px) {
     .image_middle {
-        margin-left: 30% !important;
+        margin-left: 25% !important;
         float: left !important;
         height: 250px !important;
         width: 250px !important;
@@ -90,9 +90,9 @@
     }
 }
 
-@media  (max-width: 480px) {
+@media  (max-width: 120px) {
     .image_middle {
-        margin-left: 25% !important;
+        margin-left: 22% !important;
         float: left !important;
         height: 180px !important;
         width: 180px !important;
@@ -110,13 +110,13 @@
 @media (max-width: 767px) {
     .maxWidthButton {
         width: 250px !important;
-        margin-left: 30% !important;
+        margin-left: 25% !important;
     }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 412px) {
     .maxWidthButton {
         width: 180px !important;
-        margin-left: 25% !important;
+        margin-left: 22% !important;
     }
 }
