@@ -48,6 +48,32 @@
     resize: none !important;
 }
 
+@media (min-width: 1200px) {
+    .button-image-left{
+        margin-top: -55% !important;
+        margin-left: 10% !important;
+        position: absolute !important;
+        border-radius: 100% !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 10px!important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+
+    .button-image-right{
+        margin-top: -55% !important;
+        margin-left: 68% !important;
+        padding-left: 10px!important;
+        position: absolute !important;
+        border-radius: 100% !important;
+        width: 35px !important;
+        height: 35px !important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+}
+
 @media (max-width: 991px) {
     .profile-padding {
         padding-bottom: 0px !important;
