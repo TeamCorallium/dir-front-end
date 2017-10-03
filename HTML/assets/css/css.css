@@ -151,7 +151,7 @@
 
     .button-image-left{
         margin-top: -20% !important;
-        margin-left: 27% !important;
+        margin-left: 35% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -163,7 +163,7 @@
 
     .button-image-right{
         margin-top: -20% !important;
-        margin-left: 54% !important;
+        margin-left: 60% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -215,8 +215,8 @@
     }
 
     .button-image-left{
-        margin-top: -30% !important;
-        margin-left: 30% !important;
+        margin-top: -25% !important;
+        margin-left: 27% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -227,8 +227,8 @@
     }
 
     .button-image-right{
-        margin-top: -30% !important;
-        margin-left: 63% !important;
+        margin-top: -25% !important;
+        margin-left: 57% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -281,7 +281,7 @@
 
     .button-image-left{
         margin-top: -30% !important;
-        margin-left: 30% !important;
+        margin-left: 28% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -345,8 +345,8 @@
     }
 
     .button-image-left{
-        margin-top: -35% !important;
-        margin-left: 25% !important;
+        margin-top: -33% !important;
+        margin-left: 23% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -357,7 +357,7 @@
     }
 
     .button-image-right{
-        margin-top: -35% !important;
+        margin-top: -33% !important;
         margin-left: 65% !important;
         padding-left: 10px!important;
         position: absolute !important;
@@ -476,7 +476,7 @@
 
     .button-image-left{
         margin-top: -40% !important;
-        margin-left: 20% !important;
+        margin-left: 18% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
