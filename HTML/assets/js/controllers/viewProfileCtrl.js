@@ -202,6 +202,21 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.getTshirt = function () {
+
+            $scope.user = {
+                username: '',
+                firstname: '',
+                lastname: '',
+                email: '',
+                info: '',
+                score: '',
+                rating: '',
+                avatar: '',
+                socialnetworks: [],
+                tshirts: [],
+                snippets: []
+            };
+
             if($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 $cookies.remove("exploreUser",{path: '/'});
