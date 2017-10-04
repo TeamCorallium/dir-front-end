@@ -32,7 +32,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
-                        data = data.result;
+                        data = data.results;
                         if (data.length > 0){
                             $scope.user.username = data[0].username;
                             $scope.user.firstname = data[0].first_name;

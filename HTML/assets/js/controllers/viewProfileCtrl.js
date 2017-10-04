@@ -23,29 +23,6 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = false;
 
-        $scope.getTshirt = function (param) {
-            if($cookies.get('exploreUser')) {
-                $scope.getUser($cookies.get('exploreUser'));
-                $cookies.remove("exploreUser",{path: '/'});
-            } else {
-                RestService.fetchTshirt(param)
-                    .then(
-                        function (data) {
-                            if (data.length > 0){
-                                $scope.getUser(data[0].owner);
-                            } else {
-                                $('#myModal').modal('show');
-                            }
-                        },
-                        function (errResponse) {
-                            console.log(errResponse);
-                        }
-                    );
-            }
-        };
-
-        $scope.getTshirt($stateParams.id);
-
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -189,4 +166,27 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $scope.goToLink = function (link) {
             $window.open(link, '_blank');
         };
+
+        $scope.getTshirt = function (param) {
+            if($cookies.get('exploreUser')) {
+                $scope.getUser($cookies.get('exploreUser'));
+                $cookies.remove("exploreUser",{path: '/'});
+            } else {
+                RestService.fetchTshirt(param)
+                    .then(
+                        function (data) {
+                            if (data.length > 0){
+                                $scope.getUser(data[0].owner);
+                            } else {
+                                $('#myModal').modal('show');
+                            }
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+            }
+        };
+
+        $scope.getTshirt($stateParams.id);
     }]);
