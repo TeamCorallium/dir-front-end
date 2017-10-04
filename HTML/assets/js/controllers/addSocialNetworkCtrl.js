@@ -45,15 +45,15 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'WordPress'){
                 $scope.url = 'https://es.wordpress.org/';
             } else if ($scope.socialnetwork == 'Xing'){
-                $scope.url = 'social-xing';
+                $scope.url = 'https://www.xing.com/';
             } else if ($scope.socialnetwork == 'Yahoo'){
-                $scope.url = 'social-yahoo';
+                $scope.url = 'https://www.yahoo.com/';
             } else if ($scope.socialnetwork == 'VK'){
-                $scope.url = 'social-vk';
+                $scope.url = 'https://vk.com/';
             } else if ($scope.socialnetwork == 'Foursquare'){
-                $scope.url = 'social-foursquare';
+                $scope.url = 'https://foursquare.com/';
             } else if ($scope.socialnetwork == 'Flickr'){
-                $scope.url = 'social-flickr';
+                $scope.url = 'https://www.flickr.com/';
             }
         };
 
