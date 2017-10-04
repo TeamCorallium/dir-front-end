@@ -145,8 +145,8 @@
     }
 
     .button-image-left{
-        margin-top: -20% !important;
-        margin-left: 35% !important;
+        margin-top: -15% !important;
+        margin-left: 39% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -157,8 +157,8 @@
     }
 
     .button-image-right{
-        margin-top: -20% !important;
-        margin-left: 60% !important;
+        margin-top: -15% !important;
+        margin-left: 58% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -205,7 +205,7 @@
 
     .button-image-left{
         margin-top: -25% !important;
-        margin-left: 27% !important;
+        margin-left: 30% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -217,7 +217,7 @@
 
     .button-image-right{
         margin-top: -25% !important;
-        margin-left: 57% !important;
+        margin-left: 61% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -498,7 +498,7 @@
 
     .button-image-right{
         margin-top: -55% !important;
-        margin-left: 80% !important;
+        margin-left: 76% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
