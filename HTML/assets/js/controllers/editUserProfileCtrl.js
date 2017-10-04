@@ -169,8 +169,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             }
 
             if ($scope.user.avatar instanceof FileList) {
+                console.log("FileList");
                 RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
             } else {
+                console.log("No FileList");
                 RestService.updateProfileWithOutAvatar($scope.user.profileurl,$scope.user.id, $scope.user.info,$scope.user.rating,$scope.user.score)
             }
         };
