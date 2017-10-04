@@ -15,6 +15,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             score: '',
             rating: '',
             avatar: 'assets/images/default-user.png',
+            id: '',
             profileurl: '',
             socialnetworks: [],
             tshirts: [],
@@ -70,6 +71,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
+                            $scope.user.id = data.id;
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
@@ -182,6 +184,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
@@ -200,6 +203,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];

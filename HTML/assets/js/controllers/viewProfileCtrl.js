@@ -15,6 +15,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             score: '',
             rating: '',
             avatar: '',
+            id: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -66,6 +67,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
+                            $scope.user.id = data.id;
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                         } else {
@@ -203,19 +205,18 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
         $scope.getTshirt = function () {
 
-            $scope.user = {
-                username: '',
-                firstname: '',
-                lastname: '',
-                email: '',
-                info: '',
-                score: '',
-                rating: '',
-                avatar: '',
-                socialnetworks: [],
-                tshirts: [],
-                snippets: []
-            };
+            $scope.user.username =  '';
+            $scope.user.firstname = '';
+            $scope.user.lastname = '';
+            $scope.user.email = '';
+            $scope.user.info = '';
+            $scope.user.score = '';
+            $scope.user.rating = '';
+            $scope.user.avatar = '';
+            $scope.user.id = '';
+            $scope.user.socialnetworks = [];
+            $scope.user.tshirts = [];
+            $scope.user.snippets = [];
 
             if($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));

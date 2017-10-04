@@ -12,6 +12,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var socialnetwork = 'http://10.58.20.225/socialnetworks/';
     // var imageDir = 'http://10.58.20.225:8080/images/';
     // var imageDownload = 'http://10.58.20.225/api/qrcode';
+    // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
+
 
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
@@ -23,6 +25,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var socialnetwork = 'http://10.8.25.244/socialnetworks/';
     var imageDir = 'http://10.8.25.244:8080/images/';
     var imageDownload = 'http://10.8.25.244/api/qrcode';
+    var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
 
     return {
         loginNext: loginNext,
@@ -187,6 +190,41 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 data: {'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
             }).success(function (data) {
                $state.go('profile');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        updateProfileWithOutAvatar: function (profileurl, id, info, rating, score) {
+            $http({
+                method: 'PUT',
+                url: updateWithOutImage,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function (value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function (file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {'id':id, 'info': info, 'rating': rating, 'score': score, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(function (data) {
+                $state.go('profile');
             }).error(function(response){
                 console.log("Entra al error");
             });

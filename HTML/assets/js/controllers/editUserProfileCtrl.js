@@ -14,6 +14,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             info: '',
             score: '',
             rating: '',
+            id: '',
             avatar: 'assets/images/default-user.png',
             profileurl: '',
             socialnetworks: [],
@@ -71,6 +72,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
+                            $scope.user.id = data.id;
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
@@ -165,7 +167,12 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             if ($scope.user.avatar == 'assets/images/default-user.png'){
                 $scope.user.avatar = '';
             }
-            RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
+
+            if ($scope.user.avatar instanceof FileList) {
+                RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
+            } else {
+                RestService.updateProfileWithOutAvatar($scope.user.profileurl,$scope.user.id, $scope.user.info,$scope.user.rating,$scope.user.score)
+            }
         };
 
         $scope.deleteSocialNetwork = function (id) {
@@ -185,6 +192,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
@@ -201,6 +209,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
