@@ -20,8 +20,10 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             snippets: []
         };
 
-        $rootScope.viewEditProfile = false;
-        $rootScope.viewProfile = false;
+        $scope.users = [];
+
+        $rootScope.viewEditProfile = true;
+        $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -199,12 +201,12 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             return dirAvatar;
         };
 
-        $scope.getTshirt = function (param) {
+        $scope.getTshirt = function () {
             if($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 $cookies.remove("exploreUser",{path: '/'});
             } else {
-                RestService.fetchTshirt(param)
+                RestService.fetchTshirt($stateParams.id)
                     .then(
                         function (data) {
                             data = data.results;
@@ -221,5 +223,5 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             }
         };
 
-        $scope.getTshirt($stateParams.id);
+        $scope.getTshirt();
     }]);
