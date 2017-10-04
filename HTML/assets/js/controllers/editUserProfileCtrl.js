@@ -223,7 +223,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
-            $cookies.set('exploreUser',owner);
+            $cookies.put('exploreUser',owner,{path: '/'});
             $state.go('tshirts');
         };
 
