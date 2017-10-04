@@ -209,7 +209,6 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 RestService.fetchTshirt($stateParams.id)
                     .then(
                         function (data) {
-                            data = data.results;
                             if (data.length > 0){
                                 $scope.getUser(data[0].owner);
                             } else {
