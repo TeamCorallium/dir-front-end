@@ -236,7 +236,16 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
-          $cookies.set('exploreUser',owner);
-          $state.go('tshirts');
+            $cookies.set('exploreUser',owner);
+            $state.go('tshirts');
+        };
+
+        $scope.getAvatar = function (avatar) {
+            if (avatar != '' && avatar != null){
+                var avatarArray = avatar.split("/");
+                return RestService.imageDir + avatarArray[avatarArray.length-1];
+            } else {
+                return 'assets/images/default-user.png';
+            }
         };
     }]);

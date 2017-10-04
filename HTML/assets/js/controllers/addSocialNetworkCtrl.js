@@ -17,11 +17,11 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'LinkedIn'){
                 $scope.url = 'https://www.linkedin.com/in/';
             } else if ($scope.socialnetwork == 'Instagram'){
-                $scope.url = 'social-instagram';
+                $scope.url = 'https://www.instagram.com/';
             } else if ($scope.socialnetwork == 'Reddit'){
                 $scope.url = 'https://www.reddit.com/user/';
             } else if ($scope.socialnetwork == 'Google'){
-                $scope.url = 'social-google';
+                $scope.url = 'https://plus.google.com/';
             } else if ($scope.socialnetwork == 'YouTube'){
                 $scope.url = 'https://www.youtube.com/user/';
             } else if ($scope.socialnetwork == 'RSS'){
