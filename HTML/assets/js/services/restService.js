@@ -2,30 +2,30 @@
 
 app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', '$state', function($rootScope,$http, $q, $cookies, $httpParamSerializer, $state) {
 
-    // var tshirt = 'http://10.58.20.225/tshirts/';
-    // var users = 'http://10.58.20.225/users/';
-    // var profiles = 'http://10.58.20.225/profiles/';
-    // var login = 'http://10.58.20.225/api-auth/login/';
-    // var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
-    // var register = 'http://10.58.20.225/api-auth/register/';
-    // var snippets = 'http://10.58.20.225/snippets/';
-    // var socialnetwork = 'http://10.58.20.225/socialnetworks/';
-    // var imageDir = 'http://10.58.20.225:8080/images/';
-    // var imageDownload = 'http://10.58.20.225/api/qrcode';
-    // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
+    var tshirt = 'http://10.58.20.225/tshirts/';
+    var users = 'http://10.58.20.225/users/';
+    var profiles = 'http://10.58.20.225/profiles/';
+    var login = 'http://10.58.20.225/api-auth/login/';
+    var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
+    var register = 'http://10.58.20.225/api-auth/register/';
+    var snippets = 'http://10.58.20.225/snippets/';
+    var socialnetwork = 'http://10.58.20.225/socialnetworks/';
+    var imageDir = 'http://10.58.20.225:8080/images/';
+    var imageDownload = 'http://10.58.20.225/api/qrcode';
+    var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
 
 
-    var tshirt = 'http://10.8.25.244/tshirts/';
-    var users = 'http://10.8.25.244/users/';
-    var profiles = 'http://10.8.25.244/profiles/';
-    var login = 'http://10.8.25.244/api-auth/login/';
-    var loginNext = 'http://10.8.25.244/api-auth/login/?next=/';
-    var register = 'http://10.8.25.244/api-auth/register/';
-    var snippets = 'http://10.8.25.244/snippets/';
-    var socialnetwork = 'http://10.8.25.244/socialnetworks/';
-    var imageDir = 'http://10.8.25.244:8080/images/';
-    var imageDownload = 'http://10.8.25.244/api/qrcode';
-    var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
+    // var tshirt = 'http://10.8.25.244/tshirts/';
+    // var users = 'http://10.8.25.244/users/';
+    // var profiles = 'http://10.8.25.244/profiles/';
+    // var login = 'http://10.8.25.244/api-auth/login/';
+    // var loginNext = 'http://10.8.25.244/api-auth/login/?next=/';
+    // var register = 'http://10.8.25.244/api-auth/register/';
+    // var snippets = 'http://10.8.25.244/snippets/';
+    // var socialnetwork = 'http://10.8.25.244/socialnetworks/';
+    // var imageDir = 'http://10.8.25.244:8080/images/';
+    // var imageDownload = 'http://10.8.25.244/api/qrcode';
+    // var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
 
     return {
         loginNext: loginNext,
