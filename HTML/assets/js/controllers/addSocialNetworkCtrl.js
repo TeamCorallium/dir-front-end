@@ -29,7 +29,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'Behance'){
                 $scope.url = 'https://www.behance.net/';
             } else if ($scope.socialnetwork == 'Dropbox'){
-                $scope.url = 'social-dropbox';
+                $scope.url = 'https://www.dropbox.com/';
             } else if ($scope.socialnetwork == 'GitHub'){
                 $scope.url = 'https://github.com/';
             } else if ($scope.socialnetwork == 'Skype'){
