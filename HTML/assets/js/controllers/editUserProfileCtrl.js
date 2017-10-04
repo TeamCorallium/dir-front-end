@@ -168,8 +168,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 $scope.user.avatar = '';
             }
 
-            if ($scope.user.avatar instanceof FileList) {
-                console.log("FileList");
+            if ($scope.user.avatar instanceof File) {
+                console.log("File");
                 RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
             } else {
                 console.log("No FileList");
