@@ -61,6 +61,7 @@
         width: 180px !important;
         padding: 0px !important;
         margin-left: 8% !important;
+        margin-top: -50% !important;
     }
 
     .center-text {
@@ -69,7 +70,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 190px !important;
+        margin-top: 100px !important;
     }
 
     .paddingProfile {
@@ -104,13 +105,6 @@
         padding-top: 07px !important;
     }
 
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 218px!important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -130,6 +124,7 @@
         height: 250px !important;
         width: 250px !important;
         padding: 0px !important;
+        margin-top: -20% !important;
     }
 
     .center-text {
@@ -138,7 +133,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 260px !important;
+        margin-top: 130px !important;
     }
 
     .paddingProfile {
@@ -173,13 +168,6 @@
         padding-top: 07px !important;
     }
 
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 125px !important;
-        padding: 0px !important;
-        max-width: 705px!important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -194,11 +182,12 @@
 
 @media  (max-width: 480px) {
     .image_middle {
-        margin-left: 25% !important;
+        margin-left: 28% !important;
         float: left !important;
         height: 180px !important;
         width: 180px !important;
         padding: 0px !important;
+        margin-top: -25% !important;
     }
 
     .center-text {
@@ -207,7 +196,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 200px !important;
+        margin-top: 100px !important;
     }
 
     .paddingProfile {
@@ -238,13 +227,6 @@
         padding-top: 07px !important;
     }
 
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 420px!important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -264,6 +246,7 @@
         height: 180px !important;
         width: 180px !important;
         padding: 0px !important;
+        margin-top: -30% !important;
     }
 
     .center-text {
@@ -272,7 +255,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 200px !important;
+        margin-top: 60px !important;
     }
 
     .paddingProfile {
@@ -303,13 +286,6 @@
         padding-top: 07px !important;
     }
 
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 355px!important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -329,6 +305,7 @@
         height: 180px !important;
         width: 180px !important;
         padding: 0px !important;
+        margin-top: -35% !important;
     }
 
     .center-text {
@@ -337,7 +314,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 200px !important;
+        margin-top: 80px !important;
     }
 
     .paddingProfile {
@@ -366,13 +343,6 @@
         height: 35px !important;
         opacity: 0.5 !important;
         padding-top: 07px !important;
-    }
-
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 313px!important;
     }
 
     .button-image-cover {
@@ -394,6 +364,7 @@
         height: 180px !important;
         width: 180px !important;
         padding: 0px !important;
+        margin-top: -35% !important;
     }
 
     .center-text {
@@ -402,7 +373,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 200px !important;
+        margin-top: 100px !important;
     }
 
     .paddingProfile {
@@ -433,13 +404,6 @@
         padding-top: 07px !important;
     }
 
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 300px!important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -459,6 +423,7 @@
         height: 180px !important;
         width: 180px !important;
         padding: 0px !important;
+        margin-top: -40% !important;
     }
 
     .center-text {
@@ -467,7 +432,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 200px !important;
+        margin-top: 100px !important;
     }
 
     .paddingProfile {
@@ -496,13 +461,6 @@
         height: 35px !important;
         opacity: 0.5 !important;
         padding-top: 07px !important;
-    }
-
-    .pictureFrontCover {
-        position: absolute !important;
-        height: 90px !important;
-        padding: 0px !important;
-        max-width: 258px!important;
     }
 
     .button-image-cover {
@@ -563,7 +521,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 190px !important;
+        margin-top: 100px !important;
     }
 
     .image_middle {
@@ -577,4 +535,9 @@
 
 .margin-0 {
     margin: 0px !important;
+}
+
+.pictureFrontCover {
+    width:100%;
+    height: 250px !important;
 }
