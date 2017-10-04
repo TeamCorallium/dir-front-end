@@ -235,7 +235,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             } else {
                 dirAvatar = 'assets/images/default-user.png';
             }
-            console.log(dirAvatar + " avatar");
+
             return dirAvatar;
         };
 
