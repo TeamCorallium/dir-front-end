@@ -77,7 +77,7 @@
                                                 <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
                                                         <div class="img-thumbnail">
-                                                            <a ng-click="goToProfile(popularUser.owner)"> <img ng-src="{{getAvatar(proposalUser.avatar)}}" class="img-circle img-responsive"></a>
+                                                            <a ng-click="goToProfile(popularUser.owner)"> <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-circle img-responsive"></a>
                                                         </div>
                                                     </div>
                                                     <div class="post-info">

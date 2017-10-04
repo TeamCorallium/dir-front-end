@@ -241,7 +241,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.getAvatar = function (avatar) {
-            console.log(avatar + " avatar");
             var dirAvatar = '';
             if (avatar != '' && avatar != null){
                 var avatarArray = avatar.split("/");

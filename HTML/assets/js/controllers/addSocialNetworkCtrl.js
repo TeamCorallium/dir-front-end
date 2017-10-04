@@ -39,11 +39,11 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'StumbleUpon'){
                 $scope.url = 'https://www.stumbleupon.com/';
             } else if ($scope.socialnetwork == 'Tumblr'){
-                $scope.url = 'social-tumblr';
+                $scope.url = 'https://www.tumblr.com/';
             } else if ($scope.socialnetwork == 'Vimeo'){
-                $scope.url = 'social-vimeo';
+                $scope.url = 'https://vimeo.com/';
             } else if ($scope.socialnetwork == 'WordPress'){
-                $scope.url = 'social-wordpress';
+                $scope.url = 'https://es.wordpress.org/';
             } else if ($scope.socialnetwork == 'Xing'){
                 $scope.url = 'social-xing';
             } else if ($scope.socialnetwork == 'Yahoo'){
