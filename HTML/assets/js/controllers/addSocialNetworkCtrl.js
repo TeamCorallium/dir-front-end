@@ -35,7 +35,7 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'Skype'){
                 $scope.url = 'https://www.skype.com/';
             } else if ($scope.socialnetwork == 'Spotify'){
-                $scope.url = 'social-spotify';
+                $scope.url = 'https://open.spotify.com/user/';
             } else if ($scope.socialnetwork == 'StumbleUpon'){
                 $scope.url = 'social-stumbleupon';
             } else if ($scope.socialnetwork == 'Tumblr'){

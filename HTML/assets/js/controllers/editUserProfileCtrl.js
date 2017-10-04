@@ -21,6 +21,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             snippets: []
         };
 
+        $scope.users = [];
+
         $scope.name = '';
 
         $rootScope.viewEditProfile = true;
@@ -30,8 +32,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
+                        data = data.result;
                         if (data.length > 0){
-
                             $scope.user.username = data[0].username;
                             $scope.user.firstname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
@@ -205,5 +207,36 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
 
             $scope.getUser($cookies.get('username'));
         });
+
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.profileDir)
+                .then(
+                    function (data) {
+                        $scope.users = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getPopularUsers();
+
+        $scope.goToProfile = function (owner) {
+            $cookies.set('exploreUser',owner);
+            $state.go('tshirts');
+        };
+
+        $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
+            if (avatar != '' && avatar != null){
+                var avatarArray = avatar.split("/");
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
+            } else {
+                dirAvatar = 'assets/images/default-user.png';
+            }
+            console.log(dirAvatar + " avatar");
+            return dirAvatar;
+        };
 
     }]);
