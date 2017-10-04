@@ -58,95 +58,22 @@
                                 <div class="tabs">
                                     <ul class="nav nav-tabs nav-justified">
                                         <li class="active">
-                                            <a href="#popularPosts" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
-                                        </li>
-                                        <li>
-                                            <a href="#recentPosts" data-toggle="tab"> Recent </a>
+                                            <a data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
                                         </li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div class="tab-pane active" id="popularPosts">
+                                        <div class="tab-pane active" id="popularUsers">
                                             <ul class="post-list">
-                                                <li>
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
                                                         <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image01_th.jpg" alt="" class="img-responsive"> </a>
+                                                            <a ng-click="goToProfile(popularUser.owner)"> <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive"></a>
                                                         </div>
                                                     </div>
                                                     <div class="post-info">
-                                                        <a href="#"> Nullam Vitae Nibh Un Odiosters </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="post-image">
-                                                        <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image02_th.jpg" alt="" class="img-responsive"> </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-info">
-                                                        <a href="#"> Vitae Nibh Un Odiosters </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="post-image">
-                                                        <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image03_th.jpg" alt="" class="img-responsive"> </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-info">
-                                                        <a href="#"> Odiosters Nullam Vitae </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="tab-pane" id="recentPosts">
-                                            <ul class="post-list">
-                                                <li>
-                                                    <div class="post-image">
-                                                        <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image04_th.jpg" alt="" class="img-responsive"> </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-info">
-                                                        <a href="#"> Vitae Nibh Un Odiosters </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="post-image">
-                                                        <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image05_th.jpg" alt="" class="img-responsive"> </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-info">
-                                                        <a href="#"> Odiosters Nullam Vitae </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
-                                                    </div>
-                                                </li>
-                                                <li>
-                                                    <div class="post-image">
-                                                        <div class="img-thumbnail">
-                                                            <a href="#"> <img src="assets/images/portfolio/image06_th.jpg" alt="" class="img-responsive"> </a>
-                                                        </div>
-                                                    </div>
-                                                    <div class="post-info">
-                                                        <a href="#"> Nullam Vitae Nibh Un Odiosters </a>
-                                                        <div class="post-meta">
-                                                            Jan 10, 2014
-                                                        </div>
+                                                        <!--<a ng-click=""> {{popularUser.firstname}} {{popularUser.lastname}}</a>-->
+                                                        <a ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <h5>{{popularUser.info}}</h5>
                                                     </div>
                                                 </li>
                                             </ul>

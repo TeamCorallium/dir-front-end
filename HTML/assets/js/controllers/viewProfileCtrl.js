@@ -167,6 +167,37 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $window.open(link, '_blank');
         };
 
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.profileDir)
+                .then(
+                    function (data) {
+                        $scope.users = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getPopularUsers();
+
+        $scope.goToProfile = function (owner) {
+            $cookies.put('exploreUser',owner,{path: '/'});
+            $state.go('tshirts');
+        };
+
+        $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
+            if (avatar != '' && avatar != null){
+                var avatarArray = avatar.split("/");
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
+            } else {
+                dirAvatar = 'assets/images/default-user.png';
+            }
+
+            return dirAvatar;
+        };
+
         $scope.getTshirt = function (param) {
             if($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
@@ -175,6 +206,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                 RestService.fetchTshirt(param)
                     .then(
                         function (data) {
+                            data = data.results;
                             if (data.length > 0){
                                 $scope.getUser(data[0].owner);
                             } else {
