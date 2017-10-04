@@ -186,7 +186,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
         $scope.goToProfile = function (owner) {
             $cookies.put('exploreUser',owner,{path: '/'});
-            $state.go('tshirts');
+            $scope.getTshirt();
         };
 
         $scope.getAvatar = function (avatar) {
