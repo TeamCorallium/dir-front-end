@@ -241,11 +241,14 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
             if (avatar != '' && avatar != null){
                 var avatarArray = avatar.split("/");
-                return RestService.imageDir + avatarArray[avatarArray.length-1];
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
             } else {
-                return 'assets/images/default-user.png';
+                dirAvatar = 'assets/images/default-user.png';
             }
+            console.log(dirAvatar + " avatar");
+            return dirAvatar;
         };
     }]);

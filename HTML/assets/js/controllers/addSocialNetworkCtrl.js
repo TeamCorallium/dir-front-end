@@ -25,15 +25,15 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             } else if ($scope.socialnetwork == 'YouTube'){
                 $scope.url = 'https://www.youtube.com/user/';
             } else if ($scope.socialnetwork == 'RSS'){
-                $scope.url = 'social-rss';
+                $scope.url = 'https://www.rss.com/';
             } else if ($scope.socialnetwork == 'Behance'){
-                $scope.url = 'social-behance';
+                $scope.url = 'https://www.behance.net/';
             } else if ($scope.socialnetwork == 'Dropbox'){
                 $scope.url = 'social-dropbox';
             } else if ($scope.socialnetwork == 'GitHub'){
-                $scope.url = 'social-github';
+                $scope.url = 'https://github.com/';
             } else if ($scope.socialnetwork == 'Skype'){
-                $scope.url = 'social-skype';
+                $scope.url = 'https://www.skype.com/';
             } else if ($scope.socialnetwork == 'Spotify'){
                 $scope.url = 'social-spotify';
             } else if ($scope.socialnetwork == 'StumbleUpon'){
