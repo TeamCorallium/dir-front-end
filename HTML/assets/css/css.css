@@ -610,3 +610,8 @@
 .font-size-30 {
     font-size: 30px !important;
 }
+
+.padding-left-right-30 {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
