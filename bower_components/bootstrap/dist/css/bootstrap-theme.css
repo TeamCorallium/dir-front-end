@@ -96,10 +96,10 @@
   background-image: none;
 }
 .btn-success {
-  background-image: -webkit-linear-gradient(top, #5cb85c 0%, #419641 100%);
-  background-image:      -o-linear-gradient(top, #5cb85c 0%, #419641 100%);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#5cb85c), to(#419641));
-  background-image:         linear-gradient(to bottom, #5cb85c 0%, #419641 100%);
+  background-image: -webkit-linear-gradient(top, #00B8B8 0%, #00AAAD 100%);
+  background-image:      -o-linear-gradient(top, #00B8B8 0%, #00AAAD 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#00B8B8), to(#00AAAD));
+  background-image:         linear-gradient(to bottom, #00B8B8 0%, #00AAAD 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff5cb85c', endColorstr='#ff419641', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   background-repeat: repeat-x;
