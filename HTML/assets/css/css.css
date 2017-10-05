@@ -90,8 +90,8 @@
     }
 
     .button-image-left{
-        margin-top: -50% !important;
-        margin-left: 10% !important;
+        margin-top: -36% !important;
+        margin-left: 22% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -102,8 +102,8 @@
     }
 
     .button-image-right{
-        margin-top: -50% !important;
-        margin-left: 70% !important;
+        margin-top: -36% !important;
+        margin-left: 60% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -228,8 +228,8 @@
     }
 
     .button-image-left{
-        margin-top: -25% !important;
-        margin-left: 30% !important;
+        margin-top: -20% !important;
+        margin-left: 34% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -240,8 +240,8 @@
     }
 
     .button-image-right{
-        margin-top: -25% !important;
-        margin-left: 61% !important;
+        margin-top: -20% !important;
+        margin-left: 58% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -295,8 +295,8 @@
     }
 
     .button-image-left{
-        margin-top: -30% !important;
-        margin-left: 28% !important;
+        margin-top: -23% !important;
+        margin-left: 30% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -307,8 +307,8 @@
     }
 
     .button-image-right{
-        margin-top: -30% !important;
-        margin-left: 63% !important;
+        margin-top: -23% !important;
+        margin-left: 58% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -362,8 +362,8 @@
     }
 
     .button-image-left{
-        margin-top: -33% !important;
-        margin-left: 23% !important;
+        margin-top: -28% !important;
+        margin-left: 27% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -374,8 +374,8 @@
     }
 
     .button-image-right{
-        margin-top: -33% !important;
-        margin-left: 65% !important;
+        margin-top: -28% !important;
+        margin-left: 60% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -429,8 +429,8 @@
     }
 
     .button-image-left{
-        margin-top: -35% !important;
-        margin-left: 23% !important;
+        margin-top: -30% !important;
+        margin-left: 27% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -441,8 +441,8 @@
     }
 
     .button-image-right{
-        margin-top: -35% !important;
-        margin-left: 65% !important;
+        margin-top: -30% !important;
+        margin-left: 62% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -496,8 +496,8 @@
     }
 
     .button-image-left{
-        margin-top: -40% !important;
-        margin-left: 18% !important;
+        margin-top: -32% !important;
+        margin-left: 24% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -508,8 +508,8 @@
     }
 
     .button-image-right{
-        margin-top: -40% !important;
-        margin-left: 68% !important;
+        margin-top: -32% !important;
+        margin-left: 65% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -541,8 +541,8 @@
 
 @media (min-width: 1200px) {
     .button-image-left{
-        margin-top: -55% !important;
-        margin-left: 10% !important;
+        margin-top: -40% !important;
+        margin-left: 20% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -553,8 +553,8 @@
     }
 
     .button-image-right{
-        margin-top: -55% !important;
-        margin-left: 76% !important;
+        margin-top: -40% !important;
+        margin-left: 60% !important;
         padding-left: 10px!important;
         position: absolute !important;
         border-radius: 100% !important;
@@ -605,4 +605,8 @@
 .pictureFrontCover {
     width:100%;
     height: 120px !important;
+}
+
+.font-size-30 {
+    font-size: 30px !important;
 }
