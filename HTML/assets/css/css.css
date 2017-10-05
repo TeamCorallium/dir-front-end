@@ -57,11 +57,19 @@
 @media  (min-width: 768px) {
     .image_middle {
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 130px !important;
+        width: 130px !important;
         padding: 0px !important;
-        margin-left: 8% !important;
-        margin-top: -50% !important;
+        margin-left: 19% !important;
+        margin-top: -44% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 130px !important;
+        width: 130px !important;
+        padding: 0px !important;
+        margin-left: 19% !important;
     }
 
     .center-text {
@@ -70,7 +78,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 50px !important;
     }
 
     .paddingProfile {
@@ -125,6 +133,14 @@
         width: 180px !important;
         padding: 0px !important;
         margin-top: -17% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 180px !important;
+        width: 180px !important;
+        padding: 0px !important;
+        margin-left: 38% !important;
     }
 
     .center-text {
@@ -182,12 +198,20 @@
 
 @media  (max-width: 480px) {
     .image_middle {
-        margin-left: 28% !important;
+        margin-left: 32% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 150px !important;
+        width: 150px !important;
         padding: 0px !important;
-        margin-top: -30% !important;
+        margin-top: -26% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 32% !important;
     }
 
     .center-text {
@@ -196,7 +220,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 50px !important;
     }
 
     .paddingProfile {
@@ -241,12 +265,20 @@
 
 @media  (max-width: 415px) {
     .image_middle {
-        margin-left: 25% !important;
+        margin-left: 28% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 150px !important;
+        width: 150px !important;
         padding: 0px !important;
-        margin-top: -35% !important;
+        margin-top: -32% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 28% !important;
     }
 
     .center-text {
@@ -255,7 +287,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 50px !important;
     }
 
     .paddingProfile {
@@ -300,12 +332,20 @@
 
 @media  (max-width: 375px) {
     .image_middle {
-        margin-left: 21% !important;
+        margin-left: 25% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 150px !important;
+        width: 150px !important;
         padding: 0px !important;
-        margin-top: -40% !important;
+        margin-top: -35% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 25% !important;
     }
 
     .center-text {
@@ -314,7 +354,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 55px !important;
     }
 
     .paddingProfile {
@@ -359,12 +399,20 @@
 
 @media  (max-width: 360px) {
     .image_middle {
-        margin-left: 20% !important;
+        margin-left: 25% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 150px !important;
+        width: 150px !important;
         padding: 0px !important;
-        margin-top: -40% !important;
+        margin-top: -35% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 25% !important;
     }
 
     .center-text {
@@ -373,7 +421,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 60px !important;
     }
 
     .paddingProfile {
@@ -418,12 +466,20 @@
 
 @media  (max-width: 320px) {
     .image_middle {
-        margin-left: 15% !important;
+        margin-left: 21% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 150px !important;
+        width: 150px !important;
         padding: 0px !important;
-        margin-top: -45% !important;
+        margin-top: -42% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 150px !important;
+        width: 150px !important;
+        padding: 0px !important;
+        margin-left: 21% !important;
     }
 
     .center-text {
@@ -432,7 +488,7 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 60px !important;
     }
 
     .paddingProfile {
@@ -521,16 +577,24 @@
 
     .well {
         min-height: 180px !important;
-        margin-top: 80px !important;
+        margin-top: 50px !important;
     }
 
     .image_middle {
-        margin-left: 4% !important;
+        margin-left: 18% !important;
         float: left !important;
-        height: 180px !important;
-        width: 180px !important;
+        height: 120px !important;
+        width: 120px !important;
         padding: 0px !important;
-        margin-top: -60% !important;
+        margin-top: -47% !important;
+    }
+
+    .image_qrcode {
+        float: left !important;
+        height: 120px !important;
+        width: 120px !important;
+        padding: 0px !important;
+        margin-left: 18% !important;
     }
 }
 

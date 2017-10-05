@@ -29,7 +29,7 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
         }).state('home',{
             url: '/home',
             templateUrl: 'views/home.html',
-            // resolve: loadSequence('homeCtrl')
+            resolve: loadSequence('homeCtrl')
         }).state('profile',{
             url: '/profile',
             templateUrl: 'views/userProfile.html',
