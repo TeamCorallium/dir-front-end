@@ -39,22 +39,26 @@
 <div id="app">
     <!-- start: HEADER -->
     <header class="small-header">
-        <div class="navbar navbar-dark" role="navigation">
+        <div class="navbar navbar-default" role="navigation">
             <!-- start: TOP NAVIGATION CONTAINER -->
             <div class="container">
                 <div class="navbar-header">
                     <!-- start: RESPONSIVE MENU TOGGLER -->
-                    <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse"> <span class="sr-only">Toggle navigation</span> <i class="ti-align-justify"></i> </a>
+                    <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <i class="ti-align-justify"></i>
+                    </a>
                     <!-- end: RESPONSIVE MENU TOGGLER -->
                     <!-- start: RESPONSIVE MENU SEARCH -->
                 </div>
                 <!-- start: NAVBAR -->
-                <div class="navbar-collapse collapse inline margin-left-0">
+                <div class="navbar-collapse collapse margin-left-0">
                     <!-- start: LOGO -->
-							<a href="index.html" class="navbar-brand"> <img src="assets/images/logo.png" alt="Clip-Two"> </a>
-							<!-- end: LOGO -->
+                    <a ui-sref="home" class="navbar-brand float-left">
+                        <img src="assets/images/logo.png">
+                    </a>
+                    <!-- end: LOGO -->
                     <ul class="nav navbar-nav navbar-right">
-					
                         <li class="dropdown">
 						    <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
                                 <i class="ti-user"></i>  User </a>
