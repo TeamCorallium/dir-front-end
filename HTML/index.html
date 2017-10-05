@@ -143,62 +143,61 @@
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                         <!--<ul class="nav nav-tabs">-->
-                            <!--<li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>-->
-                            <!--<li>-->
-                                <!--<a data-toggle="tab" href="#registration-form"> Register -->
-                                    <!--<span class="glyphicon glyphicon-pencil"></span>-->
-                                <!--</a>-->
-                            <!--</li>-->
+                        <!--<li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>-->
+                        <!--<li>-->
+                        <!--<a data-toggle="tab" href="#registration-form"> Register -->
+                        <!--<span class="glyphicon glyphicon-pencil"></span>-->
+                        <!--</a>-->
+                        <!--</li>-->
                         <!--</ul>-->
                         <h4><i class="ti-user"></i> Register</h4>
                     </div>
                     <div class="modal-body">
                         <!--<div class="tab-content">-->
-                            <!--<div id="login-form" class="tab-pane fade in active">-->
-                                <!--<form ng-controller="LoginCtrl">-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label for="username">Username:</label>-->
-                                        <!--<input ng-model="username" type="text" class="form-control" id="username" placeholder="Enter username" name="username">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                        <!--<label for="pwd">Password:</label>-->
-                                        <!--<input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">-->
-                                    <!--</div>-->
-                                    <!--<div class="alert alert-danger" id="errorBox" hidden>-->
-                                        <!--Wrong username or password. Sorry, try again.-->
-                                    <!--</div>-->
-                                    <!--<a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>-->
-                                <!--</form>-->
-                            <!--</div>-->
-                            <!--<div id="registration-form" class="tab-pane fade">-->
-                                <form ng-controller="RegistrationCtrl">
-                                    <div class="form-group">
-                                        <label for="email">Email:</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="newusername">Username:</label>
-                                        <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pass">Password:</label>
-                                        <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="againPass">Password again:</label>
-                                        <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pin">PIN:</label>
-                                        <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
-                                    </div>
-                                    <div class="alert alert-danger" id="errorRegisterBox" hidden>
-                                        Passwords do not match. Sorry, try again
-                                    </div>
-                                    <button class="btn btn-default" ng-click="registerModal(username,pass,againPass,email,pin)">Register</button>
-                                </form>
-                            <!--</div>-->
-                        </div>
+                        <!--<div id="login-form" class="tab-pane fade in active">-->
+                        <!--<form ng-controller="LoginCtrl">-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="username">Username:</label>-->
+                        <!--<input ng-model="username" type="text" class="form-control" id="username" placeholder="Enter username" name="username">-->
+                        <!--</div>-->
+                        <!--<div class="form-group">-->
+                        <!--<label for="pwd">Password:</label>-->
+                        <!--<input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">-->
+                        <!--</div>-->
+                        <!--<div class="alert alert-danger" id="errorBox" hidden>-->
+                        <!--Wrong username or password. Sorry, try again.-->
+                        <!--</div>-->
+                        <!--<a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>-->
+                        <!--</form>-->
+                        <!--</div>-->
+                        <!--<div id="registration-form" class="tab-pane fade">-->
+                        <form ng-controller="RegistrationCtrl">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
+                            </div>
+                            <div class="form-group">
+                                <label for="newusername">Username:</label>
+                                <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
+                            </div>
+                            <div class="form-group">
+                                <label for="pass">Password:</label>
+                                <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
+                            </div>
+                            <div class="form-group">
+                                <label for="againPass">Password again:</label>
+                                <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
+                            </div>
+                            <div class="form-group">
+                                <label for="pin">PIN:</label>
+                                <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
+                            </div>
+                            <div class="alert alert-danger" id="errorRegisterBox" hidden>
+                                Passwords do not match. Sorry, try again
+                            </div>
+                            <button class="btn btn-default" ng-click="registerModal(username,pass,againPass,email,pin)">Register</button>
+                        </form>
+                        <!--</div>-->
                     </div>
                 </div>
             </div>
