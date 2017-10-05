@@ -28,8 +28,7 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             // resolve: loadSequence('homeCtrl')
         }).state('home',{
             url: '/home',
-            templateUrl: 'views/home.html',
-            resolve: loadSequence('homeCtrl')
+            templateUrl: 'views/home.html'
         }).state('profile',{
             url: '/profile',
             templateUrl: 'views/userProfile.html',
