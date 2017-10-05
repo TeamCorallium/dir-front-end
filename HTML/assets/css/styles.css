@@ -964,7 +964,7 @@ header > .navbar {
 .main-content {
     min-height: 100%;
     position: relative;
-    padding-bottom: 400px;
+    padding-bottom: 60px;
     padding-top: 90px;
 }
 @media (min-width: 992px) {
@@ -1010,7 +1010,7 @@ header > .navbar {
     font-size: 12px;
     background: #363839;
     padding-top: 40px;
-    height: 400px;
+    /*height: 400px;*/
 }
 @media (max-width: 991px) {
     .app-content > footer {
@@ -11472,7 +11472,7 @@ div.portfolio-info {
     min-height: 100% !important;
     position: relative !important;
     padding-top: 50px !important;
-    padding-bottom: 400px !important;
+    padding-bottom: 60px !important;
 }
 
 .float-left{
