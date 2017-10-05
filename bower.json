@@ -64,6 +64,7 @@
     "angular-touch": "^1.6.6",
     "angular-spinner": "^1.0.1",
     "angular-loading-spinner": "^0.0.3",
-    "angular-image-crop": "angular-image-cropper#*"
+    "angular-image-crop": "angular-image-cropper#*",
+    "jquery-countTo": "countto#^1.2.0"
   }
 }
