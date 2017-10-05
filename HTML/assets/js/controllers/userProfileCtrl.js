@@ -15,20 +15,25 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             score: '',
             rating: '',
             avatar: 'assets/images/default-user.png',
+            id: '',
             profileurl: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
         };
 
+        $scope.users = [];
+
         $scope.profileQRCode = '';
 
         $rootScope.viewEditProfile = false;
+        $rootScope.viewProfile = false;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
+                        data = data.results;
                         if (data.length > 0){
                             $scope.user.username = data[0].username;
                             $scope.user.firstname = data[0].first_name;
@@ -43,6 +48,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             getSocialNetworks(data[0].socialnetworks);
 
                         } else {
+                            $state.go('home');
                             $('#myModal').modal('show');
                         }
                     },
@@ -65,6 +71,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
+                            $scope.user.id = data.id;
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.profileurl = data.url;
@@ -177,6 +184,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
@@ -195,6 +203,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $scope.user.score = '';
             $scope.user.rating = '';
             $scope.user.avatar = '';
+            $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
@@ -215,4 +224,35 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
             $scope.profileQRCode = data;
         });
+
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.profileDir)
+                .then(
+                    function (data) {
+                        $scope.users = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getPopularUsers();
+
+        $scope.goToProfile = function (owner) {
+            $cookies.put('exploreUser',owner,{path: '/'});
+            $state.go('tshirts');
+        };
+
+        $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
+            if (avatar != '' && avatar != null){
+                var avatarArray = avatar.split("/");
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
+            } else {
+                dirAvatar = 'assets/images/default-user.png';
+            }
+
+            return dirAvatar;
+        };
     }]);

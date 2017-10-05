@@ -15,35 +15,22 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             score: '',
             rating: '',
             avatar: '',
+            id: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
         };
 
-        $rootScope.viewEditProfile = false;
+        $scope.users = [];
 
-        $scope.getTshirt = function (param) {
-            RestService.fetchTshirt(param)
-                .then(
-                    function (data) {
-                        if (data.length > 0){
-                            $scope.getUser(data[0].owner);
-                        } else {
-                            $('#myModal').modal('show');
-                        }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
-
-        $scope.getTshirt($stateParams.id);
+        $rootScope.viewEditProfile = true;
+        $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
                     function (data) {
+                        data = data.results;
                         if (data.length > 0){
                             $scope.user.username = data[0].username;
                             $scope.user.firstname = data[0].first_name;
@@ -80,6 +67,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             } else {
                                 $scope.user.avatar = 'assets/images/default-user.png';
                             }
+                            $scope.user.id = data.id;
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                         } else {
@@ -183,4 +171,72 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         $scope.goToLink = function (link) {
             $window.open(link, '_blank');
         };
+
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.profileDir)
+                .then(
+                    function (data) {
+                        $scope.users = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getPopularUsers();
+
+        $scope.goToProfile = function (owner) {
+            $cookies.put('exploreUser',owner,{path: '/'});
+            $scope.getTshirt();
+        };
+
+        $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
+            if (avatar != '' && avatar != null){
+                var avatarArray = avatar.split("/");
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
+            } else {
+                dirAvatar = 'assets/images/default-user.png';
+            }
+
+            return dirAvatar;
+        };
+
+        $scope.getTshirt = function () {
+
+            $scope.user.username =  '';
+            $scope.user.firstname = '';
+            $scope.user.lastname = '';
+            $scope.user.email = '';
+            $scope.user.info = '';
+            $scope.user.score = '';
+            $scope.user.rating = '';
+            $scope.user.avatar = '';
+            $scope.user.id = '';
+            $scope.user.socialnetworks = [];
+            $scope.user.tshirts = [];
+            $scope.user.snippets = [];
+
+            if($cookies.get('exploreUser')) {
+                $scope.getUser($cookies.get('exploreUser'));
+                $cookies.remove("exploreUser",{path: '/'});
+            } else {
+                RestService.fetchTshirt($stateParams.id)
+                    .then(
+                        function (data) {
+                            if (data.length > 0){
+                                $scope.getUser(data[0].owner);
+                            } else {
+                                $('#myModal').modal('show');
+                            }
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+            }
+        };
+
+        $scope.getTshirt();
     }]);

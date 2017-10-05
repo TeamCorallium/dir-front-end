@@ -62,7 +62,7 @@
                                 <i class="ti-user"></i>  {{userdata.username}} </a>
                             <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                 <li>
-                                    <a ui-sref="profile" ng-show="userdata.connected"> View Profile</a>
+                                    <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
                                 </li>
                                 <li>
                                     <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewEditProfile == false))"> Edit Profile</a>
@@ -165,14 +165,14 @@
                             </div>
                             <div id="registration-form" class="tab-pane fade">
                                 <form ng-controller="RegistrationCtrl">
-                                    <div class="form-group">
-                                        <label for="firstname">First Name:</label>
-                                        <input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" name="firstname" ng-model="firstname">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="lastname">Last Name:</label>
-                                        <input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" name="lastname" ng-model="lastname">
-                                    </div>
+                                    <!--<div class="form-group">-->
+                                        <!--<label for="firstname">First Name:</label>-->
+                                        <!--<input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" name="firstname" ng-model="firstname">-->
+                                    <!--</div>-->
+                                    <!--<div class="form-group">-->
+                                        <!--<label for="lastname">Last Name:</label>-->
+                                        <!--<input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" name="lastname" ng-model="lastname">-->
+                                    <!--</div>-->
                                     <div class="form-group">
                                         <label for="email">Email:</label>
                                         <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
@@ -194,9 +194,9 @@
                                         <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
                                     </div>
                                     <div class="alert alert-danger" id="errorRegisterBox" hidden>
-                                        The information provided is not correct. Sorry, try again
+                                        Passwords do not match. Sorry, try again
                                     </div>
-                                    <button class="btn btn-default" ng-click="registerModal(firstname,lastname,username,pass,againPass,email,pin)">Register</button>
+                                    <button class="btn btn-default" ng-click="registerModal(username,pass,againPass,email,pin)">Register</button>
                                 </form>
                             </div>
                         </div>
@@ -254,6 +254,10 @@
                     <div class="modal-body">
                         <form ng-controller="RegistrationCtrl">
                             <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="emailHome" placeholder="Enter your email" name="email" ng-model="emailHome">
+                            </div>
+                            <div class="form-group">
                                 <label for="newusername">Username:</label>
                                 <input type="text" class="form-control" id="newusernameHome" placeholder="Enter new username" name="newusername" ng-model="usernameHome">
                             </div>
@@ -266,9 +270,9 @@
                                 <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPass" ng-model="againPassHome">
                             </div>
                             <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
-                                The information provided is not correct. Sorry, try again
+                                Passwords do not match. Sorry, try again
                             </div>
-                            <button class="btn btn-default" ng-click="registerModalHome(usernameHome,passHome,againPassHome)">Register</button>
+                            <button class="btn btn-default" ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">Register</button>
                         </form>
                     </div>
                 </div>
@@ -315,7 +319,7 @@
                     </div>
                     <div class="modal-body padding-15">
                         <div class="form-group">
-                            <select class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" ng-init="Facebook">
+                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork">
                                 <option value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
                                 <option value="Twitter">Twitter</option>
@@ -415,6 +419,10 @@
 <script src="assets/config.router.js"></script>
 <!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
 
+<!-- start: CROPPER CONTROLLERS-->
+<!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
+<!-- start: CROPPER CONTROLLERS-->
+
 <!-- oclazyload -->
 <script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
@@ -436,6 +444,7 @@
 <script src="assets/js/controllers/addSocialNetworkCtrl.js"></script>
 <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
 <script src="assets/js/controllers/topNavBarCtrl.js"></script>
+
 <!-- end: CONTROLLERS-->
 <script>
     jQuery(document).ready(function() {

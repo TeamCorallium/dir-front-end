@@ -2,8 +2,21 @@
 
 app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSerializer', '$state', function($rootScope,$http, $q, $cookies, $httpParamSerializer, $state) {
 
+    // var tshirt = 'http://10.58.20.225/tshirts/';
+    // var users = 'http://10.58.20.225/users/';
+    // var profiles = 'http://10.58.20.225/profiles/';
+    // var login = 'http://10.58.20.225/api-auth/login/';
+    // var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
+    // var register = 'http://10.58.20.225/api-auth/register/';
+    // var snippets = 'http://10.58.20.225/snippets/';
+    // var socialnetwork = 'http://10.58.20.225/socialnetworks/';
+    // var imageDir = 'http://10.58.20.225:8080/images/';
+    // var imageDownload = 'http://10.58.20.225/api/qrcode';
+    // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
+
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
+    var profiles = 'http://10.8.25.244/profiles/';
     var login = 'http://10.8.25.244/api-auth/login/';
     var loginNext = 'http://10.8.25.244/api-auth/login/?next=/';
     var register = 'http://10.8.25.244/api-auth/register/';
@@ -11,20 +24,16 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var socialnetwork = 'http://10.8.25.244/socialnetworks/';
     var imageDir = 'http://10.8.25.244:8080/images/';
     var imageDownload = 'http://10.8.25.244/api/qrcode';
-
-    // var tshirt = 'http://192.168.63.103/tshirts/';
-    // var users = 'http://192.168.63.103/users/';
-    // var login = 'http://192.168.63.103/api-auth/login/';
-    // var loginNext = 'http://192.168.63.103/api-auth/login/?next=/';
-    // var register = 'http://192.168.63.103/api-auth/register/';
-    // var snippets = 'http://192.168.63.103/snippets/';
-    // var socialnetwork = 'http://192.168.63.103/socialnetworks/';
-    // var imageDir = 'http://192.168.63.103:8080/images/';
+    var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
 
     return {
         loginNext: loginNext,
 
         imageDir: imageDir,
+
+        usersDir: users,
+
+        profileDir: profiles,
 
         getCookie: function (name) {
             return $cookies.get('csrftoken');
@@ -56,7 +65,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
-        register: function (username, password, first_name, last_name, email, pin) {
+        register: function (username, password, email, pin) {
             $http({
                 method: 'POST',
                 url: register,
@@ -69,8 +78,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {'username': username, 'password': password, 'first_name': first_name, 'last_name': last_name,
-                    'email': email, 'pin': pin}
+                data: {'username': username, 'password': password, 'email': email, 'pin': pin, 'first_name': "", 'last_name': ""}
             }).success(function (data) {
                 console.log(data);
                 if (data['response'] == 'ok') {
@@ -180,6 +188,41 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 data: {'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
             }).success(function (data) {
                $state.go('profile');
+            }).error(function(response){
+                console.log("Entra al error");
+            });
+        },
+
+        updateProfileWithOutAvatar: function (profileurl, id, info, rating, score) {
+            $http({
+                method: 'PUT',
+                url: updateWithOutImage,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function (value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function (file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {'id':id, 'info': info, 'rating': rating, 'score': score, 'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(function (data) {
+                $state.go('profile');
             }).error(function(response){
                 console.log("Entra al error");
             });

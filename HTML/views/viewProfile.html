@@ -1,18 +1,22 @@
 <div class="profile-padding" ng-controller="ViewProfileCtrl">
-    <section class="container-fluid container-fullw bg-white">
+    <img class="pictureFrontCover" ng-src="assets/images/features-background.jpg"/>
+    <section class="container-fluid container-fullw bg-white padding-top-10 padding-bottom-10">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="testimonial-container col-xs-12 col-sm-3 col-sm-offset-0 col-md-3 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
+                        <div class="testimonial-container col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
                             <img ng-src="{{user.avatar}}" class="img-circle image_middle col-xs-12"/>
-                            <h4 class="col-xs-12 padding-0 margin-top-10">{{user.firstname}} {{user.lastname}}</h4>
-                            <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
-                            <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
-                                data-appears-delay="100">{{user.info}}
-                            </h5>
+                            <div class="well center-text">
+                                <h4 class="col-xs-12 padding-0 margin-top-10">{{user.firstname}} {{user.lastname}}</h4>
+                                <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
+                                <h5 class="col-xs-12 padding-0">{{user.email}}</h5>
+                                <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
+                                    data-appears-delay="100">{{user.info}}
+                                </h5>
+                            </div>
                         </div>
-                        <div class="col-xs-12 col-sm-9 col-md-9 col-lg-9">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <hr class="tall" ng-show="user.socialnetworks.length > 0">
                                 <div class="social-icons center">
@@ -37,123 +41,49 @@
                     </div>
                 </div>
                 <div class="col-md-3">
-                    <div class="row">
-                        <div>
-                            <button type="button" ng-click="openModalSnippets()"
-                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span>Add Snippet</span>
-                            </button>
-                        </div>
-                        <div>
-                            <button type="button" ng-click="openAddSocialNetworkModal()"
-                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-mobile col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top-10">
-                                <span>Add Social Network</span>
-                            </button>
-                        </div>
-                        <div class="padding-top-25 margin-top-80">
-                            <aside class="sidebar">
-                                <div class="tabbable">
-                                    <div class="tabs">
-                                        <ul class="nav nav-tabs nav-justified">
-                                            <li class="active">
-                                                <a href="#popularPosts" data-toggle="tab"><i class="fa fa-star"></i> Popular</a>
-                                            </li>
-                                            <li>
-                                                <a href="#recentPosts" data-toggle="tab"> Recent </a>
-                                            </li>
-                                        </ul>
-                                        <div class="tab-content">
-                                            <div class="tab-pane active" id="popularPosts">
-                                                <ul class="post-list">
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image01_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
+                    <div>
+                        <button type="button" ng-click="openModalSnippets()"
+                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <span>Add Snippet</span>
+                        </button>
+                    </div>
+                    <div>
+                        <button type="button" ng-click="openAddSocialNetworkModal()"
+                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-mobile col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top-10">
+                            <span>Add Social Network</span>
+                        </button>
+                    </div>
+                    <div class="paddingViewProfile">
+                        <aside class="sidebar">
+                            <div class="tabbable">
+                                <div class="tabs">
+                                    <ul class="nav nav-tabs nav-justified">
+                                        <li class="active">
+                                            <a data-toggle="tab"><i class="fa fa-star"></i> Popular Users</a>
+                                            <hr class="tall margin-0">
+                                        </li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="popularUsers">
+                                            <ul class="post-list">
+                                                <li ng-repeat="popularUser in users | limitTo: 3">
+                                                    <div class="post-image">
+                                                        <div class="img-thumbnail">
+                                                            <a ng-click="goToProfile(popularUser.owner)"> <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive"></a>
                                                         </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Nullam Vitae Nibh Un Odiosters </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image02_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Vitae Nibh Un Odiosters </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image03_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Odiosters Nullam Vitae </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                            <div class="tab-pane" id="recentPosts">
-                                                <ul class="post-list">
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image04_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Vitae Nibh Un Odiosters </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image05_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Odiosters Nullam Vitae </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                    <li>
-                                                        <div class="post-image">
-                                                            <div class="img-thumbnail">
-                                                                <a href="#"> <img src="assets/images/portfolio/image06_th.jpg" alt="" class="img-responsive"> </a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="post-info">
-                                                            <a href="#"> Nullam Vitae Nibh Un Odiosters </a>
-                                                            <div class="post-meta">
-                                                                Jan 10, 2014
-                                                            </div>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                            </div>
+                                                    </div>
+                                                    <div class="post-info">
+                                                        <!--<a ng-click=""> {{popularUser.firstname}} {{popularUser.lastname}}</a>-->
+                                                        <a ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <h5>{{popularUser.info}}</h5>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
-                            </aside>
-                        </div>
+                            </div>
+                        </aside>
                     </div>
                 </div>
             </div>
