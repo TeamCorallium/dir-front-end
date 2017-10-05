@@ -10,5 +10,6 @@ angular.module("pulloverDir",[
     'ngSanitize',
     'ngCookies',
     'ngFileUpload',
-    'ngLoadingSpinner'
+    'ngLoadingSpinner',
+    'countTo'
 ]);
