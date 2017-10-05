@@ -21,17 +21,17 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function (firstname, lastname, username, password, passAgain, email, pin) {
+        $scope.registerModal = function (username, password, passAgain, email, pin) {
             if (password === passAgain) {
-                RestService.register(username, password,firstname,lastname,email,pin);
+                RestService.register(username, password,email,pin);
             } else {
                 $('#errorRegisterBox').show();
             }
         };
 
-        $scope.registerModalHome = function (username, password, passAgain) {
+        $scope.registerModalHome = function (email, username, password, passAgain) {
             if (password === passAgain) {
-                RestService.register(username, password,"","","","");
+                RestService.register(username, password, email, "");
             } else {
                 $('#errorRegisterBoxHome').show();
             }

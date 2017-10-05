@@ -65,7 +65,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
-        register: function (username, password, first_name, last_name, email, pin) {
+        register: function (username, password, email, pin) {
             $http({
                 method: 'POST',
                 url: register,
@@ -78,8 +78,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {'username': username, 'password': password, 'first_name': first_name, 'last_name': last_name,
-                    'email': email, 'pin': pin}
+                data: {'username': username, 'password': password, 'email': email, 'pin': pin}
             }).success(function (data) {
                 console.log(data);
                 if (data['response'] == 'ok') {
