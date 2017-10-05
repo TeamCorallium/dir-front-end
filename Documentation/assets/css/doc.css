@@ -20,7 +20,7 @@
 	border: none !important;
 }
 #sidebar > div nav > ul > li.active {
-    background: #007AFF;
+    background: #00B9D6;
 }
 @media (max-width: 991px) {
 	.doc-navigation {

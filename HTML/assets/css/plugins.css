@@ -45,7 +45,7 @@
 
 .tp-bannertimer {
   height: 3px !important;
-  background: #007AFF !important;
+  background: #00B9D6 !important;
 }
 
 /* ---------------------------------------------------------------------- */
@@ -329,7 +329,7 @@
   font-family: "themify";
   font-size: 30px;
   line-height: 1;
-  color: #007AFF;
+  color: #00B9D6;
   opacity: 0.75;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -438,7 +438,7 @@
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before {
-  color: #007AFF;
+  color: #00B9D6;
   opacity: 0.75;
 }
 

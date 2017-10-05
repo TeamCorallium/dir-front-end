@@ -5,7 +5,7 @@
 <html lang="en" ng-app="dirApp">
 <!-- start: HEAD -->
 <head>
-    <title>Clip-Two | Front End</title>
+    <title> T-shirt <DIR>| Home</title>
     <!-- start: META -->
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
     <meta charset="utf-8" />
@@ -30,7 +30,7 @@
     <link href="assets/css/css.css" rel="stylesheet" media="screen">
     <!-- end: MAIN CSS -->
     <!-- start: FAVICON -->
-    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
     <!-- end: FAVICON -->
 </head>
 <!-- end: HEAD -->
@@ -50,10 +50,13 @@
                 </div>
                 <!-- start: NAVBAR -->
                 <div class="navbar-collapse collapse inline margin-left-0">
-                    <a class="margin-top-10 text-white" ui-sref="home">&#60;DIR&#62;</a>
+                    <!-- start: LOGO -->
+							<a href="index.html" class="navbar-brand"> <img src="assets/images/logo.png" alt="Clip-Two"> </a>
+							<!-- end: LOGO -->
                     <ul class="nav navbar-nav navbar-right">
+					
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
+						    <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username == ''">
                                 <i class="ti-user"></i>  User </a>
                             <a data-toggle="dropdown" class="dropdown-toggle" ng-if="userdata.username != ''">
                                 <i class="ti-user"></i>  {{userdata.username}} </a>
@@ -81,7 +84,33 @@
                         <li>
                             <a><i class="ti-shopping-cart"></i> Buy </a>
                         </li>
-                    </ul>
+                    </ul><!-- start: TOP BAR SOCIAL ICONS -->
+							<div class="social-icons hidden-xs">
+								<ul class="nav navbar-nav navbar-right">
+									<li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+										<a href="http://www.twitter.com" target="_blank"> Twitter </a>
+									</li>
+									<li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
+										<a href="http://dribbble.com" target="_blank"> Dribbble </a>
+									</li>
+									<li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+										<a href="http://facebook.com" target="_blank"> Facebook </a>
+									</li>
+									<li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+										<a href="http://google.com" target="_blank"> Google+ </a>
+									</li>
+									<li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+										<a href="http://linkedin.com" target="_blank"> LinkedIn </a>
+									</li>
+									<li data-placement="bottom" data-original-title="YouTube" class="social-youtube tooltips">
+										<a href="http://youtube.com/" target="_blank"> YouTube </a>
+									</li>
+									<li data-placement="bottom" data-original-title="RSS" class="social-rss tooltips">
+										<a href="#" target="_blank"> RSS </a>
+									</li>
+								</ul>
+							</div>
+							<!-- end: TOP BAR SOCIAL ICONS -->
                     <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
                     <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
                         <div class="arrow-left"></div>
@@ -326,103 +355,35 @@
         </div>
         <!-- end: MODAL SOCIAL NETWORK-->
 
-        <!-- start: FOOTER-->
-        <footer id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-3 padding-bottom-25">
-                        <a class="logo" href="index.html"> <img alt="Clip-Two" src="assets/images/logo2.png"> </a>
-                        <p class="padding-top-20">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat. Nulla consequat massa quis enim. Donec pede justo fringilla vel, aliquet nec, vulputate eget, arcu...
-                        </p>
-                        <button type="button" class="btn btn-red margin-top-15 btn-block btn-scroll btn-scroll-top fa-shopping-cart">
-                            <span>Buy a TShirt Now</span>
-                        </button>
-                    </div>
-                    <div class="col-md-3 padding-bottom-25">
-                        <h4 class="margin-bottom-25">Latest Tweet</h4>
-                        <div class="twitter margin-bottom-15" id="tweet">
-                            <i class="fa fa-twitter pull-left"></i>
-                            <p class="padding-left-30">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-                                <a href="#" class="time"> 12 Dec </a>
-                            </p>
-                        </div>
-                        <div class="twitter margin-bottom-15" id="tweet1">
-                            <i class="fa fa-twitter pull-left"></i>
-                            <p class="padding-left-30">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec hendrerit vehicula est, in consequat.
-                                <a href="#" class="time"> 12 Dec </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 padding-bottom-25">
-                        <div class="contact-details">
-                            <h4 class="margin-bottom-25">Recent Snippets</h4>
-                            <ul class="posts">
-                                <li>
-                                    <a href="#"> MVC directory structure </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Dependency injection </a>
-                                </li>
-                                <li>
-                                    <a href="#"> Service vs Factory </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-3 padding-bottom-25">
-                        <h4 class="margin-bottom-25">Follow Us</h4>
-                        <div class="social-icons">
-                            <ul>
-                                <li class="social-twitter tooltips" data-original-title="Twitter" data-placement="bottom">
-                                    <a target="_blank" href="#"> Twitter </a>
-                                </li>
-                                <li class="social-facebook tooltips" data-original-title="Facebook" data-placement="bottom">
-                                    <a target="_blank" href="#" data-original-title="Facebook"> Facebook </a>
-                                </li>
-                                <li class="social-google tooltips" data-original-title="LinkedIn" data-placement="bottom">
-                                    <a target="_blank" href="#" data-original-title="LinkedIn"> Google + </a>
-                                </li>
-                                <li class="social-linkedin tooltips" data-original-title="LinkedIn" data-placement="bottom">
-                                    <a target="_blank" href="#" data-original-title="LinkedIn"> LinkedIn </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p>
-                                &copy; Copyright <span class="current-year"></span> by DIR. All Rights Reserved.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <nav id="sub-menu">
-                                <ul>
-                                    <li>
-                                        <a href="#"> FAQ's </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Sitemap </a>
-                                    </li>
-                                    <li>
-                                        <a href="#"> Contact </a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-        <a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
-        <!-- end: FOOTER -->
-    </div>
+       <!-- start: FOOTER -->
+				<footer id="footer">
+	<div class="footer-copyright">
+						<div class="container">
+							<div class="row">
+								<div class="col-md-8">
+									<p>
+										&copy; Copyright <span class="current-year"></span> by &lt;DIR&gt;. All Rights Reserved.
+									</p>
+								</div>
+								<div class="col-md-4">
+									<nav id="sub-menu">
+										<ul>
+											<li>
+												<a href="#"> About US </a>
+											</li>
+											<li>
+												<a href="#"> FAQ's </a>
+											</li>
+											<li>
+												<a href="#"> Contact </a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer>
     <!-- end: APP CONTENT -->
 </div>
 <!-- start: MAIN JAVASCRIPTS -->
