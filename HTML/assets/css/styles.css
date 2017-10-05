@@ -7717,6 +7717,8 @@ Social Icons
     -o-transition: all, 0.3s, ease;
     -webkit-transition: all, 0.3s, ease;
     transition: all, 0.3s, ease;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 .social-icons ul li a:hover {
     top: -40px;
