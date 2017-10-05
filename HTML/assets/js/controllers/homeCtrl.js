@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('HomeCtrl',["$scope", "$state", "$cookies",
-    function ($scope, $state, $cookies) {
+app.controller('HomeCtrl',["$scope", "$state", "$rootScope",
+    function ($scope, $state, $rootScope) {
 
         $rootScope.viewEditProfile = true;
         $rootScope.viewProfile = true;

@@ -1,5 +1,5 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
-    <img class="pictureFrontCover" ng-src="assets/images/features-background.jpg"/>
+    <img class="pictureFrontCover img-responsive" ng-src="assets/images/features-background.jpg"/>
     <section class="container-fluid container-fullw bg-white padding-top-10 padding-bottom-10">
         <div class="container">
             <div class="row">
@@ -31,7 +31,7 @@
                                 <div class="social-icons center">
                                     <ul class="list-inline">
                                         <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
-                                            <a ng-click="goToLink(sn.url)"> {{sn.name}} </a>
+                                            <a class="font-size-30 padding-left-right-30" ng-click="goToLink(sn.url)"> {{sn.name}} </a>
                                         </li>
                                     </ul>
                                 </div>
