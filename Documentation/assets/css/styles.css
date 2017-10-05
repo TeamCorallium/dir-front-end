@@ -2653,7 +2653,7 @@ a.text-light:hover {
 }
 
 .bg-success {
-  background: #5cb85c !important;
+  background: #00B8B8 !important;
   color: #ffffff;
 }
 
@@ -4426,7 +4426,7 @@ a.text-light:hover {
 }
 
 .progress-bar-success {
-  background-color: #5cb85c;
+  background-color: #00B8B8;
 }
 
 .progress-bar-info {
@@ -4449,11 +4449,11 @@ a.text-light:hover {
 }
 
 .badge-success {
-  background-color: #5CB85C;
+  background-color: #00B8B8;
 }
 
 .badge-success[href]:hover, .badge-success[href]:focus {
-  background-color: #449D44;
+  background-color: #00AAAD;
 }
 
 .badge-warning {
@@ -4691,7 +4691,7 @@ select[multiple="multiple"]:focus option {
 }
 
 .has-success {
-  color: #5cb85c;
+  color: #00B8B8;
 }
 .has-success .control-label {
   color: #8e8e93 !important;
@@ -5501,7 +5501,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .clip-check.check-success input[type="checkbox"]:checked + label:before {
-  border-color: #5cb85c;
+  border-color: #00B8B8;
 }
 
 .clip-check.check-primary input[type="checkbox"]:checked + label:before {
@@ -5615,7 +5615,7 @@ input[type="radio"], input[type="checkbox"] {
 }
 
 .clip-radio.radio-success input[type="radio"]:checked + label:before {
-  background: #5cb85c;
+  background: #00B8B8;
 }
 
 .clip-radio.radio-primary input[type="radio"]:checked + label:before {
@@ -5842,8 +5842,8 @@ input[type="radio"], input[type="checkbox"] {
   color: #ffffff;
 }
 .btn-success.btn-o {
-  border: 1px solid #5cb85c;
-  color: #5cb85c;
+  border: 1px solid #00B8B8;
+  color: #00B8B8;
 }
 .btn-success.btn-o:hover {
   color: #80c780;
@@ -5865,7 +5865,7 @@ input[type="radio"], input[type="checkbox"] {
   color: #a3d7a3;
 }
 .btn-success.btn-o .caret {
-  border-top-color: #5cb85c;
+  border-top-color: #00B8B8;
 }
 .btn-success .caret {
   border-top-color: #ffffff;
@@ -9782,10 +9782,10 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
   padding-bottom: 10px;
 }
 .timeline-xs .timeline-item.success {
-  border-left-color: #5cb85c;
+  border-left-color: #00B8B8;
 }
 .timeline-xs .timeline-item.success:after {
-  border-color: #5cb85c;
+  border-color: #00B8B8;
 }
 .timeline-xs .timeline-item.danger {
   border-left-color: #d43f3a;
