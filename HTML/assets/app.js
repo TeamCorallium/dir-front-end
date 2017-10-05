@@ -11,5 +11,6 @@ angular.module("pulloverDir",[
     'ngCookies',
     'ngFileUpload',
     'ngLoadingSpinner',
-    'countTo'
+    'countTo',
+    'ngAnimate'
 ]);
