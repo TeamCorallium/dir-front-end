@@ -78,7 +78,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: {'username': username, 'password': password, 'email': email, 'pin': pin}
+                data: {'username': username, 'password': password, 'email': email, 'pin': pin, 'firstname': "", 'lastname': ""}
             }).success(function (data) {
                 console.log(data);
                 if (data['response'] == 'ok') {
