@@ -15,7 +15,8 @@ app.constant('JS_REQUIRED',{
         'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
         'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js',
         'viewProfileCtrl': 'assets/js/controllers/viewProfileCtrl.js',
-        'homeCtrl': 'assets/js/controllers/homeCtrl.js'
+        'homeCtrl': 'assets/js/controllers/homeCtrl.js',
+        'mainCtrl': 'assets/js/main.js'
     },
     modules:[{
 
