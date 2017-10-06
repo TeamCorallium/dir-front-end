@@ -267,4 +267,9 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $('#ModalImageCropper').modal('show');
         };
 
+        $scope.crop = function () {
+            $scope.user.avatar = $scope.myCroppedImage;
+            $('#ModalImageCropper').modal('hide');
+        };
+
     }]);
