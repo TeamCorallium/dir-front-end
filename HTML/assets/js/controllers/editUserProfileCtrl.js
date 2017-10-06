@@ -6,41 +6,21 @@
 app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
     function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
 
-        $scope.size='small';
-        $scope.type='circle';
-        $scope.imageDataURI='';
-        $scope.resImageDataURI='';
-        $scope.resImgFormat='image/png';
-        $scope.resImgQuality=1;
-        $scope.selMinSize=100;
-        $scope.resImgSize=200;
-        //$scope.aspectRatio=1.2;
-        $scope.onChange=function($dataURI) {
-            console.log('onChange fired');
+        $scope.myImage = '';
+        $scope.myCroppedImage = '';
+
+        $scope.uploadFile = function(file) {
+            if (file) {
+                // ng-img-crop
+                var imageReader = new FileReader();
+                imageReader.onload = function (image) {
+                    $scope.$apply(function ($scope) {
+                        $scope.myImage = image.target.result;
+                    });
+                };
+                imageReader.readAsDataURL(file);
+            }
         };
-        $scope.onLoadBegin=function() {
-            console.log('onLoadBegin fired');
-        };
-        $scope.onLoadDone=function() {
-            console.log('onLoadDone fired');
-        };
-        $scope.onLoadError=function() {
-            console.log('onLoadError fired');
-        };
-        var handleFileSelect=function(evt) {
-            var file=evt.currentTarget.files[0];
-            var reader = new FileReader();
-            reader.onload = function (evt) {
-                $scope.$apply(function($scope){
-                    $scope.imageDataURI=evt.target.result;
-                });
-            };
-            reader.readAsDataURL(file);
-        };
-        angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
-        $scope.$watch('resImageDataURI',function(){
-            //console.log('Res image', $scope.resImageDataURI);
-        });
 
         $scope.user = {
             username: '',

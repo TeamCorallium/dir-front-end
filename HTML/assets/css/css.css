@@ -785,16 +785,3 @@ img-crop canvas {
     position: absolute;
     top: 50%;
 }
-
-.cropArea.big {
-    width:800px;
-    height:600px;
-}
-.cropArea.medium {
-    width:500px;
-    height:350px;
-}
-.cropArea.small {
-    width:300px;
-    height:200px;
-}
