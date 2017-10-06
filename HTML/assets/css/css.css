@@ -783,8 +783,6 @@
 }
 
 img-crop canvas {
-    width: 100% !important;
-    height: auto !important;
     margin-top: 0px !important;
     margin-left: 0px !important;
 }
