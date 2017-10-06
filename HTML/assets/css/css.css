@@ -752,8 +752,14 @@
 }
 
 .avatar-users {
-    width: 160px !important;
-    height: 160px !important;
+    width: 120px !important;
+    height: 120px !important;
+    margin-left: 44px !important;
+}
+
+.avatar-users:hover{
+    cursor: pointer;
+    cursor: hand;
 }
 
 .max-width-160 {
@@ -784,4 +790,31 @@ img-crop canvas {
     outline: 0 none;
     position: absolute;
     top: 50%;
+}
+
+.styleBox {
+    position: relative !important;
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e4;
+    height: 320px !important;
+    max-width: 208px !important;
+}
+
+.styleBox:hover {
+    box-shadow: 0 3px 25px -4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.ImageBox {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.buttonContainer {
+    position: absolute !important;
+    bottom: 15px !important;
+    margin-left: 53px !important;
+}
+
+.buttonProfile {
+    border-radius: 50px !important;
 }

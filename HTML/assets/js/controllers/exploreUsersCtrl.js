@@ -30,4 +30,10 @@ app.controller('ExploreUsersCtrl',["$scope", "RestService", "$state", "$rootScop
         };
 
         $scope.getProfiles();
+
+        $scope.goToProfile = function (owner) {
+            $cookies.put('exploreUser',owner,{path: '/'});
+            $state.go('tshirts');
+        };
+
     }]);
