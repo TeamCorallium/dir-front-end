@@ -122,7 +122,45 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <form>
+                    <div>
+                        <label><input type="checkbox" ng-model="enableCrop" ng-init="enableCrop=true"/> Add ngImgCrop to Page</label>
+                    </div>
+                    <div>
+                        Container size:
+                        <label><input type="radio" ng-model="size" value="big" /> Big</label>
+                        <label><input type="radio" ng-model="size" value="medium" /> Medium</label>
+                        <label><input type="radio" ng-model="size" value="small" /> Small</label>
+                    </div>
+                    <div>
+                        Area type:
+                        <label><input type="radio" ng-model="type" value="circle" /> Circle</label>
+                        <label><input type="radio" ng-model="type" value="square" /> Square</label>
+                        <!--<label><input type="radio" ng-model="type" value="rectangle" /> Rectangle</label>-->
+                    </div>
+                    <div>
+                        <label><input type="checkbox" ng-model="changeOnFly" /> Change On Fly</label>
+                    </div>
+                    <!--
+                    <div>
+                      <label>Aspect Ratio: <input type="text" ng-model="aspectRatio" /></label>
+                    </div>
+                    -->
+                    <div>
+                        <label>Area Min Size (Size = Width = Height): <input type="text" ng-model="selMinSize" /></label>
+                    </div>
+                    <div>
+                        <label>Result Image Size (Size = Width = Height): <input type="text" ng-model="resImgSize" /></label>
+                    </div>
+                    <div>
+                        Result Image Format:
+                        <label><input type="radio" ng-model="resImgFormat" value="image/jpeg" /> image/jpeg</label>
+                        <label><input type="radio" ng-model="resImgFormat" value="image/png" /> image/png</label>
+                        <label><input type="radio" ng-model="resImgFormat" value="image/webp" /> image/webp</label>
+                    </div>
+                    <div>
+                        <label>Result Image Quality (0<=X<=1): <input type="text" ng-model="resImgQuality" /></label>
+                    </div>
+                    <form ng-show="enableCrop">
                         <label for="fileInput">Select Image:</label>
                         <input type="file" id="fileInput" />
                         <button type="reset">Clear</button>
