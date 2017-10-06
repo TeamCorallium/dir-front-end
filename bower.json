@@ -66,6 +66,7 @@
     "angular-loading-spinner": "^0.0.3",
     "angular-image-crop": "angular-image-cropper#*",
     "jquery-countTo": "countto#^1.2.0",
-    "angular-count-to": "*"
+    "angular-count-to": "*",
+    "ng-img-crop": "ngImgCrop#^0.3.2"
   }
 }

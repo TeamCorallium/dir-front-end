@@ -13,5 +13,5 @@ angular.module("pulloverDir",[
     'ngLoadingSpinner',
     'countTo',
     'ngAnimate',
-    'angular-img-cropper'
+    'ngImgCrop'
 ]);

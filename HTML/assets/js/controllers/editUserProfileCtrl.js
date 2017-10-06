@@ -6,14 +6,20 @@
 app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
     function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
 
-        $scope.cropper = {};
-        $scope.cropper.sourceImage = null;
-        $scope.cropper.croppedImage   = null;
-        $scope.bounds = {};
-        $scope.bounds.left = 0;
-        $scope.bounds.right = 0;
-        $scope.bounds.top = 0;
-        $scope.bounds.bottom = 0;
+        $scope.myImage='';
+        $scope.myCroppedImage='';
+
+        var handleFileSelect=function(evt) {
+            var file=evt.currentTarget.files[0];
+            var reader = new FileReader();
+            reader.onload = function (evt) {
+                $scope.$apply(function($scope){
+                    $scope.myImage=evt.target.result;
+                });
+            };
+            reader.readAsDataURL(file);
+        };
+        angular.element(document.querySelector('#fileInput')).on('change',handleFileSelect);
 
         $scope.user = {
             username: '',
