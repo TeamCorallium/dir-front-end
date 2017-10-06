@@ -12,5 +12,6 @@ angular.module("pulloverDir",[
     'ngFileUpload',
     'ngLoadingSpinner',
     'countTo',
-    'ngAnimate'
+    'ngAnimate',
+    'angular-img-cropper'
 ]);

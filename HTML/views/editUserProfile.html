@@ -9,11 +9,17 @@
                             <form class="form" name="form">
                                 <img ngf-thumbnail="user.avatar" class="img-circle image_middle col-xs-12"/>
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <span type="file" ngf-select  ng-model="user.avatar" name="file"
+                                    <!--<span type="file" ngf-select  ng-model="user.avatar" name="file"-->
+                                          <!--class="btn btn-success fileinput-button button-image-left-->
+                                          <!--col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1"-->
+                                          <!--accept="image/*" ngf-max-size="10MB" required-->
+                                          <!--ngf-model-invalid="errorFile">-->
+                                        <!--<i class="ti-pencil-alt"></i>-->
+                                    <!--</span>-->
+                                    <span ng-click="openModalImageCropper()"
                                           class="btn btn-success fileinput-button button-image-left
-                                          col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1"
-                                          accept="image/*" ngf-max-size="10MB" required
-                                          ngf-model-invalid="errorFile">
+                                          col-xs-4 col-xs-offset-1 col-sm-4 col-sm-offset-1 col-md-4 col-md-offset-1 col-lg-4 col-lg-offset-1">
+
                                         <i class="ti-pencil-alt"></i>
                                     </span>
                                     <span type="button" class="btn btn-danger button-image-right
@@ -103,4 +109,30 @@
             </div>
         </div>
     </section>
+    <!-- start: MODAL IMAGE CROPPER-->
+    <div class="modal fade" id="ModalImageCropper">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-header padding-15">
+                        <a type="button" class="close" data-dismiss="modal">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </a>
+                        <h4 class="modal-title"><i class="ti-user"></i> Crop Image</h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <input type="file" img-cropper-fileread image="cropper.sourceImage" />
+                        <div>
+                            <canvas width="500" height="300" id="canvas" image-cropper image="cropper.sourceImage" cropped-image="cropper.croppedImage" crop-width="400" crop-height="200" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
+                        </div>
+                        <div>Cropped Image (Left: {{bounds.left}} Right: {{bounds.right}} Top: {{bounds.top}} Bottom: {{bounds.bottom}})</div>
+                        <div ng-show="cropper.croppedImage!=null"><img ng-src="{{cropper.croppedImage}}" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: MODAL IMAGE CROPPER-->
 </div>

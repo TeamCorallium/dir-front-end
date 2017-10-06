@@ -6,6 +6,15 @@
 app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
     function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
 
+        $scope.cropper = {};
+        $scope.cropper.sourceImage = null;
+        $scope.cropper.croppedImage   = null;
+        $scope.bounds = {};
+        $scope.bounds.left = 0;
+        $scope.bounds.right = 0;
+        $scope.bounds.top = 0;
+        $scope.bounds.bottom = 0;
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -245,6 +254,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 dirAvatar = 'assets/images/default-user.png';
             }
             return dirAvatar;
+        };
+
+        $scope.openModalImageCropper = function() {
+            $('#ModalImageCropper').modal('show');
         };
 
     }]);
