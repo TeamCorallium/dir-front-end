@@ -25,7 +25,7 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
         $stateProvider.state('blank',{
             url: '',
             templateUrl: 'views/home.html',
-            // resolve: loadSequence('homeCtrl')
+            resolve: loadSequence('homeCtrl')
         }).state('home',{
             url: '/home',
             templateUrl: 'views/home.html',
