@@ -42,6 +42,10 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             url: '/tshirts/:id',
             templateUrl: 'views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
+        }).state('users',{
+            url: '/users',
+            templateUrl: 'views/exploreUsers.html',
+            resolve: loadSequence('exploreUsersCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
