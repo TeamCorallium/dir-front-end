@@ -10,10 +10,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.cropper.sourceImage = null;
         $scope.cropper.croppedImage   = null;
         $scope.bounds = {};
-        $scope.bounds.left = 160;
-        $scope.bounds.right = 160;
-        $scope.bounds.top = 160;
-        $scope.bounds.bottom = 160;
+        $scope.bounds.left = 80;
+        $scope.bounds.right = 240;
+        $scope.bounds.top = 20;
+        $scope.bounds.bottom = 180;
 
         $scope.user = {
             username: '',
