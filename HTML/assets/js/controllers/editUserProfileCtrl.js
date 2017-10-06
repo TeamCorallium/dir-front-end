@@ -183,7 +183,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             if ($scope.user.avatar == 'assets/images/default-user.png'){
                 $scope.user.avatar = '';
             }
-
+            console.log("avatar:"+ $scope.user.avatar);
             if ($scope.user.avatar instanceof File) {
                 RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
             } else {
@@ -269,6 +269,20 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
 
         $scope.crop = function () {
             $scope.user.avatar = $scope.myCroppedImage;
+            //return a promise that resolves with a File instance
+            function urltoFile(url, filename, mimeType){
+                return (fetch(url)
+                    .then(function(res){return res.arrayBuffer();})
+                    .then(function(buf){return new File([buf], filename, {type:mimeType});})
+                );
+            }
+
+            urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
+            .then(function(file){
+                console.log(file);
+                $scope.user.avatar = file;
+            })
+
             $('#ModalImageCropper').modal('hide');
         };
 
