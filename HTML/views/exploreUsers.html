@@ -6,13 +6,13 @@
                     <div class="row">
                         <div data-appears-group-delay="0" data-appears-delay-increase="200">
                             <ul class="team-list list-unstyled">
-                                <li class="col-lg-2 col-md-3 col-sm-3 col-xs-4 user-box" ng-repeat="profile in profiles">
-                                    <div class="opacity-0" data-appears-class="fadeIn">
+                                <li class="col-lg-2 col-md-3 col-sm-4 col-xs-12 user-box" ng-repeat="profile in profiles">
+                                    <div class="opacity-0 center-box" data-appears-class="fadeIn">
                                         <div class="thumb icons-effect margin-bottom-15">
                                             <img src="{{profile.avatar}}"class="img-responsive avatar-users">
                                         </div>
-                                        <h3>{{profile.owner}}</h3>
-                                        <div class="team-member-description">
+                                        <h3 class="max-width-160">{{profile.owner}}</h3>
+                                        <div class="team-member-description max-width-160">
                                             <p class="text-dark">
                                                 {{profile.info}}
                                             </p>

@@ -294,6 +294,10 @@
         height: 120px !important;
         background-image: url('../../assets/images/480.jpg');
     }
+
+    .center-box{
+        margin-left: 36% !important;
+    }
 }
 
 @media  (max-width: 480px) {
@@ -750,6 +754,10 @@
 .avatar-users {
     width: 160px !important;
     height: 160px !important;
+}
+
+.max-width-160 {
+    max-width: 160px !important;
 }
 
 .user-box {
