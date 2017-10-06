@@ -121,9 +121,9 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <a type="file"
+                    <input type="file"
                        id="fileInput" class="btn btn-primary"
-                       onchange="angular.element(this).scope().uploadFile(this.files[0])"></a>
+                       onchange="angular.element(this).scope().uploadFile(this.files[0])">
                     <div class="cropArea margin-top-10">
                         <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
                     </div>
