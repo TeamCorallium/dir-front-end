@@ -109,14 +109,6 @@
             </div>
         </div>
     </section>
-    <div>Select an image file:
-        <input type="file"
-               id="fileInput"
-               onchange="angular.element(this).scope().uploadFile(this.files[0])" />
-    </div>
-    <div class="cropArea">
-        <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
-    </div>
     <!-- start: MODAL IMAGE CROPPER-->
     <div class="modal fade" id="ModalImageCropper">
         <div class="modal-dialog modal-lg">
@@ -130,7 +122,43 @@
                     </div>
                 </div>
                 <div class="modal-body">
+                    <form ng-show="enableCrop">
+                        <label for="fileInput">Select Image:</label>
+                        <input type="file" id="fileInput" />
+                        <button type="reset">Clear</button>
+                        <button ng-click="imageDataURI='test.jpg'">Set Test Image</button>
+                    </form>
+                    <div>
+                        <label>Image URL: <input type="text" ng-model="edtImageURI" /></label>
+                        <button ng-click="imageDataURI=edtImageURI">Set Image</button>
+                    </div>
+                    <div>
+                        <button ng-click="imageDataURI=''">Reset Image</button>
+                    </div>
 
+                    <div ng-if="enableCrop" class="cropArea" ng-class="{'big':size=='big', 'medium':size=='medium', 'small':size=='small'}">
+                        <img-crop image="imageDataURI"
+                                  result-image="$parent.resImageDataURI"
+                                  change-on-fly="changeOnFly"
+                                  area-type="{{type}}"
+                                  area-min-size="selMinSize"
+                                  result-image-format="{{resImgFormat}}"
+                                  result-image-quality="resImgQuality"
+                                  result-image-size="resImgSize"
+                                  on-change="onChange($dataURI)"
+                                  on-load-begin="onLoadBegin()"
+                                  on-load-done="onLoadDone()"
+                                  on-load-error="onLoadError()"
+                        ></img-crop>
+                        <!--aspect-ratio="aspectRatio"-->
+                    </div>
+
+                    <div style="text-align:center">
+                        <h3>Result</h3>
+                        <div>
+                            <img ng-src="{{resImageDataURI}}" />
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
