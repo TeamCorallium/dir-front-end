@@ -766,9 +766,26 @@
 
 .cropArea {
     background: #E4E4E4;
-    margin: auto;
     overflow: hidden;
+    width:400px;
+    height:400px;
 }
+img-crop {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+img-crop canvas {
+    display: block;
+    left: 50%;
+    outline: 0 none;
+    position: absolute;
+    top: 50%;
+}
+
 .cropArea.big {
     width:800px;
     height:600px;
@@ -780,9 +797,4 @@
 .cropArea.small {
     width:300px;
     height:200px;
-}
-
-img-crop canvas {
-    margin-top: 0px !important;
-    margin-left: 0px !important;
 }
