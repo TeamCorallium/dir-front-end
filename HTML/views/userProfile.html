@@ -47,12 +47,12 @@
                                 <h5 class="col-xs-12 padding-0"><i class="ti-email"></i> {{user.email}}</h5>
                             </div>
                             <a type="button" ng-click="makeQRCode()" ng-show="profileQRCode == ''"
-                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               class="btn btn-primary btn-wide ButtonRadius margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <span>Generate QR Code</span>
                             </a>
                             <img ng-show="profileQRCode != ''" ng-src="{{profileQRCode}}" class="image_qrcode col-xs-12"/>
                             <a type="button" href="{{profileQRCode}}" download ng-show="profileQRCode != ''"
-                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                               class="btn btn-primary btn-wide ButtonRadius margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <span>Save QR Code</span>
                             </a>
                         </div>

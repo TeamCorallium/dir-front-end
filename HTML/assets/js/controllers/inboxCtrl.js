@@ -20,7 +20,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
         $scope.messagesSend = [];
 
         $scope.getMessageSend = function () {
-            RestService.fetchMessages($cookies.get('username'),"sender")
+            RestService.fetchMessages($cookies.get('username'), "sender")
                 .then(
                     function (data) {
                         $scope.messagesSend = data;
@@ -32,7 +32,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
         };
 
         $scope.getMessageReceiver = function () {
-            RestService.fetchMessages($cookies.get('username'),"receiver")
+            RestService.fetchMessages($cookies.get('username'), "receiver")
                 .then(
                     function (data) {
                         $scope.messagesInbox = data;
