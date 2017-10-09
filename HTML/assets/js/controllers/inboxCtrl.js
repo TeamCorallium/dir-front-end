@@ -23,12 +23,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
             RestService.fetchMessages($cookies.get('username'),"sender")
                 .then(
                     function (data) {
-                        if (data.length > 0){
-                            $scope.messagesSend = data;
-                        } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
-                        }
+                        $scope.messagesSend = data;
                     },
                     function (errResponse) {
                         console.log(errResponse);
@@ -40,12 +35,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
             RestService.fetchMessages($cookies.get('username'),"receiver")
                 .then(
                     function (data) {
-                        if (data.length > 0){
-                            $scope.messagesInbox = data;
-                        } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
-                        }
+                        $scope.messagesInbox = data;
                     },
                     function (errResponse) {
                         console.log(errResponse);
