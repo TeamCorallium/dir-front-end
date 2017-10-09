@@ -82,7 +82,7 @@
 
     .button-image-left{
         margin-top: -36% !important;
-        margin-left: 22% !important;
+        margin-left: 26% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -400,41 +400,6 @@
         min-height: 50px !important;
     }
 
-    .button-image-left{
-        margin-top: -15% !important;
-        margin-left: 39% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -15% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .pictureFrontCover {
         width:100%;
         height: 120px !important;
@@ -493,41 +458,6 @@
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -20% !important;
-        margin-left: 34% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -20% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .pictureFrontCover {
         width:100%;
         height: 120px !important;
@@ -580,41 +510,6 @@
 
     .paddingProfile {
         padding-top: 45px !important;
-    }
-
-    .button-image-left{
-        margin-top: -23% !important;
-        margin-left: 30% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -23% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
     }
 
     .pictureFrontCover {
@@ -671,41 +566,6 @@
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -28% !important;
-        margin-left: 27% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -28% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .pictureFrontCover {
         width:100%;
         height: 120px !important;
@@ -758,41 +618,6 @@
         position: relative;
         float: left;
         width: 80% !important;
-    }
-
-    .button-image-left{
-        margin-top: -30% !important;
-        margin-left: 27% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -30% !important;
-        margin-left: 62% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
     }
 
     .pictureFrontCover {
@@ -849,41 +674,6 @@
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -32% !important;
-        margin-left: 24% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -32% !important;
-        margin-left: 65% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .pictureFrontCover {
         width:100%;
         height: 120px !important;
@@ -908,30 +698,6 @@
 }
 
 @media (min-width: 1201px) {
-    .button-image-left{
-        margin-top: -40% !important;
-        margin-left: 20% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -40% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -1193,4 +959,9 @@ ul li a.social-ti-foursquare {
         margin-top: 5px !important;
         margin-left: 24% !important;
     }
+}
+
+.ButtonImageSize {
+    width: 50px;
+    height: 50px;
 }
