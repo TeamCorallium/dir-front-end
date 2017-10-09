@@ -358,13 +358,10 @@
 }
 
 @media  (max-width: 767px) {
-    .image_middle {
-        margin-left: 38% !important;
-        float: left !important;
-        height: 180px !important;
-        width: 180px !important;
-        padding: 0px !important;
-        margin-top: -17% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -375,13 +372,24 @@
         margin-left: 38% !important;
     }
 
-    .UserInfoBox {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 3% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 80px !important;
+    .AvatarXSBox {
+        width: 10% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 90% !important;
     }
 
     .paddingProfile {
@@ -447,13 +455,10 @@
 }
 
 @media  (max-width: 480px) {
-    .image_middle {
-        margin-left: 32% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -26% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -464,13 +469,24 @@
         margin-left: 32% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 5% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
+    .AvatarXSBox {
+        width: 18% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 82% !important;
     }
 
     .paddingProfile {
@@ -528,13 +544,10 @@
 }
 
 @media  (max-width: 415px) {
-    .image_middle {
-        margin-left: 28% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -32% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -545,13 +558,24 @@
         margin-left: 28% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
+    .AvatarXSBox {
+        width: 20% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
     }
 
     .paddingProfile {
@@ -609,13 +633,10 @@
 }
 
 @media  (max-width: 375px) {
-    .image_middle {
-        margin-left: 25% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -35% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -626,13 +647,24 @@
         margin-left: 25% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 55px !important;
+    .AvatarXSBox {
+        width: 23% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 77% !important;
     }
 
     .paddingProfile {
@@ -690,13 +722,10 @@
 }
 
 @media  (max-width: 360px) {
-    .image_middle {
-        margin-left: 25% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -35% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -707,17 +736,28 @@
         margin-left: 25% !important;
     }
 
-    .center-text {
-        text-align: center !important;
-    }
-
-    .well {
-        min-height: 180px !important;
-        margin-top: 60px !important;
-    }
-
     .paddingProfile {
         padding-top: 45px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
+    }
+
+    .AvatarXSBox {
+        width: 25% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
     }
 
     .button-image-left{
@@ -771,13 +811,10 @@
 }
 
 @media  (max-width: 320px) {
-    .image_middle {
-        margin-left: 21% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -42% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -788,13 +825,24 @@
         margin-left: 21% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 7% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 60px !important;
+    .AvatarXSBox {
+        width: 25% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
     }
 
     .paddingProfile {
@@ -912,7 +960,7 @@
         height: 120px !important;
         width: 120px !important;
         padding: 0px !important;
-        margin-top: -47% !important;
+        margin-top: -60% !important;
     }
 
     .image_qrcode {
@@ -1130,4 +1178,15 @@ ul li a.social-ti-flickr {
 }
 ul li a.social-ti-foursquare {
     background: #6FCCF4;
+}
+
+.ColorNavBar {
+    background-color: lightgray !important;
+}
+
+@media (max-width: 1366px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 24% !important;
+    }
 }
