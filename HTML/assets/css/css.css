@@ -961,7 +961,7 @@ ul li a.social-ti-foursquare {
     }
 }
 
-.ButtonImageSize {
-    width: 50px !important;
-    height: 50px !important;
+a.ButtonImageSize {
+    min-width: 50px !important;
+    min-height: 50px !important;
 }
