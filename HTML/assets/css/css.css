@@ -61,7 +61,7 @@
         width: 130px !important;
         padding: 0px !important;
         margin-left: 19% !important;
-        margin-top: -44% !important;
+        margin-top: -60% !important;
     }
 
     .image_qrcode {
@@ -70,15 +70,6 @@
         width: 130px !important;
         padding: 0px !important;
         margin-left: 19% !important;
-    }
-
-    .center-text {
-        text-align: left !important;
-    }
-
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
     }
 
     .paddingProfile {
@@ -133,6 +124,17 @@
     .marginButtonUserHome {
         margin-left: 36% !important;
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 36% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media (min-width: 770px) {
@@ -181,6 +183,17 @@
     .marginButtonUserHome {
         margin-left: 36% !important;
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 37% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media (min-width: 951px) {
@@ -189,8 +202,20 @@
         height: 120px !important;
         background-image: url('../../assets/images/1000.jpg');
     }
+
     .marginButtonUserHome {
         margin-left: 36% !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 38% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
     }
 }
 
@@ -204,6 +229,17 @@
     .marginButtonUserHome {
         margin-left: 34% !important;
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 27% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media (min-width: 1051px) {
@@ -215,6 +251,17 @@
 
     .marginButtonUserHome {
         margin-left: 34% !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 28% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
     }
 }
 
@@ -228,6 +275,17 @@
     .marginButtonUserHome {
         margin-left: 34% !important;
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 29% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media (min-width: 1151px) {
@@ -239,6 +297,17 @@
 
     .marginButtonUserHome {
         margin-left: 34% !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 30% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
     }
 }
 
@@ -252,6 +321,17 @@
     .marginButtonUserHome {
         margin-left: 40% !important;
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 22% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media (min-width: 1301px) {
@@ -263,6 +343,17 @@
 
     .marginButtonUserHome {
         margin-left: 40% !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 23% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
     }
 }
 
@@ -284,7 +375,7 @@
         margin-left: 38% !important;
     }
 
-    .center-text {
+    .UserInfoBox {
         text-align: center !important;
     }
 
@@ -804,9 +895,15 @@
         padding-top: 06px !important;
     }
 
-    .well {
-        min-height: 210px !important;
-        margin-top: 50px !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 20% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
     }
 
     .image_middle {
@@ -916,4 +1013,121 @@ img-crop canvas {
 
 .buttonProfile {
     border-radius: 50px !important;
+}
+
+.SocialList{
+    display: block;
+    height: 40px;
+    opacity: 0.6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+    content: "\e741";
+    border-radius: 10px;
+}
+
+.HoverWhite {
+    color: #FFFFFF !important;
+}
+
+.padding-top-2 {
+    padding-top: 2px !important;
+}
+
+ul li a.social-ti-facebook {
+    background: #3B5998;
+}
+
+ul li a.social-ti-twitter {
+    background: #48C4D2;
+}
+
+ul li a.social-ti-dribbble {
+    background: #EF5B92;
+}
+
+ul li a.social-ti-google {
+    background: #DD4B39;
+}
+
+ul li a.social-ti-linkedin {
+    background: #71B2D0;
+}
+
+ul li a.social-ti-youtube {
+    background: #F45750;
+}
+
+ul li a.social-ti-rss {
+    background: #FE9900;
+}
+
+ul li a.social-ti-behance {
+    background: #5EB5FB;
+}
+
+ul li a.social-ti-dropbox {
+    background: #85BEEC;
+}
+
+ul li a.social-ti-github {
+    background: #94A5B0;
+}
+
+ul li a.social-ti-skype {
+    background: #70CCEF;
+}
+
+ul li a.social-ti-spotify {
+    background: #8BD05A;
+}
+
+ul li a.social-ti-stumbleupon {
+    background: #F08066;
+}
+
+ul li a.social-ti-tumblr {
+    background: #85A5C3;
+}
+
+ul li a.social-ti-vimeo {
+    background: #7C99A8;
+}
+
+ul li a.social-ti-wordpress {
+    background: #649EB9;
+}
+
+ul li a.social-ti-xing {
+    background: #4F9394;
+}
+
+ul li a.social-ti-yahoo {
+    background: #C38DCF;
+}
+
+ul li a.social-ti-vk {
+    background: #708FAC;
+}
+
+ul li a.social-ti-instagram {
+    background: #CBAA97;
+}
+
+ul li a.social-ti-reddit {
+    background: #FF7A52;
+}
+
+ul li a.social-ti-flickr {
+    background: #FF4DA9;
+}
+ul li a.social-ti-foursquare {
+    background: #6FCCF4;
 }

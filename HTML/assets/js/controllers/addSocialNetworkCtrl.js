@@ -61,49 +61,49 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             var type = '';
 
             if (name == 'Facebook'){
-                type = 'social-facebook';
+                type = 'ti-facebook';
             } else if (name == 'Twitter'){
-                type = 'social-twitter';
+                type = 'ti-twitter';
             } else if (name == 'LinkedIn'){
-                type = 'social-linkedin';
+                type = 'ti-linkedin';
             } else if (name == 'Instagram'){
-                type = 'social-instagram';
+                type = 'ti-instagram';
             } else if (name == 'Reddit'){
-                type = 'social-reddit';
+                type = 'ti-reddit';
             } else if (name == 'Google'){
-                type = 'social-google';
+                type = 'ti-google';
             } else if (name == 'YouTube'){
-                type = 'social-youtube';
+                type = 'ti-youtube';
             } else if (name == 'RSS'){
-                type = 'social-rss';
+                type = 'ti-rss';
             } else if (name == 'Behance'){
-                type = 'social-behance';
+                type = 'ti-behance';
             } else if (name == 'Dropbox'){
-                type = 'social-dropbox';
+                type = 'ti-dropbox';
             } else if (name == 'GitHub'){
-                type = 'social-github';
+                type = 'ti-github';
             } else if (name == 'Skype'){
-                type = 'social-skype';
+                type = 'ti-skype';
             } else if (name == 'Spotify'){
-                type = 'social-spotify';
+                type = 'ti-spotify';
             } else if (name == 'StumbleUpon'){
-                type = 'social-stumbleupon';
+                type = 'ti-stumbleupon';
             } else if (name == 'Tumblr'){
-                type = 'social-tumblr';
+                type = 'ti-tumblr';
             } else if (name == 'Vimeo'){
-                type = 'social-vimeo';
+                type = 'ti-vimeo';
             } else if (name == 'WordPress'){
-                type = 'social-wordpress';
+                type = 'ti-wordpress';
             } else if (name == 'Xing'){
-                type = 'social-xing';
+                type = 'ti-xing';
             } else if (name == 'Yahoo'){
-                type = 'social-yahoo';
+                type = 'ti-yahoo';
             } else if (name == 'VK'){
-                type = 'social-vk';
+                type = 'ti-vk';
             } else if (name == 'Foursquare'){
-                type = 'social-foursquare';
+                type = 'ti-foursquare';
             } else if (name == 'Flickr'){
-                type = 'social-flickr';
+                type = 'ti-flickr';
             }
 
             RestService.addSocialNetwork(name,url,type);
