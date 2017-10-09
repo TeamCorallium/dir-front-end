@@ -175,7 +175,10 @@
                             <div class="alert alert-danger" id="errorRegisterBox" hidden>
                                 Passwords do not match. Sorry, try again
                             </div>
-                            <button class="btn btn-primary ButtonRadius" ng-click="registerModal(username,pass,againPass,email,pin)">Register</button>
+                            <a class="btn btn-primary ButtonRadius"
+                               ng-click="registerModal(username,pass,againPass,email,pin)">
+                                <i class="ti-user"></i> Register
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -208,7 +211,9 @@
                             <div class="alert alert-danger" id="errorBoxHome" hidden>
                                 Wrong username or password. Sorry, try again.
                             </div>
-                            <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">Login</a>
+                            <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">
+                                <i class="ti-user"></i> Login
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -249,7 +254,10 @@
                             <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
                                 Passwords do not match. Sorry, try again
                             </div>
-                            <a class="btn btn-primary ButtonRadius" ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">Register</a>
+                            <a class="btn btn-primary ButtonRadius"
+                               ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">
+                                <i class="ti-user"></i> Register
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -269,14 +277,14 @@
                     </div>
                     <div class="modal-body padding-15">
                         <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
-                        <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
+                        <textarea id="body" placeholder="Enter your Snippets" class="form-control margin-top-5" ng-model="body"></textarea>
                     </div>
                     <div class="modal-footer padding-15">
                         <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                            Close
+                            <i class="ti-close"></i> Close
                         </a>
                         <a class="btn btn-primary ButtonRadius" ng-click="addSnippets(title,body)">
-                            Add
+                            <i class="ti-plus"></i> Add
                         </a>
                     </div>
                 </div>
@@ -325,10 +333,10 @@
                     </div>
                     <div class="modal-footer padding-15">
                         <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                            Close
+                            <i class="ti-close"></i> Close
                         </a>
                         <a class="btn btn-primary ButtonRadius" ng-click="addSocialNetwork(socialnetwork,url)">
-                            Add
+                            <i class="ti-plus"></i> Add
                         </a>
                     </div>
                 </div>
