@@ -989,3 +989,37 @@ a.ButtonImageSize {
 .LoadImageModalButton {
     width: 100% !important;
 }
+
+.ListOptions {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    line-height: 34px;
+    margin-top: 8px;
+}
+
+.MessageFrom {
+    font-weight: bold;
+    margin-top: 2px;
+    color: #aeacb4;
+}
+
+.MessageSubject {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+}
+
+.MessageTime {
+    right: 15px;
+    top: 8px;
+    color: #8e8e93;
+    font-size: 11px;
+    float: right;
+}
+
+.MessageContent {
+    font-size: 12px;
+    color: #c2c2c5;
+    margin-bottom: 4px;
+}

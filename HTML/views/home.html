@@ -22,7 +22,7 @@
                 <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
                     <ul class="team-list list-unstyled">
                         <li class="col-lg-4 col-md-6 col-sm-6 col-xs-12 padding-top-15 padding-bottom-15"
-                            data-appears-class="fadeInLeft" ng-repeat="profile in profiles | limitTo:countLimit">
+                            ng-repeat="profile in profiles | limitTo:countLimit">
                             <div class="styleBox marginUserHome">
                                 <div class="ImageBox">
                                     <img src="{{profile.avatar}}"class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">

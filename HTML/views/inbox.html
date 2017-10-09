@@ -1,2 +1,52 @@
-<div class="profile-padding" ng-controller="ViewProfileCtrl">
+<div class="profile-padding" ng-controller="InboxCtrl">
+    <div class="col-sm-2 col-md-2 col-lg-2 hidden-xs border-right">
+        <div class="padding-15">
+            <ul class="ListOptions">
+                <li>
+                    <a ng-click="changeInboxFlag(true)">
+                        <span class="title"><i class="ti-import"></i> Inbox</span>
+                        <span class="badge pull-right ng-binding ng-scope margin-top-8">13</span>
+                    </a>
+                </li>
+                <li>
+                    <a ng-click="changeInboxFlag(false)">
+                        <span class="title"><i class="ti-import"></i> Send</span>
+                        <span class="badge pull-right ng-binding ng-scope margin-top-8">2</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" ng-if="inboxFlag">
+        <ul class="list-unstyled">
+            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesInbox">
+                <div>
+                    <span class="MessageFrom"> {{message.sender}}</span>
+                    <span class="text MessageTime"> {{message.created | date}}</span>
+                </div>
+                <div>
+                    <span class="MessageSubject"> {{message.subject}}</span>
+                </div>
+                <div>
+                    <span class="MessageContent"> {{message.body}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" ng-if="!inboxFlag">
+        <ul class="list-unstyled">
+            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
+                <div>
+                    <span class="MessageFrom"> {{message.sender}}</span>
+                    <span class="text MessageTime"> {{message.created | date}}</span>
+                </div>
+                <div>
+                    <span class="MessageSubject"> {{message.subject}}</span>
+                </div>
+                <div>
+                    <span class="MessageContent"> {{message.body}}</span>
+                </div>
+            </li>
+        </ul>
+    </div>
 </div>

@@ -13,6 +13,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var imageDir = 'http://10.58.20.225:8080/images/';
     // var imageDownload = 'http://10.58.20.225/api/qrcode';
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
+    // var messages = 'http://10.58.20.225/api/messages/';
 
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
@@ -25,6 +26,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var imageDir = 'http://10.8.25.244:8080/images/';
     var imageDownload = 'http://10.8.25.244/api/qrcode';
     var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
+    var messages = 'http://10.8.25.244/api/messages/';
 
     return {
         loginNext: loginNext,
@@ -34,6 +36,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         usersDir: users,
 
         profileDir: profiles,
+
+        messageDir: messages,
 
         getCookie: function (name) {
             return $cookies.get('csrftoken');
@@ -285,6 +289,19 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
 
         fetchUserByUser: function (username) {
             return $http.get(users + "?username=" + username)
+                .then(
+                    function(response){
+                        return response.data;
+                    },
+                    function(errResponse){
+                        console.error('Error while fetching user');
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchMessages: function (username,option) {
+            return $http.get(messages + "?"+option+"=" + username)
                 .then(
                     function(response){
                         return response.data;
