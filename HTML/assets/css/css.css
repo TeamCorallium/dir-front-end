@@ -1023,3 +1023,9 @@ a.ButtonImageSize {
     color: #c2c2c5;
     margin-bottom: 4px;
 }
+
+.profile-padding-inbox {
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px
+}

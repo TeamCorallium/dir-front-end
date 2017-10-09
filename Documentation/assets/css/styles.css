@@ -2466,6 +2466,10 @@ ul.sub-menu li ul.sub-menu li ul.sub-menu li a {
   min-height: 350px !important;
 }
 
+.min-height-500 {
+  min-height: 350px !important;
+}
+
 .height-155 {
   height: 155px !important;
 }
