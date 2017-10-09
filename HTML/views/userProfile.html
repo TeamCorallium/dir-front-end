@@ -35,10 +35,10 @@
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="testimonial-container hidden-xs
+                        <div class="testimonial-container
                         col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
-                            <img ng-src="{{user.avatar}}" class="img-circle image_middle col-xs-12"/>
-                            <div class="UserInfoBox">
+                            <img ng-src="{{user.avatar}}" class="img-circle image_middle hidden-xs"/>
+                            <div class="UserInfoBox hidden-xs">
                                 <h4 class="col-xs-12 padding-0 margin-top-10"><strong>{{user.firstname}} {{user.lastname}}</strong></h4>
                                 <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                                 <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
@@ -46,6 +46,15 @@
                                 </h5>
                                 <h5 class="col-xs-12 padding-0"><i class="ti-email"></i> {{user.email}}</h5>
                             </div>
+                            <a type="button" ng-click="makeQRCode()" ng-show="profileQRCode == ''"
+                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span>Generate QR Code</span>
+                            </a>
+                            <img ng-show="profileQRCode != ''" ng-src="{{profileQRCode}}" class="image_qrcode col-xs-12"/>
+                            <a type="button" href="{{profileQRCode}}" download ng-show="profileQRCode != ''"
+                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <span>Save QR Code</span>
+                            </a>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">

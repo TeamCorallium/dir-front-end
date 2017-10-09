@@ -134,14 +134,13 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <input type="file"
-                           id="fileInput" class="btn btn-primary"
+                    <input type="file" id="fileInput" class="btn btn-primary LoadImageModalButton"
                            onchange="angular.element(this).scope().uploadFile(this.files[0])">
                     <div class="cropArea margin-top-10">
                         <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
                     </div>
-                    <a type="button" class="btn btn-default" data-dismiss="modal">Cancel</a>
-                    <a type="button" class="btn btn-default" ng-click="crop()">Crop</a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius" data-dismiss="modal">Cancel</a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius" ng-click="crop()">Crop</a>
                 </div>
             </div>
         </div>

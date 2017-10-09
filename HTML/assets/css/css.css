@@ -783,8 +783,8 @@
 .cropArea {
     background: #E4E4E4;
     overflow: hidden;
-    width:400px;
-    height:400px;
+    width: 100%;
+    height: 400px;
 }
 img-crop {
     display: block;
@@ -964,4 +964,8 @@ ul li a.social-ti-foursquare {
 a.ButtonImageSize {
     min-width: 50px !important;
     min-height: 50px !important;
+}
+
+.LoadImageModalButton {
+    width: 100% !important;
 }
