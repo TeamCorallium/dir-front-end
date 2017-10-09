@@ -60,7 +60,7 @@
         height: 130px !important;
         width: 130px !important;
         padding: 0px !important;
-        margin-left: 19% !important;
+        margin-left: 05% !important;
         margin-top: -60% !important;
     }
 
@@ -475,7 +475,7 @@
     }
 
     .AvatarXSBox {
-        width: 18% !important;
+        width: 15% !important;
         display: block;
         position: relative;
         float: left;
@@ -486,7 +486,7 @@
         display: block;
         position: relative;
         float: left;
-        width: 82% !important;
+        width: 85% !important;
     }
 
     .paddingProfile {
@@ -564,7 +564,7 @@
     }
 
     .AvatarXSBox {
-        width: 20% !important;
+        width: 18% !important;
         display: block;
         position: relative;
         float: left;
@@ -575,7 +575,7 @@
         display: block;
         position: relative;
         float: left;
-        width: 80% !important;
+        width: 82% !important;
     }
 
     .paddingProfile {
@@ -653,7 +653,7 @@
     }
 
     .AvatarXSBox {
-        width: 23% !important;
+        width: 20% !important;
         display: block;
         position: relative;
         float: left;
@@ -664,7 +664,7 @@
         display: block;
         position: relative;
         float: left;
-        width: 77% !important;
+        width: 80% !important;
     }
 
     .paddingProfile {
@@ -746,7 +746,7 @@
     }
 
     .AvatarXSBox {
-        width: 25% !important;
+        width: 20% !important;
         display: block;
         position: relative;
         float: left;
@@ -757,7 +757,7 @@
         display: block;
         position: relative;
         float: left;
-        width: 75% !important;
+        width: 80% !important;
     }
 
     .button-image-left{
@@ -955,7 +955,7 @@
     }
 
     .image_middle {
-        margin-left: 18% !important;
+        margin-left: 05% !important;
         float: left !important;
         height: 120px !important;
         width: 120px !important;
@@ -1184,7 +1184,11 @@ ul li a.social-ti-foursquare {
     background-color: lightgray !important;
 }
 
-@media (max-width: 1366px) {
+.ButtonRadius {
+    border-radius: 50px !important;
+}
+
+@media (min-width: 1366px) {
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 24% !important;
