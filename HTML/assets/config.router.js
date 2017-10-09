@@ -46,6 +46,10 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             url: '/users',
             templateUrl: 'views/exploreUsers.html',
             resolve: loadSequence('exploreUsersCtrl')
+        }).state('inbox',{
+            url: '/inbox',
+            templateUrl: 'views/inbox.html',
+            resolve: loadSequence('inboxCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
