@@ -13,7 +13,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var imageDir = 'http://10.58.20.225:8080/images/';
     // var imageDownload = 'http://10.58.20.225/api/qrcode';
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
-    // var messages = 'http://10.58.20.225/api/messages/';
+    // var messages = 'http://10.58.20.225/messages/';
 
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
@@ -26,7 +26,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var imageDir = 'http://10.8.25.244:8080/images/';
     var imageDownload = 'http://10.8.25.244/api/qrcode';
     var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
-    var messages = 'http://10.8.25.244/api/messages/';
+    var messages = 'http://10.8.25.244/messages/';
 
     return {
         loginNext: loginNext,
