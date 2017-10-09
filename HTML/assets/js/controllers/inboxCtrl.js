@@ -11,8 +11,10 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
         $scope.changeInboxFlag = function (flag) {
             if (flag) {
                 $scope.inboxFlag = true;
+                $scope.getMessageReceiver();
             } else {
                 $scope.inboxFlag = false;
+                $scope.getMessageSend();
             }
         };
 
