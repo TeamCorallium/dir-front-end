@@ -1,42 +1,53 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
-    <img class="pictureFrontCover img-responsive"/>
+    <img class="pictureFrontCover img-responsive hidden-xs"/>
+    <div class="row">
+        <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+            <div class="col-xs-12">
+                <div class="AvatarXSBox">
+                    <img ng-src="{{user.avatar}}" class="img-circle avatarXS"/>
+                </div>
+                <div class="UserInfoBox">
+                    <h4 class="padding-0 margin-top-10"> <strong>{{user.firstname}} {{user.lastname}}</strong></h4>
+                    <h5 class="padding-0">@{{user.username}}</h5>
+                </div>
+                <div class="col-xs-12">
+                    <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp"
+                        data-appears-delay="100">{{user.info}}
+                    </h5>
+                    <h5 class="padding-0"><i class="ti-email"></i> {{user.email}}</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <nav class="nav navbar-default ColorNavBar">
+                <ul class="list-inline SocialIcon list-unstyled">
+                    <li ng-repeat="sn in user.socialnetworks" class="padding-5">
+                        <a type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                            <i class="{{sn.type}}"></i>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
     <section class="container-fluid container-fullw bg-white padding-top-10 padding-bottom-10">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
                     <div class="row">
-                        <div class="testimonial-container col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
+                        <div class="testimonial-container hidden-xs
+                        col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
                             <img ng-src="{{user.avatar}}" class="img-circle image_middle col-xs-12"/>
-                            <div class="well center-text">
-                                <h4 class="col-xs-12 padding-0 margin-top-10"> <strong>{{user.firstname}} {{user.lastname}}</strong></h4>
-                                <h5 class="col-xs-12 padding-0">@{{user.username}}</h5>
+                            <div class="UserInfoBox">
+                                <h4 class="col-xs-12 padding-0 margin-top-10"><strong>{{user.firstname}} {{user.lastname}}</strong></h4>
+                                <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                                 <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp"
                                     data-appears-delay="100">{{user.info}}
                                 </h5>
-                                <h5 class="col-xs-12 padding-0"><i class="ti-email"></i>{{user.email}}</h5>
+                                <h5 class="col-xs-12 padding-0"><i class="ti-email"></i> {{user.email}}</h5>
                             </div>
-                            <a type="button" ng-click="makeQRCode()" ng-show="profileQRCode == ''"
-                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span>Generate QR Code</span>
-                            </a>
-                            <img ng-show="profileQRCode != ''" ng-src="{{profileQRCode}}" class="image_qrcode col-xs-12"/>
-                            <a type="button" href="{{profileQRCode}}" download ng-show="profileQRCode != ''"
-                               class="btn btn-primary btn-wide margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <span>Save QR Code</span>
-                            </a>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
-                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
-                                <div class="social-icons center">
-                                    <ul class="list-inline">
-                                        <li ng-repeat="sn in user.socialnetworks" data-original-title="sn.name" data-placement="bottom" class="{{sn.type}} tooltips">
-                                            <a class="font-size-30 padding-left-right-30" ng-click="goToLink(sn.url)"> {{sn.name}} </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <hr class="tall" ng-show="user.socialnetworks.length > 0">
-                            </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <ul class="ltwt">
                                     <li ng-repeat="snippet in user.snippets">
@@ -52,13 +63,15 @@
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
                     <div>
                         <button type="button" ng-click="openModalSnippets()"
-                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus margin-top-10 col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus margin-top-10
+                    ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <span>Add Snippet</span>
                         </button>
                     </div>
                     <div>
                         <button type="button" ng-click="openAddSocialNetworkModal()"
-                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-mobile col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top-10">
+                                class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-mobile
+                    ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12 margin-top-10">
                             <span>Add Social Network</span>
                         </button>
                     </div>
