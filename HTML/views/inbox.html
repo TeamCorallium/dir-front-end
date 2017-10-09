@@ -1,21 +1,19 @@
 <div class="profile-padding-inbox" ng-controller="InboxCtrl">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right">
-        <div class="padding-15">
-            <ul class="ListOptions">
-                <li>
-                    <a ng-click="changeInboxFlag(true)">
-                        <span class="title"><i class="ti-import"></i> Inbox</span>
-                        <span class="badge pull-right ng-binding ng-scope margin-top-8">13</span>
-                    </a>
-                </li>
-                <li>
-                    <a ng-click="changeInboxFlag(false)">
-                        <span class="title"><i class="ti-import"></i> Send</span>
-                        <span class="badge pull-right ng-binding ng-scope margin-top-8">2</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <ul class="ListOptions">
+            <li>
+                <a ng-click="changeInboxFlag(true)">
+                    <span class="title"><i class="ti-import"></i> Inbox</span>
+                    <span class="badge pull-right ng-binding ng-scope margin-top-8">13</span>
+                </a>
+            </li>
+            <li>
+                <a ng-click="changeInboxFlag(false)">
+                    <span class="title"><i class="ti-import"></i> Send</span>
+                    <span class="badge pull-right ng-binding ng-scope margin-top-8">2</span>
+                </a>
+            </li>
+        </ul>
     </div>
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10" ng-if="inboxFlag">
         <ul class="list-unstyled">
