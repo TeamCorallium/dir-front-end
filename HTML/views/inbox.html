@@ -27,14 +27,16 @@
                     </a>
                 </div>
                 <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
-                    <span class="MessageFrom"> {{message.sender}}</span>
-                    <span class="text MessageTime"> {{message.created | date}}</span>
-                </div>
-                <div>
-                    <span class="MessageSubject"> {{message.subject}}</span>
-                </div>
-                <div>
-                    <span class="MessageContent"> {{message.body}}</span>
+                    <div>
+                        <span class="MessageFrom"> {{message.sender}}</span>
+                        <span class="text MessageTime"> {{message.created | date}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageSubject"> {{message.subject}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageContent"> {{message.body}}</span>
+                    </div>
                 </div>
             </li>
         </ul>
