@@ -225,6 +225,13 @@
     }
 }
 
+@media (min-width: 992px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 27% !important;
+    }
+}
+
 @media (min-width: 1001px) {
     .pictureFrontCover {
         width:100%;
@@ -1051,10 +1058,16 @@ a.ButtonImageSize {
 
 .ReadUnreadBox {
     width: 5% !important;
+    display: block;
+    position: relative;
+    float: left;
 }
 
 .MessageListBox {
     width: 95% !important;
+    display: block;
+    position: relative;
+    float: left;
 }
 
 .MessageBox {
