@@ -24,6 +24,8 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
         };
 
+        $scope.emailIdSelected = '';
+
         $scope.messagesInbox = [];
         $scope.messagesSend = [];
 
@@ -56,5 +58,75 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
         $scope.getCount = function(){
             return filterFilter( $scope.messagesInbox, {readed:false}).length;
+        };
+
+        $scope.messageSelected = {
+            id: '',
+            sender: '',
+            receiver: '',
+            subject: '',
+            body: '',
+            created: '',
+            readed: ''
+        };
+
+        $scope.selectMessageInbox = function (id) {
+            $scope.messageSelected = {
+                id: '',
+                sender: '',
+                receiver: '',
+                subject: '',
+                body: '',
+                created: '',
+                readed: ''
+            };
+
+            for (var i=0; i<$scope.messagesInbox.length; i++){
+                if ($scope.messagesInbox[i].id == id){
+                    $scope.messageSelected.id = id;
+                    $scope.messageSelected.sender = $scope.messagesInbox[i].sender;
+                    $scope.messageSelected.receiver = $scope.messagesInbox[i].receiver;
+                    $scope.messageSelected.subject = $scope.messagesInbox[i].subject;
+                    $scope.messageSelected.body = $scope.messagesInbox[i].body;
+                    $scope.messageSelected.created = $scope.messagesInbox[i].created;
+                    $scope.messageSelected.readed = $scope.messagesInbox[i].readed;
+                }
+            }
+        };
+
+        $scope.selectMessageSend = function (id) {
+            $scope.messageSelected = {
+                id: '',
+                sender: '',
+                receiver: '',
+                subject: '',
+                body: '',
+                created: '',
+                readed: ''
+            };
+
+            for (var i=0; i<$scope.messagesSend.length; i++){
+                if ($scope.messagesSend[i].id == id){
+                    $scope.messageSelected.id = id;
+                    $scope.messageSelected.sender = $scope.messagesSend[i].sender;
+                    $scope.messageSelected.receiver = $scope.messagesSend[i].receiver;
+                    $scope.messageSelected.subject = $scope.messagesSend[i].subject;
+                    $scope.messageSelected.body = $scope.messagesSend[i].body;
+                    $scope.messageSelected.created = $scope.messagesSend[i].created;
+                    $scope.messageSelected.readed = $scope.messagesSend[i].readed;
+                }
+            }
+        };
+
+        $scope.cleanMessageSelected = function () {
+            $scope.messageSelected = {
+                id: '',
+                sender: '',
+                receiver: '',
+                subject: '',
+                body: '',
+                created: '',
+                readed: ''
+            };
         };
     }]);
