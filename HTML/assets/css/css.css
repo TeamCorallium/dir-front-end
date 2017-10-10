@@ -1029,3 +1029,18 @@ a.ButtonImageSize {
     position: relative !important;
     padding-top: 50px
 }
+
+.OptionsBox {
+    min-height: 600px !important;
+    background-color: #ffffff !important;
+}
+
+.InboxBox {
+    min-height: 600px !important;
+    background-color: #ffffff !important;
+}
+
+.SendBox {
+    min-height: 600px !important;
+    background-color: #ffffff !important;
+}
