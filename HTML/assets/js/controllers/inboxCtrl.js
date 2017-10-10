@@ -13,9 +13,17 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
         $scope.changeInboxFlag = function (flag) {
             if (flag) {
                 $scope.inboxFlag = true;
+                if ($(window).width() <= 767) {
+                    $('#MessageInboxBox').show();
+                    $('#MessageReadBox').hide();
+                }
                 $scope.getMessageReceiver();
             } else {
                 $scope.inboxFlag = false;
+                if ($(window).width() <= 767) {
+                    $('#MessageSendBox').show();
+                    $('#MessageReadBox').hide();
+                }
                 $scope.getMessageSend();
             }
         };
@@ -92,6 +100,11 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                     $scope.messageSelected.readed = $scope.messagesInbox[i].readed;
                 }
             }
+
+            if ($(window).width() <= 767) {
+                $('#MessageInboxBox').hide();
+                $('#MessageReadBox').show();
+            }
         };
 
         $scope.selectMessageSend = function (id) {
@@ -115,6 +128,11 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                     $scope.messageSelected.created = $scope.messagesSend[i].created;
                     $scope.messageSelected.readed = $scope.messagesSend[i].readed;
                 }
+            }
+
+            if ($(window).width() <= 767) {
+                $('#MessageSendBox').hide();
+                $('#MessageReadBox').show();
             }
         };
 
