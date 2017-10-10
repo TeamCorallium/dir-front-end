@@ -8,7 +8,6 @@ var app = angular.module('dirApp',['pulloverDir']);
 app.run(['$rootScope','$cookies',
     function ($rootScope, $cookies) {
 
-        $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = true;
 
         $rootScope.userdata = {

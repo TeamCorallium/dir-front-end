@@ -8,6 +8,8 @@ app.controller('ExploreUsersCtrl',["$scope", "RestService", "$state", "$rootScop
 
         $scope.profiles = [];
 
+        $rootScope.viewProfile = true;
+
         $scope.getProfiles = function () {
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(

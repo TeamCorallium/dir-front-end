@@ -8,7 +8,6 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
         $scope.inboxFlag = true;
 
-        $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = true;
 
         $scope.changeInboxFlag = function (flag) {

@@ -23,7 +23,6 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
         $scope.users = [];
 
-        $rootScope.viewEditProfile = true;
         $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {

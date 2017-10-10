@@ -6,7 +6,6 @@
 app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
 
-        $rootScope.viewEditProfile = true;
         $rootScope.viewProfile = true;
 
         $scope.countLimit = 3;

@@ -9,6 +9,8 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.myImage = '';
         $scope.myCroppedImage = '';
 
+        $rootScope.viewProfile = true;
+
         $scope.uploadFile = function(file) {
             if (file) {
                 // ng-img-crop
@@ -41,9 +43,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.users = [];
 
         $scope.name = '';
-
-        $rootScope.viewEditProfile = true;
-        $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
