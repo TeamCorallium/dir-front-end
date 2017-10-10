@@ -147,4 +147,31 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                 readed: ''
             };
         };
+
+        $(window).on("resize.doResize", function (){
+
+            $scope.$apply(function(){
+                if ($(window).width() >= 768) {
+                    if ($scope.inboxFlag) {
+                        $('#MessageInboxBox').show();
+                        $('#MessageReadBox').show();
+                    } else {
+                        $('#MessageSendBox').show();
+                        $('#MessageReadBox').show();
+                    }
+                } else {
+                    if ($scope.inboxFlag) {
+                        $('#MessageInboxBox').show();
+                        $('#MessageReadBox').hide();
+                    } else {
+                        $('#MessageSendBox').show();
+                        $('#MessageReadBox').hide();
+                    }
+                }
+            });
+        });
+
+        $scope.$on("$destroy",function (){
+            $(window).off("resize.doResize"); //remove the handler added earlier
+        });
     }]);
