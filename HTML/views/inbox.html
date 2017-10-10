@@ -20,7 +20,7 @@
                 <span class="MessageSubject"> No message found</span>
             </li>
             <li class="padding-top-20 padding-bottom-10 border-bottom"
-                ng-class="FontWeightClass" ng-repeat="message in messagesInbox">
+                ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
                 <!--<div hidden>{{isMessageReaded(message.readed)}}</div>-->
                 <div>
                     <span class="MessageFrom"> {{message.sender}}</span>

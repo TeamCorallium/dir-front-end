@@ -20,7 +20,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
             }
         };
 
-        $scope.FontWeightClass = true;
+        // $scope.FontWeightClass = true;
 
         // $scope.isMessageReaded = function (flag) {
         //     if (flag) {
