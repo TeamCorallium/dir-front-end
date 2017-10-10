@@ -22,14 +22,14 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
         $scope.FontWeightClass = true;
 
-        $scope.isMessageReaded = function (flag) {
-            if (flag) {
-                $scope.FontWeightClass = false;
-            } else {
-                $scope.FontWeightClass = true;
-            }
-            console.log($scope.FontWeightClass + " " + flag);
-        };
+        // $scope.isMessageReaded = function (flag) {
+        //     if (flag) {
+        //         $scope.FontWeightClass = false;
+        //     } else {
+        //         $scope.FontWeightClass = true;
+        //     }
+        //     console.log($scope.FontWeightClass + " " + flag);
+        // };
 
         $scope.messagesInbox = [];
         $scope.messagesSend = [];
