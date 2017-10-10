@@ -3,10 +3,13 @@
  */
 'use strict';
 
-app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
-    function ($scope, $state, $cookies, RestService) {
+app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filterFilter",
+    function ($scope, $state, $cookies, RestService, filterFilter) {
 
         $scope.inboxFlag = true;
+
+        $rootScope.viewEditProfile = true;
+        $rootScope.viewProfile = true;
 
         $scope.changeInboxFlag = function (flag) {
             if (flag) {
