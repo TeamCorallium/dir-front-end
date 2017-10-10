@@ -4,7 +4,7 @@
             <li>
                 <a ng-click="changeInboxFlag(true)">
                     <span class="title"><i class="ti-import"></i> Inbox</span>
-                    <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="messagesInbox.length > 0">{{messagesInbox.length | readed:false }}</span>
+                    <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="messagesInbox.length > 0">{{messagesInbox.length | filter:{readed:false}}}</span>
                 </a>
             </li>
             <li>
@@ -16,7 +16,7 @@
     </div>
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox" ng-if="inboxFlag">
         <ul class="list-unstyled">
-            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length > 0">
+            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
                 <span class="MessageSubject"> No message found</span>
             </li>
             <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesInbox">
@@ -34,7 +34,7 @@
         </ul>
     </div>
     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 SendBox" ng-if="!inboxFlag">
-        <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length > 0">
+        <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
             <span class="MessageSubject"> No message found</span>
         </li>
         <ul class="list-unstyled">
