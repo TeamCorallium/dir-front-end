@@ -14,19 +14,42 @@
             </li>
         </ul>
     </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox" ng-if="inboxFlag">
-        <ul class="list-unstyled">
-            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="inboxFlag">
+            <ul class="list-unstyled">
+                <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
+                    <span class="MessageSubject"> No message found</span>
+                </li>
+                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom"
+                    ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
+                    <a ng-click="">
+                        <div class="ReadUnreadBox">
+                            <a ng-click="readUnreadMessage()">
+                                <i class="fa fa-circle status-online"></i>
+                            </a>
+                        </div>
+                        <div class="MessageListBox">
+                            <div>
+                                <span class="MessageFrom"> {{message.sender}}</span>
+                                <span class="text MessageTime"> {{message.created | date}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageSubject"> {{message.subject}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageContent"> {{message.body}}</span>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="!inboxFlag">
+            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
                 <span class="MessageSubject"> No message found</span>
             </li>
-            <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom"
-                ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                    <a ng-click="readUnreadMessage()">
-                        <i class="fa fa-circle status-online"></i>
-                    </a>
-                </div>
-                <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+            <ul class="list-unstyled">
+                <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
                     <div>
                         <span class="MessageFrom"> {{message.sender}}</span>
                         <span class="text MessageTime"> {{message.created | date}}</span>
@@ -37,27 +60,29 @@
                     <div>
                         <span class="MessageContent"> {{message.body}}</span>
                     </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6">
+            <div class="message-header ng-scope">
+                <div class="message-time ng-binding">
+                    10/10/2017 at 12:36PM
                 </div>
-            </li>
-        </ul>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 SendBox" ng-if="!inboxFlag">
-        <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
-            <span class="MessageSubject"> No message found</span>
-        </li>
-        <ul class="list-unstyled">
-            <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
-                <div>
-                    <span class="MessageFrom"> {{message.sender}}</span>
-                    <span class="text MessageTime"> {{message.created | date}}</span>
+                <!-- ngIf: message.email --><div class="message-from ng-binding ng-scope" ng-if="message.email">
+                Mary Ferguson &lt;mary@example.com&gt;
+            </div><!-- end ngIf: message.email -->
+                <div class="message-to">
+                    To: Peter Clark
                 </div>
-                <div>
-                    <span class="MessageSubject"> {{message.subject}}</span>
-                </div>
-                <div>
-                    <span class="MessageContent"> {{message.body}}</span>
-                </div>
-            </li>
-        </ul>
+            </div>
+            <div class="message-subject ng-binding ng-scope">
+                <!-- ngIf: message.spam --> Congratulations
+            </div>
+            <div class="message-content ng-binding ng-scope" ng-bind-html="message.content">
+                <p>Dear Ms. Clarks,</p>
+                I am a friend of Emily Little and she encouraged me to forward my resume to you. I know Emily through a local children's theater, for which I was a lighting assistant this semester. I also see her at college music performances, as I am in the orchestra.
+                <p></p>
+            </div>
+        </div>
     </div>
 </div>
