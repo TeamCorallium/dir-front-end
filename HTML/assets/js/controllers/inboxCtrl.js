@@ -28,6 +28,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
             } else {
                 $scope.FontWeightClass = false;
             }
+            console.log($scope.FontWeightClass + " " + flag);
         };
 
         $scope.messagesInbox = [];
