@@ -2,13 +2,13 @@
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right OptionsBox">
         <ul class="ListOptions">
             <li>
-                <a ng-click="changeInboxFlag(true)">
+                <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
                     <span class="title"><i class="ti-import"></i> Inbox</span>
                     <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="messagesInbox.length > 0">{{getCount()}}</span>
                 </a>
             </li>
             <li>
-                <a ng-click="changeInboxFlag(false)">
+                <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
                     <span class="title"><i class="ti-upload"></i> Send</span>
                 </a>
             </li>
@@ -65,7 +65,7 @@
             </ul>
         </div>
         <div class="col-sm-6 col-md-6 col-lg-6 hidden-xs">
-            <div class="no-messages" ng-if="messageSelected.id == ''">
+            <div class="NoMessage" ng-if="messageSelected.id == ''">
                 <h2>No email has been selected</h2>
             </div>
             <div ng-if="messageSelected.id != ''">

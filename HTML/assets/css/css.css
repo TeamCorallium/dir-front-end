@@ -1073,3 +1073,13 @@ a.ButtonImageSize {
 .MessageBox {
 
 }
+
+.NoMessage {
+    bottom: 0;
+    left: 0;
+    margin-top: 50%;
+    opacity: 0.5;
+    position: relative;
+    right: 0;
+    text-align: center;
+}
