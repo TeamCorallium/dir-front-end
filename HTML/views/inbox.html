@@ -14,8 +14,8 @@
             </li>
         </ul>
     </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox">
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="inboxFlag">
+    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 InboxBox border-right" ng-if="inboxFlag">
             <ul class="list-unstyled">
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
                     <span class="MessageSubject"> No message found</span>
@@ -44,22 +44,31 @@
                 </li>
             </ul>
         </div>
-        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" ng-if="!inboxFlag">
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 InboxBox border-right" ng-if="!inboxFlag">
             <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
                 <span class="MessageSubject"> No message found</span>
             </li>
             <ul class="list-unstyled">
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
-                    <div>
-                        <span class="MessageFrom"> {{message.sender}}</span>
-                        <span class="text MessageTime"> {{message.created | date}}</span>
-                    </div>
-                    <div>
-                        <span class="MessageSubject"> {{message.subject}}</span>
-                    </div>
-                    <div>
-                        <span class="MessageContent"> {{message.body}}</span>
-                    </div>
+                    <a ng-click="">
+                        <div class="ReadUnreadBox">
+                            <a ng-click="readUnreadMessage()">
+                                <i class="fa fa-circle status-online"></i>
+                            </a>
+                        </div>
+                        <div class="MessageListBox">
+                            <div>
+                                <span class="MessageFrom"> {{message.sender}}</span>
+                                <span class="text MessageTime"> {{message.created | date}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageSubject"> {{message.subject}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageContent"> {{message.body}}</span>
+                            </div>
+                        </div>
+                    </a>
                 </li>
             </ul>
         </div>
