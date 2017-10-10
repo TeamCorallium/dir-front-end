@@ -19,8 +19,9 @@
             <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
                 <span class="MessageSubject"> No message found</span>
             </li>
-            <li ng-init="isMessageReaded(message.readed)" class="padding-top-20 padding-bottom-10 border-bottom"
+            <li class="padding-top-20 padding-bottom-10 border-bottom"
                 ng-class="FontWeightClass" ng-repeat="message in messagesInbox">
+                <div hidden>{{isMessageReaded(message.readed)}}</div>
                 <div>
                     <span class="MessageFrom"> {{message.sender}}</span>
                     <span class="text MessageTime"> {{message.created | date}}</span>
