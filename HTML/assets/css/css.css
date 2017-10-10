@@ -136,6 +136,10 @@
         min-height: 180px !important;
         margin-top: 10px !important;
     }
+
+    .InboxBox {
+        min-height: 600px !important;
+    }
 }
 
 @media (min-width: 770px) {
@@ -1043,7 +1047,6 @@ a.ButtonImageSize {
 }
 
 .InboxBox {
-    min-height: 600px !important;
     background-color: #ffffff !important;
 }
 
