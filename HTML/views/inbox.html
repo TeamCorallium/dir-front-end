@@ -22,7 +22,7 @@
                 </li>
                 <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom"
                     ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
-                    <a ng-click="selectMessageInbox(message.id)">
+                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="selectMessageInbox(message.id)">
                         <div class="ReadUnreadBox">
                             <a ng-click="readUnreadMessage()">
                                 <i class="fa fa-circle status-online"></i>
@@ -51,7 +51,7 @@
             <ul class="list-unstyled">
                 <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom"
                     ng-repeat="message in messagesSend">
-                    <a ng-click="selectMessageSend(message.id)">
+                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="selectMessageSend(message.id)">
                         <div>
                             <span class="MessageFrom"> {{message.sender}}</span>
                             <span class="text MessageTime"> {{message.created | date}}</span>
