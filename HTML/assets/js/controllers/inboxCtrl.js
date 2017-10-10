@@ -20,6 +20,16 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
             }
         };
 
+        $scope.FontWeightClass = false;
+
+        $scope.isMessageReaded = function (flag) {
+            if (flag) {
+                $scope.FontWeightClass = true;
+            } else {
+                $scope.FontWeightClass = false;
+            }
+        };
+
         $scope.messagesInbox = [];
         $scope.messagesSend = [];
 

@@ -1044,3 +1044,7 @@ a.ButtonImageSize {
     min-height: 600px !important;
     background-color: #ffffff !important;
 }
+
+.MessageUnread {
+    font-weight: bold !important;
+}
