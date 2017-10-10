@@ -1015,6 +1015,19 @@ a.ButtonImageSize {
     color: #aeacb4;
 }
 
+.MessageFromSender {
+    font-weight: bold;
+    font-size: 16px !important;
+    margin-top: 2px;
+    color: #0b0b0b;
+}
+
+.MessageFromReceiver {
+    font-size: 12px !important;
+    margin-top: 2px;
+    color: #aeacb4;
+}
+
 .MessageSubject {
     font-size: 14px;
     margin-bottom: 4px;

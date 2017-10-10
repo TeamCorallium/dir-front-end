@@ -70,7 +70,17 @@
                 <h2>No email has been selected</h2>
             </div>
             <div ng-if="messageSelected.id != ''">
-                <h2>Message Selected {{messageSelected.id}}</h2>
+                <div>
+                    <span class="text MessageTime">{{messageSelected.created | date}}</span>
+                    <span class="MessageFromSender">{{message.sender}}</span>
+                    <span class="MessageFromReceiver">To: {{message.received}}</span>
+                </div>
+                <div>
+                    <span class="MessageSubject">{{message.subject}}</span>
+                </div>
+                <div>
+                    <span class="MessageContent">{{message.body}}</span>
+                </div>
             </div>
         </div>
     </div>
