@@ -24,9 +24,7 @@
                     ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
                     <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-click="selectMessageInbox(message.id)">
                         <div class="ReadUnreadBox">
-                            <a ng-click="readUnreadMessage()">
-                                <i class="fa fa-circle status-online"></i>
-                            </a>
+                            <i class="fa fa-circle status-online"></i>
                         </div>
                         <div class="MessageListBox">
                             <div>
