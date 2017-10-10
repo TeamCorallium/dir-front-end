@@ -92,18 +92,6 @@
         padding-top: 07px !important;
     }
 
-    .button-image-right{
-        margin-top: -36% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -142,6 +130,10 @@
     }
 
     .OptionsBox {
+        min-height: 600px !important;
+    }
+
+    #MessageSendBox, #MessageReadBox, #MessageInboxBox {
         min-height: 600px !important;
     }
 }

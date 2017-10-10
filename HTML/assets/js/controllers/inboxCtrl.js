@@ -80,6 +80,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
         $scope.selectMessageInbox = function (id) {
             $scope.messageSelected = {
+                url: '',
                 id: '',
                 sender: '',
                 receiver: '',
@@ -89,22 +90,28 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                 readed: ''
             };
 
+            if ($(window).width() <= 767) {
+                $('#MessageInboxBox').hide();
+                $('#MessageReadBox').show();
+            }
+
             for (var i=0; i<$scope.messagesInbox.length; i++){
                 if ($scope.messagesInbox[i].id == id){
+                    $scope.messageSelected.url = $scope.messagesInbox[i].url;
                     $scope.messageSelected.id = id;
                     $scope.messageSelected.sender = $scope.messagesInbox[i].sender;
                     $scope.messageSelected.receiver = $scope.messagesInbox[i].receiver;
                     $scope.messageSelected.subject = $scope.messagesInbox[i].subject;
                     $scope.messageSelected.body = $scope.messagesInbox[i].body;
                     $scope.messageSelected.created = $scope.messagesInbox[i].created;
-                    $scope.messageSelected.readed = $scope.messagesInbox[i].readed;
+                    $scope.messageSelected.readed = true;
+                    $scope.messagesInbox[i].readed = true;
                 }
             }
 
-            if ($(window).width() <= 767) {
-                $('#MessageInboxBox').hide();
-                $('#MessageReadBox').show();
-            }
+            RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,
+                $scope.messageSelected.sender, $scope.messageSelected.receiver, $scope.messageSelected.subject,
+                $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
         $scope.selectMessageSend = function (id) {
@@ -118,6 +125,11 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                 readed: ''
             };
 
+            if ($(window).width() <= 767) {
+                $('#MessageSendBox').hide();
+                $('#MessageReadBox').show();
+            }
+
             for (var i=0; i<$scope.messagesSend.length; i++){
                 if ($scope.messagesSend[i].id == id){
                     $scope.messageSelected.id = id;
@@ -126,14 +138,14 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                     $scope.messageSelected.subject = $scope.messagesSend[i].subject;
                     $scope.messageSelected.body = $scope.messagesSend[i].body;
                     $scope.messageSelected.created = $scope.messagesSend[i].created;
-                    $scope.messageSelected.readed = $scope.messagesSend[i].readed;
+                    $scope.messageSelected.readed = true;
+                    $scope.messagesSend[i].readed = true;
                 }
             }
 
-            if ($(window).width() <= 767) {
-                $('#MessageSendBox').hide();
-                $('#MessageReadBox').show();
-            }
+            RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,
+                $scope.messageSelected.sender, $scope.messageSelected.receiver, $scope.messageSelected.subject,
+                $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
         $scope.cleanMessageSelected = function () {

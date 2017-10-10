@@ -24,7 +24,8 @@
                     ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
                     <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageInbox(message.id)">
                         <div class="ReadUnreadBox">
-                            <i class="fa fa-circle status-online"></i>
+                            <i class="fa fa-circle status-online" ng-if="message.readed == false"></i>
+                            <i class="fa fa-circle status-offline" ng-if="message.readed"></i>
                         </div>
                         <div class="MessageListBox">
                             <div>
@@ -64,7 +65,7 @@
                 </li>
             </ul>
         </div>
-        <div id="MessageReadBox" class="col-sm-6 col-md-6 col-lg-6">
+        <div id="MessageReadBox" class="col-sm-6 col-md-6 col-lg-6 border-left">
             <div class="NoMessage" ng-if="messageSelected.id == ''">
                 <h2>No email has been selected</h2>
             </div>

@@ -232,6 +232,43 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
+        updateMessage: function (url, id, created, sender, receiver, subject, body, readed) {
+            $http({
+                method: 'PUT',
+                url: url,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function (value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function (file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {'url': url, 'id': id, 'created': created, 'sender': sender,
+                    'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(function (data) {
+                $rootScope.$broadcast('messageUpdated');
+            }).error(function(response){
+                console.log("Entra al error in update message");
+            });
+        },
+
         deleteSocialNetwork: function (id) {
             $http({
                 method: 'DELETE',
