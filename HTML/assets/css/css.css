@@ -1050,11 +1050,11 @@ a.ButtonImageSize {
 }
 
 .ReadUnreadBox {
-
+    width: 5% !important;
 }
 
 .MessageListBox {
-
+    width: 95% !important;
 }
 
 .MessageBox {
