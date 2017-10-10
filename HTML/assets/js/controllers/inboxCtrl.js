@@ -48,4 +48,7 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService",
         $scope.getMessageReceiver();
         $scope.getMessageSend();
 
+        $scope.getCount = function(){
+            return filterFilter( $scope.messagesInbox, {readed:false}).length;
+        };
     }]);

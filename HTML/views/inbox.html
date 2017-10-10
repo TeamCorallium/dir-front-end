@@ -4,7 +4,7 @@
             <li>
                 <a ng-click="changeInboxFlag(true)">
                     <span class="title"><i class="ti-import"></i> Inbox</span>
-                    <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="messagesInbox.length > 0">{{messagesInbox.length | filter:{readed:false}}}</span>
+                    <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="messagesInbox.length > 0">{{getCount()}}</span>
                 </a>
             </li>
             <li>
