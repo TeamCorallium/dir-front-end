@@ -13,6 +13,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var imageDir = 'http://10.58.20.225:8080/images/';
     // var imageDownload = 'http://10.58.20.225/api/qrcode';
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
+    // var messages = 'http://10.58.20.225/messages/';
 
     var tshirt = 'http://10.8.25.244/tshirts/';
     var users = 'http://10.8.25.244/users/';
@@ -25,6 +26,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var imageDir = 'http://10.8.25.244:8080/images/';
     var imageDownload = 'http://10.8.25.244/api/qrcode';
     var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
+    var messages = 'http://10.8.25.244/messages/';
 
     return {
         loginNext: loginNext,
@@ -34,6 +36,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         usersDir: users,
 
         profileDir: profiles,
+
+        messageDir: messages,
 
         getCookie: function (name) {
             return $cookies.get('csrftoken');
@@ -228,6 +232,43 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
             });
         },
 
+        updateMessage: function (url, id, created, sender, receiver, subject, body, readed) {
+            $http({
+                method: 'PUT',
+                url: url,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function (value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function (file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {'url': url, 'id': id, 'created': created, 'sender': sender,
+                    'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'csrfmiddlewaretoken':$cookies.get('csrftoken')}
+            }).success(function (data) {
+                $rootScope.$broadcast('messageUpdated');
+            }).error(function(response){
+                console.log("Entra al error in update message");
+            });
+        },
+
         deleteSocialNetwork: function (id) {
             $http({
                 method: 'DELETE',
@@ -285,6 +326,19 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
 
         fetchUserByUser: function (username) {
             return $http.get(users + "?username=" + username)
+                .then(
+                    function(response){
+                        return response.data;
+                    },
+                    function(errResponse){
+                        console.error('Error while fetching user');
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchMessages: function (username,option) {
+            return $http.get(messages + "?"+option+"=" + username)
                 .then(
                     function(response){
                         return response.data;

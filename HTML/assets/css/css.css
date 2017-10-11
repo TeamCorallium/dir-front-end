@@ -60,8 +60,8 @@
         height: 130px !important;
         width: 130px !important;
         padding: 0px !important;
-        margin-left: 19% !important;
-        margin-top: -44% !important;
+        margin-left: 05% !important;
+        margin-top: -60% !important;
     }
 
     .image_qrcode {
@@ -70,15 +70,6 @@
         width: 130px !important;
         padding: 0px !important;
         margin-left: 19% !important;
-    }
-
-    .center-text {
-        text-align: left !important;
-    }
-
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
     }
 
     .paddingProfile {
@@ -90,25 +81,13 @@
     }
 
     .button-image-left{
-        margin-top: -36% !important;
-        margin-left: 22% !important;
+        margin-top: -40% !important;
+        margin-left: 26% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
         height: 35px !important;
         padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -36% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
@@ -123,16 +102,289 @@
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
+
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/768.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 36% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 36% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+
+    .InboxBox {
+        min-height: 600px !important;
+    }
+
+    .OptionsBox {
+        min-height: 600px !important;
+    }
+
+    #MessageSendBox, #MessageReadBox, #MessageInboxBox {
+        min-height: 600px !important;
+    }
+}
+
+@media (min-width: 770px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/800.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 37% !important;
+        border-radius: 50px !important;
+    }
+}
+
+@media (min-width: 801px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/850.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 37% !important;
+        border-radius: 50px !important;
+    }
+}
+
+@media (min-width: 851px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/900.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 37% !important;
+        border-radius: 50px !important;
+    }
+}
+
+@media (min-width: 901px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/950.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 36% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 37% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 951px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1000.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 36% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 38% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 27% !important;
+    }
+}
+
+@media (min-width: 1001px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1050.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 34% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 27% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1051px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1100.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 34% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 28% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1101px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1150.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 34% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 29% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1151px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1200.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 34% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 30% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1251px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1300.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 40% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 22% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1301px) {
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1366.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 40% !important;
+        border-radius: 50px !important;
+    }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 23% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
 }
 
 @media  (max-width: 767px) {
-    .image_middle {
-        margin-left: 38% !important;
-        float: left !important;
-        height: 180px !important;
-        width: 180px !important;
-        padding: 0px !important;
-        margin-top: -17% !important;
+    #MessageReadBox {
+        display: none;
+    }
+
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -143,13 +395,24 @@
         margin-left: 38% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 3% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 80px !important;
+    .AvatarXSBox {
+        width: 10% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 90% !important;
     }
 
     .paddingProfile {
@@ -160,50 +423,31 @@
         min-height: 50px !important;
     }
 
-    .button-image-left{
-        margin-top: -15% !important;
-        margin-left: 39% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/480.jpg');
     }
 
-    .button-image-right{
-        margin-top: -15% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .center-box{
+        margin-left: 36% !important;
     }
 
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .marginUserHome{
+        margin-left: 35% !important;
+    }
+
+    .marginButtonUserHome {
+        margin-left: 41% !important;
+        border-radius: 50px !important;
     }
 }
 
 @media  (max-width: 480px) {
-    .image_middle {
-        margin-left: 32% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -26% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -214,63 +458,51 @@
         margin-left: 32% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 5% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
+    .AvatarXSBox {
+        width: 15% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 85% !important;
     }
 
     .paddingProfile {
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -20% !important;
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/480.jpg');
+    }
+
+    .marginUserHome{
+        margin-left: 24% !important;
+    }
+
+    .marginButtonUserHome {
         margin-left: 34% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -20% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+        border-radius: 50px !important;
     }
 }
 
 @media  (max-width: 415px) {
-    .image_middle {
-        margin-left: 28% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -32% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -281,63 +513,51 @@
         margin-left: 28% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 50px !important;
+    .AvatarXSBox {
+        width: 18% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 82% !important;
     }
 
     .paddingProfile {
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -23% !important;
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/480.jpg');
+    }
+
+    .marginUserHome{
+        margin-left: 18% !important;
+    }
+
+    .marginButtonUserHome {
         margin-left: 30% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -23% !important;
-        margin-left: 58% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+        border-radius: 50px !important;
     }
 }
 
 @media  (max-width: 375px) {
-    .image_middle {
-        margin-left: 25% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -35% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -348,63 +568,51 @@
         margin-left: 25% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 55px !important;
+    .AvatarXSBox {
+        width: 20% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
     }
 
     .paddingProfile {
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -28% !important;
-        margin-left: 27% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/375.jpg');
     }
 
-    .button-image-right{
-        margin-top: -28% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .marginUserHome{
+        margin-left: 14% !important;
     }
 
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+    .marginButtonUserHome {
+        margin-left: 28% !important;
+        border-radius: 50px !important;
     }
 }
 
 @media  (max-width: 360px) {
-    .image_middle {
-        margin-left: 25% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -35% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -415,63 +623,51 @@
         margin-left: 25% !important;
     }
 
-    .center-text {
-        text-align: center !important;
-    }
-
-    .well {
-        min-height: 180px !important;
-        margin-top: 60px !important;
-    }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -30% !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 6% !important;
+    }
+
+    .AvatarXSBox {
+        width: 20% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
+    }
+
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/360.jpg');
+    }
+
+    .marginUserHome{
+        margin-left: 12% !important;
+    }
+
+    .marginButtonUserHome {
         margin-left: 27% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -30% !important;
-        margin-left: 62% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+        border-radius: 50px !important;
     }
 }
 
 @media  (max-width: 320px) {
-    .image_middle {
-        margin-left: 21% !important;
-        float: left !important;
-        height: 150px !important;
-        width: 150px !important;
-        padding: 0px !important;
-        margin-top: -42% !important;
+    .avatarXS{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
     }
 
     .image_qrcode {
@@ -482,52 +678,43 @@
         margin-left: 21% !important;
     }
 
-    .center-text {
-        text-align: center !important;
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 7% !important;
     }
 
-    .well {
-        min-height: 180px !important;
-        margin-top: 60px !important;
+    .AvatarXSBox {
+        width: 25% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
     }
 
     .paddingProfile {
         padding-top: 45px !important;
     }
 
-    .button-image-left{
-        margin-top: -32% !important;
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/320.jpg');
+    }
+
+    .marginUserHome{
+        margin-left: 6% !important;
+    }
+
+    .marginButtonUserHome {
         margin-left: 24% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -32% !important;
-        margin-left: 65% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-cover {
-        margin-left: 1% !important;
-        margin-top: 1% !important;
-        position: absolute !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
+        border-radius: 50px !important;
     }
 }
 
@@ -539,31 +726,7 @@
     opacity: 1.0 !important;
 }
 
-@media (min-width: 1200px) {
-    .button-image-left{
-        margin-top: -40% !important;
-        margin-left: 20% !important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        padding-left: 10px!important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
-    .button-image-right{
-        margin-top: -40% !important;
-        margin-left: 60% !important;
-        padding-left: 10px!important;
-        position: absolute !important;
-        border-radius: 100% !important;
-        width: 35px !important;
-        height: 35px !important;
-        opacity: 0.5 !important;
-        padding-top: 07px !important;
-    }
-
+@media (min-width: 1201px) {
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -575,18 +738,24 @@
         padding-top: 06px !important;
     }
 
-    .well {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 20% !important;
+    }
+
+    .UserInfoBox {
+        text-align: left !important;
         min-height: 180px !important;
-        margin-top: 50px !important;
+        margin-top: 10px !important;
     }
 
     .image_middle {
-        margin-left: 18% !important;
+        margin-left: 05% !important;
         float: left !important;
         height: 120px !important;
         width: 120px !important;
         padding: 0px !important;
-        margin-top: -47% !important;
+        margin-top: -60% !important;
     }
 
     .image_qrcode {
@@ -596,15 +765,21 @@
         padding: 0px !important;
         margin-left: 18% !important;
     }
+
+    .pictureFrontCover {
+        width:100%;
+        height: 120px !important;
+        background-image: url('../../assets/images/1250.jpg');
+    }
+
+    .marginButtonUserHome {
+        margin-left: 40% !important;
+        border-radius: 50px !important;
+    }
 }
 
 .margin-0 {
     margin: 0px !important;
-}
-
-.pictureFrontCover {
-    width:100%;
-    height: 120px !important;
 }
 
 .font-size-30 {
@@ -614,4 +789,302 @@
 .padding-left-right-30 {
     padding-left: 30px !important;
     padding-right: 30px !important;
+}
+
+.avatar-users {
+    width: 120px !important;
+    height: 120px !important;
+    margin-left: 44px !important;
+}
+
+.avatar-users:hover{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.max-width-160 {
+    max-width: 160px !important;
+}
+
+.user-box {
+    height: 280px !important;
+}
+
+.cropArea {
+    background: #E4E4E4;
+    overflow: hidden;
+    width: 100%;
+    height: 400px;
+}
+img-crop {
+    display: block;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+img-crop canvas {
+    display: block;
+    left: 50%;
+    outline: 0 none;
+    position: absolute;
+    top: 50%;
+}
+
+.styleBox {
+    position: relative !important;
+    background-color: #e2e2e2;
+    border: 1px solid #e2e2e4;
+    height: 320px !important;
+    max-width: 208px !important;
+    border-radius: 20px !important;
+}
+
+.styleBox:hover {
+    box-shadow: 0 3px 25px -4px rgba(0, 0, 0, 0.9) !important;
+}
+
+.ImageBox {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+}
+
+.buttonContainer {
+    position: absolute !important;
+    bottom: 15px !important;
+    margin-left: 53px !important;
+}
+
+.buttonProfile {
+    border-radius: 50px !important;
+}
+
+.SocialList{
+    display: block;
+    height: 40px;
+    opacity: 0.6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+    content: "\e741";
+    border-radius: 10px;
+}
+
+.HoverWhite {
+    color: #FFFFFF !important;
+}
+
+.padding-top-2 {
+    padding-top: 2px !important;
+}
+
+ul li a.social-ti-facebook {
+    background: #3B5998;
+}
+
+ul li a.social-ti-twitter {
+    background: #48C4D2;
+}
+
+ul li a.social-ti-dribbble {
+    background: #EF5B92;
+}
+
+ul li a.social-ti-google {
+    background: #DD4B39;
+}
+
+ul li a.social-ti-linkedin {
+    background: #71B2D0;
+}
+
+ul li a.social-ti-youtube {
+    background: #F45750;
+}
+
+ul li a.social-ti-rss {
+    background: #FE9900;
+}
+
+ul li a.social-ti-behance {
+    background: #5EB5FB;
+}
+
+ul li a.social-ti-dropbox {
+    background: #85BEEC;
+}
+
+ul li a.social-ti-github {
+    background: #94A5B0;
+}
+
+ul li a.social-ti-skype {
+    background: #70CCEF;
+}
+
+ul li a.social-ti-spotify {
+    background: #8BD05A;
+}
+
+ul li a.social-ti-stumbleupon {
+    background: #F08066;
+}
+
+ul li a.social-ti-tumblr {
+    background: #85A5C3;
+}
+
+ul li a.social-ti-vimeo {
+    background: #7C99A8;
+}
+
+ul li a.social-ti-wordpress {
+    background: #649EB9;
+}
+
+ul li a.social-ti-xing {
+    background: #4F9394;
+}
+
+ul li a.social-ti-yahoo {
+    background: #C38DCF;
+}
+
+ul li a.social-ti-vk {
+    background: #708FAC;
+}
+
+ul li a.social-ti-instagram {
+    background: #CBAA97;
+}
+
+ul li a.social-ti-reddit {
+    background: #FF7A52;
+}
+
+ul li a.social-ti-flickr {
+    background: #FF4DA9;
+}
+ul li a.social-ti-foursquare {
+    background: #6FCCF4;
+}
+
+.ColorNavBar {
+    background-color: lightgray !important;
+}
+
+.ButtonRadius {
+    border-radius: 50px !important;
+}
+
+@media (min-width: 1366px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 24% !important;
+    }
+}
+
+a.ButtonImageSize {
+    min-width: 50px !important;
+    min-height: 50px !important;
+}
+
+.LoadImageModalButton {
+    width: 100% !important;
+}
+
+.ListOptions {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    line-height: 34px;
+    margin-top: 8px;
+}
+
+.MessageFrom {
+    font-weight: bold;
+    margin-top: 2px;
+    color: #aeacb4;
+}
+
+.MessageSubject {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+}
+
+.MessageTime {
+    right: 15px;
+    top: 8px;
+    color: #8e8e93;
+    font-size: 11px;
+    float: right;
+}
+
+.MessageContent {
+    font-size: 12px;
+    color: #c2c2c5;
+    margin-bottom: 4px;
+}
+
+.profile-padding-inbox {
+    min-height: 600px !important;
+    position: relative !important;
+    padding-top: 50px;
+    background-color: #FFFFFF !important;
+}
+
+
+
+.OptionsBox {
+    background-color: #ffffff !important;
+}
+
+.InboxBox {
+    background-color: #ffffff !important;
+}
+
+.SendBox {
+    min-height: 600px !important;
+    background-color: #ffffff !important;
+}
+
+.MessageUnread {
+    font-weight: bold !important;
+}
+
+.ReadUnreadBox {
+    width: 5% !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.MessageListBox {
+    width: 95% !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.MessageBox {
+
+}
+
+.NoMessage {
+    bottom: 0;
+    left: 0;
+    margin-top: 50%;
+    opacity: 0.5;
+    position: relative;
+    right: 0;
+    text-align: center;
 }

@@ -5,7 +5,7 @@
 <html lang="en" ng-app="dirApp">
 <!-- start: HEAD -->
 <head>
-    <title> T-shirt &#60;DIR&#62;| Home</title>
+    <title> T-shirt &#60;DIR&#62;</title>
     <!-- start: META -->
     <!--[if IE]><meta http-equiv='X-UA-Compatible' content="IE=edge,IE=9,IE=8,chrome=1" /><![endif]-->
     <meta charset="utf-8" />
@@ -24,6 +24,10 @@
     <link href="../bower_components/slick.js/slick/slick-theme.css" rel="stylesheet" media="screen" />
     <link href="../bower_components/swiper/dist/css/swiper.min.css" rel="stylesheet" media="screen" />
     <link href="../bower_components/magnific-popup/dist/magnific-popup.css" rel="stylesheet" media="screen" />
+    <link href="../bower_components/animate.css/animate.css" rel="stylesheet" media="screen" />
+
+    <!-- css: ANGULAR NngImgCrop-->
+    <link href="/bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet" media="screen"/>
 
     <link href="assets/css/styles.css" rel="stylesheet" media="screen">
     <link href="assets/css/plugins.css" rel="stylesheet" media="screen">
@@ -38,7 +42,7 @@
 <span us-spinner="{radius:30, width:8, length: 16}"></span>
 <div id="app">
     <!-- start: HEADER -->
-    <header class="small-header">
+    <header class="small-header height-50">
         <div class="navbar navbar-default" role="navigation">
             <!-- start: TOP NAVIGATION CONTAINER -->
             <div class="container">
@@ -69,10 +73,10 @@
                                     <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
                                 </li>
                                 <li>
-                                    <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewEditProfile == false))"> Edit Profile</a>
+                                    <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewProfile == false))"> Edit Profile</a>
                                 </li>
                                 <li>
-                                    <a ng-show="userdata.connected"><i class="ti-email"></i> Inbox</a>
+                                    <a ng-show="userdata.connected" ui-sref="inbox"><i class="ti-email"></i> Inbox</a>
                                 </li>
                                 <li>
                                     <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
@@ -106,6 +110,9 @@
                             <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
                                 <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
                             </li>
+                            <li class="padding-top-10 padding-left-15 padding-right-15">
+                                <h4>|</h4>
+                            </li>
                         </ul>
                     </div>
                     <!-- end: TOP BAR SOCIAL ICONS -->
@@ -136,69 +143,43 @@
             <div class="modal-dialog modal-sm">
                 <div class="modal-content">
                     <div class="modal-header" ng-controller="CloseCtrl">
-                        <a type="button" class="close" data-dismiss="modal">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </a>
-                        <ul class="nav nav-tabs">
-                            <li class="active"><a data-toggle="tab" href="#login-form"> Login <span class="glyphicon glyphicon-user"></span></a></li>
-                            <li><a data-toggle="tab" href="#registration-form"> Register <span class="glyphicon glyphicon-pencil"></span></a></li>
-                        </ul>
+                        <div class="modal-header padding-15">
+                            <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
+                        </div>
                     </div>
                     <div class="modal-body">
-                        <div class="tab-content">
-                            <div id="login-form" class="tab-pane fade in active">
-                                <form ng-controller="LoginCtrl">
-                                    <div class="form-group">
-                                        <label for="username">Username:</label>
-                                        <input ng-model="username" type="text" class="form-control" id="username" placeholder="Enter username" name="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pwd">Password:</label>
-                                        <input ng-model="pass" type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-                                    </div>
-                                    <div class="alert alert-danger" id="errorBox" hidden>
-                                        Wrong username or password. Sorry, try again.
-                                    </div>
-                                    <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
-                                </form>
+                        <form ng-controller="RegistrationCtrl">
+                            <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
                             </div>
-                            <div id="registration-form" class="tab-pane fade">
-                                <form ng-controller="RegistrationCtrl">
-                                    <!--<div class="form-group">-->
-                                    <!--<label for="firstname">First Name:</label>-->
-                                    <!--<input type="text" class="form-control" id="firstname" placeholder="Enter your First Name" name="firstname" ng-model="firstname">-->
-                                    <!--</div>-->
-                                    <!--<div class="form-group">-->
-                                    <!--<label for="lastname">Last Name:</label>-->
-                                    <!--<input type="text" class="form-control" id="lastname" placeholder="Enter your Last Name" name="lastname" ng-model="lastname">-->
-                                    <!--</div>-->
-                                    <div class="form-group">
-                                        <label for="email">Email:</label>
-                                        <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="newusername">Username:</label>
-                                        <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pass">Password:</label>
-                                        <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="againPass">Password again:</label>
-                                        <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="pin">PIN:</label>
-                                        <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
-                                    </div>
-                                    <div class="alert alert-danger" id="errorRegisterBox" hidden>
-                                        Passwords do not match. Sorry, try again
-                                    </div>
-                                    <button class="btn btn-default" ng-click="registerModal(username,pass,againPass,email,pin)">Register</button>
-                                </form>
+                            <div class="form-group">
+                                <label for="newusername">Username:</label>
+                                <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username">
                             </div>
-                        </div>
+                            <div class="form-group">
+                                <label for="pass">Password:</label>
+                                <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass">
+                            </div>
+                            <div class="form-group">
+                                <label for="againPass">Password again:</label>
+                                <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass">
+                            </div>
+                            <div class="form-group">
+                                <label for="pin">PIN:</label>
+                                <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin">
+                            </div>
+                            <div class="alert alert-danger" id="errorRegisterBox" hidden>
+                                Passwords do not match. Sorry, try again
+                            </div>
+                            <a class="btn btn-primary ButtonRadius"
+                               ng-click="registerModal(username,pass,againPass,email,pin)">
+                                <i class="ti-user"></i> Register
+                            </a>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -211,7 +192,7 @@
                 <div class="modal-content">
                     <div class="modal-header" ng-controller="CloseCtrl">
                         <div class="modal-header padding-15">
-                            <a type="button" class="close" data-dismiss="modal">
+                            <a type="button" class="close margin-top--10" data-dismiss="modal">
                                 <span class="glyphicon glyphicon-remove"></span>
                             </a>
                             <h4 class="modal-title"><i class="ti-user"></i> Login</h4>
@@ -220,17 +201,19 @@
                     <div class="modal-body">
                         <form ng-controller="LoginCtrl">
                             <div class="form-group">
-                                <label for="username">Username:</label>
+                                <label for="usernameHome">Username:</label>
                                 <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
                             </div>
                             <div class="form-group">
-                                <label for="pwd">Password:</label>
+                                <label for="pwdHome">Password:</label>
                                 <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
                             </div>
                             <div class="alert alert-danger" id="errorBoxHome" hidden>
                                 Wrong username or password. Sorry, try again.
                             </div>
-                            <a class="btn btn-default" ng-click="loginModal(username,pass)">Login</a>
+                            <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">
+                                <i class="ti-user"></i> Login
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -244,7 +227,7 @@
                 <div class="modal-content">
                     <div class="modal-header" ng-controller="CloseCtrl">
                         <div class="modal-header padding-15">
-                            <a type="button" class="close" data-dismiss="modal">
+                            <a type="button" class="close margin-top--10" data-dismiss="modal">
                                 <span class="glyphicon glyphicon-remove"></span>
                             </a>
                             <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
@@ -271,7 +254,10 @@
                             <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
                                 Passwords do not match. Sorry, try again
                             </div>
-                            <button class="btn btn-default" ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">Register</button>
+                            <a class="btn btn-primary ButtonRadius"
+                               ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">
+                                <i class="ti-user"></i> Register
+                            </a>
                         </form>
                     </div>
                 </div>
@@ -284,22 +270,22 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header padding-15">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
                     </div>
                     <div class="modal-body padding-15">
                         <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title">
-                        <textarea id="body" class="form-control margin-top-5" ng-model="body"></textarea>
+                        <textarea id="body" placeholder="Enter your Snippets" class="form-control margin-top-5" ng-model="body"></textarea>
                     </div>
                     <div class="modal-footer padding-15">
-                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary" ng-click="addSnippets(title,body)">
-                            Add
-                        </button>
+                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                            <i class="ti-close"></i> Close
+                        </a>
+                        <a class="btn btn-primary ButtonRadius" ng-click="addSnippets(title,body)">
+                            <i class="ti-plus"></i> Add
+                        </a>
                     </div>
                 </div>
             </div>
@@ -311,7 +297,7 @@
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header padding-15">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title">Add Social Network</h4>
@@ -346,12 +332,12 @@
                         <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url">
                     </div>
                     <div class="modal-footer padding-15">
-                        <button type="button" class="btn btn-primary btn-o" data-dismiss="modal">
-                            Close
-                        </button>
-                        <button type="button" class="btn btn-primary" ng-click="addSocialNetwork(socialnetwork,url)">
-                            Add
-                        </button>
+                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                            <i class="ti-close"></i> Close
+                        </a>
+                        <a class="btn btn-primary ButtonRadius" ng-click="addSocialNetwork(socialnetwork,url)">
+                            <i class="ti-plus"></i> Add
+                        </a>
                     </div>
                 </div>
             </div>
@@ -402,22 +388,22 @@
 <script src="../bower_components/countto/jquery.countTo.js"></script>
 <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
 <script src="assets/js/main.js"></script>
-
+<script src="assets/js/index.js"></script>
 <!-- end: MAIN JAVASCRIPTS -->
+
 <!-- start: ANGULAR SCRIPTS-->
 <script src="../bower_components/angular/angular.js"></script>
 <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
 <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
 <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-<!-- end: ANGULAR SCRIPTS-->
-<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-<script src="assets/js/index.js"></script>
+<script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
+<script src="../bower_components/angular-animate/angular-animate.js"></script>
 <script src="assets/app.js"></script>
 <script src="assets/main.js"></script>
 <script src="assets/config.constant.js"></script>
 <script src="assets/config.router.js"></script>
-<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+<!-- end: ANGULAR SCRIPTS-->
 
 <!-- start: CROPPER CONTROLLERS-->
 <!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
@@ -442,9 +428,13 @@
 <script src="assets/js/controllers/registrationCtrl.js"></script>
 <script src="assets/js/controllers/addSnippetsCtrl.js"></script>
 <script src="assets/js/controllers/addSocialNetworkCtrl.js"></script>
-<script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
 <script src="assets/js/controllers/topNavBarCtrl.js"></script>
+<script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
 <!-- end: CONTROLLERS-->
+
+<!-- start: ANGULAR NngImgCrop-->
+<script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+<!-- end: ANGULAR NngImgCrop-->
 
 <!-- start: CONTROLLERS ANIMATIONS-->
 <script src="assets/js/animations.js"></script>
@@ -453,7 +443,6 @@
     jQuery(document).ready(function() {
         Main.init();
         Index.init();
-        Animations.init();
     });
 </script>
 </body>

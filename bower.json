@@ -48,7 +48,7 @@
     "gmaps": "~0.4.19",
     "mixitup": "~2.1.10",
     "magnific-popup": "~1.0.0",
-    "angular": "~1.5.7",
+    "angular": "1.5.11",
     "angular-cookies": "~1.5.7",
     "angular-sanitize": "^1.5.7",
     "angular-translate": "~2.7.2",
@@ -65,6 +65,8 @@
     "angular-spinner": "^1.0.1",
     "angular-loading-spinner": "^0.0.3",
     "angular-image-crop": "angular-image-cropper#*",
-    "jquery-countTo": "countto#^1.2.0"
+    "jquery-countTo": "countto#^1.2.0",
+    "angular-count-to": "*",
+    "ng-img-crop": "ngImgCrop#^0.3.2"
   }
 }

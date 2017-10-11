@@ -1487,6 +1487,15 @@ header > .navbar {
     color: #1FBBA6;
 }
 
+#off-sidebar .media-list .media .status-offline {
+    line-height: 40px;
+    font-size: 6px;
+    position: absolute;
+    right: 10px;
+    display: inline-block;
+    color: #6c7583;
+}
+
 #off-sidebar .media-list .media .media-heading {
     color: #8e8e93 !important;
     display: block;
@@ -1928,6 +1937,14 @@ header > .navbar {
     margin-top: 5px !important;
 }
 
+.margin-top-8 {
+    margin-top: 8px !important;
+}
+
+.margin-top--10 {
+    margin-top: -10px !important;
+}
+
 .margin-top-10 {
     margin-top: 10px !important;
 }
@@ -2046,6 +2063,10 @@ header > .navbar {
 
 .min-height-350 {
     min-height: 350px !important;
+}
+
+.height-50 {
+    height: 50px !important;
 }
 
 .height-155 {

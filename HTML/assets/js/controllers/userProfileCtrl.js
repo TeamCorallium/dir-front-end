@@ -26,7 +26,6 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
 
         $scope.profileQRCode = '';
 
-        $rootScope.viewEditProfile = false;
         $rootScope.viewProfile = false;
 
         $scope.getUser = function (username) {

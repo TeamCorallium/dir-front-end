@@ -6,6 +6,24 @@
 app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
     function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
 
+        $scope.myImage = '';
+        $scope.myCroppedImage = '';
+
+        $rootScope.viewProfile = true;
+
+        $scope.uploadFile = function(file) {
+            if (file) {
+                // ng-img-crop
+                var imageReader = new FileReader();
+                imageReader.onload = function (image) {
+                    $scope.$apply(function ($scope) {
+                        $scope.myImage = image.target.result;
+                    });
+                };
+                imageReader.readAsDataURL(file);
+            }
+        };
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -25,9 +43,6 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.users = [];
 
         $scope.name = '';
-
-        $rootScope.viewEditProfile = true;
-        $rootScope.viewProfile = true;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -167,7 +182,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             if ($scope.user.avatar == 'assets/images/default-user.png'){
                 $scope.user.avatar = '';
             }
-
+            console.log("avatar:"+ $scope.user.avatar);
             if ($scope.user.avatar instanceof File) {
                 RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
             } else {
@@ -245,6 +260,29 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                 dirAvatar = 'assets/images/default-user.png';
             }
             return dirAvatar;
+        };
+
+        $scope.openModalImageCropper = function() {
+            $('#ModalImageCropper').modal('show');
+        };
+
+        $scope.crop = function () {
+            $scope.user.avatar = $scope.myCroppedImage;
+            //return a promise that resolves with a File instance
+            function urltoFile(url, filename, mimeType){
+                return (fetch(url)
+                    .then(function(res){return res.arrayBuffer();})
+                    .then(function(buf){return new File([buf], filename, {type:mimeType});})
+                );
+            }
+
+            urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
+            .then(function(file){
+                console.log(file);
+                $scope.user.avatar = file;
+            })
+
+            $('#ModalImageCropper').modal('hide');
         };
 
     }]);

@@ -25,11 +25,11 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
         $stateProvider.state('blank',{
             url: '',
             templateUrl: 'views/home.html',
-            // resolve: loadSequence('homeCtrl')
+            resolve: loadSequence('homeCtrl')
         }).state('home',{
             url: '/home',
             templateUrl: 'views/home.html',
-            resolve: loadSequence('homeCtrl','mainCtrl')
+            resolve: loadSequence('homeCtrl')
         }).state('profile',{
             url: '/profile',
             templateUrl: 'views/userProfile.html',
@@ -42,6 +42,14 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             url: '/tshirts/:id',
             templateUrl: 'views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
+        }).state('users',{
+            url: '/users',
+            templateUrl: 'views/exploreUsers.html',
+            resolve: loadSequence('exploreUsersCtrl')
+        }).state('inbox',{
+            url: '/inbox',
+            templateUrl: 'views/inbox.html',
+            resolve: loadSequence('inboxCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
