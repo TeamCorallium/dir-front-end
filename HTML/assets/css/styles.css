@@ -11066,8 +11066,8 @@ td.small-width {
     margin-right: -15px;
 }
 #page-title .title-white, #page-title .title-white + .mainDescription {
-    text-shadow: 0 2px 3px rgba(0, 0, 0, 0.15);
-    color: #ffffff;
+    text-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
+    color: #454545;
 }
 #page-title .title-white {
     font-weight: bold;
