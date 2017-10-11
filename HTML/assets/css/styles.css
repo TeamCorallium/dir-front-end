@@ -5571,8 +5571,8 @@ input[type="radio"], input[type="checkbox"] {
     color: #ffffff;
 }
 .open .btn-primary.dropdown-toggle {
-    background-color: #4da2ff;
-    border-color: #4da2ff;
+    background-color: #00B8B8;
+    border-color: #00B8B8;
 }
 .btn-primary:hover {
     background-color: #00B8B8 !important;
@@ -5580,16 +5580,16 @@ input[type="radio"], input[type="checkbox"] {
     color: #ffffff;
 }
 .btn-primary:active, .btn-primary.active, .btn-primary.active:focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.dropdown-toggle:active:hover {
-    background-color: #006ee6 !important;
-    border-color: #006ee6;
+    background-color: #00AFAC !important;
+    border-color: #00AFAC;
 }
 .btn-primary:focus {
-    background-color: #4da2ff;
-    border-color: #4da2ff;
+    background-color: #00B8B8;
+    border-color: #00B8B8;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-    background-color: #66afff;
-    border-color: #66afff;
+    background-color: #00CCCC;
+    border-color: #00CCCC;
     color: #ffffff;
 }
 .btn-primary.btn-o {
@@ -5607,13 +5607,13 @@ input[type="radio"], input[type="checkbox"] {
     color: #0055b3 !important;
 }
 .btn-primary.btn-o:focus {
-    background-color: #66afff;
-    border-color: #66afff;
+    background-color: #00CCCC;
+    border-color: #00CCCC;
     color: #00B8B8;
 }
 .btn-primary.btn-o.disabled:hover, .btn-primary.btn-o.disabled:focus, .btn-primary.btn-o.disabled:active, .btn-primary.btn-o.disabled.active, .btn-primary.btn-o[disabled], .btn-primary.btn-o[disabled]:hover, .btn-primary.btn-o[disabled]:focus, .btn-primary.btn-o[disabled]:active, .btn-primary.btn-o[disabled].active, fieldset[disabled] .btn-primary.btn-o:hover, fieldset[disabled] .btn-primary.btn-o:focus, fieldset[disabled] .btn-primary.btn-o:active, fieldset[disabled] .btn-primary.btn-o.active {
-    border-color: #66afff;
-    color: #66afff;
+    border-color: #00CCCC;
+    color: #00CCCC;
 }
 .btn-primary.btn-o .caret {
     border-top-color: #00B8B8;
