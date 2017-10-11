@@ -111,7 +111,7 @@
 
     .marginButtonUserHome {
         margin-left: 36% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -147,7 +147,7 @@
 
     .marginButtonUserHome {
         margin-left: 37% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -160,7 +160,7 @@
 
     .marginButtonUserHome {
         margin-left: 37% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -173,7 +173,7 @@
 
     .marginButtonUserHome {
         margin-left: 37% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -186,7 +186,7 @@
 
     .marginButtonUserHome {
         margin-left: 36% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -210,7 +210,7 @@
 
     .marginButtonUserHome {
         margin-left: 36% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -337,7 +337,7 @@
 
     .marginButtonUserHome {
         margin-left: 40% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -439,7 +439,7 @@
 
     .marginButtonUserHome {
         margin-left: 41% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -494,7 +494,7 @@
 
     .marginButtonUserHome {
         margin-left: 34% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -549,7 +549,7 @@
 
     .marginButtonUserHome {
         margin-left: 30% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -604,7 +604,7 @@
 
     .marginButtonUserHome {
         margin-left: 28% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -714,7 +714,7 @@
 
     .marginButtonUserHome {
         margin-left: 24% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -774,7 +774,7 @@
 
     .marginButtonUserHome {
         margin-left: 40% !important;
-        border-radius: 50px !important;
+        border-radius: 5px !important;
     }
 }
 
@@ -834,7 +834,7 @@ img-crop canvas {
 
 .styleBox {
     position: relative !important;
-    background-color: #e2e2e2;
+    background-color: #F1F1F1;
     border: 1px solid #e2e2e4;
     height: 320px !important;
     max-width: 208px !important;
@@ -857,7 +857,7 @@ img-crop canvas {
 }
 
 .buttonProfile {
-    border-radius: 50px !important;
+    border-radius: 5px !important;
 }
 
 .SocialList{
