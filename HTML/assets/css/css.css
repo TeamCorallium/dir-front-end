@@ -834,15 +834,15 @@ img-crop canvas {
 
 .styleBox {
     position: relative !important;
-    background-color: #F1F1F1;
-    border: 1px solid #e2e2e4;
-    height: 320px !important;
-    max-width: 208px !important;
-    border-radius: 20px !important;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    height: 330px !important;
+    max-width: 225px !important;
+    border-radius: 7px !important;
 }
 
 .styleBox:hover {
-    box-shadow: 0 3px 25px -4px rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
 }
 
 .ImageBox {
@@ -857,7 +857,7 @@ img-crop canvas {
 }
 
 .buttonProfile {
-    border-radius: 5px !important;
+    border-radius: 1px !important;
 }
 
 .SocialList{
@@ -978,11 +978,12 @@ ul li a.social-ti-foursquare {
 }
 
 .ColorNavBar {
-    background-color: lightgray !important;
+    background-color: #F3F3F3 !important;
 }
 
 .ButtonRadius {
-    border-radius: 50px !important;
+    border-radius: 4px !important;
+	margin-top: 5px !important;
 }
 
 @media (min-width: 1366px) {

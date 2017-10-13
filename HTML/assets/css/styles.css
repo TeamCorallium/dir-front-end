@@ -50,6 +50,7 @@
 /* ---------------------------------------------------------------------- */
 /*  Basic Elements & Classes
 /* ---------------------------------------------------------------------- */
+
 html, body {
     height: 100%;
     width: 100%;
@@ -2209,7 +2210,7 @@ a.text-white:hover {
 }
 
 .text-dark {
-    color: #5b5b60 !important;
+    color: #666666!important;
 }
 
 a.text-dark:hover {
@@ -4364,7 +4365,7 @@ textarea, select, input[type="text"], input[type="password"], input[type="dateti
     background-image: none !important;
     border: 1px solid #efefef !important;
     border-radius: 0 0 0 0 !important;
-    color: #5b5b60 !important;
+    color: #666666!important;
     font-family: inherit !important;
     font-size: 14px !important;
     line-height: 1.2 !important;
@@ -5546,12 +5547,12 @@ input[type="radio"], input[type="checkbox"] {
 .btn-default:active, .btn-default.active, .btn-default.active:focus, .btn-default:active:focus, .btn-default:active:hover {
     background-color: #f8f8f8;
     border-color: #fcfcfc;
-    color: #5b5b60 !important;
+    color: #666666!important;
 }
 .btn-default:focus {
     background-color: #ffffff;
     border-color: #e2e2e2;
-    color: #5b5b60 !important;
+    color: #666666!important;
 }
 .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
     background-color: #ffffff;
@@ -10021,7 +10022,7 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
     border-bottom: 1px solid #e2e2e4;
-    color: #5b5b60 !important;
+    color: #666666!important;
     border-top: none;
 }
 
@@ -10031,12 +10032,12 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > tbody > tr.active > td, .table > tbody > tr.active > th {
     background-color: #e7e7e9 !important;
-    color: #5b5b60 !important;
+    color: #666666!important;
 }
 
 .table > tbody > tr.active:hover > td, .table > tbody > tr.active:hover > th {
     background-color: #dddcdf !important;
-    color: #5b5b60 !important;
+    color: #666666!important;
 }
 
 th.center, td.center {
@@ -11088,7 +11089,7 @@ td.small-width {
 }
 #page-title .title-white, #page-title .title-white + .mainDescription {
     text-shadow: 0 0px 0px rgba(0, 0, 0, 0.15);
-    color: #454545;
+    color: #FFFFFF;
 }
 #page-title .title-white {
     font-weight: bold;

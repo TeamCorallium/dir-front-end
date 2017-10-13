@@ -2610,7 +2610,7 @@ a.text-white:hover {
 }
 
 .text-dark {
-  color: #5b5b60 !important;
+  color: #666666 !important;
 }
 
 a.text-dark:hover {
@@ -5743,12 +5743,12 @@ input[type="radio"], input[type="checkbox"] {
 .btn-default:active, .btn-default.active, .btn-default.active:focus, .btn-default:active:focus, .btn-default:active:hover {
   background-color: #f8f8f8;
   border-color: #d5d4d8;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 .btn-default:focus {
   background-color: #ffffff;
   border-color: #bbbac0;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
@@ -9864,7 +9864,7 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   border-bottom: 1px solid #e2e2e4;
-  color: #5b5b60 !important;
+  color: #666666!important;
   border-top: none;
 }
 
@@ -9874,12 +9874,12 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > tbody > tr.active > td, .table > tbody > tr.active > th {
   background-color: #e7e7e9 !important;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 
 .table > tbody > tr.active:hover > td, .table > tbody > tr.active:hover > th {
   background-color: #dddcdf !important;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 
 th.center, td.center {
