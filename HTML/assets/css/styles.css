@@ -10848,6 +10848,98 @@ td.small-width {
 .ie8 .messages-list .messages-item .messages-item-time .messages-item-actions {
     display: none;
 }
+.btn-scroll {
+  position: relative;
+  overflow: hidden;
+  font-family: Helvetica, Arial, sans-serif !important;
+  line-height: inherit !important;
+  -moz-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  -webkit-transition: all 0.3s ease;
+  -webkit-transition-delay: 0s;
+  transition: all 0.3s ease 0s;
+  font-size: 14px;
+}
+.btn-scroll[class*="fa-"]:before {
+  font-family: FontAwesome;
+}
+.btn-scroll[class*="ti-"]:before {
+  font-family: themify;
+}
+.btn-scroll:after {
+  content: "";
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  z-index: -1;
+}
+.btn-scroll:before {
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  line-height: 1;
+  position: relative;
+  text-transform: none;
+  font-size: 100%;
+  height: 100%;
+  line-height: 2.5;
+  position: absolute;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.btn-scroll span {
+  backface-visibility: hidden;
+  display: inline-block;
+  height: 100%;
+  transition: all 0.3s ease 0s;
+  width: 100%;
+}
+.btn-scroll.btn-scroll-top:hover span {
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  -webkit-transform: translateY(300%);
+  transform: translateY(300%);
+}
+.btn-scroll.btn-scroll-top:hover:before {
+  top: 0;
+}
+.btn-scroll.btn-scroll-top:before {
+  left: 0;
+  top: -100%;
+}
+.btn-scroll.btn-scroll-left:hover span {
+  -moz-transform: translateX(200%);
+  -ms-transform: translateX(200%);
+  -webkit-transform: translateX(200%);
+  transform: translateX(200%);
+}
+.btn-scroll.btn-scroll-left:hover:before {
+  left: 0;
+}
+.btn-scroll.btn-scroll-left:before {
+  left: -100%;
+  top: 0;
+}
+#scroll-top {
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+  bottom: 80px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+  font-size: 20px;
+  height: 40px;
+  left: auto;
+  line-height: 36px;
+  position: fixed;
+  right: 30px;
+  text-align: center;
+  top: auto;
+  width: 40px;
+  z-index: 299;
+}
+#scroll-top:hover {
+  background-color: #00B8B8;
+}
 
 /**/
 /* ---------------------------------------------------------------------- */
