@@ -168,7 +168,7 @@ header .dropdown-off-sidebar {
   }
 }
 #sidebar nav > ul > li.active > a:active:focus {
-  background: #006ee6 !important;
+  background: #00AFAC !important;
 }
 #sidebar nav > ul > li.active > a .item-inner {
   color: #ffffff !important;

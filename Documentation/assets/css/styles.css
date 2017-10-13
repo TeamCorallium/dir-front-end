@@ -2610,7 +2610,7 @@ a.text-white:hover {
 }
 
 .text-dark {
-  color: #5b5b60 !important;
+  color: #666666 !important;
 }
 
 a.text-dark:hover {
@@ -5743,12 +5743,12 @@ input[type="radio"], input[type="checkbox"] {
 .btn-default:active, .btn-default.active, .btn-default.active:focus, .btn-default:active:focus, .btn-default:active:hover {
   background-color: #f8f8f8;
   border-color: #d5d4d8;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 .btn-default:focus {
   background-color: #ffffff;
   border-color: #bbbac0;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 .btn-default.disabled:hover, .btn-default.disabled:focus, .btn-default.disabled:active, .btn-default.disabled.active, .btn-default[disabled], .btn-default[disabled]:hover, .btn-default[disabled]:focus, .btn-default[disabled]:active, .btn-default[disabled].active, fieldset[disabled] .btn-default:hover, fieldset[disabled] .btn-default:focus, fieldset[disabled] .btn-default:active, fieldset[disabled] .btn-default.active {
   background-color: #ffffff;
@@ -5768,8 +5768,8 @@ input[type="radio"], input[type="checkbox"] {
   color: #ffffff;
 }
 .open .btn-primary.dropdown-toggle {
-  background-color: #4da2ff;
-  border-color: #4da2ff;
+  background-color: #00CCCC;
+  border-color: #00CCCC;
 }
 .btn-primary:hover {
   background-color: #00B8B8 !important;
@@ -5777,16 +5777,16 @@ input[type="radio"], input[type="checkbox"] {
   color: #ffffff;
 }
 .btn-primary:active, .btn-primary.active, .btn-primary.active:focus, .btn-primary:active:focus, .btn-primary:active:hover, .btn-primary.dropdown-toggle:active:hover {
-  background-color: #006ee6 !important;
-  border-color: #006ee6;
+  background-color: #00AFAC !important;
+  border-color: #00AFAC;
 }
 .btn-primary:focus {
-  background-color: #4da2ff;
-  border-color: #4da2ff;
+  background-color: #00B8B8;
+  border-color: #00B8B8;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled:active, .btn-primary.disabled.active, .btn-primary[disabled], .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled]:active, .btn-primary[disabled].active, fieldset[disabled] .btn-primary:hover, fieldset[disabled] .btn-primary:focus, fieldset[disabled] .btn-primary:active, fieldset[disabled] .btn-primary.active {
-  background-color: #66afff;
-  border-color: #66afff;
+  background-color: #00B8B8;
+  border-color: #00B8B8;
   color: #ffffff;
 }
 .btn-primary.btn-o {
@@ -5800,17 +5800,17 @@ input[type="radio"], input[type="checkbox"] {
 }
 .btn-primary.btn-o:active, .btn-primary.btn-o.active, .btn-primary.btn-o.active:focus, .btn-primary.btn-o:active:focus, .btn-primary.btn-o:active:hover {
   background-color: #eaeaec !important;
-  border-color: #0055b3 !important;
-  color: #0055b3 !important;
+  border-color: #00AAAD !important;
+  color: #00AAAD !important;
 }
 .btn-primary.btn-o:focus {
-  background-color: #66afff;
-  border-color: #66afff;
+  background-color: #s00CCCC;
+  border-color: #00CCCC;
   color: #00B8B8;
 }
 .btn-primary.btn-o.disabled:hover, .btn-primary.btn-o.disabled:focus, .btn-primary.btn-o.disabled:active, .btn-primary.btn-o.disabled.active, .btn-primary.btn-o[disabled], .btn-primary.btn-o[disabled]:hover, .btn-primary.btn-o[disabled]:focus, .btn-primary.btn-o[disabled]:active, .btn-primary.btn-o[disabled].active, fieldset[disabled] .btn-primary.btn-o:hover, fieldset[disabled] .btn-primary.btn-o:focus, fieldset[disabled] .btn-primary.btn-o:active, fieldset[disabled] .btn-primary.btn-o.active {
-  border-color: #66afff;
-  color: #66afff;
+  border-color: #00CCCC;
+  color: #00CCCC;
 }
 .btn-primary.btn-o .caret {
   border-top-color: #00B8B8;
@@ -9864,7 +9864,7 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
   border-bottom: 1px solid #e2e2e4;
-  color: #5b5b60 !important;
+  color: #666666!important;
   border-top: none;
 }
 
@@ -9874,12 +9874,12 @@ div.timeline .column_center .timeline_element:before, div.timeline .column_cente
 
 .table > tbody > tr.active > td, .table > tbody > tr.active > th {
   background-color: #e7e7e9 !important;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 
 .table > tbody > tr.active:hover > td, .table > tbody > tr.active:hover > th {
   background-color: #dddcdf !important;
-  color: #5b5b60 !important;
+  color: #666666!important;
 }
 
 th.center, td.center {

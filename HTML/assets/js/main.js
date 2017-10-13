@@ -12,6 +12,22 @@ var Main = function() {
 	var currentYearHandler = function() {
 		$(".current-year").text((new Date).getFullYear());
 	};
+	// function to handle Scroll Top button
+	var scrollTopHandler = function() {
+		var scroll_top = $win.scrollTop();
+		var scroll_top_button = $('#scroll-top');
+		if (scroll_top > 300) {
+			scroll_top_button.fadeIn();
+		} else {
+			scroll_top_button.fadeOut();
+		};
+		scroll_top_button.off("click").on("click", function(e) {
+			$("html, body").animate({
+				scrollTop : 0
+			}, "slow");
+			e.preventDefault();
+		});
+	};
 
 	// function for Header shrink size based on scroll
 	var shrinkHeaderHandler = function() {
