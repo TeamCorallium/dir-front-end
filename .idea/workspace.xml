@@ -1,0 +1,2360 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c7fb9bf9-a2fe-4d6b-82d2-f9e28f9e2f05" name="Default" comment="change in css.css and inbox.html" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <ignored path=".idea/dir-front-end.iml" />
+    <ignored path=".idea/modules.xml" />
+    <ignored path=".idea/vcs.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="inbox.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/HTML/views/inbox.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/assets/css/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="25432">
+              <caret line="1496" column="19" lean-forward="false" selection-start-line="1496" selection-start-column="19" selection-end-line="1496" selection-end-column="19" />
+              <folding>
+                <marker date="1507932935802" expanded="true" signature="295453:295456" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="295482:295508" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="295543:295736" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="295784:295825" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="295880:295936" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="295983:296363" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296418:296438" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296465:296545" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296483:296543" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296561:296731" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296758:296813" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296779:296811" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="296843:296985" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297021:297086" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297111:297596" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297623:297822" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297653:297820" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297857:297904" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="297946:298008" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="298039:298066" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="298109:298252" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="298331:298420" ph="/*...*/" />
+                <marker date="1507932935802" expanded="true" signature="298446:298539" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="298618:298706" ph="/*...*/" />
+                <marker date="1507932935802" expanded="true" signature="298732:298832" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="298911:299002" ph="/*...*/" />
+                <marker date="1507932935802" expanded="true" signature="299016:299057" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299112:299269" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299297:299333" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299361:299397" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299429:299493" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299525:299694" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299713:299771" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299802:299837" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299853:299912" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="299931:299977" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="300001:300024" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="300068:300246" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="300267:300366" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="300762:300796" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="300971:301056" ph="/*...*/" />
+                <marker date="1507932935802" expanded="true" signature="301076:301104" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301131:301229" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301264:301414" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301611:301689" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301710:301756" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301783:301806" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301821:301877" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="301894:301999" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302099:302123" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302159:302230" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302312:302369" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302392:302460" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302551:302604" ph="{...}" />
+                <marker date="1507932935802" expanded="true" signature="302626:302652" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="restService.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/assets/js/services/restService.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="4505">
+              <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="inboxCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/inboxCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2448">
+              <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="css.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/assets/css/css.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17425">
+              <caret line="1025" column="22" lean-forward="false" selection-start-line="1025" selection-start-column="22" selection-end-line="1025" selection-end-column="22" />
+              <folding>
+                <marker date="1507932936078" expanded="true" signature="839:2314" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="2251:2314" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19351:19367" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19396:19496" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19414:19494" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19516:19584" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19608:19639" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19654:19754" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19769:19836" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19857:19956" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="19979:20055" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20073:20141" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20156:20249" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20267:20335" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20360:20497" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20513:20558" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20570:20615" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20626:20705" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20722:20759" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20776:20866" ph="{...}" />
+                <marker date="1507932936078" expanded="true" signature="20884:20975" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homeCtrl.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/homeCtrl.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="663">
+              <caret line="39" column="11" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>delete</find>
+      <find>480</find>
+      <find>415</find>
+      <find>360</find>
+      <find>320</find>
+      <find>crop</find>
+      <find>style</find>
+      <find>marginButtonUserHome</find>
+      <find>snippe</find>
+      <find>inbo</find>
+      <find>no visi</find>
+      <find>profile</find>
+      <find>starred</find>
+      <find>email-list</find>
+      <find>main-options</find>
+      <find>badge</find>
+      <find>messages-item-from</find>
+      <find>messages-item-time</find>
+      <find>messages-item-content</find>
+      <find>cookies</find>
+      <find>fet</find>
+      <find>header</find>
+      <find>roo</find>
+      <find>951</find>
+      <find>messagesInbox</find>
+      <find>width</find>
+      <find>767</find>
+      <find>status-online</find>
+      <find>broadcast</find>
+      <find>768</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>ti</replace>
+      <replace>messagesSend</replace>
+    </replaceStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/addSnippetsCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/closeCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/imageDownloadCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/loginCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/registrationCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/main.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/animationsCtrl.js" />
+        <option value="$PROJECT_DIR$/bower.json" />
+        <option value="$PROJECT_DIR$/HTML/assets/app.js" />
+        <option value="$PROJECT_DIR$/bower_components/ng-img-crop/compile/minified/ng-img-crop.css" />
+        <option value="$PROJECT_DIR$/HTML/views/exploreUsers.html" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/addSocialNetworkCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/views/viewProfile.html" />
+        <option value="$PROJECT_DIR$/HTML/views/editUserProfile.html" />
+        <option value="$PROJECT_DIR$/HTML/assets/config.constant.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/config.router.js" />
+        <option value="$PROJECT_DIR$/HTML/views/home.html" />
+        <option value="$PROJECT_DIR$/HTML/views/userProfile.html" />
+        <option value="$PROJECT_DIR$/Documentation/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/HTML/index.html" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/editUserProfileCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/homeCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/userProfileCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/viewProfileCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/exploreUsersCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/main.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/services/restService.js" />
+        <option value="$PROJECT_DIR$/HTML/assets/js/controllers/inboxCtrl.js" />
+        <option value="$PROJECT_DIR$/HTML/views/inbox.html" />
+        <option value="$PROJECT_DIR$/HTML/assets/css/css.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER">
+    <gruntfile path="$PROJECT_DIR$/GruntFile.js" />
+  </component>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/bower_components/angular-count-to/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/angular-count-to/scripts/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/angular-spinner/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/animate.css/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/bootstrap/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/gmaps/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/jquery.appear.js/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/jquery.serialScroll/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/jquery.stellar/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/magnific-popup/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/mixitup/node_modules" />
+    <handled-path value="$PROJECT_DIR$/bower_components/stellar.js/node_modules" />
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectLevelVcsManager">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="dir-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir-front-end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="dir-front-end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="dir-front-end" type="462c0819:PsiDirectoryNode" />
+              <item name="HTML" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="js.buildTools.grunt.grunt-cli.package" value="$USER_HOME$/AppData/Roaming/npm/node_modules/grunt-cli" />
+    <property name="SearchEverywhereHistoryKey" value="social-icons&#9;null&#9;null" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\dir-front-end\HTML\assets\js\controllers" />
+      <recent name="C:\xampp\htdocs\dir-front-end\HTML\views" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/Documentation/assets/css/styles.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/css/css.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/css/styles.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/css/themes/theme-1.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/default-user.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/home-background.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/iphone.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/slider/about-slide1.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/slider/about-slide2.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/slider/about-slide3.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/js/main.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/index.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/views/exploreUsers.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/views/home.html</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap-theme.css</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/default-user2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/iconosnniper.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/iphone2.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/male.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/slider/about-slide22.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-01.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-02.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-03.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-04.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-05.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto-06.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-01.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-02.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-03.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-04.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-05.png</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/voto2-06.png</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/tshirts.jpg</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/HTML/assets/images/tshirts.png</PATH>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+          <FILE-GROUP>
+            <option name="myUpdateName" />
+            <option name="myStatusName" />
+            <option name="mySupportsDeletion" value="false" />
+            <option name="myCanBeAbsent" value="false" />
+            <option name="myId" />
+          </FILE-GROUP>
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" />
+          <option name="myStatusName" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="js.build_tools.grunt" factoryName="Grunt.js">
+      <node-interpreter value="project" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+    </configuration>
+    <configuration default="true" type="DartCommandLineRunConfigurationType" factoryName="Dart Command Line Application">
+      <method />
+    </configuration>
+    <configuration default="true" type="DartTestRunConfigurationType" factoryName="Dart Test">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerKarma" factoryName="Karma">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="cucumber.js" factoryName="Cucumber.js">
+      <option name="cucumberJsArguments" value="" />
+      <option name="executablePath" />
+      <option name="filePath" />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c7fb9bf9-a2fe-4d6b-82d2-f9e28f9e2f05" name="Default" comment="" />
+      <created>1506292514354</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1506292514354</updated>
+      <workItem from="1506292516830" duration="7357000" />
+      <workItem from="1506311440328" duration="9768000" />
+      <workItem from="1506359049500" duration="15600000" />
+      <workItem from="1506444426012" duration="1886000" />
+      <workItem from="1506460512271" duration="3458000" />
+      <workItem from="1506485908136" duration="8232000" />
+      <workItem from="1506533185970" duration="4494000" />
+      <workItem from="1506545634752" duration="7577000" />
+      <workItem from="1506569499179" duration="9596000" />
+      <workItem from="1506625436364" duration="41000" />
+      <workItem from="1506706437904" duration="12958000" />
+      <workItem from="1506743280849" duration="9904000" />
+      <workItem from="1506791572712" duration="2869000" />
+      <workItem from="1506796913466" duration="11619000" />
+      <workItem from="1506892916053" duration="971000" />
+      <workItem from="1507003092807" duration="11262000" />
+      <workItem from="1507051655385" duration="17088000" />
+      <workItem from="1507091235143" duration="10005000" />
+      <workItem from="1507137926213" duration="11895000" />
+      <workItem from="1507177584729" duration="16049000" />
+      <workItem from="1507194077947" duration="266000" />
+      <workItem from="1507234417379" duration="11331000" />
+      <workItem from="1507264158614" duration="15250000" />
+      <workItem from="1507301019857" duration="547000" />
+      <workItem from="1507317892594" duration="13041000" />
+      <workItem from="1507549491199" duration="11664000" />
+      <workItem from="1507575642831" duration="15970000" />
+      <workItem from="1507597069406" duration="289000" />
+      <workItem from="1507597550925" duration="592000" />
+      <workItem from="1507598185469" duration="1154000" />
+      <workItem from="1507624357889" duration="18080000" />
+      <workItem from="1507932871816" duration="435000" />
+      <workItem from="1508303817940" duration="3000" />
+    </task>
+    <task id="LOCAL-00292" summary="change in editUserProfile.html">
+      <created>1507581649939</created>
+      <option name="number" value="00292" />
+      <option name="presentableId" value="LOCAL-00292" />
+      <option name="project" value="LOCAL" />
+      <updated>1507581649939</updated>
+    </task>
+    <task id="LOCAL-00293" summary="change in css.css and editUserProfile.html">
+      <created>1507581988891</created>
+      <option name="number" value="00293" />
+      <option name="presentableId" value="LOCAL-00293" />
+      <option name="project" value="LOCAL" />
+      <updated>1507581988891</updated>
+    </task>
+    <task id="LOCAL-00294" summary="change in css.css and index.html">
+      <created>1507582714298</created>
+      <option name="number" value="00294" />
+      <option name="presentableId" value="LOCAL-00294" />
+      <option name="project" value="LOCAL" />
+      <updated>1507582714298</updated>
+    </task>
+    <task id="LOCAL-00295" summary="change in css.css and index.html">
+      <created>1507583242135</created>
+      <option name="number" value="00295" />
+      <option name="presentableId" value="LOCAL-00295" />
+      <option name="project" value="LOCAL" />
+      <updated>1507583242135</updated>
+    </task>
+    <task id="LOCAL-00296" summary="change in config.constant.js, config.router.js and index.html. Add inbox.html and inboxCtrl.js">
+      <created>1507583450145</created>
+      <option name="number" value="00296" />
+      <option name="presentableId" value="LOCAL-00296" />
+      <option name="project" value="LOCAL" />
+      <updated>1507583450145</updated>
+    </task>
+    <task id="LOCAL-00297" summary="change in css.css, style.css, inboxCtrl.js, restService.js, home.html and inbox.html">
+      <created>1507589539439</created>
+      <option name="number" value="00297" />
+      <option name="presentableId" value="LOCAL-00297" />
+      <option name="project" value="LOCAL" />
+      <updated>1507589539439</updated>
+    </task>
+    <task id="LOCAL-00298" summary="change in restService.js">
+      <created>1507590139336</created>
+      <option name="number" value="00298" />
+      <option name="presentableId" value="LOCAL-00298" />
+      <option name="project" value="LOCAL" />
+      <updated>1507590139336</updated>
+    </task>
+    <task id="LOCAL-00299" summary="change in inboxCtrl.js">
+      <created>1507590344862</created>
+      <option name="number" value="00299" />
+      <option name="presentableId" value="LOCAL-00299" />
+      <option name="project" value="LOCAL" />
+      <updated>1507590344863</updated>
+    </task>
+    <task id="LOCAL-00300" summary="change in inboxCtrl.js and userProfile.html">
+      <created>1507590582323</created>
+      <option name="number" value="00300" />
+      <option name="presentableId" value="LOCAL-00300" />
+      <option name="project" value="LOCAL" />
+      <updated>1507590582323</updated>
+    </task>
+    <task id="LOCAL-00301" summary="change in inboxCtrl.js and inbox.html">
+      <created>1507590797380</created>
+      <option name="number" value="00301" />
+      <option name="presentableId" value="LOCAL-00301" />
+      <option name="project" value="LOCAL" />
+      <updated>1507590797381</updated>
+    </task>
+    <task id="LOCAL-00302" summary="change in style.css, css.css and inbox.html">
+      <created>1507591614573</created>
+      <option name="number" value="00302" />
+      <option name="presentableId" value="LOCAL-00302" />
+      <option name="project" value="LOCAL" />
+      <updated>1507591614573</updated>
+    </task>
+    <task id="LOCAL-00303" summary="change in css.css">
+      <created>1507591705388</created>
+      <option name="number" value="00303" />
+      <option name="presentableId" value="LOCAL-00303" />
+      <option name="project" value="LOCAL" />
+      <updated>1507591705389</updated>
+    </task>
+    <task id="LOCAL-00304" summary="change in inbox.html">
+      <created>1507591830652</created>
+      <option name="number" value="00304" />
+      <option name="presentableId" value="LOCAL-00304" />
+      <option name="project" value="LOCAL" />
+      <updated>1507591830652</updated>
+    </task>
+    <task id="LOCAL-00305" summary="change in inbox.html">
+      <created>1507591918276</created>
+      <option name="number" value="00305" />
+      <option name="presentableId" value="LOCAL-00305" />
+      <option name="project" value="LOCAL" />
+      <updated>1507591918276</updated>
+    </task>
+    <task id="LOCAL-00306" summary="change in inbox.html and style.css">
+      <created>1507624853390</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1507624853390</updated>
+    </task>
+    <task id="LOCAL-00307" summary="change in inbox.html, css.css and style.css">
+      <created>1507625917672</created>
+      <option name="number" value="00307" />
+      <option name="presentableId" value="LOCAL-00307" />
+      <option name="project" value="LOCAL" />
+      <updated>1507625917673</updated>
+    </task>
+    <task id="LOCAL-00308" summary="change in inbox.html">
+      <created>1507626400133</created>
+      <option name="number" value="00308" />
+      <option name="presentableId" value="LOCAL-00308" />
+      <option name="project" value="LOCAL" />
+      <updated>1507626400133</updated>
+    </task>
+    <task id="LOCAL-00309" summary="change in inbox.html">
+      <created>1507626708632</created>
+      <option name="number" value="00309" />
+      <option name="presentableId" value="LOCAL-00309" />
+      <option name="project" value="LOCAL" />
+      <updated>1507626708632</updated>
+    </task>
+    <task id="LOCAL-00310" summary="change in inbox.html and inboxCtrl.js">
+      <created>1507627023713</created>
+      <option name="number" value="00310" />
+      <option name="presentableId" value="LOCAL-00310" />
+      <option name="project" value="LOCAL" />
+      <updated>1507627023713</updated>
+    </task>
+    <task id="LOCAL-00311" summary="change in inboxCtrl.js">
+      <created>1507627167326</created>
+      <option name="number" value="00311" />
+      <option name="presentableId" value="LOCAL-00311" />
+      <option name="project" value="LOCAL" />
+      <updated>1507627167326</updated>
+    </task>
+    <task id="LOCAL-00312" summary="change in inboxCtrl.js">
+      <created>1507627472268</created>
+      <option name="number" value="00312" />
+      <option name="presentableId" value="LOCAL-00312" />
+      <option name="project" value="LOCAL" />
+      <updated>1507627472268</updated>
+    </task>
+    <task id="LOCAL-00313" summary="change in Ctrls and index.html">
+      <created>1507627913420</created>
+      <option name="number" value="00313" />
+      <option name="presentableId" value="LOCAL-00313" />
+      <option name="project" value="LOCAL" />
+      <updated>1507627913420</updated>
+    </task>
+    <task id="LOCAL-00314" summary="change in inbox.html, css.css and inboxCtrl.js">
+      <created>1507629279099</created>
+      <option name="number" value="00314" />
+      <option name="presentableId" value="LOCAL-00314" />
+      <option name="project" value="LOCAL" />
+      <updated>1507629279099</updated>
+    </task>
+    <task id="LOCAL-00315" summary="change in inbox.html and inboxCtrl.js">
+      <created>1507629473234</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1507629473234</updated>
+    </task>
+    <task id="LOCAL-00316" summary="change in inbox.html">
+      <created>1507629755418</created>
+      <option name="number" value="00316" />
+      <option name="presentableId" value="LOCAL-00316" />
+      <option name="project" value="LOCAL" />
+      <updated>1507629755418</updated>
+    </task>
+    <task id="LOCAL-00317" summary="change in inbox.Ctrl.js">
+      <created>1507629895471</created>
+      <option name="number" value="00317" />
+      <option name="presentableId" value="LOCAL-00317" />
+      <option name="project" value="LOCAL" />
+      <updated>1507629895471</updated>
+    </task>
+    <task id="LOCAL-00318" summary="change in inbox.Ctrl.js and inbox.html">
+      <created>1507630076116</created>
+      <option name="number" value="00318" />
+      <option name="presentableId" value="LOCAL-00318" />
+      <option name="project" value="LOCAL" />
+      <updated>1507630076116</updated>
+    </task>
+    <task id="LOCAL-00319" summary="change in inbox.Ctrl.js and inbox.html">
+      <created>1507630598806</created>
+      <option name="number" value="00319" />
+      <option name="presentableId" value="LOCAL-00319" />
+      <option name="project" value="LOCAL" />
+      <updated>1507630598806</updated>
+    </task>
+    <task id="LOCAL-00320" summary="change in inbox.html">
+      <created>1507630811352</created>
+      <option name="number" value="00320" />
+      <option name="presentableId" value="LOCAL-00320" />
+      <option name="project" value="LOCAL" />
+      <updated>1507630811352</updated>
+    </task>
+    <task id="LOCAL-00321" summary="change in inbox.html and inboxCtrl.js">
+      <created>1507631080608</created>
+      <option name="number" value="00321" />
+      <option name="presentableId" value="LOCAL-00321" />
+      <option name="project" value="LOCAL" />
+      <updated>1507631080609</updated>
+    </task>
+    <task id="LOCAL-00322" summary="change in inbox.html">
+      <created>1507631212264</created>
+      <option name="number" value="00322" />
+      <option name="presentableId" value="LOCAL-00322" />
+      <option name="project" value="LOCAL" />
+      <updated>1507631212265</updated>
+    </task>
+    <task id="LOCAL-00323" summary="change in inbox.html">
+      <created>1507631309514</created>
+      <option name="number" value="00323" />
+      <option name="presentableId" value="LOCAL-00323" />
+      <option name="project" value="LOCAL" />
+      <updated>1507631309514</updated>
+    </task>
+    <task id="LOCAL-00324" summary="change in css.css and inbox.html">
+      <created>1507632695516</created>
+      <option name="number" value="00324" />
+      <option name="presentableId" value="LOCAL-00324" />
+      <option name="project" value="LOCAL" />
+      <updated>1507632695516</updated>
+    </task>
+    <task id="LOCAL-00325" summary="change in css.css and inbox.html">
+      <created>1507632808331</created>
+      <option name="number" value="00325" />
+      <option name="presentableId" value="LOCAL-00325" />
+      <option name="project" value="LOCAL" />
+      <updated>1507632808331</updated>
+    </task>
+    <task id="LOCAL-00326" summary="change in css.css and inbox.html">
+      <created>1507633874085</created>
+      <option name="number" value="00326" />
+      <option name="presentableId" value="LOCAL-00326" />
+      <option name="project" value="LOCAL" />
+      <updated>1507633874085</updated>
+    </task>
+    <task id="LOCAL-00327" summary="change in css.css and inbox.html">
+      <created>1507634071658</created>
+      <option name="number" value="00327" />
+      <option name="presentableId" value="LOCAL-00327" />
+      <option name="project" value="LOCAL" />
+      <updated>1507634071658</updated>
+    </task>
+    <task id="LOCAL-00328" summary="change in css.css and inbox.html">
+      <created>1507634360563</created>
+      <option name="number" value="00328" />
+      <option name="presentableId" value="LOCAL-00328" />
+      <option name="project" value="LOCAL" />
+      <updated>1507634360563</updated>
+    </task>
+    <task id="LOCAL-00329" summary="change in inboxCtrl.js and inbox.html">
+      <created>1507637934816</created>
+      <option name="number" value="00329" />
+      <option name="presentableId" value="LOCAL-00329" />
+      <option name="project" value="LOCAL" />
+      <updated>1507637934816</updated>
+    </task>
+    <task id="LOCAL-00330" summary="change in inbox.html">
+      <created>1507638104935</created>
+      <option name="number" value="00330" />
+      <option name="presentableId" value="LOCAL-00330" />
+      <option name="project" value="LOCAL" />
+      <updated>1507638104935</updated>
+    </task>
+    <task id="LOCAL-00331" summary="change in inbox.html">
+      <created>1507638263301</created>
+      <option name="number" value="00331" />
+      <option name="presentableId" value="LOCAL-00331" />
+      <option name="project" value="LOCAL" />
+      <updated>1507638263301</updated>
+    </task>
+    <task id="LOCAL-00332" summary="change in css.css and inbox.html">
+      <created>1507638575706</created>
+      <option name="number" value="00332" />
+      <option name="presentableId" value="LOCAL-00332" />
+      <option name="project" value="LOCAL" />
+      <updated>1507638575706</updated>
+    </task>
+    <task id="LOCAL-00333" summary="change in css.css and inbox.html">
+      <created>1507639044912</created>
+      <option name="number" value="00333" />
+      <option name="presentableId" value="LOCAL-00333" />
+      <option name="project" value="LOCAL" />
+      <updated>1507639044912</updated>
+    </task>
+    <task id="LOCAL-00334" summary="change in css.css and inbox.html">
+      <created>1507639256773</created>
+      <option name="number" value="00334" />
+      <option name="presentableId" value="LOCAL-00334" />
+      <option name="project" value="LOCAL" />
+      <updated>1507639256773</updated>
+    </task>
+    <task id="LOCAL-00335" summary="change in css.css, inboxCtrl.js and inbox.html">
+      <created>1507639725701</created>
+      <option name="number" value="00335" />
+      <option name="presentableId" value="LOCAL-00335" />
+      <option name="project" value="LOCAL" />
+      <updated>1507639725701</updated>
+    </task>
+    <task id="LOCAL-00336" summary="change in css.cssand inbox.html">
+      <created>1507639956750</created>
+      <option name="number" value="00336" />
+      <option name="presentableId" value="LOCAL-00336" />
+      <option name="project" value="LOCAL" />
+      <updated>1507639956750</updated>
+    </task>
+    <task id="LOCAL-00337" summary="change in inboxCtrl.js">
+      <created>1507640183710</created>
+      <option name="number" value="00337" />
+      <option name="presentableId" value="LOCAL-00337" />
+      <option name="project" value="LOCAL" />
+      <updated>1507640183710</updated>
+    </task>
+    <task id="LOCAL-00338" summary="change in css.css, style.css, inboxCtrl.js, restService.js and inbox.html">
+      <created>1507643367333</created>
+      <option name="number" value="00338" />
+      <option name="presentableId" value="LOCAL-00338" />
+      <option name="project" value="LOCAL" />
+      <updated>1507643367333</updated>
+    </task>
+    <task id="LOCAL-00339" summary="change in inbox.html">
+      <created>1507646378851</created>
+      <option name="number" value="00339" />
+      <option name="presentableId" value="LOCAL-00339" />
+      <option name="project" value="LOCAL" />
+      <updated>1507646378851</updated>
+    </task>
+    <task id="LOCAL-00340" summary="change in css.css and inbox.html">
+      <created>1507646886166</created>
+      <option name="number" value="00340" />
+      <option name="presentableId" value="LOCAL-00340" />
+      <option name="project" value="LOCAL" />
+      <updated>1507646886166</updated>
+    </task>
+    <option name="localTasksCounter" value="341" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="261251000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2489019" sideWeight="0.4942717" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32761312" sideWeight="0.5" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3280757" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917318" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289689" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5057283" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Reviews" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Grunt " active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5057283" order="4" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="News Feed" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="CSS-X-Fire" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="change in userProfile.html and viewProfile.html" />
+    <MESSAGE value="change in css.css userProfile.html and editUserProfile.html" />
+    <MESSAGE value="change in editUserProfile.html" />
+    <MESSAGE value="change in css.css and editUserProfile.html" />
+    <MESSAGE value="change in css.css and index.html" />
+    <MESSAGE value="change in config.constant.js, config.router.js and index.html. Add inbox.html and inboxCtrl.js" />
+    <MESSAGE value="change in css.css, style.css, inboxCtrl.js, restService.js, home.html and inbox.html" />
+    <MESSAGE value="change in restService.js" />
+    <MESSAGE value="change in inboxCtrl.js and userProfile.html" />
+    <MESSAGE value="change in style.css, css.css and inbox.html" />
+    <MESSAGE value="change in css.css" />
+    <MESSAGE value="change in inbox.html and style.css" />
+    <MESSAGE value="change in inbox.html, css.css and style.css" />
+    <MESSAGE value="change in Ctrls and index.html" />
+    <MESSAGE value="change in inbox.html, css.css and inboxCtrl.js" />
+    <MESSAGE value="change in inbox.Ctrl.js" />
+    <MESSAGE value="change in inbox.Ctrl.js and inbox.html" />
+    <MESSAGE value="change in inbox.html and inboxCtrl.js" />
+    <MESSAGE value="change in inboxCtrl.js and inbox.html" />
+    <MESSAGE value="change in css.css, inboxCtrl.js and inbox.html" />
+    <MESSAGE value="change in css.cssand inbox.html" />
+    <MESSAGE value="change in inboxCtrl.js" />
+    <MESSAGE value="change in css.css, style.css, inboxCtrl.js, restService.js and inbox.html" />
+    <MESSAGE value="change in inbox.html" />
+    <MESSAGE value="change in css.css and inbox.html" />
+    <option name="LAST_COMMIT_MESSAGE" value="change in css.css and inbox.html" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/closeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="25" lean-forward="false" selection-start-line="19" selection-start-column="17" selection-end-line="19" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/addSnippetsCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="54" selection-end-line="6" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/form-image-cropping.js" />
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-image-crop/image-cropper.js" />
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/registrationCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="25" column="34" lean-forward="false" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/swiper/dist/js/swiper.jquery.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/sticky-kit/jquery.sticky-kit.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/assets/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="4" column="13027" lean-forward="false" selection-start-line="4" selection-start-column="13027" selection-end-line="4" selection-end-column="13027" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/less/scaffolding.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="80" column="1" lean-forward="false" selection-start-line="80" selection-start-column="1" selection-end-line="80" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="1129" column="15" lean-forward="true" selection-start-line="1129" selection-start-column="15" selection-end-line="1129" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/images/768.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/animations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/magnific-popup/dist/jquery.magnific-popup.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1105">
+          <caret line="1" column="4" lean-forward="false" selection-start-line="1" selection-start-column="4" selection-end-line="1" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/angular-ui-router/src/viewDirective.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1830">
+          <caret line="350" column="44" lean-forward="false" selection-start-line="350" selection-start-column="44" selection-end-line="350" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/animationsCtrl.js" />
+    <entry file="file://$PROJECT_DIR$/bower_components/oclazyload/dist/ocLazyLoad.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-816">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/countto/jquery.countTo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="37" column="35" lean-forward="true" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="322">
+          <caret line="54" column="45" lean-forward="true" selection-start-line="54" selection-start-column="45" selection-end-line="54" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6188">
+          <caret line="617" column="8" lean-forward="false" selection-start-line="617" selection-start-column="8" selection-end-line="617" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/bootstrap/dist/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="4" column="15869" lean-forward="false" selection-start-line="4" selection-start-column="15869" selection-end-line="4" selection-end-column="15869" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-img-crop/source/scss/ng-img-crop.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-img-crop/source/js/init.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="26" lean-forward="false" selection-start-line="2" selection-start-column="26" selection-end-line="2" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-img-crop/compile/unminified/ng-img-crop.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="1746" column="9" lean-forward="true" selection-start-line="1746" selection-start-column="9" selection-end-line="1746" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/ng-img-crop/compile/minified/ng-img-crop.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="95" lean-forward="false" selection-start-line="0" selection-start-column="80" selection-end-line="0" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/exploreUsers.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="132" lean-forward="false" selection-start-line="5" selection-start-column="132" selection-end-line="5" selection-end-column="132" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/font-awesome/less/icons.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="161" column="55" lean-forward="false" selection-start-line="161" selection-start-column="55" selection-end-line="161" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bower_components/font-awesome/less/variables.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="200" column="19" lean-forward="false" selection-start-line="200" selection-start-column="19" selection-end-line="200" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/addSocialNetworkCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="108" column="33" lean-forward="false" selection-start-line="108" selection-start-column="27" selection-end-line="108" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/config.constant.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/config.router.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="568">
+          <caret line="51" column="40" lean-forward="false" selection-start-line="51" selection-start-column="40" selection-end-line="51" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/viewProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="37" column="67" lean-forward="false" selection-start-line="37" selection-start-column="58" selection-end-line="37" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/editUserProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="143" column="104" lean-forward="false" selection-start-line="143" selection-start-column="104" selection-end-line="143" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../AngularJs-Admin/STANDARD/assets/js/controllers/inboxCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="161" column="20" lean-forward="false" selection-start-line="161" selection-start-column="13" selection-end-line="161" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/userProfile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Documentation/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="2465" column="31" lean-forward="true" selection-start-line="2465" selection-start-column="31" selection-end-line="2465" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="8" lean-forward="false" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/exploreUsersCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="355">
+          <caret line="74" column="36" lean-forward="true" selection-start-line="74" selection-start-column="36" selection-end-line="74" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/editUserProfileCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/viewProfileCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/userProfileCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/homeCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="663">
+          <caret line="39" column="11" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="39" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="25432">
+          <caret line="1496" column="19" lean-forward="false" selection-start-line="1496" selection-start-column="19" selection-end-line="1496" selection-end-column="19" />
+          <folding>
+            <marker date="1507932935802" expanded="true" signature="295453:295456" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="295482:295508" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="295543:295736" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="295784:295825" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="295880:295936" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="295983:296363" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296418:296438" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296465:296545" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296483:296543" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296561:296731" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296758:296813" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296779:296811" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="296843:296985" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297021:297086" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297111:297596" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297623:297822" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297653:297820" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297857:297904" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="297946:298008" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="298039:298066" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="298109:298252" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="298331:298420" ph="/*...*/" />
+            <marker date="1507932935802" expanded="true" signature="298446:298539" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="298618:298706" ph="/*...*/" />
+            <marker date="1507932935802" expanded="true" signature="298732:298832" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="298911:299002" ph="/*...*/" />
+            <marker date="1507932935802" expanded="true" signature="299016:299057" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299112:299269" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299297:299333" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299361:299397" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299429:299493" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299525:299694" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299713:299771" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299802:299837" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299853:299912" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="299931:299977" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="300001:300024" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="300068:300246" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="300267:300366" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="300762:300796" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="300971:301056" ph="/*...*/" />
+            <marker date="1507932935802" expanded="true" signature="301076:301104" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301131:301229" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301264:301414" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301611:301689" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301710:301756" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301783:301806" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301821:301877" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="301894:301999" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302099:302123" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302159:302230" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302312:302369" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302392:302460" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302551:302604" ph="{...}" />
+            <marker date="1507932935802" expanded="true" signature="302626:302652" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/services/restService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4505">
+          <caret line="265" column="56" lean-forward="false" selection-start-line="265" selection-start-column="56" selection-end-line="265" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/js/controllers/inboxCtrl.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="144" column="0" lean-forward="false" selection-start-line="144" selection-start-column="0" selection-end-line="144" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/assets/css/css.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17425">
+          <caret line="1025" column="22" lean-forward="false" selection-start-line="1025" selection-start-column="22" selection-end-line="1025" selection-end-column="22" />
+          <folding>
+            <marker date="1507932936078" expanded="true" signature="839:2314" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="2251:2314" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19351:19367" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19396:19496" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19414:19494" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19516:19584" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19608:19639" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19654:19754" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19769:19836" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19857:19956" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="19979:20055" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20073:20141" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20156:20249" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20267:20335" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20360:20497" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20513:20558" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20570:20615" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20626:20705" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20722:20759" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20776:20866" ph="{...}" />
+            <marker date="1507932936078" expanded="true" signature="20884:20975" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/HTML/views/inbox.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="324">
+          <caret line="77" column="21" lean-forward="false" selection-start-line="77" selection-start-column="21" selection-end-line="77" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
