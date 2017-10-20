@@ -879,7 +879,7 @@ img-crop canvas {
 }
 
 .SocialList:hover {
-    opacity: 0 !important;
+    opacity: 1.0 !important;
 }
 
 .HoverWhite {
