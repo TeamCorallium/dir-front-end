@@ -15,18 +15,18 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
     // var messages = 'http://10.58.20.225/messages/';
 
-    var tshirt = 'http://10.8.25.244/tshirts/';
-    var users = 'http://10.8.25.244/users/';
-    var profiles = 'http://10.8.25.244/profiles/';
-    var login = 'http://10.8.25.244/api-auth/login/';
-    var loginNext = 'http://10.8.25.244/api-auth/login/?next=/';
-    var register = 'http://10.8.25.244/api-auth/register/';
-    var snippets = 'http://10.8.25.244/snippets/';
-    var socialnetwork = 'http://10.8.25.244/socialnetworks/';
-    var imageDir = 'http://10.8.25.244:8080/images/';
-    var imageDownload = 'http://10.8.25.244/api/qrcode';
-    var updateWithOutImage = 'http://10.8.25.244/api/updateprofile';
-    var messages = 'http://10.8.25.244/messages/';
+    var tshirt = 'http://tony850421.webfactional.com:8888/tshirts/';
+    var users = 'http://tony850421.webfactional.com:8888/users/';
+    var profiles = 'http://tony850421.webfactional.com:8888/profiles/';
+    var login = 'http://tony850421.webfactional.com:8888/api-auth/login/';
+    var loginNext = 'http://tony850421.webfactional.com:8888/api-auth/login/?next=/';
+    var register = 'http://tony850421.webfactional.com:8888/api-auth/register/';
+    var snippets = 'http://tony850421.webfactional.com:8888/snippets/';
+    var socialnetwork = 'http://tony850421.webfactional.com:8888/socialnetworks/';
+    var imageDir = 'http://tony850421.webfactional.com/images/';
+    var imageDownload = 'http://tony850421.webfactional.com:8888/api/qrcode';
+    var updateWithOutImage = 'http://tony850421.webfactional.com:8888/api/updateprofile';
+    var messages = 'http://tony850421.webfactional.com:8888/messages/';
 
     return {
         loginNext: loginNext,
@@ -40,6 +40,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
         messageDir: messages,
 
         getCookie: function (name) {
+            console.log($cookies.getAll());
             return $cookies.get('csrftoken');
         },
 
