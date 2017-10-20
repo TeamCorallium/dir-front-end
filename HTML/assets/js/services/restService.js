@@ -358,7 +358,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         return response.data;
                     },
                     function(errResponse){
-                        console.error('Error while fetching tshirts');
+                        console.error('Error while fetching social networks');
                         return $q.reject(errResponse);
                     }
                 );
@@ -371,7 +371,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                         return response.data;
                     },
                     function(errResponse){
-                        console.error('Error while fetching tshirts');
+                        console.error('Error while fetching snippets');
                         return $q.reject(errResponse);
                     }
                 );
