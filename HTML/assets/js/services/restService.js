@@ -351,7 +351,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 );
         },
 
-        fetchSocialNetworks: function(code) {
+        fetchSocialNetworks: function(username) {
             return $http.get(socialnetwork + "?username=" + username)
                 .then(
                     function(response){
@@ -364,7 +364,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 );
         },
 
-        fetchSnippets: function(code) {
+        fetchSnippets: function(username) {
             return $http.get(snippets + "?username=" + username)
                 .then(
                     function(response){
