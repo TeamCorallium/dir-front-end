@@ -878,6 +878,10 @@ img-crop canvas {
     border-radius: 10px;
 }
 
+.SocialList:hover {
+    opacity: 0 !important;
+}
+
 .HoverWhite {
     color: #FFFFFF !important;
 }
@@ -978,7 +982,8 @@ ul li a.social-ti-foursquare {
 }
 
 .ColorNavBar {
-    background-color: #F3F3F3 !important;
+    background-color: #EBEBEB !important;
+    height: 65px !important;
 }
 
 .ButtonRadius {
