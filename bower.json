@@ -67,6 +67,7 @@
     "angular-image-crop": "angular-image-cropper#*",
     "jquery-countTo": "countto#^1.2.0",
     "angular-count-to": "*",
-    "ng-img-crop": "ngImgCrop#^0.3.2"
+    "ng-img-crop": "ngImgCrop#^0.3.2",
+    "ng-timeago": "^0.0.2"
   }
 }

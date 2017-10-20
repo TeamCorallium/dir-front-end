@@ -60,7 +60,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                                 $scope.getProfile(data[0].profiles[0]);
                             }
                             // $scope.getTshirts(data[0].tshirts);
-                            $scope.getSnippets(data[0].username);
+                            getSnippets(data[0].username);
                             getSocialNetworks(data[0].username);
 
                         } else {
