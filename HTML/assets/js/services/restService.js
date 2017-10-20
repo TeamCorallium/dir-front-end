@@ -15,6 +15,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
     // var messages = 'http://10.58.20.225/messages/';
 
+<<<<<<< HEAD
     var tshirt = 'http://tony850421.webfactional.com:8888/tshirts/';
     var users = 'http://tony850421.webfactional.com:8888/users/';
     var profiles = 'http://tony850421.webfactional.com:8888/profiles/';
@@ -27,6 +28,20 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var imageDownload = 'http://tony850421.webfactional.com:8888/api/qrcode';
     var updateWithOutImage = 'http://tony850421.webfactional.com:8888/api/updateprofile';
     var messages = 'http://tony850421.webfactional.com:8888/messages/';
+=======
+    var tshirt = 'http://www.dir.com:8888/tshirts/';
+    var users = 'http://www.dir.com:8888/users/';
+    var profiles = 'http://www.dir.com:8888/profiles/';
+    var login = 'http://www.dir.com:8888/api-auth/login/';
+    var loginNext = 'http://www.dir.com:8888/api-auth/login/?next=/';
+    var register = 'http://www.dir.com:8888/api-auth/register/';
+    var snippets = 'http://www.dir.com:8888/snippets/';
+    var socialnetwork = 'http://www.dir.com:8888/socialnetworks/';
+    var imageDir = 'http://www.dir.com/images/';
+    var imageDownload = 'http://www.dir.com:8888/api/qrcode';
+    var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
+    var messages = 'http://www.dir.com:8888/messages/';
+>>>>>>> 8b7634542cffb910d74a6d5dda3be2a83565db48
 
     return {
         loginNext: loginNext,
