@@ -1040,6 +1040,14 @@ a.ButtonImageSize {
     color: #5b5b60;
 }
 
+.MessageSubjectNoFound {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+    opacity: 0.5;
+    text-align: center;
+}
+
 .MessageTime {
     right: 15px;
     top: 8px;
@@ -1060,8 +1068,6 @@ a.ButtonImageSize {
     padding-top: 50px;
     background-color: #FFFFFF !important;
 }
-
-
 
 .OptionsBox {
     background-color: #ffffff !important;
@@ -1092,10 +1098,6 @@ a.ButtonImageSize {
     display: block;
     position: relative;
     float: left;
-}
-
-.MessageBox {
-
 }
 
 .NoMessage {
