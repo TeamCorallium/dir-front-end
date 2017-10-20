@@ -43,8 +43,8 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                                 getProfile(data[0].profiles[0]);
                             }
                             // getTshirts(data[0].tshirts);
-                            getSnippets(data[0].snippets);
-                            getSocialNetworks(data[0].socialnetworks);
+                            getSnippets(data[0].username);
+                            getSocialNetworks(data[0].username);
 
                         } else {
                             $state.go('home');
@@ -99,33 +99,34 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             }
         };
 
-        var getSnippets = function (urls) {
-            for (var i=0; i<urls.length; i++){
-                RestService.fetchObjectByUrl(urls[i])
-                    .then(
-                        function (data) {
-                            data.body = replaceURLWithHTMLLinks(data.body);
-                            $scope.user.snippets.push(data);
-                        },
-                        function (errResponse) {
-                            console.log(errResponse);
+        var getSnippets = function (username) {
+            RestService.fetchSnippets(username)
+                .then(
+                    function (data) {
+                        for (var i=0; i<data.length; i++){
+                            data[i].body = replaceURLWithHTMLLinks(data[i].body);
+                            $scope.user.socialnetworks.push(data[i]);
                         }
-                    );
-            }
+                        
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
         };
 
-        var getSocialNetworks = function (urls) {
-            for (var i=0; i<urls.length; i++){
-                RestService.fetchObjectByUrl(urls[i])
-                    .then(
-                        function (data) {
-                            $scope.user.socialnetworks.push(data);
-                        },
-                        function (errResponse) {
-                            console.log(errResponse);
-                        }
-                    );
-            }
+        var getSocialNetworks = function (username) {
+            RestService.fetchSocialNetworks(username)
+                .then(
+                    function (data) {
+                        for (var i=0; i<data.length; i++){
+                            $scope.user.socialnetworks.push(data[i]);
+                        }                        
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
         };
 
         var replaceURLWithHTMLLinks = function(text) {
