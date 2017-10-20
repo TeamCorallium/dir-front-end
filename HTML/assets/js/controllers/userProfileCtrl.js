@@ -105,7 +105,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                     function (data) {
                         for (var i=0; i<data.length; i++){
                             data[i].body = replaceURLWithHTMLLinks(data[i].body);
-                            $scope.user.socialnetworks.push(data[i]);
+                            $scope.user.snippets.push(data[i]);
                         }
                         
                     },
