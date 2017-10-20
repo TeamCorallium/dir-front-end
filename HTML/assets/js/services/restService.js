@@ -99,49 +99,7 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                 console.log("Entra al error");
             });
         },
-
-        fetchSocialNetworks: function (username) {
-            $http({
-                method: 'GET',
-                url: socialnetwork,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                transformRequest: function(obj) {
-                    var str = [];
-                    for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {'username': username}
-            }).success(function (data) {
-                $rootScope.$broadcast('FetchSocialNetworks');
-            }).error(function(response){
-                console.log("Entra al error fetch social network");
-            });
-        },
-
-        fetchSnippets: function (username) {
-            $http({
-                method: 'GET',
-                url: snippets,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                transformRequest: function(obj) {
-                    var str = [];
-                    for(var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {'username': username}
-            }).success(function (data) {
-                $rootScope.$broadcast('FetchSnippets');
-            }).error(function(response){
-                console.log("Entra al error fetch social network");
-            });
-        },
-
+        
         addSnippet: function (title, body) {
             $http({
                 method: 'POST',
@@ -388,6 +346,32 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     },
                     function(errResponse){
                         console.error('Error while fetching user');
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchSocialNetworks: function(code) {
+            return $http.get(socialnetwork + "?username=" + username)
+                .then(
+                    function(response){
+                        return response.data;
+                    },
+                    function(errResponse){
+                        console.error('Error while fetching tshirts');
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchSnippets: function(code) {
+            return $http.get(snippets + "?username=" + username)
+                .then(
+                    function(response){
+                        return response.data;
+                    },
+                    function(errResponse){
+                        console.error('Error while fetching tshirts');
                         return $q.reject(errResponse);
                     }
                 );
