@@ -36,7 +36,7 @@
                                 <span class="MessageSubject"> {{message.subject}}</span>
                             </div>
                             <div>
-                                <span class="MessageContent"> {{message.body | htmlToPlaintext | words:20 :true}}</span>
+                                <span class="MessageContent"> {{message.body | cut:true:20:' ...'}}</span>
                             </div>
                         </div>
                     </a>
