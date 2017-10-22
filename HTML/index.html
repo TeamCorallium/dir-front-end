@@ -293,18 +293,21 @@
         <!-- end: MODAL SNIPPETS-->
 
         <!-- start: MODAL SOCIAL NETWORK-->
-        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
+        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" 
+        aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header padding-15">
-                        <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                        <button type="button" class="close margin-top--10" data-dismiss="modal" 
+                        aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title">Add Social Network</h4>
                     </div>
                     <div class="modal-body padding-15">
                         <div class="form-group">
-                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork">
+                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" 
+                            ng-model="socialnetwork" id="socialnetwork">
                                 <option value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
                                 <option value="Twitter">Twitter</option>
@@ -312,21 +315,21 @@
                                 <option value="Reddit">Reddit</option>
                                 <option value="Google">Google+</option>
                                 <option value="YouTube">YouTube</option>
-                                <option value="RSS">RSS</option>
-                                <option value="Behance">Behance</option>
+                                <option value="RSS">RSS</option>                                
                                 <option value="Dropbox">Dropbox</option>
                                 <option value="GitHub">GitHub</option>
-                                <option value="Skype">Skype</option>
-                                <option value="Spotify">Spotify</option>
-                                <option value="StumbleUpon">StumbleUpon</option>
+                                <option value="Skype">Skype</option>                                
                                 <option value="Tumblr">Tumblr</option>
                                 <option value="Vimeo">Vimeo</option>
-                                <option value="WordPress">WordPress</option>
-                                <option value="Xing">Xing</option>
-                                <option value="Yahoo">Yahoo</option>
-                                <option value="VK">VK</option>
+                                <option value="WordPress">WordPress</option>                                
+                                <option value="Yahoo">Yahoo</option>                                
                                 <option value="Flickr">Flickr</option>
-                                <option value="Foursquare">Foursquare</option>
+                                <!-- <option value="Foursquare">Foursquare</option> -->
+                                <!-- <option value="Behance">Behance</option> -->
+                                <!-- <option value="VK">VK</option> -->
+                                <!-- <option value="Xing">Xing</option> -->
+                                <!-- <option value="Spotify">Spotify</option>
+                                <option value="StumbleUpon">StumbleUpon</option> -->
                             </select>
                         </div>
                         <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url">
