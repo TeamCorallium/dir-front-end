@@ -750,7 +750,7 @@
     }
 
     .image_middle {
-        margin-left: 05% !important;
+        margin-left: 5% !important;
         float: left !important;
         height: 120px !important;
         width: 120px !important;
@@ -874,7 +874,6 @@ img-crop canvas {
     left: 0;
     text-align: center;
     color: #FFFFFF;
-    content: "\e741";
     border-radius: 10px;
 }
 
@@ -1108,4 +1107,25 @@ a.ButtonImageSize {
     position: relative;
     right: 0;
     text-align: center;
+}
+
+.IconSnippet {
+    width: 20px !important;
+    height: 20px !important;
+}
+
+.IconSnippetBox {
+    width: 25px !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.TitleSnippetBox {
+    width: auto !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
 }

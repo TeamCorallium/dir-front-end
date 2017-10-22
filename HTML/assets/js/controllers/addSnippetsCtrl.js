@@ -9,7 +9,9 @@ app.controller('AddSnippetsCtrl',["$rootScope", "$scope", "RestService", "$state
     $scope.snippets = '';
 
     $scope.addSnippets = function (title,body) {
-        RestService.addSnippet(title,body);
+        if (title != '' && body!= ''){
+            RestService.addSnippet(title,body);
+        }
     };
 
     }]);

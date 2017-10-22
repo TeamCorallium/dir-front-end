@@ -23,6 +23,7 @@
   "license": "Envato REGULAR LICENSE",
   "dependencies": {
     "angular-img-cropper": "0.0.2",
+    "angular-timeago": "^0.4.6",
     "ng-file-upload": "^12.2.13"
   },
   "devDependencies": {
