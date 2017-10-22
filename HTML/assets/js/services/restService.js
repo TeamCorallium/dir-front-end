@@ -36,11 +36,11 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
     var register = 'http://tony850421.webfactional.com/api-auth/register/';
     var snippets = 'http://tony850421.webfactional.com/snippets/';
     var socialnetwork = 'http://tony850421.webfactional.com/socialnetworks/';
-    var imageDir = 'http://www.dir.com/images/';
+    var imageDir = 'http://tony850421.webfactional.com/dir/images/';
     var imageDownload = 'http://tony850421.webfactional.com/api/qrcode';
     var updateWithOutImage = 'http://tony850421.webfactional.com/api/updateprofile';
     var messages = 'http://tony850421.webfactional.com/messages/';
-    
+
     return {
         loginNext: loginNext,
 
