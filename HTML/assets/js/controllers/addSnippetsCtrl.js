@@ -11,6 +11,8 @@ app.controller('AddSnippetsCtrl',["$rootScope", "$scope", "RestService", "$state
     $scope.addSnippets = function (title,body) {
         if (title != '' && body!= ''){
             RestService.addSnippet(title,body);
+        } else {
+            // throw toaster
         }
     };
 

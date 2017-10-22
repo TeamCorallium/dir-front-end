@@ -11,7 +11,7 @@ app.run(['$rootScope','$cookies',
         $rootScope.viewProfile = true;
 
         $rootScope.userdata = {
-            username: '',
+            username: 'USER',
             connected: false
         };
 
@@ -26,7 +26,7 @@ app.run(['$rootScope','$cookies',
         });
 
         $rootScope.$on('logout',function (event, data) {
-            $rootScope.userdata.username = '';
+            $rootScope.userdata.username = 'USER';
             $rootScope.userdata.connected = false;
         });
     }]);

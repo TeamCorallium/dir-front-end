@@ -10,7 +10,6 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
     $scope.url = '';
 
         $scope.updateUrl = function () {
-
             switch($scope.socialnetwork) {
                 case "Facebook": {
                     $scope.url = 'https://www.facebook.com/';
@@ -119,6 +118,8 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
                 }
     
                 RestService.addSocialNetwork(name,url,type);
+            } else {
+                // throw toaster
             }
         };
 
