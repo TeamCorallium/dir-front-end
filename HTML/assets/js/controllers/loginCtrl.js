@@ -4,15 +4,7 @@
 'use strict';
 
 app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$cookies',
-    function ($scope, RestService, $state, $rootScope, $cookies) {
-
-        console.log($rootScope.userdata.username + " username");
-
-        if ($rootScope.userdata.username != '') {
-            $rootScope.userdata.username = $cookies.get('username');
-        } else {
-            $rootScope.userdata.username = 'USER';
-        }
+    function ($scope, RestService, $state, $rootScope, $cookies) {        
 
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
