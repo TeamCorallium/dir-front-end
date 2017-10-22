@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "ngtimeago",
-    function ($rootScope, $scope, $stateParams,RestService, $state, $cookies, $window, ngtimeago) {
+app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
+    function ($rootScope, $scope, $stateParams,RestService, $state, $cookies, $window) {
 
         $scope.user = {
             username: '',
