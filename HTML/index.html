@@ -62,11 +62,11 @@
                         <img src="assets/images/logo.png">
                     </a>
                     <!-- end: LOGO -->
-                    <ul class="nav navbar-nav navbar-right" ng-controller="LoginCtrl">
+                    <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle">
+                            <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
                                 <i class="ti-user"></i>  {{userdata.username}}</a>
-                            <ul class="dropdown-menu">
+                            <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                 <li>
                                     <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
                                 </li>
