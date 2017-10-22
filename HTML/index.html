@@ -64,9 +64,7 @@
                     <!-- end: LOGO -->
                     <ul class="nav navbar-nav navbar-right">
                         <li class="dropdown">
-                            <a data-toggle="dropdown" class="dropdown-toggle" ng-show="userdata.username == ''">
-                                <i class="ti-user"></i>  User </a>
-                            <a data-toggle="dropdown" class="dropdown-toggle" ng-show="userdata.username != ''">
+                            <a data-toggle="dropdown" class="dropdown-toggle">
                                 <i class="ti-user"></i>  {{userdata.username}} </a>
                             <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                 <li>
