@@ -3,7 +3,7 @@
  */
 'use strict';
 
-angular.module("pulloverDir",[
+angular.module("pulloverDir", [
     'ui.router',
     'ui.bootstrap',
     'oc.lazyLoad',
