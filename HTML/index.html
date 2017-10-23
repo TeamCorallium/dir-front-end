@@ -4,6 +4,7 @@
 <!--[if IE 9]><html class="ie9" lang="en"><![endif]-->
 <html lang="en" ng-app="dirApp">
 <!-- start: HEAD -->
+
 <head>
     <title> T-shirt &#60;DIR&#62;</title>
     <!-- start: META -->
@@ -28,472 +29,482 @@
     <link href="../bower_components/angular-growl-v2/build/angular-growl.css" rel="stylesheet" media="screen" />
 
     <!-- css: ANGULAR NngImgCrop-->
-    <link href="/bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet" media="screen"/>
+    <link href="/bower_components/ng-img-crop/compile/minified/ng-img-crop.css" rel="stylesheet" media="screen" />
 
     <link href="assets/css/styles.css" rel="stylesheet" media="screen">
     <link href="assets/css/plugins.css" rel="stylesheet" media="screen">
     <link href="assets/css/css.css" rel="stylesheet" media="screen">
     <!-- end: MAIN CSS -->
     <!-- start: FAVICON -->
-    <link rel="shortcut icon" href="assets/images/favicon.ico"/>
+    <link rel="shortcut icon" href="assets/images/favicon.ico" />
     <!-- end: FAVICON -->
 </head>
 <!-- end: HEAD -->
+
 <body>
-<div growl></div>
-<span us-spinner="{radius:30, width:8, length: 16}"></span>
-<div id="app">
-    <!-- start: HEADER -->
-    <header class="small-header height-50">
-        <div class="navbar navbar-default" role="navigation">
-            <!-- start: TOP NAVIGATION CONTAINER -->
-            <div class="container">
-                <div class="navbar-header">
-                    <!-- start: RESPONSIVE MENU TOGGLER -->
-                    <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <i class="ti-align-justify"></i>
-                    </a>
-                    <!-- end: RESPONSIVE MENU TOGGLER -->
-                    <!-- start: RESPONSIVE MENU SEARCH -->
-                </div>
-                <!-- start: NAVBAR -->
-                <div class="navbar-collapse collapse margin-left-0">
-                    <!-- start: LOGO -->
-                    <a ui-sref="home" class="navbar-brand float-left">
-                        <img src="assets/images/logo.png">
-                    </a>
-                    <!-- end: LOGO -->
-                    <ul class="nav navbar-nav navbar-right">
-                        <li class="dropdown">
-                            <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                            <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
-                                <i class="ti-user"></i>  {{userdata.username}}</a>
-                            <ul class="dropdown-menu" ng-controller="LoginCtrl">
-                                <li>
-                                    <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
-                                </li>
-                                <li>
-                                    <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewProfile == false))"> Edit Profile</a>
-                                </li>
-                                <li>
-                                    <a ng-show="userdata.connected" ui-sref="inbox"><i class="ti-email"></i> Inbox</a>
-                                </li>
-                                <li>
-                                    <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
-                                </li>
-                                <li>
-                                    <a data-toggle="modal" data-target="#myModalRegisterHome" ng-hide="userdata.connected"> Register</a>
-                                </li>
-                                <li>
-                                    <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a><i class="ti-shopping-cart"></i> Buy </a>
-                        </li>
-                    </ul><!-- start: TOP BAR SOCIAL ICONS -->
-                    <div class="social-icons hidden-xs">
-                        <ul class="nav navbar-nav navbar-right padding-top-3">
-                            <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
-                                <a href="http://www.twitter.com" target="_blank"> Twitter </a>
-                            </li>
-                            <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
-                                <a href="http://dribbble.com" target="_blank"> Dribbble </a>
-                            </li>
-                            <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
-                                <a href="http://facebook.com" target="_blank"> Facebook </a>
-                            </li>
-                            <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
-                                <a href="http://google.com" target="_blank"> Google+ </a>
-                            </li>
-                            <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
-                            </li>
-                            <li class="padding-top-10 padding-left-15 padding-right-15">
-                                <h4>|</h4>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- end: TOP BAR SOCIAL ICONS -->
-
-                    <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
-                    <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                        <div class="arrow-left"></div>
-                        <div class="arrow-right"></div>
-                    </div>
-                    <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
-                </div>
-                <!-- end: NAVBAR -->
-            </div>
-            <!-- end: TOP NAVIGATION CONTAINER -->
-            <div id="overlay-search">
-                <form method="get" action="search.html">
-                    <input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
-                </form>
-                <a href="#" class="pull-right margin-right-20 close-search mobile-button" data-toggle-target="body" data-toggle-class="search-open"> <i class="ti-close"></i> </a>
-            </div>
-        </div>
-    </header>
-    <div class="app-content">
-        <div ui-view></div>
-
-        <!-- start: MODAL REGISTER-->
-        <div class="modal fade login-register-form" id="myModal" role="dialog">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header" ng-controller="CloseCtrl">
-                        <div class="modal-header padding-15">
-                            <a type="button" class="close margin-top--10" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </a>
-                            <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
-                        </div>
-                    </div>
-                    <div class="modal-body">                        
-                        <form name="RegisterTshirt" role="form" ng-controller="FormController">
-                            <div class="form-group">
-                                <label for="emailHome">Email</label>        
-                                <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
-                                <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="Enter Email Address" ng-required="true" ng-model="emailHome">
-                            </div>
-                            <div class="form-group">
-                                <label for="username">Username</label>
-                                <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="Enter your username" ng-required="true" ng-model="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="password">Password</label>        
-                                <div class="form-hint">To conform with our Strong Password policy, you are required to 
-                                    use a sufficiently strong password. Password must be more than 7 characters.</div>        
-                                <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">
-                                <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
-                                <div class="strength-meter">
-                                    <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
-                                </div>
-                            </div> 
-                            <div class="form-group">
-                                <label for="againPassHome">Password again:</label>
-                                <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome" pw-check="password">
-                            </div>
-                            <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
-                                <span class="msg-error"> Passwords don't match.</span>
-                            </div>
-                            <div class="form-group">
-                                <label for="pin">PIN:</label>
-                                <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="Enter your PIN" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)" required>
-                            </div>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
-                                <i class="ti-user"></i> Register
-                            </a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL REGISTER-->
-
-        <!-- start: MODAL REGISTER HOME-->
-        <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header" ng-controller="CloseCtrl">
-                        <div class="modal-header padding-15">
-                            <a type="button" class="close margin-top--10" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </a>
-                            <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <form name="RegisterTshirt" role="form" ng-controller="FormController">
-                            <div class="form-group">
-                                <label for="email">Email</label>        
-                                <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && 
-                                RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>        
-                                <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && 
-                                RegisterTshirt.email.$error.email" ng-cloak>{{"Email is invalid."}}</div>        
-                                <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && 
-                                RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" 
-                                placeholder="Enter Email Address" ng-required="true" ng-model="email">
-                            </div>
-                            <div class="form-group">
-                                <label for="user">Username</label>
-                                <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && 
-                                RegisterTshirt.user.$error.required" ng-cloak>{{"This field is required."}}</div>        
-                                <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty 
-                                && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" 
-                                placeholder="Enter your user" ng-required="true" ng-model="user">
-                            </div>
-                            <div class="form-group">
-                                <label for="pass">Password</label>        
-                                <div class="form-hint">To conform with our Strong Password policy, you are required to 
-                                    use a sufficiently strong password. Password must be more than 7 characters.</div>        
-                                <input type="password" class="form-control ok-password" 
-                                ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" 
-                                id="pass" name="pass" placeholder="Enter Password" ng-required="true" ng-model="pass">        
-                                <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'"
-                                    ng-cloak>{{ password | passwordCount:7 }}</div>        
-                                <div class="strength-meter">
-                                    <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
-                                </div>
-                            </div> 
-                            <div class="form-group">
-                                <label for="pass_verify">Password again:</label>
-                                <input type="password" class="form-control" id="pass_verify" 
-                                placeholder="New password" name="pass_verify" ng-model="pass_verify" pw-check="pass">
-                            </div>                            
-                            <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch"> 
-                                <span class="msg-error">
-                                    Passwords don't match.
-                                </span>
-                            </div>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModalHome(email, user, pass, pass_verify)">
-                                <i class="ti-user"></i> Register
-                            </a>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL REGISTER HOME-->
-
-        <!-- start: MODAL LOGIN HOME-->
-        <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content">
-                    <div class="modal-header" ng-controller="CloseCtrl">
-                        <div class="modal-header padding-15">
-                            <a type="button" class="close margin-top--10" data-dismiss="modal">
-                                <span class="glyphicon glyphicon-remove"></span>
-                            </a>
-                            <h4 class="modal-title"><i class="ti-user"></i> Login</h4>
-                        </div>
-                    </div>
-                    <div class="modal-body">
-                        <form ng-controller="LoginCtrl">
-                            <div class="form-group">
-                                <label for="usernameHome">Username:</label>
-                                <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
-                            </div>
-                            <div class="form-group">
-                                <label for="pwdHome">Password:</label>
-                                <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
-                            </div>
-                            <div class="alert alert-danger" id="errorBoxHome" hidden>
-                                Wrong username or password. Sorry, try again.
-                            </div>
-                            <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">
-                                <i class="ti-user"></i> Login
-                            </a>
-                        </form>                        
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL LOGIN HOME-->        
-
-        <!-- start: MODAL SNIPPETS-->
-        <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSnippetsCtrl">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header padding-15">
-                        <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
-                    </div>
-                    <div class="modal-body padding-15">
-                        <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title" required>
-                        <textarea id="body" placeholder="Enter your Snippets" class="form-control margin-top-5" 
-                        ng-model="body" required></textarea>
-                    </div>
-                    <div class="modal-footer padding-15">
-                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                            <i class="ti-close"></i> Close
-                        </a>
-                        <a class="btn btn-primary ButtonRadius" ng-click="addSnippets(title,body)">
-                            <i class="ti-plus"></i> Add
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL SNIPPETS-->
-
-        <!-- start: MODAL SOCIAL NETWORK-->
-        <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" 
-        aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header padding-15">
-                        <button type="button" class="close margin-top--10" data-dismiss="modal" 
-                        aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                        <h4 class="modal-title">Add Social Network</h4>
-                    </div>
-                    <div class="modal-body padding-15">
-                        <div class="form-group">
-                            <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" 
-                            ng-model="socialnetwork" id="socialnetwork" required>
-                                <option value="Facebook">Facebook</option>
-                                <option value="LinkedIn">LinkedIn</option>
-                                <option value="Twitter">Twitter</option>
-                                <option value="Instagram">Instagram</option>
-                                <option value="Reddit">Reddit</option>
-                                <option value="Google">Google+</option>
-                                <option value="YouTube">YouTube</option>
-                                <option value="RSS">RSS</option>                                
-                                <option value="Dropbox">Dropbox</option>
-                                <option value="GitHub">GitHub</option>
-                                <option value="Skype">Skype</option>                                
-                                <option value="Tumblr">Tumblr</option>
-                                <option value="Vimeo">Vimeo</option>
-                                <option value="WordPress">WordPress</option>                                
-                                <option value="Yahoo">Yahoo</option>                                
-                                <option value="Flickr">Flickr</option>
-                                <!-- <option value="Foursquare">Foursquare</option> -->
-                                <!-- <option value="Behance">Behance</option> -->
-                                <!-- <option value="VK">VK</option> -->
-                                <!-- <option value="Xing">Xing</option> -->
-                                <!-- <option value="Spotify">Spotify</option>
-                                <option value="StumbleUpon">StumbleUpon</option> -->
-                            </select>
-                        </div>
-                        <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url" required>
-                    </div>
-                    <div class="modal-footer padding-15">
-                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                            <i class="ti-close"></i> Close
-                        </a>
-                        <a class="btn btn-primary ButtonRadius" ng-click="addSocialNetwork(socialnetwork,url)">
-                            <i class="ti-plus"></i> Add
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end: MODAL SOCIAL NETWORK-->
-<a id="scroll-top" href="#"><i class="fa fa-angle-up"></i></a>
-        <!-- start: FOOTER -->
-        <footer id="footer">
-            <div class="footer-copyright">
+    <div growl></div>
+    <span us-spinner="{radius:30, width:8, length: 16}"></span>
+    <div id="app">
+        <!-- start: HEADER -->
+        <header class="small-header height-50">
+            <div class="navbar navbar-default" role="navigation">
+                <!-- start: TOP NAVIGATION CONTAINER -->
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-8">
-                            <p>
-                                &copy; Copyright <span class="current-year"></span> by &lt;DIR&gt;. All Rights Reserved.
-                            </p>
-                        </div>
-                        <div class="col-md-4">
-                            <nav id="sub-menu">
-                                <ul>
+                    <div class="navbar-header">
+                        <!-- start: RESPONSIVE MENU TOGGLER -->
+                        <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="ti-align-justify"></i>
+                        </a>
+                        <!-- end: RESPONSIVE MENU TOGGLER -->
+                        <!-- start: RESPONSIVE MENU SEARCH -->
+                    </div>
+                    <!-- start: NAVBAR -->
+                    <div class="navbar-collapse collapse margin-left-0">
+                        <!-- start: LOGO -->
+                        <a ui-sref="home" class="navbar-brand float-left">
+                            <img src="assets/images/logo.png">
+                        </a>
+                        <!-- end: LOGO -->
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="dropdown">
+                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
+                                    <i class="ti-user"></i> {{userdata.username}}</a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li>
-                                        <a href="#"> About US </a>
+                                        <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#"> FAQ's </a>
+                                        <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewProfile == false))"> Edit Profile</a>
                                     </li>
                                     <li>
-                                        <a href="#"> Contact </a>
+                                        <a ng-show="userdata.connected" ui-sref="inbox">
+                                            <i class="ti-email"></i> Inbox</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
+                                    </li>
+                                    <li>
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome" ng-hide="userdata.connected"> Register</a>
+                                    </li>
+                                    <li>
+                                        <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
                                     </li>
                                 </ul>
-                            </nav>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="ti-shopping-cart"></i> Buy </a>
+                            </li>
+                        </ul>
+                        <!-- start: TOP BAR SOCIAL ICONS -->
+                        <div class="social-icons hidden-xs">
+                            <ul class="nav navbar-nav navbar-right padding-top-3">
+                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                    <a href="http://www.twitter.com" target="_blank"> Twitter </a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
+                                    <a href="http://dribbble.com" target="_blank"> Dribbble </a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+                                    <a href="http://facebook.com" target="_blank"> Facebook </a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+                                    <a href="http://google.com" target="_blank"> Google+ </a>
+                                </li>
+                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+                                    <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
+                                </li>
+                                <li class="padding-top-10 padding-left-15 padding-right-15">
+                                    <h4>|</h4>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- end: TOP BAR SOCIAL ICONS -->
+
+                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <div class="arrow-left"></div>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                    </div>
+                    <!-- end: NAVBAR -->
+                </div>
+                <!-- end: TOP NAVIGATION CONTAINER -->
+                <div id="overlay-search">
+                    <form method="get" action="search.html">
+                        <input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
+                    </form>
+                    <a href="#" class="pull-right margin-right-20 close-search mobile-button" data-toggle-target="body" data-toggle-class="search-open">
+                        <i class="ti-close"></i>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="app-content">
+            <div ui-view></div>
+
+            <!-- start: MODAL REGISTER-->
+            <div class="modal fade login-register-form" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-user"></i> Register</h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form" ng-controller="FormController">
+                                <div class="form-group">
+                                    <label for="emailHome">Email</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''"
+                                        id="emailHome" name="emailHome" placeholder="Enter Email Address" ng-required="true"
+                                        ng-model="emailHome">
+                                </div>
+                                <div class="form-group">
+                                    <label for="username">Username</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''"
+                                        id="username" name="username" placeholder="Enter your username" ng-required="true" ng-model="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password</label>
+                                    <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong
+                                        password. Password must be more than 7 characters.</div>
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''"
+                                        id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">
+                                    <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                    <div class="strength-meter">
+                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="againPassHome">Password again:</label>
+                                    <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome"
+                                        pw-check="password">
+                                </div>
+                                <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
+                                    <span class="msg-error"> Passwords don't match.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pin">PIN:</label>
+                                    <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''"
+                                        placeholder="Enter your PIN" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
+                                        required>
+                                </div>
+                                <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                                    <i class="ti-user"></i> Register
+                                </a>
+                            </form>
                         </div>
                     </div>
                 </div>
             </div>
-        </footer>
+            <!-- end: MODAL REGISTER-->
+
+            <!-- start: MODAL REGISTER HOME-->
+            <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-user"></i> Register</h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form name="RegisterTshirt" role="form" ng-controller="FormController">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''"
+                                        id="email" name="email" placeholder="Enter Email Address" ng-required="true" ng-model="email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="user">Username</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''"
+                                        id="user" name="user" placeholder="Enter your user" ng-required="true" ng-model="user">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Password</label>
+                                    <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong
+                                        password. Password must be more than 7 characters.</div>
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''"
+                                        id="pass" name="pass" placeholder="Enter Password" ng-required="true" ng-model="pass">
+                                    <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
+                                    <div class="strength-meter">
+                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass_verify">Password again:</label>
+                                    <input type="password" class="form-control" id="pass_verify" placeholder="New password" name="pass_verify" ng-model="pass_verify"
+                                        pw-check="pass">
+                                </div>
+                                <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
+                                    <span class="msg-error">
+                                        Passwords don't match.
+                                    </span>
+                                </div>
+                                <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
+                                    <i class="ti-user"></i> Register
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL REGISTER HOME-->
+
+            <!-- start: MODAL LOGIN HOME-->
+            <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header" ng-controller="CloseCtrl">
+                            <div class="modal-header padding-15">
+                                <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <h4 class="modal-title">
+                                    <i class="ti-user"></i> Login</h4>
+                            </div>
+                        </div>
+                        <div class="modal-body">
+                            <form ng-controller="LoginCtrl">
+                                <div class="form-group">
+                                    <label for="usernameHome">Username:</label>
+                                    <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
+                                </div>
+                                <div class="form-group">
+                                    <label for="pwdHome">Password:</label>
+                                    <input ng-model="pass" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwd">
+                                </div>
+                                <div class="alert alert-danger" id="errorBoxHome" hidden>
+                                    Wrong username or password. Sorry, try again.
+                                </div>
+                                <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">
+                                    <i class="ti-user"></i> Login
+                                </a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL LOGIN HOME-->
+
+            <!-- start: MODAL SNIPPETS-->
+            <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                ng-controller="AddSnippetsCtrl">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header padding-15">
+                            <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
+                        </div>
+                        <div class="modal-body padding-15">
+                            <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title" required>
+                            <textarea id="body" placeholder="Enter your Snippets" class="form-control margin-top-5" ng-model="body" required></textarea>
+                        </div>
+                        <div class="modal-footer padding-15">
+                            <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                                <i class="ti-close"></i> Close
+                            </a>
+                            <a class="btn btn-primary ButtonRadius" ng-click="addSnippets(title,body)">
+                                <i class="ti-plus"></i> Add
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL SNIPPETS-->
+
+            <!-- start: MODAL SOCIAL NETWORK-->
+            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                ng-controller="AddSocialNetworkCtrl">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header padding-15">
+                            <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title">Add Social Network</h4>
+                        </div>
+                        <div class="modal-body padding-15">
+                            <div class="form-group">
+                                <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" required>
+                                    <option value="Facebook">Facebook</option>
+                                    <option value="LinkedIn">LinkedIn</option>
+                                    <option value="Twitter">Twitter</option>
+                                    <option value="Instagram">Instagram</option>
+                                    <option value="Reddit">Reddit</option>
+                                    <option value="Google">Google+</option>
+                                    <option value="YouTube">YouTube</option>
+                                    <option value="RSS">RSS</option>
+                                    <option value="Dropbox">Dropbox</option>
+                                    <option value="GitHub">GitHub</option>
+                                    <option value="Skype">Skype</option>
+                                    <option value="Tumblr">Tumblr</option>
+                                    <option value="Vimeo">Vimeo</option>
+                                    <option value="WordPress">WordPress</option>
+                                    <option value="Yahoo">Yahoo</option>
+                                    <option value="Flickr">Flickr</option>
+                                    <!-- <option value="Foursquare">Foursquare</option> -->
+                                    <!-- <option value="Behance">Behance</option> -->
+                                    <!-- <option value="VK">VK</option> -->
+                                    <!-- <option value="Xing">Xing</option> -->
+                                    <!-- <option value="Spotify">Spotify</option>
+                                <option value="StumbleUpon">StumbleUpon</option> -->
+                                </select>
+                            </div>
+                            <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url" required>
+                        </div>
+                        <div class="modal-footer padding-15">
+                            <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                                <i class="ti-close"></i> Close
+                            </a>
+                            <a class="btn btn-primary ButtonRadius" ng-click="addSocialNetwork(socialnetwork,url)">
+                                <i class="ti-plus"></i> Add
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end: MODAL SOCIAL NETWORK-->
+            <a id="scroll-top" href="#">
+                <i class="fa fa-angle-up"></i>
+            </a>
+            <!-- start: FOOTER -->
+            <footer id="footer">
+                <div class="footer-copyright">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-8">
+                                <p>
+                                    &copy; Copyright
+                                    <span class="current-year"></span> by &lt;DIR&gt;. All Rights Reserved.
+                                </p>
+                            </div>
+                            <div class="col-md-4">
+                                <nav id="sub-menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#"> About US </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> FAQ's </a>
+                                        </li>
+                                        <li>
+                                            <a href="#"> Contact </a>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- end: APP CONTENT -->
     </div>
-    <!-- end: APP CONTENT -->
-</div>
-<!-- start: MAIN JAVASCRIPTS -->
-<script src="../bower_components/jquery/dist/jquery.min.js"></script>
-<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-<script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-<script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
-<script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
-<script src="../bower_components/slick.js/slick/slick.min.js"></script>
-<script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
-<script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
-<script src="../bower_components/countto/jquery.countTo.js"></script>
-<script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="assets/js/index.js"></script>
-<!-- end: MAIN JAVASCRIPTS -->
+    <!-- start: MAIN JAVASCRIPTS -->
+    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+    <script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
+    <script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
+    <script src="../bower_components/slick.js/slick/slick.min.js"></script>
+    <script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+    <script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+    <script src="../bower_components/countto/jquery.countTo.js"></script>
+    <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/index.js"></script>
+    <!-- end: MAIN JAVASCRIPTS -->
 
-<!-- start: ANGULAR SCRIPTS-->
-<script src="../bower_components/angular/angular.js"></script>
-<script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-<script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-<script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-<script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-<script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
-<script src="../bower_components/angular-animate/angular-animate.js"></script>
-<script src="../bower_components/ng-timeago/ngtimeago.js"></script>
-<script src="../bower_components/zxcvbn/dist/zxcvbn.js"></script>
-<script src="assets/app.js"></script>
-<script src="assets/main.js"></script>
-<script src="assets/config.constant.js"></script>
-<script src="assets/config.router.js"></script>
-<!-- end: ANGULAR SCRIPTS-->
+    <!-- start: ANGULAR SCRIPTS-->
+    <script src="../bower_components/angular/angular.js"></script>
+    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
+    <script src="../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../bower_components/ng-timeago/ngtimeago.js"></script>
+    <script src="../bower_components/zxcvbn/dist/zxcvbn.js"></script>
+    <script src="assets/app.js"></script>
+    <script src="assets/main.js"></script>
+    <script src="assets/config.constant.js"></script>
+    <script src="assets/config.router.js"></script>
+    <!-- end: ANGULAR SCRIPTS-->
 
-<!-- start: CROPPER CONTROLLERS-->
-<!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
-<!-- start: CROPPER CONTROLLERS-->
+    <!-- start: CROPPER CONTROLLERS-->
+    <!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
+    <!-- start: CROPPER CONTROLLERS-->
 
-<!-- oclazyload -->
-<script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+    <!-- oclazyload -->
+    <script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
-<!-- start: SERVICES-->
-<script src="assets/js/services/restService.js"></script>
-<!-- end: SERVICES-->
+    <!-- start: SERVICES-->
+    <script src="assets/js/services/restService.js"></script>
+    <!-- end: SERVICES-->
 
-<!-- start: SPINNER CONTROLLERS-->
-<script src="../bower_components/spin.js/spin.js"></script>
-<script src="../bower_components/angular-spinner/angular-spinner.js"></script>
-<script src="../bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
-<!-- end: SPINNER CONTROLLERS-->
+    <!-- start: SPINNER CONTROLLERS-->
+    <script src="../bower_components/spin.js/spin.js"></script>
+    <script src="../bower_components/angular-spinner/angular-spinner.js"></script>
+    <script src="../bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
+    <!-- end: SPINNER CONTROLLERS-->
 
-<!-- start: TOASTER CONTROLLERS -->
-<script src="../bower_components/angular-growl-v2/build/angular-growl.js"></script>
-<!-- end: TOASTER CONTROLLERS -->
+    <!-- start: TOASTER CONTROLLERS -->
+    <script src="../bower_components/angular-growl-v2/build/angular-growl.js"></script>
+    <!-- end: TOASTER CONTROLLERS -->
 
-<!-- start: CONTROLLERS-->
-<script src="assets/js/controllers/loginCtrl.js"></script>
-<script src="assets/js/controllers/closeCtrl.js"></script>
-<script src="assets/js/controllers/registrationCtrl.js"></script>
-<script src="assets/js/controllers/addSnippetsCtrl.js"></script>
-<script src="assets/js/controllers/addSocialNetworkCtrl.js"></script>
-<script src="assets/js/controllers/topNavBarCtrl.js"></script>
-<script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
-<!-- end: CONTROLLERS-->
+    <!-- start: CONTROLLERS-->
+    <script src="assets/js/controllers/loginCtrl.js"></script>
+    <script src="assets/js/controllers/closeCtrl.js"></script>
+    <script src="assets/js/controllers/registrationCtrl.js"></script>
+    <script src="assets/js/controllers/addSnippetsCtrl.js"></script>
+    <script src="assets/js/controllers/addSocialNetworkCtrl.js"></script>
+    <script src="assets/js/controllers/topNavBarCtrl.js"></script>
+    <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+    <!-- end: CONTROLLERS-->
 
-<!-- start: ANGULAR NngImgCrop-->
-<script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
-<!-- end: ANGULAR NngImgCrop-->
+    <!-- start: ANGULAR NngImgCrop-->
+    <script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+    <!-- end: ANGULAR NngImgCrop-->
 
-<!-- start: CONTROLLERS ANIMATIONS-->
-<script src="assets/js/animations.js"></script>
-<!-- end: CONTROLLERS ANIMATIONS-->
-<script>
-    jQuery(document).ready(function() {
-        Main.init();
-        Index.init();
-    });
-</script>
+    <!-- start: CONTROLLERS ANIMATIONS-->
+    <script src="assets/js/animations.js"></script>
+    <!-- end: CONTROLLERS ANIMATIONS-->
+    <script>
+        jQuery(document).ready(function () {
+            Main.init();
+            Index.init();
+        });
+    </script>
 
-<script>
-    function isNumberKey(evt){
-        var charCode = (evt.which) ? evt.which : event.keyCode
-        if (charCode > 31 && (charCode < 48 || charCode > 57))
-            return false;
-        return true;
-    }    
-</script>
+    <script>
+        function isNumberKey(evt) {
+            var charCode = (evt.which) ? evt.which : event.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }    
+    </script>
 </body>
+
 </html>
