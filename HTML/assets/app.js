@@ -14,5 +14,6 @@ angular.module("pulloverDir",[
     'countTo',
     'ngAnimate',
     'ngImgCrop',
-    'ngtimeago'
+    'ngtimeago',
+    'angular-growl'
 ]);

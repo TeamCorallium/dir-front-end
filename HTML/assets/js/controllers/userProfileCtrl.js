@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
-    function ($rootScope, $scope, $stateParams,RestService, $state, $cookies, $window) {
+app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
+    function ($rootScope, $scope, $stateParams,RestService, $state, $cookies, $window, growl) {
 
         $scope.user = {
             username: '',
@@ -218,6 +218,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $scope.makeQRCode = function () {
+            growl.info("This adds a info message", {title: 'Random Information'});
             RestService.imageDownload();
         };
 

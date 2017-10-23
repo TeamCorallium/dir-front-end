@@ -4,7 +4,7 @@
 'use strict';
 
 app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
-    function ($rootScope, $scope, $stateParams,RestService, $state, $cookies, $window) {
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window) {
 
         $scope.user = {
             username: '',
@@ -226,7 +226,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             if($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 $cookies.remove("exploreUser",{path: '/'});
-            } else {
+            } else {                
                 RestService.fetchTshirt($stateParams.id)
                     .then(
                         function (data) {
@@ -241,7 +241,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             console.log(errResponse);
                             // throw toaster with message errResponse
                         }
-                    );
+                    );                    
             }
         };
 
