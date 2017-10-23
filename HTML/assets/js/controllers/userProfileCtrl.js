@@ -222,7 +222,7 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
-            growl.success("QR Code Generated Correctly", {title: 'Generate QR Code'});
+            growl.success("QR Code Generated Correctly", {title: 'Generate QR Code'}, {ttl: 4000});
             $scope.profileQRCode = data;
         });
 
