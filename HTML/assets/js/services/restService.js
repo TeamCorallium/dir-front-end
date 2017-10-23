@@ -79,7 +79,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     $rootScope.$broadcast('wrongLogin',username);
                 }
             }).error(function(response){
-                console.log("Entra al error");
+                console.log(response + " response");
+                console.log(response.status + " status");
             });
         },
 
@@ -109,7 +110,8 @@ app.factory('RestService', ['$rootScope','$http', '$q','$cookies', '$httpParamSe
                     $rootScope.$broadcast('wrongRegister');
                 }
             }).error(function(response){
-                console.log("Entra al error");
+                console.log(response + " response");
+                console.log(response.status + " status");
             });
         },
         

@@ -23,42 +23,37 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function (username, password, passAgain, email, pin) {
+        $scope.registerModal = function (email, username, password, passAgain, pin) {
             if (username != '' && password != '' && passAgain != '' && email != '' && pin != ''){
                 if (password === passAgain) {
                     RestService.register(username, password, email, pin);
                 } else {
-                    $scope.errorMessage = 'Passwords do not match. Sorry, try again';
-                    $('#errorRegisterBox').show();
+                    // Throw toaster with message Password not match
                 }
             } else {
-                $scope.errorMessage = 'Cannot exist empty fields';
-                $('#errorRegisterBox').show();
+                // Throw toaster with message Empty Camps
             }
-            
         };
 
         $scope.registerModalHome = function (email, username, password, passAgain) {
             if (username != '' && password != '' && passAgain != '' && email != ''){
                 if (password === passAgain) {
-                    RestService.register(username, password, email, "");
+                    RestService.register(username, password, email);
                 } else {
-                    $('#errorRegisterBoxHome').show();
+                    // Throw toaster with message Password not match
                 }
             } else {
-                // throw toaster with message empty camps
+                // Throw toaster with message Empty Camps
             }
         };
 
         $rootScope.$on('register',function (event, data) {
             $('#myModal').modal('hide');
             $('#myModalRegisterHome').modal('hide');
-            $('#errorRegisterBox').hide();
             RestService.login(data.username,data.password);
         });
 
         $rootScope.$on('wrongRegister', function (event, data) {
-            $('#errorRegisterBox').show();
-            $('#errorRegisterBoxHome').show();
-        });        
+
+        });
     }]);

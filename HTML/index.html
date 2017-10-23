@@ -149,33 +149,56 @@
                             <h4 class="modal-title"><i class="ti-user"></i> Register</h4>
                         </div>
                     </div>
-                    <div class="modal-body">
-                        <form ng-controller="RegistrationCtrl">
+                    <div class="modal-body">                        
+                        <form name="joinTeamForm" role="form" ng-controller="FormController">
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email" name="email" ng-model="email" required>
+                                <label for="emailHome">Email</label>        
+                                <div class="error form-hint" ng-show="joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>        
+                                <div class="error form-hint" ng-show="joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>        
+                                <input type="email" class="form-control" ng-class="(joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" 
+                                placeholder="Enter Email Address" ng-required="true" ng-model="emailHome">
                             </div>
                             <div class="form-group">
-                                <label for="newusername">Username:</label>
-                                <input type="text" class="form-control" id="newusername" placeholder="Enter new username" name="newusername" ng-model="username" required>
+                                <label for="username">Username</label>
+                                <div class="error form-hint" ng-show="joinTeamForm.username.$dirty && 
+                                joinTeamForm.username.$error.required" ng-cloak>{{"This field is required."}}</div>        
+                                <input type="text" class="form-control" ng-class="(joinTeamForm.username.$dirty 
+                                && joinTeamForm.username.$invalid) ? 'error' : ''" id="username" name="username" 
+                                placeholder="Enter your username" ng-required="true" ng-model="username">
                             </div>
                             <div class="form-group">
-                                <label for="pass">Password:</label>
-                                <input type="password" class="form-control" id="pass" placeholder="New password" name="pass" ng-model="pass" required>
-                            </div>
+                                <label for="password">Password</label>        
+                                <div class="form-hint">To conform with our Strong Password policy, you are required to 
+                                    use a sufficiently strong password. Password must be more than 7 characters.</div>        
+                                <input type="password" class="form-control ok-password" 
+                                ng-class="(joinTeamForm.password.$dirty && joinTeamForm.password.$invalid) ? 'error' : ''" 
+                                id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">        
+                                <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'"
+                                    ng-cloak>{{ password | passwordCount:7 }}</div>        
+                                <div class="strength-meter">
+                                    <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                </div>
+                            </div> 
                             <div class="form-group">
-                                <label for="againPass">Password again:</label>
-                                <input type="password" class="form-control" id="againPass" placeholder="New password" name="againPass" ng-model="againPass" required>
+                                <label for="againPassHome">Password again:</label>
+                                <input type="password" class="form-control" id="againPassHome" 
+                                placeholder="New password" name="againPassHome" ng-model="againPassHome" pw-check="password">
+                            </div>                            
+                            <div class="msg-block" ng-show="joinTeamForm.againPassHome.$error.pwmatch"> 
+                                <span class="msg-error">
+                                    Passwords don't match.
+                                </span>
                             </div>
                             <div class="form-group">
                                 <label for="pin">PIN:</label>
-                                <input type="text" class="form-control" id="pin" placeholder="Enter your PIN" name="pin" ng-model="pin" required>
+                                <input type="number" class="form-control" id="pin" ng-class="(joinTeamForm.pin.$dirty && joinTeamForm.pin.$invalid) ? 'error' : ''"
+                                placeholder="Enter your PIN" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)" required>
                             </div>
-                            <div class="alert alert-danger" id="errorRegisterBox" hidden>
-                                {{errorMessage}}
-                            </div>
-                            <a class="btn btn-primary ButtonRadius"
-                               ng-click="registerModal(username,pass,againPass,email,pin)">
+                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="joinTeamForm.$invalid"
+                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-user"></i> Register
                             </a>
                         </form>
@@ -198,7 +221,7 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <!-- <form ng-controller="LoginCtrl">
+                        <form ng-controller="LoginCtrl">
                             <div class="form-group">
                                 <label for="usernameHome">Username:</label>
                                 <input ng-model="username" type="text" class="form-control" id="usernameHome" placeholder="Enter username" name="username">
@@ -213,44 +236,7 @@
                             <a class="btn btn-primary ButtonRadius" ng-click="loginModal(username,pass)">
                                 <i class="ti-user"></i> Login
                             </a>
-                        </form> -->
-                        <form action="" method="POST" name="joinTeamForm" role="form" ng-controller="FormController">
-                            <legend class="form-label">Join the Team</legend>
-        
-                            <div class="form-group">
-                                <label for="fullname">Fullname</label>
-        
-                                <div class="error form-hint" ng-show="joinTeamForm.fullname.$dirty && joinTeamForm.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
-        
-                                <input type="text" class="form-control" ng-class="(joinTeamForm.fullname.$dirty && joinTeamForm.fullname.$invalid) ? 'error' : ''" id="fullname" name="fullname" placeholder="Enter Fullname" ng-required="true" ng-model="fullname">
-                            </div>
-        
-                            <div class="form-group">
-                                <label for="email">Email</label>
-        
-                                <div class="error form-hint" ng-show="joinTeamForm.email.$dirty && joinTeamForm.email.$error.required" ng-cloak>{{"This field is required."}}</div>
-        
-                                <div class="error form-hint" ng-show="joinTeamForm.email.$dirty && joinTeamForm.email.$error.email" ng-cloak>{{"Email is invalid."}}</div>
-        
-                                <input type="email" class="form-control" ng-class="(joinTeamForm.email.$dirty && joinTeamForm.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="Enter Email Address" ng-required="true" ng-model="email">
-                            </div>
-        
-                            <div class="form-group">
-                                <label for="password">Password</label>
-        
-                                <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong password. Password must be more than 7 characters.</div>
-        
-                                <input type="password" class="form-control ok-password" ng-class="(joinTeamForm.password.$dirty && joinTeamForm.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">
-        
-                                <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
-        
-                                <div class="strength-meter">
-                                    <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
-                                </div>
-                            </div>
-        
-                            <button type="submit" class="btn btn-primary" ng-disabled="joinTeamForm.$invalid">Submit</button>
-                        </form>
+                        </form>                        
                     </div>
                 </div>
             </div>
@@ -270,28 +256,50 @@
                         </div>
                     </div>
                     <div class="modal-body">
-                        <form ng-controller="RegistrationCtrl">
+                        <form name="joinTeamForm" role="form" ng-controller="FormController">
                             <div class="form-group">
-                                <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="emailHome" placeholder="Enter your email" name="email" ng-model="emailHome">
-                            </div>
-                            <div class="form-group">
-                                <label for="newusername">Username:</label>
-                                <input type="text" class="form-control" id="newusernameHome" placeholder="Enter new username" name="newusername" ng-model="usernameHome">
-                            </div>
-                            <div class="form-group">
-                                <label for="pass">Password:</label>
-                                <input type="password" class="form-control" id="passHome" placeholder="New password" name="pass" ng-model="passHome">
+                                <label for="emailHome">Email</label>        
+                                <div class="error form-hint" ng-show="joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>        
+                                <div class="error form-hint" ng-show="joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>        
+                                <input type="email" class="form-control" ng-class="(joinTeamForm.emailHome.$dirty && 
+                                joinTeamForm.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" 
+                                placeholder="Enter Email Address" ng-required="true" ng-model="emailHome">
                             </div>
                             <div class="form-group">
-                                <label for="againPass">Password again:</label>
-                                <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPass" ng-model="againPassHome">
+                                <label for="username">Username</label>
+                                <div class="error form-hint" ng-show="joinTeamForm.username.$dirty && 
+                                joinTeamForm.username.$error.required" ng-cloak>{{"This field is required."}}</div>        
+                                <input type="text" class="form-control" ng-class="(joinTeamForm.username.$dirty 
+                                && joinTeamForm.username.$invalid) ? 'error' : ''" id="username" name="username" 
+                                placeholder="Enter your username" ng-required="true" ng-model="username">
                             </div>
-                            <div class="alert alert-danger" id="errorRegisterBoxHome" hidden>
-                                Passwords do not match. Sorry, try again
+                            <div class="form-group">
+                                <label for="password">Password</label>        
+                                <div class="form-hint">To conform with our Strong Password policy, you are required to 
+                                    use a sufficiently strong password. Password must be more than 7 characters.</div>        
+                                <input type="password" class="form-control ok-password" 
+                                ng-class="(joinTeamForm.password.$dirty && joinTeamForm.password.$invalid) ? 'error' : ''" 
+                                id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">        
+                                <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'"
+                                    ng-cloak>{{ password | passwordCount:7 }}</div>        
+                                <div class="strength-meter">
+                                    <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
+                                </div>
+                            </div> 
+                            <div class="form-group">
+                                <label for="againPassHome">Password again:</label>
+                                <input type="password" class="form-control" id="againPassHome" 
+                                placeholder="New password" name="againPassHome" ng-model="againPassHome" pw-check="password">
+                            </div>                            
+                            <div class="msg-block" ng-show="joinTeamForm.againPassHome.$error.pwmatch"> 
+                                <span class="msg-error">
+                                    Passwords don't match.
+                                </span>
                             </div>
-                            <a class="btn btn-primary ButtonRadius"
-                               ng-click="registerModalHome(emailHome, usernameHome,passHome,againPassHome)">
+                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="joinTeamForm.$invalid"
+                               ng-click="registerModalHome(emailHome, username, password, againPassHome)">
                                 <i class="ti-user"></i> Register
                             </a>
                         </form>
@@ -486,6 +494,15 @@
         Main.init();
         Index.init();
     });
+</script>
+
+<script>
+    function isNumberKey(evt){
+        var charCode = (evt.which) ? evt.which : event.keyCode
+        if (charCode > 31 && (charCode < 48 || charCode > 57))
+            return false;
+        return true;
+    }    
 </script>
 </body>
 </html>
