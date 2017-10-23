@@ -39,11 +39,12 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             if (data[0].profiles.length > 0) {
                                 getProfile(data[0].profiles[0]);
                             }
-                            // getTshirts(data[0].tshirts);
+
                             getSnippets(data[0].username);
                             getSocialNetworks(data[0].username);
 
                         } else {
+                            $state.go('home');
                             $('#myModal').modal('show');
                         }
                     },
@@ -70,12 +71,13 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                         } else {
-                            //    Show Autentication
-                            console.log("profile no exist");
+                            $state.go('home');
+                            // throw toaster with message profile not found
                         }
                     },
                     function (errResponse) {
                         console.log(errResponse);
+                        // throw toaster with message errResponse
                     }
                 );
         };
@@ -89,6 +91,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                         },
                         function (errResponse) {
                             console.log(errResponse);
+                            // throw toaster with message errResponse
                         }
                     );
             }
@@ -101,11 +104,11 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                         for (var i=0; i<data.length; i++){
                             data[i].body = replaceURLWithHTMLLinks(data[i].body);
                             $scope.user.snippets.push(data[i]);
-                        }
-                        
+                        }                        
                     },
                     function (errResponse) {
                         console.log(errResponse);
+                        // throw toaster with message errResponse
                     }
                 );
         };
@@ -120,6 +123,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                     },
                     function (errResponse) {
                         console.log(errResponse);
+                        // throw toaster with message errResponse
                     }
                 );
         };
@@ -180,6 +184,7 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                     },
                     function (errResponse) {
                         console.log(errResponse);
+                        // throw toaster with message errResponse
                     }
                 );
         };
@@ -228,11 +233,13 @@ app.controller('ViewProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
                             if (data.length > 0){
                                 $scope.getUser(data[0].owner);
                             } else {
+                                $state.go('home');
                                 $('#myModal').modal('show');
                             }
                         },
                         function (errResponse) {
                             console.log(errResponse);
+                            // throw toaster with message errResponse
                         }
                     );
             }
