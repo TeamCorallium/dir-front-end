@@ -54,3 +54,64 @@ app.run(['$rootScope','$cookies',
             return value + (tail || ' …');
         };
     });
+
+    app.controller('FormController', function($scope) {})
+      
+    app.filter('passwordCount', [function() {
+        return function(value, peak) {
+            value = angular.isString(value) ? value : '';
+            peak = isFinite(peak) ? peak : 7;
+
+            return value && (value.length > peak ? peak + '+' : value.length);
+        };
+    }])
+
+    app.factory('zxcvbn', [function() {
+        return {
+            score: function() {
+                var compute = zxcvbn.apply(null, arguments);
+                return compute && compute.score;
+            }
+        };
+    }])
+
+    app.directive('okPassword', ['zxcvbn', function(zxcvbn) {
+        return {
+            // restrict to only attribute and class
+            restrict: 'AC',
+
+            // use the NgModelController
+            require: 'ngModel',
+
+            // add the NgModelController as a dependency to your link function
+            link: function($scope, $element, $attrs, ngModelCtrl) {
+                $element.on('blur change keydown', function(evt) {
+                    $scope.$evalAsync(function($scope) {
+                        // update the $scope.password with the element's value
+                        var pwd = $scope.password = $element.val();
+
+                        // resolve password strength score using zxcvbn service
+                        $scope.passwordStrength = pwd ? (pwd.length > 7 && zxcvbn.score(pwd) || 0) : null;
+
+                        // define the validity criterion for okPassword constraint
+                        ngModelCtrl.$setValidity('okPassword', $scope.passwordStrength >= 2);
+                    });
+                });
+            }
+        };
+    }]);
+
+    app.directive('pwCheck', [function () {
+    return {
+        require: 'ngModel',
+        link: function (scope, elem, attrs, ctrl) {
+            var firstPassword = '#' + attrs.pwCheck;
+            elem.add(firstPassword).on('keyup', function () {
+                scope.$apply(function () {
+                    console.info(elem.val() === $(firstPassword).val());
+                    ctrl.$setValidity('pwmatch', elem.val() === $(firstPassword).val());
+                });
+            });
+        }
+    }
+}]);

@@ -6,6 +6,8 @@
 app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScope",'$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
+        $scope.errorMessage = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -21,31 +23,37 @@ app.controller('RegistrationCtrl',["$scope", "RestService", "$state", "$rootScop
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function (username, password, passAgain, email, pin) {
-            if (password === passAgain) {
-                RestService.register(username, password, email, pin);
+        $scope.registerModal = function (email, username, password, passAgain, pin) {
+            if (username != '' && password != '' && passAgain != '' && email != '' && pin != ''){
+                if (password === passAgain) {
+                    RestService.register(username, password, email, pin);
+                } else {
+                    // Throw toaster with message Password not match
+                }
             } else {
-                $('#errorRegisterBox').show();
+                // Throw toaster with message Empty Camps
             }
         };
 
         $scope.registerModalHome = function (email, username, password, passAgain) {
-            if (password === passAgain) {
-                RestService.register(username, password, email, "");
+            if (username != '' && password != '' && passAgain != '' && email != ''){
+                if (password === passAgain) {
+                    RestService.register(username, password, email);
+                } else {
+                    // Throw toaster with message Password not match
+                }
             } else {
-                $('#errorRegisterBoxHome').show();
+                // Throw toaster with message Empty Camps
             }
         };
 
         $rootScope.$on('register',function (event, data) {
             $('#myModal').modal('hide');
             $('#myModalRegisterHome').modal('hide');
-            $('#errorRegisterBox').hide();
             RestService.login(data.username,data.password);
         });
 
         $rootScope.$on('wrongRegister', function (event, data) {
-            $('#errorRegisterBox').show();
-            $('#errorRegisterBoxHome').show();
+
         });
     }]);

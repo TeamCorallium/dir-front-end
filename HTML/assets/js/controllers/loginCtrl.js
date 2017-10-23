@@ -41,7 +41,8 @@ app.controller('LoginCtrl',["$scope", "RestService", "$state", "$rootScope",'$co
         };
 
         $rootScope.$on('wrongLogin',function (event, data) {
-            $('#errorBoxHome').show();
-            $('#errorBox').show();
+            // $('#errorBoxHome').show();
+            // $('#errorBox').show();            
+            toaster.pop('error', 'Error', 'Wrong user or password.');
         });
     }]);
