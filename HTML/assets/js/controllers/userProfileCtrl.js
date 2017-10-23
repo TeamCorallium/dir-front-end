@@ -217,12 +217,12 @@ app.controller('UserProfileCtrl',["$rootScope", "$scope", "$stateParams", "RestS
             $window.open(link, '_blank');
         };
 
-        $scope.makeQRCode = function () {
-            growl.info("This adds a info message", {title: 'Random Information'});
-            RestService.imageDownload();
+        $scope.makeQRCode = function () {            
+            RestService.imageDownload();            
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
+            growl.success("QR Code Generated Correctly", {title: 'Generate QR Code'});
             $scope.profileQRCode = data;
         });
 
