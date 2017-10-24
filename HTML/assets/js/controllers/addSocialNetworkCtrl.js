@@ -10,6 +10,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.url = '';        
 
         $scope.updateUrl = function () {
+            console.log($scope.socialnetwork + " social network");
             switch ($scope.socialnetwork) {
                 case "Facebook": {
                     $scope.url = 'https://www.facebook.com/';
