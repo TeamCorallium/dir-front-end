@@ -17,7 +17,8 @@ app.constant('JS_REQUIRED',{
         'viewProfileCtrl': 'assets/js/controllers/viewProfileCtrl.js',
         'homeCtrl': 'assets/js/controllers/homeCtrl.js',
         'exploreUsersCtrl': 'assets/js/controllers/exploreUsersCtrl.js',
-        'inboxCtrl': 'assets/js/controllers/inboxCtrl.js'
+        'inboxCtrl': 'assets/js/controllers/inboxCtrl.js',
+        'contactUsCtrl': 'assets/js/controllers/contactUsCtrl.js'
     },
     modules:[{
 

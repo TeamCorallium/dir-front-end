@@ -50,6 +50,10 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
             url: '/inbox',
             templateUrl: 'views/inbox.html',
             resolve: loadSequence('inboxCtrl')
+        }).state('contact',{
+            url: '/contact',
+            templateUrl: 'views/contactUs.html',
+            resolve: loadSequence('contactUsCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
