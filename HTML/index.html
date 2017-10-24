@@ -366,7 +366,7 @@
                                     <label for="socialnetwork">Social Networks</label>
                                     <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
-                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true" ng-controller="AddSnippetsCtrl">
+                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true" ng-controller="AddSocialNetworkCtrl">
                                         <option ng-selected="true" value="0" disabled selected>Select a social network</option>
                                         <option value="Facebook">Facebook</option>
                                         <option value="LinkedIn">LinkedIn</option>
@@ -404,7 +404,7 @@
                             <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                                 <i class="ti-close"></i> Close
                             </a>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
+                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSocialNetworkCtrl" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
                                 <i class="ti-plus"></i> Add
                             </a>
                         </div>
