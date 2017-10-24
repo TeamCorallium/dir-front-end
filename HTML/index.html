@@ -311,11 +311,10 @@
             </div>
             <!-- end: MODAL LOGIN HOME-->
 
-            <!-- start: MODAL SNIPPETS-->
-            <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-                ng-controller="AddSnippetsCtrl">
+            <!-- start: MODAL `ETS-->
+            <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" ng-controller="FormController">
                         <div class="modal-header padding-15">
                             <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -323,15 +322,27 @@
                             <h4 class="modal-title" id="myModalLabel">Add Snippets</h4>
                         </div>
                         <div class="modal-body padding-15">
-                            <input type="text" placeholder="Title" class="form-control" id="title" ng-model="title" required>
-                            <textarea id="body" placeholder="Enter your Snippets" class="form-control margin-top-5" ng-model="body" required></textarea>
+                            <form name="AddSnippets" role="form">
+                                <div class="form-group">
+                                    <label for="title">Snippet title</label>
+                                    <div class="error form-hint" ng-show="AddSnippets.title.$dirty && AddSnippets.title.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(AddSnippets.title.$dirty && AddSnippets.title.$invalid) ? 'error' : ''"
+                                        id="user" name="title" placeholder="Enter snippet title" ng-required="true" ng-model="title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="body">Snippet body</label>
+                                    <div class="error form-hint" ng-show="AddSnippets.body.$dirty && AddSnippets.body.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <textarea class="form-control" ng-class="(AddSnippets.body.$dirty && AddSnippets.body.$invalid) ? 'error' : ''" id="user"
+                                        name="body" placeholder="Enter snippet body" ng-required="true" ng-model="body"></textarea>
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer padding-15">
                             <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                                 <i class="ti-close"></i> Close
                             </a>
-                            <a class="btn btn-primary ButtonRadius" ng-click="addSnippets(title,body)">
-                                <i class="ti-plus"></i> Add
+                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSnippets.$invalid" ng-click="addSnippets(title,body)">
+                                <i class="ti-user"></i> Add
                             </a>
                         </div>
                     </div>
