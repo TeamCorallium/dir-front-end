@@ -110,7 +110,7 @@
     }
 
     .marginButtonUserHome {
-        margin-left: 36% !important;
+        margin-left: 43% !important;
         border-radius: 5px !important;
     }
 
@@ -144,11 +144,6 @@
         height: 120px !important;
         background-image: url('../../assets/images/800.jpg');
     }
-
-    .marginButtonUserHome {
-        margin-left: 37% !important;
-        border-radius: 5px !important;
-    }
 }
 
 @media (min-width: 801px) {
@@ -156,11 +151,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/850.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 37% !important;
-        border-radius: 5px !important;
     }
 }
 
@@ -170,11 +160,6 @@
         height: 120px !important;
         background-image: url('../../assets/images/900.jpg');
     }
-
-    .marginButtonUserHome {
-        margin-left: 37% !important;
-        border-radius: 5px !important;
-    }
 }
 
 @media (min-width: 901px) {
@@ -182,11 +167,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/950.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 36% !important;
-        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -206,11 +186,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1000.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 36% !important;
-        border-radius: 5px !important;
     }
 
     .SocialIcon {
@@ -239,11 +214,6 @@
         background-image: url('../../assets/images/1050.jpg');
     }
 
-    .marginButtonUserHome {
-        margin-left: 34% !important;
-        border-radius: 50px !important;
-    }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 27% !important;
@@ -261,11 +231,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1100.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 34% !important;
-        border-radius: 50px !important;
     }
 
     .SocialIcon {
@@ -287,11 +252,6 @@
         background-image: url('../../assets/images/1150.jpg');
     }
 
-    .marginButtonUserHome {
-        margin-left: 34% !important;
-        border-radius: 50px !important;
-    }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 29% !important;
@@ -309,11 +269,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1200.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 34% !important;
-        border-radius: 50px !important;
     }
 
     .SocialIcon {
@@ -335,11 +290,6 @@
         background-image: url('../../assets/images/1300.jpg');
     }
 
-    .marginButtonUserHome {
-        margin-left: 40% !important;
-        border-radius: 5px !important;
-    }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 22% !important;
@@ -357,11 +307,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1366.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 40% !important;
-        border-radius: 50px !important;
     }
 
     .SocialIcon {
@@ -770,11 +715,6 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1250.jpg');
-    }
-
-    .marginButtonUserHome {
-        margin-left: 40% !important;
-        border-radius: 5px !important;
     }
 }
 

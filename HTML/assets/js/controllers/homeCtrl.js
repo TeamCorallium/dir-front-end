@@ -10,12 +10,10 @@ app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$co
 
         $scope.countLimit = 4;
 
-        if ($(window).width() >= 1200) {
+        if ($(window).width() >=  992) {
             $scope.countLimit = 4;
-        } else if ($(window).width() >=  992) {
-            $scope.countLimit = 3;
         } else if ($(window).width() >= 768) {
-            $scope.countLimit = 2;
+            $scope.countLimit = 3;
         } else {
             $scope.countLimit = 1;
         }
@@ -23,12 +21,10 @@ app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$co
         $(window).on("resize.doResize", function (){
 
             $scope.$apply(function(){
-                if ($(window).width() >= 1200) {
+                if ($(window).width() >=  992) {
                     $scope.countLimit = 4;
-                } else if ($(window).width() >=  992) {
-                    $scope.countLimit = 3;
                 } else if ($(window).width() >= 768) {
-                    $scope.countLimit = 2;
+                    $scope.countLimit = 3;
                 } else {
                     $scope.countLimit = 1;
                 }
