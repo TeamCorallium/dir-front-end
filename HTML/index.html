@@ -351,9 +351,9 @@
             <!-- end: MODAL SNIPPETS-->
 
             <!-- start: MODAL SOCIAL NETWORK-->
-            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
                 <div class="modal-dialog">
-                    <div class="modal-content" ng-controller="FormController">
+                    <div class="modal-content">
                         <div class="modal-header padding-15">
                             <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -361,7 +361,7 @@
                             <h4 class="modal-title">Add Social Network</h4>
                         </div>
                         <div class="modal-body padding-15">
-                            <form name="AddSocialNetworks" role="form"  ng-controller="AddSocialNetworkCtrl">
+                            <form name="AddSocialNetworks" role="form">
                                 <div class="form-group">
                                     <label for="socialnetwork">Social Networks</label>
                                     <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -392,7 +392,7 @@
                                                 <option value="StumbleUpon">StumbleUpon</option> -->
                                     </select>
                                 </div>
-                                <div class="form-group">
+                                <div class="form-group" ng-controller="FormController">
                                     <label for="url">Social network url</label>
                                     <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
@@ -404,7 +404,7 @@
                             <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                                 <i class="ti-close"></i> Close
                             </a>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSocialNetworkCtrl" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
+                            <a class="btn btn-primary ButtonRadius" ng-controller="FormController" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
                                 <i class="ti-plus"></i> Add
                             </a>
                         </div>
