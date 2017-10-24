@@ -342,7 +342,7 @@
                                 <i class="ti-close"></i> Close
                             </a>
                             <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSnippets.$invalid" ng-click="addSnippets(title,body)">
-                                <i class="ti-user"></i> Add
+                                <i class="ti-plus"></i> Add
                             </a>
                         </div>
                     </div>
@@ -351,10 +351,9 @@
             <!-- end: MODAL SNIPPETS-->
 
             <!-- start: MODAL SOCIAL NETWORK-->
-            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-                ng-controller="AddSocialNetworkCtrl">
+            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                 <div class="modal-dialog">
-                    <div class="modal-content">
+                    <div class="modal-content" ng-controller="FormController">
                         <div class="modal-header padding-15">
                             <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
@@ -362,39 +361,50 @@
                             <h4 class="modal-title">Add Social Network</h4>
                         </div>
                         <div class="modal-body padding-15">
-                            <div class="form-group">
-                                <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200" ng-model="socialnetwork" id="socialnetwork" required>
-                                    <option value="Facebook">Facebook</option>
-                                    <option value="LinkedIn">LinkedIn</option>
-                                    <option value="Twitter">Twitter</option>
-                                    <option value="Instagram">Instagram</option>
-                                    <option value="Reddit">Reddit</option>
-                                    <option value="Google">Google+</option>
-                                    <option value="YouTube">YouTube</option>
-                                    <option value="RSS">RSS</option>
-                                    <option value="Dropbox">Dropbox</option>
-                                    <option value="GitHub">GitHub</option>
-                                    <option value="Skype">Skype</option>
-                                    <option value="Tumblr">Tumblr</option>
-                                    <option value="Vimeo">Vimeo</option>
-                                    <option value="WordPress">WordPress</option>
-                                    <option value="Yahoo">Yahoo</option>
-                                    <option value="Flickr">Flickr</option>
-                                    <!-- <option value="Foursquare">Foursquare</option> -->
-                                    <!-- <option value="Behance">Behance</option> -->
-                                    <!-- <option value="VK">VK</option> -->
-                                    <!-- <option value="Xing">Xing</option> -->
-                                    <!-- <option value="Spotify">Spotify</option>
-                                    <option value="StumbleUpon">StumbleUpon</option> -->
-                                </select>
-                            </div>
-                            <input type="text" placeholder="Enter the social network url" class="form-control" id="url" ng-model="url" required>
+                            <form name="AddSocialNetworks" role="form">
+                                <div class="form-group">
+                                    <label for="socialnetwork">Social Networks</label>
+                                    <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
+                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
+                                        <option ng-selected="" value="0" disabled selected>Select a social network</option>
+                                        <option ng-selected="true" value="Facebook">Facebook</option>
+                                        <option value="LinkedIn">LinkedIn</option>
+                                        <option value="Twitter">Twitter</option>
+                                        <option value="Instagram">Instagram</option>
+                                        <option value="Reddit">Reddit</option>
+                                        <option value="Google">Google+</option>
+                                        <option value="YouTube">YouTube</option>
+                                        <option value="RSS">RSS</option>
+                                        <option value="Dropbox">Dropbox</option>
+                                        <option value="GitHub">GitHub</option>
+                                        <option value="Skype">Skype</option>
+                                        <option value="Tumblr">Tumblr</option>
+                                        <option value="Vimeo">Vimeo</option>
+                                        <option value="WordPress">WordPress</option>
+                                        <option value="Yahoo">Yahoo</option>
+                                        <option value="Flickr">Flickr</option>
+                                        <!-- <option value="Foursquare">Foursquare</option> -->
+                                        <!-- <option value="Behance">Behance</option> -->
+                                        <!-- <option value="VK">VK</option> -->
+                                        <!-- <option value="Xing">Xing</option> -->
+                                        <!-- <option value="Spotify">Spotify</option>
+                                                <option value="StumbleUpon">StumbleUpon</option> -->
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="url">Social network url</label>
+                                    <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <textarea class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
+                                        id="user" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url"></textarea>
+                                </div>
+                            </form>
                         </div>
                         <div class="modal-footer padding-15">
                             <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                                 <i class="ti-close"></i> Close
                             </a>
-                            <a class="btn btn-primary ButtonRadius" ng-click="addSocialNetwork(socialnetwork,url)">
+                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
                                 <i class="ti-plus"></i> Add
                             </a>
                         </div>
