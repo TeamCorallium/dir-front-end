@@ -78,9 +78,12 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('wrongLogin', username);
                 }
-            }).error(function (response) {
-                console.log(response + " response");
-                console.log(response.status + " status");
+            }).error(function (response, status, header, config, statusText) { // data, status, header, config, statusText
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');    
+                }
             });
         },
 

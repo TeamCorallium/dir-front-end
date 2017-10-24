@@ -30,6 +30,6 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
         }
 
         $scope.sendMessage = function () {
-            console.log(message.email + " " + message.subject + " " + message.body);
+            console.log($scope.message.email + " " + $scope.message.subject + " " + $scope.message.body);
         };
     }]);

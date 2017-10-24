@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
-    function ($scope, RestService, $state, $rootScope, $cookies) {
+app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
+    function ($scope, RestService, $state, $rootScope, $cookies, growl) {
 
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
@@ -41,8 +41,30 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", '$
         };
 
         $rootScope.$on('wrongLogin', function (event, data) {
-            // $('#errorBoxHome').show();
-            // $('#errorBox').show();            
-            toaster.pop('error', 'Error', 'Wrong user or password.');
+            $('#errorBoxHome').show();
+            $('#errorBox').show();
+        });
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                    function (data) {
+                        console.log('get get ' + RestService.getCookie('csrftoken'));
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            growl.error("We detected some problems, please try again", {title: 'Logins Problems'});
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
     }]);
