@@ -203,7 +203,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.user.socialnetworks = [];
             getSocialNetworks($cookies.get('username'));
 
-            growl.succes("Social network delete correctly.", { title: 'Delete Social Network' });
+            growl.success("Social network delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
@@ -214,7 +214,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.user.snippets = [];
             getSnippets($cookies.get('username'));
 
-            growl.succes("Snippet delete correctly.", { title: 'Delete Social Network' });
+            growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSnippetError', function (event, data) {
