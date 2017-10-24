@@ -49,8 +49,8 @@
         <header class="small-header height-50">
             <div class="navbar navbar-default" role="navigation">
                 <!-- start: TOP NAVIGATION CONTAINER -->
-                <div class="container">                    
-                    <div class="navbar-header">                        
+                <div class="container">
+                    <div class="navbar-header">
                         <!-- start: RESPONSIVE MENU TOGGLER -->
                         <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
@@ -62,9 +62,9 @@
                             <img src="assets/images/logo.png">
                         </a>
                         <!-- end: LOGO -->
-                    </div>                    
+                    </div>
                     <!-- start: NAVBAR -->
-                    <div class="navbar-collapse collapse margin-left-0">                        
+                    <div class="navbar-collapse collapse margin-left-0">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
@@ -79,7 +79,8 @@
                                     </li>
                                     <li>
                                         <a ng-show="userdata.connected" ui-sref="inbox">
-                                            <i class="ti-email"></i> Inbox</a>
+                                            <i class="ti-email"></i> Inbox
+                                        </a>
                                     </li>
                                     <li>
                                         <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
@@ -93,8 +94,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a>
-                                    <i class="ti-shopping-cart"></i> Buy </a>
+                                <a><i class="ti-shopping-cart"></i> Buy </a>
                             </li>
                         </ul>
                         <!-- start: TOP BAR SOCIAL ICONS -->
@@ -116,7 +116,7 @@
                                     <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
                                 </li>
                                 <li class="padding-top-10 padding-left-15 padding-right-15">
-                                    <h4>|</h4>
+                                    <h4 class="cursordefault">|</h4>
                                 </li>
                             </ul>
                         </div>
@@ -293,7 +293,8 @@
                                     <label for="usernameHome">Username</label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''"
-                                        id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true" ng-model="usernameHome">
+                                        id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true"
+                                        ng-model="usernameHome">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwdHome">Password:</label>
@@ -354,7 +355,8 @@
             <!-- end: MODAL SNIPPETS-->
 
             <!-- start: MODAL SOCIAL NETWORK-->
-            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="AddSocialNetworkCtrl">
+            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
+                ng-controller="AddSocialNetworkCtrl">
                 <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header padding-15">

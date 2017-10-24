@@ -1188,7 +1188,21 @@ a.ButtonImageSize {
 .msg-block {
     margin-top:5px;
 }
+
 .msg-error {
     color:#F00;
     font-size:14px;
+}
+
+.cursordefault{
+    cursor: default;
+}
+
+.ButtonMoreUser{
+    border: none !important;
+}
+
+.ListMoreUser{
+    min-height: 45px !important;
+    border-bottom: none !important;
 }
