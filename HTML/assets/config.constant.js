@@ -9,7 +9,7 @@ app.constant('APP_MEDIAQUERY', {
     'tablet': 768,
     'mobile': 480
 });
-app.constant('JS_REQUIRED',{
+app.constant('JS_REQUIRED', {
     scripts: {
         //Controllers
         'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
@@ -21,7 +21,7 @@ app.constant('JS_REQUIRED',{
         'contactUsCtrl': 'assets/js/controllers/contactUsCtrl.js',
         'faqCtrl': 'assets/js/controllers/faqCtrl.js'
     },
-    modules:[{
+    modules: [{
 
     }]
 });

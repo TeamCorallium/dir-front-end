@@ -338,7 +338,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 function (response) {
                     return response.data;
                 },
-                function (errResponse) {                    
+                function (errResponse) {
                     return $q.reject(errResponse);
                 }
                 );

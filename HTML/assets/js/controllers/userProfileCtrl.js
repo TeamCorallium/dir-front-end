@@ -175,14 +175,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $rootScope.$on('addsnippets', function (event, data) {            
+        $rootScope.$on('addsnippets', function (event, data) {
             $scope.user.snippets = [];
             $('#modalSnippets').modal('hide');
 
             getSnippets($cookies.get('username'));
         });
 
-        $rootScope.$on('addsocialnetwork', function (event, data) {            
+        $rootScope.$on('addsocialnetwork', function (event, data) {
             $scope.user.socialnetworks = [];
             $('#modalSocialNetwork').modal('hide');
 
@@ -204,7 +204,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('makeQRCodeError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
-        });        
+        });
 
         $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
@@ -227,7 +227,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getAvatar = function (avatar) {
             var dirAvatar = '';
-            
+
             if (avatar != '' && avatar != null) {
                 var avatarArray = avatar.split("/");
                 dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];

@@ -3,7 +3,7 @@
  */
 'use strict';
 
-app.controller('CloseCtrl',["$scope", "$state", "$cookies",
+app.controller('CloseCtrl', ["$scope", "$state", "$cookies",
     function ($scope, $state, $cookies) {
 
         $("#myModal").on('hidden.bs.modal', function () {

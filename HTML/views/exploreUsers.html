@@ -6,7 +6,7 @@
                     <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles">
                         <div class="styleBox">
                             <div class="ImageBox">
-                                <img src="{{profile.avatar}}"class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
+                                <img src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
                             </div>
                             <div class="center">
                                 <h3>@{{profile.owner}}</h3>
@@ -25,7 +25,7 @@
     </div>
 </div>
 <script>
-    jQuery(document).ready(function() {
+    jQuery(document).ready(function () {
         Main.init();
     });
 </script>

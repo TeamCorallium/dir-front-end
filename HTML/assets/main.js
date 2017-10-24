@@ -6,7 +6,7 @@
 var app = angular.module('dirApp', ['pulloverDir']);
 
 app.run(['$rootScope', '$cookies',
-    function ($rootScope, $cookies) {
+    function($rootScope, $cookies) {
 
         $rootScope.viewProfile = true;
 
@@ -20,19 +20,19 @@ app.run(['$rootScope', '$cookies',
             $rootScope.userdata.connected = true;
         }
 
-        $rootScope.$on('connected', function (event, data) {
+        $rootScope.$on('connected', function(event, data) {
             $rootScope.userdata.username = $cookies.get('username');
             $rootScope.userdata.connected = true;
         });
 
-        $rootScope.$on('logout', function (event, data) {
+        $rootScope.$on('logout', function(event, data) {
             $rootScope.userdata.username = 'USER';
             $rootScope.userdata.connected = false;
         });
     }]);
 
-app.filter('cut', function () {
-    return function (value, wordwise, max, tail) {
+app.filter('cut', function() {
+    return function(value, wordwise, max, tail) {
         if (!value) return '';
 
         max = parseInt(max, 10);
@@ -55,10 +55,10 @@ app.filter('cut', function () {
     };
 });
 
-app.controller('FormController', function ($scope) { })
+app.controller('FormController', function($scope) { })
 
-app.filter('passwordCount', [function () {
-    return function (value, peak) {
+app.filter('passwordCount', [function() {
+    return function(value, peak) {
         value = angular.isString(value) ? value : '';
         peak = isFinite(peak) ? peak : 7;
 
@@ -66,16 +66,16 @@ app.filter('passwordCount', [function () {
     };
 }])
 
-app.factory('zxcvbn', [function () {
+app.factory('zxcvbn', [function() {
     return {
-        score: function () {
+        score: function() {
             var compute = zxcvbn.apply(null, arguments);
             return compute && compute.score;
         }
     };
 }])
 
-app.directive('okPassword', ['zxcvbn', function (zxcvbn) {
+app.directive('okPassword', ['zxcvbn', function(zxcvbn) {
     return {
         // restrict to only attribute and class
         restrict: 'AC',
@@ -84,9 +84,9 @@ app.directive('okPassword', ['zxcvbn', function (zxcvbn) {
         require: 'ngModel',
 
         // add the NgModelController as a dependency to your link function
-        link: function ($scope, $element, $attrs, ngModelCtrl) {
-            $element.on('blur change keydown', function (evt) {
-                $scope.$evalAsync(function ($scope) {
+        link: function($scope, $element, $attrs, ngModelCtrl) {
+            $element.on('blur change keydown', function(evt) {
+                $scope.$evalAsync(function($scope) {
                     // update the $scope.password with the element's value
                     var pwd = $scope.password = $element.val();
 
@@ -101,13 +101,13 @@ app.directive('okPassword', ['zxcvbn', function (zxcvbn) {
     };
 }]);
 
-app.directive('pwCheck', [function () {
+app.directive('pwCheck', [function() {
     return {
         require: 'ngModel',
-        link: function (scope, elem, attrs, ctrl) {
+        link: function(scope, elem, attrs, ctrl) {
             var firstPassword = '#' + attrs.pwCheck;
-            elem.add(firstPassword).on('keyup', function () {
-                scope.$apply(function () {
+            elem.add(firstPassword).on('keyup', function() {
+                scope.$apply(function() {
                     // console.info(elem.val() === $(firstPassword).val());
                     ctrl.$setValidity('pwmatch', elem.val() === $(firstPassword).val());
                 });
@@ -116,7 +116,7 @@ app.directive('pwCheck', [function () {
     }
 }]);
 
-app.config(['growlProvider', function (growlProvider) {
+app.config(['growlProvider', function(growlProvider) {
     growlProvider.globalTimeToLive(4000);
     growlProvider.globalDisableCountDown(true);
 }]);

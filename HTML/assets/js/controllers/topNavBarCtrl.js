@@ -4,7 +4,7 @@
 
 'use strict';
 
-app.controller('TopNavBarCtrl',["$scope", "localStorageService", "$rootScope",
+app.controller('TopNavBarCtrl', ["$scope", "localStorageService", "$rootScope",
     function ($scope, localStorageService, $rootScope) {
 
 

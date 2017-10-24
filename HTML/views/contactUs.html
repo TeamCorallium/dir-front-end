@@ -1,4 +1,4 @@
-<div class="main-content padding-top-50">
+<div class="main-content padding-top-50" ng-controller="ContactUsCtrl">
     <section class="container-fluid container-fullw bg-white">
         <div class="container">
             <div class="row">
@@ -10,22 +10,15 @@
                         <strong>Error!</strong> There was an error sending your message.
                     </div>
                     <h2>Contact Us</h2>
-                    <form novalidate="novalidate" action="" id="contactForm" type="post">
+                    <form novalidate="novalidate" id="contactForm">
                         <div class="row">
                             <div class="form-group">
-                                <div class="col-md-6">
-                                    <label> Your name
-                                        <span class="symbol required"></span>
-                                    </label>
-                                    <input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="name"
-                                        id="name">
-                                </div>
                                 <div class="col-md-6">
                                     <label> Your email address
                                         <span class="symbol required"></span>
                                     </label>
                                     <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address."
-                                        maxlength="100" class="form-control" name="email" id="email">
+                                        maxlength="100" class="form-control" name="email" id="email" ng-model="message.email">
                                 </div>
                             </div>
                         </div>
@@ -34,7 +27,7 @@
                                 <div class="col-md-12">
                                     <label> Subject </label>
                                     <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject"
-                                        id="subject">
+                                        id="subject" ng-model="message.subject">
                                 </div>
                             </div>
                         </div>
@@ -44,14 +37,15 @@
                                     <label> Message
                                         <span class="symbol required"></span>
                                     </label>
-                                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"></textarea>
+                                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"
+                                        ng-model="message.body"></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
                                 <button data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn"
-                                    type="button">
+                                    type="button" ng-click="sendMessage()">
                                     <span>Send Message</span>
                                 </button>
                             </div>

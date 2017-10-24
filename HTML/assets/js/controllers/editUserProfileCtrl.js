@@ -3,15 +3,15 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl",
-    function ($scope, $stateParams,RestService, $state, $cookies, $rootScope, growl) {
+app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl",
+    function ($scope, $stateParams, RestService, $state, $cookies, $rootScope, growl) {
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';
 
         $rootScope.viewProfile = true;
 
-        $scope.uploadFile = function(file) {
+        $scope.uploadFile = function (file) {
             if (file) {
                 // ng-img-crop
                 var imageReader = new FileReader();
@@ -47,70 +47,70 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
-                    function (data) {
-                        data = data.results;
-                        if (data.length > 0){
-                            $scope.user.username = data[0].username;
-                            $scope.user.firstname = data[0].first_name;
-                            $scope.user.lastname = data[0].last_name;
-                            $scope.user.email = data[0].email;
-                            $scope.name = $scope.user.firstname+" "+$scope.user.lastname;
+                function (data) {
+                    data = data.results;
+                    if (data.length > 0) {
+                        $scope.user.username = data[0].username;
+                        $scope.user.firstname = data[0].first_name;
+                        $scope.user.lastname = data[0].last_name;
+                        $scope.user.email = data[0].email;
+                        $scope.name = $scope.user.firstname + " " + $scope.user.lastname;
 
-                            if (data[0].profiles.length > 0) {
-                                $scope.getProfile(data[0].profiles[0]);
-                            }
-                            // $scope.getTshirts(data[0].tshirts);
-                            getSnippets(data[0].username);
-                            getSocialNetworks(data[0].username);
-
-                        } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
+                        if (data[0].profiles.length > 0) {
+                            $scope.getProfile(data[0].profiles[0]);
                         }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
+                        // $scope.getTshirts(data[0].tshirts);
+                        getSnippets(data[0].username);
+                        getSocialNetworks(data[0].username);
+
+                    } else {
+                        $state.go('home');
+                        $('#myModal').modal('show');
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
         $scope.getProfile = function (url) {
             RestService.fetchObjectByUrl(url)
                 .then(
-                    function (data) {
+                function (data) {
 
-                        if (data != undefined){
-                            $scope.user.info = data.info;
-                            if (data.avatar != '' && data.avatar != null){
-                                var avatarArray = data.avatar.split("/");
-                                $scope.user.avatar = RestService.imageDir+avatarArray[avatarArray.length-1];
-                            } else {
-                                $scope.user.avatar = 'assets/images/default-user.png';
-                            }
-                            $scope.user.id = data.id;
-                            $scope.user.score = data.score;
-                            $scope.user.rating = data.rating;
-                            $scope.user.profileurl = data.url;
+                    if (data != undefined) {
+                        $scope.user.info = data.info;
+                        if (data.avatar != '' && data.avatar != null) {
+                            var avatarArray = data.avatar.split("/");
+                            $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                         } else {
-                            $('#myModal').modal('show');
+                            $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
+                        $scope.user.id = data.id;
+                        $scope.user.score = data.score;
+                        $scope.user.rating = data.rating;
+                        $scope.user.profileurl = data.url;
+                    } else {
+                        $('#myModal').modal('show');
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
         $scope.getTshirts = function (urls) {
-            for (var i=0; i<urls.length; i++){
+            for (var i = 0; i < urls.length; i++) {
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
-                        function (data) {
-                            $scope.user.tshirts.push(data);
-                        },
-                        function (errResponse) {
-                            console.log(errResponse);
-                        }
+                    function (data) {
+                        $scope.user.tshirts.push(data);
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
                     );
             }
         };
@@ -118,36 +118,36 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         var getSnippets = function (username) {
             RestService.fetchSnippets(username)
                 .then(
-                    function (data) {
-                        for (var i=0; i<data.length; i++){
-                            data[i].body = replaceURLWithHTMLLinks(data[i].body);
-                            $scope.user.snippets.push(data[i]);
-                        }
-                        
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
+                function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        data[i].body = replaceURLWithHTMLLinks(data[i].body);
+                        $scope.user.snippets.push(data[i]);
                     }
+
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
         var getSocialNetworks = function (username) {
             RestService.fetchSocialNetworks(username)
                 .then(
-                    function (data) {
-                        for (var i=0; i<data.length; i++){
-                            $scope.user.socialnetworks.push(data[i]);
-                        }                        
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
+                function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.user.socialnetworks.push(data[i]);
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
-        var replaceURLWithHTMLLinks = function(text) {
+        var replaceURLWithHTMLLinks = function (text) {
             var re = /(\(.*?)?\b((?:https?|ftp|file):\/\/[-a-z0-9+&@#\/%?=~_()|!:,.;]*[-a-z0-9+&@#\/%=~_()|])/ig;
-            return text.replace(re, function(match, lParens, url) {
+            return text.replace(re, function (match, lParens, url) {
                 var rParens = '';
                 lParens = lParens || '';
 
@@ -164,7 +164,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
                     //     /(.*)(\.?\).*)/.exec(url)
                     // because if (.*) is greedy then \.? never gets a chance.
                     if (m = /(.*)(\.\).*)/.exec(url) ||
-                            /(.*)(\).*)/.exec(url)) {
+                        /(.*)(\).*)/.exec(url)) {
                         url = m[1];
                         rParens = m[2] + rParens;
                     }
@@ -173,21 +173,21 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             });
         };
 
-        if ($cookies.get('username')){
+        if ($cookies.get('username')) {
             $scope.getUser($cookies.get('username'));
         } else {
             $('#myModal').modal('show');
         }
 
         $scope.saveProfile = function () {
-            if ($scope.user.avatar == 'assets/images/default-user.png'){
+            if ($scope.user.avatar == 'assets/images/default-user.png') {
                 $scope.user.avatar = '';
             }
-            console.log("avatar:"+ $scope.user.avatar);
+            console.log("avatar:" + $scope.user.avatar);
             if ($scope.user.avatar instanceof File) {
-                RestService.updateProfile($scope.user.profileurl,$scope.user.info,$scope.user.rating,$scope.user.score,$scope.user.avatar);
+                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar);
             } else {
-                RestService.updateProfileWithOutAvatar($scope.user.profileurl,$scope.user.id, $scope.user.info,$scope.user.rating,$scope.user.score)
+                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score)
             }
         };
 
@@ -199,7 +199,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.deleteSnippet(url);
         };
 
-        $rootScope.$on('deleteSocialNetwork', function (event, data) {            
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {
             $scope.user.socialnetworks = [];
             getSocialNetworks($cookies.get('username'));
 
@@ -224,52 +224,52 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                    function (data) {
-                        $scope.users = data.results;
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
+                function (data) {
+                    $scope.users = data.results;
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
-            $cookies.put('exploreUser',owner,{path: '/'});
+            $cookies.put('exploreUser', owner, { path: '/' });
             $state.go('tshirts');
         };
 
         $scope.getAvatar = function (avatar) {
             var dirAvatar = '';
-            if (avatar != '' && avatar != null){
+            if (avatar != '' && avatar != null) {
                 var avatarArray = avatar.split("/");
-                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length-1];
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
             } else {
                 dirAvatar = 'assets/images/default-user.png';
             }
             return dirAvatar;
         };
 
-        $scope.openModalImageCropper = function() {
+        $scope.openModalImageCropper = function () {
             $('#ModalImageCropper').modal('show');
         };
 
         $scope.crop = function () {
             $scope.user.avatar = $scope.myCroppedImage;
             //return a promise that resolves with a File instance
-            function urltoFile(url, filename, mimeType){
+            function urltoFile(url, filename, mimeType) {
                 return (fetch(url)
-                    .then(function(res){return res.arrayBuffer();})
-                    .then(function(buf){return new File([buf], filename, {type:mimeType});})
+                    .then(function (res) { return res.arrayBuffer(); })
+                    .then(function (buf) { return new File([buf], filename, { type: mimeType }); })
                 );
             }
 
             urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
-            .then(function(file){
-                console.log(file);
-                $scope.user.avatar = file;
-            })
+                .then(function (file) {
+                    console.log(file);
+                    $scope.user.avatar = file;
+                })
 
             $('#ModalImageCropper').modal('hide');
         };
