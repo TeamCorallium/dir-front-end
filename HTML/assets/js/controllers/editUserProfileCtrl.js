@@ -199,21 +199,11 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.deleteSnippet(url);
         };
 
-        $rootScope.$on('deleteSocialNetwork', function (event, data) {
-            $scope.user.username =  '';
-            $scope.user.firstname = '';
-            $scope.user.lastname = '';
-            $scope.user.email = '';
-            $scope.user.info = '';
-            $scope.user.score = '';
-            $scope.user.rating = '';
-            $scope.user.avatar = '';
-            $scope.user.id = '';
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {            
             $scope.user.socialnetworks = [];
-            $scope.user.tshirts = [];
-            $scope.user.snippets = [];
+            getSocialNetworks($cookies.get('username'));
 
-            $scope.getUser($cookies.get('username'));
+            growl.succes("Social network delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
@@ -221,20 +211,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
         });
 
         $rootScope.$on('deleteSnippet', function (event, data) {
-            $scope.user.username =  '';
-            $scope.user.firstname = '';
-            $scope.user.lastname = '';
-            $scope.user.email = '';
-            $scope.user.info = '';
-            $scope.user.score = '';
-            $scope.user.rating = '';
-            $scope.user.avatar = '';
-            $scope.user.id = '';
-            $scope.user.socialnetworks = [];
-            $scope.user.tshirts = [];
             $scope.user.snippets = [];
+            getSnippets($cookies.get('username'));
 
-            $scope.getUser($cookies.get('username'));
+            growl.succes("Snippet delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSnippetError', function (event, data) {
