@@ -14,7 +14,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var imageDownload = 'http://10.58.20.225/api/qrcode';
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
     // var messages = 'http://10.58.20.225/messages/';
-    
+
     var tshirt = 'http://www.dir.com:8888/tshirts/';
     var users = 'http://www.dir.com:8888/users/';
     var profiles = 'http://www.dir.com:8888/profiles/';
@@ -177,7 +177,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
             }).error(function (response) {
-                console.log("Entra al error");
+                $rootScope.$broadcast('makeQRCodeError');
             });
         },
 
@@ -307,7 +307,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteSocialNetwork');
             }).error(function (response) {
-                console.log("Entra al error");
+                $rootScope.$broadcast('deleteSocialNetworkError');
             });
         },
 
@@ -328,7 +328,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteSnippet');
             }).error(function (response) {
-                console.log("Entra al error");
+                $rootScope.$broadcast('deleteSnippetError');
             });
         },
 
@@ -338,8 +338,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 function (response) {
                     return response.data;
                 },
-                function (errResponse) {
-                    console.error('Error while fetching tshirts');
+                function (errResponse) {                    
                     return $q.reject(errResponse);
                 }
                 );
@@ -352,7 +351,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return response.data;
                 },
                 function (errResponse) {
-                    console.error('Error while fetching user');
                     return $q.reject(errResponse);
                 }
                 );
@@ -365,7 +363,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return response.data;
                 },
                 function (errResponse) {
-                    console.error('Error while fetching user');
                     return $q.reject(errResponse);
                 }
                 );
@@ -378,7 +375,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return response.data;
                 },
                 function (errResponse) {
-                    console.error('Error while fetching social networks');
                     return $q.reject(errResponse);
                 }
                 );
@@ -391,7 +387,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return response.data;
                 },
                 function (errResponse) {
-                    console.error('Error while fetching snippets');
                     return $q.reject(errResponse);
                 }
                 );
@@ -404,7 +399,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return response.data;
                 },
                 function (errResponse) {
-                    console.error('Error while fetching object');
                     return $q.reject(errResponse);
                 }
                 );

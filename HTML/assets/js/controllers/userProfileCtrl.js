@@ -226,6 +226,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.profileQRCode = data;
         });
 
+        $rootScope.$on('makeQRCodeError', function (event, data) {
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });        
+
         $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
