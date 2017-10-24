@@ -200,6 +200,9 @@
                                         placeholder="Enter your PIN" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
                                         required>
                                 </div>
+                                <div class="msg-block" id="RegisterWrongUserPassword" hidden>
+                                    <span class="msg-error"> This username is already used.</span>
+                                </div>
                                 <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                     <i class="ti-user"></i> Register
                                 </a>
@@ -258,6 +261,9 @@
                                     <span class="msg-error">
                                         Passwords don't match.
                                     </span>
+                                </div>
+                                <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
+                                    <span class="msg-error"> This username is already used</span>
                                 </div>
                                 <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
                                     <i class="ti-user"></i> Register
