@@ -135,7 +135,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('addsnippets');
             }).error(function (response) {
-                console.log("Entra al error");
+                $rootScope.$broadcast('addSnippetsError');
             });
         },
 
@@ -156,7 +156,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('addsocialnetwork');
             }).error(function (response) {
-                console.log("Entra al error");
+                $rootScope.$broadcast('addSocialNetworkError');
             });
         },
 

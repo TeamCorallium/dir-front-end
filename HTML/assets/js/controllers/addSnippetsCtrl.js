@@ -3,17 +3,21 @@
  */
 'use strict';
 
-app.controller('AddSnippetsCtrl',["$rootScope", "$scope", "RestService", "$state", "$cookies",
-    function ($rootScope, $scope,RestService, $state, $cookies) {
+app.controller('AddSnippetsCtrl', ["$rootScope", "$scope", "RestService", "$state", "$cookies", "growl",
+    function ($rootScope, $scope, RestService, $state, $cookies, growl) {
 
-    $scope.snippets = '';
+        $scope.snippets = '';
 
-    $scope.addSnippets = function (title,body) {
-        if (title != '' && body!= ''){
-            RestService.addSnippet(title,body);
-        } else {
-            // throw toaster
-        }
-    };
+        $scope.addSnippets = function (title, body) {
+            if (title != '' && body != '') {
+                RestService.addSnippet(title, body);
+            } else {
+                growl.success("Cannot exist empty fields", { title: 'Add Snippet' });
+            }
+        };
+
+        $rootScope.$on('addSnippetsError', function (event, data) {
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
 
     }]);

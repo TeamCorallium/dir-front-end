@@ -3,11 +3,11 @@
  */
 'use strict';
 
-app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "$state", "$cookies",
-    function ($rootScope, $scope, RestService, $state, $cookies) {
+app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "$state", "$cookies", "growl",
+    function ($rootScope, $scope, RestService, $state, $cookies, growl) {
 
         $scope.socialnetwork = '';
-        $scope.url = '';        
+        $scope.url = '';
 
         $scope.updateUrl = function () {
             $scope.url = '';
@@ -153,9 +153,14 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 }
 
                 RestService.addSocialNetwork(name, url, type);
+
             } else {
-                // throw toaster
+                growl.success("Cannot exist empty fields", { title: 'Add Social Network' });
             }
         };
+
+        $rootScope.$on('addSocialNetworkError', function (event, data) {
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
 
     }]);

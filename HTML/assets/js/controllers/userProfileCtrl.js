@@ -247,6 +247,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getAvatar = function (avatar) {
             var dirAvatar = '';
+            
             if (avatar != '' && avatar != null) {
                 var avatarArray = avatar.split("/");
                 dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
