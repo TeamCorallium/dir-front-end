@@ -231,7 +231,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });        
 
         $scope.getPopularUsers = function () {
-            RestService.fetchObjectByUrl(RestService.profileDir)
+            RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
                 function (data) {
                     $scope.users = data.results;
