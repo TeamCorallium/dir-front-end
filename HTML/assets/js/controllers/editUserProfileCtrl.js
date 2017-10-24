@@ -216,6 +216,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.getUser($cookies.get('username'));
         });
 
+        $rootScope.$on('deleteSocialNetworkError', function (event, data) {
+            growl.error("Error when attempting to remove their social network. Please check the status of your network.", { title: 'Delete Social Network' });
+        });
+
         $rootScope.$on('deleteSnippet', function (event, data) {
             $scope.user.username =  '';
             $scope.user.firstname = '';
@@ -231,6 +235,10 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             $scope.user.snippets = [];
 
             $scope.getUser($cookies.get('username'));
+        });
+
+        $rootScope.$on('deleteSnippetError', function (event, data) {
+            growl.error("Error when attempting to remove their snippet. Please check the status of your network.", { title: 'Delete Social Network' });
         });
 
         $scope.getPopularUsers = function () {
