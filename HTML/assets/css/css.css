@@ -200,10 +200,21 @@
     }
 }
 
+@media (max-width: 991px) {
+    .navbar > .container .navbar-header .navbar-brand {
+        float: right !important;
+        margin-right: 5% !important;
+    }
+}
+
 @media (min-width: 992px) {
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 27% !important;
+    }
+
+    .navbar > .container .navbar-header .navbar-brand {
+        float: right !important;
     }
 }
 

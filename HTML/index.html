@@ -49,23 +49,22 @@
         <header class="small-header height-50">
             <div class="navbar navbar-default" role="navigation">
                 <!-- start: TOP NAVIGATION CONTAINER -->
-                <div class="container">
-                    <div class="navbar-header">
+                <div class="container">                    
+                    <div class="navbar-header">                        
                         <!-- start: RESPONSIVE MENU TOGGLER -->
                         <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
                             <span class="sr-only">Toggle navigation</span>
                             <i class="ti-align-justify"></i>
                         </a>
                         <!-- end: RESPONSIVE MENU TOGGLER -->
-                        <!-- start: RESPONSIVE MENU SEARCH -->
-                    </div>
-                    <!-- start: NAVBAR -->
-                    <div class="navbar-collapse collapse margin-left-0">
                         <!-- start: LOGO -->
-                        <a ui-sref="home" class="navbar-brand float-left">
+                        <a ui-sref="home" class="navbar-brand" id="floatLogo">
                             <img src="assets/images/logo.png">
                         </a>
                         <!-- end: LOGO -->
+                    </div>                    
+                    <!-- start: NAVBAR -->
+                    <div class="navbar-collapse collapse margin-left-0">                        
                         <ul class="nav navbar-nav navbar-right">
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
@@ -302,7 +301,7 @@
                                 </div>
                                 <div class="msg-block" id="errorBoxHome" hidden>
                                     <span class="msg-error">
-                                        Passwords don't match.
+                                        Invalid login credentials.
                                     </span>
                                 </div>
                                 <a class="btn btn-primary ButtonRadius" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
