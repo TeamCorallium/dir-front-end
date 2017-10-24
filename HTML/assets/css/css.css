@@ -326,10 +326,14 @@
         display: none;
     }
 
-    .avatarXS{
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
+    }
+    
+    .marginTopMovil {
+        margin-top: 25px !important;
     }
 
     .image_qrcode {

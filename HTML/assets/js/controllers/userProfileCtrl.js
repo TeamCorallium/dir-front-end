@@ -175,42 +175,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $rootScope.$on('addsnippets', function (event, data) {
-            $scope.user.username = '';
-            $scope.user.firstname = '';
-            $scope.user.lastname = '';
-            $scope.user.email = '';
-            $scope.user.info = '';
-            $scope.user.score = '';
-            $scope.user.rating = '';
-            $scope.user.avatar = '';
-            $scope.user.id = '';
-            $scope.user.socialnetworks = [];
-            $scope.user.tshirts = [];
+        $rootScope.$on('addsnippets', function (event, data) {            
             $scope.user.snippets = [];
-
             $('#modalSnippets').modal('hide');
-            $state.go('profile');
-            $scope.getUser($cookies.get('username'));
+
+            $scope.getSnippets($cookies.get('username'));
         });
 
-        $rootScope.$on('addsocialnetwork', function (event, data) {
-            $scope.user.username = '';
-            $scope.user.firstname = '';
-            $scope.user.lastname = '';
-            $scope.user.email = '';
-            $scope.user.info = '';
-            $scope.user.score = '';
-            $scope.user.rating = '';
-            $scope.user.avatar = '';
-            $scope.user.id = '';
+        $rootScope.$on('addsocialnetwork', function (event, data) {            
             $scope.user.socialnetworks = [];
-            $scope.user.tshirts = [];
-            $scope.user.snippets = [];
-
             $('#modalSocialNetwork').modal('hide');
-            $state.go('profile');
-            $scope.getUser($cookies.get('username'));
+
+            $scope.getSocialNetworks($cookies.get('username'));
         });
 
         $scope.goToLink = function (link) {
