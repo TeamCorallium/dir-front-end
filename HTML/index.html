@@ -361,12 +361,12 @@
                             <h4 class="modal-title">Add Social Network</h4>
                         </div>
                         <div class="modal-body padding-15">
-                            <form name="AddSocialNetworks" role="form">
+                            <form name="AddSocialNetworks" role="form"  ng-controller="AddSocialNetworkCtrl">
                                 <div class="form-group">
                                     <label for="socialnetwork">Social Networks</label>
                                     <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
-                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true" ng-controller="AddSocialNetworkCtrl">
+                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
                                         <option ng-selected="true" value="0" disabled selected>Select a social network</option>
                                         <option value="Facebook">Facebook</option>
                                         <option value="LinkedIn">LinkedIn</option>
