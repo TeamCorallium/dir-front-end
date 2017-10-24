@@ -237,7 +237,7 @@ app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
                     function (data) {
-                        $scope.users = data;
+                        $scope.users = data.results;
                     },
                     function (errResponse) {
                         console.log(errResponse);

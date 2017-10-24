@@ -14,7 +14,7 @@ app.controller('ExploreUsersCtrl',["$scope", "RestService", "$state", "$rootScop
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
                     function (data) {
-                        $scope.profiles = data;
+                        $scope.profiles = data.results;
 
                         for (var i=0; i<$scope.profiles.length; i++){
                             if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null){
