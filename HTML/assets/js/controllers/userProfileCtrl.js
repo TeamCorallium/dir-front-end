@@ -179,14 +179,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.snippets = [];
             $('#modalSnippets').modal('hide');
 
-            $scope.getSnippets($cookies.get('username'));
+            getSnippets($cookies.get('username'));
         });
 
         $rootScope.$on('addsocialnetwork', function (event, data) {            
             $scope.user.socialnetworks = [];
             $('#modalSocialNetwork').modal('hide');
 
-            $scope.getSocialNetworks($cookies.get('username'));
+            getSocialNetworks($cookies.get('username'));
         });
 
         $scope.goToLink = function (link) {
