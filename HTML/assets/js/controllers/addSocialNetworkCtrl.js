@@ -3,14 +3,14 @@
  */
 'use strict';
 
-app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$state", "$cookies",
-    function ($rootScope, $scope,RestService, $state, $cookies) {
+app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "$state", "$cookies",
+    function ($rootScope, $scope, RestService, $state, $cookies) {
 
-    $scope.socialnetwork = '';
-    $scope.url = '';
+        $scope.socialnetwork = 'Facebook';
+        $scope.url = '';        
 
         $scope.updateUrl = function () {
-            switch($scope.socialnetwork) {
+            switch ($scope.socialnetwork) {
                 case "Facebook": {
                     $scope.url = 'https://www.facebook.com/';
                     break;
@@ -78,11 +78,13 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
             }
         };
 
-        $scope.addSocialNetwork = function (name,url) {
+        $scope.updateUrl();
+
+        $scope.addSocialNetwork = function (name, url) {
             var type = '';
 
-            if (name != '' && url!= ''){
-                switch(name) {
+            if (name != '' && url != '') {
+                switch (name) {
                     case "Facebook": {
                         type = 'ti-facebook';
                         break;
@@ -148,8 +150,8 @@ app.controller('AddSocialNetworkCtrl',["$rootScope", "$scope", "RestService", "$
                         break;
                     };
                 }
-    
-                RestService.addSocialNetwork(name,url,type);
+
+                RestService.addSocialNetwork(name, url, type);
             } else {
                 // throw toaster
             }

@@ -395,8 +395,8 @@
                                 <div class="form-group">
                                     <label for="url">Social network url</label>
                                     <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <textarea class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
-                                        id="user" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url"></textarea>
+                                    <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
+                                        id="user" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url">
                                 </div>
                             </form>
                         </div>
