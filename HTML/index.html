@@ -363,11 +363,9 @@
                         <div class="modal-body padding-15">
                             <form name="AddSocialNetworks" role="form">
                                 <div class="form-group">
-                                    <label for="socialnetwork">Social Networks</label>
-                                    <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
+                                    <label for="socialnetwork">Social Networks</label>                                    
+                                    <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200"
                                         ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
-                                        <option ng-selected="" value="0" disabled selected>Select a social network</option>
                                         <option ng-selected="true" value="Facebook">Facebook</option>
                                         <option value="LinkedIn">LinkedIn</option>
                                         <option value="Twitter">Twitter</option>
