@@ -8,14 +8,14 @@ app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$co
 
         $rootScope.viewProfile = true;
 
-        $scope.countLimit = 3;
+        $scope.countLimit = 4;
 
         if ($(window).width() >= 1200) {
-            $scope.countLimit = 3;
+            $scope.countLimit = 4;
         } else if ($(window).width() >=  992) {
-            $scope.countLimit = 2
+            $scope.countLimit = 3;
         } else if ($(window).width() >= 768) {
-            $scope.countLimit = 2
+            $scope.countLimit = 2;
         } else {
             $scope.countLimit = 1;
         }
@@ -24,11 +24,11 @@ app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$co
 
             $scope.$apply(function(){
                 if ($(window).width() >= 1200) {
-                    $scope.countLimit = 3;
+                    $scope.countLimit = 4;
                 } else if ($(window).width() >=  992) {
-                    $scope.countLimit = 2
+                    $scope.countLimit = 3;
                 } else if ($(window).width() >= 768) {
-                    $scope.countLimit = 2
+                    $scope.countLimit = 2;
                 } else {
                     $scope.countLimit = 1;
                 }
@@ -45,7 +45,7 @@ app.controller('HomeCtrl',["$scope", "$state", "$rootScope", "RestService", "$co
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
                     function (data) {
-                        $scope.profiles = data;
+                        $scope.profiles = data.results;
 
                         for (var i=0; i<$scope.profiles.length; i++){
                             if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null){

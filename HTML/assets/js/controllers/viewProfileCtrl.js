@@ -180,7 +180,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchObjectByUrl(RestService.profileDir)
                 .then(
                 function (data) {
-                    $scope.users = data;
+                    $scope.users = data.results;
                 },
                 function (errResponse) {
                     console.log(errResponse);
