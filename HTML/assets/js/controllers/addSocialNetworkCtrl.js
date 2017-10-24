@@ -6,7 +6,7 @@
 app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "$state", "$cookies",
     function ($rootScope, $scope, RestService, $state, $cookies) {
 
-        $scope.socialnetwork = 'Facebook';
+        $scope.socialnetwork = '';
         $scope.url = '';        
 
         $scope.updateUrl = function () {
