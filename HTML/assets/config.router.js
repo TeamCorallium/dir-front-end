@@ -1,7 +1,7 @@
 'use strict';
 
-app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$compileProvider','$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRED','$httpProvider',
-    function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider,$filterProvider, $provide, $ocLazyLoadProvider, jsRequires,$httpProvider) {
+app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRED', '$httpProvider',
+    function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires, $httpProvider) {
 
         app.controller = $controllerProvider.register;
         app.directive = $compileProvider.directive;
@@ -22,38 +22,42 @@ app.config(['$stateProvider', '$urlRouterProvider','$controllerProvider', '$comp
 
         $urlRouterProvider.otherwise('/home');
 
-        $stateProvider.state('blank',{
+        $stateProvider.state('blank', {
             url: '',
             templateUrl: 'views/home.html',
             resolve: loadSequence('homeCtrl')
-        }).state('home',{
+        }).state('home', {
             url: '/home',
             templateUrl: 'views/home.html',
             resolve: loadSequence('homeCtrl')
-        }).state('profile',{
+        }).state('profile', {
             url: '/profile',
             templateUrl: 'views/userProfile.html',
             resolve: loadSequence('userProfileCtrl')
-        }).state('edit-profile',{
+        }).state('edit-profile', {
             url: '/editprofile',
             templateUrl: 'views/editUserProfile.html',
             resolve: loadSequence('editUserProfileCtrl')
-        }).state('tshirts',{
+        }).state('tshirts', {
             url: '/tshirts/:id',
             templateUrl: 'views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
-        }).state('users',{
+        }).state('users', {
             url: '/users',
             templateUrl: 'views/exploreUsers.html',
             resolve: loadSequence('exploreUsersCtrl')
-        }).state('inbox',{
+        }).state('inbox', {
             url: '/inbox',
             templateUrl: 'views/inbox.html',
             resolve: loadSequence('inboxCtrl')
-        }).state('contact',{
+        }).state('contact', {
             url: '/contact',
             templateUrl: 'views/contactUs.html',
             resolve: loadSequence('contactUsCtrl')
+        }).state('faq', {
+            url: '/faq',
+            templateUrl: 'views/faq.html',
+            resolve: loadSequence('faqCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)

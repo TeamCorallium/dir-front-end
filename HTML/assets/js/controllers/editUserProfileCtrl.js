@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope",
-    function ($scope, $stateParams,RestService, $state, $cookies, $rootScope) {
+app.controller('EditUserProfileCtrl',["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl",
+    function ($scope, $stateParams,RestService, $state, $cookies, $rootScope, growl) {
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';
