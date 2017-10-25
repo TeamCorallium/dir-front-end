@@ -63,7 +63,7 @@
                 </li>
             </ul>
         </div>
-        <div id="MessageReadBox" class="row col-sm-8 col-md-8 col-lg-8 border-left">
+        <div id="MessageReadBox" class="col-sm-8 col-md-8 col-lg-8 border-left">
             <div class="ng-scope" ng-if="messageSelected.id == ''">
                 <div class="no-messages">
                     <h2>No email has been selected</h2>
@@ -72,12 +72,12 @@
             <div ng-if="messageSelected.id != ''">
                 <div class="message-actions ng-scope">
                     <ul class="actions no-margin no-padding block">
-                        <li class="no-padding">
+                        <li class="no-padding displayBlock">
                             <a class="text-info">
                                 Reply
                             </a>
                         </li>
-                        <li class="no-padding">
+                        <li class="no-padding displayBlock">
                             <a>
                                 Delete
                             </a>
