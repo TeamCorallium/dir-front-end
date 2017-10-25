@@ -85,19 +85,21 @@
                     </ul>
                 </div>
                 <div class="margin-top-100">
-                    <span class="text MessageTime pull-left">{{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}</span>
-                </div>
-                <div>
-                    <span class="MessageFromSender">{{messageSelected.sender}}</span>
-                </div>
-                <div>
-                    <span class="MessageFromReceiver">To: {{messageSelected.received}}</span>
-                </div>
-                <div>
-                    <span class="MessageSubject">{{messageSelected.subject}}</span>
-                </div>
-                <div>
-                    <span class="MessageContent">{{messageSelected.body}}</span>
+                    <div>
+                        <span class="text MessageTime pull-left">{{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageFromSender">{{messageSelected.sender}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageFromReceiver">To: {{messageSelected.receiver}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageSubject">{{messageSelected.subject}}</span>
+                    </div>
+                    <div>
+                        <span class="MessageContent">{{messageSelected.body}}</span>
+                    </div>
                 </div>
             </div>
         </div>

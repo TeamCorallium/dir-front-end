@@ -977,10 +977,11 @@ a.ButtonImageSize {
 }
 
 .MessageFromSender {
-    font-weight: bold;
-    font-size: 16px !important;
-    margin-top: 2px;
-    color: #0b0b0b;
+	font-weight: bold;
+	font-size: 16px !important;
+	margin-top: 2px;
+	color: #0b0b0b;
+	opacity: 0.6;
 }
 
 .MessageFromReceiver {
