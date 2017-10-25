@@ -72,10 +72,14 @@
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li>
-                                        <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> View Profile</a>
+                                        <a ui-sref="profile" ng-show="((userdata.connected) && (viewProfile))"> 
+                                            <i class="ti-id-badge"></i> View Profile
+                                        </a>
                                     </li>
                                     <li>
-                                        <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewProfile == false))"> Edit Profile</a>
+                                        <a ui-sref="edit-profile" ng-show="((userdata.connected) && (viewProfile == false))"> 
+                                            <i class="ti-pencil-alt"></i>  Edit Profile
+                                        </a>
                                     </li>
                                     <li>
                                         <a ng-show="userdata.connected" ui-sref="inbox">
@@ -83,18 +87,26 @@
                                         </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected"> Log In</a>
+                                        <a data-toggle="modal" data-target="#myModalLoginHome" ng-hide="userdata.connected">
+                                            <i class="ti-shift-right"></i> Log In
+                                        </a>
                                     </li>
                                     <li>
-                                        <a data-toggle="modal" data-target="#myModalRegisterHome" ng-hide="userdata.connected"> Register</a>
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome" ng-hide="userdata.connected"> 
+                                            <i class="ti-user"></i> Register
+                                        </a>
                                     </li>
                                     <li>
-                                        <a ng-show="userdata.connected" ng-click="logout()"> Log Out</a>
+                                        <a ng-show="userdata.connected" ng-click="logout()"> 
+                                            <i class="ti-shift-left"></i> Log Out
+                                        </a>
                                     </li>
                                 </ul>
                             </li>
                             <li>
-                                <a><i class="ti-shopping-cart"></i> Buy </a>
+                                <a>
+                                    <i class="ti-shopping-cart"></i> Buy 
+                                </a>
                             </li>
                         </ul>
                         <!-- start: TOP BAR SOCIAL ICONS -->
