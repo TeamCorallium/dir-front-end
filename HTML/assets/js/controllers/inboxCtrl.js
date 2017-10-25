@@ -78,16 +78,16 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
             readed: ''
         };
 
-        $scope.selectMessageInbox = function (id) {
+        $scope.selectMessageInbox = function (message) {
             $scope.messageSelected = {
-                url: '',
-                id: '',
-                sender: '',
-                receiver: '',
-                subject: '',
-                body: '',
-                created: '',
-                readed: ''
+                url: message.url,
+                id: message.id,
+                sender: message.sender,
+                receiver: message.receiver,
+                subject: message.subject,
+                body: message.body,
+                created: message.created,
+                readed: true
             };
 
             if ($(window).width() <= 767) {
@@ -95,52 +95,26 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
                 $('#MessageReadBox').show();
             }
 
-            for (var i=0; i<$scope.messagesInbox.length; i++){
-                if ($scope.messagesInbox[i].id == id){
-                    $scope.messageSelected.url = $scope.messagesInbox[i].url;
-                    $scope.messageSelected.id = id;
-                    $scope.messageSelected.sender = $scope.messagesInbox[i].sender;
-                    $scope.messageSelected.receiver = $scope.messagesInbox[i].receiver;
-                    $scope.messageSelected.subject = $scope.messagesInbox[i].subject;
-                    $scope.messageSelected.body = $scope.messagesInbox[i].body;
-                    $scope.messageSelected.created = $scope.messagesInbox[i].created;
-                    $scope.messageSelected.readed = true;
-                    $scope.messagesInbox[i].readed = true;
-                }
-            }
-
             RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,
                 $scope.messageSelected.sender, $scope.messageSelected.receiver, $scope.messageSelected.subject,
                 $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
-        $scope.selectMessageSend = function (id) {
+        $scope.selectMessageSend = function (message) {
             $scope.messageSelected = {
-                id: '',
-                sender: '',
-                receiver: '',
-                subject: '',
-                body: '',
-                created: '',
-                readed: ''
+                url: message.url,
+                id: message.id,
+                sender: message.sender,
+                receiver: message.receiver,
+                subject: message.subject,
+                body: message.body,
+                created: message.created,
+                readed: true
             };
 
             if ($(window).width() <= 767) {
                 $('#MessageSendBox').hide();
                 $('#MessageReadBox').show();
-            }
-
-            for (var i=0; i<$scope.messagesSend.length; i++){
-                if ($scope.messagesSend[i].id == id){
-                    $scope.messageSelected.id = id;
-                    $scope.messageSelected.sender = $scope.messagesSend[i].sender;
-                    $scope.messageSelected.receiver = $scope.messagesSend[i].receiver;
-                    $scope.messageSelected.subject = $scope.messagesSend[i].subject;
-                    $scope.messageSelected.body = $scope.messagesSend[i].body;
-                    $scope.messageSelected.created = $scope.messagesSend[i].created;
-                    $scope.messageSelected.readed = true;
-                    $scope.messagesSend[i].readed = true;
-                }
             }
 
             RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,

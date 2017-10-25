@@ -25,9 +25,9 @@
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
                     <h2 class="MessageSubjectNoFound"> No message found</h2>
                 </li>
-                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-class="{MessageUnread: message.readed == false}"
-                    ng-repeat="message in messagesInbox">
-                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageInbox(message.id)">
+                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" 
+                ng-class="{MessageUnread: message.readed == false}" ng-repeat="message in messagesInbox">
+                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageInbox(message)">
                         <div>
                             <span class="MessageFrom"> {{message.sender}}</span>
                             <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
@@ -48,10 +48,10 @@
             </li>
             <ul class="list-unstyled">
                 <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
-                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message.id)">
+                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
                         <div>
                             <span class="MessageFrom"> {{message.sender}}</span>
-                            <span class="text MessageTime"> {{message.created | date}}</span>
+                            <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
                         </div>
                         <div>
                             <span class="MessageSubject"> {{message.subject}}</span>
@@ -70,8 +70,22 @@
                 </div>
             </div>
             <div ng-if="messageSelected.id != ''">
+                <div class="message-actions ng-scope">
+                    <ul class="actions no-margin no-padding block">
+                        <li class="no-padding">
+                            <a class="text-info">
+                                Reply
+                            </a>
+                        </li>
+                        <li class="no-padding">
+                            <a>
+                                Delete
+                            </a>
+                        </li>
+                    </ul>
+                </div>
                 <div>
-                    <span class="text MessageTime">{{messageSelected.created | date}}</span>
+                    <span class="text MessageTime">{{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}</span>
                     <span class="MessageFromSender">{{message.sender}}</span>
                     <span class="MessageFromReceiver">To: {{message.received}}</span>
                 </div>

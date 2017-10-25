@@ -973,6 +973,7 @@ a.ButtonImageSize {
     font-weight: bold;
     margin-top: 2px;
     color: #aeacb4;
+    font-size: 14px;
 }
 
 .MessageFromSender {
