@@ -92,7 +92,13 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
 
             if ($(window).width() <= 767) {
                 $('#MessageInboxBox').hide();
-                $('#MessageReadBox').show();
+                $('#MessageReadBox').show();                
+            }
+
+            for (var i=0; i<$scope.messagesInbox.length; i++) {
+                if ($scope.messagesInbox[i].id == message.id) {
+                    $scope.messagesInbox[i].readed = true;
+                }
             }
 
             RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,
@@ -115,6 +121,12 @@ app.controller('InboxCtrl',["$scope", "$state", "$cookies", "RestService", "filt
             if ($(window).width() <= 767) {
                 $('#MessageSendBox').hide();
                 $('#MessageReadBox').show();
+            }
+
+            for (var i=0; i<$scope.messagesSend.length; i++) {
+                if ($scope.messagesInbox[i].id == message.id) {
+                    $scope.messagesInbox[i].readed = true;
+                }
             }
 
             RestService.updateMessage($scope.messageSelected.url,$scope.messageSelected.id,$scope.messageSelected.created,
