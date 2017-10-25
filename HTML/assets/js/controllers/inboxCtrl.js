@@ -186,7 +186,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
             if (flag){
                 $scope.inboxFlag = true;
-                $('#MessageSendBox').show();
+                $('#MessageInboxBox').show();
                 $('#MessageReadBox').hide();
             } else {
                 $scope.inboxFlag = false;
