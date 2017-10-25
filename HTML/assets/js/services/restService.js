@@ -267,7 +267,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateMessage: function (url, id, created, sender, receiver, subject, body, readed) {
+        updateMessage: function (url, sender, receiver, subject, body, readed) {
             $http({
                 method: 'PUT',
                 url: url,
@@ -295,8 +295,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'url': url, 'id': id, 'created': created, 'sender': sender,
-                    'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'url': url, 'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {

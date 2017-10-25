@@ -102,8 +102,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 }
             }
 
-            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.id, $scope.messageSelected.created,
-                $scope.messageSelected.sender, $scope.messageSelected.receiver, $scope.messageSelected.subject,
+            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
+                $scope.messageSelected.receiver, $scope.messageSelected.subject,
                 $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
@@ -130,8 +130,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 }
             }
 
-            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.id, $scope.messageSelected.created,
-                $scope.messageSelected.sender, $scope.messageSelected.receiver, $scope.messageSelected.subject,
+            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
+                $scope.messageSelected.receiver, $scope.messageSelected.subject,
                 $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
@@ -174,7 +174,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             $(window).off("resize.doResize"); //remove the handler added earlier
         });
 
-        $scope.backToMessageList = function(message) {
+        $scope.backToMessageList = function (message) {
 
             var flag = false;
 
@@ -184,7 +184,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 }
             }
 
-            if (flag){
+            if (flag) {
                 $scope.inboxFlag = true;
                 $('#MessageInboxBox').show();
                 $('#MessageReadBox').hide();
@@ -192,6 +192,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $scope.inboxFlag = false;
                 $('#MessageSendBox').show();
                 $('#MessageReadBox').hide();
-            }            
+            }
         };
     }]);
