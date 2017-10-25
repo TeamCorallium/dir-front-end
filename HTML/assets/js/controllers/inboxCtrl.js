@@ -173,4 +173,25 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $scope.$on("$destroy", function () {
             $(window).off("resize.doResize"); //remove the handler added earlier
         });
+
+        $scope.backToMessageList = function(message) {
+
+            var flag = false;
+
+            for (var i = 0; i < $scope.messagesInbox.length; i++) {
+                if ($scope.messagesInbox[i].id == message.id) {
+                    flag = true;
+                }
+            }
+
+            if (flag){
+                $scope.inboxFlag = true;
+                $('#MessageSendBox').show();
+                $('#MessageReadBox').hide();
+            } else {
+                $scope.inboxFlag = false;
+                $('#MessageSendBox').show();
+                $('#MessageReadBox').hide();
+            }            
+        };
     }]);

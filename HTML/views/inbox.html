@@ -72,6 +72,11 @@
             <div ng-if="messageSelected.id != ''">
                 <div class="message-actions ng-scope">
                     <ul class="actions no-margin no-padding block">
+                        <li class="no-padding displayBlock hidden-lg hidden-md hidden-sm">
+                            <a class="text-info" ng-click="backToMessageList(messageSelected)">
+                                Back
+                            </a>
+                        </li>
                         <li class="no-padding displayBlock">
                             <a class="text-info">
                                 Reply
