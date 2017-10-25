@@ -1208,3 +1208,7 @@ a.ButtonImageSize {
     min-height: 45px !important;
     border-bottom: none !important;
 }
+
+.margin-top-100 {
+    margin-top: 100px !important;
+}

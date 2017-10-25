@@ -84,16 +84,16 @@
                         </li>
                     </ul>
                 </div>
-                <div>
+                <div class="">
                     <span class="text MessageTime">{{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}</span>
-                    <span class="MessageFromSender">{{message.sender}}</span>
-                    <span class="MessageFromReceiver">To: {{message.received}}</span>
+                    <span class="MessageFromSender">{{messageSelected.sender}}</span>
+                    <span class="MessageFromReceiver">To: {{messageSelected.received}}</span>
                 </div>
                 <div>
-                    <span class="MessageSubject">{{message.subject}}</span>
+                    <span class="MessageSubject">{{messageSelected.subject}}</span>
                 </div>
                 <div>
-                    <span class="MessageContent">{{message.body}}</span>
+                    <span class="MessageContent">{{messageSelected.body}}</span>
                 </div>
             </div>
         </div>
