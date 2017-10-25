@@ -63,7 +63,7 @@
                 </li>
             </ul>
         </div>
-        <div id="MessageReadBox" class="col-sm-8 col-md-8 col-lg-8 border-left">
+        <div id="MessageReadBox" class="row col-sm-8 col-md-8 col-lg-8 border-left">
             <div class="ng-scope" ng-if="messageSelected.id == ''">
                 <div class="no-messages">
                     <h2>No email has been selected</h2>
@@ -84,7 +84,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="message-header">
+                <div class="message-header row">
                     <div class="message-time">
                         {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
                     </div>
