@@ -1062,6 +1062,7 @@ a.ButtonImageSize {
     position: relative;
     right: 0;
     text-align: center;
+    font-weight: 300;
 }
 
 .IconSnippet {
