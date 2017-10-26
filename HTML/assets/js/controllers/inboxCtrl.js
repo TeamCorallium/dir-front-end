@@ -6,6 +6,8 @@
 app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl",
     function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {        
 
+        const swal = require('sweetalert2')
+
         $scope.inboxFlag = true;
 
         $rootScope.viewProfile = true;
@@ -204,7 +206,12 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.deleteMessage = function (url) {
-            sweetAlert("Hello world!");
+            swal({
+                title: 'Error!',
+                text: 'Do you want to continue',
+                type: 'error',
+                confirmButtonText: 'Cool'
+            })
             // RestService.deleteMessage(url);
         };
 
