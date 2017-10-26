@@ -50,7 +50,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
         $scope.getMessageSend = function () {
             $scope.messagesSend = [];
-            
+
             RestService.fetchMessages($cookies.get('username'), "sender")
                 .then(
                 function (data) {
@@ -204,7 +204,20 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.deleteMessage = function (url) {
-            RestService.deleteMessage(url);
+            swal({
+                title: "Are you sure?",
+                text: "Once deleted, you will not be able to recover this message!",
+                icon: "warning",
+                buttons: true,
+                dangerMode: true,
+            })
+                .then((willDelete) => {
+                    if (willDelete) {
+                        RestService.deleteMessage(url);
+                    } else {
+                        swal("Your message is safe!");
+                    }
+                });
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
@@ -215,15 +228,18 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $rootScope.$on('deleteMessage', function (event, data) {
             $scope.getMessageReceiver();
             $scope.getMessageSend();
-            growl.success("Message deleted correctly", { title: 'Delete Message' });
+            // growl.success("Message deleted correctly", { title: 'Delete Message' });
+            swal("Your message has been deleted!", {
+                icon: "success",
+            });
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
-            growl.error("Error sending message, please try again", {title: 'Send Message'});
+            growl.error("Error sending message, please try again", { title: 'Send Message' });
         });
 
         $rootScope.$on('deleteMessageError', function (event, data) {
-            growl.error("Error when try delete message, please try again", {title: 'Delete Message'});
+            growl.error("Error when try delete message, please try again", { title: 'Delete Message' });
         });
 
         $rootScope.$on('forbidden', function (event, data) {
@@ -242,10 +258,10 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", {title: 'Logins Problems'});
+            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
     }]);
