@@ -301,7 +301,55 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('messageUpdated');
             }).error(function (response) {
-                console.log("Entra al error in update message");
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
+            });
+        },
+
+        sendMessage: function (sender, receiver, subject, body, readed) {
+            $http({
+                method: 'POST',
+                url: message,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function (value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function (file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {
+                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function (data) {
+                $rootScope.$broadcast('SendMessage');
+            }).error(function (response, status) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if(status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('WrongMessage');
+                }                
             });
         },
 

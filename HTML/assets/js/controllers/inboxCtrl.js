@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope",
-    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope) {
+app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl",
+    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {
 
         $scope.inboxFlag = true;
 
@@ -194,4 +194,40 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').hide();
             }
         };
+
+        $scope.sendMessage = function (url, sender, receiver, subject, body, readed) {
+            RestService.updateMessage(url, sender, receiver, subject, body, readed);
+        };
+
+        $rootScope.$on('SendMessage', function (event, data) {
+            $('#modalMessage').modal('hide');
+            growl.success("Message sended correctly", { title: 'Send Message' });
+        });
+
+        $rootScope.$on('WrongMessage', function (event, data) {
+            growl.error("Error sending message, please try again", {title: 'Send Message'});
+        });
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                    function (data) {
+                        console.log('get get ' + RestService.getCookie('csrftoken'));
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            growl.error("We detected some problems, please try again", {title: 'Logins Problems'});
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
     }]);
