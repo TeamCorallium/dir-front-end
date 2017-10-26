@@ -4,7 +4,7 @@
 'use strict';
 
 app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl",
-    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {
+    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {        
 
         $scope.inboxFlag = true;
 
@@ -129,8 +129,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             }
 
             for (var i = 0; i < $scope.messagesSend.length; i++) {
-                if ($scope.messagesInbox[i].id == message.id) {
-                    $scope.messagesInbox[i].readed = true;
+                if ($scope.messagesSend[i].id == message.id) {
+                    $scope.messagesSend[i].readed = true;
                 }
             }
 
@@ -204,20 +204,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.deleteMessage = function (url) {
-            swal({
-                title: "Are you sure?",
-                text: "Once deleted, you will not be able to recover this message!",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-            })
-                .then((willDelete) => {
-                    if (willDelete) {
-                        RestService.deleteMessage(url);
-                    } else {
-                        swal("Your message is safe!");
-                    }
-                });
+            sweetAlert("Hello world!");
+            // RestService.deleteMessage(url);
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
@@ -228,10 +216,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $rootScope.$on('deleteMessage', function (event, data) {
             $scope.getMessageReceiver();
             $scope.getMessageSend();
-            // growl.success("Message deleted correctly", { title: 'Delete Message' });
-            swal("Your message has been deleted!", {
-                icon: "success",
-            });
+            // growl.success("Message deleted correctly", { title: 'Delete Message' });            
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
