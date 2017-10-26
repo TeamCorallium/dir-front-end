@@ -25,7 +25,5 @@ app.constant('JS_REQUIRED', {
         'sweetAlertCtrl' : 'assets/js/controllers/sweetAlertCtrl.js'
     },
     modules: [{
-        name: 'oitozero.ngSweetAlert',
-        files: ['../bower_components/ngSweetAlert/SweetAlert.min.js']
     }]
 });
