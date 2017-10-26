@@ -11,6 +11,8 @@ app.constant('APP_MEDIAQUERY', {
 });
 app.constant('JS_REQUIRED', {
     scripts: {
+        // JQuery Plugins
+        'sweet-alert': ['../bower_components/sweetalert/lib/sweet-alert.min.js', '../bower_components/sweetalert/lib/sweet-alert.css'],
         //Controllers
         'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
         'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js',
@@ -23,6 +25,7 @@ app.constant('JS_REQUIRED', {
         'sweetAlertCtrl' : 'assets/js/controllers/sweetAlertCtrl.js'
     },
     modules: [{
-
+        name: 'oitozero.ngSweetAlert',
+        files: ['../bower_components/ngSweetAlert/SweetAlert.min.js']
     }]
 });
