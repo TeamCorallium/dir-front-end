@@ -381,6 +381,27 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        deleteMessage: function (url) {
+            $http({
+                method: 'DELETE',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                }
+            }).success(function (result) {
+                $rootScope.$broadcast('deleteMessage');
+            }).error(function (response) {
+                $rootScope.$broadcast('deleteMessageError');
+            });
+        },
+
         fetchTshirt: function (code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(

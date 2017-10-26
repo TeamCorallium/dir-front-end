@@ -199,13 +199,25 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             RestService.sendMessage(sender, receiver, subject, body, false);
         };
 
+        $scope.deleteMessage = function (url) {
+            RestService.deleteMessage(url);
+        };
+
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalMessage').modal('hide');
             growl.success("Message sended correctly", { title: 'Send Message' });
         });
 
+        $rootScope.$on('deleteMessage', function (event, data) {
+            growl.success("Message deleted correctly", { title: 'Delete Message' });
+        });
+
         $rootScope.$on('WrongMessage', function (event, data) {
             growl.error("Error sending message, please try again", {title: 'Send Message'});
+        });
+
+        $rootScope.$on('deleteMessageError', function (event, data) {
+            growl.error("Error when try delete message, please try again", {title: 'Delete Message'});
         });
 
         $rootScope.$on('forbidden', function (event, data) {
