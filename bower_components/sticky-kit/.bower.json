@@ -1,6 +1,6 @@
 {
   "name": "sticky-kit",
-  "version": "1.1.2",
+  "version": "1.1.1",
   "homepage": "http://leafo.net/sticky-kit/",
   "authors": [
     "leaf corcoran <leafot@gmail.com>"
@@ -16,13 +16,13 @@
     "site",
     "test"
   ],
-  "_release": "1.1.2",
+  "_release": "1.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.1.2",
-    "commit": "26416994fad49275cd65e3d5ad6998abf239ef55"
+    "tag": "v1.1.1",
+    "commit": "a4f62c0a39fbcc6e8ac5ea2d0fe369e025323efd"
   },
-  "_source": "https://github.com/leafo/sticky-kit.git",
+  "_source": "git://github.com/leafo/sticky-kit.git",
   "_target": "~1.1.1",
   "_originalSource": "sticky-kit"
 }

@@ -1,6 +1,6 @@
 {
   "name": "jquery_appear",
-  "version": "0.3.6",
+  "version": "0.3.4",
   "main": "jquery.appear.js",
   "license": "MIT",
   "ignore": [],
@@ -21,13 +21,13 @@
     "hayesgm <https://github.com/hayesgm>"
   ],
   "description": "jQuery plugin for tracking element's appearance in browser viewport",
-  "_release": "0.3.6",
+  "_release": "0.3.4",
   "_resolution": {
     "type": "version",
-    "tag": "0.3.6",
-    "commit": "b4bf422ce6dca1071501c77b05afae6e0777784b"
+    "tag": "0.3.4",
+    "commit": "59ca94cd2c89860c8e0628c02b29f4670af64765"
   },
-  "_source": "https://github.com/morr/jquery.appear.git",
+  "_source": "git://github.com/morr/jquery.appear.git",
   "_target": "~0.3.4",
   "_originalSource": "jquery.appear.js"
 }

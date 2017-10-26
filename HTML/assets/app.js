@@ -15,6 +15,5 @@ angular.module("pulloverDir", [
     'ngAnimate',
     'ngImgCrop',
     'ngtimeago',
-    'angular-growl',
-    'ng-sweet-alert'
+    'angular-growl'
 ]);

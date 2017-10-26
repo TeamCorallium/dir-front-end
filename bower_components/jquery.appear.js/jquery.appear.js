@@ -6,7 +6,7 @@
  *
  * https://github.com/morr/jquery.appear/
  *
- * Version: 0.3.6
+ * Version: 0.3.4
  */
 (function($) {
   var selectors = [];
@@ -16,10 +16,10 @@
   var defaults = {
     interval: 250,
     force_process: false
-  };
+  }
   var $window = $(window);
 
-  var $prior_appeared = [];
+  var $prior_appeared;
 
   function process() {
     check_lock = false;
@@ -30,17 +30,12 @@
 
       $appeared.trigger('appear', [$appeared]);
 
-      if ($prior_appeared[index]) {
-        var $disappeared = $prior_appeared[index].not($appeared);
+      if ($prior_appeared) {
+        var $disappeared = $prior_appeared.not($appeared);
         $disappeared.trigger('disappear', [$disappeared]);
       }
-      $prior_appeared[index] = $appeared;
+      $prior_appeared = $appeared;
     }
-  };
-
-  function add_selector(selector) {
-    selectors.push(selector);
-    $prior_appeared.push();
   }
 
   // "appeared" custom filter
@@ -64,7 +59,7 @@
     } else {
       return false;
     }
-  };
+  }
 
   $.fn.extend({
     // watching for element's appearance in browser viewport
@@ -88,7 +83,7 @@
       if (opts.force_process) {
         setTimeout(process, opts.interval);
       }
-      add_selector(selector);
+      selectors.push(selector);
       return $(selector);
     }
   });
@@ -99,15 +94,8 @@
       if (check_binded) {
         process();
         return true;
-      }
+      };
       return false;
     }
   });
-})(function() {
-  if (typeof module !== 'undefined') {
-    // Node
-    return require('jquery');
-  } else {
-    return jQuery;
-  }
-}());
+})(jQuery);

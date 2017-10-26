@@ -176,37 +176,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        sendMessage: function (sender, receiver, subject, body, readed) {
-            $http({
-                method: 'POST',
-                url: messages,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {
-                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
-                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
-                }
-            }).success(function (data) {
-                $rootScope.$broadcast('SendMessage');
-            }).error(function (response, status) {
-                if (status == 403) {
-                    $rootScope.$broadcast('forbidden', username);
-                } else if(status == null) {
-                    $rootScope.$broadcast('LoginNetworkConnectionError');
-                } else {
-                    $rootScope.$broadcast('WrongMessage');
-                }                
-            });
-        },
-
-
         imageDownload: function () {
             $http({
                 method: 'POST',
@@ -338,7 +307,37 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('LoginNetworkConnectionError');
                 }
             });
-        },        
+        },
+
+        sendMessage: function (sender, receiver, subject, body, readed) {
+            $http({
+                method: 'POST',
+                url: messages,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function (data) {
+                $rootScope.$broadcast('SendMessage');
+            }).error(function (response, status) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if(status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('WrongMessage');
+                }                
+            });
+        },
 
         deleteSocialNetwork: function (id) {
             $http({
@@ -379,27 +378,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 $rootScope.$broadcast('deleteSnippet');
             }).error(function (response) {
                 $rootScope.$broadcast('deleteSnippetError');
-            });
-        },
-
-        deleteMessage: function (url) {
-            $http({
-                method: 'DELETE',
-                url: url,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': $cookies.get('csrftoken')
-                },
-                transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                }
-            }).success(function (result) {
-                $rootScope.$broadcast('deleteMessage');
-            }).error(function (response) {
-                $rootScope.$broadcast('deleteMessageError');
             });
         },
 

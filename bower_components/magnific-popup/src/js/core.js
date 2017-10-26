@@ -25,12 +25,12 @@ var CLOSE_EVENT = 'Close',
 /**
  * Private vars 
  */
-/*jshint -W079 */
 var mfp, // As we have only one instance of MagnificPopup object, we define it locally to not to use 'this'
 	MagnificPopup = function(){},
 	_isJQ = !!(window.jQuery),
 	_prevStatus,
 	_window = $(window),
+	_body,
 	_document,
 	_prevContentType,
 	_wrapClasses,
@@ -80,7 +80,6 @@ var _mfpOn = function(name, f) {
 	// Initialize Magnific Popup only when called at least once
 	_checkInstance = function() {
 		if(!$.magnificPopup.instance) {
-			/*jshint -W020 */
 			mfp = new MagnificPopup();
 			mfp.init();
 			$.magnificPopup.instance = mfp;
@@ -139,6 +138,10 @@ MagnificPopup.prototype = {
 	 * @param  data [description]
 	 */
 	open: function(data) {
+
+		if(!_body) {
+			_body = $(document.body);
+		}
 
 		var i;
 
@@ -338,7 +341,7 @@ MagnificPopup.prototype = {
 		$('html').css(windowStyles);
 		
 		// add everything to DOM
-		mfp.bgOverlay.add(mfp.wrap).prependTo( mfp.st.prependTo || $(document.body) );
+		mfp.bgOverlay.add(mfp.wrap).prependTo( mfp.st.prependTo || _body );
 
 		// Save last focused element
 		mfp._lastFocusedEl = document.activeElement;
@@ -429,7 +432,7 @@ MagnificPopup.prototype = {
 		}
 
 
-		if(mfp.st.autoFocusLast && mfp._lastFocusedEl) {
+		if(mfp._lastFocusedEl) {
 			$(mfp._lastFocusedEl).focus(); // put tab focus back
 		}
 		mfp.currItem = null;	
@@ -625,7 +628,7 @@ MagnificPopup.prototype = {
 		var midClick = options.midClick !== undefined ? options.midClick : $.magnificPopup.defaults.midClick;
 
 
-		if(!midClick && ( e.which === 2 || e.ctrlKey || e.metaKey || e.altKey || e.shiftKey ) ) {
+		if(!midClick && ( e.which === 2 || e.ctrlKey || e.metaKey ) ) {
 			return;
 		}
 
@@ -886,13 +889,11 @@ $.magnificPopup = {
 
 		overflowY: 'auto',
 
-		closeMarkup: '<button title="%title%" type="button" class="mfp-close">&#215;</button>',
+		closeMarkup: '<button title="%title%" type="button" class="mfp-close">&times;</button>',
 
 		tClose: 'Close (Esc)',
 
-		tLoading: 'Loading...',
-
-		autoFocusLast: true
+		tLoading: 'Loading...'
 
 	}
 };

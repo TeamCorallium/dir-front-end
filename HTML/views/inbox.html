@@ -83,7 +83,7 @@
                             </a>
                         </li>
                         <li class="no-padding displayBlockAll">
-                            <a class="text-info" ng-click="deleteMessage(messageSelected.url)">
+                            <a class="text-info">
                                 <i class="ti-trash"></i> Delete
                             </a>
                         </li>
@@ -110,7 +110,7 @@
         </div>
     </div>
     <!-- start: MODAL MESSAGE-->
-    <div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content" ng-controller="FormController">
                 <div class="modal-header padding-15">
@@ -124,9 +124,7 @@
                 <div class="modal-body padding-15">
                     <form name="SendMessage" role="form">
                         <div class="form-group">
-                            <label for="subject">
-                                <strong>To: {{messageSelected.sender}}</strong>
-                            </label>
+                            <label for="subject"><strong>To: {{messageSelected.sender}}</strong></label>                        
                         </div>
                         <div class="form-group">
                             <label for="subject">Subject</label>

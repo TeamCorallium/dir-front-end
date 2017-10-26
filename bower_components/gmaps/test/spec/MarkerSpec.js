@@ -41,7 +41,7 @@ describe("Creating a marker", function() {
         }
       };
 
-      spyOn(callbacks, 'onclick').and.callThrough();
+      spyOn(callbacks, 'onclick').andCallThrough();
 
       marker = map.addMarker({
         lat : -12.0533,
