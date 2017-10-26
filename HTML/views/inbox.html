@@ -143,7 +143,7 @@
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                         <i class="ti-close"></i> Close
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-disabled="SendMessage.$invalid" ng-click="addSnippets(title,body)">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="SendMessage.$invalid" ng-click="sendMessage(messageSelected.receiver, messageSelected.sender, subject, body)">
                         <i class="ti-share-alt"></i> Send
                     </a>
                 </div>

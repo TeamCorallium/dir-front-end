@@ -195,8 +195,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             }
         };
 
-        $scope.sendMessage = function (url, sender, receiver, subject, body, readed) {
-            RestService.updateMessage(url, sender, receiver, subject, body, readed);
+        $scope.sendMessage = function (url, sender, receiver, subject, body) {
+            RestService.updateMessage(url, sender, receiver, subject, body, false);
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
