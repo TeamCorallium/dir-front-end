@@ -312,7 +312,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         sendMessage: function (sender, receiver, subject, body, readed) {
             $http({
                 method: 'POST',
-                url: message,
+                url: messages,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
