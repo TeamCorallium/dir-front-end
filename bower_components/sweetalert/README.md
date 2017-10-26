@@ -1,166 +1,94 @@
-<p align="center">
-  <a href="http://sweetalert.js.org">
-    <img alt="SweetAlert" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/logotype.png" width="300">
-  </a>
-</p>
+#SweetAlert
 
-<p align="center">
-  A beautiful replacement for JavaScript's "alert"
-</p>
+An awesome replacement for JavaScript's alert.
 
-<p align="center">
-  <a href="https://badge.fury.io/js/sweetalert"><img src="https://badge.fury.io/js/sweetalert.svg" alt="npm version" height="18"></a>
-  <a href="https://travis-ci.org/t4t5/sweetalert"><img src="https://travis-ci.org/t4t5/sweetalert.svg" alt="Build status" /><a>
-  <a href="https://www.npmjs.com/package/sweetalert">
-    <img src="https://img.shields.io/npm/dm/sweetalert.svg" />
-  </a>
-  <a href="https://github.com/t4t5/sweetalert/blob/master/LICENSE">
-    <img src="https://img.shields.io/github/license/t4t5/sweetalert.svg" />
-  </a>
-</p>
+[See it in action!](http://tristanedwards.me/sweetalert)
 
-<p align="center">
-  <img alt="A success modal" src="https://github.com/t4t5/sweetalert/blob/e3c2085473a0eb5a6b022e43eb22e746380bb955/assets/swal.gif">
-</p>
+![A success modal](https://raw.github.com/t4t5/sweetalert/master/sweetalert.gif)
 
+#Usage
 
-## Installation
+You can install SweetAlert through bower:
 
 ```bash
-$ npm install --save sweetalert
+bower install sweetalert
 ```
 
-## Usage
+Alternatively, download the package and reference the JavaScript and CSS files manually:
+
+```html
+<script src="lib/sweet-alert.min.js"></script>
+<link rel="stylesheet" type="text/css" href="lib/sweet-alert.css">
+```
+
+#Examples
+
+The most basic message:
 
 ```javascript
-import swal from 'sweetalert'
-
-swal("Hello world!")
+sweetAlert("Hello world!");
 ```
 
-## Upgrading from 1.X
+A message signaling an error:
 
-Many improvements and breaking changes have been introduced in the 2.0 release. Make sure you read the [upgrade guide](https://sweetalert.js.org/guides/#upgrading-from-1x) to avoid nasty suprises!
-
-## Guides
-
-- [Installation](https://sweetalert.js.org/guides/#installation)
-- [Getting started](https://sweetalert.js.org/guides/#getting-started)
-- [Advanced examples](https://sweetalert.js.org/guides/#advanced-examples)
-- [Upgrading from 1.X](https://sweetalert.js.org/guides/#upgrading-from-1x)
-
-## Documentation
-
-- [Configuration](https://sweetalert.js.org/docs/#configuration)
-- [Methods](https://sweetalert.js.org/docs/#methods)
-- [Theming](https://sweetalert.js.org/docs/#theming)
-
-## Examples
-
-### An error message:
 ```javascript
-swal("Oops!", "Something went wrong!", "error")
+sweetAlert("Oops...", "Something went wrong!", "error");
 ```
 
-### A warning message, with a function attached to the confirm message:
-  - Using promises:
-  ```javascript
-  swal({
-    title: "Are you sure?",
-    text: "Are you sure that you want to leave this page?",
-    icon: "warning",
-    dangerMode: true,
-  })
-  .then(willDelete => {
-    if (willDelete) {
-      swal("Deleted!", "Your imaginary file has been deleted!", "success");
-    }
-  });
-  ```
-  - Using async/await:
-  ```javascript
-  const willDelete = await swal({
-    title: "Are you sure?",
-    text: "Are you sure that you want to delete this file?",
-    icon: "warning",
-    dangerMode: true,
-  })
+A warning message, with a function attached to the "Confirm"-button..
 
-  if (willDelete) {
-    swal("Deleted!", "Your imaginary file has been deleted!", "success");
-  }
-  ```
-  
-### A prompt modal, where the user's input is logged:
-  - Using promises:
-  ```javascript
-  swal("Type something:", {
-    content: "input",
-  })
-  .then((value) => {
-    swal(`You typed: ${value}`);
-  })
-  ```
-  - Using async/await:
-  ```javascript
-  const value = await swal("Type something:", {
-    content: "input",
-  })
+```javascript
+sweetAlert({
+  title: "Are you sure?",
+  text: "You will not be able to recover this imaginary file!",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Yes, delete it!",
+  closeOnConfirm: false,
+  html: false
+}, function(){
+  swal("Deleted!",
+  "Your imaginary file has been deleted.",
+  "success");
+});
+```
 
-  swal(`You typed: ${value}`);
-  ```
+[View more examples](http://tristanedwards.me/sweetalert)
 
-### In combination with Fetch:
-  - Using promises:
-  ```javascript
-  swal({
-    text: 'Wanna log some information about Bulbasaur?',
-    button: {
-      text: "Search!",
-      closeModal: false,
-    },
-  })
-  .then(willSearch => {
-    if (willSearch) {
-      return fetch(`http://pokeapi.co/api/v2/pokemon/1`)
-    }
-  })
-  .then(result => result.json())
-  .then(json => console.log(json))
-  .catch(err => {
-    swal("Oops!", "Seems like we couldn't fetch the info", "error")
-  })
-  ```
-  - Using async/await:
-  ```javascript
-  const willSearch = await swal({
-    text: 'Wanna log some information about Bulbasaur?',
-    button: {
-      text: "Search!",
-      closeModal: false,
-    },
-  })
-  
-  if (willSearch) {
-    try {
-      const result = await fetch(`http://pokeapi.co/api/v2/pokemon/1`)
-      const json = await result.json()
-      console.log(json)
-    } catch (err) {
-      swal("Oops!", "Seems like we couldn't fetch the info", "error")
-    }
-  }
-  ```
 
-## Contributing
+#Browser compatibility
 
-### If you're changing the core library:
-1. Make changes in the `src` folder.
-2. Preview changes by running `npm run docs`
-3. Submit pull request
+SweetAlert works in all major browsers (yes, even IE). Some details:
 
-### If you're changing the documentation:
-1. Make changes in the `docs-src` folder.
-2. Preview changes by running `npm run docs`
-3. Run `npm run builddocs` to compile the changes to the `docs` folder
-4. Submit pull request
+- **IE8**: Works, but icons (checkmark, x-mark...) are hidden.
+- **IE9**: Works, but icons are not animated.
+- **IE10+**: Works!
+- **Safari 4+**: Works!
+- **Firefox 3+**: Works!
+- **Chrome 14+**: Works!
+- **Opera 15+**: Works!
+
+
+#Contributing
+
+If you want to contribute:
+
+- Fork the repo
+
+- Make sure you have [Node](http://nodejs.org/), [NPM](https://www.npmjs.com/) and [Gulp](http://gulpjs.com/) installed. When in the SweetAlert directory, run the command:
+```
+npm install
+```
+to install the dependencies and make Gulp automatically minify the SCSS and JS-files.
+
+- After you're done, make a pull request and wait for approval! :)
+
+
+
+#Related projects
+
+* [SweetAlert for Android](https://github.com/pedant/sweet-alert-dialog)
+* [SweetAlert for Bootstrap](https://github.com/lipis/bootstrap-sweetalert)
+* [SweetAlert for AngularJS](https://github.com/oitozero/ngSweetAlert)
+

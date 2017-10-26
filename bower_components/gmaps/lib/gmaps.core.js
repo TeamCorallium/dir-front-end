@@ -1,7 +1,3 @@
-if (!(typeof window.google === 'object' && window.google.maps)) {
-  throw 'Google Maps API is required. Please register the following JavaScript library http://maps.google.com/maps/api/js?sensor=true.'
-}
-
 var extend_object = function(obj, new_obj) {
   var name;
 
@@ -10,7 +6,9 @@ var extend_object = function(obj, new_obj) {
   }
 
   for (name in new_obj) {
-    obj[name] = new_obj[name];
+    if (new_obj[name] !== undefined) {
+      obj[name] = new_obj[name];
+    }
   }
 
   return obj;
@@ -97,9 +95,7 @@ var arrayToLatLng = function(coords, useGeoJSON) {
   return coords;
 };
 
-
 var getElementsByClassName = function (class_name, context) {
-
     var element,
         _class = class_name.replace('.', '');
 
@@ -129,6 +125,14 @@ var findAbsolutePosition = function(obj)  {
   var curleft = 0,
       curtop = 0;
 
+  if (obj.getBoundingClientRect) {
+      var rect = obj.getBoundingClientRect();
+      var sx = -(window.scrollX ? window.scrollX : window.pageXOffset);
+      var sy = -(window.scrollY ? window.scrollY : window.pageYOffset);
+
+      return [(rect.left - sx), (rect.top - sy)];
+  }
+
   if (obj.offsetParent) {
     do {
       curleft += obj.offsetLeft;
@@ -143,8 +147,26 @@ var GMaps = (function(global) {
   "use strict";
 
   var doc = document;
-
+  /**
+   * Creates a new GMaps instance, including a Google Maps map.
+   * @class GMaps
+   * @constructs
+   * @param {object} options - `options` accepts all the [MapOptions](https://developers.google.com/maps/documentation/javascript/reference#MapOptions) and [events](https://developers.google.com/maps/documentation/javascript/reference#Map) listed in the Google Maps API. Also accepts:
+   * * `lat` (number): Latitude of the map's center
+   * * `lng` (number): Longitude of the map's center
+   * * `el` (string or HTMLElement): container where the map will be rendered
+   * * `markerClusterer` (function): A function to create a marker cluster. You can use MarkerClusterer or MarkerClustererPlus.
+   */
   var GMaps = function(options) {
+
+    if (!(typeof window.google === 'object' && window.google.maps)) {
+      if (typeof window.console === 'object' && window.console.error) {
+        console.error('Google Maps API is required. Please register the following JavaScript library https://maps.googleapis.com/maps/api/js.');
+      }
+
+      return function() {};
+    }
+
     if (!this) return new GMaps(options);
 
     options.zoom = options.zoom || 15;
@@ -199,13 +221,16 @@ var GMaps = (function(global) {
         };
 
       if (typeof(options.el) === 'string' || typeof(options.div) === 'string') {
-
-          if (identifier.indexOf("#") > -1) {
-              this.el = getElementById(identifier, options.context);
-          } else {
-              this.el = getElementsByClassName.apply(this, [identifier, options.context]);
-          }
-
+        if (identifier.indexOf("#") > -1) {
+            /**
+             * Container element
+             *
+             * @type {HTMLElement}
+             */
+            this.el = getElementById(identifier, options.context);
+        } else {
+            this.el = getElementsByClassName.apply(this, [identifier, options.context]);
+        }
       } else {
           this.el = identifier;
       }
@@ -217,16 +242,61 @@ var GMaps = (function(global) {
     window.context_menu = window.context_menu || {};
     window.context_menu[self.el.id] = {};
 
+    /**
+     * Collection of custom controls in the map UI
+     *
+     * @type {array}
+     */
     this.controls = [];
+    /**
+     * Collection of map's overlays
+     *
+     * @type {array}
+     */
     this.overlays = [];
-    this.layers = []; // array with kml/georss and fusiontables layers, can be as many
-    this.singleLayers = {}; // object with the other layers, only one per layer
+    /**
+     * Collection of KML/GeoRSS and FusionTable layers
+     *
+     * @type {array}
+     */
+    this.layers = [];
+    /**
+     * Collection of data layers (See {@link GMaps#addLayer})
+     *
+     * @type {object}
+     */
+    this.singleLayers = {};
+    /**
+     * Collection of map's markers
+     *
+     * @type {array}
+     */
     this.markers = [];
+    /**
+     * Collection of map's lines
+     *
+     * @type {array}
+     */
     this.polylines = [];
+    /**
+     * Collection of map's routes requested by {@link GMaps#getRoutes}, {@link GMaps#renderRoute}, {@link GMaps#drawRoute}, {@link GMaps#travelRoute} or {@link GMaps#drawSteppedRoute}
+     *
+     * @type {array}
+     */
     this.routes = [];
+    /**
+     * Collection of map's polygons
+     *
+     * @type {array}
+     */
     this.polygons = [];
     this.infoWindow = null;
     this.overlay_el = null;
+    /**
+     * Current map's zoom
+     *
+     * @type {number}
+     */
     this.zoom = options.zoom;
     this.registered_events = {};
 
@@ -253,9 +323,19 @@ var GMaps = (function(global) {
       delete map_options[events_that_doesnt_hide_context_menu[i]];
     }
 
+    /**
+     * Google Maps map instance
+     *
+     * @type {google.maps.Map}
+     */
     this.map = new google.maps.Map(this.el, map_options);
 
     if (markerClustererFunction) {
+      /**
+       * Marker Clusterer instance
+       *
+       * @type {object}
+       */
       this.markerClusterer = markerClustererFunction.apply(this, [this.map]);
     }
 
@@ -332,6 +412,16 @@ var GMaps = (function(global) {
       }, 0);
     };
 
+    /**
+     * Add a context menu for a map or a marker.
+     *
+     * @param {object} options - The `options` object should contain:
+     * * `control` (string): Kind of control the context menu will be attached. Can be "map" or "marker".
+     * * `options` (array): A collection of context menu items:
+     *   * `title` (string): Item's title shown in the context menu.
+     *   * `name` (string): Item's identifier.
+     *   * `action` (function): Function triggered after selecting the context menu item.
+     */
     this.setContextMenu = function(options) {
       window.context_menu[self.el.id][options.control] = {};
 
@@ -373,6 +463,9 @@ var GMaps = (function(global) {
       }, false);
     };
 
+    /**
+     * Hide the current context menu
+     */
     this.hideContextMenu = function() {
       var context_menu_element = getElementById('gmaps_context_menu');
 
@@ -422,10 +515,16 @@ var GMaps = (function(global) {
       }
     });
 
+    /**
+     * Trigger a `resize` event, useful if you need to repaint the current map (for changes in the viewport or display / hide actions).
+     */
     this.refresh = function() {
       google.maps.event.trigger(this.map, 'resize');
     };
 
+    /**
+     * Adjust the map zoom to include all the markers added in the map.
+     */
     this.fitZoom = function() {
       var latLngs = [],
           markers_length = this.markers.length,
@@ -440,6 +539,11 @@ var GMaps = (function(global) {
       this.fitLatLngBounds(latLngs);
     };
 
+    /**
+     * Adjust the map zoom to include all the coordinates in the `latLngs` array.
+     *
+     * @param {array} latLngs - Collection of `google.maps.LatLng` objects.
+     */
     this.fitLatLngBounds = function(latLngs) {
       var total = latLngs.length,
           bounds = new google.maps.LatLngBounds(),
@@ -452,6 +556,13 @@ var GMaps = (function(global) {
       this.map.fitBounds(bounds);
     };
 
+    /**
+     * Center the map using the `lat` and `lng` coordinates.
+     *
+     * @param {number} lat - Latitude of the coordinate.
+     * @param {number} lng - Longitude of the coordinate.
+     * @param {function} [callback] - Callback that will be executed after the map is centered.
+     */
     this.setCenter = function(lat, lng, callback) {
       this.map.panTo(new google.maps.LatLng(lat, lng));
 
@@ -460,10 +571,20 @@ var GMaps = (function(global) {
       }
     };
 
+    /**
+     * Return the HTML element container of the map.
+     *
+     * @returns {HTMLElement} the element container.
+     */
     this.getElement = function() {
       return this.el;
     };
 
+    /**
+     * Increase the map's zoom.
+     *
+     * @param {number} [magnitude] - The number of times the map will be zoomed in.
+     */
     this.zoomIn = function(value) {
       value = value || 1;
 
@@ -471,6 +592,11 @@ var GMaps = (function(global) {
       this.map.setZoom(this.zoom);
     };
 
+    /**
+     * Decrease the map's zoom.
+     *
+     * @param {number} [magnitude] - The number of times the map will be zoomed out.
+     */
     this.zoomOut = function(value) {
       value = value || 1;
 

@@ -40,18 +40,19 @@ GMaps.prototype.getRoutes = function(options) {
   delete request_options.error;
 
   var self = this,
+      routes = [],
       service = new google.maps.DirectionsService();
 
   service.route(request_options, function(result, status) {
     if (status === google.maps.DirectionsStatus.OK) {
       for (var r in result.routes) {
         if (result.routes.hasOwnProperty(r)) {
-          self.routes.push(result.routes[r]);
+          routes.push(result.routes[r]);
         }
       }
 
       if (options.callback) {
-        options.callback(self.routes);
+        options.callback(routes, result, status);
       }
     }
     else {
@@ -63,7 +64,7 @@ GMaps.prototype.getRoutes = function(options) {
 };
 
 GMaps.prototype.removeRoutes = function() {
-  this.routes = [];
+  this.routes.length = 0;
 };
 
 GMaps.prototype.getElevations = function(options) {
@@ -111,6 +112,35 @@ GMaps.prototype.getElevations = function(options) {
 
 GMaps.prototype.cleanRoute = GMaps.prototype.removePolylines;
 
+GMaps.prototype.renderRoute = function(options, renderOptions) {
+  var self = this,
+      panel = ((typeof renderOptions.panel === 'string') ? document.getElementById(renderOptions.panel.replace('#', '')) : renderOptions.panel),
+      display;
+
+  renderOptions.panel = panel;
+  renderOptions = extend_object({
+    map: this.map
+  }, renderOptions);
+  display = new google.maps.DirectionsRenderer(renderOptions);
+
+  this.getRoutes({
+    origin: options.origin,
+    destination: options.destination,
+    travelMode: options.travelMode,
+    waypoints: options.waypoints,
+    unitSystem: options.unitSystem,
+    error: options.error,
+    avoidHighways: options.avoidHighways,
+    avoidTolls: options.avoidTolls,
+    optimizeWaypoints: options.optimizeWaypoints,
+    callback: function(routes, response, status) {
+      if (status === google.maps.DirectionsStatus.OK) {
+        display.setDirections(response);
+      }
+    }
+  });
+};
+
 GMaps.prototype.drawRoute = function(options) {
   var self = this;
 
@@ -121,10 +151,13 @@ GMaps.prototype.drawRoute = function(options) {
     waypoints: options.waypoints,
     unitSystem: options.unitSystem,
     error: options.error,
-    callback: function(e) {
-      if (e.length > 0) {
+    avoidHighways: options.avoidHighways,
+    avoidTolls: options.avoidTolls,
+    optimizeWaypoints: options.optimizeWaypoints,
+    callback: function(routes) {
+      if (routes.length > 0) {
         var polyline_options = {
-          path: e[e.length - 1].overview_path,
+          path: routes[routes.length - 1].overview_path,
           strokeColor: options.strokeColor,
           strokeOpacity: options.strokeOpacity,
           strokeWeight: options.strokeWeight
@@ -135,9 +168,9 @@ GMaps.prototype.drawRoute = function(options) {
         }
 
         self.drawPolyline(polyline_options);
-        
+
         if (options.callback) {
-          options.callback(e[e.length - 1]);
+          options.callback(routes[routes.length - 1]);
         }
       }
     }
@@ -191,7 +224,7 @@ GMaps.prototype.travelRoute = function(options) {
 
 GMaps.prototype.drawSteppedRoute = function(options) {
   var self = this;
-  
+
   if (options.origin && options.destination) {
     this.getRoutes({
       origin: options.origin,
