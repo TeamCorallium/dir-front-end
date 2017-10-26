@@ -49,6 +49,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $scope.messagesSend = [];
 
         $scope.getMessageSend = function () {
+            $scope.messagesSend = [];
+            
             RestService.fetchMessages($cookies.get('username'), "sender")
                 .then(
                 function (data) {
@@ -61,6 +63,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.getMessageReceiver = function () {
+            $scope.messagesInbox = [];
+
             RestService.fetchMessages($cookies.get('username'), "receiver")
                 .then(
                 function (data) {
@@ -209,6 +213,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         });
 
         $rootScope.$on('deleteMessage', function (event, data) {
+            $scope.getMessageReceiver();
+            $scope.getMessageSend();
             growl.success("Message deleted correctly", { title: 'Delete Message' });
         });
 
