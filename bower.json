@@ -70,6 +70,7 @@
     "ng-img-crop": "ngImgCrop#^0.3.2",
     "ng-timeago": "^0.0.2",
     "zxcvbn": "^4.4.2",
-    "angular-growl-v2": "^0.7.9"
+    "angular-growl-v2": "^0.7.9",
+    "sweetalert": "~0.4.2"
   }
 }
