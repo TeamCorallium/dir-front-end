@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl",
-    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {
+app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert",
+    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert) {
 
         $scope.inboxFlag = true;
 
@@ -124,15 +124,17 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesSend.length; i++) {
-                if ($scope.messagesInbox[i].id == message.id) {
-                    $scope.messagesInbox[i].readed = true;
+            if (message.readed) {
+                for (var i = 0; i < $scope.messagesSend.length; i++) {
+                    if ($scope.messagesInbox[i].id == message.id) {
+                        $scope.messagesInbox[i].readed = true;
+                    }
                 }
-            }
 
-            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
-                $scope.messageSelected.receiver, $scope.messageSelected.subject,
-                $scope.messageSelected.body, $scope.messageSelected.readed);
+                RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
+                    $scope.messageSelected.receiver, $scope.messageSelected.subject,
+                    $scope.messageSelected.body, $scope.messageSelected.readed);
+            }
         };
 
         $scope.cleanMessageSelected = function () {
@@ -205,7 +207,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
-            growl.error("Error sending message, please try again", {title: 'Send Message'});
+            growl.error("Error sending message, please try again", { title: 'Send Message' });
         });
 
         $rootScope.$on('forbidden', function (event, data) {
@@ -224,10 +226,50 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", {title: 'Logins Problems'});
+            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
+
+        $scope.deleteMessage = function (url) {
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this message!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteMessage(url);
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your message is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+
+        };
+
+        $rootScope.$on('deleteMessage', function (event, data) {
+            growl.error("Error when you try delete this message.", { title: 'Delete Message' });
+        });
+
+        $rootScope.$on('deleteMessageError', function (event, data) {
+            // growl.error("Message delete correctly.", { title: 'Delete Message' });
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your message has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
         });
     }]);
