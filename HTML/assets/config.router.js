@@ -49,7 +49,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
         }).state('inbox', {
             url: '/inbox',
             templateUrl: 'views/inbox.html',
-            resolve: loadSequence('inboxCtrl')
+            resolve: loadSequence('sweetAlertCtrl','inboxCtrl')
         }).state('contact', {
             url: '/contact',
             templateUrl: 'views/contactUs.html',

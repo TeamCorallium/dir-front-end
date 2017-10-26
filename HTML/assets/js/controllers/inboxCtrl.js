@@ -203,10 +203,9 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             RestService.sendMessage(sender, receiver, subject, body, false);
         };
 
-        $scope.deleteMessage = function (url) {            
-            // RestService.deleteMessage(url);
-            growl.success("Message deleted correctly", {title: 'Delete Message'},{globalPosition: 'top-center'});
-        };
+        // $scope.deleteMessage = function (url) {            
+        //     // RestService.deleteMessage(url);            
+        // };
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalMessage').modal('hide');
