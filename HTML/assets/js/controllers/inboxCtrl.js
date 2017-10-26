@@ -203,30 +203,24 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             RestService.sendMessage(sender, receiver, subject, body, false);
         };
 
-        $scope.deleteMessage = function (url) {            
-            // RestService.deleteMessage(url);
+        $scope.deleteMessage = function (url) {
             SweetAlert.swal({
                 title: "Are you sure?",
-                text: "Your will not be able to recover this imaginary file!",
+                text: "Your will not be able to recover this message!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
                 confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel plx!",
+                cancelButtonText: "No, cancel!",
                 closeOnConfirm: false,
                 closeOnCancel: false
             }, function (isConfirm) {
                 if (isConfirm) {
-                    SweetAlert.swal({
-                        title: "Deleted!",
-                        text: "Your imaginary file has been deleted.",
-                        type: "success",
-                        confirmButtonColor: "#007AFF"
-                    });
+                    RestService.deleteMessage(url);
                 } else {
                     SweetAlert.swal({
                         title: "Cancelled",
-                        text: "Your imaginary file is safe :)",
+                        text: "Your message is safe :)",
                         type: "error",
                         confirmButtonColor: "#007AFF"
                     });
@@ -242,7 +236,12 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $rootScope.$on('deleteMessage', function (event, data) {
             $scope.getMessageReceiver();
             $scope.getMessageSend();
-            // growl.success("Message deleted correctly", { title: 'Delete Message' });            
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your imaginary file has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
