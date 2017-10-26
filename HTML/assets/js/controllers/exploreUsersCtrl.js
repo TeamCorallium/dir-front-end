@@ -8,6 +8,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.profiles = [];
 
+        $scope.search = '';
+
         $rootScope.viewProfile = true;
 
         $scope.getProfiles = function () {

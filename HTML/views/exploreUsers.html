@@ -1,18 +1,23 @@
 <div class="main-content" ng-controller="ExploreUsersCtrl">
     <div class="container">
         <div class="row">
-            <h2 class="text-center" data-appears-class="fadeInUp" data-appears-delay="300">Meet the Team</h2>
-            <hr />
-            <p data-appears-delay="300" data-appears-class="fadeInDown" class="text-center">
-                Nulla consequat massa quis enim.
-                <strong>Donec pede justo</strong> fringilla vel, aliquet nec, vulputate eget, arcu.
-                <br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-            </p>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-30">
+                <h2 class="text-center" data-appears-class="fadeInUp" data-appears-delay="300">Meet the Team</h2>
+                <hr />
+                <p data-appears-delay="300" data-appears-class="fadeInDown" class="text-center">
+                    Nulla consequat massa quis enim.
+                    <strong>Donec pede justo</strong> fringilla vel, aliquet nec, vulputate eget, arcu.
+                    <br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                </p>
+            </div>
             <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
+                <div class="padding-15">
+                    <input ng-model="search" class="form-control text-center margin-top-15" type="text" placeholder="Search username...">
+                </div>
                 <div data-appears-group-delay="0" data-appears-delay-increase="200">
                     <ul class="team-list list-unstyled">
                         <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles">
-                            <div class="styleBox">
+                            <div class="styleBox marginExploreUser">
                                 <div class="ImageBox">
                                     <img src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
                                 </div>

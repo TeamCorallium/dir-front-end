@@ -398,7 +398,11 @@
     }
 
     .marginUserHome{
-        margin-left: 35% !important;
+        margin-left: 33% !important;
+    }
+
+    .marginExploreUser{
+        margin-left: 33% !important;
     }
 
     .marginButtonUserHome {
@@ -457,7 +461,11 @@
     }
 
     .marginUserHome{
-        margin-left: 24% !important;
+        margin-left: 21% !important;
+    }
+
+    .marginExploreUser{
+        margin-left: 22% !important;
     }
 
     .marginButtonUserHome {
@@ -512,6 +520,10 @@
     }
 
     .marginUserHome{
+        margin-left: 15% !important;
+    }
+
+    .marginExploreUser{
         margin-left: 18% !important;
     }
 
@@ -567,6 +579,10 @@
     }
 
     .marginUserHome{
+        margin-left: 10% !important;
+    }
+
+    .marginExploreUser{
         margin-left: 14% !important;
     }
 
@@ -622,7 +638,11 @@
     }
 
     .marginUserHome{
-        margin-left: 12% !important;
+        margin-left: 8% !important;
+    }
+
+    .marginExploreUser{
+        margin-left: 13% !important;
     }
 
     .marginButtonUserHome {
@@ -677,6 +697,10 @@
     }
 
     .marginUserHome{
+        margin-left: 0% !important;
+    }
+
+    .marginExploreUser{
         margin-left: 6% !important;
     }
 
