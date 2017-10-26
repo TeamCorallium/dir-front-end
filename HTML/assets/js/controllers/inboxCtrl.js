@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl",
-    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl) {        
+app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert",
+    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert) {
 
         $scope.inboxFlag = true;
 
@@ -203,9 +203,36 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             RestService.sendMessage(sender, receiver, subject, body, false);
         };
 
-        // $scope.deleteMessage = function (url) {            
-        //     // RestService.deleteMessage(url);            
-        // };
+        $scope.deleteMessage = function (url) {            
+            // RestService.deleteMessage(url);
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this imaginary file!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel plx!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    SweetAlert.swal({
+                        title: "Deleted!",
+                        text: "Your imaginary file has been deleted.",
+                        type: "success",
+                        confirmButtonColor: "#007AFF"
+                    });
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your imaginary file is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+        };
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalMessage').modal('hide');
