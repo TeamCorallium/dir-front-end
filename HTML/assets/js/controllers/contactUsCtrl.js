@@ -6,6 +6,14 @@
 app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
 
+        if($cookies.get('sessionid')) {
+            $rootScope.viewInbox = true;
+            $rootScope.viewProfile = true;
+        } else {
+            $rootScope.viewInbox = false;
+            $rootScope.viewProfile = false;
+        }
+
         $scope.message = {
             email: '',
             subject: '',

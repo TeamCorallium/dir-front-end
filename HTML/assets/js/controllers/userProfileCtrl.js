@@ -31,6 +31,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.profileQRCode = '';
 
         $rootScope.viewProfile = false;
+        $rootScope.viewInbox = true;
+        
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)

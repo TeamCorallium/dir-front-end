@@ -10,7 +10,13 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.search = '';
 
-        $rootScope.viewProfile = true;
+        if($cookies.get('sessionid')) {
+            $rootScope.viewInbox = true;
+            $rootScope.viewProfile = true;
+        } else {
+            $rootScope.viewInbox = false;
+            $rootScope.viewProfile = false;
+        }
 
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';

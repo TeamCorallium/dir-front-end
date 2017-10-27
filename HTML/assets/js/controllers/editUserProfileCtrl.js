@@ -10,6 +10,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         $scope.myCroppedImage = '';
 
         $rootScope.viewProfile = true;
+        $rootScope.viewInbox = true;
 
         $scope.currentPage = 1;
         $scope.hasNext = '';

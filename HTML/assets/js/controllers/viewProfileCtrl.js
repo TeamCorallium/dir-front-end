@@ -6,6 +6,12 @@
 app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window) {
 
+        if($cookies.get('sessionid')) {
+            $rootScope.viewInbox = true;
+        } else {
+            $rootScope.viewInbox = false;
+        }
+
         $scope.user = {
             username: '',
             firstname: '',

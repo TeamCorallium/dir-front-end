@@ -9,6 +9,7 @@ app.run(['$rootScope', '$cookies',
     function($rootScope, $cookies) {
 
         $rootScope.viewProfile = true;
+        $rootScope.viewInbox = false;
 
         $rootScope.userdata = {
             username: 'USER',

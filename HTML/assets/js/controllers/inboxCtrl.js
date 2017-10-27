@@ -9,6 +9,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $scope.inboxFlag = true;
 
         $rootScope.viewProfile = true;
+        $rootScope.viewInbox = false;
 
         $scope.messageSelected = {
             url: '',
