@@ -71,6 +71,16 @@
                                     </li>
                                 </ul>
                             </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+                                <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
+                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
+                                        <a ng-click="previous()" class="ng-binding">« Previous</a>
+                                    </li>
+                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
+                                        <a ng-click="next()" class="ng-binding">Next »</a>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

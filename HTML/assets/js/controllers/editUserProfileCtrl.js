@@ -11,6 +11,10 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $rootScope.viewProfile = true;
 
+        $scope.currentPage = 1;
+        $scope.hasNext = '';
+        $scope.hasPrevious = ''; 
+
         $scope.uploadFile = function (file) {
             if (file) {
                 // ng-img-crop
@@ -272,6 +276,24 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                 })
 
             $('#ModalImageCropper').modal('hide');
+        };
+
+        $scope.noPrevious = function() {
+            return $scope.hasPrevious == null;
+        };
+
+        $scope.noNext = function() {
+            return $scope.hasNext == null;
+        };
+
+        $scope.next = function() {
+            $scope.currentPage += 1;
+            // $scope.getProfiles($scope.currentPage);
+        };
+
+        $scope.previous = function() {
+            $scope.currentPage -= 1;
+            // $scope.getProfiles($scope.currentPage);
         };
 
     }]);

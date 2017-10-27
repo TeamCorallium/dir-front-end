@@ -21,6 +21,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             snippets: []
         };
 
+        $scope.currentPage = 1;
+        $scope.hasNext = '';
+        $scope.hasPrevious = ''; 
+
         $scope.users = [];
 
         $rootScope.viewProfile = true;
@@ -246,4 +250,22 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.getTshirt();
+
+        $scope.noPrevious = function() {
+            return $scope.hasPrevious == null;
+        };
+
+        $scope.noNext = function() {
+            return $scope.hasNext == null;
+        };
+
+        $scope.next = function() {
+            $scope.currentPage += 1;
+            // $scope.getProfiles($scope.currentPage);
+        };
+
+        $scope.previous = function() {
+            $scope.currentPage -= 1;
+            // $scope.getProfiles($scope.currentPage);
+        };
     }]);
