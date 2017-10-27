@@ -71,7 +71,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" ng-if="user.snippets.lenght > 0">
                                 <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
                                     <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
                                         <a ng-click="previous()" class="ng-binding">« Previous</a>
