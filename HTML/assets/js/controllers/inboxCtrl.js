@@ -18,8 +18,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             subject: '',
             body: '',
             created: '',
-            readed: '',
-            selected: false
+            readed: ''
         };
 
         $scope.changeInboxFlag = function (flag) {
@@ -50,10 +49,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 .then(
                 function (data) {
                     $scope.messagesSend = data;
-
-                    for(var i=0; i<$scope.messagesSend.length; i++) {
-                        $scope.messagesSend[i].selected = false;
-                    }
                 },
                 function (errResponse) {
                     console.log(errResponse);
@@ -68,10 +63,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 .then(
                 function (data) {
                     $scope.messagesInbox = data;
-
-                    for(var i=0; i<$scope.messagesInbox.length; i++) {
-                        $scope.messagesInbox[i].selected = false;
-                    }
                 },
                 function (errResponse) {
                     console.log(errResponse);
@@ -95,8 +86,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 subject: message.subject,
                 body: message.body,
                 created: message.created,
-                readed: true,
-                selected: false
+                readed: true
             };
 
             if ($(window).width() <= 767) {
@@ -107,9 +97,11 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             for (var i = 0; i < $scope.messagesInbox.length; i++) {
                 if ($scope.messagesInbox[i].id == message.id) {
                     $scope.messagesInbox[i].readed = true;
-                    $scope.messagesInbox[i].selected = true;
+                    var idClass = "li-"+$scope.message.id
+                    var element = document.getElementById(idClass);
+                    element.className += " backgroundMessageSelectedColor";
                 }
-            }
+            }            
 
             RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
                 $scope.messageSelected.receiver, $scope.messageSelected.subject,
@@ -125,8 +117,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 subject: message.subject,
                 body: message.body,
                 created: message.created,
-                readed: true,
-                selected: false
+                readed: true
             };
 
             if ($(window).width() <= 767) {
@@ -137,7 +128,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             for (var i = 0; i < $scope.messagesSend.length; i++) {
                 if ($scope.messagesSend[i].id == message.id) {
                     $scope.messagesSend[i].readed = true;
-                    $scope.messagesSend[i].selected = true;
                 }
             }
 
@@ -154,8 +144,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 subject: '',
                 body: '',
                 created: '',
-                readed: '',
-                selected: false
+                readed: ''
             };
         };
 
