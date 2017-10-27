@@ -130,9 +130,10 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 var idClass = "#li-"+message.id;
                 if ($scope.messagesSend[i].id == message.id) {
                     $scope.messagesSend[i].readed = true;
-                    console.log(idClass + " id");
+                    console.log(idClass + " id add");
                     $(idClass).addClass("backgroundMessageSelectedColor");
                 } else {
+                    console.log(idClass + " id remove");
                     $(idClass).removeClass("backgroundMessageSelectedColor");
                 }
             }
