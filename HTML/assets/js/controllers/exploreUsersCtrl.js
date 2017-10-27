@@ -24,12 +24,26 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             if ($scope.applyScoreFilter || $scope.applyDateFilter) {
                 filters = '?ordering=';
+                var flag = false;
 
                 if ($scope.applyScoreFilter) {
                     if ($scope.orderScore == 'AscendingScore') {
                         filters += 'score';
                     } else {
                         filters += '-score';
+                    }
+                    flag = true;
+                }
+
+                if ($scope.applyDateFilter) {
+                    if (flag) {
+                        filters+=",";
+                    }
+
+                    if ($scope.orderScore == 'AscendingScore') {
+                        filters += 'created';
+                    } else {
+                        filters += '-created';
                     }
                 }
             }            
