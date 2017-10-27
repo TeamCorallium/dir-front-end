@@ -238,6 +238,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         });
 
         $rootScope.$on('deleteMessage', function (event, data) {
+            $scope.cleanMessageSelected();
             $scope.getMessageReceiver();
             $scope.getMessageSend();
             SweetAlert.swal({
