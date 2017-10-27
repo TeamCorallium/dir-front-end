@@ -1264,3 +1264,7 @@ a.ButtonImageSize {
 .backgroundMessageSelectedColor {
     background-color: #cbf4fa !important;
 }
+
+.margin-top-12 {
+    margin-top: 12px !important;
+}
