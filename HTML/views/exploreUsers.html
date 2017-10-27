@@ -14,6 +14,21 @@
                 <div class="padding-15">
                     <input ng-model="search" class="form-control text-center margin-top-15" type="text" placeholder="Search username...">
                 </div>
+                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 centerTextExploreUser">
+                        <label class="block col-lg-2 col-md-2 col-sm-4 col-xs-12 margin-bottom-10 margin-top-10 padding-left-0 padding-right-0">
+                            Order by score:
+                        </label>
+                        <div class="clip-radio radio-primary col-lg-10 col-md-10 col-sm-8 col-xs-12 padding-right-0">
+                            <input type="radio" id="up" name="Order by score" value="Ascending" checked="checked">
+                            <label for="up">
+                                Ascending
+                            </label>
+                            <input type="radio" id="down" name="Order by score" value="Dscending">
+                            <label for="down">
+                                Descending
+                            </label>
+                        </div>
+                    </div>
                 <div data-appears-group-delay="0" data-appears-delay-increase="200">
                     <ul class="team-list list-unstyled">
                         <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles">

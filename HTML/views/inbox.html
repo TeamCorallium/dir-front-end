@@ -47,7 +47,7 @@
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
                     <h2 class="MessageSubjectNoFound"> No message found</h2>
                 </li>
-                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend">
+                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend" id="li-{{message.id}}">
                     <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
                         <div>
                             <span class="MessageFrom"> {{message.sender}}</span>
@@ -130,7 +130,7 @@
                             <label for="subject">Subject</label>
                             <div class="error form-hint" ng-show="SendMessage.subject.$dirty && SendMessage.subject.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <input type="text" class="form-control" ng-class="(SendMessage.subject.$dirty && SendMessage.subject.$invalid) ? 'error' : ''"
-                                id="subject" name="subject" placeholder="subject" ng-required="true" ng-model="subject">
+                                id="subject" name="subject" placeholder="Subject" ng-required="true" ng-model="subject">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="SendMessage.body.$dirty && SendMessage.body.$error.required" ng-cloak>{{"This field is required."}}</div>

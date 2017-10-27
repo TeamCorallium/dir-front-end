@@ -412,7 +412,11 @@
 
     .displayBlock{
         display: block !important;
-    }    
+    }
+
+    .centerTextExploreUser{
+        text-align: center !important;
+    }
 }
 
 @media  (max-width: 480px) {
@@ -524,7 +528,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 18% !important;
+        margin-left: 17% !important;
     }
 
     .marginButtonUserHome {
@@ -583,7 +587,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 14% !important;
+        margin-left: 13% !important;
     }
 
     .marginButtonUserHome {
@@ -642,7 +646,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 13% !important;
+        margin-left: 12% !important;
     }
 
     .marginButtonUserHome {
@@ -1258,5 +1262,5 @@ a.ButtonImageSize {
 }
 
 .backgroundMessageSelectedColor {
-    background-color: #c2f6ff !important;
+    background-color: #cbf4fa !important;
 }
