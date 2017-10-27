@@ -40,7 +40,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                         filters+=",";
                     }
 
-                    if ($scope.orderScore == 'AscendingScore') {
+                    if ($scope.orderDate == 'AscendingDate') {
                         filters += 'created';
                     } else {
                         filters += '-created';
@@ -75,8 +75,16 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $state.go('tshirts');
         };
 
-        $scope.changeFilter = function () {
-            $scope.getProfiles();
+        $scope.changeFilterScore = function () {
+            if ($scope.applyScoreFilter) {
+                $scope.getProfiles();
+            }
+        };
+
+        $scope.changeFilterDate = function() {
+            if ($scope.applyDateFilter) {
+                $scope.getProfiles();
+            }
         };
 
     }]);
