@@ -94,12 +94,13 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesInbox.length; i++) {
-                var idClass = "#li-"+message.id;
+            for (var i = 0; i < $scope.messagesInbox.length; i++) {                
                 if ($scope.messagesInbox[i].id == message.id) {
-                    $scope.messagesInbox[i].readed = true;                    
+                    $scope.messagesInbox[i].readed = true;
+                    var idClass = "#li-"+$scope.messagesInbox[i].id;                    
                     $(idClass).addClass("backgroundMessageSelectedColor");
                 } else {
+                    var idClass = "#li-"+$scope.messagesInbox[i].id;
                     $(idClass).removeClass("backgroundMessageSelectedColor");
                 }
             }            
@@ -126,14 +127,13 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesSend.length; i++) {
-                var idClass = "#li-"+message.id;
+            for (var i = 0; i < $scope.messagesSend.length; i++) {                
                 if ($scope.messagesSend[i].id == message.id) {
                     $scope.messagesSend[i].readed = true;
-                    console.log(idClass + " id add");
+                    var idClass = "#li-"+$scope.messagesSend[i].id;
                     $(idClass).addClass("backgroundMessageSelectedColor");
                 } else {
-                    console.log(idClass + " id remove");
+                    var idClass = "#li-"+$scope.messagesSend[i].id;
                     $(idClass).removeClass("backgroundMessageSelectedColor");
                 }
             }
