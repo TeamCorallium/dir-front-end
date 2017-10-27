@@ -18,7 +18,11 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
 
-        $scope.getProfiles = function () {
+        $scope.currentPage = 1;
+        $scope.hasNext = '';
+        $scope.hasPrevious = ''; 
+
+        $scope.getProfiles = function (page) {
 
             var filters = '';
 
@@ -48,10 +52,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 }
             }            
 
-            RestService.fetchObjectByUrl(RestService.profileDir + filters)
+            RestService.fetchObjectByUrl(RestService.profileDir + filters + '&page=' + page)
                 .then(
                 function (data) {
                     $scope.profiles = data.results;
+                    $scope.hasNext = data.next;
+                    $scope.hasPrevious = data.previous;
 
                     for (var i = 0; i < $scope.profiles.length; i++) {
                         if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
@@ -68,7 +74,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 );
         };
 
-        $scope.getProfiles();
+        $scope.getProfiles(1);
 
         $scope.goToProfile = function (owner) {
             $cookies.put('exploreUser', owner, { path: '/' });
@@ -77,14 +83,32 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.changeFilterScore = function () {
             if ($scope.applyScoreFilter) {
-                $scope.getProfiles();
+                $scope.getProfiles(1);
             }
         };
 
         $scope.changeFilterDate = function() {
             if ($scope.applyDateFilter) {
-                $scope.getProfiles();
+                $scope.getProfiles(1);
             }
+        };
+
+        $scope.noPrevious = function() {
+            return $scope.hasPrevious == null;
+        };
+
+        $scope.noNext = function() {
+            return $scope.hasNext == null;
+        };
+
+        $scope.next = function() {
+            $scope.currentPage += 1;
+            $scope.getProfiles($scope.currentPage);
+        };
+
+        $scope.previous = function() {
+            $scope.currentPage -= 1;
+            $scope.getProfiles($scope.currentPage);
         };
 
     }]);
