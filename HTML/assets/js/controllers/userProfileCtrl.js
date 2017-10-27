@@ -22,6 +22,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             snippets: []
         };
 
+        $scope.currentPage = 1;
+        $scope.hasNext = '';
+        $scope.hasPrevious = ''; 
+        
         $scope.users = [];
 
         $scope.profileQRCode = '';
@@ -236,5 +240,23 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
 
             return dirAvatar;
+        };
+
+        $scope.noPrevious = function() {
+            return $scope.hasPrevious == null;
+        };
+
+        $scope.noNext = function() {
+            return $scope.hasNext == null;
+        };
+
+        $scope.next = function() {
+            $scope.currentPage += 1;
+            // $scope.getProfiles($scope.currentPage);
+        };
+
+        $scope.previous = function() {
+            $scope.currentPage -= 1;
+            // $scope.getProfiles($scope.currentPage);
         };
     }]);
