@@ -413,6 +413,10 @@
     .displayBlock{
         display: block !important;
     }
+
+    .backgroundMessageSelectedColor {
+        background-color: #d2effb;
+    }
 }
 
 @media  (max-width: 480px) {
