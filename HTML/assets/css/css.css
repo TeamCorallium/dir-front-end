@@ -412,11 +412,7 @@
 
     .displayBlock{
         display: block !important;
-    }
-
-    .backgroundMessageSelectedColor {
-        background-color: #000000 !important;
-    }
+    }    
 }
 
 @media  (max-width: 480px) {
@@ -1259,4 +1255,8 @@ a.ButtonImageSize {
 
 .displayBlockAll{
     display: block !important;
+}
+
+.backgroundMessageSelectedColor {
+    background-color: #c2f6ff !important;
 }
