@@ -1,34 +1,64 @@
-<div class="main-content" ng-controller="ExploreUsersCtrl">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-30">
-                <h2 class="text-center" data-appears-class="fadeInUp" data-appears-delay="300">Meet the Team</h2>
-                <hr />
-                <p data-appears-delay="300" data-appears-class="fadeInDown" class="text-center">
-                    Nulla consequat massa quis enim.
-                    <strong>Donec pede justo</strong> fringilla vel, aliquet nec, vulputate eget, arcu.
-                    <br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                </p>
-            </div>
-            <div class="col-lg-10 col-lg-offset-1 col-md-12 col-md-offset-0 col-sm-12 col-sm-offset-0 col-xs-12 col-xs-offset-0">
-                <div class="padding-15">
-                    <input ng-model="search" class="form-control text-center margin-top-15" type="text" placeholder="Search username...">
-                </div>
-                <div class="form-group col-lg-12 col-md-12 col-sm-12 col-xs-12 centerTextExploreUser">
-                        <label class="block col-lg-2 col-md-2 col-sm-4 col-xs-12 margin-bottom-10 margin-top-12 padding-left-0 padding-right-0">
-                            Order by score:
-                        </label>
-                        <div class="clip-radio radio-primary col-lg-10 col-md-10 col-sm-8 col-xs-12 padding-right-0">
-                            <input type="radio" id="up" name="Order by score" value="Ascending" checked="checked">
-                            <label for="up">
+<div class="profile-padding background-light" ng-controller="ExploreUsersCtrl">
+    <div class="row">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-30">
+            <h2 class="text-center" data-appears-class="fadeInUp" data-appears-delay="300">Explore Profiles</h2>
+            <hr />
+        </div>
+        <div class="padding-30">
+            <div class="col-lg-2, col-md-2 col-sm-2 col-xs-12">
+                <fieldset class="margin-top-0">
+                    <legend>
+                        Filtres
+                    </legend>
+                    <div class="form-group centerTextExploreUser">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="applyScoreFilter" checked>
+                                <strong>Order by score:</strong>
+                            </label>
+                        </div>
+                        <div class="clip-radio radio-primary">
+                            <input ng-model="orderScore" ng-change="changeFilter()" type="radio" id="upScore" name="Order by score" value="AscendingScore"
+                                checked="checked">
+                            <label for="upScore">
                                 Ascending
                             </label>
-                            <input type="radio" id="down" name="Order by score" value="Dscending">
-                            <label for="down">
+                            <input ng-model="orderScore" ng-change="changeFilter()" type="radio" id="downScore" name="Order by score" value="DescendingScore">
+                            <label for="downScore">
                                 Descending
                             </label>
                         </div>
                     </div>
+                    <div class="form-group centerTextExploreUser">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox" ng-model="applyDateFilter">
+                                <strong>Order by date:</strong>
+                            </label>
+                        </div>
+                        <div class="clip-radio radio-primary">
+                            <input ng-model="orderDate" ng-change="changeFilter()" type="radio" id="upDate" name="Order by date" value="AscendingDate"
+                                checked="checked">
+                            <label for="upDate">
+                                Ascending
+                            </label>
+                            <input ng-model="orderDate" ng-change="changeFilter()" type="radio" id="downDate" name="Order by date" value="DescendingDate">
+                            <label for="downDate">
+                                Descending
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                <div class="input-group well marginSearch">
+                    <input class="form-control" placeholder="Search..." type="text">
+                    <span class="input-group-btn">
+                        <button class="btn btn-primary" type="button">
+                            <i class="fa fa-search"></i> Search
+                        </button>
+                    </span>
+                </div>
                 <div data-appears-group-delay="0" data-appears-delay-increase="200">
                     <ul class="team-list list-unstyled">
                         <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles">

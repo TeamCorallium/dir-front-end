@@ -140,6 +140,15 @@
     .displayBlock{
         display: none !important;
     }
+
+    .marginTopFilter{
+        margin-top: 60px !important;
+    }
+
+    .marginSearch {
+        margin-left: 15px !important;
+        margin-right: 15px !important;
+    }
 }
 
 @media (min-width: 770px) {
@@ -469,7 +478,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 22% !important;
+        margin-left: 20% !important;
     }
 
     .marginButtonUserHome {
@@ -528,7 +537,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 17% !important;
+        margin-left: 14% !important;
     }
 
     .marginButtonUserHome {
@@ -587,7 +596,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 13% !important;
+        margin-left: 10% !important;
     }
 
     .marginButtonUserHome {
@@ -646,7 +655,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 12% !important;
+        margin-left: 8% !important;
     }
 
     .marginButtonUserHome {
@@ -705,7 +714,7 @@
     }
 
     .marginExploreUser{
-        margin-left: 6% !important;
+        margin-left: 1% !important;
     }
 
     .marginButtonUserHome {

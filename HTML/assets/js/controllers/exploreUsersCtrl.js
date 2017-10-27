@@ -12,8 +12,29 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $rootScope.viewProfile = true;
 
+        $scope.orderDate = 'AscendingDate';
+        $scope.orderScore = 'AscendingScore';
+
+        $scope.applyDateFilter = false;
+        $scope.applyScoreFilter = true;
+
         $scope.getProfiles = function () {
-            RestService.fetchObjectByUrl(RestService.profileDir)
+
+            var filters = '';
+
+            if ($scope.applyScoreFilter || $scope.applyDateFilter) {
+                filters = '?ordering=';
+
+                if ($scope.applyScoreFilter) {
+                    if ($scope.orderScore == 'AscendingScore') {
+                        filters += 'score';
+                    } else {
+                        filters += '-score';
+                    }
+                }
+            }            
+
+            RestService.fetchObjectByUrl(RestService.profileDir + filters)
                 .then(
                 function (data) {
                     $scope.profiles = data.results;
@@ -38,6 +59,10 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.goToProfile = function (owner) {
             $cookies.put('exploreUser', owner, { path: '/' });
             $state.go('tshirts');
+        };
+
+        $scope.changeFilter = function () {
+            $scope.getProfiles();
         };
 
     }]);
