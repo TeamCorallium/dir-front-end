@@ -359,6 +359,10 @@
     .marginTopMovil {
         margin-top: 25px !important;
     }
+    
+    .marginTopMovil-10 {
+        margin-top: 10px !important;
+    }
 
     .image_qrcode {
         float: left !important;
