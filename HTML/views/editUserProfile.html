@@ -171,7 +171,7 @@
     <!-- end: MODAL IMAGE CROPPER-->
     <!-- start: MODAL CHANGE PASSWORD-->
     <div class="modal fade login-register-form" id="modalChangePassword" role="dialog">
-        <div class="modal-dialog modal-sm">
+        <div class="modal-dialog modal-sm" ng-controller="FormController">
             <div class="modal-content">
                 <div class="modal-header" ng-controller="CloseCtrl">
                     <div class="modal-header padding-15">
@@ -184,7 +184,7 @@
                     </div>
                 </div>
                 <div class="modal-body">
-                    <form name="ChangePassword" role="form" ng-controller="FormController">
+                    <form name="ChangePassword" role="form">
                         <div class="form-group">
                             <label for="password">Password</label>
                             <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong password.
@@ -210,7 +210,7 @@
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                         <i class="ti-close"></i> Close
                     </a>
-                    <a ng-controller="FormController" class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch">
                         <i class="ti-key"></i> Change Password
                     </a>
                 </div>
