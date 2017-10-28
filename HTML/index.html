@@ -168,11 +168,18 @@
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                                 <h4 class="modal-title">
-                                    <i class="ti-user"></i> Register</h4>
+                                    <i class="ti-user"></i> Register
+                                </h4>
                             </div>
                         </div>
                         <div class="modal-body">
                             <form name="RegisterTshirt" role="form" ng-controller="FormController">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$invalid) ? 'error' : ''"
+                                        id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
+                                </div>
                                 <div class="form-group">
                                     <label for="emailHome">Email</label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -235,11 +242,18 @@
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
                                 <h4 class="modal-title">
-                                    <i class="ti-user"></i> Register</h4>
+                                    <i class="ti-user"></i> Register
+                                </h4>
                             </div>
                         </div>
                         <div class="modal-body">
                             <form name="RegisterTshirt" role="form" ng-controller="FormController">
+                                <div class="form-group">
+                                    <label for="fullname">Full Name</label>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$invalid) ? 'error' : ''"
+                                        id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
+                                </div>
                                 <div class="form-group">
                                     <label for="email">Email</label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -327,113 +341,7 @@
                 </div>
             </div>
             <!-- end: MODAL LOGIN HOME-->
-
-            <!-- start: MODAL SNIPPETS-->
-            <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content" ng-controller="FormController">
-                        <div class="modal-header padding-15">
-                            <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title" id="myModalLabel">
-                                <i class="ti-plus"></i> Add Snippets
-                            </h4>
-                        </div>
-                        <div class="modal-body padding-15">
-                            <form name="AddSnippets" role="form">
-                                <div class="form-group">
-                                    <label for="title">Snippet title</label>
-                                    <div class="error form-hint" ng-show="AddSnippets.title.$dirty && AddSnippets.title.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <input type="text" class="form-control" ng-class="(AddSnippets.title.$dirty && AddSnippets.title.$invalid) ? 'error' : ''"
-                                        id="user" name="title" placeholder="Enter snippet title" ng-required="true" ng-model="title">
-                                </div>
-                                <div class="form-group">
-                                    <label for="body">Snippet body</label>
-                                    <div class="error form-hint" ng-show="AddSnippets.body.$dirty && AddSnippets.body.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <textarea class="form-control" ng-class="(AddSnippets.body.$dirty && AddSnippets.body.$invalid) ? 'error' : ''" id="user"
-                                        name="body" placeholder="Enter snippet body" ng-required="true" ng-model="body"></textarea>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer padding-15">
-                            <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                                <i class="ti-close"></i> Close
-                            </a>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSnippets.$invalid" ng-click="addSnippets(title,body)">
-                                <i class="ti-plus"></i> Add
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end: MODAL SNIPPETS-->
-
-            <!-- start: MODAL SOCIAL NETWORK-->
-            <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-                ng-controller="AddSocialNetworkCtrl">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header padding-15">
-                            <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                            <h4 class="modal-title">
-                                <i class="ti-plus"></i>Add Social Network
-                            </h4>
-                        </div>
-                        <div class="modal-body padding-15">
-                            <form name="AddSocialNetworks" role="form">
-                                <div class="form-group">
-                                    <label for="socialnetwork">Social Networks</label>
-                                    <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
-                                        ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
-                                        <option ng-selected="true" value="0" disabled selected>Select a social network</option>
-                                        <option value="Facebook">Facebook</option>
-                                        <option value="LinkedIn">LinkedIn</option>
-                                        <option value="Twitter">Twitter</option>
-                                        <option value="Instagram">Instagram</option>
-                                        <option value="Reddit">Reddit</option>
-                                        <option value="Google">Google+</option>
-                                        <option value="YouTube">YouTube</option>
-                                        <option value="RSS">RSS</option>
-                                        <option value="Dropbox">Dropbox</option>
-                                        <option value="GitHub">GitHub</option>
-                                        <option value="Skype">Skype</option>
-                                        <option value="Tumblr">Tumblr</option>
-                                        <option value="Vimeo">Vimeo</option>
-                                        <option value="WordPress">WordPress</option>
-                                        <option value="Yahoo">Yahoo</option>
-                                        <option value="Flickr">Flickr</option>
-                                        <!-- <option value="Foursquare">Foursquare</option> -->
-                                        <!-- <option value="Behance">Behance</option> -->
-                                        <!-- <option value="VK">VK</option> -->
-                                        <!-- <option value="Xing">Xing</option> -->
-                                        <!-- <option value="Spotify">Spotify</option>
-                                                <option value="StumbleUpon">StumbleUpon</option> -->
-                                    </select>
-                                </div>
-                                <div class="form-group" ng-controller="FormController">
-                                    <label for="url">Social network url</label>
-                                    <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
-                                        id="url" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url">
-                                </div>
-                            </form>
-                        </div>
-                        <div class="modal-footer padding-15">
-                            <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                                <i class="ti-close"></i> Close
-                            </a>
-                            <a class="btn btn-primary ButtonRadius" ng-controller="FormController" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
-                                <i class="ti-plus"></i> Add
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- end: MODAL SOCIAL NETWORK-->
+            
             <a id="scroll-top" href="#">
                 <i class="fa fa-angle-up"></i>
             </a>
