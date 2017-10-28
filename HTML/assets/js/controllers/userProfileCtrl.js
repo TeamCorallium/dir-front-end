@@ -17,6 +17,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             avatar: 'assets/images/default-user.png',
             id: '',
             profileurl: '',
+            fullname: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -79,6 +80,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.id = data.id;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
+                        $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
                     } else {
                         //    Show Autentication

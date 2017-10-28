@@ -20,12 +20,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             info: '',
             score: '',
             rating: '',
-            avatar: '',
+            avatar: 'assets/images/default-user.png',
             id: '',
+            profileurl: '',
+            fullname: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        };
+        }; 
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
@@ -80,6 +82,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.id = data.id;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
+                        $scope.user.fullname = data.fullname;
+                        $scope.user.profileurl = data.url;
                     } else {
                         $state.go('home');
                         // throw toaster with message profile not found

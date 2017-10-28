@@ -40,6 +40,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             id: '',
             avatar: 'assets/images/default-user.png',
             profileurl: '',
+            fullname: '',
             socialnetworks: [],
             tshirts: [],
             snippets: []
@@ -96,6 +97,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
                         $scope.user.profileurl = data.url;
+                        $scope.user.fullname = data.fullname;
                     } else {
                         $('#myModal').modal('show');
                     }
