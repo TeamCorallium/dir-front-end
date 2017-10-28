@@ -236,11 +236,19 @@
                                     <option value="StumbleUpon">StumbleUpon</option> -->
                             </select>
                         </div>
-                        <div class="form-group" ng-controller="FormController">
-                            <label for="url">Social network url</label>
-                            <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
-                            <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
-                                id="url" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url">
+                        <div class="form-group centerTextExploreUser">
+                            <div class="checkbox">
+                                <label>
+                                    <input type="checkbox" ng-model="showUrlCamp" ng-change="activeManually()" checked>
+                                    <strong>Type Facebook URL manually:</strong>
+                                </label>
+                            </div>
+                            <div class="form-group" ng-controller="FormController" ng-show="showUrlCamp">
+                                <label for="url">Social network url</label>
+                                <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
+                                    id="url" name="url" placeholder="Enter social network url" ng-required="true" ng-model="url">
+                            </div>
                         </div>
                     </form>
                 </div>
