@@ -197,7 +197,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateProfile: function (profileurl, info, rating, score, avatar) {
+        updateProfile: function (profileurl, info, rating, score, avatar, fullname) {
             $http({
                 method: 'PUT',
                 url: profileurl,
@@ -224,7 +224,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     });
                     return fd;
                 },
-                data: { 'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: { 'info': info, 'rating': rating, 'score': score, 'avatar': avatar,
+                'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
             }).success(function (data) {
                 $state.go('profile');
             }).error(function (response) {
@@ -232,7 +233,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateProfileWithOutAvatar: function (profileurl, id, info, rating, score) {
+        updateProfileWithOutAvatar: function (profileurl, id, info, rating, score, fullname) {
             $http({
                 method: 'PUT',
                 url: updateWithOutImage,
@@ -259,7 +260,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     });
                     return fd;
                 },
-                data: { 'id': id, 'info': info, 'rating': rating, 'score': score, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: { 'id': id, 'info': info, 'rating': rating, 'score': score,
+                'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
             }).success(function (data) {
                 $state.go('profile');
             }).error(function (response) {

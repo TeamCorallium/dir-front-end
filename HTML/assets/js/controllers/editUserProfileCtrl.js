@@ -190,11 +190,11 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if ($scope.user.avatar == 'assets/images/default-user.png') {
                 $scope.user.avatar = '';
             }
-            console.log("avatar:" + $scope.user.avatar);
+            
             if ($scope.user.avatar instanceof File) {
-                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar);
+                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname);
             } else {
-                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score)
+                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname)
             }
         };
 
