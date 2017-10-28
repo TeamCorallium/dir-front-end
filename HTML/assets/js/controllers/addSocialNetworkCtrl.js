@@ -17,8 +17,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             $scope.url = '';
 
             switch ($scope.socialnetwork) {
-                case "Facebook": {
-                    $scope.url = 'https://www.facebook.com/';
+                case "Facebook": {                    
                     $scope.showUrlCamp = false;
                     $scope.activeFacebook = true;
                     $scope.isFacebookConnected();
@@ -224,7 +223,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                         FB.api('me', function (response) {
                             console.log(response);
                             $scope.facebookName = response.name;
-                            $scope.url += response.id;
+                            $scope.url = 'https://www.facebook.com/' + response.id;
                             $scope.addSocialNetwork("Facebook", $scope.url);
                         });
                     } else {
@@ -241,8 +240,6 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.isConnected = false;
 
         $scope.isFacebookConnected = function () {
-            console.log(FB.toSource() + " FB");
-            console.log(typeof  FB != null);
             FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
                     $scope.isConnected = true;
@@ -260,17 +257,4 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 $scope.facebookLogin();
             });
         };
-
-        $scope.isValidFacebookUrl = function () {
-            var flag = false;
-
-            if ($scope.socialnetwork == 'Facebook') {
-                if ($scope.url != 'https://www.facebook.com/') {
-                    flag = true;
-                }
-            }
-
-            return flag;
-        };
-
     }]);
