@@ -149,6 +149,21 @@
         margin-left: 15px !important;
         margin-right: 15px !important;
     }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 87% !important;
+    }
 }
 
 @media (min-width: 770px) {
@@ -430,6 +445,21 @@
     .centerTextExploreUser{
         text-align: center !important;
     }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 92% !important;
+    }
 }
 
 @media  (max-width: 480px) {
@@ -488,6 +518,21 @@
     .marginButtonUserHome {
         margin-left: 34% !important;
         border-radius: 5px !important;
+    }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 86% !important;
     }
 }
 
@@ -548,6 +593,21 @@
         margin-left: 30% !important;
         border-radius: 5px !important;
     }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 83% !important;
+    }
 }
 
 @media  (max-width: 375px) {
@@ -606,6 +666,21 @@
     .marginButtonUserHome {
         margin-left: 28% !important;
         border-radius: 5px !important;
+    }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 80% !important;
     }
 }
 
@@ -666,6 +741,21 @@
         margin-left: 27% !important;
         border-radius: 50px !important;
     }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 79% !important;
+    }
 }
 
 @media  (max-width: 320px) {
@@ -725,6 +815,21 @@
         margin-left: 24% !important;
         border-radius: 5px !important;
     }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 75% !important;
+    }
 }
 
 .paddingViewProfile {
@@ -779,6 +884,21 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1250.jpg');
+    }
+
+    .DeleteSnippetBox {
+        width: 50px !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+    
+    .SnippetBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 91% !important;
     }
 }
 
@@ -1280,19 +1400,4 @@ a.ButtonImageSize {
 
 .margin-top-12 {
     margin-top: 12px !important;
-}
-
-.DeleteSnippetBox {
-    width: 50px !important;
-    display: block;
-    position: relative;
-    float: left;
-}
-
-.SnippetBox {
-    text-align: left !important;
-    display: block;
-    position: relative;
-    float: left;
-    width: auto !important;
 }
