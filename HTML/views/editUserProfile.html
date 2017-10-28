@@ -62,12 +62,12 @@
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <ul class="ltwt">
                                     <li ng-repeat="snippet in user.snippets" class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">
-                                        <div class="AvatarXSBox">
+                                        <div class="DeleteSnippetBox">
                                             <button class="btn btn-red" ng-click="deleteSnippets(snippet.url)">
                                                 <i class="ti-trash"></i>
                                             </button>
                                         </div>
-                                        <div class="UserInfoBox">
+                                        <div class="SnippetBox">
                                             <h4 class="margin-bottom-0">{{snippet.title}}</h4>
                                             <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
                                             <span class="block text-light margin-bottom-20">

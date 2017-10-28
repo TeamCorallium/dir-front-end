@@ -359,7 +359,7 @@
     .marginTopMovil {
         margin-top: 25px !important;
     }
-    
+
     .marginTopMovil-10 {
         margin-top: 10px !important;
     }
@@ -385,6 +385,21 @@
     }
 
     .UserInfoBox {
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 90% !important;
+    }
+
+    .DeleteSnippetBox {
+        width: 10% !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
+    .SnippetBox {
         text-align: left !important;
         display: block;
         position: relative;
