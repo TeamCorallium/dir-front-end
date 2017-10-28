@@ -798,8 +798,8 @@
 }
 
 .avatar-users:hover{
-    cursor: pointer;
-    cursor: hand;
+    cursor: pointer !important;
+    cursor: hand !important;
 }
 
 .max-width-160 {
