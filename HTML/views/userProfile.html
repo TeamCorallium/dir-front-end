@@ -237,7 +237,7 @@
                             </select>
                         </div>
                         <div class="form-group centerTextExploreUser">
-                            <div ng-show="activeFacebook && !showUrlCamp">
+                            <div class="form-group" ng-show="activeFacebook && !showUrlCamp">
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
                                     <a class="btn btn-wide btn-primary cursorPointer" ng-click="facebookLogin()" ng-show="isConnected">
                                         <i class="ti-facebook"></i> Continue as {{facebookName}}
@@ -250,7 +250,7 @@
                                     <i class="ti-facebook"></i> Login with Facebook
                                 </a>                                
                             </div>
-                            <div class="checkbox" ng-show="activeFacebook">
+                            <div class="form-group checkbox" ng-show="activeFacebook">
                                 <label class="margin-top-10">
                                     <input type="checkbox" ng-model="manuallyCheck" ng-change="activeManually()">
                                     <strong>Type Facebook URL manually:</strong>
