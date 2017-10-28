@@ -199,6 +199,9 @@
                             <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome"
                                 pw-check="password">
                         </div>
+                        <div class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
+                            <span class="msg-error"> Passwords don't match.</span>
+                        </div>
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
