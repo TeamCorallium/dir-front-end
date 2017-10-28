@@ -249,13 +249,11 @@
                                 <i class="ti-facebook"></i> Login with Facebook
                             </a>
                         </div>
-                        <div class="form-group centerTextExploreUser">                            
-                            <div class="form-group checkbox" ng-show="activeFacebook">
-                                <label class="margin-top-10">
-                                    <input type="checkbox" ng-model="manuallyCheck" ng-change="activeManually()">
-                                    <strong>Type Facebook URL manually:</strong>
-                                </label>
-                            </div>
+                        <div class="form-group centerTextExploreUser">
+                            <label class="margin-top-10" ng-show="activeFacebook">
+                                <input type="checkbox" ng-model="manuallyCheck" ng-change="activeManually()">
+                                <strong>Type Facebook URL manually:</strong>
+                            </label>
                             <div class="form-group" ng-controller="FormController" ng-show="showUrlCamp">
                                 <label for="url">Social network url</label>
                                 <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
