@@ -802,11 +802,6 @@
     cursor: hand;
 }
 
-.cursorPointer:hover{
-    cursor: pointer !important;
-    cursor: hand !important;
-}
-
 .max-width-160 {
     max-width: 160px !important;
 }

@@ -216,7 +216,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             }
         };
 
-        $scope.facebookLogin = function () {
+        $scope.facebookLogin = function () {            
             if (!$scope.isFacebookConnected()) {
                 FB.login(function (response) {
                     if (response.status === 'connected') {
@@ -241,6 +241,8 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.isConnected = false;
 
         $scope.isFacebookConnected = function () {
+            console.log(FB + " FB");
+            console.dir(FB + " FB");
             FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
                     $scope.isConnected = true;

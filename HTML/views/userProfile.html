@@ -238,14 +238,14 @@
                         </div>
                         <div class="form-group" ng-show="activeFacebook && !showUrlCamp">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
-                                <a class="btn btn-wide btn-primary cursorPointer" ng-click="facebookLogin()" ng-show="isConnected">
+                                <a class="btn btn-wide btn-primary" ng-click="facebookLogin()" ng-show="isConnected">
                                     <i class="ti-facebook"></i> Continue as {{facebookName}}
                                 </a>
                             </div>
-                            <a class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 row margin-top-10 cursorPointer" ng-click="continueAsOther()" ng-show="isConnected">
+                            <a class=" col-xs-12 col-sm-12 col-md-12 col-lg-12 row margin-top-10" ng-click="continueAsOther()" ng-show="isConnected">
                                 <i class="ti-user"></i> Continue as other
                             </a>
-                            <a class="btn btn-wide btn-primary cursorPointer" ng-click="facebookLogin()" ng-hide="isConnected">
+                            <a class="btn btn-wide btn-primary" ng-click="facebookLogin()" ng-hide="isConnected">
                                 <i class="ti-facebook"></i> Login with Facebook
                             </a>
                         </div>
