@@ -8,6 +8,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
 
         $scope.socialnetwork = '';
         $scope.url = '';
+        $scope.facebookName = '';
 
         $scope.showUrlCamp = false;
         $scope.activeFacebook = false;
@@ -222,6 +223,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                         $scope.isConnected = true;
                         FB.api('me', function (response) {
                             console.log(response);
+                            $scope.facebookName = response.name;
                             $scope.url += response.id;
                             $scope.addSocialNetwork("Facebook", $scope.url);
                         });
