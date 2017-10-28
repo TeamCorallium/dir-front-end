@@ -237,9 +237,10 @@
                             </select>
                         </div>
                         <div class="form-group centerTextExploreUser">
-                            <div ng-show="activeFacebook">
-                                <button ng-show="isFacebookConnected()">Continue as</button>
-                                <button ng-hide="isFacebookConnected()">Login with Facebook</button>
+                            <div ng-show="activeFacebook && !showUrlCamp">
+                                <button ng-click="facebookLogin()" ng-show="isFacebookConnected()">Continue as</button>
+                                <button ng-click="continueAsOther()" ng-show="isFacebookConnected()">Continue as other</button>
+                                <button ng-click="facebookLogin()" ng-hide="isFacebookConnected()">Login with Facebook</button>
                             </div>
                             <div class="checkbox" ng-show="activeFacebook">
                                 <label>

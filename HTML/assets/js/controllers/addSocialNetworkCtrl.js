@@ -115,7 +115,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                     $scope.showUrlCamp = true;
                     $scope.activeFacebook = false;
                     break;
-                } 
+                }
             }
         };
 
@@ -206,7 +206,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.manuallyCheck = false;
 
         $scope.activeManually = function () {
-            if($scope.manuallyCheck) {
+            if ($scope.manuallyCheck) {
                 $scope.showUrlCamp = true;
             } else {
                 $scope.showUrlCamp = false;
@@ -238,6 +238,12 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 } else {
                     return false;
                 }
+            });
+        };
+
+        $scope.continueAsOther = function () {
+            FB.logout(function (response) {
+                $scope.facebookLogin();
             });
         };
 
