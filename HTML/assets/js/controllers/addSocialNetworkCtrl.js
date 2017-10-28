@@ -9,71 +9,106 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.socialnetwork = '';
         $scope.url = '';
 
+        $scope.showUrlCamp = false;
+        $scope.activeFacebook = false;
+
         $scope.updateUrl = function () {
             $scope.url = '';
             switch ($scope.socialnetwork) {
                 case "Facebook": {
                     $scope.url = 'https://www.facebook.com/';
+                    $scope.showUrlCamp = false;
+                    $scope.activeFacebook = true;
                     break;
                 };
                 case "Twitter": {
                     $scope.url = 'https://twitter.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "LinkedIn": {
                     $scope.url = 'https://www.linkedin.com/in/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Instagram": {
                     $scope.url = 'https://www.instagram.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Reddit": {
                     $scope.url = 'https://www.reddit.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Google": {
                     $scope.url = 'https://plus.google.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "YouTube": {
                     $scope.url = 'https://www.youtube.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "RSS": {
                     $scope.url = 'https://www.rss.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Dropbox": {
                     $scope.url = 'https://www.dropbox.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "GitHub": {
                     $scope.url = 'https://github.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Skype": {
                     $scope.url = 'https://www.skype.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Tumblr": {
                     $scope.url = 'https://www.tumblr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Vimeo": {
                     $scope.url = 'https://vimeo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "WordPress": {
                     $scope.url = 'https://es.wordpress.org/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Yahoo": {
                     $scope.url = 'https://www.yahoo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
                 case "Flickr": {
                     $scope.url = 'https://www.flickr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
                     break;
                 };
             }
@@ -162,5 +197,37 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $rootScope.$on('addSocialNetworkError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
+
+        $scope.activeManually = function () {
+            $scope.showUrlCamp = !$scope.showUrlCamp;
+        };
+
+        $scope.facebookLogin = function () {
+            if (!$scope.isFacebookConnected()) {
+                FB.login(function (response) {
+                    if (response.status === 'connected') {
+                        FB.api('me', function (response) {
+                            console.log(response);
+                        });
+                    } else {
+                        console.log("user canceled login or ded not fully authorize");
+                    }
+                });
+            } else {
+                FB.api('me', function (response) {
+                    console.log(response);
+                });
+            }
+        };
+
+        $scope.isFacebookConnected = function () {
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+        };
 
     }]);

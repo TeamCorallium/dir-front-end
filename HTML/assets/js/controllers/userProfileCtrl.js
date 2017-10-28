@@ -20,9 +20,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        };
-
-        $scope.showUrlCamp = false;
+        };        
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
@@ -262,9 +260,5 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.previous = function() {
             $scope.currentPage -= 1;
             // $scope.getProfiles($scope.currentPage);
-        };
-
-        $scope.activeManually = function() {
-            $scope.showUrlCamp = !$scope.showUrlCamp;
-        };
+        };        
     }]);
