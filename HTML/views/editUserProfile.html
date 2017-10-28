@@ -210,7 +210,7 @@
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                         <i class="ti-close"></i> Close
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch">
                         <i class="ti-key"></i> Change Password
                     </a>
                 </div>
