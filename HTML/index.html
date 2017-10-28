@@ -302,8 +302,8 @@
             <!-- end: MODAL REGISTER HOME-->
 
             <!-- start: MODAL LOGIN HOME-->
-            <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog" ng-controller="LoginCtrl">
-                <div class="modal-dialog modal-sm">
+            <div class="modal fade login-register-form" id="myModalLoginHome" role="dialog">
+                <div class="modal-dialog modal-sm" ng-controller="FormController">
                     <div class="modal-content">
                         <div class="modal-header" ng-controller="CloseCtrl">
                             <div class="modal-header padding-15">
@@ -315,7 +315,7 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <form name="LogingForm" role="form" ng-controller="FormController">
+                            <form name="LogingForm" role="form">
                                 <div class="form-group">
                                     <label for="usernameHome">Username</label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -334,7 +334,7 @@
                                 </div>                                
                             </form>
                         </div>
-                        <div class="modal-footer padding-15" ng-controller="FormController">
+                        <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
                                 <i class="ti-user"></i> Login
                             </a>
