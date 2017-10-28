@@ -222,6 +222,9 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                         $scope.isConnected = true;
                         FB.api('me', function (response) {                            
                             console.log(response);
+                            $scope.url += id;
+                            $('#facebookUrl').show();
+                            $scope.activeFacebook = false;
                         });
                     } else {
                         console.log("user canceled login or did not fully authorize");
