@@ -798,6 +798,11 @@
 }
 
 .avatar-users:hover{
+    cursor: pointer;
+    cursor: hand;
+}
+
+.cursorPointer:hover{
     cursor: pointer !important;
     cursor: hand !important;
 }
