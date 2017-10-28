@@ -160,7 +160,7 @@
 
             <!-- start: MODAL REGISTER-->
             <div class="modal fade login-register-form" id="myModal" role="dialog">
-                <div class="modal-dialog modal-sm">
+                <div class="modal-dialog modal-sm" ng-controller="FormController">
                     <div class="modal-content">
                         <div class="modal-header" ng-controller="CloseCtrl">
                             <div class="modal-header padding-15">
@@ -173,7 +173,7 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <form name="RegisterTshirt" role="form" ng-controller="FormController">
+                            <form name="RegisterTshirt" role="form">
                                 <div class="form-group">
                                     <label for="fullname">Full Name</label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -221,11 +221,13 @@
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
                                     <span class="msg-error"> This username is already used.</span>
-                                </div>
-                                <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
-                                    <i class="ti-user"></i> Register
-                                </a>
+                                </div>                                
                             </form>
+                        </div>
+                        <div class="modal-footer padding-15" ng-controller="LoginCtrl">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                                <i class="ti-user"></i> Register
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -294,7 +296,7 @@
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
-                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-user"></i> Register
                             </a>
                         </div>
