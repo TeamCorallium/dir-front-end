@@ -111,6 +111,11 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                     $scope.activeFacebook = false;
                     break;
                 };
+                default: {
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                } 
             }
         };
 
@@ -198,8 +203,14 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
 
+        $scope.manuallyCheck = false;
+
         $scope.activeManually = function () {
-            $scope.showUrlCamp = !$scope.showUrlCamp;
+            if($scope.manuallyCheck) {
+                $scope.showUrlCamp = true;
+            } else {
+                $scope.showUrlCamp = false;
+            }
         };
 
         $scope.facebookLogin = function () {
