@@ -13,12 +13,14 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.activeFacebook = false;
 
         $scope.updateUrl = function () {
-            $scope.url = '';
+            $scope.url = '';            
+
             switch ($scope.socialnetwork) {
                 case "Facebook": {
                     $scope.url = 'https://www.facebook.com/';
                     $scope.showUrlCamp = false;
                     $scope.activeFacebook = true;
+                    $scope.isFacebookConnected();
                     break;
                 };
                 case "Twitter": {
@@ -217,11 +219,12 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             if (!$scope.isFacebookConnected()) {
                 FB.login(function (response) {
                     if (response.status === 'connected') {
-                        FB.api('me', function (response) {
+                        $scope.isConnected = true;
+                        FB.api('me', function (response) {                            
                             console.log(response);
                         });
                     } else {
-                        console.log("user canceled login or ded not fully authorize");
+                        console.log("user canceled login or did not fully authorize");
                     }
                 });
             } else {
@@ -231,17 +234,22 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             }
         };
 
+        $scope.isConnected = false;
+
         $scope.isFacebookConnected = function () {
             FB.getLoginStatus(function (response) {
                 if (response.status === 'connected') {
-                    return true;
+                    $scope.isConnected = true;
                 } else {
-                    return false;
+                    $scope.isConnected = false;
                 }
             });
         };
 
+        $scope.isFacebookConnected();
+
         $scope.continueAsOther = function () {
+            $scope.isConnected = false;
             FB.logout(function (response) {
                 $scope.facebookLogin();
             });
