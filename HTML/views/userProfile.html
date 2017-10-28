@@ -242,9 +242,6 @@
                                 <button ng-click="continueAsOther()" ng-show="isConnected">Continue as other</button>
                                 <button ng-click="facebookLogin()" ng-hide="isConnected">Login with Facebook</button>                                
                             </div>
-                            <div>
-                                <label id="facebookUrl" ng-model="url" hidden></label>
-                            </div>
                             <div class="checkbox" ng-show="activeFacebook">
                                 <label>
                                     <input type="checkbox" ng-model="manuallyCheck" ng-change="activeManually()">

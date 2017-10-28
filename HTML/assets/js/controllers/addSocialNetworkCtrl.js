@@ -13,7 +13,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.activeFacebook = false;
 
         $scope.updateUrl = function () {
-            $scope.url = '';            
+            $scope.url = '';
 
             switch ($scope.socialnetwork) {
                 case "Facebook": {
@@ -220,11 +220,10 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 FB.login(function (response) {
                     if (response.status === 'connected') {
                         $scope.isConnected = true;
-                        FB.api('me', function (response) {                            
+                        FB.api('me', function (response) {
                             console.log(response);
                             $scope.url += response.id;
-                            $scope.activeFacebook = false;
-                            // $('#facebookUrl').show();                            
+                            $scope.addSocialNetwork("Facebook", $scope.url);
                         });
                     } else {
                         console.log("user canceled login or did not fully authorize");
