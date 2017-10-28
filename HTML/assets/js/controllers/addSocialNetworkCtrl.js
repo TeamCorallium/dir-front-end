@@ -259,4 +259,16 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             });
         };
 
+        $scope.isValidFacebookUrl = function () {
+            var flag = false;
+
+            if ($scope.socialnetwork == 'Facebook') {
+                if ($scope.url != 'https://www.facebook.com/') {
+                    flag = true;
+                }
+            }
+
+            return flag;
+        };
+
     }]);
