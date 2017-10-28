@@ -222,7 +222,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                         $scope.isConnected = true;
                         FB.api('me', function (response) {                            
                             console.log(response);
-                            $scope.url += id;
+                            $scope.url += response.id;
                             $('#facebookUrl').show();
                             $scope.activeFacebook = false;
                         });
