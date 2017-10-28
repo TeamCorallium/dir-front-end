@@ -10,7 +10,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.search = '';
 
-        if($cookies.get('sessionid')) {
+        if ($cookies.get('sessionid')) {
             $rootScope.viewInbox = true;
             $rootScope.viewProfile = true;
         } else {
@@ -26,7 +26,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
-        $scope.hasPrevious = ''; 
+        $scope.hasPrevious = '';
 
         $scope.getProfiles = function (page) {
 
@@ -47,7 +47,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
                 if ($scope.applyDateFilter) {
                     if (flag) {
-                        filters+=",";
+                        filters += ",";
                     }
 
                     if ($scope.orderDate == 'AscendingDate') {
@@ -56,7 +56,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                         filters += '-created';
                     }
                 }
-            }            
+            }
+
+            filters += '&search=' + $scope.search;
 
             RestService.fetchObjectByUrl(RestService.profileDir + filters + '&page=' + page)
                 .then(
@@ -93,28 +95,32 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.changeFilterDate = function() {
+        $scope.changeFilterDate = function () {
             if ($scope.applyDateFilter) {
                 $scope.getProfiles(1);
             }
         };
 
-        $scope.noPrevious = function() {
+        $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function() {
+        $scope.noNext = function () {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function() {
+        $scope.next = function () {
             $scope.currentPage += 1;
             $scope.getProfiles($scope.currentPage);
         };
 
-        $scope.previous = function() {
+        $scope.previous = function () {
             $scope.currentPage -= 1;
             $scope.getProfiles($scope.currentPage);
+        };
+
+        $scope.searchProfile = function () {
+            $scope.getProfiles(1);
         };
 
     }]);
