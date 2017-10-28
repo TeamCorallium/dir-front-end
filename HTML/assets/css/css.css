@@ -390,22 +390,7 @@
         position: relative;
         float: left;
         width: 90% !important;
-    }
-
-    .DeleteSnippetBox {
-        width: 10% !important;
-        display: block;
-        position: relative;
-        float: left;
-    }
-
-    .SnippetBox {
-        text-align: left !important;
-        display: block;
-        position: relative;
-        float: left;
-        width: 90% !important;
-    }
+    }    
 
     .paddingProfile {
         padding-top: 45px !important;
@@ -1295,4 +1280,19 @@ a.ButtonImageSize {
 
 .margin-top-12 {
     margin-top: 12px !important;
+}
+
+.DeleteSnippetBox {
+    width: 50px !important;
+    display: block;
+    position: relative;
+    float: left;
+}
+
+.SnippetBox {
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+    width: auto !important;
 }
