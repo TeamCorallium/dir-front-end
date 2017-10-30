@@ -112,8 +112,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var getSnippets = function (username, page) {
-            $scope.user.snippets = [];
-            RestService.fetchSnippets(username + "?page=" + page)
+            $scope.user.snippets = [];            
+            RestService.fetchSnippets(username + "&page=" + page)
                 .then(
                 function (data) {
                     $scope.hasNext = data.next;

@@ -112,6 +112,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 .then(
                 function (data) {
                     data = data.results;
+                    $scope.hasNext = data.next;
+                    $scope.hasPrevious = data.previous;
                     for (var i = 0; i < data.length; i++) {
                         data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
