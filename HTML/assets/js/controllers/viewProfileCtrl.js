@@ -248,8 +248,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     function (data) {
                         if (data.length > 0) {
                             $scope.getUser(data[0].owner);
-                        } else {
+                        } else {                            
                             $state.go('home');
+                            $('#myModal').modal('show');
                         }
                     },
                     function (errResponse) {
