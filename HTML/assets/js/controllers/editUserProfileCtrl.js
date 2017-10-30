@@ -299,4 +299,8 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             // $scope.getProfiles($scope.currentPage);
         };
 
+        $scope.changePassword = function(psw,psw2) {
+            console.log(psw + " " + psw2);
+        };
+
     }]);
