@@ -15,18 +15,18 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
     // var messages = 'http://10.58.20.225/messages/';
 
-    var tshirt = 'http://www.dir.com:8888/tshirts/';
-    var users = 'http://www.dir.com:8888/users/';
-    var profiles = 'http://www.dir.com:8888/profiles/';
-    var login = 'http://www.dir.com:8888/api-auth/login/';
-    var loginNext = 'http://www.dir.com:8888/api-auth/login/?next=/';
-    var register = 'http://www.dir.com:8888/api-auth/register/';
-    var snippets = 'http://www.dir.com:8888/snippets/';
-    var socialnetwork = 'http://www.dir.com:8888/socialnetworks/';
+    var tshirt = 'http://www.dir.com:8888/api/tshirts/';
+    var users = 'http://www.dir.com:8888/api/users/';
+    var profiles = 'http://www.dir.com:8888/api/profiles/';
+    var login = 'http://www.dir.com:8888/api/api-auth/login/';
+    var loginNext = 'http://www.dir.com:8888/api/api-auth/login/?next=/';
+    var register = 'http://www.dir.com:8888/api/api-auth/register/';
+    var snippets = 'http://www.dir.com:8888/api/snippets/';
+    var socialnetwork = 'http://www.dir.com:8888/api/socialnetworks/';
     var imageDir = 'http://www.dir.com/images/';
     var imageDownload = 'http://www.dir.com:8888/api/qrcode';
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
-    var messages = 'http://www.dir.com:8888/messages/';
+    var messages = 'http://www.dir.com:8888/api/messages/';
 
     // var tshirt = 'http://tony850421.webfactional.com/tshirts/';
     // var users = 'http://tony850421.webfactional.com/users/';
