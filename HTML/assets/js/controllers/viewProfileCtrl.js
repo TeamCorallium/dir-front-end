@@ -113,11 +113,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         var getSnippets = function (username, page) {
             $scope.user.snippets = [];
-            console.log(username + " " + page);
             RestService.fetchSnippets(username + "&page=" + page)
                 .then(
                 function (data) {
-                    console.log(username + " " + page + " " + data);
                     $scope.hasNext = data.next;
                     $scope.hasPrevious = data.previous;
                     data = data.results;                    
@@ -276,11 +274,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.next = function() {
             $scope.currentPage += 1;     
-            $scope.getSnippets($scope.user.username, $scope.currentPage);       
+            getSnippets($scope.user.username, $scope.currentPage);       
         };
 
         $scope.previous = function() {
             $scope.currentPage -= 1;
-            $scope.getSnippets($scope.user.username, $scope.currentPage);
+            getSnippets($scope.user.username, $scope.currentPage);
         };
     }]);
