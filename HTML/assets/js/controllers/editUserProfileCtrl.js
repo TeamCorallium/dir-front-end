@@ -14,7 +14,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
-        $scope.hasPrevious = ''; 
+        $scope.hasPrevious = '';
 
         $scope.uploadFile = function (file) {
             if (file) {
@@ -66,7 +66,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                             $scope.getProfile(data[0].profiles[0]);
                         }
                         // $scope.getTshirts(data[0].tshirts);
-                        getSnippets(data[0].username);
+                        getSnippets(data[0].username, 1);
                         getSocialNetworks(data[0].username);
 
                     } else {
@@ -122,16 +122,18 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             }
         };
 
-        var getSnippets = function (username) {
-            RestService.fetchSnippets(username)
+        var getSnippets = function (username, page) {
+            $scope.user.snippets = [];
+            RestService.fetchSnippets(username + "&page=" + page)
                 .then(
                 function (data) {
+                    $scope.hasNext = data.next;
+                    $scope.hasPrevious = data.previous;
                     data = data.results;
                     for (var i = 0; i < data.length; i++) {
                         data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
                     }
-
                 },
                 function (errResponse) {
                     console.log(errResponse);
@@ -191,7 +193,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if ($scope.user.avatar == 'assets/images/default-user.png') {
                 $scope.user.avatar = '';
             }
-            
+
             if ($scope.user.avatar instanceof File) {
                 RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname);
             } else {
@@ -282,25 +284,25 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             $('#ModalImageCropper').modal('hide');
         };
 
-        $scope.noPrevious = function() {
+        $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function() {
+        $scope.noNext = function () {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function() {
+        $scope.next = function () {
             $scope.currentPage += 1;
-            // $scope.getProfiles($scope.currentPage);
+            getSnippets($scope.user.username, $scope.currentPage);
         };
 
-        $scope.previous = function() {
+        $scope.previous = function () {
             $scope.currentPage -= 1;
-            // $scope.getProfiles($scope.currentPage);
+            getSnippets($scope.user.username, $scope.currentPage);
         };
 
-        $scope.changePassword = function(psw,psw2) {
+        $scope.changePassword = function (psw, psw2) {
             if (psw === psw2) {
                 RestService.changePassword($scope.user.username, psw);
             } else {

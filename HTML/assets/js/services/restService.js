@@ -96,7 +96,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
-                    $rootScope.$broadcast('LoginNetworkConnectionError');    
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
                 }
             });
         },
@@ -246,8 +246,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     });
                     return fd;
                 },
-                data: { 'info': info, 'rating': rating, 'score': score, 'avatar': avatar,
-                'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar,
+                    'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $state.go('profile');
             }).error(function (response) {
@@ -282,8 +284,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     });
                     return fd;
                 },
-                data: { 'id': id, 'info': info, 'rating': rating, 'score': score,
-                'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'id': id, 'info': info, 'rating': rating, 'score': score,
+                    'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $state.go('profile');
             }).error(function (response) {
@@ -355,11 +359,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).error(function (response, status) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
-                } else if(status == null) {
+                } else if (status == null) {
                     $rootScope.$broadcast('LoginNetworkConnectionError');
                 } else {
                     $rootScope.$broadcast('WrongMessage');
-                }                
+                }
             });
         },
 

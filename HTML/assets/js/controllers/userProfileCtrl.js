@@ -21,19 +21,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        };        
+        };
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
-        $scope.hasPrevious = ''; 
-        
+        $scope.hasPrevious = '';
+
         $scope.users = [];
 
         $scope.profileQRCode = '';
 
         $rootScope.viewProfile = false;
         $rootScope.viewInbox = true;
-        
+
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -50,7 +50,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             getProfile(data[0].profiles[0]);
                         }
 
-                        getSnippets(data[0].username);
+                        getSnippets(data[0].username, 1);
                         getSocialNetworks(data[0].username);
 
                     } else {
@@ -107,18 +107,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        var getSnippets = function (username) {
-            RestService.fetchSnippets(username)
+        var getSnippets = function (username, page) {
+            $scope.user.snippets = [];
+            RestService.fetchSnippets(username + "&page=" + page)
                 .then(
                 function (data) {
-                    data = data.results;
                     $scope.hasNext = data.next;
                     $scope.hasPrevious = data.previous;
+                    data = data.results;
                     for (var i = 0; i < data.length; i++) {
                         data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
                     }
-
                 },
                 function (errResponse) {
                     console.log(errResponse);
@@ -249,21 +249,21 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             return dirAvatar;
         };
 
-        $scope.noPrevious = function() {
+        $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function() {
+        $scope.noNext = function () {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function() {
+        $scope.next = function () {
             $scope.currentPage += 1;
-            // $scope.getProfiles($scope.currentPage);
+            getSnippets($scope.user.username, $scope.currentPage);
         };
 
-        $scope.previous = function() {
+        $scope.previous = function () {
             $scope.currentPage -= 1;
-            // $scope.getProfiles($scope.currentPage);
-        };        
+            getSnippets($scope.user.username, $scope.currentPage);
+        };
     }]);

@@ -6,7 +6,7 @@
 app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window) {
 
-        if($cookies.get('sessionid')) {
+        if ($cookies.get('sessionid')) {
             $rootScope.viewInbox = true;
         } else {
             $rootScope.viewInbox = false;
@@ -27,11 +27,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        }; 
+        };
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
-        $scope.hasPrevious = ''; 
+        $scope.hasPrevious = '';
 
         $scope.users = [];
 
@@ -118,7 +118,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 function (data) {
                     $scope.hasNext = data.next;
                     $scope.hasPrevious = data.previous;
-                    data = data.results;                    
+                    data = data.results;
                     for (var i = 0; i < data.length; i++) {
                         data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
@@ -264,20 +264,20 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getTshirt();
 
-        $scope.noPrevious = function() {
+        $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function() {
+        $scope.noNext = function () {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function() {
-            $scope.currentPage += 1;     
-            getSnippets($scope.user.username, $scope.currentPage);       
+        $scope.next = function () {
+            $scope.currentPage += 1;
+            getSnippets($scope.user.username, $scope.currentPage);
         };
 
-        $scope.previous = function() {
+        $scope.previous = function () {
             $scope.currentPage -= 1;
             getSnippets($scope.user.username, $scope.currentPage);
         };
