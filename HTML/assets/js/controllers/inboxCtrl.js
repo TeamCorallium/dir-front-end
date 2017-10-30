@@ -244,7 +244,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             $scope.getMessageSend();
             SweetAlert.swal({
                 title: "Deleted!",
-                text: "Your imaginary file has been deleted.",
+                text: "Your message has been deleted.",
                 type: "success",
                 confirmButtonColor: "#007AFF"
             });
