@@ -12,6 +12,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $rootScope.viewInbox = false;
         }
 
+        var exploreUser = '';
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -238,6 +240,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
+                exploreUser = $cookies.get('exploreUser'); 
                 $cookies.remove("exploreUser", { path: '/' });
             } else {
                 RestService.fetchTshirt($stateParams.id)
@@ -277,13 +280,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.leaveMessage = function(subject, body) {
-            console.log($cookies.get('exploreUser') + " explore user");
-            // if($cookies.get('exploreUser')) {
-            //     var receiver = $cookies.get('exploreUser');
-            //     RestService.sendMessage($scope.user.username, receiver, subject, body, false);
-            // } else {
-            //     growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
-            //     $state.go('home');
-            // }            
+            if(exploreUser != '') {
+                RestService.sendMessage($scope.user.username, exploreUser, subject, body, false);
+            } else {
+                growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
+                $state.go('home');
+            }            
         };
     }]);
