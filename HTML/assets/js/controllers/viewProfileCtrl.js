@@ -280,8 +280,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.leaveMessage = function(subject, body) {
-            if(exploreUser != '') {
-                RestService.sendMessage($scope.user.username, exploreUser, subject, body, false);
+            if(exploreUser != ''  && $cookies.get('username')) {
+                var username = $cookies.get('username');
+                RestService.sendMessage(username, exploreUser, subject, body, false);
             } else {
                 growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
                 $state.go('home');
