@@ -235,7 +235,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalMessage').modal('hide');
-            $('#modalLeaveMessage').modal('hide');
             growl.success("Message sended correctly", { title: 'Send Message' });
         });
 

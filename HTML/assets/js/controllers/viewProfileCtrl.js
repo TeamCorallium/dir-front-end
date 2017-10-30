@@ -288,4 +288,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $state.go('home');
             }            
         };
+
+        $rootScope.$on('SendMessage', function (event, data) {
+            $('#modalLeaveMessage').modal('hide');
+            growl.success("Message sended correctly", { title: 'Send Message' });
+        });
     }]);
