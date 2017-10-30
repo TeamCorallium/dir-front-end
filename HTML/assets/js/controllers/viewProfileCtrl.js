@@ -283,7 +283,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
                 $state.go('home');
-            }
-            
+            }            
         };
     }]);
