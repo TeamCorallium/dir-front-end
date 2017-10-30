@@ -115,6 +115,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchSnippets(username)
                 .then(
                 function (data) {
+                    data = data.results;
                     for (var i = 0; i < data.length; i++) {
                         data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
