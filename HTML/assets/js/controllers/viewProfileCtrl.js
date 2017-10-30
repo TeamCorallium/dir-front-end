@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window",
-    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window) {
+app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
 
         if ($cookies.get('sessionid')) {
             $rootScope.viewInbox = true;
@@ -86,12 +86,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.profileurl = data.url;
                     } else {
                         $state.go('home');
-                        // throw toaster with message profile not found
                     }
                 },
                 function (errResponse) {
                     console.log(errResponse);
-                    // throw toaster with message errResponse
                 }
                 );
         };
@@ -140,7 +138,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 },
                 function (errResponse) {
                     console.log(errResponse);
-                    // throw toaster with message errResponse
                 }
                 );
         };
@@ -201,7 +198,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 },
                 function (errResponse) {
                     console.log(errResponse);
-                    // throw toaster with message errResponse
                 }
                 );
         };
@@ -278,5 +274,16 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.previous = function () {
             $scope.currentPage -= 1;
             getSnippets($scope.user.username, $scope.currentPage);
+        };
+
+        $scope.leaveMessage = function(subject, body) {
+            if($cookies.get('exploreUser')) {
+                var receiver = $cookies.get('exploreUser');
+                RestService.sendMessage($scope.user.username, receiver, subject, body, false);
+            } else {
+                growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
+                $state.go('home');
+            }
+            
         };
     }]);
