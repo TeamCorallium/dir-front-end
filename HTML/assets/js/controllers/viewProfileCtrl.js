@@ -277,12 +277,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.leaveMessage = function(subject, body) {
-            if($cookies.get('exploreUser')) {
-                var receiver = $cookies.get('exploreUser');
-                RestService.sendMessage($scope.user.username, receiver, subject, body, false);
-            } else {
-                growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
-                $state.go('home');
-            }            
+            console.log($cookies.get('exploreUser') + " explore user");
+            // if($cookies.get('exploreUser')) {
+            //     var receiver = $cookies.get('exploreUser');
+            //     RestService.sendMessage($scope.user.username, receiver, subject, body, false);
+            // } else {
+            //     growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
+            //     $state.go('home');
+            // }            
         };
     }]);
