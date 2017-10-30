@@ -27,6 +27,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var imageDownload = 'http://www.dir.com:8888/api/qrcode';
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
     var messages = 'http://www.dir.com:8888/api/messages/';
+    var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
 
     // var tshirt = 'http://tony850421.webfactional.com/tshirts/';
     // var users = 'http://tony850421.webfactional.com/users/';
@@ -194,6 +195,27 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
             }).error(function (response) {
                 $rootScope.$broadcast('makeQRCodeError');
+            });
+        },
+
+        changePassword: function (username, password) {
+            $http({
+                method: 'POST',
+                url: updatePassword,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: { 'username': username, 'password': password, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+            }).success(function (data) {
+                $rootScope.$broadcast('changepassword');
+            }).error(function (response) {
+                $rootScope.$broadcast('changepasswordError');
             });
         },
 
