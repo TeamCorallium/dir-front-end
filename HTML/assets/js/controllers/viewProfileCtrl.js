@@ -251,12 +251,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.getUser(data[0].owner);
                         } else {
                             $state.go('home');
-                            $('#myModal').modal('show');
                         }
                     },
                     function (errResponse) {
                         console.log(errResponse);
-                        // throw toaster with message errResponse
                     }
                     );
             }

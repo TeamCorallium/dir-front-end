@@ -13,10 +13,18 @@
                     <h5 class="padding-0">@{{user.username}}</h5>
                 </div>
                 <div class="col-xs-12">
-                    <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
+                    <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
+                        {{user.info}}
                     </h5>
                     <h5 class="padding-0">
-                        <i class="ti-email"></i> {{user.email}}</h5>
+                        <i class="ti-email"></i> {{user.email}}
+                    </h5>
+                    <h5 class="padding-0">
+                        <i class="ti-world"></i> Score:
+                    </h5>
+                    <h5 class="padding-0">
+                        <i class="ti-stats-up"></i> Rating:
+                    </h5>
                 </div>
             </div>
         </div>
@@ -38,17 +46,31 @@
                 <div class="col-md-9">
                     <div class="row">
                         <div class="testimonial-container
-                        col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10">
+                        col-xs-12 col-sm-4 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-3 col-lg-offset-0 margin-top-10 padding-left-0 padding-right-0">
                             <img ng-src="{{user.avatar}}" class="img-circle image_middle hidden-xs" />
                             <div class="UserInfoBox hidden-xs">
                                 <h4 class="col-xs-12 padding-0 margin-top-10" ng-show="user.fullname != ''">
                                     <strong>{{user.fullname}}</strong>
                                 </h4>
                                 <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
-                                <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
+                                <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
+                                    {{user.info}}
                                 </h5>
                                 <h5 class="col-xs-12 padding-0">
-                                    <i class="ti-email"></i> {{user.email}}</h5>
+                                    <i class="ti-email"></i> {{user.email}}
+                                </h5>
+                                <h5 class="padding-0">
+                                    <i class="ti-world"></i> Score:
+                                </h5>
+                                <h5 class="padding-0">
+                                    <i class="ti-stats-up"></i> Rating:
+                                </h5>
+                                <a type="button" class="btn btn-o col-md-6">
+                                    <img ng-src="assets/images/voto2-06.png" class="image-hand">
+                                </a>
+                                <a type="button" class="btn btn-o col-md-6">
+                                    <img ng-src="assets/images/voto2-05.png" class="image-hand">
+                                </a>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">

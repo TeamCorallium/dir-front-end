@@ -222,7 +222,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $rootScope.$on('deleteSnippet', function (event, data) {
             $scope.user.snippets = [];
-            getSnippets($cookies.get('username'));
+            getSnippets($cookies.get('username'), 1);
 
             growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
         });

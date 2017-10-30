@@ -1401,3 +1401,8 @@ a.ButtonImageSize {
 .margin-top-12 {
     margin-top: 12px !important;
 }
+
+.image-hand{
+    width: 20px !important;
+    height: 20px !important;
+}
