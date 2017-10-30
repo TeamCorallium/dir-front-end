@@ -2,58 +2,33 @@
 
 app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParamSerializer', '$state', function ($rootScope, $http, $q, $cookies, $httpParamSerializer, $state) {
 
-    // var tshirt = 'http://10.58.20.225/tshirts/';
-    // var users = 'http://10.58.20.225/users/';
-    // var profiles = 'http://10.58.20.225/profiles/';
-    // var login = 'http://10.58.20.225/api-auth/login/';
-    // var loginNext = 'http://10.58.20.225/api-auth/login/?next=/';
-    // var register = 'http://10.58.20.225/api-auth/register/';
-    // var snippets = 'http://10.58.20.225/snippets/';
-    // var socialnetwork = 'http://10.58.20.225/socialnetworks/';
-    // var imageDir = 'http://10.58.20.225:8080/images/';
-    // var imageDownload = 'http://10.58.20.225/api/qrcode';
-    // var updateWithOutImage = 'http://10.58.20.225/api/updateprofile';
-    // var messages = 'http://10.58.20.225/messages/';
+    // var tshirt = 'http://www.dir.com:8888/api/tshirts/';
+    // var users = 'http://www.dir.com:8888/api/users/';
+    // var profiles = 'http://www.dir.com:8888/api/profiles/';
+    // var login = 'http://www.dir.com:8888/api/api-auth/login/';
+    // var loginNext = 'http://www.dir.com:8888/api/api-auth/login/?next=/';
+    // var register = 'http://www.dir.com:8888/api/api-auth/register/';
+    // var snippets = 'http://www.dir.com:8888/api/snippets/';
+    // var socialnetwork = 'http://www.dir.com:8888/api/socialnetworks/';
+    // var imageDir = 'http://www.dir.com/images/';
+    // var imageDownload = 'http://www.dir.com:8888/api/qrcode';
+    // var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
+    // var messages = 'http://www.dir.com:8888/api/messages/';
+    // var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
 
-    var tshirt = 'http://www.dir.com:8888/api/tshirts/';
-    var users = 'http://www.dir.com:8888/api/users/';
-    var profiles = 'http://www.dir.com:8888/api/profiles/';
-    var login = 'http://www.dir.com:8888/api/api-auth/login/';
-    var loginNext = 'http://www.dir.com:8888/api/api-auth/login/?next=/';
-    var register = 'http://www.dir.com:8888/api/api-auth/register/';
-    var snippets = 'http://www.dir.com:8888/api/snippets/';
-    var socialnetwork = 'http://www.dir.com:8888/api/socialnetworks/';
-    var imageDir = 'http://www.dir.com/images/';
-    var imageDownload = 'http://www.dir.com:8888/api/qrcode';
-    var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
-    var messages = 'http://www.dir.com:8888/api/messages/';
-    var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
-
-    // var tshirt = 'http://tony850421.webfactional.com/tshirts/';
-    // var users = 'http://tony850421.webfactional.com/users/';
-    // var profiles = 'http://tony850421.webfactional.com/profiles/';
-    // var login = 'http://tony850421.webfactional.com/api-auth/login/';
-    // var loginNext = 'http://tony850421.webfactional.com/api-auth/login/?next=/';
-    // var register = 'http://tony850421.webfactional.com/api-auth/register/';
-    // var snippets = 'http://tony850421.webfactional.com/snippets/';
-    // var socialnetwork = 'http://tony850421.webfactional.com/socialnetworks/';
-    // var imageDir = 'http://tony850421.webfactional.com/dir/images/';
-    // var imageDownload = 'http://tony850421.webfactional.com/api/qrcode';
-    // var updateWithOutImage = 'http://tony850421.webfactional.com/api/updateprofile';
-    // var messages = 'http://tony850421.webfactional.com/messages/';
-
-    // var tshirt = 'http://www.dircoolstuff.com/tshirts/';
-    // var users = 'http://www.dircoolstuff.com/users/';
-    // var profiles = 'http://www.dircoolstuff.com/profiles/';
-    // var login = 'http://www.dircoolstuff.com/api-auth/login/';
-    // var loginNext = 'http://www.dircoolstuff.com/api-auth/login/?next=/';
-    // var register = 'http://www.dircoolstuff.com/api-auth/register/';
-    // var snippets = 'http://www.dircoolstuff.com/snippets/';
-    // var socialnetwork = 'http://www.dircoolstuff.com/socialnetworks/';
-    // var imageDir = 'http://www.dircoolstuff.com/dir/images/';
-    // var imageDownload = 'http://www.dircoolstuff.com/api/qrcode';
-    // var updateWithOutImage = 'http://www.dircoolstuff.com/api/updateprofile';
-    // var messages = 'http://www.dircoolstuff.com/messages/';
+    var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
+    var users = 'http://www.dircoolstuff.com/api/users/';
+    var profiles = 'http://www.dircoolstuff.com/api/profiles/';
+    var login = 'http://www.dircoolstuff.com/api/api-auth/login/';
+    var loginNext = 'http://www.dircoolstuff.com/api/api-auth/login/?next=/';
+    var register = 'http://www.dircoolstuff.com/api/api-auth/register/';
+    var snippets = 'http://www.dircoolstuff.com/api/snippets/';
+    var socialnetwork = 'http://www.dircoolstuff.com/api/socialnetworks/';
+    var imageDir = 'http://www.dircoolstuff.com/dir/images/';
+    var imageDownload = 'http://www.dircoolstuff.com/api/qrcode';
+    var updateWithOutImage = 'http://www.dircoolstuff.com/api/updateprofile';
+    var messages = 'http://www.dircoolstuff.com/api/messages/';
+    var updatePassword = 'http://www.dircoolstuff.com/api/api-auth/update/';
 
     return {
         loginNext: loginNext,
