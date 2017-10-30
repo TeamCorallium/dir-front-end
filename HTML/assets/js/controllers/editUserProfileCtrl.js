@@ -303,17 +303,17 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (psw === psw2) {
                 RestService.changePassword($scope.user.username, psw);
             } else {
-                growl.error("Password not match.", { title: 'Change Password' });
+                growl.error("Password not match.", { title: 'Password Change' });
             }
         };
 
         $rootScope.$on('changepassword', function (event, data) {
             $('#modalChangePassword').modal('hide');
-            growl.success("Password changed correctly.", { title: 'Delete Social Network' });
+            growl.success("Password changed correctly.", { title: 'Password Change' });
         });
 
         $rootScope.$on('changepasswordError', function (event, data) {
-            growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Change Password' });
+            growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Password Change' });
         });
 
     }]);
