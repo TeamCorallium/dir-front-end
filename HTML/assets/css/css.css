@@ -460,6 +460,10 @@
         float: left;
         width: 92% !important;
     }
+
+    .HiddenIfXS {
+        display: none !important;
+    }
 }
 
 @media  (max-width: 480px) {
