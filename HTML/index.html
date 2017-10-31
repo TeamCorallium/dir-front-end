@@ -75,6 +75,29 @@
                             </li>
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                <a data-toggle="dropdown" class="dropdown-toggle">
+                                    <i class="ti-world"></i> Language
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                    <li>
+                                        <a>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Chinese
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Spanish
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
