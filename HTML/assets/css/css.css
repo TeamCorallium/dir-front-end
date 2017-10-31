@@ -60,7 +60,7 @@
         height: 130px !important;
         width: 130px !important;
         padding: 0px !important;
-        margin-left: 05% !important;
+        margin-left: 15% !important;
         margin-top: -60% !important;
     }
 
@@ -81,8 +81,8 @@
     }
 
     .button-image-left{
-        margin-top: -48% !important;
-        margin-left: 28% !important;
+        margin-top: -42% !important;
+        margin-left: 35% !important;
         position: absolute !important;
         border-radius: 100% !important;
         width: 35px !important;
@@ -856,6 +856,18 @@
         padding-top: 06px !important;
     }
 
+    .button-image-left{
+        margin-top: -42% !important;
+        margin-left: 37% !important;
+        position: absolute !important;
+        border-radius: 100% !important;
+        width: 35px !important;
+        height: 35px !important;
+        padding-left: 10px!important;
+        opacity: 0.5 !important;
+        padding-top: 07px !important;
+    }
+
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 20% !important;
@@ -868,7 +880,7 @@
     }
 
     .image_middle {
-        margin-left: 5% !important;
+        margin-left: 18% !important;
         float: left !important;
         height: 120px !important;
         width: 120px !important;
