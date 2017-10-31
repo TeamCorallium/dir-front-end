@@ -20,11 +20,18 @@
                         <i class="ti-email"></i> {{user.email}}
                     </h5>
                     <h5 class="padding-0">
-                        <i class="ti-world"></i> Score:
-                    </h5>
-                    <h5 class="padding-0">
                         <i class="ti-stats-up"></i> Rating:
                     </h5>
+                </div>
+                <div>
+                    <br />
+                    <a type="button" class="btn btn-o col-md-1">
+                        <img ng-src="assets/images/voto2-06.png" class="image-hand">
+                    </a>
+                    <a type="button" class="btn btn-o col-md-1">
+                        <img ng-src="assets/images/voto2-05.png" class="image-hand">
+                    </a>
+                    <br />
                 </div>
             </div>
         </div>
@@ -66,15 +73,11 @@
                                     <i class="ti-stats-up"></i> Rating:
                                 </h5>
                                 <div ng-show="viewInbox">
-                                    <a type="button" class="btn btn-o col-md-6">
-                                        <img ng-src="assets/images/voto2-06.png" class="image-hand">
+                                    <a type="button" class="btn btn-o col-md-1">
+                                        <img ng-src="assets/images/voto2-04.png" class="image-hand">
                                     </a>
-                                    <a type="button" class="btn btn-o col-md-6">
-                                        <img ng-src="assets/images/voto2-05.png" class="image-hand">
-                                    </a>
-                                    <a data-toggle="modal" data-target="#modalLeaveMessage" type="button" 
-                                    class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-email ButtonRadius col-md-12">
-                                        <span>Leave a message</span>
+                                    <a type="button" class="btn btn-o col-md-1" data-toggle="modal" data-target="#modalLeaveMessage">
+                                        <i class="ti-comments-smiley "></i>
                                     </a>
                                 </div>
                             </div>
