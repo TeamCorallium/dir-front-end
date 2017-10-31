@@ -23,15 +23,15 @@
                         <i class="ti-stats-up"></i> Rating:
                     </h5>
                 </div>
-                <div>
-                    <br />
+                <div ng-show="viewInbox">
+                    <br>
                     <a type="button" class="btn btn-o col-md-1">
-                        <img ng-src="assets/images/voto2-06.png" class="image-hand">
+                        <i class="ti-star"></i>
                     </a>
-                    <a type="button" class="btn btn-o col-md-1">
-                        <img ng-src="assets/images/voto2-05.png" class="image-hand">
+                    <a type="button" class="btn btn-o col-md-1" data-toggle="modal" data-target="#modalLeaveMessage">
+                        <i class="ti-comments-smiley "></i>
                     </a>
-                    <br />
+                    <br>
                 </div>
             </div>
         </div>
@@ -73,12 +73,14 @@
                                     <i class="ti-stats-up"></i> Rating:
                                 </h5>
                                 <div ng-show="viewInbox">
+                                    <br>
                                     <a type="button" class="btn btn-o col-md-1">
-                                        <img ng-src="assets/images/voto2-04.png" class="image-hand">
+                                        <i class="ti-star"></i>
                                     </a>
                                     <a type="button" class="btn btn-o col-md-1" data-toggle="modal" data-target="#modalLeaveMessage">
                                         <i class="ti-comments-smiley "></i>
                                     </a>
+                                    <br>
                                 </div>
                             </div>
                         </div>
