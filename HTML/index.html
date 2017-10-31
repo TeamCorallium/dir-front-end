@@ -71,16 +71,38 @@
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
+                                    <i class="ti-world"></i> Languaje</a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                    <li>
+                                        <a>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Chinese
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Spanish
+                                        </a>
+                                    </li>                                    
+                                </ul>
+                            </li>
+                            <li class="dropdown">
+                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="((userdata.connected) && (viewProfile))">
-                                        <a ui-sref="profile"> 
+                                        <a ui-sref="profile">
                                             <i class="ti-id-badge"></i> View Profile
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
-                                        <a ui-sref="edit-profile"> 
-                                            <i class="ti-pencil-alt"></i>  Edit Profile
+                                        <a ui-sref="edit-profile">
+                                            <i class="ti-pencil-alt"></i> Edit Profile
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewInbox))">
@@ -94,12 +116,12 @@
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalRegisterHome"> 
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
                                             <i class="ti-write"></i> Register
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
-                                        <a ng-click="logout()"> 
+                                        <a ng-click="logout()">
                                             <i class="ti-shift-left"></i> Log Out
                                         </a>
                                     </li>
@@ -107,7 +129,7 @@
                             </li>
                             <li>
                                 <a>
-                                    <i class="ti-shopping-cart"></i> Buy 
+                                    <i class="ti-shopping-cart"></i> Buy
                                 </a>
                             </li>
                         </ul>
@@ -222,11 +244,12 @@
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
                                     <span class="msg-error"> This username is already used.</span>
-                                </div>                                
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
-                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
+                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-user"></i> Register
                             </a>
                         </div>
@@ -293,11 +316,12 @@
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
                                     <span class="msg-error"> This username is already used</span>
-                                </div>                                
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
-                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
+                                ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-user"></i> Register
                             </a>
                         </div>
@@ -336,7 +360,7 @@
                                     <span class="msg-error">
                                         Invalid login credentials.
                                     </span>
-                                </div>                                
+                                </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
@@ -348,7 +372,7 @@
                 </div>
             </div>
             <!-- end: MODAL LOGIN HOME-->
-            
+
             <a id="scroll-top" href="#">
                 <i class="fa fa-angle-up"></i>
             </a>
