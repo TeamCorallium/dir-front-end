@@ -194,6 +194,8 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                 $scope.user.avatar = '';
             }
 
+            console.log($scope.user.email + " email");
+
             if ($scope.user.avatar instanceof File) {
                 RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email);
             } else {

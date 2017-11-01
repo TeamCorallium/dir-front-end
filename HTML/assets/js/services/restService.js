@@ -222,8 +222,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 'email': email,
-                    'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 
+                    'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
                 $state.go('profile');
@@ -260,8 +260,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'id': id, 'info': info, 'rating': rating, 'score': score,'email': email,
-                    'fullname': fullname, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                    'id': id, 'info': info, 'rating': rating, 'score': score,
+                    'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
                 $state.go('profile');
