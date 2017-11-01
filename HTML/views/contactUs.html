@@ -11,45 +11,78 @@
                     </div>
                     <h2>Contact Us</h2>
                     <form novalidate="novalidate" id="contactForm">
-                        <div class="row">
-                            <div class="form-group">
-                                <div class="col-md-6">
-                                    <label> Your email address
-                                        <span class="symbol required"></span>
-                                    </label>
-                                    <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address."
-                                        maxlength="100" class="form-control" name="email" id="email" ng-model="message.email">
+                        <form name="contactUsForm" role="form">
+                            <div class="row">
+                                <!-- <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label> Your email address
+                                            <span class="symbol required"></span>
+                                        </label>
+                                        <input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address."
+                                            maxlength="100" class="form-control" name="email" id="email" ng-model="message.email">
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <div class="col-md-6">
+                                        <label for="emailHome"> Your email address
+                                            <span class="symbol required"></span>
+                                        </label>
+                                        <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                        <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                        <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''"
+                                            id="emailHome" name="emailHome" placeholder="Enter Email Address" ng-required="true" ng-model="message.email">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group">
+                            <div class="row">
+                                <!-- <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label> Subject </label>
+                                        <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject"
+                                            id="subject" ng-model="message.subject">
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <div class="colmd-12">
+                                        <label for="usernameHome"> Username
+                                                <span class="symbol required"></span>
+                                        </label>
+                                        <div class="error form-hint" ng-show="contactUsForm.usernameHome.$dirty && contactUsForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                        <input type="text" class="form-control" ng-class="(contactUsForm.usernameHome.$dirty && contactUsForm.usernameHome.$invalid) ? 'error' : ''"
+                                            id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true" ng-model="message.subject">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <!-- <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label> Message
+                                            <span class="symbol required"></span>
+                                        </label>
+                                        <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"
+                                            ng-model="message.body"></textarea>
+                                    </div>
+                                </div> -->
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        <label for="body"> Message
+                                            <span class="symbol required"></span>
+                                        </label>
+                                        <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                        <textarea class="form-control" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
+                                            name="body" placeholder="Enter snippet body" ng-required="true" ng-model="$message.body"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div class="col-md-12">
-                                    <label> Subject </label>
-                                    <input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="subject"
-                                        id="subject" ng-model="message.subject">
+                                    <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn"
+                                        type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid || viewProfile">
+                                        <span>Send Message</span>
+                                    </a>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="form-group">
-                                <div class="col-md-12">
-                                    <label> Message
-                                        <span class="symbol required"></span>
-                                    </label>
-                                    <textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="message" id="message"
-                                        ng-model="message.body"></textarea>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12">
-                                <button data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn"
-                                    type="button" ng-click="sendMessage()">
-                                    <span>Send Message</span>
-                                </button>
-                            </div>
-                        </div>
+                        </form>
                     </form>
                 </div>
                 <div class="col-md-6 marginTopMovil">
