@@ -75,32 +75,32 @@
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="((userdata.connected) && (viewProfile))">
                                         <a ui-sref="profile">
-                                            <i class="ti-id-badge"></i> View Profile
+                                            <i class="ti-id-badge"></i> &emsp;View Profile
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
                                         <a ui-sref="edit-profile">
-                                            <i class="ti-pencil-alt"></i>   Edit Profile
+                                            <i class="ti-pencil-alt"></i> &emsp;Edit Profile
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewInbox))">
                                         <a ng-show="userdata.connected" ui-sref="inbox">
-                                            <i class="ti-import"></i>   Inbox
+                                            <i class="ti-import"></i> &emsp;Inbox
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalLoginHome">
-                                            <i class="ti-shift-right"></i>  Log In
+                                            <i class="ti-shift-right"></i> &emsp;Log In
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalRegisterHome">
-                                            <i class="ti-write"></i>    Register
+                                            <i class="ti-write"></i> &emsp;Register
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
                                         <a ng-click="logout()">
-                                            <i class="ti-shift-left"></i>   Log Out
+                                            <i class="ti-shift-left"></i> &emsp;Log Out
                                         </a>
                                     </li>
                                 </ul>

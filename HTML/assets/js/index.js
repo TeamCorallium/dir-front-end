@@ -8,6 +8,7 @@ var Index = function() {
 		tablet : 768,
 		mobile : 480
 	};
+	
 	var captionDelay;
 
 	// function to handle swipe slider
