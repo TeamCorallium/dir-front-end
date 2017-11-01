@@ -76,37 +76,37 @@
                                     <li ng-show="((userdata.connected) && (viewProfile))">
                                         <a ui-sref="profile">
                                             <i class="ti-id-badge padding-right-10"></i>
-                                            <label translate="index.VIEW_PROFILE"></label>
+                                            <label class="margin-bottom-0" translate="index.VIEW_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
                                         <a ui-sref="edit-profile">
                                             <i class="ti-pencil-alt padding-right-10"></i>
-                                            <label translate="index.EDIT_PROFILE"></label>
+                                            <label class="margin-bottom-0" translate="index.EDIT_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewInbox))">
                                         <a ng-show="userdata.connected" ui-sref="inbox">
                                             <i class="ti-import padding-right-10"></i>
-                                            <label translate="index.INBOX"></label>
+                                            <label class="margin-bottom-0" translate="index.INBOX"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalLoginHome">
                                             <i class="ti-shift-right padding-right-10"></i>
-                                            <label translate="index.LOG_IN"></label>
+                                            <label class="margin-bottom-0" translate="index.LOG_IN"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalRegisterHome">
                                             <i class="ti-write padding-right-10"></i>
-                                            <label translate="index.REGISTER"></label>
+                                            <label class="margin-bottom-0" translate="index.REGISTER"></label>
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
                                         <a ng-click="logout()">
                                             <i class="ti-shift-left padding-right-10"></i>
-                                            <label translate="index.LOG_OUT"></label>
+                                            <label class="margin-bottom-0" translate="index.LOG_OUT"></label>
                                         </a>
                                     </li>
                                 </ul>
@@ -254,7 +254,7 @@
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
                                 ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-user"></i>
-                                <label translate="index.REGISTER" class="textColorWhite"></label>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0"></label>
                             </a>
                         </div>
                     </div>
@@ -325,7 +325,7 @@
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
                                 ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-user"></i>
-                                <label translate="index.REGISTER" class="textColorWhite"></label>
+                                <label translate="index.REGISTER" class="textColorWhite margin-bottom-0"></label>
                             </a>
                         </div>
                     </div>
@@ -369,7 +369,7 @@
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
                                 <i class="ti-user"></i>
-                                <label translate="index.LOG_IN" class="textColorWhite"></label>
+                                <label translate="index.LOG_IN" class="textColorWhite margin-bottom-0"></label>
                             </a>
                         </div>
                     </div>
