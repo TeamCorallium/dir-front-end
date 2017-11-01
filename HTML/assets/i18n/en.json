@@ -24,5 +24,26 @@
     "ABOUT_US": "About US",
     "FAQ": "FAQ's",
     "CONTACT_US": "Contact"
+  },
+  "user_profile": {
+    "RATING": "Rating:",
+    "GENERATE_QR": "Generate QR Code",
+    "SAVE_QR": "Save QR Code",
+    "PREVIUS": "« Previous",
+    "NEXT": "Next »",
+    "ADD_SNIPPETS" : "Add Snippet",
+    "ADD_SOCIAL": "Add Social Network",
+    "POPULAR_USER": "Popular Users",
+    "SEE_MORE": "See more",
+    "SNIPPET_TITLE": "Snippet title",
+    "SNIPPET_BODY": "Snippet body",
+    "CLOSE": "Close",
+    "ADD": "Add",
+    "SOCIAL_NETWORK" : "Social Networks",
+    "SELECT_SOCIAL": "Select a social network",
+    "CONTINUE_AS_OTHER": "Continue as other",
+    "LOG_IN_FACEBOOK": "Login with Facebook",
+    "TYPE_URL": "Type Facebook URL manually:",
+    "SOCIAL_URL": "Social network url"
   }
 }
