@@ -74,8 +74,8 @@
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="((userdata.connected) && (viewProfile))">
-                                        <a ui-sref="profile">
-                                            <i class="ti-id-badge padding-right-10" translate="index.VIEW_PROFILE"></i>
+                                        <a ui-sref="profile" translate="index.VIEW_PROFILE">
+                                            <i class="ti-id-badge padding-right-10"></i>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
@@ -129,7 +129,7 @@
                                 </ul>
                             </li>
                             <li>
-                                <a>
+                                <a translate="index.BUY">
                                     <i class="ti-shopping-cart"></i> Buy
                                 </a>
                             </li>

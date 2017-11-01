@@ -1,5 +1,6 @@
 {
-  "dashboard": {
-    "VIEW_PROFILE": "查看設定檔"
+  "index": {
+    "VIEW_PROFILE": "查看設定檔",
+    "BUY": "買"
   }
 }
