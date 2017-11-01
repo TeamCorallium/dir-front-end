@@ -1,6 +1,28 @@
 {
   "index": {
+    "TOGGLE": "切換導航",
     "VIEW_PROFILE": "查看設定檔",
-    "BUY": "買"
+    "EDIT_PROFILE": "編輯設定檔",
+    "INBOX": "箱",
+    "LOG_IN": "登錄",
+    "REGISTER": "註冊",
+    "LOG_OUT": "登出",
+    "BUY": "買",
+    "LANGUAGE": "語言",
+    "ENGLISH": "英語",
+    "CHINESE": "中文",
+    "SPANISH": "西班牙文",
+    "EMAIL": "電子郵件",
+    "USERNAME": "使用者",
+    "PASSWORD": "密碼",
+    "TEXT_PASSWORD": "要符合我們的強密碼原則, 您需要使用足夠強的密碼。密碼必須超過7個字元.",
+    "PASSWORD_AGAIN": "密碼:",
+    "PASSWORD_MATCH": "密碼不匹配.",
+    "PIN": "針:",
+    "USER_USED": "此使用者名已使用.",
+    "INVALID_CREDENTIALS": "不正確登錄憑據.",
+    "ABOUT_US": "關於我們",
+    "FAQ": "常見問題",
+    "CONTACT_US": "聯繫"
   }
 }

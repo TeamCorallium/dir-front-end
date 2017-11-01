@@ -1,6 +1,28 @@
 {
   "index": {
+    "TOGGLE": "Toggle navigation",
     "VIEW_PROFILE": "View Profile",
-    "BUY": "BUY"
+    "EDIT_PROFILE": "Edit Profile",
+    "INBOX": "Inbox",
+    "LOG_IN": "Log In",
+    "REGISTER": "Register",
+    "LOG_OUT": "Log Out",
+    "BUY": "BUY",
+    "LANGUAGE": "Language",
+    "ENGLISH": "English",
+    "CHINESE": "Chinese",
+    "SPANISH": "Spanish",
+    "EMAIL": "Email",
+    "USERNAME": "Username",
+    "PASSWORD": "Password",
+    "TEXT_PASSWORD": "To conform with our Strong Password policy, you are required to use a sufficiently strong password. Password must be more than 7 characters.",
+    "PASSWORD_AGAIN": "Password again:",
+    "PASSWORD_MATCH": "Passwords don't match.",
+    "PIN": "PIN:",
+    "USER_USED": "This username is already used.",
+    "INVALID_CREDENTIALS": "Invalid login credentials.",
+    "ABOUT_US": "About US",
+    "FAQ": "FAQ's",
+    "CONTACT_US": "Contact"
   }
 }

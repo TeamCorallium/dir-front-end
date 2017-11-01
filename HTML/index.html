@@ -55,7 +55,7 @@
                     <div class="navbar-header">
                         <!-- start: RESPONSIVE MENU TOGGLER -->
                         <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                            <span class="sr-only">Toggle navigation</span>
+                            <span class="sr-only" translate="index.TOGGLE"></span>
                             <i class="ti-align-justify"></i>
                         </a>
                         <!-- end: RESPONSIVE MENU TOGGLER -->
@@ -79,52 +79,46 @@
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
-                                        <a ui-sref="edit-profile">
-                                            <i class="ti-pencil-alt padding-right-10"></i> Edit Profile
+                                        <a ui-sref="edit-profile" translate="index.EDIT_PROFILE">
+                                            <i class="ti-pencil-alt padding-right-10"></i>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewInbox))">
-                                        <a ng-show="userdata.connected" ui-sref="inbox">
-                                            <i class="ti-import padding-right-10"></i> Inbox
+                                        <a ng-show="userdata.connected" ui-sref="inbox" translate="index.INBOX">
+                                            <i class="ti-import padding-right-10"></i>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalLoginHome">
-                                            <i class="ti-shift-right padding-right-10"></i> Log In
+                                        <a data-toggle="modal" data-target="#myModalLoginHome" translate="index.LOG_IN">
+                                            <i class="ti-shift-right padding-right-10"></i>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
-                                            <i class="ti-write padding-right-10"></i> Register
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome" translate="index.REGISTER">
+                                            <i class="ti-write padding-right-10"></i>
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
-                                        <a ng-click="logout()">
-                                            <i class="ti-shift-left padding-right-10"></i> Log Out
+                                        <a ng-click="logout()" translate="index.LOG_OUT">
+                                            <i class="ti-shift-left padding-right-10"></i>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                                <a data-toggle="dropdown" class="dropdown-toggle">
-                                    <i class="ti-world"></i> Language
+                                <a data-toggle="dropdown" class="dropdown-toggle" translate="index.LANGUAGE">
+                                    <i class="ti-world"></i>
                                 </a>
                                 <ul class="dropdown-menu" ng-controller="LanguageCtrl">
                                     <li ng-click="language.set('en', $event)">
-                                        <a>
-                                            English
-                                        </a>
+                                        <a translate="index.ENGLISH"></a>
                                     </li>
                                     <li ng-click="language.set('cn_CN', $event)">
-                                        <a>
-                                            Chinese
-                                        </a>
+                                        <a translate="index.CHINESE"></a>
                                     </li>
                                     <li ng-click="language.set('es_ES', $event)">
-                                        <a>
-                                            Spanish
-                                        </a>
+                                        <a translate="index.SPANISH"></a>
                                     </li>
                                 </ul>
                             </li>
@@ -138,19 +132,19 @@
                         <div class="social-icons hidden-xs">
                             <ul class="nav navbar-nav navbar-right padding-top-3">
                                 <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
-                                    <a href="http://www.twitter.com" target="_blank"> Twitter </a>
+                                    <a href="http://www.twitter.com" target="_blank"></a>
                                 </li>
                                 <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
-                                    <a href="http://dribbble.com" target="_blank"> Dribbble </a>
+                                    <a href="http://dribbble.com" target="_blank"></a>
                                 </li>
                                 <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
-                                    <a href="http://facebook.com" target="_blank"> Facebook </a>
+                                    <a href="http://facebook.com" target="_blank"></a>
                                 </li>
                                 <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
-                                    <a href="http://google.com" target="_blank"> Google+ </a>
+                                    <a href="http://google.com" target="_blank"></a>
                                 </li>
                                 <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                    <a href="http://linkedin.com" target="_blank"> LinkedIn </a>
+                                    <a href="http://linkedin.com" target="_blank"></a>
                                 </li>
                                 <li class="padding-top-10 padding-left-15 padding-right-15">
                                     <h4 class="cursordefault">|</h4>
@@ -191,8 +185,8 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title">
-                                    <i class="ti-user"></i> Register
+                                <h4 class="modal-title" translate="index.REGISTER">
+                                    <i class="ti-user"></i>
                                 </h4>
                             </div>
                         </div>
@@ -205,7 +199,7 @@
                                         id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
                                 </div> -->
                                 <div class="form-group">
-                                    <label for="emailHome">Email</label>
+                                    <label for="emailHome" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
                                     <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''"
@@ -213,15 +207,14 @@
                                         ng-model="emailHome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="username">Username</label>
+                                    <label for="username" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''"
                                         id="username" name="username" placeholder="Enter your username" ng-required="true" ng-model="username">
                                 </div>
                                 <div class="form-group">
-                                    <label for="password">Password</label>
-                                    <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong
-                                        password. Password must be more than 7 characters.</div>
+                                    <label for="password" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
                                     <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''"
                                         id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
@@ -230,28 +223,28 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="againPassHome">Password again:</label>
+                                    <label for="againPassHome" translate="index.PASWWORD_AGAIN"></label>
                                     <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome"
                                         pw-check="password">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
-                                    <span class="msg-error"> Passwords don't match.</span>
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pin">PIN:</label>
+                                    <label for="pin" translate="index.PIN"></label>
                                     <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''"
                                         placeholder="Enter your PIN" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
                                         required>
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
-                                    <span class="msg-error"> This username is already used.</span>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
-                                <i class="ti-user"></i> Register
+                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)" translate="index.REGISTER">
+                                <i class="ti-user"></i>
                             </a>
                         </div>
                     </div>
@@ -268,8 +261,8 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title">
-                                    <i class="ti-user"></i> Register
+                                <h4 class="modal-title" translate="index.REGISTER">
+                                    <i class="ti-user"></i>
                                 </h4>
                             </div>
                         </div>
@@ -282,22 +275,21 @@
                                         id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
                                 </div> -->
                                 <div class="form-group">
-                                    <label for="email">Email</label>
+                                    <label for="email" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak>{{"Email is invalid."}}</div>
                                     <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''"
                                         id="email" name="email" placeholder="Enter Email Address" ng-required="true" ng-model="email">
                                 </div>
                                 <div class="form-group">
-                                    <label for="user">Username</label>
+                                    <label for="user" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''"
                                         id="user" name="user" placeholder="Enter your user" ng-required="true" ng-model="user">
                                 </div>
                                 <div class="form-group">
-                                    <label for="pass">Password</label>
-                                    <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong
-                                        password. Password must be more than 7 characters.</div>
+                                    <label for="pass" translate="index.PASSWORD"></label>
+                                    <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
                                     <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''"
                                         id="pass" name="pass" placeholder="Enter Password" ng-required="true" ng-model="pass">
                                     <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
@@ -306,24 +298,22 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label for="pass_verify">Password again:</label>
+                                    <label for="pass_verify" translate="index.PASWWORD_AGAIN"></label>
                                     <input type="password" class="form-control" id="pass_verify" placeholder="New password" name="pass_verify" ng-model="pass_verify"
                                         pw-check="pass">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
-                                    <span class="msg-error">
-                                        Passwords don't match.
-                                    </span>
+                                    <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
-                                    <span class="msg-error"> This username is already used</span>
+                                    <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModalHome(email, user, pass, pass_verify)">
-                                <i class="ti-user"></i> Register
+                                ng-click="registerModalHome(email, user, pass, pass_verify)" translate="index.REGISTER">
+                                <i class="ti-user"></i>
                             </a>
                         </div>
                     </div>
@@ -340,33 +330,31 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title">
-                                    <i class="ti-user"></i> Login</h4>
+                                <h4 class="modal-title" translate="index.LOG_IN">
+                                    <i class="ti-user"></i></h4>
                             </div>
                         </div>
                         <div class="modal-body">
                             <form name="LogingForm" role="form">
                                 <div class="form-group">
-                                    <label for="usernameHome">Username</label>
+                                    <label for="usernameHome" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''"
                                         id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true"
                                         ng-model="usernameHome">
                                 </div>
                                 <div class="form-group">
-                                    <label for="pwdHome">Password:</label>
+                                    <label for="pwdHome" translate="index.PASSWORD"></label>
                                     <input ng-model="pwdHome" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwdHome">
                                 </div>
                                 <div class="msg-block" id="errorBoxHome" hidden>
-                                    <span class="msg-error">
-                                        Invalid login credentials.
-                                    </span>
+                                    <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
                                 </div>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
-                                <i class="ti-user"></i> Login
+                                <i class="ti-user" translate="index.LOG_IN"></i>
                             </a>
                         </div>
                     </div>
@@ -392,13 +380,13 @@
                                 <nav id="sub-menu">
                                     <ul>
                                         <li>
-                                            <a> About US </a>
+                                            <a translate="index.ABOUT_US"></a>
                                         </li>
                                         <li>
-                                            <a ui-sref='faq'> FAQ's </a>
+                                            <a ui-sref='faq' translate="index.FAQ"></a>
                                         </li>
                                         <li>
-                                            <a ui-sref='contact'> Contact </a>
+                                            <a ui-sref='contact' translate="index.CONTACT_US"></a>
                                         </li>
                                     </ul>
                                 </nav>
