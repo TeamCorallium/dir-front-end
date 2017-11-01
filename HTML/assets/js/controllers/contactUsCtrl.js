@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
-    function ($scope, $state, $rootScope, RestService, $cookies) {
+app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl"
+    function ($scope, $state, $rootScope, RestService, $cookies, growl) {
 
         if($cookies.get('sessionid')) {
             $rootScope.viewInbox = true;
@@ -74,5 +74,5 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
-        
+
     }]);
