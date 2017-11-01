@@ -464,6 +464,10 @@
     .HiddenIfXS {
         display: none !important;
     }
+
+    .paddingLeft15XS {
+        padding-left: 15px !important;
+    }
 }
 
 @media  (max-width: 480px) {
