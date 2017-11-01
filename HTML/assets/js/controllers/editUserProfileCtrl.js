@@ -195,9 +195,9 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             }
 
             if ($scope.user.avatar instanceof File) {
-                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname);
+                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email);
             } else {
-                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname)
+                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
             }
         };
 
