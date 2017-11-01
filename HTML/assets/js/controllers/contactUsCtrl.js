@@ -3,7 +3,7 @@
  */
 'use strict';
 
-app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl"
+app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
     function ($scope, $state, $rootScope, RestService, $cookies, growl) {
 
         if($cookies.get('sessionid')) {
