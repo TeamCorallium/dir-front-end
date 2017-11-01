@@ -67,35 +67,7 @@
                     </div>
                     <!-- start: NAVBAR -->
                     <div class="navbar-collapse collapse margin-left-0">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li>
-                                <a>
-                                    <i class="ti-shopping-cart"></i> Buy
-                                </a>
-                            </li>
-                            <li class="dropdown">
-                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                                <a data-toggle="dropdown" class="dropdown-toggle">
-                                    <i class="ti-world"></i> Language
-                                </a>
-                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
-                                    <li>
-                                        <a>
-                                            English
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            Chinese
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a>
-                                            Spanish
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
+                        <ul class="nav navbar-nav navbar-right">  
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
@@ -129,6 +101,34 @@
                                     <li ng-show="userdata.connected">
                                         <a ng-click="logout()">
                                             <i class="ti-shift-left"></i> Log Out
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a>
+                                    <i class="ti-shopping-cart"></i> Buy
+                                </a>
+                            </li>
+                            <li class="dropdown">
+                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                <a data-toggle="dropdown" class="dropdown-toggle">
+                                    <i class="ti-world"></i> Language
+                                </a>
+                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                    <li>
+                                        <a>
+                                            English
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Chinese
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a>
+                                            Spanish
                                         </a>
                                     </li>
                                 </ul>
