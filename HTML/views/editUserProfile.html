@@ -116,8 +116,8 @@
                             <span>Change Password</span>
                         </a>
                     </div>
-                    <div ng-controller="FormController">
-                        <a type="button" ng-disabled="editUserMD.$invalid || editUserXS.$invalid" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                    <div>
+                        <a ng-controller="FormController" type="button" ng-disabled="editUserMD.$invalid || editUserXS.$invalid" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
                             ng-click="saveProfile()">
                             <span>Save Profile</span>
                         </a>
