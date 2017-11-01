@@ -4,7 +4,7 @@
 'use strict';
 
 app.controller('LanguageCtrl', ["$scope", "$state", "$translate", "$rootScope",
-    function ($scope, $state, $rootScope, $translate, $rootScope) {
+    function ($scope, $state, $translate, $rootScope) {
 
         // angular translate
         // ----------------------

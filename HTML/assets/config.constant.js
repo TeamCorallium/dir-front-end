@@ -10,7 +10,7 @@ app.constant('APP_MEDIAQUERY', {
     'mobile': 480
 });
 app.constant('JS_REQUIRED', {
-    scripts: {        
+    scripts: {
         //Controllers
         'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
         'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js',
