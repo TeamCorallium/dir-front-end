@@ -164,6 +164,15 @@
         float: left;
         width: 87% !important;
     }
+
+    .paddingStyle{
+        margin-top: 10px !important;
+        padding-left: 25px !important; 
+    }
+
+    .marginTop25XS {
+        margin-top: 25px !important;
+    }
 }
 
 @media (min-width: 770px) {

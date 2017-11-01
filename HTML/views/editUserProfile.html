@@ -66,7 +66,8 @@
                                     <div class="form-group">
                                         <div class="col-md-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.required"
                                             ng-cloak>{{"This field is required."}}</div>
-                                        <div class="col-md-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                        <div class="col-md-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.email"
+                                            ng-cloak>{{"Email is invalid."}}</div>
                                         <input type="email" class="col-md-12 form-control margin-top-10" ng-class="(editUserMD.emailMD.$dirty && editUserMD.emailMD.$invalid) ? 'error' : ''"
                                             id="emailMD" name="emailMD" placeholder="Enter your email address" ng-required="true"
                                             ng-model="user.email">
@@ -109,18 +110,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS">
                     <div>
                         <a data-toggle="modal" data-target="#modalChangePassword" type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-key
                                                                         ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <span>Change Password</span>
                         </a>
                     </div>
-                    <div ng-controller="FormController">
-                        {{editUserMD.$invalid}}
-                        {{editUserXS.$invalid}}
-                        <a type="button" ng-disabled="editUserMD.$invalid || editUserXS.$invalid"
-                        class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                    <div>
+                        <a type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
                             ng-click="saveProfile()">
                             <span>Save Profile</span>
                         </a>
