@@ -117,13 +117,12 @@
                         </a>
                     </div>
                     <div ng-controller="FormController">
-                        <!-- <a  type="button" ng-disabled="editUserMD.$invalid || editUserXS.$invalid" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
+                        {{editUserMD.$invalid}}
+                        {{editUserXS.$invalid}}
+                        <a type="button" ng-disabled="editUserMD.$invalid || editUserXS.$invalid"
+                        class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
                             ng-click="saveProfile()">
                             <span>Save Profile</span>
-                        </a> -->
-                        <a class="btn btn-primary ButtonRadius" ng-disabled="editUserMD.$invalid"
-                            ng-click="saveProfile()">
-                            <i class="ti-save"></i> Save Profile
                         </a>
                     </div>
                     <div class="paddingViewProfile">
