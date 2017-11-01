@@ -167,7 +167,7 @@
 
     .paddingStyle{
         margin-top: 10px !important;
-        padding-left: 25px !important; 
+        padding-left: 40px !important; 
     }
 
     .marginTop25XS {
@@ -1442,4 +1442,8 @@ a.ButtonImageSize {
 
 .margin-top-21 {
     margin-top: 21px !important;
+}
+
+.btnRadius10{
+    border-radius: 10px !important;
 }
