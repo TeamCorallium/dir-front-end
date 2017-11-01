@@ -3,20 +3,32 @@
     <div class="row">
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
             <div class="col-xs-12">
-                <div class="AvatarXSBox">
-                    <input type="image" ng-src="{{user.avatar}}" class="img-circle avatarXS" ng-click="openModalImageCropper()">
-                </div>
-                <div class="UserInfoBox">
-                    <h5 class="padding-0 margin-top-10">@{{user.username}}</h5>
-                    <input type="text" placeholder="Enter you full name." class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">                    
-                </div>
-                <div class="col-xs-12">
-                    <textarea class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp"
-                        ng-model="user.info"></textarea>                    
-                    <h5 class="col-xs-12 padding-0 margin-top-10">
-                        <i class="ti-email"></i> {{user.email}}
-                    </h5>
-                </div>
+                <form name="editUserXS" role="form" ng-controller="FormController">
+                    <div class="AvatarXSBox">
+                        <input type="image" ng-src="{{user.avatar}}" class="img-circle avatarXS" ng-click="openModalImageCropper()">
+                    </div>
+                    <div class="UserInfoBox">
+                        <h5 class="padding-0 margin-top-10">@{{user.username}}</h5>
+                        <input type="text" placeholder="Enter you full name." class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">
+                    </div>
+                    <div class="col-xs-12">
+                        <textarea placeholder="Enter you personal info here" class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10"
+                            data-appears-class="fadeInUp" ng-model="user.info"></textarea>
+                        <!-- <h5 class="col-xs-12 padding-0 margin-top-10">
+                                                    <i class="ti-email"></i> {{user.email}}
+                                                </h5> -->
+                        <div class="form-group">
+                            <div class="error form-hint" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                            <div class="error form-hint" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                            <input type="email" class="form-control" ng-class="(editUserXS.emailHome.$dirty && editUserXS.emailHome.$invalid) ? 'error' : ''"
+                                id="emailHome" name="emailHome" placeholder="Enter your email address" ng-required="true" ng-model="user.email">
+                            <!-- <input type="text" placeholder="Enter you email." class="col-xs-12 padding-0 margin-top-10" ng-model="user.email"> -->
+                        </div>
+                        <h5 class="padding-0">
+                            <i class="ti-stats-up"></i> Rating:
+                        </h5>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="col-xs-12 marginTopMovil-10" ng-class="{HiddenIfXS: user.socialnetworks.length <= 0}">
@@ -48,19 +60,26 @@
                                 </div>
                             </form>
                             <div class="center-text">
-                                <h4 class="col-xs-12 padding-0 margin-top-10">@{{user.username}}</h4>
-                                <input type="text" placeholder="Enter you full name." class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">                                
-                                <textarea class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp"
-                                    ng-model="user.info"></textarea>
-                                <h5 class="col-xs-12 padding-0 margin-top-10">
+                                <form name="editUserMD" role="form" ng-controller="FormController">
+                                    <h4 class="col-xs-12 padding-0 margin-top-10">@{{user.username}}</h4>
+                                    <input type="text" placeholder="Enter you full name." class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">
+                                    <textarea class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp"
+                                        ng-model="user.info"></textarea>
+                                    <!-- <h5 class="col-xs-12 padding-0 margin-top-10">
                                     <i class="ti-email"></i> {{user.email}}
-                                </h5>
-                                <h5 class="padding-0">
-                                    <i class="ti-world"></i> Score:
-                                </h5>
-                                <h5 class="padding-0">
-                                    <i class="ti-stats-up"></i> Rating:
-                                </h5>                                
+                                </h5> -->
+                                    <div class="form-group">
+                                        <div class="error form-hint" ng-show="editUserMD.emailHome.$dirty && editUserMD.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                        <div class="error form-hint" ng-show="editUserMD.emailHome.$dirty && editUserMD.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                        <input type="email" class="form-control" ng-class="(editUserMD.emailHome.$dirty && editUserMD.emailHome.$invalid) ? 'error' : ''"
+                                            id="emailHome" name="emailHome" placeholder="Enter your email address" ng-required="true"
+                                            ng-model="user.email">
+                                        <!-- <input type="text" placeholder="Enter you email." class="col-xs-12 padding-0 margin-top-10" ng-model="user.email"> -->
+                                    </div>
+                                    <h5 class="padding-0">
+                                        <i class="ti-stats-up"></i> Rating:
+                                    </h5>
+                                </form>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">

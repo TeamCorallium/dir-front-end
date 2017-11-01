@@ -59,7 +59,6 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                         $scope.user.username = data[0].username;
                         $scope.user.firstname = data[0].first_name;
                         $scope.user.lastname = data[0].last_name;
-                        $scope.user.email = data[0].email;
                         $scope.name = $scope.user.firstname + " " + $scope.user.lastname;
 
                         if (data[0].profiles.length > 0) {
@@ -93,7 +92,8 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;
+                        $scope.user.id = data.id;                        
+                        $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
                         $scope.user.profileurl = data.url;

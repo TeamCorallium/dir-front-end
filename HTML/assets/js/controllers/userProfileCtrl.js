@@ -44,7 +44,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.username = data[0].username;
                         $scope.user.firstname = data[0].first_name;
                         $scope.user.lastname = data[0].last_name;
-                        $scope.user.email = data[0].email;
 
                         if (data[0].profiles.length > 0) {
                             getProfile(data[0].profiles[0]);
@@ -78,6 +77,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
                         $scope.user.id = data.id;
+                        $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
