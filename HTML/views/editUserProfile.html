@@ -20,9 +20,9 @@
                             <div class="col-xs-12 error form-hint margin-top-10" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email"
                                 ng-cloak>{{"Email is invalid."}}</div>
                             <input type="email" class="col-xs-12 form-control margin-top-10" ng-class="(editUserXS.emailHome.$dirty && editUserXS.emailHome.$invalid) ? 'error' : ''"
-                                id="emailHome" name="emailHome" placeholder="Enter your email address" ng-required="true" ng-model="user.email">                            
+                                id="emailHome" name="emailHome" placeholder="Enter your email address" ng-required="true" ng-model="user.email">
                         </div>
-                        <h5 class="padding-0 margin-top-10">
+                        <h5 class="col-xs-12 padding-0 margin-top-10">
                             <i class="ti-stats-up"></i> Rating:
                         </h5>
                     </div>
@@ -67,10 +67,11 @@
                                         <div class="col-md-12 error form-hint margin-top-10" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.required"
                                             ng-cloak>{{"This field is required."}}</div>
                                         <div class="error form-hint margin-top-10" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.email" ng-cloak>{{"Email is invalid."}}</div>
-                                        <input type="col-md-12 email" class="col-md-12 form-control margin-top-10" ng-class="(editUserMD.emailMD.$dirty && editUserMD.emailMD.$invalid) ? 'error' : ''"
-                                            id="emailMD" name="emailMD" placeholder="Enter your email address" ng-required="true" ng-model="user.email">                                        
+                                        <input type="email" class="col-md-12 form-control margin-top-10" ng-class="(editUserMD.emailMD.$dirty && editUserMD.emailMD.$invalid) ? 'error' : ''"
+                                            id="emailMD" name="emailMD" placeholder="Enter your email address" ng-required="true"
+                                            ng-model="user.email">
                                     </div>
-                                    <h5 class="padding-0 margin-top-10">
+                                    <h5 class="col-md-12 padding-0 margin-top-10">
                                         <i class="ti-stats-up"></i> Rating:
                                     </h5>
                                 </form>
