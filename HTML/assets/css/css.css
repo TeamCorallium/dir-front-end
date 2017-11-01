@@ -1447,3 +1447,7 @@ a.ButtonImageSize {
 .btnRadius10{
     border-radius: 10px !important;
 }
+
+.textColorWhite {
+    color: #FFFFFF !important;
+}
