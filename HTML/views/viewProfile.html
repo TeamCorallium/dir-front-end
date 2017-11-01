@@ -16,7 +16,7 @@
                     <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
                         {{user.info}}
                     </h5>
-                    <h5 class="padding-0">
+                    <h5 class="padding-0" ng-show="user.email != ''">
                         <i class="ti-email"></i> {{user.email}}
                     </h5>
                     <h5 class="padding-0">
@@ -66,7 +66,7 @@
                                 <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
                                     {{user.info}}
                                 </h5>
-                                <h5 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
+                                <h5 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-show="user.email != ''">
                                     <i class="ti-email"></i> {{user.email}}
                                 </h5>
                                 <h5 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
