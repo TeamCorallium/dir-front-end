@@ -55,8 +55,8 @@
                     <div class="navbar-header">
                         <!-- start: RESPONSIVE MENU TOGGLER -->
                         <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                            <span class="sr-only" translate="index.TOGGLE"></span>
                             <i class="ti-align-justify"></i>
+                            <span class="sr-only" translate="index.TOGGLE"></span>
                         </a>
                         <!-- end: RESPONSIVE MENU TOGGLER -->
                         <!-- start: LOGO -->
@@ -74,41 +74,48 @@
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="((userdata.connected) && (viewProfile))">
-                                        <a ui-sref="profile" translate="index.VIEW_PROFILE">
+                                        <a ui-sref="profile">
                                             <i class="ti-id-badge padding-right-10"></i>
+                                            <label translate="index.VIEW_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewProfile == false))">
-                                        <a ui-sref="edit-profile" translate="index.EDIT_PROFILE">
+                                        <a ui-sref="edit-profile">
                                             <i class="ti-pencil-alt padding-right-10"></i>
+                                            <label translate="index.EDIT_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="((userdata.connected) && (viewInbox))">
-                                        <a ng-show="userdata.connected" ui-sref="inbox" translate="index.INBOX">
+                                        <a ng-show="userdata.connected" ui-sref="inbox">
                                             <i class="ti-import padding-right-10"></i>
+                                            <label translate="index.INBOX"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalLoginHome" translate="index.LOG_IN">
+                                        <a data-toggle="modal" data-target="#myModalLoginHome">
                                             <i class="ti-shift-right padding-right-10"></i>
+                                            <label translate="index.LOG_IN"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalRegisterHome" translate="index.REGISTER">
+                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
                                             <i class="ti-write padding-right-10"></i>
+                                            <label translate="index.REGISTER"></label>
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
-                                        <a ng-click="logout()" translate="index.LOG_OUT">
+                                        <a ng-click="logout()">
                                             <i class="ti-shift-left padding-right-10"></i>
+                                            <label translate="index.LOG_OUT"></label>
                                         </a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                                <a data-toggle="dropdown" class="dropdown-toggle" translate="index.LANGUAGE">
+                                <a data-toggle="dropdown" class="dropdown-toggle">
                                     <i class="ti-world"></i>
+                                    <label translate="index.LANGUAGE"></label>
                                 </a>
                                 <ul class="dropdown-menu" ng-controller="LanguageCtrl">
                                     <li ng-click="language.set('en', $event)">
@@ -123,8 +130,9 @@
                                 </ul>
                             </li>
                             <li>
-                                <a translate="index.BUY">
+                                <a>
                                     <i class="ti-shopping-cart"></i>
+                                    <label translate="index.BUY"></label>
                                 </a>
                             </li>
                         </ul>
@@ -185,8 +193,9 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title" translate="index.REGISTER">
+                                <h4 class="modal-title">
                                     <i class="ti-user"></i>
+                                    <label translate="index.REGISTER"></label>
                                 </h4>
                             </div>
                         </div>
@@ -243,8 +252,9 @@
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)" translate="index.REGISTER">
+                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-user"></i>
+                                <label translate="index.REGISTER"></label>
                             </a>
                         </div>
                     </div>
@@ -261,8 +271,9 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title" translate="index.REGISTER">
+                                <h4 class="modal-title">
                                     <i class="ti-user"></i>
+                                    <label translate="index.REGISTER"></label>
                                 </h4>
                             </div>
                         </div>
@@ -312,8 +323,9 @@
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModalHome(email, user, pass, pass_verify)" translate="index.REGISTER">
+                                ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-user"></i>
+                                <label translate="index.REGISTER"></label>
                             </a>
                         </div>
                     </div>
@@ -330,8 +342,10 @@
                                 <a type="button" class="close margin-top--10" data-dismiss="modal">
                                     <span class="glyphicon glyphicon-remove"></span>
                                 </a>
-                                <h4 class="modal-title" translate="index.LOG_IN">
-                                    <i class="ti-user"></i></h4>
+                                <h4 class="modal-title">
+                                    <i class="ti-user"></i>
+                                    <label translate="index.LOG_IN"></label>
+                                </h4>
                             </div>
                         </div>
                         <div class="modal-body">
@@ -354,7 +368,8 @@
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
-                                <i class="ti-user" translate="index.LOG_IN"></i>
+                                <i class="ti-user"></i>
+                                <label translate="index.LOG_IN"></label>
                             </a>
                         </div>
                     </div>
