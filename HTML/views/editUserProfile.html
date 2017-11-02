@@ -25,6 +25,7 @@
                         <h5 class="col-xs-12 padding-0 margin-top-10">
                             <i class="ti-stats-up"></i>
                             <label translate="edit_profile.RATING"></label>
+                            {{user.rating}}
                         </h5>
                     </div>
                 </form>
@@ -74,7 +75,9 @@
                                             ng-model="user.email">
                                     </div>
                                     <h5 class="col-md-12 padding-0 margin-top-10">
-                                        <i class="ti-stats-up"></i> Rating:
+                                        <i class="ti-stats-up"></i>
+                                        <label translate="edit_profile.RATING"></label>
+                                        {{user.rating}}
                                     </h5>
                                 </form>
                             </div>

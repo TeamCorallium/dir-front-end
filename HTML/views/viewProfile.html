@@ -22,6 +22,7 @@
                     <h5 class="padding-0">
                         <i class="ti-stats-up"></i>
                         <label translate="view_profile.RATING"></label>
+                        {{user.rating}}
                     </h5>
                 </div>
                 <div class="col-xs-12 padding-0" ng-show="viewInbox">
@@ -73,7 +74,9 @@
                                     <i class="ti-email"></i> {{user.email}}
                                 </h5>
                                 <h5 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
-                                    <i class="ti-stats-up"></i> Rating:
+                                    <i class="ti-stats-up"></i>
+                                    <label translate="view_profile.RATING"></label>
+                                    {{user.rating}}
                                 </h5>
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-show="viewInbox">
                                     <a type="button" ng-click="clap()" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25">
