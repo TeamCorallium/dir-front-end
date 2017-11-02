@@ -80,7 +80,9 @@
                                         <!-- {{user.rating}} -->
                                     </h5>
                                     <div class="margin-bottom-30">
-                                        <uib-rating ng-model="3.4" max="5" state-on="'fa fa-star text-yellow text-extra-large margin-right-5'"></uib-rating>                                        
+                                        <span class="stars alignright">
+                                            <span ng-style="{ 'width': getStars(rating.number) }"></span>
+                                        </span>
                                     </div>
                                 </div>
                                 
