@@ -307,11 +307,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.getStars = function(rating) {
-            console.log(rating + " rating");
             var val = parseFloat(rating);
-            // Turn value into number/100
             var size = val/5*100;
-            console.log(size + " size");
             return size + '%';
           }
 
