@@ -298,15 +298,12 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.clap = function () {
-            RestService.takeClap($scope.user.id)
-                .then(
-                function (data) {
-                    $scope.user.score = data.response;
-                    $scope.activateClap = true;
-                },
-                function (errResponse) {
-
-                }
-                );
+            RestService.takeClap($scope.user.id);
         };
+
+        $rootScope.$on('clapSuccesfully', function (event, data) {
+            $scope.user.score = data;
+            $scope.activateClap = true;
+        });
+
     }]);

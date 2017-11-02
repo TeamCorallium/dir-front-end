@@ -240,7 +240,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 },
                 data: { 'id': id,'csrfmiddlewaretoken': $cookies.get('csrftoken') }
             }).success(function (data) {
-                $rootScope.$broadcast('clapSuccesfully');
+                $rootScope.$broadcast('clapSuccesfully', data.response);
             }).error(function (response) {
                 $rootScope.$broadcast('clapError');
             });
