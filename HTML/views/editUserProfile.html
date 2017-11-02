@@ -100,10 +100,10 @@
                                 ng-if="user.snippets.length > 0">
                                 <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
                                     <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous btnRadius10">
-                                        <a ng-click="previous()" class="ng-binding">« Previous</a>
+                                        <a ng-click="previous()" class="ng-binding" translate="edit_profile.PREVIOUS"></a>
                                     </li>
                                     <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next btnRadius10">
-                                        <a ng-click="next()" class="ng-binding">Next »</a>
+                                        <a ng-click="next()" class="ng-binding" translate="edit_profile.NEXT"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -114,13 +114,13 @@
                     <div>
                         <a data-toggle="modal" data-target="#modalChangePassword" type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-key
                                                                         ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <span>Change Password</span>
+                            <span translate="edit_profile.CHANGE_PASSWORD"></span>
                         </a>
                     </div>
                     <div>
                         <a type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12"
                             ng-click="saveProfile()">
-                            <span>Save Profile</span>
+                            <span translate="edit_profile.SAVE_PROFILE"></span>
                         </a>
                     </div>
                     <div class="paddingViewProfile">
@@ -130,7 +130,9 @@
                                     <ul class="nav nav-tabs nav-justified">
                                         <li class="active">
                                             <a data-toggle="tab">
-                                                <i class="ti-star"></i> Popular Users</a>
+                                                <i class="ti-star"></i>
+                                                <label translate="edit_profile.POPULAR_USER"
+                                            </a>
                                             <hr class="tall margin-0">
                                         </li>
                                     </ul>
@@ -146,14 +148,14 @@
                                                         </div>
                                                     </div>
                                                     <div class="post-info">
-                                                        <!--<a ng-click=""> {{popularUser.firstname}} {{popularUser.lastname}}</a>-->
                                                         <a ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
                                                         <h5>{{popularUser.info}}</h5>
                                                     </div>
                                                 </li>
                                                 <li class="ListMoreUser">
                                                     <a type="button" class="btn btn-o btn-primary ButtonMoreUser pull-right" ui-sref='users'>
-                                                        <i class="ti-arrow-right"></i> See more
+                                                        <i class="ti-arrow-right"></i>
+                                                        <label translate="edit_profile.SEE_MORE"></label>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -177,7 +179,9 @@
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                         <h4 class="modal-title">
-                            <i class="ti-user"></i> Crop Image</h4>
+                            <i class="ti-user"></i>
+                            <label translate="edit_profile.CROP_IMAGE"></label>
+                        </h4>
                     </div>
                 </div>
                 <div class="modal-body">
@@ -187,8 +191,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" data-dismiss="modal">Cancel</a>
-                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()">Crop</a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" data-dismiss="modal" translate="edit_profile.CANCEL"></a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
                 </div>
             </div>
         </div>
@@ -204,16 +208,16 @@
                             <span class="glyphicon glyphicon-remove"></span>
                         </a>
                         <h4 class="modal-title">
-                            <i class="ti-key"></i> Change Password
+                            <i class="ti-key"></i>
+                            <label translate="edit_profile.CHANGE_PASSWORD"></label>
                         </h4>
                     </div>
                 </div>
                 <div class="modal-body">
                     <form name="ChangePassword" role="form">
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <div class="form-hint">To conform with our Strong Password policy, you are required to use a sufficiently strong password.
-                                Password must be more than 7 characters.</div>
+                            <label for="password" translate="edit_profile.PASSWORD"></label>
+                            <div class="form-hint" translate="edit_profile.TEXT_PASSWORD"></div>
                             <input type="password" class="form-control ok-password" ng-class="(ChangePassword.password.$dirty && ChangePassword.password.$invalid) ? 'error' : ''"
                                 id="password" name="password" placeholder="Enter Password" ng-required="true" ng-model="password">
                             <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
@@ -222,22 +226,24 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="againPassHome">Password again:</label>
+                            <label for="againPassHome" translate="edit_profile.PASSWORD_AGAIN"></label>
                             <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome"
                                 pw-check="password">
                         </div>
                         <div class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
-                            <span class="msg-error"> Passwords don't match.</span>
+                            <span class="msg-error" translate="edit_profile.PASSWORD_MATCH"></span>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i> Close
+                        <i class="ti-close"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="edit_profile.CLOSE"></label>
                     </a>
                     <a class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch"
                         ng-click="changePassword(password,againPassHome)">
-                        <i class="ti-key"></i> Change Password
+                        <i class="ti-key"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="edit_profile.CHANGE_PASSWORD"></label>
                     </a>
                 </div>
             </div>

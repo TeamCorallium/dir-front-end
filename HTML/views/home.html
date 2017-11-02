@@ -3,10 +3,13 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <h1 class="mainTitle title-white">T-shirts with technology</h1>
-                    <span class="mainDescription">A new way to reach your customers, to contact you and visit your business.</span>
-                    <div>
-                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalRegisterHome">Register</a>
+                    <h1 class="mainTitle title-white" translate="home.TEXT_TSHIRTS"></h1>
+                    <span class="mainDescription" translate="home.TEXT_HOME"></span>
+                    <div class="margin-top-10">
+                        <a type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModalRegisterHome">
+                            <i class="ti-user"></i>
+                            <label class="textColorWhite margin-bottom-0" translate="home.REGISTER"></label>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -37,14 +40,14 @@
                                     </p>
                                 </div>
                                 <div class="buttonContainer">
-                                    <a class="btn btn-primary" ng-click="goToProfile(profile.owner)">See Profile</a>
+                                    <a class="btn btn-primary" ng-click="goToProfile(profile.owner)" translate="home.SEE_PROFILE"></a>
                                 </div>
                             </div>
                         </li>
                     </ul>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <hr class="tall">
-                        <a class="btn btn-primary marginButtonUserHome" ui-sref="users">Explore more...</a>
+                        <a class="btn btn-primary marginButtonUserHome" ui-sref="users" translate="home.EXPLORE_MORE"></a>
                     </div>
                 </div>
             </div>
@@ -106,9 +109,7 @@
         <section class="container-fluid container-fullw no-padding no-border">
             <a class="btn btn-primary btn-block no-radius wrap">
                 <div class="container clearfix margin-top-15 margin-bottom-15">
-                    <h2 class="no-margin text-white">Buy all technologies from Alibaba.com
-                        <strong> Buy Now</strong>
-                    </h2>
+                    <h2 class="no-margin text-white" translate="home.BUY_TSHIRTS"></h2>
                 </div>
             </a>
         </section>

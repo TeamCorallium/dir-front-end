@@ -1,20 +1,22 @@
 <div class="profile-padding-inbox" ng-controller="InboxCtrl">
     <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right OptionsBox">
-        <p class="email-options-title margin-top-10">
-            BROWSE
-        </p>
+        <p class="email-options-title margin-top-10" translate="inbox.BROWSE"></p>
         <ul class="ListOptions margin-left-15">
             <li>
                 <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
                     <span class="title">
-                        <i class="ti-import"></i> Inbox</span>
+                        <i class="ti-import"></i>
+                        <label translate="inbox.INBOX"></label>
+                    </span>
                     <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="getCount() > 0">{{getCount()}}</span>
                 </a>
             </li>
             <li>
                 <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
                     <span class="title">
-                        <i class="ti-upload"></i> Send</span>
+                        <i class="ti-upload"></i>
+                        <label translate="inbox.SEND"></label>
+                    </span>
                 </a>
             </li>
         </ul>
@@ -23,7 +25,7 @@
         <div id="MessageInboxBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0" ng-if="inboxFlag">
             <ul class="list-unstyled">
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
-                    <h2 class="MessageSubjectNoFound"> No message found</h2>
+                    <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
                 </li>
                 <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" 
                 ng-class="{MessageUnread: message.readed == false}" id="li-{{message.id}}" ng-repeat="message in messagesInbox">
@@ -45,7 +47,7 @@
         <div id="MessageSendBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0" ng-if="!inboxFlag">
             <ul class="list-unstyled">
                 <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
-                    <h2 class="MessageSubjectNoFound"> No message found</h2>
+                    <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
                 </li>
                 <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend" id="li-{{message.id}}">
                     <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
@@ -66,7 +68,7 @@
         <div id="MessageReadBox" class="col-sm-8 col-md-8 col-lg-8 border-left">
             <div class="ng-scope" ng-if="messageSelected.id == ''">
                 <div class="no-messages">
-                    <h2>No email has been selected</h2>
+                    <h2 translate="inbox.NO_SELECTED"></h2>
                 </div>
             </div>
             <div ng-if="messageSelected.id != ''">
@@ -74,17 +76,20 @@
                     <ul class="actions no-margin no-padding block">
                         <li class="no-padding displayBlock">
                             <a class="text-info" ng-click="backToMessageList(messageSelected)">
-                                <i class="ti-arrow-left"></i> Back
+                                <i class="ti-arrow-left"></i>
+                                <label class="margin-bottom-0" translate="inbox.BACK"></label>
                             </a>
                         </li>
                         <li class="no-padding displayBlockAll" ng-show="inboxFlag">
                             <a class="text-info" data-toggle="modal" data-target="#modalMessage">
-                                <i class="ti-back-left"></i> Reply
+                                <i class="ti-back-left"></i>
+                                <label class="margin-bottom-0" translate="inbox.REPLY"></label>
                             </a>
                         </li>
                         <li class="no-padding displayBlockAll" ng-click="deleteMessage(messageSelected.url)">
                             <a class="text-info">
-                                <i class="ti-trash"></i> Delete
+                                <i class="ti-trash"></i>
+                                <label class="margin-bottom-0" translate="inbox.DELETE"></label>
                             </a>
                         </li>
                     </ul>
@@ -118,7 +123,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <i class="ti-email"></i> Send Message
+                        <i class="ti-email"></i>
+                        <label translate="inbox.SEND_MESSAGE"></label>
                     </h4>
                 </div>
                 <div class="modal-body padding-15">
@@ -127,7 +133,7 @@
                             <label for="subject"><strong>To: {{messageSelected.sender}}</strong></label>                        
                         </div>
                         <div class="form-group">
-                            <label for="subject">Subject</label>
+                            <label for="subject" translate="inbox.SUBJECT"></label>
                             <div class="error form-hint" ng-show="SendMessage.subject.$dirty && SendMessage.subject.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <input type="text" class="form-control" ng-class="(SendMessage.subject.$dirty && SendMessage.subject.$invalid) ? 'error' : ''"
                                 id="subject" name="subject" placeholder="Subject" ng-required="true" ng-model="subject">
@@ -141,10 +147,12 @@
                 </div>
                 <div class="modal-footer padding-15">
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i> Close
+                        <i class="ti-close"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="inbox.CLOSE"></label>
                     </a>
                     <a class="btn btn-primary ButtonRadius" ng-disabled="SendMessage.$invalid" ng-click="sendMessage(messageSelected.receiver, messageSelected.sender, subject, body)">
-                        <i class="ti-upload"></i> Send
+                        <i class="ti-upload"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="inbox.SEND_MESSAGE"></label>
                     </a>
                 </div>
             </div>

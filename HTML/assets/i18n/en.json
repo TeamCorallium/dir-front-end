@@ -29,7 +29,7 @@
     "RATING": "Rating:",
     "GENERATE_QR": "Generate QR Code",
     "SAVE_QR": "Save QR Code",
-    "PREVIUS": "« Previous",
+    "PREVIOUS": "« Previous",
     "NEXT": "Next »",
     "ADD_SNIPPETS" : "Add Snippet",
     "ADD_SOCIAL": "Add Social Network",
@@ -45,5 +45,61 @@
     "LOG_IN_FACEBOOK": "Login with Facebook",
     "TYPE_URL": "Type Facebook URL manually:",
     "SOCIAL_URL": "Social network url"
+  },
+  "view_profile": {
+    "POPULAR_USER": "Popular Users",
+    "SEE_MORE": "See more",
+    "LEAVE_MESSAGE": "Leave a Message",
+    "CLOSE": "Close",
+    "SEND_MESSAGE": "Send message"
+  },
+  "inbox": {
+    "BROWSE": "BROWSE",
+    "INBOX": "Inbox",
+    "SEND": "Send",
+    "NO_MESSAGE_FOUND": "No message found",
+    "NO_SELECTED": "No email has been selected",
+    "BACK": "Back",
+    "REPLY": "Reply",
+    "DELETE": "Delete",
+    "SEND_MESSAGE": "Send message",
+    "CLOSE": "Close",
+    "SUBJECT": "Subject"
+  },
+  "explore_user": {
+    "EXPLORE_PROFILES": "Explore Profiles",
+    "FILTERS": "Filters",
+    "ORDER_BY_SCORE": "Order by score:",
+    "ASCENDING": "Ascending",
+    "DESCENDING": "Descending",
+    "ORDER_BY_DATE": "Order by date:",
+    "SEARCH": "Search",
+    "SEE_PROFILE": "See Profile",
+    "PREVIOUS": "« Previous",
+    "NEXT": "Next »"
+  },
+  "edit_profile": {
+    "PREVIOUS": "« Previous",
+    "NEXT": "Next »",
+    "CHANGE_PASSWORD": "Change Password",
+    "SAVE_PROFILE": "Save Profile",
+    "POPULAR_USER": "Popular Users",
+    "SEE_MORE": "See more",
+    "CROP_IMAGE": "Crop Image",
+    "CANCEL": "Cancel",
+    "CROP": "Crop",
+    "PASSWORD": "Password",
+    "TEXT_PASSWORD": "To conform with our Strong Password policy, you are required to use a sufficiently strong password. Password must be more than 7 characters.",
+    "PASSWORD_AGAIN": "Password again:",
+    "PASSWORD_MATCH": "Passwords don't match.",
+    "CLOSE": "Close"
+  },
+  "home": {
+    "TEXT_TSHIRTS" : "T-shirts with technology",
+    "TEXT_HOME": "A new way to reach your customers, to contact you and visit your business.",
+    "REGISTER": "Register",
+    "SEE_PROFILE": "See Profile",
+    "EXPLORE_MORE": "Explore more...",
+    "BUY_TSHIRTS": "Buy all technologies from Alibaba.com."
   }
 }

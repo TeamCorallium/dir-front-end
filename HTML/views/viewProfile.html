@@ -124,7 +124,9 @@
                                     <ul class="nav nav-tabs nav-justified">
                                         <li class="active">
                                             <a data-toggle="tab">
-                                                <i class="ti-star"></i> Popular Users</a>
+                                                <i class="ti-star"></i>
+                                                <label translate="view_profile.POPULAR_USER"></label>
+                                            </a>
                                             <hr class="tall margin-0">
                                         </li>
                                     </ul>
@@ -147,7 +149,8 @@
                                                 </li>
                                                 <li class="ListMoreUser">
                                                     <a type="button" class="btn btn-o btn-primary ButtonMoreUser pull-right" ui-sref='users'>
-                                                        <i class="ti-arrow-right"></i> See more
+                                                        <i class="ti-arrow-right"></i>
+                                                        <label translate="view_profile.SEE_MORE"></label>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -170,7 +173,8 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <i class="ti-email"></i> Leave a Message
+                        <i class="ti-email"></i>
+                        <label translate="view_profile.LEAVE_MESSAGE"></label>
                     </h4>
                 </div>
                 <div class="modal-body padding-15">
@@ -189,10 +193,12 @@
                 </div>
                 <div class="modal-footer padding-15">
                     <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i> Close
+                        <i class="ti-close"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="view_profile.CLOSE"></label>
                     </a>
                     <a class="btn btn-primary ButtonRadius" ng-disabled="AddSnippets.$invalid" ng-click="leaveMessage(title,body)">
-                        <i class="ti-email"></i> Send message
+                        <i class="ti-email"></i>
+                        <label class="textColorWhite margin-bottom-0" translate="view_profile.SEND_MESSAGE"></label>
                     </a>
                 </div>
             </div>
