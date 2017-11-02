@@ -267,4 +267,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.currentPage -= 1;
             getSnippets($scope.user.username, $scope.currentPage);
         };
+
+        $scope.getStars = function (rating) {
+            var val = parseFloat(rating);
+            var size = val / 5 * 100;
+            return size + '%';
+        };
     }]);

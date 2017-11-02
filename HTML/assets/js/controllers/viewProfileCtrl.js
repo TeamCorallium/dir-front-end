@@ -306,10 +306,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.activateClap = true;
         });
 
-        $scope.getStars = function(rating) {
+        $scope.getStars = function (rating) {
             var val = parseFloat(rating);
-            var size = val/5*100;
+            var size = val / 5 * 100;
             return size + '%';
-          }
+        };
 
     }]);

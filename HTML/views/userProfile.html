@@ -19,6 +19,17 @@
                         <i class="ti-email"></i> {{user.email}}
                     </h5>
                 </div>
+                <div class="col-xs-12 padding-0">
+                    <h5 class="col-xs-3 padding-left-0 padding-right-0">
+                        <i class="ti-stats-up"></i>
+                        <label class="margin-bottom-0" translate="user_profile.RATING"></label>
+                    </h5>
+                    <div class="col-md-9">
+                        <span class="stars">
+                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                        </span>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-xs-12" ng-class="{HiddenIfXS: user.socialnetworks.length <= 0}">
@@ -50,11 +61,17 @@
                                 <h5 class="col-xs-12 padding-0" ng-if="user.email != ''">
                                     <i class="ti-email"></i> {{user.email}}
                                 </h5>
-                                <h5 class="padding-0">
-                                    <i class="ti-stats-up"></i>
-                                    <label translate="user_profile.RATING"></label>
-                                    {{user.rating}}
-                                </h5>
+                                <div class="col-md-12 padding-0">
+                                    <h5 class="col-md-4 padding-left-0 padding-right-0">
+                                        <i class="ti-stats-up"></i>
+                                        <label class="margin-bottom-0" translate="user_profile.RATING"></label>
+                                    </h5>
+                                    <div class="col-md-8">
+                                        <span class="stars">
+                                            <span ng-style="{ 'width': getStars(user.rating) }"></span>
+                                        </span>
+                                    </div>
+                                </div>
                             </div>
                             <div class="padding-right-15 paddingLeft15XS">
                                 <a type="button" ng-click="makeQRCode()" ng-show="profileQRCode == ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-settings ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
