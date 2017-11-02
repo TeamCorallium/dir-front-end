@@ -77,11 +77,10 @@
                                     <h5 class="col-md-4 padding-0">
                                         <i class="ti-stats-up"></i>
                                         <label translate="view_profile.RATING"></label>
-                                        {{user.rating}}
+                                        <!-- {{user.rating}} -->
                                     </h5>
-                                    <div ng-init="x = 3" class="margin-bottom-30">
-                                        <uib-rating ng-model="x" max="5" state-on="'fa fa-star text-yellow text-extra-large margin-right-5'" state-off="'fa fa-star-o text-large margin-right-5'"></uib-rating>
-                                        <b>({{x}})</b>
+                                    <div class="margin-bottom-30">
+                                        <uib-rating ng-model="3.4" max="5" state-on="'fa fa-star text-yellow text-extra-large margin-right-5'"></uib-rating>                                        
                                     </div>
                                 </div>
                                 
