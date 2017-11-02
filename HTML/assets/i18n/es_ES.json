@@ -23,7 +23,9 @@
     "INVALID_CREDENTIALS": "Credenciales de inicio de sesión no válidas.",
     "ABOUT_US": "Sobre nosotros",
     "FAQ": "FAQ",
-    "CONTACT_US": "Contáctanos"
+    "CONTACT_US": "Contáctanos",
+    "COPYRIGHT": "&copy; Derechos de autor",
+    "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados."
   },
   "user_profile": {
     "RATING": "Valoración:",
@@ -47,6 +49,7 @@
     "SOCIAL_URL": "Url de la red social"
   },
   "view_profile": {
+    "RATING": "Valoración:",
     "POPULAR_USER": "Usuarios populares",
     "SEE_MORE": "Ver más",
     "LEAVE_MESSAGE": "Deja tu mensaje",
@@ -79,6 +82,7 @@
     "NEXT": "Siguiente »"
   },
   "edit_profile": {
+    "RATING": "Valoración:",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
     "CHANGE_PASSWORD": "Cambiar contraseña",

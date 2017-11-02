@@ -23,7 +23,9 @@
     "INVALID_CREDENTIALS": "Invalid login credentials.",
     "ABOUT_US": "About US",
     "FAQ": "FAQ's",
-    "CONTACT_US": "Contact"
+    "CONTACT_US": "Contact",
+    "COPYRIGHT": "&copy; Copyright",
+    "RESERVED_RIGHT": "by &lt;DIR&gt;. All Rights Reserved."
   },
   "user_profile": {
     "RATING": "Rating:",
@@ -47,6 +49,7 @@
     "SOCIAL_URL": "Social network url"
   },
   "view_profile": {
+    "RATING": "Rating:",
     "POPULAR_USER": "Popular Users",
     "SEE_MORE": "See more",
     "LEAVE_MESSAGE": "Leave a Message",
@@ -79,6 +82,7 @@
     "NEXT": "Next »"
   },
   "edit_profile": {
+    "RATING": "Rating:",
     "PREVIOUS": "« Previous",
     "NEXT": "Next »",
     "CHANGE_PASSWORD": "Change Password",

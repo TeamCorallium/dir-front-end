@@ -23,7 +23,9 @@
     "INVALID_CREDENTIALS": "不正確登錄憑據.",
     "ABOUT_US": "關於我們",
     "FAQ": "常見問題",
-    "CONTACT_US": "聯繫"
+    "CONTACT_US": "聯繫",
+    "COPYRIGHT": "&copy; 版權",
+    "RESERVED_RIGHT": "的 &lt;DIR&gt;. 保留擁有權利."
   },
   "user_profile": {
     "RATING": "評級:",
@@ -47,6 +49,7 @@
     "SOCIAL_URL": "社交網路網址"
   },
   "view_profile": {
+    "RATING": "評級:",
     "POPULAR_USER": "熱門使用者",
     "SEE_MORE": "查看更多",
     "LEAVE_MESSAGE": "留言",
@@ -79,6 +82,7 @@
     "NEXT": "下 »"
   },
   "edit_profile": {
+    "RATING": "評級:",
     "PREVIOUS": "« 以前",
     "NEXT": "下 »",
     "CHANGE_PASSWORD": "更改密碼",
