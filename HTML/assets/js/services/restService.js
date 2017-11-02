@@ -15,6 +15,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
     var messages = 'http://www.dir.com:8888/api/messages/';
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
+    var clapDir = 'http://www.dir.com:8888/api/clap-profile/'
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -194,6 +195,57 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        sendMessage: function (sender, receiver, subject, body, readed) {
+            $http({
+                method: 'POST',
+                url: messages,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function (data) {
+                $rootScope.$broadcast('SendMessage');
+            }).error(function (response, status) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('WrongMessage');
+                }
+            });
+        },
+
+        takeClap: function (id) {
+            $http({
+                method: 'POST',
+                url: clapDir,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: { 'id': id,'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+            }).success(function (data) {
+                $rootScope.$broadcast('clapSuccesfully');
+            }).error(function (response) {
+                $rootScope.$broadcast('clapError');
+            });
+        },
+
         updateProfile: function (profileurl, info, rating, score, avatar, fullname, email) {
             $http({
                 method: 'PUT',
@@ -268,7 +320,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).error(function (response) {
                 console.log("Entra al error");
             });
-        },
+        },        
 
         updateMessage: function (url, sender, receiver, subject, body, readed) {
             $http({
@@ -310,37 +362,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('LoginNetworkConnectionError');
                 }
             });
-        },
-
-        sendMessage: function (sender, receiver, subject, body, readed) {
-            $http({
-                method: 'POST',
-                url: messages,
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                },
-                data: {
-                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
-                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
-                }
-            }).success(function (data) {
-                $rootScope.$broadcast('SendMessage');
-            }).error(function (response, status) {
-                if (status == 403) {
-                    $rootScope.$broadcast('forbidden', username);
-                } else if (status == null) {
-                    $rootScope.$broadcast('LoginNetworkConnectionError');
-                } else {
-                    $rootScope.$broadcast('WrongMessage');
-                }
-            });
-        },
+        },        
 
         deleteSocialNetwork: function (id) {
             $http({

@@ -54,7 +54,8 @@
     "SEE_MORE": "See more",
     "LEAVE_MESSAGE": "Leave a Message",
     "CLOSE": "Close",
-    "SEND_MESSAGE": "Send message"
+    "SEND_MESSAGE": "Send message",
+    "CLAP": "claps"
   },
   "inbox": {
     "BROWSE": "BROWSE",

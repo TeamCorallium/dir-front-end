@@ -14,6 +14,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         var exploreUser = '';
 
+        $scope.activateClap = false;
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -240,7 +242,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
-                exploreUser = $cookies.get('exploreUser'); 
+                exploreUser = $cookies.get('exploreUser');
                 $cookies.remove("exploreUser", { path: '/' });
             } else {
                 RestService.fetchTshirt($stateParams.id)
@@ -248,7 +250,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     function (data) {
                         if (data.length > 0) {
                             $scope.getUser(data[0].owner);
-                        } else {                            
+                        } else {
                             $state.go('home');
                             $('#myModal').modal('show');
                         }
@@ -280,18 +282,31 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSnippets($scope.user.username, $scope.currentPage);
         };
 
-        $scope.leaveMessage = function(subject, body) {
-            if(exploreUser != ''  && $cookies.get('username')) {
+        $scope.leaveMessage = function (subject, body) {
+            if (exploreUser != '' && $cookies.get('username')) {
                 var username = $cookies.get('username');
                 RestService.sendMessage(username, exploreUser, subject, body, false);
             } else {
                 growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
                 $state.go('home');
-            }            
+            }
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalLeaveMessage').modal('hide');
             growl.success("Message sended correctly", { title: 'Send Message' });
         });
+
+        $scope.clap = function () {
+            RestService.takeClap($scope.user.id)
+                .then(
+                function (data) {
+                    $scope.user.score = data.response;
+                    $scope.activateClap = true;
+                },
+                function (errResponse) {
+
+                }
+                );
+        };
     }]);

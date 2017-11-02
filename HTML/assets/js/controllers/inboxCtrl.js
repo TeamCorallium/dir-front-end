@@ -95,16 +95,16 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesInbox.length; i++) {                
+            for (var i = 0; i < $scope.messagesInbox.length; i++) {
                 if ($scope.messagesInbox[i].id == message.id) {
                     $scope.messagesInbox[i].readed = true;
-                    var idClass = "#li-"+$scope.messagesInbox[i].id;                    
+                    var idClass = "#li-" + $scope.messagesInbox[i].id;
                     $(idClass).addClass("backgroundMessageSelectedColor");
                 } else {
-                    var idClass = "#li-"+$scope.messagesInbox[i].id;
+                    var idClass = "#li-" + $scope.messagesInbox[i].id;
                     $(idClass).removeClass("backgroundMessageSelectedColor");
                 }
-            }            
+            }
 
             RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
                 $scope.messageSelected.receiver, $scope.messageSelected.subject,
@@ -128,13 +128,13 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesSend.length; i++) {                
+            for (var i = 0; i < $scope.messagesSend.length; i++) {
                 if ($scope.messagesSend[i].id == message.id) {
                     $scope.messagesSend[i].readed = true;
-                    var idClass = "#li-"+$scope.messagesSend[i].id;
+                    var idClass = "#li-" + $scope.messagesSend[i].id;
                     $(idClass).addClass("backgroundMessageSelectedColor");
                 } else {
-                    var idClass = "#li-"+$scope.messagesSend[i].id;
+                    var idClass = "#li-" + $scope.messagesSend[i].id;
                     $(idClass).removeClass("backgroundMessageSelectedColor");
                 }
             }

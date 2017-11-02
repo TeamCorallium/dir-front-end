@@ -25,7 +25,7 @@
                     </h5>
                 </div>
                 <div class="col-xs-12 padding-0" ng-show="viewInbox">
-                    <a type="button" class="btn btn-o col-xs-2 font-size-25">
+                    <a type="button" class="btn btn-o col-xs-2 font-size-25" ng-click="clap()">
                         <i class="ti-star"></i>
                     </a>
                     <a type="button" class="btn btn-o col-xs-1 padding-left-0 padding-right-0 font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
@@ -34,7 +34,9 @@
                 </div>
                 <div ng-show="viewInbox" class="col-xs-12 margin-bottom-10">
                     <span>
-                        <i class="ti-star"></i> 100.000 punchs
+                        <i class="ti-star"></i>
+                        {{user.score}}
+                        <label translate="view_profile.CLAP"></label>
                     </span>
                 </div>
             </div>
