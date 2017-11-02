@@ -79,12 +79,16 @@
                                     <a type="button" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25">
                                         <i class="ti-star"></i>
                                     </a>
-                                    <a type="button" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
+                                    <a type="button" ng-click="clap()" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
                                         <i class="ti-comments-smiley"></i>
                                     </a>
                                 </div>
                                 <div ng-show="viewInbox" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
-                                    <span><i class="ti-star"></i> 100.000 punchs</span>
+                                    <span>
+                                        <i class="ti-star"></i>
+                                        {{user.score}}
+                                        <label translate="view_profile.CLAP"></label>
+                                    </span>
                                 </div>
                             </div>
                         </div>
