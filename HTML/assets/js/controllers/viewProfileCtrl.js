@@ -209,6 +209,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
+            $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
             $scope.getTshirt();
         };
@@ -242,8 +243,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
-                exploreUser = $cookies.get('exploreUser');
-                $cookies.remove("exploreUser", { path: '/' });
+                exploreUser = $cookies.get('exploreUser');                
             } else {
                 RestService.fetchTshirt($stateParams.id)
                     .then(

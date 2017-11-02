@@ -61,6 +61,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.getProfiles();
 
         $scope.goToProfile = function (owner) {
+            $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
             $state.go('tshirts');
         };
