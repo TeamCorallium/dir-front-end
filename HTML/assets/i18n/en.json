@@ -69,7 +69,7 @@
   "explore_user": {
     "EXPLORE_PROFILES": "Explore Profiles",
     "FILTERS": "Filters",
-    "ORDER_BY_SCORE": "Order by score:",
+    "ORDER_BY_SCORE": "Order by claps:",
     "ASCENDING": "Ascending",
     "DESCENDING": "Descending",
     "ORDER_BY_DATE": "Order by date:",
@@ -100,6 +100,6 @@
     "REGISTER": "Register",
     "SEE_PROFILE": "See Profile",
     "EXPLORE_MORE": "Explore more...",
-    "BUY_TSHIRTS": "Buy all technologies from Alibaba.com."
+    "BUY_TSHIRTS": "Buy all technology from alibaba.com."
   }
 }

@@ -24,5 +24,82 @@
     "ABOUT_US": "關於我們",
     "FAQ": "常見問題",
     "CONTACT_US": "聯繫"
+  },
+  "user_profile": {
+    "RATING": "評級:",
+    "GENERATE_QR": "生成 QR 碼",
+    "SAVE_QR": "保存 QR 碼",
+    "PREVIOUS": "« 以前",
+    "NEXT": "下 »",
+    "ADD_SNIPPETS" : "添加程式碼片段",
+    "ADD_SOCIAL": "添加社交網路",
+    "POPULAR_USER": "熱門使用者",
+    "SEE_MORE": "查看更多",
+    "SNIPPET_TITLE": "程式碼片段標題",
+    "SNIPPET_BODY": "程式碼片段正文",
+    "CLOSE": "關閉",
+    "ADD": "添加",
+    "SOCIAL_NETWORK" : "社交網路",
+    "SELECT_SOCIAL": "選擇社交網路",
+    "CONTINUE_AS_OTHER": "繼續作為其他",
+    "LOG_IN_FACEBOOK": "登錄 Facebook",
+    "TYPE_URL": "手動鍵入 Facebook URL:",
+    "SOCIAL_URL": "社交網路網址"
+  },
+  "view_profile": {
+    "POPULAR_USER": "熱門使用者",
+    "SEE_MORE": "查看更多",
+    "LEAVE_MESSAGE": "留言",
+    "CLOSE": "關閉",
+    "SEND_MESSAGE": "發送消息"
+  },
+  "inbox": {
+    "BROWSE": "流覽",
+    "INBOX": "箱",
+    "SEND": "發送",
+    "NO_MESSAGE_FOUND": "未找到消息",
+    "NO_SELECTED": "未選擇電子郵件",
+    "BACK": "返回",
+    "REPLY": "答覆",
+    "DELETE": "刪除",
+    "SEND_MESSAGE": "發送消息",
+    "CLOSE": "關閉",
+    "SUBJECT": "主題"
+  },
+  "explore_user": {
+    "EXPLORE_PROFILES": "流覽設定檔",
+    "FILTERS": "器",
+    "ORDER_BY_SCORE": "以鼓掌的順序:",
+    "ASCENDING": "昇冪",
+    "DESCENDING": "降冪",
+    "ORDER_BY_DATE": "按日期排序:",
+    "SEARCH": "搜索",
+    "SEE_PROFILE": "請參閱設定檔",
+    "PREVIOUS": "« 以前",
+    "NEXT": "下 »"
+  },
+  "edit_profile": {
+    "PREVIOUS": "« 以前",
+    "NEXT": "下 »",
+    "CHANGE_PASSWORD": "更改密碼",
+    "SAVE_PROFILE": "保存設定檔",
+    "POPULAR_USER": "熱門使用者",
+    "SEE_MORE": "查看更多",
+    "CROP_IMAGE": "裁剪圖像",
+    "CANCEL": "取消",
+    "CROP": "作物",
+    "PASSWORD": "密碼",
+    "TEXT_PASSWORD": "要符合我們的強密碼原則, 您需要使用足夠強的密碼。密碼必須超過7個字元.",
+    "PASSWORD_AGAIN": "密碼:",
+    "PASSWORD_MATCH": "密碼不匹配.",
+    "CLOSE": "關閉"
+  },
+  "home": {
+    "TEXT_TSHIRTS" : "t恤衫與技術",
+    "TEXT_HOME": "一個新的方式來接觸您的客戶, 聯繫您和訪問您的業務.",
+    "REGISTER": "註冊",
+    "SEE_PROFILE": "請參閱設定檔",
+    "EXPLORE_MORE": "流覽更多...",
+    "BUY_TSHIRTS": "從 alibaba.com 購買所有技術."
   }
 }
