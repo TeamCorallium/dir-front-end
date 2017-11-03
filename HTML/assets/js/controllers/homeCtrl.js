@@ -6,6 +6,12 @@
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
 
+        if ($cookies.get('sessionid')) {
+            $rootScope.connected = true;
+        } else {
+            $rootScope.connected = false;
+        }
+
         $rootScope.viewProfile = true;
 
         $scope.countLimit = 4;
