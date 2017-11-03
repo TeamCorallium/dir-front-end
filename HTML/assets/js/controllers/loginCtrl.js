@@ -6,6 +6,9 @@
 app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
     function ($scope, RestService, $state, $rootScope, $cookies, growl) {
 
+        $scope.usernameHome = '';
+        $scope.pwdHome = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -22,6 +25,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         }
 
         $scope.loginModal = function (username, pass) {
+            console.log(username + " " + pass);
+            console.log($scope.usernameHome + " " + $scope.pwdHome);
             RestService.login(username, pass);
         };
 
