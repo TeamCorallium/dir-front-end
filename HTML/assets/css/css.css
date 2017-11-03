@@ -1502,3 +1502,8 @@ span.stars span {
     background: yellow;
     color: black;
   }
+
+  .positionInheritIcon {
+      position: absolute !important;      
+      left: 40px !important;
+  }
