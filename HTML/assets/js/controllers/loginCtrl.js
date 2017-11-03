@@ -6,9 +6,6 @@
 app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
     function ($scope, RestService, $state, $rootScope, $cookies, growl) {
 
-        $scope.usernameHome = '';
-        $scope.pwdHome = '';
-
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -72,9 +69,20 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         });
 
         $("#usernameHome").on('keyup', function (e) {
-            console.log($scope.usernameHome + " " + $scope.pwdHome)
             if (e.keyCode == 13) {
-                RestService.login($scope.usernameHome, $scope.pwdHome);
+                var user = $('#usernameHome').val();
+                var pass = $('#pwdHome').val();
+                console.log(user + " " + pass);
+                RestService.login(user, pass);
+            }
+        });
+
+        $("#pwdHome").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var user = $('#usernameHome').val();
+                var pass = $('#pwdHome').val();
+                console.log(user + " " + pass);
+                RestService.login(user, pass);
             }
         });
             
