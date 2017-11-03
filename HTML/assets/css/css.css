@@ -1509,3 +1509,11 @@ span.stars span {
       line-height: 20px !important;
       font-size: 14px !important;
   }
+
+  .iconClose {
+    position: absolute;
+    top: -3px;
+    z-index: 2;
+    font-size: 14px;
+    left: 31px;
+  }
