@@ -29,8 +29,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
-            $('#myModalLoginHome').modal('hide');
-            $cookies.put('username', username, { path: '/' });
+            $('#myModalLoginHome').modal('hide');            
             $state.go('profile');
         });
 

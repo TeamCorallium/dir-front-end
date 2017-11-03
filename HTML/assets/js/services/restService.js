@@ -62,7 +62,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 },
                 data: { 'username': username, 'password': password, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
             }).success(function (result) {
-                if (result['users'] != undefined && $cookies.get('sessionid') != undefined) {                    
+                if (result['users'] != undefined && $cookies.get('sessionid') != undefined) {
+                    $cookies.put('username', username, { path: '/' });
                     $rootScope.$broadcast('connected', username);
                 } else {
                     $rootScope.$broadcast('wrongLogin', username);
