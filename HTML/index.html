@@ -354,11 +354,12 @@
                                     <label for="usernameHome" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''"
-                                        id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true" ng-model="$parent.usernameHome">
+                                        id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true"
+                                        ng-model="usernameHome">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwdHome" translate="index.PASSWORD"></label>
-                                    <input ng-model="$parent.pwdHome" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwdHome">
+                                    <input ng-model="pwdHome" type="password" class="form-control" id="pwdHome" placeholder="Enter password" name="pwdHome">
                                 </div>
                                 <div class="msg-block" id="errorBoxHome" hidden>
                                     <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
