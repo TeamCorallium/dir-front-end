@@ -1517,3 +1517,11 @@ span.stars span {
     font-size: 14px;
     left: 31px;
   }
+
+  .opacity6 {
+    opacity: 0.6 !important;
+  }
+
+  .opacity6:hover {
+    opacity: 1.0 !important;
+  }
