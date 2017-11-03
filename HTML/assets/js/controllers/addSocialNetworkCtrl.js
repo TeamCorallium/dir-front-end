@@ -266,7 +266,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 var title = $('#socialnetwork').val();
                 console.log(title + " title");
                 var url = $('#url').val();
-                if (title != '' && url != '') {
+                if (title != '' && title != null && url != '') {
                     $scope.addSocialNetwork(title, url);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });
@@ -279,7 +279,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 var title = $('#socialnetwork').val();
                 console.log(title + " title");
                 var url = $('#url').val();
-                if (title != '' && url != '') {
+                if (title != '' && title != null && url != '') {
                     $scope.addSocialNetwork(title, url);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });
