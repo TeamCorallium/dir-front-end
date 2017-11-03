@@ -202,6 +202,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.deleteSocialNetwork = function (id) {
+            console.log(id + " delete social network");
             RestService.deleteSocialNetwork(id);
         };
 
