@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl",
-    function ($scope, $stateParams, RestService, $state, $cookies, $rootScope, growl) {
+app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl", "angular-notification-icons",
+    function ($scope, $stateParams, RestService, $state, $cookies, $rootScope, growl, angular-notification-icons) {
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';

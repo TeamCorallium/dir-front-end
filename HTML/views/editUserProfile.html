@@ -43,8 +43,7 @@
                     <li ng-repeat="sn in user.socialnetworks" class="padding-5">
                         <a type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
                             <i class="{{sn.type}}"></i>
-                            <notification-icon count="autoPending[0]">
-                                <i class="fa fa-envelope-o fa-3x"></i>
+                            <notification-icon count='1'>
                             </notification-icon>
                         </a>
                     </li>

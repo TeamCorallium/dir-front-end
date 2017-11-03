@@ -72,7 +72,8 @@
     "zxcvbn": "^4.4.2",
     "angular-growl-v2": "^0.7.9",
     "sweetalert": "~0.4.2",
-    "ngSweetAlert": "angular-sweetalert#^1.1.2"
+    "ngSweetAlert": "angular-sweetalert#^1.1.2",
+    "angular-notification-icons": "^0.4.4"
   },
   "devDependencies": {
     "angular-translate": "^2.15.2"
