@@ -1462,3 +1462,8 @@ span.stars, span.stars span {
 span.stars span {
     background-position: 0 0;
 }
+
+.pointerHover:hover{
+    cursor: pointer;
+    cursor: hand;
+}
