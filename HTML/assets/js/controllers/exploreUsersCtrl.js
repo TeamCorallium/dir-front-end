@@ -130,4 +130,10 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $scope.getProfiles(1);
         };
 
+        $("#searchInput").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                $scope.getProfiles(1);
+            }
+        });
+
     }]);
