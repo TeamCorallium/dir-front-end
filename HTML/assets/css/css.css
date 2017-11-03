@@ -947,7 +947,7 @@
 .avatar-users {
     width: 120px !important;
     height: 120px !important;
-    margin-left: 44px !important;
+    margin-left: 50px !important;
 }
 
 .avatar-users:hover{
@@ -1464,6 +1464,6 @@ span.stars span {
 }
 
 .pointerHover:hover{
-    cursor: pointer;
-    cursor: hand;
+    cursor: pointer !important;
+    cursor: hand !important;
 }
