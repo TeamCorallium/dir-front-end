@@ -20,4 +20,30 @@ app.controller('AddSnippetsCtrl', ["$rootScope", "$scope", "RestService", "$stat
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
 
+        // start:  keyup snippets
+        $("#title").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#title').val();
+                var body = $('#body').val();
+                if (title != '' && body != ''){
+                    RestService.addSnippet(title, body);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+
+        $("#body").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#title').val();
+                var body = $('#body').val();
+                if (title != '' && body != ''){
+                    RestService.addSnippet(title, body);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+        // end: keyup snippets
+
     }]);

@@ -70,5 +70,5 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
-        });
+        });        
     }]);

@@ -92,7 +92,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;                        
+                        $scope.user.id = data.id;
                         $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
@@ -320,4 +320,29 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Password Change' });
         });
 
+        // start:  keyup change password
+        $("#password").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if (pass != '' && passA != '') {
+                    RestService.addSnippet(pass, passA);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+
+        $("#againPassHome").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if (pass != '' && passA != '') {
+                    RestService.addSnippet(pass, passA);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+        // end: keyup change password
     }]);

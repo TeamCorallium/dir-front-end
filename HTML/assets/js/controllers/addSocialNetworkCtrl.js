@@ -17,7 +17,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             $scope.url = '';
 
             switch ($scope.socialnetwork) {
-                case "Facebook": {                    
+                case "Facebook": {
                     $scope.showUrlCamp = false;
                     $scope.activeFacebook = true;
                     $scope.isFacebookConnected();
@@ -215,7 +215,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
             }
         };
 
-        $scope.facebookLogin = function () {            
+        $scope.facebookLogin = function () {
             if (!$scope.isFacebookConnected()) {
                 FB.login(function (response) {
                     if (response.status === 'connected') {
@@ -257,4 +257,30 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                 $scope.facebookLogin();
             });
         };
+
+        // start: keyup social network
+        $("#socialnetwork").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+
+        $("#url").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+        // end: keyup social network
     }]);
