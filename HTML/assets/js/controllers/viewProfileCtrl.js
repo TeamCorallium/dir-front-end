@@ -298,7 +298,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.clap = function () {
-            RestService.takeClap($scope.user.id);
+            RestService.takeClap($scope.user.id, false);
         };
 
         $rootScope.$on('clapSuccesfully', function (event, data) {
@@ -311,5 +311,19 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var size = val / 5 * 100;
             return size + '%';
         };
+
+        $scope.TryClap = function () {
+            RestService.takeClap($scope.user.id, true);
+        };
+
+        $scope.TryClap();
+
+        $rootScope.$on('testClapYes', function (event, data) {            
+            $scope.activateClap = false;
+        });
+
+        $rootScope.$on('testClapNo', function (event, data) {            
+            $scope.activateClap = true;
+        });
 
     }]);

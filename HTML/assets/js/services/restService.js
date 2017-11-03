@@ -225,7 +225,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        takeClap: function (id) {
+        takeClap: function (id, test) {
             $http({
                 method: 'POST',
                 url: clapDir,
@@ -238,9 +238,15 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'id': id,'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: { 'id': id, 'test': test, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
             }).success(function (data) {
-                $rootScope.$broadcast('clapSuccesfully', data.response);
+                if (test && data.response == 'yes') {
+                    $rootScope.$broadcast('testClapYes');
+                } else if (test && data.response == 'no') {
+                    $rootScope.$broadcast('testClapNo');
+                } else if (!test) {
+                    $rootScope.$broadcast('clapSuccesfully', data.response);
+                }                
             }).error(function (response) {
                 $rootScope.$broadcast('clapError');
             });
