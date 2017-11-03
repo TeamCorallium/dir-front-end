@@ -25,8 +25,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         }
 
         $scope.loginModal = function (username, pass) {
-            console.log(username + " " + pass);
-            console.log($scope.usernameHome + " " + $scope.pwdHome);
+            console.log('hola '+ username + " " + pass);
+            // console.log($scope.usernameHome + " " + $scope.pwdHome);
             RestService.login(username, pass);
         };
 
