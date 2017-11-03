@@ -28,7 +28,7 @@
 }
 
 .style-link{
-    color: #00B8B8;
+    color: #00B8B8 !important;
 }
 
 .style-link:hover{

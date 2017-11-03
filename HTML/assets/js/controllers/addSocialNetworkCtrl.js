@@ -14,15 +14,12 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.activeFacebook = false;
 
         $scope.updateUrl = function () {
-            
-            console.log($scope.url + " url");
-            
+                        
             $scope.url = '';
-
-            console.log($scope.url + " url");
 
             switch ($scope.socialnetwork) {
                 case "Facebook": {
+                    $scope.url = 'https://www.facebook.com/';
                     $scope.showUrlCamp = false;
                     $scope.activeFacebook = true;
                     $scope.isFacebookConnected();
