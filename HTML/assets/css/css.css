@@ -1512,10 +1512,10 @@ span.stars span {
 
   .iconClose {
     position: absolute;
-    top: -3px;
+    top: -2px;
     z-index: 2;
-    font-size: 14px;
-    left: 31px;
+    font-size: 12px;
+    left: 32px;
   }
 
   .opacity6 {
