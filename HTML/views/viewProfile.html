@@ -31,15 +31,15 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-xs-12 padding-0" ng-show="viewInbox">
-                    <a type="button" class="btn btn-o col-xs-2 font-size-25" ng-click="clap()">
+                <div class="col-xs-12 padding-0">
+                    <a type="button" ng-disabled="activateClap || !viewInbox" class="btn btn-o col-xs-2 font-size-25" ng-click="clap()">
                         <i class="ti-star"></i>
                     </a>
-                    <a type="button" class="btn btn-o col-xs-1 padding-left-0 padding-right-0 font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
+                    <a type="button" ng-disabled="activateClap || !viewInbox" class="btn btn-o col-xs-1 padding-left-0 padding-right-0 font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
                         <i class="ti-comments-smiley"></i>
                     </a>
                 </div>
-                <div ng-show="viewInbox" class="col-xs-12 margin-bottom-10">
+                <div class="col-xs-12 margin-bottom-10">
                     <span>
                         <i class="ti-star"></i>
                         {{user.score}}
@@ -90,16 +90,16 @@
                                         </span>
                                     </div>
                                 </div>
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-show="viewInbox">
-                                    <a type="button" ng-disabled="activateClap" ng-click="clap()" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
+                                    <a type="button" ng-disabled="activateClap || !viewInbox" ng-click="clap()" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25">
                                         <i class="ti-star" ng-hide="activateClap"></i>
                                         <i class="ti-stamp" ng-show="activateClap"></i>
                                     </a>
-                                    <a type="button" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
+                                    <a type="button" ng-disabled="activateClap || !viewInbox" class="btn btn-o col-xs-2 col-sm-2 col-md-2 col-lg-2 no-padding font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
                                         <i class="ti-comments-smiley"></i>
                                     </a>
                                 </div>
-                                <div ng-show="viewInbox" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
                                     <span>
                                         <i class="ti-star"></i>
                                         {{user.score}}

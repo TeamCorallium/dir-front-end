@@ -92,7 +92,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
-                        $scope.TryClap();
+                        
+                        if ($rootScope.viewInbox) {
+                            $scope.TryClap();
+                        }                        
                     } else {
                         $state.go('home');
                     }
