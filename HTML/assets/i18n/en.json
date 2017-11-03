@@ -77,10 +77,12 @@
     "ASCENDING": "Ascending",
     "DESCENDING": "Descending",
     "ORDER_BY_DATE": "Order by date:",
+    "ORDER_BY_RATING": "Order by rating",
     "SEARCH": "Search",
     "SEE_PROFILE": "See Profile",
     "PREVIOUS": "« Previous",
-    "NEXT": "Next »"
+    "NEXT": "Next »",
+    "APPLY": "Apply"
   },
   "edit_profile": {
     "RATING": "Rating:",

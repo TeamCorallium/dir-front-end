@@ -23,6 +23,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
+        $scope.applyRatingFilter = false;
 
         $scope.currentPage = 1;
         $scope.hasNext = '';
@@ -32,7 +33,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             var filters = '';
 
-            if ($scope.applyScoreFilter || $scope.applyDateFilter) {
+            if ($scope.applyScoreFilter || $scope.applyDateFilter || $scope.applyRatingFilter) {
                 filters = '?ordering=';
                 var flag = false;
 
@@ -54,6 +55,19 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                         filters += 'created';
                     } else {
                         filters += '-created';
+                    }
+                    flag = true;
+                }
+
+                if ($scope.applyRatingFilter) {
+                    if (flag) {
+                        filters += ",";
+                    }
+
+                    if ($scope.orderRating == 'AscendingRating') {
+                        filters += 'rating';
+                    } else {
+                        filters += '-rating';
                     }
                 }
             }
@@ -88,19 +102,11 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
             $state.go('tshirts');
-        };
+        };        
 
-        $scope.changeFilterScore = function () {
-            if ($scope.applyScoreFilter) {
-                $scope.getProfiles(1);
-            }
-        };
-
-        $scope.changeFilterDate = function () {
-            if ($scope.applyDateFilter) {
-                $scope.getProfiles(1);
-            }
-        };
+        $scope.changeFiltres = function() {
+            $scope.getProfiles(1);
+        }
 
         $scope.noPrevious = function () {
             return $scope.hasPrevious == null;

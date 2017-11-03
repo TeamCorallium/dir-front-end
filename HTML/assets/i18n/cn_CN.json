@@ -77,10 +77,12 @@
     "ASCENDING": "昇冪",
     "DESCENDING": "降冪",
     "ORDER_BY_DATE": "按日期排序:",
+    "ORDER_BY_RATING": "按評級排序",
     "SEARCH": "搜索",
     "SEE_PROFILE": "請參閱設定檔",
     "PREVIOUS": "« 以前",
-    "NEXT": "下 »"
+    "NEXT": "下 »",
+    "APPLY": "應用"
   },
   "edit_profile": {
     "RATING": "評級:",
