@@ -264,6 +264,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $("#socialnetwork").on('keyup', function (e) {
             if (e.keyCode == 13) {
                 var title = $('#socialnetwork').val();
+                console.log(title + " title");
                 var url = $('#url').val();
                 if (title != '' && url != '') {
                     $scope.addSocialNetwork(title, url);
@@ -276,6 +277,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $("#url").on('keyup', function (e) {
             if (e.keyCode == 13) {
                 var title = $('#socialnetwork').val();
+                console.log(title + " title");
                 var url = $('#url').val();
                 if (title != '' && url != '') {
                     $scope.addSocialNetwork(title, url);
