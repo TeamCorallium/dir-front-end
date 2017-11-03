@@ -367,7 +367,7 @@
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">
-                            <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal(usernameHome,pwdHome)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="LogingForm.$invalid" ng-click="loginModal($parent.usernameHome, $parent.pwdHome)">
                                 <i class="ti-user"></i>
                                 <label translate="index.LOG_IN" class="textColorWhite margin-bottom-0"></label>
                             </a>
