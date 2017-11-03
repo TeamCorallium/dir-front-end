@@ -6,6 +6,9 @@
 app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
     function ($scope, RestService, $state, $rootScope, $cookies, growl) {
 
+        $scope.usernameHome  = '';
+        $scope.pwdHome = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -67,4 +70,11 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
+
+        $scope.runScript = function(e) {
+            console.log(e + " event");
+            if (e.keyCode == 13) {
+                $scope.loginModal($scope.usernameHome,$scope.pwdHome)
+            }
+        }
     }]);
