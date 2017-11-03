@@ -316,7 +316,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.takeClap($scope.user.id, true);
         };
 
-        $scope.TryClap();
+        if ($scope.user.id != ''){
+            $scope.TryClap();
+        }        
 
         $rootScope.$on('testClapYes', function (event, data) {            
             $scope.activateClap = false;
