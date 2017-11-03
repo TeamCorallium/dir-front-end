@@ -71,7 +71,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
 
-        $scope.runScript = function(e) {
+        function runScript(e) {
             console.log(e + " event");
             if (e.keyCode == 13) {
                 $scope.loginModal($scope.usernameHome,$scope.pwdHome)
