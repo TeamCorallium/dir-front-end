@@ -345,4 +345,10 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             }
         });
         // end: keyup change password
+
+        $scope.getStars = function (rating) {
+            var val = parseFloat(rating);
+            var size = val / 5 * 100;
+            return size + '%';
+        };
     }]);

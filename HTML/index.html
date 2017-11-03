@@ -76,37 +76,37 @@
                                     <li ng-show="(userdata.connected)">
                                         <a ui-sref="profile">
                                             <i class="ti-id-badge padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.VIEW_PROFILE"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.VIEW_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="(userdata.connected)">
                                         <a ui-sref="edit-profile">
                                             <i class="ti-pencil-alt padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.EDIT_PROFILE"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.EDIT_PROFILE"></label>
                                         </a>
                                     </li>
                                     <li ng-show="(userdata.connected)">
                                         <a ng-show="userdata.connected" ui-sref="inbox">
                                             <i class="ti-import padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.INBOX"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.INBOX"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalLoginHome">
                                             <i class="ti-shift-right padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.LOG_IN"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_IN"></label>
                                         </a>
                                     </li>
                                     <li ng-hide="userdata.connected">
                                         <a data-toggle="modal" data-target="#myModalRegisterHome">
                                             <i class="ti-write padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.REGISTER"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.REGISTER"></label>
                                         </a>
                                     </li>
                                     <li ng-show="userdata.connected">
                                         <a ng-click="logout()">
                                             <i class="ti-shift-left padding-right-10"></i>
-                                            <label class="margin-bottom-0" translate="index.LOG_OUT"></label>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_OUT"></label>
                                         </a>
                                     </li>
                                 </ul>
@@ -132,7 +132,7 @@
                             <li>
                                 <a>
                                     <i class="ti-shopping-cart"></i>
-                                    <label translate="index.BUY"></label>
+                                    <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label>
                                 </a>
                             </li>
                         </ul>
