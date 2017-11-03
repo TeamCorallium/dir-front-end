@@ -16,6 +16,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.activateClap = false;
 
+        $scope.mySelf = false;
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -55,6 +57,12 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.firstname = data[0].first_name;
                         $scope.user.lastname = data[0].last_name;
 
+                        if ($scope.user.username == $cookies.get('username')) {
+                            $scope.mySelf = true;
+                        } else {
+                            $scope.mySelf = false;
+                        }
+
                         if (data[0].profiles.length > 0) {
                             getProfile(data[0].profiles[0]);
                         }
@@ -86,7 +94,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;
+                        $scope.user.id = data.id;                        
                         $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
