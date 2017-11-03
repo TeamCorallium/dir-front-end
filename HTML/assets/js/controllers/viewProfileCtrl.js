@@ -41,6 +41,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.viewProfile = true;
 
+        $scope.TryClap = function () {
+            RestService.takeClap($scope.user.id, true);
+        };
+
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -88,6 +92,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
+                        $scope.TryClap();
                     } else {
                         $state.go('home');
                     }
@@ -310,15 +315,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var val = parseFloat(rating);
             var size = val / 5 * 100;
             return size + '%';
-        };
-
-        $scope.TryClap = function () {
-            RestService.takeClap($scope.user.id, true);
-        };
-
-        if ($scope.user.id != ''){
-            $scope.TryClap();
-        }        
+        }; 
 
         $rootScope.$on('testClapYes', function (event, data) {            
             $scope.activateClap = false;

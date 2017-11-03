@@ -242,7 +242,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 if (test && data.response == 'yes') {
                     $rootScope.$broadcast('testClapYes');
-                } else if (test && data.response == 'no') {
+                } else if (test && data.response == 'not') {
                     $rootScope.$broadcast('testClapNo');
                 } else if (!test) {
                     $rootScope.$broadcast('clapSuccesfully', data.response);
