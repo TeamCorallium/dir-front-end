@@ -17,5 +17,6 @@ angular.module("pulloverDir", [
     'ngtimeago',
     'angular-growl',
     'oitozero.ngSweetAlert',
-    'pascalprecht.translate'
+    'pascalprecht.translate',
+    'angular-notification-icons'
 ]);
