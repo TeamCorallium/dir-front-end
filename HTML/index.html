@@ -73,19 +73,19 @@
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
                                     <i class="ti-user"></i> {{userdata.username}}</a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
-                                    <li ng-show="((userdata.connected) && (viewProfile))">
+                                    <li ng-show="(userdata.connected)">
                                         <a ui-sref="profile">
                                             <i class="ti-id-badge padding-right-10"></i>
                                             <label class="margin-bottom-0" translate="index.VIEW_PROFILE"></label>
                                         </a>
                                     </li>
-                                    <li ng-show="((userdata.connected) && (viewProfile == false))">
+                                    <li ng-show="(userdata.connected)">
                                         <a ui-sref="edit-profile">
                                             <i class="ti-pencil-alt padding-right-10"></i>
                                             <label class="margin-bottom-0" translate="index.EDIT_PROFILE"></label>
                                         </a>
                                     </li>
-                                    <li ng-show="((userdata.connected) && (viewInbox))">
+                                    <li ng-show="(userdata.connected)">
                                         <a ng-show="userdata.connected" ui-sref="inbox">
                                             <i class="ti-import padding-right-10"></i>
                                             <label class="margin-bottom-0" translate="index.INBOX"></label>
@@ -201,12 +201,6 @@
                         </div>
                         <div class="modal-body">
                             <form name="RegisterTshirt" role="form">
-                                <!-- <div class="form-group">
-                                    <label for="fullname">Full Name</label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$invalid) ? 'error' : ''"
-                                        id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
-                                </div> -->
                                 <div class="form-group">
                                     <label for="emailHome" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -250,7 +244,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer padding-15" ng-controller="LoginCtrl">
+                        <div class="modal-footer padding-15">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
                                 ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-user"></i>
@@ -279,12 +273,6 @@
                         </div>
                         <div class="modal-body">
                             <form name="RegisterTshirt" role="form">
-                                <!-- <div class="form-group">
-                                    <label for="fullname">Full Name</label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.fullname.$dirty && RegisterTshirt.fullname.$invalid) ? 'error' : ''"
-                                        id="fullname" name="fullname" placeholder="Enter your full name" ng-required="true" ng-model="fullname">
-                                </div> -->
                                 <div class="form-group">
                                     <label for="email" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -321,7 +309,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="modal-footer padding-15" ng-controller="LoginCtrl">
+                        <div class="modal-footer padding-15">
                             <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
                                 ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-user"></i>
