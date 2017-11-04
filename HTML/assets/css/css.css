@@ -1559,3 +1559,8 @@ span.stars span {
   .opacity6:hover {
     opacity: 1.0 !important;
   }
+
+  .verticalOverflow {
+    overflow-y: scroll !important;
+    overflow-x: hidden !important;
+  }
