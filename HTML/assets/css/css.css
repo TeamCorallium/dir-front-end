@@ -1572,7 +1572,10 @@ span.stars span {
   
   .iconClapFull {
     width: 30px !important;
-    margin-top: -10px !important;
+    margin-top: -10px !important;    
+  }
+
+  .iconClapFull:hover {
     cursor: not-allowed !important;
   }
 
