@@ -1572,5 +1572,9 @@ span.stars span {
 
   .iconMessage {
     width: 45px !important;
-    margin-top: -10px !important;
+    margin-top: -5px !important;
+  }
+
+  .iconClapMini {
+    width: 14px !important;
   }

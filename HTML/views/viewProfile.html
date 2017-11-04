@@ -19,7 +19,7 @@
                     <h5 class="padding-0" ng-show="user.email != ''">
                         <i class="ti-email"></i> {{user.email}}
                     </h5>                    
-                    <div class="col-xs-12 padding-0">
+                    <div class="col-xs-12 padding-0" ng-cloak>
                         <h5 class="col-xs-3 padding-left-0 padding-right-0">
                             <i class="ti-stats-up"></i>
                             <label class="margin-bottom-0" translate="view_profile.RATING"></label>
@@ -44,7 +44,7 @@
                 <div class="col-xs-12 margin-bottom-10">
                     <hr class="tall margin-top-5 margin-bottom-5">
                     <span>
-                        <i class="ti-star"></i>
+                        <img class="iconClapMini" ng-src="assets/images/LineMessage.png">
                         {{user.score}}
                         <label translate="view_profile.CLAP"></label>
                     </span>
@@ -106,7 +106,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0">
                                     <hr class="tall margin-top-5 margin-bottom-5" ng-hide="mySelf">
                                     <span>
-                                        <i class="ti-star"></i>
+                                        <img class="iconClapMini" ng-src="assets/images/LineMessage.png">
                                         {{user.score}}
                                         <label translate="view_profile.CLAP"></label>
                                     </span>
