@@ -191,7 +191,7 @@
             </div>
         </div>
     </section>
-    <!-- start: MODAL SNIPPETS-->
+    <!-- start: MODAL LEAVE MESSAGE-->
     <div class="modal fade" id="modalLeaveMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content" ng-controller="FormController">
@@ -209,12 +209,12 @@
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''"
-                                id="user" name="title" placeholder="Enter message subject" ng-required="true" ng-model="title">
+                                id="user" name="title" placeholder="Enter message subject" ng-required="true" ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <textarea class="form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''" id="user"
-                                name="body" placeholder="Enter yuor message body" ng-required="true" ng-model="body"></textarea>
+                                name="body" placeholder="Enter yuor message body" ng-required="true" ng-model="$parent.message.body"></textarea>
                         </div>
                     </form>
                 </div>
@@ -223,7 +223,7 @@
                         <i class="ti-close"></i>
                         <label class="textColorWhite margin-bottom-0" translate="view_profile.CLOSE"></label>
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-disabled="AddSnippets.$invalid" ng-click="leaveMessage(title,body)">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="AddSnippets.$invalid" ng-click="leaveMessage()">
                         <i class="ti-email"></i>
                         <label class="textColorWhite margin-bottom-0" translate="view_profile.SEND_MESSAGE"></label>
                     </a>
@@ -231,5 +231,5 @@
             </div>
         </div>
     </div>
-    <!-- end: MODAL SNIPPETS-->
+    <!-- end: MODAL LEAVE MESSAGE-->
 </div>

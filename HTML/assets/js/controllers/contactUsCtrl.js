@@ -38,9 +38,8 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
         }
 
         $scope.sendMessage = function () {
-            console.log($scope.message.body + " " + $scope.message.subject + " body and subject");
             if ($scope.message.email != '' && $scope.message.subject != '' && $scope.message.body != ''){
-                // RestService.sendMessage($scope.message.email, 'admin', $scope.message.subject, $scope.message.body, false);
+                RestService.sendMessage($scope.message.email, 'admin', $scope.message.subject, $scope.message.body, false);
             } else {
                 growl.error("All fields are required", { title: 'Send Message' });
             }            

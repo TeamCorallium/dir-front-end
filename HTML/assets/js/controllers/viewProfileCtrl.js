@@ -18,6 +18,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mySelf = false;
 
+        $scope.message = {
+            username: '',
+            exploreUser: '',
+            title: '',
+            body: '',
+            readed: ''
+        }
+
         $scope.user = {
             username: '',
             firstname: '',
@@ -302,14 +310,15 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.leaveMessage = function (subject, body) {
-            if (exploreUser != '' && $cookies.get('username')) {
-                var username = $cookies.get('username');
-                RestService.sendMessage(username, exploreUser, subject, body, false);
-            } else {
-                growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
-                $state.go('home');
-            }
+        $scope.leaveMessage = function () {
+            
+            // if (exploreUser != '' && $cookies.get('username')) {
+            //     var username = $cookies.get('username');
+            //     RestService.sendMessage(username, exploreUser, subject, body, false);
+            // } else {
+            //     growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
+            //     $state.go('home');
+            // }
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
