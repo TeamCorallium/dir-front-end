@@ -102,9 +102,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
             $state.go('tshirts');
-        };        
+        };
 
-        $scope.changeFiltres = function() {
+        $scope.changeFiltres = function () {
             $scope.getProfiles(1);
         }
 
@@ -117,13 +117,17 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         };
 
         $scope.next = function () {
-            $scope.currentPage += 1;
-            $scope.getProfiles($scope.currentPage);
+            if (!$scope.noNext) {
+                $scope.currentPage += 1;
+                $scope.getProfiles($scope.currentPage);
+            }
         };
 
         $scope.previous = function () {
-            $scope.currentPage -= 1;
-            $scope.getProfiles($scope.currentPage);
+            if (!$scope.noPrevious) {
+                $scope.currentPage -= 1;
+                $scope.getProfiles($scope.currentPage);
+            }
         };
 
         $scope.searchProfile = function () {
