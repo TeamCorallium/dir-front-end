@@ -330,12 +330,13 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
-                console.log($("#changePasswordButton").prop('disabled') + " disable");
-                if (pass != '' && passA != '' && pass == passA) {
-                    RestService.changePassword(pass, passA);
-                } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
-                }
+                if($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '' && pass == passA) {
+                        RestService.changePassword(pass, passA);
+                    } else {
+                        growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    }
+                }                
             }
         });
 
@@ -343,11 +344,12 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
-                console.log($("#changePasswordButton").prop('disabled') + " disable");
-                if (pass != '' && passA != '' && pass == passA) {
-                    RestService.changePassword(pass, passA);
-                } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                if($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '' && pass == passA) {
+                        RestService.changePassword(pass, passA);
+                    } else {
+                        growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    }
                 }
             }
         });
