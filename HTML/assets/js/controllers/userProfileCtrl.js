@@ -207,7 +207,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.makeQRCode = function () {
-            RestService.imageDownload();
+            RestService.imageDownload($scope.user.id);
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
