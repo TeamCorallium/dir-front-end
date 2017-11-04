@@ -1569,3 +1569,8 @@ span.stars span {
     width: 30px !important;
     margin-top: -10px !important;
   }
+
+  .iconMessage {
+    width: 45px !important;
+    margin-top: -10px !important;
+  }
