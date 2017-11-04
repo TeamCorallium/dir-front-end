@@ -16,6 +16,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             rating: '',
             avatar: 'assets/images/default-user.png',
             id: '',
+            qrcode: '',
             profileurl: '',
             fullname: '',
             socialnetworks: [],
@@ -76,15 +77,16 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;
+                        $scope.user.id = data.id;                        
                         $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
-                    } else {
-                        //    Show Autentication
-                        console.log("profile no exist");
+
+                        if (data.qrcode != '') {
+                            $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                        }
                     }
                 },
                 function (errResponse) {
@@ -210,7 +212,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
             growl.success("QR Code Generated Correctly", { title: 'Generate QR Code' });
-            $scope.profileQRCode = data;
+            // $scope.profileQRCode = data;
+            $scope.user.qrcode = data;
         });
 
         $rootScope.$on('makeQRCodeError', function (event, data) {

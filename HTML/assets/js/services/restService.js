@@ -154,7 +154,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        imageDownload: function () {
+        imageDownload: function (id) {
             $http({
                 method: 'POST',
                 url: imageDownload,
@@ -167,7 +167,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
-                }
+                },
+                data: { 'id': id }
             }).success(function (data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
             }).error(function (response) {
