@@ -330,7 +330,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
-                console.log($("#changePasswordButton").is(":disabled") + " disable");
+                console.log($("#changePasswordButton").prop('disabled') + " disable");
                 if (pass != '' && passA != '') {
                     RestService.changePassword(pass, passA);
                 } else {
