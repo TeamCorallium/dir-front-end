@@ -20,6 +20,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
+        $scope.orderRating = 'AscendingRating';
 
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
