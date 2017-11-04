@@ -7,9 +7,10 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
     function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert) {
 
         $scope.inboxFlag = true;
-
         $rootScope.viewProfile = true;
         $rootScope.viewInbox = false;
+        $scope.messagesInbox = [];
+        $scope.messagesSend = [];
 
         $scope.messageSelected = {
             url: '',
@@ -39,9 +40,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $scope.getMessageSend();
             }
         };
-
-        $scope.messagesInbox = [];
-        $scope.messagesSend = [];
 
         $scope.getMessageSend = function () {
             $scope.messagesSend = [];

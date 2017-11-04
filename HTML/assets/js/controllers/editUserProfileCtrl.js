@@ -8,26 +8,13 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';
-
         $rootScope.viewProfile = true;
         $rootScope.viewInbox = true;
-
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
-
-        $scope.uploadFile = function (file) {
-            if (file) {
-                // ng-img-crop
-                var imageReader = new FileReader();
-                imageReader.onload = function (image) {
-                    $scope.$apply(function ($scope) {
-                        $scope.myImage = image.target.result;
-                    });
-                };
-                imageReader.readAsDataURL(file);
-            }
-        };
+        $scope.users = [];
+        $scope.name = '';
 
         $scope.user = {
             username: '',
@@ -46,9 +33,18 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             snippets: []
         };
 
-        $scope.users = [];
-
-        $scope.name = '';
+        $scope.uploadFile = function (file) {
+            if (file) {
+                // ng-img-crop
+                var imageReader = new FileReader();
+                imageReader.onload = function (image) {
+                    $scope.$apply(function ($scope) {
+                        $scope.myImage = image.target.result;
+                    });
+                };
+                imageReader.readAsDataURL(file);
+            }
+        };
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)

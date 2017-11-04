@@ -6,10 +6,6 @@
 app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
-        $scope.profiles = [];
-
-        $scope.search = '';
-
         if ($cookies.get('sessionid')) {
             $rootScope.viewInbox = true;
             $rootScope.viewProfile = true;
@@ -21,14 +17,14 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
         $scope.orderRating = 'AscendingRating';
-
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
         $scope.applyRatingFilter = false;
-
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
+        $scope.profiles = [];
+        $scope.search = '';
 
         $scope.getProfiles = function (page) {
 

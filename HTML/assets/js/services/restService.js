@@ -248,7 +248,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('testClapNo');
                 } else if (!test) {
                     $rootScope.$broadcast('clapSuccesfully', data.response);
-                }                
+                }
             }).error(function (response) {
                 $rootScope.$broadcast('clapError');
             });
@@ -282,7 +282,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar, 
+                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar,
                     'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
@@ -328,7 +328,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).error(function (response) {
                 console.log("Entra al error");
             });
-        },        
+        },
 
         updateMessage: function (url, sender, receiver, subject, body, readed) {
             $http({
@@ -370,7 +370,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('LoginNetworkConnectionError');
                 }
             });
-        },        
+        },
 
         deleteSocialNetwork: function (id) {
             $http({

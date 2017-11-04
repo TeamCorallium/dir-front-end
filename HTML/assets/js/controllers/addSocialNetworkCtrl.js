@@ -9,9 +9,10 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
         $scope.socialnetwork = '';
         $scope.url = '';
         $scope.facebookName = '';
-
         $scope.showUrlCamp = false;
         $scope.activeFacebook = false;
+        $scope.manuallyCheck = false;
+        $scope.isConnected = false;
 
         $scope.updateUrl = function () {
                         
@@ -205,9 +206,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
 
         $rootScope.$on('addSocialNetworkError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
-        });
-
-        $scope.manuallyCheck = false;
+        });        
 
         $scope.activeManually = function () {
             if ($scope.manuallyCheck) {
@@ -237,9 +236,7 @@ app.controller('AddSocialNetworkCtrl', ["$rootScope", "$scope", "RestService", "
                     console.log(response);
                 });
             }
-        };
-
-        $scope.isConnected = false;
+        };        
 
         $scope.isFacebookConnected = function () {
             FB.getLoginStatus(function (response) {

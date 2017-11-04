@@ -13,8 +13,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         }
 
         $rootScope.viewProfile = true;
-
         $scope.countLimit = 4;
+        $scope.profiles = [];
 
         if ($(window).width() >= 992) {
             $scope.countLimit = 4;
@@ -40,8 +40,6 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.$on("$destroy", function () {
             $(window).off("resize.doResize"); //remove the handler added earlier
         });
-
-        $scope.profiles = [];
 
         $scope.getProfiles = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')

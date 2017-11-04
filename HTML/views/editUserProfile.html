@@ -96,7 +96,7 @@
                                 </form>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9">
+                        <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <ul class="ltwt">
                                     <li ng-repeat="snippet in user.snippets" class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10">
@@ -109,7 +109,9 @@
                                             <h4 class="margin-bottom-0">{{snippet.title}}</h4>
                                             <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
                                             <span class="block text-light margin-bottom-20">
-                                                <i class="fa fa-fw fa-clock-o"></i> {{snippet.created | timeago}}</span>
+                                                <i class="fa fa-fw fa-clock-o"></i>
+                                                {{snippet.created | timeago}}
+                                            </span>
                                         </div>
                                     </li>
                                 </ul>

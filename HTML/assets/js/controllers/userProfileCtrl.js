@@ -27,11 +27,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
-
         $scope.users = [];
-
         $scope.profileQRCode = '';
-
         $rootScope.viewProfile = false;
         $rootScope.viewInbox = true;
 
@@ -77,7 +74,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;                        
+                        $scope.user.id = data.id;
                         $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;

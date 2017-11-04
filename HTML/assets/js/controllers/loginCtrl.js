@@ -29,7 +29,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
-            $('#myModalLoginHome').modal('hide');            
+            $('#myModalLoginHome').modal('hide');
             $state.go('profile');
         });
 
@@ -61,10 +61,10 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", {title: 'Logins Problems'});
+            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {            
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
         });
 
@@ -83,5 +83,5 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                 RestService.login(user, pass);
             }
         });
-            
+
     }]);

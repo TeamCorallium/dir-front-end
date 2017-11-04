@@ -25,7 +25,7 @@ app.controller('AddSnippetsCtrl', ["$rootScope", "$scope", "RestService", "$stat
             if (e.keyCode == 13) {
                 var title = $('#title').val();
                 var body = $('#body').val();
-                if (title != '' && body != ''){
+                if (title != '' && body != '') {
                     RestService.addSnippet(title, body);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });
@@ -37,7 +37,7 @@ app.controller('AddSnippetsCtrl', ["$rootScope", "$scope", "RestService", "$stat
             if (e.keyCode == 13) {
                 var title = $('#title').val();
                 var body = $('#body').val();
-                if (title != '' && body != ''){
+                if (title != '' && body != '') {
                     RestService.addSnippet(title, body);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });

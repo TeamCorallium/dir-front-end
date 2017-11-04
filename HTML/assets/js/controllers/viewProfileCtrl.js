@@ -13,10 +13,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         }
 
         var exploreUser = '';
-
         $scope.activateClap = false;
-
         $scope.mySelf = false;
+        $scope.currentPage = 1;
+        $scope.hasNext = '';
+        $scope.hasPrevious = '';
+        $scope.users = [];
+        $rootScope.viewProfile = true;
 
         $scope.message = {
             username: '',
@@ -41,15 +44,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        };
-
-        $scope.currentPage = 1;
-        $scope.hasNext = '';
-        $scope.hasPrevious = '';
-
-        $scope.users = [];
-
-        $rootScope.viewProfile = true;
+        };        
 
         $scope.TryClap = function () {
             RestService.takeClap($scope.user.id, true);
