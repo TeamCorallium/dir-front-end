@@ -249,7 +249,7 @@
                             <input type="password" class="form-control" id="againPassHome" placeholder="New password" name="againPassHome" ng-model="againPassHome"
                                 pw-check="password">
                         </div>
-                        <div class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
+                        <div id="msg-block" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
                             <span class="msg-error" translate="edit_profile.PASSWORD_MATCH"></span>
                         </div>
                     </form>

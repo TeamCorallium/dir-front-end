@@ -295,29 +295,31 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.next = function () {
-            if (!$scope.noNext){
+            if (!$scope.noNext) {
                 $scope.currentPage += 1;
                 getSnippets($scope.user.username, $scope.currentPage);
-            }            
+            }
         };
 
         $scope.previous = function () {
             if (!$scope.noPrevious) {
                 $scope.currentPage -= 1;
                 getSnippets($scope.user.username, $scope.currentPage);
-            }            
+            }
         };
 
         $scope.changePassword = function (psw, psw2) {
             if (psw === psw2) {
                 RestService.changePassword($scope.user.username, psw);
             } else {
-                growl.error("Password not match.", { title: 'Password Change' });
+                // growl.error("Password not match.", { title: 'Password Change' });
+                $('#msg-block').show();
             }
         };
 
         $rootScope.$on('changepassword', function (event, data) {
             $('#modalChangePassword').modal('hide');
+            $('#msg-block').hide();
             growl.success("Password changed correctly.", { title: 'Password Change' });
         });
 
@@ -330,13 +332,17 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
-                if($("#changePasswordButton").prop('disabled') != undefined) {
-                    if (pass != '' && passA != '' && pass == passA) {
-                        RestService.changePassword(pass, passA);
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
                     } else {
                         growl.error("Sorry all fields are required", { title: 'Empty fields' });
                     }
-                }                
+                }
             }
         });
 
@@ -344,9 +350,13 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
-                if($("#changePasswordButton").prop('disabled') != undefined) {
-                    if (pass != '' && passA != '' && pass == passA) {
-                        RestService.changePassword(pass, passA);
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
                     } else {
                         growl.error("Sorry all fields are required", { title: 'Empty fields' });
                     }
