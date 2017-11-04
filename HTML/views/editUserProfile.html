@@ -259,7 +259,7 @@
                         <i class="ti-close"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch"
+                    <a id="changePasswordButton" class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch"
                         ng-click="changePassword(password,againPassHome)">
                         <i class="ti-key"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CHANGE_PASSWORD"></label>

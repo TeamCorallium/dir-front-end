@@ -94,16 +94,16 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         } else {
                             $scope.user.avatar = 'assets/images/default-user.png';
                         }
-                        $scope.user.id = data.id;                        
+                        $scope.user.id = data.id;
                         $scope.user.email = data.email;
                         $scope.user.score = data.score;
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
-                        
+
                         if ($rootScope.viewInbox) {
                             $scope.TryClap();
-                        }                        
+                        }
                     } else {
                         $state.go('home');
                     }
@@ -259,7 +259,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
-                exploreUser = $cookies.get('exploreUser');                
+                exploreUser = $cookies.get('exploreUser');
             } else {
                 RestService.fetchTshirt($stateParams.id)
                     .then(
@@ -289,13 +289,17 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.next = function () {
-            $scope.currentPage += 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noNext) {
+                $scope.currentPage += 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
         };
 
         $scope.previous = function () {
-            $scope.currentPage -= 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noPrevious) {
+                $scope.currentPage -= 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
         };
 
         $scope.leaveMessage = function (subject, body) {
@@ -326,13 +330,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var val = parseFloat(rating);
             var size = val / 5 * 100;
             return size + '%';
-        }; 
+        };
 
-        $rootScope.$on('testClapYes', function (event, data) {            
+        $rootScope.$on('testClapYes', function (event, data) {
             $scope.activateClap = false;
         });
 
-        $rootScope.$on('testClapNo', function (event, data) {            
+        $rootScope.$on('testClapNo', function (event, data) {
             $scope.activateClap = true;
         });
 
