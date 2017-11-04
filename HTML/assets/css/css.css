@@ -116,7 +116,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 36% !important;
+        margin-left: 38.5% !important;
     }
 
     .UserInfoBox {
@@ -208,7 +208,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 37% !important;
+        margin-left: 40% !important;
     }
 
     .UserInfoBox {
@@ -227,7 +227,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 38% !important;
+        margin-left: 40.5% !important;
     }
 
     .UserInfoBox {
@@ -247,7 +247,7 @@
 @media (min-width: 992px) {
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 27% !important;
+        margin-left: 29.3% !important;
     }
 
     .navbar > .container .navbar-header .navbar-brand {
@@ -264,7 +264,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 27% !important;
+        margin-left: 29.3% !important;
     }
 
     .UserInfoBox {
@@ -283,7 +283,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 28% !important;
+        margin-left: 30.3% !important;
     }
 
     .UserInfoBox {
@@ -302,7 +302,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 29% !important;
+        margin-left: 31.4% !important;
     }
 
     .UserInfoBox {
@@ -321,7 +321,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 30% !important;
+        margin-left: 32% !important;
     }
 
     .UserInfoBox {
@@ -336,12 +336,7 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1300.jpg');
-    }
-
-    .SocialIcon {
-        margin-top: 5px !important;
-        margin-left: 22% !important;
-    }
+    }    
 
     .UserInfoBox {
         text-align: left !important;
@@ -883,7 +878,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 20% !important;
+        margin-left: 22.5% !important;
     }
 
     .UserInfoBox {
@@ -928,6 +923,13 @@
         position: relative;
         float: left;
         width: 91% !important;
+    }
+}
+
+@media (min-width: 1251px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 24% !important;
     }
 }
 
@@ -1146,7 +1148,7 @@ ul li a.social-ti-foursquare {
 @media (min-width: 1366px) {
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 24% !important;
+        margin-left: 25.4% !important;
     }
 }
 
