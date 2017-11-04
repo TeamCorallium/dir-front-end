@@ -28,13 +28,13 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <label for="usernameHome"> Subject
+                                    <label for="subject"> Subject
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.usernameHome.$dirty && contactUsForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <input type="text" class="form-control" ng-class="(contactUsForm.usernameHome.$dirty && contactUsForm.usernameHome.$invalid) ? 'error' : ''"
-                                        id="usernameHome" name="usernameHome" placeholder="Enter the subject of your message" ng-required="true"
-                                        ng-model="message.subject">
+                                    <div class="error form-hint" ng-show="contactUsForm.subject.$dirty && contactUsForm.subject.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''"
+                                        id="subject" name="subject" placeholder="Enter the subject of your message" ng-required="true"
+                                        ng-model="$parent.message.subject" required>
                                 </div>
                             </div>
                         </div>
@@ -46,7 +46,7 @@
                                     </label>
                                     <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak>{{"This field is required."}}</div>
                                     <textarea class="form-control" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
-                                        name="body" placeholder="Enter your message" ng-required="true" ng-model="message.body"></textarea>
+                                        name="body" placeholder="Enter your message" ng-required="true" ng-model="$parent.message.body" required></textarea>
                                 </div>
                             </div>
                         </div>
