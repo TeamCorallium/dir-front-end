@@ -1564,3 +1564,8 @@ span.stars span {
     overflow-y: scroll !important;
     overflow-x: hidden !important;
   }
+
+  .iconClap {
+    width: 30px !important;
+    margin-top: -10px !important;
+  }
