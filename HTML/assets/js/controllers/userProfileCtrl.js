@@ -259,13 +259,17 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.next = function () {
-            $scope.currentPage += 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noNext) {
+                $scope.currentPage += 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
         };
 
         $scope.previous = function () {
-            $scope.currentPage -= 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noPrevious) {
+                $scope.currentPage -= 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
         };
 
         $scope.getStars = function (rating) {

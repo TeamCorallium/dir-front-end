@@ -295,13 +295,17 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.next = function () {
-            $scope.currentPage += 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noNext){
+                $scope.currentPage += 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }            
         };
 
         $scope.previous = function () {
-            $scope.currentPage -= 1;
-            getSnippets($scope.user.username, $scope.currentPage);
+            if (!$scope.noPrevious) {
+                $scope.currentPage -= 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }            
         };
 
         $scope.changePassword = function (psw, psw2) {
@@ -326,8 +330,9 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
+                console.log($("#changePasswordButton").is(":disabled") + " disable");
                 if (pass != '' && passA != '') {
-                    RestService.addSnippet(pass, passA);
+                    RestService.changePassword(pass, passA);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });
                 }
@@ -338,8 +343,9 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (e.keyCode == 13) {
                 var pass = $('#password').val();
                 var passA = $('#againPassHome').val();
+                console.log($("#changePasswordButton").is(":disabled") + " disable");
                 if (pass != '' && passA != '') {
-                    RestService.addSnippet(pass, passA);
+                    RestService.changePassword(pass, passA);
                 } else {
                     growl.error("Sorry all fields are required", { title: 'Empty fields' });
                 }
