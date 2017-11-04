@@ -1569,6 +1569,12 @@ span.stars span {
     width: 30px !important;
     margin-top: -10px !important;
   }
+  
+  .iconClapFull {
+    width: 30px !important;
+    margin-top: -10px !important;
+    cursor: not-allowed !important;
+  }
 
   .iconMessage {
     width: 45px !important;
@@ -1576,6 +1582,6 @@ span.stars span {
   }
 
   .iconClapMini {
-    width: 25px !important;
-    margin-top: -2px !important;
+    width: 16px !important;
+    margin-top: -6px !important;
   }
