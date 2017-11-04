@@ -1576,5 +1576,6 @@ span.stars span {
   }
 
   .iconClapMini {
-    width: 14px !important;
+    width: 25px !important;
+    margin-top: -2px !important;
   }
