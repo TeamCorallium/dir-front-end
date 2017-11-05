@@ -15,13 +15,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         }
 
         if ($(window).width() >= 768) {
-            $scope.orderDate = '';
-            $scope.orderScore = '';
-            $scope.orderRating = '';
-            $scope.orderDateMD = 'AscendingDate';
-            $scope.orderScoreMD = 'AscendingScore';
-            $scope.orderRatingMD = 'AscendingRating';
-
             $scope.applyDateFilter = false;
             $scope.applyScoreFilter = false;
             $scope.applyRatingFilter = false;
@@ -29,13 +22,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $scope.applyScoreFilterMD = true;
             $scope.applyRatingFilterMD = false;
         } else {
-            $scope.orderDate = 'AscendingDate';
-            $scope.orderScore = 'AscendingScore';
-            $scope.orderRating = 'AscendingRating';
-            $scope.orderDateMD = '';
-            $scope.orderScoreMD = '';
-            $scope.orderRatingMD = '';
-
             $scope.applyDateFilter = false;
             $scope.applyScoreFilter = true;
             $scope.applyRatingFilter = false;
@@ -44,12 +30,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $scope.applyRatingFilterMD = false;
         }
 
-        // $scope.orderDate = 'AscendingDate';
-        // $scope.orderScore = 'AscendingScore';
-        // $scope.orderRating = 'AscendingRating';
-        // $scope.orderDateMD = 'AscendingDate';
-        // $scope.orderScoreMD = 'AscendingScore';
-        // $scope.orderRatingMD = 'AscendingRating';
+        $scope.orderDate = 'AscendingDate';
+        $scope.orderScore = 'AscendingScore';
+        $scope.orderRating = 'AscendingRating';
+        $scope.orderDateMD = 'AscendingDate';
+        $scope.orderScoreMD = 'AscendingScore';
+        $scope.orderRatingMD = 'AscendingRating';
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
         $scope.applyRatingFilter = false;
