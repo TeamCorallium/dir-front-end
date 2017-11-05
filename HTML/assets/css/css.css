@@ -1579,3 +1579,7 @@ span.stars span {
     width: 16px !important;
     margin-top: -6px !important;
   }
+
+  .border-radius10 {
+      border-radius: 10px !important;
+  }
