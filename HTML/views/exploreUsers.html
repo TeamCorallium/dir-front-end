@@ -60,9 +60,10 @@
             </div>
             <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
                 <div data-uib-accordion>
-                    <div data-uib-accordion-group class="panel-default">
-                        <div data-uib-accordion-heading>
-                            <label translate="explore_user.FILTERS"></label>
+                    <div data-uib-accordion-group class="panel-default" is-open="status.open">
+                        <div data-uib-accordion-heading>                            
+                            <label class="margin-bottom-0 pointerHover" translate="explore_user.FILTERS"></label>
+                            <i class="pull-right glyphicon" ng-class="{'glyphicon-chevron-down': status.open, 'glyphicon-chevron-right': !status.open}"></i>
                         </div>
                         <div class="form-group centerTextExploreUser">
                             <div class="checkbox">
