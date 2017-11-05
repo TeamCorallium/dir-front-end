@@ -5,7 +5,7 @@
             <hr />
         </div>
         <div class="padding-30">
-            <div class="col-lg-2, col-md-2 col-sm-2 col-xs-12">
+            <div class="col-lg-2 col-md-2 col-sm-2 hidden-xs">
                 <fieldset class="margin-top-0">
                     <legend translate="explore_user.FILTERS"></legend>
                     <div class="form-group centerTextExploreUser">
@@ -57,6 +57,20 @@
                         </a>
                     </div>
                 </fieldset>
+            </div>
+            <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
+                <uib-accordion close-others="oneAtATime">
+                    <uib-accordion-group heading="Static Header, initially expanded"></uib-accordion-group>
+                    This content is straight in the template.
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="Custom template" template-url="group-template.html">
+                        Hello
+                    </uib-accordion-group>
+                    <uib-accordion-group heading="Delete account" panel-class="panel-danger">
+                        <p>Please, to delete your account, click the button below</p>
+                        <button class="btn btn-danger">Delete</button>
+                    </uib-accordion-group>
+                </uib-accordion>
             </div>
             <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0">

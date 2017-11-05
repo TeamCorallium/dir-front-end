@@ -38,7 +38,8 @@
                                     <img src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
                                 </div>
                                 <div class="center padding-left-10 padding-right-10">
-                                    <h3>@{{profile.owner}}</h3>
+                                    <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
+                                    <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
                                     <p class="text-dark">
                                         {{profile.info}}
                                     </p>
