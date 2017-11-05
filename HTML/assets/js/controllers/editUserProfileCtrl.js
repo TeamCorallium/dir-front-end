@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl",
-    function ($scope, $stateParams, RestService, $state, $cookies, $rootScope, growl) {
+app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", "$state", "$cookies", "$rootScope", "growl", "SweetAlert",
+    function ($scope, $stateParams, RestService, $state, $cookies, $rootScope, growl, SweetAlert) {
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';
@@ -198,19 +198,70 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.deleteSocialNetwork = function (id) {
-            console.log(id + " delete social network");
-            RestService.deleteSocialNetwork(id);
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this social network!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSocialNetwork(id);
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your social network is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
         };
 
         $scope.deleteSnippets = function (url) {
-            RestService.deleteSnippet(url);
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this snippet!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSnippet(url);
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your snippet is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });            
         };
 
         $rootScope.$on('deleteSocialNetwork', function (event, data) {
             $scope.user.socialnetworks = [];
             getSocialNetworks($cookies.get('username'));
 
-            growl.success("Social network delete correctly.", { title: 'Delete Social Network' });
+            $scope.cleanMessageSelected();
+            $scope.getMessageReceiver();
+            $scope.getMessageSend();
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your social network has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
+
+            // growl.success("Social network delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
@@ -221,7 +272,17 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             $scope.user.snippets = [];
             getSnippets($cookies.get('username'), 1);
 
-            growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
+            $scope.cleanMessageSelected();
+            $scope.getMessageReceiver();
+            $scope.getMessageSend();
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your snippet has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
+
+            // growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSnippetError', function (event, data) {
