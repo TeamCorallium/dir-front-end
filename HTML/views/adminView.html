@@ -39,7 +39,7 @@
                 <fieldset ng-if="users.length > 0">
                     <legend translate="admin.USERS"></legend>
                     <div class="input-group well marginSearch">
-                        <input class="form-control" placeholder="Search..." type="text" id="searchInput" ng-model="search">
+                        <input class="form-control" placeholder="Search..." type="text" id="searchInput" ng-model="$parent.search">
                         <span class="input-group-btn">
                             <a class="btn btn-primary" type="button" ng-click="searchUsers()">
                                 <i class="fa fa-search"></i>
@@ -58,9 +58,21 @@
                                     </div>
                                 </div>
                                 <div class="post-info">
-                                    <a ng-show="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.owner}}</a>
-                                    <a ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
-                                    <h5>{{user.info | htmlToPlaintext | words:10 :true}}</h5>
+                                    <div class="col-xs-11 col-sm-11 col-md-11 col-lg-11">
+                                        <a ng-show="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.owner}}</a>
+                                        <a ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
+                                        <h5>{{user.info | htmlToPlaintext | words:10 :true}}</h5>
+                                    </div>
+                                    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                                        <a class="btn btn-red opacity6">
+                                            <i class="ti-trash"></i>
+                                        </a>
+                                    </div>
+                                    <!-- <div col-xs-1 col-sm-1 col-md-1 col-lg-1>
+                                        <a class="btn btn-default">
+                                            <i class="ti-pencil-alt"></i>
+                                        </a>
+                                    </div> -->
                                 </div>
                             </li>
                         </ul>
