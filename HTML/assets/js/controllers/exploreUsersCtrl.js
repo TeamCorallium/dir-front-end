@@ -180,24 +180,30 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         });
 
-        $scope.changeOrderClapFlag = function() {
+        $scope.changeOrderClapFlagDate = function() {
+            if ($(window).width() >= 768) {
+                if ($('#DateFilterMD').is(':checked')) {
+                    $scope.applyDateFilter = true;
+                } else {
+                    $scope.applyDateFilter = false;
+                }
+            } else {
+                if ($('#DateFilter').is(':checked')) {
+                    $scope.applyDateFilter = true;
+                } else {
+                    $scope.applyDateFilter = false;
+                }
+            }
+            console.log($scope.applyRatingFilter + " changeFunctionDate");
+
+        };
+
+        $scope.changeOrderClapFlagScore = function() {
             if ($(window).width() >= 768) {
                 if ($('#ScoreFilterMD').is(':checked')) {
                     $scope.applyScoreFilter = true;
                 } else {
                     $scope.applyScoreFilter = false;
-                }
-
-                if ($('#RatingFilterMD').is(':checked')) {
-                    $scope.applyRatingFilter = true;
-                } else {
-                    $scope.applyRatingFilter = false;
-                }
-
-                if ($('#DateFilterMD').is(':checked')) {
-                    $scope.applyDateFilter = true;
-                } else {
-                    $scope.applyDateFilter = false;
                 }
             } else {
                 if ($('#ScoreFilter').is(':checked')) {
@@ -205,20 +211,26 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 } else {
                     $scope.applyScoreFilter = false;
                 }
+            }
+            console.log($scope.applyScoreFilter +" changeFunctionScore");
 
+        };
+
+        $scope.changeOrderClapFlagRating = function() {
+            if ($(window).width() >= 768) {
+                if ($('#RatingFilterMD').is(':checked')) {
+                    $scope.applyRatingFilter = true;
+                } else {
+                    $scope.applyRatingFilter = false;
+                }
+            } else {
                 if ($('#RatingFilter').is(':checked')) {
                     $scope.applyRatingFilter = true;
                 } else {
                     $scope.applyRatingFilter = false;
                 }
-
-                if ($('#DateFilter').is(':checked')) {
-                    $scope.applyDateFilter = true;
-                } else {
-                    $scope.applyDateFilter = false;
-                }
             }
-            console.log($scope.applyScoreFilter +" "+ $scope.applyDateFilter +" "+ $scope.applyRatingFilter + " changeFunction");
+            console.log($scope.applyDateFilter  + " changeFunctionRating");
 
         };
 
