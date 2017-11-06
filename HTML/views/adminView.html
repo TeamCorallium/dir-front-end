@@ -37,7 +37,16 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <label ng-if="users.length == 0" translate="admin.NO_USER"></label>
                 <fieldset ng-if="users.length > 0">
-                    <legend translate="admin.STUFFS"></legend>
+                    <legend translate="admin.USERS"></legend>
+                    <div class="input-group well marginSearch">
+                        <input class="form-control" placeholder="Search..." type="text" id="searchInput" ng-model="search">
+                        <span class="input-group-btn">
+                            <a class="btn btn-primary" type="button" ng-click="searchUsers()">
+                                <i class="fa fa-search"></i>
+                                <label class="textColorWhite margin-bottom-0" translate="admin.SEARCH"></label>
+                            </a>
+                        </span>
+                    </div>
                     <form name="Stuff" role="form" ng-controller="FormController">
                         <ul class="post-list">
                             <li ng-repeat="user in users">

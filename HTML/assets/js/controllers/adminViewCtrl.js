@@ -17,6 +17,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
+        $scope.search = '';
 
         $scope.addStuff = function () {
             console.log($scope.stuff.color);
@@ -26,7 +27,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         };
 
         $scope.getUsers = function (page) {
-            RestService.fetchObjectByUrl(RestService.profileDir + '&page=' + page)
+            RestService.fetchObjectByUrl(RestService.profileDir + '?&search=' + $scope.search + '&page=' + page)
                 .then( function (data) {
                     $scope.user = data.results;
                     $scope.hasNext = data.next;
@@ -69,6 +70,10 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
                 $scope.currentPage -= 1;
                 $scope.getUsers($scope.currentPage);
             }
+        };
+
+        $scope.searchUsers = function () {
+            $scope.getUsers(1);
         };
 
     }]);

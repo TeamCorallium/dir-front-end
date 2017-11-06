@@ -120,6 +120,8 @@
     "STUFFS": "Stuff",
     "NEXT": "Next",
     "PREVIOUS": "Previous",
-    "NO_USER": "No exist users"
+    "NO_USER": "No exist users",
+    "USERS": "Users",
+    "SEARCH": "Search"
   }
 }
