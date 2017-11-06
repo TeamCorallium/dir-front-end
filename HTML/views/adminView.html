@@ -1,5 +1,35 @@
 <div class="profile-padding background-light" ng-controller="AdminViewCtrl">
     <div class="row">
-
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <form name="AddStuff" role="form" ng-controller="FormController">
+                <label>Adicionar stuff</label>
+                <div class="form-group">
+                    <label for="color" translate="admin.COLOR"></label>
+                    <input type="number" class="form-control" id="color" ng-class="(AddStuff.color.$dirty && AddStuff.color.$invalid) ? 'error' : ''"
+                        placeholder="color of stuff" name="color" ng-model="$parent.stuff.color" required>
+                </div>
+                <div class="form-group">
+                    <label for="size" translate="admin.SIZE"></label>
+                    <input type="text" class="form-control" id="size" ng-class="(AddStuff.size.$dirty && AddStuff.size.$invalid) ? 'error' : ''"
+                        placeholder="size of stuff" name="size" ng-model="$parent.stuff.size" required>
+                </div>
+                <div class="form-group">
+                    <label for="code" translate="admin.CODE"></label>
+                    <input type="text" class="form-control" id="code" ng-class="(AddStuff.code.$dirty && AddStuff.code.$invalid) ? 'error' : ''"
+                        placeholder="code of stuff" name="code" ng-model="$parent.stuff.code" required>
+                </div>
+                <div class="form-group">
+                    <label for="pin" translate="admin.PIN"></label>
+                    <input type="number" class="form-control" id="pin" ng-class="(AddStuff.pin.$dirty && AddStuff.pin.$invalid) ? 'error' : ''"
+                        placeholder="pin of stuff" name="pin" ng-model="$parent.stuff.pin" required>
+                </div>
+                <div clas="form-group">
+                    <a class="btn btn-primary ButtonRadius pull-right" ng-disabled="AddStuff.$invalid" ng-click="addStuff()">
+                        <i class="ti-plus"></i>
+                        <label translate="admin.ADD" class="textColorWhite margin-bottom-0 pointerHover"></label>
+                    </a>
+                </div>
+            </form>            
+        </div>
     </div>
 </div>
