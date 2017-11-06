@@ -43,11 +43,11 @@
                             <label class="textColorWhite margin-bottom-0" translate="admin.SEARCH"></label>
                         </a>
                     </span>
-                </div>
-                <label class="marging-top-10" ng-if="users.length == 0" translate="admin.NO_USER"></label>
-                <fieldset ng-if="users.length > 0">
-                    <legend translate="admin.USERS"></legend>                    
-                    <form name="Stuff" role="form" ng-controller="FormController">
+                </div>                
+                <fieldset>
+                    <legend translate="admin.USERS"></legend>
+                    <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" ng-if="users.length == 0" translate="admin.NO_USER"></label>
+                    <form name="Stuff" role="form" ng-controller="FormController" ng-if="users.length > 0">
                         <ul class="post-list">
                             <li ng-repeat="user in users">
                                 <div class="post-image">
@@ -68,11 +68,6 @@
                                             <i class="ti-trash"></i>
                                         </a>
                                     </div>
-                                    <!-- <div col-xs-1 col-sm-1 col-md-1 col-lg-1>
-                                        <a class="btn btn-default">
-                                            <i class="ti-pencil-alt"></i>
-                                        </a>
-                                    </div> -->
                                 </div>
                             </li>
                         </ul>

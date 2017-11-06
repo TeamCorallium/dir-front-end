@@ -1607,3 +1607,8 @@ span.stars span {
       position: relative;
       float: left;
   }
+
+  .NoUserStyles {
+    font-size: 24px !important;
+    text-align: center !important;
+  }

@@ -110,5 +110,18 @@
     "SEE_PROFILE": "請參閱設定檔",
     "EXPLORE_MORE": "流覽更多...",
     "BUY_TSHIRTS": "從 alibaba.com 購買所有技術."
+  },
+  "admin": {
+    "COLOR": "顏色",
+    "SIZE": "大小",
+    "CODE": "代碼",
+    "PIN": "針",
+    "ADD": "添加內容",
+    "STUFFS": "東西",
+    "NEXT": "下 »",
+    "PREVIOUS": "« 以前",
+    "NO_USER": "不存在使用者",
+    "USERS": "使用者",
+    "SEARCH": "搜索"
   }
 }

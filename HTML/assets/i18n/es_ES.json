@@ -110,5 +110,18 @@
     "SEE_PROFILE": "Ver perfil",
     "EXPLORE_MORE": "Explorar más...",
     "BUY_TSHIRTS": "Compra toda la tecnología desde alibaba.com."
+  },
+  "admin": {
+    "COLOR": "Color",
+    "SIZE": "Tamaño",
+    "CODE": "Codigo",
+    "PIN": "PIN",
+    "ADD": "Adicionar objeto",
+    "STUFFS": "Objeto",
+    "NEXT": "Siguiente »",
+    "PREVIOUS": "« Anterior",
+    "NO_USER": "No existen usuarios",
+    "USERS": "Usuarios",
+    "SEARCH": "Buscar"
   }
 }

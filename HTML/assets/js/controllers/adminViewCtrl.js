@@ -5,9 +5,7 @@
 
 app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
-
-        console.log($("#searchUsersInput").val() + " input");
-
+ 
         $scope.stuff = {
             color: '',
             size: '',
@@ -79,7 +77,6 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         };
 
         $("#searchUsersInput").on('keyup', function (e) {
-            console.log($scope.search + " search");
             if (e.keyCode == 13) {
                 $scope.getUsers(1);
             }
