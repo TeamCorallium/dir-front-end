@@ -14,47 +14,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $rootScope.viewProfile = false;
         }
 
-        // if ($(window).width() >= 768) {
-        //     $scope.applyDateFilter = false;
-        //     $scope.applyScoreFilter = false;
-        //     $scope.applyRatingFilter = false;
-        //     $scope.applyDateFilterMD = false;
-        //     $scope.applyScoreFilterMD = true;
-        //     $scope.applyRatingFilterMD = false;
-        // } else {
-        //     $scope.applyDateFilter = false;
-        //     $scope.applyScoreFilter = true;
-        //     $scope.applyRatingFilter = false;
-        //     $scope.applyDateFilterMD = false;
-        //     $scope.applyScoreFilterMD = false;
-        //     $scope.applyRatingFilterMD = false;
-        // }
-
-        // $(window).on("resize.doResize", function () {
-
-        //     $scope.$apply(function () {
-        //         if ($(window).width() >= 768) {
-        //             $scope.applyDateFilter = false;
-        //             $scope.applyScoreFilter = false;
-        //             $scope.applyRatingFilter = false;
-        //             $scope.applyDateFilterMD = false;
-        //             $scope.applyScoreFilterMD = true;
-        //             $scope.applyRatingFilterMD = false;
-        //         } else {
-        //             $scope.applyDateFilter = false;
-        //             $scope.applyScoreFilter = true;
-        //             $scope.applyRatingFilter = false;
-        //             $scope.applyDateFilterMD = false;
-        //             $scope.applyScoreFilterMD = false;
-        //             $scope.applyRatingFilterMD = false;
-        //         }
-        //     });
-        // });
-
-        $scope.$on("$destroy", function () {
-            $(window).off("resize.doResize"); //remove the handler added earlier
-        });
-
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
         $scope.orderRating = 'AscendingRating';
@@ -70,8 +29,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.getProfiles = function (page) {
 
             var filters = '';
-
-            console.log($scope.applyScoreFilter +" "+ $scope.applyDateFilter +" "+ $scope.applyRatingFilter);
 
             if ($scope.applyScoreFilter || $scope.applyDateFilter || $scope.applyRatingFilter) {
                 filters = '?ordering=';
@@ -180,7 +137,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         });
 
-        $scope.changeOrderClapFlagDate = function() {
+        $scope.changeOrderClapFlagDate = function () {
             if ($(window).width() >= 768) {
                 if ($('#DateFilterMD').is(':checked')) {
                     $scope.applyDateFilter = true;
@@ -194,11 +151,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyDateFilter = false;
                 }
             }
-            console.log($scope.applyRatingFilter + " changeFunctionDate");
-
         };
 
-        $scope.changeOrderClapFlagScore = function() {
+        $scope.changeOrderClapFlagScore = function () {
             if ($(window).width() >= 768) {
                 if ($('#ScoreFilterMD').is(':checked')) {
                     $scope.applyScoreFilter = true;
@@ -212,11 +167,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyScoreFilter = false;
                 }
             }
-            console.log($scope.applyScoreFilter +" changeFunctionScore");
-
         };
 
-        $scope.changeOrderClapFlagRating = function() {
+        $scope.changeOrderClapFlagRating = function () {
             if ($(window).width() >= 768) {
                 if ($('#RatingFilterMD').is(':checked')) {
                     $scope.applyRatingFilter = true;
@@ -230,8 +183,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyRatingFilter = false;
                 }
             }
-            console.log($scope.applyDateFilter  + " changeFunctionRating");
-
         };
 
     }]);
