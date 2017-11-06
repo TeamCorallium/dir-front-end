@@ -13,7 +13,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
             pin: ''
         };
 
-        $scope.user = [];
+        $scope.users = [];
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
@@ -29,16 +29,16 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         $scope.getUsers = function (page) {
             RestService.fetchObjectByUrl(RestService.profileDir + '?&search=' + $scope.search + '&page=' + page)
                 .then( function (data) {
-                    $scope.user = data.results;
+                    $scope.users = data.results;
                     $scope.hasNext = data.next;
                     $scope.hasPrevious = data.previous;
 
-                    for (var i = 0; i < $scope.user.length; i++) {
-                        if ($scope.user[i].avatar != '' && $scope.user[i].avatar != null) {
-                            var avatarArray = $scope.user[i].avatar.split("/");
-                            $scope.user[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                    for (var i = 0; i < $scope.users.length; i++) {
+                        if ($scope.users[i].avatar != '' && $scope.users[i].avatar != null) {
+                            var avatarArray = $scope.users[i].avatar.split("/");
+                            $scope.users[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                         } else {
-                            $scope.user[i].avatar = 'assets/images/default-user.png';
+                            $scope.users[i].avatar = 'assets/images/default-user.png';
                         }
                     }
                 },
