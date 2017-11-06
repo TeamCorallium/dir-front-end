@@ -58,15 +58,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
         $scope.orderRating = 'AscendingRating';
-        $scope.orderDateMD = 'AscendingDateMD';
-        $scope.orderScoreMD = 'AscendingScoreMD';
-        $scope.orderRatingMD = 'AscendingRatingMD';
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
         $scope.applyRatingFilter = false;
-        $scope.applyDateFilterMD = false;
-        $scope.applyScoreFilterMD = true;
-        $scope.applyRatingFilterMD = false;
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
