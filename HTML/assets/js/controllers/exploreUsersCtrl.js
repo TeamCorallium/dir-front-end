@@ -14,42 +14,42 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             $rootScope.viewProfile = false;
         }
 
-        if ($(window).width() >= 768) {
-            $scope.applyDateFilter = false;
-            $scope.applyScoreFilter = false;
-            $scope.applyRatingFilter = false;
-            $scope.applyDateFilterMD = false;
-            $scope.applyScoreFilterMD = true;
-            $scope.applyRatingFilterMD = false;
-        } else {
-            $scope.applyDateFilter = false;
-            $scope.applyScoreFilter = true;
-            $scope.applyRatingFilter = false;
-            $scope.applyDateFilterMD = false;
-            $scope.applyScoreFilterMD = false;
-            $scope.applyRatingFilterMD = false;
-        }
+        // if ($(window).width() >= 768) {
+        //     $scope.applyDateFilter = false;
+        //     $scope.applyScoreFilter = false;
+        //     $scope.applyRatingFilter = false;
+        //     $scope.applyDateFilterMD = false;
+        //     $scope.applyScoreFilterMD = true;
+        //     $scope.applyRatingFilterMD = false;
+        // } else {
+        //     $scope.applyDateFilter = false;
+        //     $scope.applyScoreFilter = true;
+        //     $scope.applyRatingFilter = false;
+        //     $scope.applyDateFilterMD = false;
+        //     $scope.applyScoreFilterMD = false;
+        //     $scope.applyRatingFilterMD = false;
+        // }
 
-        $(window).on("resize.doResize", function () {
+        // $(window).on("resize.doResize", function () {
 
-            $scope.$apply(function () {
-                if ($(window).width() >= 768) {
-                    $scope.applyDateFilter = false;
-                    $scope.applyScoreFilter = false;
-                    $scope.applyRatingFilter = false;
-                    $scope.applyDateFilterMD = false;
-                    $scope.applyScoreFilterMD = true;
-                    $scope.applyRatingFilterMD = false;
-                } else {
-                    $scope.applyDateFilter = false;
-                    $scope.applyScoreFilter = true;
-                    $scope.applyRatingFilter = false;
-                    $scope.applyDateFilterMD = false;
-                    $scope.applyScoreFilterMD = false;
-                    $scope.applyRatingFilterMD = false;
-                }
-            });
-        });
+        //     $scope.$apply(function () {
+        //         if ($(window).width() >= 768) {
+        //             $scope.applyDateFilter = false;
+        //             $scope.applyScoreFilter = false;
+        //             $scope.applyRatingFilter = false;
+        //             $scope.applyDateFilterMD = false;
+        //             $scope.applyScoreFilterMD = true;
+        //             $scope.applyRatingFilterMD = false;
+        //         } else {
+        //             $scope.applyDateFilter = false;
+        //             $scope.applyScoreFilter = true;
+        //             $scope.applyRatingFilter = false;
+        //             $scope.applyDateFilterMD = false;
+        //             $scope.applyScoreFilterMD = false;
+        //             $scope.applyRatingFilterMD = false;
+        //         }
+        //     });
+        // });
 
         $scope.$on("$destroy", function () {
             $(window).off("resize.doResize"); //remove the handler added earlier
@@ -61,12 +61,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.orderDateMD = 'AscendingDateMD';
         $scope.orderScoreMD = 'AscendingScoreMD';
         $scope.orderRatingMD = 'AscendingRatingMD';
-        // $scope.applyDateFilter = false;
-        // $scope.applyScoreFilter = true;
-        // $scope.applyRatingFilter = false;
-        // $scope.applyDateFilterMD = false;
-        // $scope.applyScoreFilterMD = true;
-        // $scope.applyRatingFilterMD = false;
+        $scope.applyDateFilter = false;
+        $scope.applyScoreFilter = true;
+        $scope.applyRatingFilter = false;
+        $scope.applyDateFilterMD = false;
+        $scope.applyScoreFilterMD = true;
+        $scope.applyRatingFilterMD = false;
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
@@ -77,13 +77,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             var filters = '';
 
-            if ($scope.applyScoreFilter || $scope.applyDateFilter || $scope.applyRatingFilter ||
-                $scope.applyScoreFilterMD || $scope.applyDateFilterMD || $scope.applyRatingFilterMD) {
+            if ($scope.applyScoreFilter || $scope.applyDateFilter || $scope.applyRatingFilter) {
                 filters = '?ordering=';
                 var flag = false;
 
-                if ($scope.applyScoreFilter || $scope.applyScoreFilterMD) {
-                    if ($scope.orderScore == 'AscendingScore' || $scope.orderScoreMD == 'AscendingScoreMD') {
+                if ($scope.applyScoreFilter) {
+                    if ($scope.orderScore == 'AscendingScore' || $scope.orderScore == 'AscendingScoreMD') {
                         filters += 'score';
                     } else {
                         filters += '-score';
@@ -91,12 +90,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     flag = true;
                 }
 
-                if ($scope.applyDateFilter || $scope.applyDateFilterMD) {
+                if ($scope.applyDateFilter) {
                     if (flag) {
                         filters += ",";
                     }
 
-                    if ($scope.orderDate == 'AscendingDate' || $scope.orderDateMD == 'AscendingDateMD') {
+                    if ($scope.orderDate == 'AscendingDate' || $scope.orderDate == 'AscendingDateMD') {
                         filters += 'created';
                     } else {
                         filters += '-created';
@@ -104,12 +103,12 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     flag = true;
                 }
 
-                if ($scope.applyRatingFilter || $scope.applyRatingFilterMD) {
+                if ($scope.applyRatingFilter) {
                     if (flag) {
                         filters += ",";
                     }
 
-                    if ($scope.orderRating == 'AscendingRating' || $scope.orderRatingMD == 'AscendingRatingMD') {
+                    if ($scope.orderRating == 'AscendingRating' || $scope.orderRating == 'AscendingRatingMD') {
                         filters += 'rating';
                     } else {
                         filters += '-rating';
