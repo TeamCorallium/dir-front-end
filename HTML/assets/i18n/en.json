@@ -110,5 +110,12 @@
     "SEE_PROFILE": "See Profile",
     "EXPLORE_MORE": "Explore more...",
     "BUY_TSHIRTS": "Buy all technology from alibaba.com."
+  },
+  "admin": {
+    "COLOR": "Color",
+    "SIZE": "Size",
+    "CODE": "Code",
+    "PIN": "PIN",
+    "ADD": "Add stuff"
   }
 }
