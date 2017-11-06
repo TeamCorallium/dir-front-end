@@ -1591,3 +1591,11 @@ span.stars span {
   .border-radius10 {
       border-radius: 10px !important;
   }
+
+  .adminInfoUser {
+      width: 90% !important;
+  }
+
+  .adminDeleteUser {
+      width: 10% !important;
+  }
