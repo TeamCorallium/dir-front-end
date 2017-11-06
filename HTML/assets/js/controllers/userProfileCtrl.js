@@ -188,7 +188,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('addsnippets', function (event, data) {
             $scope.user.snippets = [];
             $('#modalSnippets').modal('hide');
-            
+            $scope.title = '';
+            $scope.body = '';
             getSnippets($cookies.get('username'), 1);
         });
 
@@ -209,7 +210,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
             growl.success("QR Code Generated Correctly", { title: 'Generate QR Code' });
-            // $scope.profileQRCode = data;
             $scope.user.qrcode = data;
         });
 
@@ -277,4 +277,329 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var size = val / 5 * 100;
             return size + '%';
         };
+
+
+        // Add Social Network
+        $scope.socialnetwork = '';
+        $scope.url = '';
+        $scope.facebookName = '';
+        $scope.showUrlCamp = false;
+        $scope.activeFacebook = false;
+        $scope.manuallyCheck = false;
+        $scope.isConnected = false;
+
+        $scope.updateUrl = function () {
+
+            $scope.url = '';
+
+            switch ($scope.socialnetwork) {
+                case "Facebook": {
+                    $scope.url = 'https://www.facebook.com/';
+                    $scope.showUrlCamp = false;
+                    $scope.activeFacebook = true;
+                    $scope.isFacebookConnected();
+                    break;
+                };
+                case "Twitter": {
+                    $scope.url = 'https://twitter.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "LinkedIn": {
+                    $scope.url = 'https://www.linkedin.com/in/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Instagram": {
+                    $scope.url = 'https://www.instagram.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Reddit": {
+                    $scope.url = 'https://www.reddit.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Google": {
+                    $scope.url = 'https://plus.google.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "YouTube": {
+                    $scope.url = 'https://www.youtube.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "RSS": {
+                    $scope.url = 'https://www.rss.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Dropbox": {
+                    $scope.url = 'https://www.dropbox.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "GitHub": {
+                    $scope.url = 'https://github.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Skype": {
+                    $scope.url = 'https://www.skype.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Tumblr": {
+                    $scope.url = 'https://www.tumblr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Vimeo": {
+                    $scope.url = 'https://vimeo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "WordPress": {
+                    $scope.url = 'https://es.wordpress.org/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Yahoo": {
+                    $scope.url = 'https://www.yahoo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Flickr": {
+                    $scope.url = 'https://www.flickr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                default: {
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                }
+            }
+        };
+
+        $scope.updateUrl();
+
+        $scope.addSocialNetwork = function () {
+            var name = $scope.socialnetwork;
+            var url = $scope.url;
+
+            var type = '';
+
+            if (name != '' && url != '') {
+                switch (name) {
+                    case "Facebook": {
+                        type = 'ti-facebook';
+                        break;
+                    };
+                    case "Twitter": {
+                        type = 'ti-twitter';
+                        break;
+                    };
+                    case "LinkedIn": {
+                        type = 'ti-linkedin';
+                        break;
+                    };
+                    case "Instagram": {
+                        type = 'ti-instagram';
+                        break;
+                    };
+                    case "Reddit": {
+                        type = 'ti-reddit';
+                        break;
+                    };
+                    case "Google": {
+                        type = 'ti-google';
+                        break;
+                    };
+                    case "YouTube": {
+                        type = 'ti-youtube';
+                        break;
+                    };
+                    case "RSS": {
+                        type = 'ti-rss';
+                        break;
+                    };
+                    case "Dropbox": {
+                        type = 'ti-dropbox';
+                        break;
+                    };
+                    case "GitHub": {
+                        type = 'ti-github';
+                        break;
+                    };
+                    case "Skype": {
+                        type = 'ti-skype';
+                        break;
+                    };
+                    case "Tumblr": {
+                        type = 'ti-tumblr';
+                        break;
+                    };
+                    case "Vimeo": {
+                        type = 'ti-vimeo';
+                        break;
+                    };
+                    case "WordPress": {
+                        type = 'ti-wordpress';
+                        break;
+                    };
+                    case "Yahoo": {
+                        type = 'ti-yahoo';
+                        break;
+                    };
+                    case "Flickr": {
+                        type = 'ti-flickr';
+                        break;
+                    };
+                }
+
+                RestService.addSocialNetwork(name, url, type);
+
+            } else {
+                growl.success("Cannot exist empty fields", { title: 'Add Social Network' });
+            }
+        };
+
+        $rootScope.$on('addSocialNetworkError', function (event, data) {
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
+
+        $scope.activeManually = function () {
+            if ($scope.manuallyCheck) {
+                $scope.showUrlCamp = true;
+            } else {
+                $scope.showUrlCamp = false;
+            }
+        };
+
+        $scope.facebookLogin = function () {
+            if (!$scope.isFacebookConnected()) {
+                FB.login(function (response) {
+                    if (response.status === 'connected') {
+                        $scope.isConnected = true;
+                        FB.api('me', function (response) {
+                            console.log(response);
+                            $scope.facebookName = response.name;
+                            $scope.url = 'https://www.facebook.com/' + response.id;
+                            $scope.addSocialNetwork("Facebook", $scope.url);
+                        });
+                    } else {
+                        console.log("user canceled login or did not fully authorize");
+                    }
+                });
+            } else {
+                FB.api('me', function (response) {
+                    console.log(response);
+                });
+            }
+        };
+
+        $scope.isFacebookConnected = function () {
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    $scope.isConnected = true;
+                } else {
+                    $scope.isConnected = false;
+                }
+            });
+        };
+
+        $scope.isFacebookConnected();
+
+        $scope.continueAsOther = function () {
+            $scope.isConnected = false;
+            FB.logout(function (response) {
+                $scope.facebookLogin();
+            });
+        };
+
+        // start: keyup social network
+        $("#socialnetwork").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && title != null && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+
+        $("#url").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && title != null && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+        // end: keyup social network
+
+        // Add Snippets
+        $scope.snippets = '';
+        $scope.title = '';
+        $scope.body = '';
+
+        $scope.addSnippets = function () {
+            if ($scope.title != '' && $scope.body != '') {
+                RestService.addSnippet($scope.title, $scope.body);
+            } else {
+                growl.success("Cannot exist empty fields", { title: 'Add Snippet' });
+            }
+        };
+
+        $rootScope.$on('addSnippetsError', function (event, data) {
+            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
+
+        // start:  keyup snippets
+        $("#title").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                // var title = $('#title').val();
+                // var body = $('#body').val();
+                if ($scope.title != '' && $scope.body != '') {
+                    RestService.addSnippet($scope.title, $scope.body);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+
+        $("#body").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                // var title = $('#title').val();
+                // var body = $('#body').val();
+                if ($scope.title != '' && $scope.body != '') {
+                    RestService.addSnippet($scope.title, $scope.body);
+                } else {
+                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                }
+            }
+        });
+        // end: keyup snippets
     }]);

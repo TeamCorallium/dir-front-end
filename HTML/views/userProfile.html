@@ -178,9 +178,9 @@
     </section>
 
     <!-- start: MODAL SNIPPETS-->
-    <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalSnippets" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="FormController">
         <div class="modal-dialog">
-            <div class="modal-content" ng-controller="FormController">
+            <div class="modal-content">
                 <div class="modal-header padding-15">
                     <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
@@ -196,13 +196,13 @@
                             <label for="title" translate="user_profile.SNIPPET_TITLE"></label>
                             <div class="error form-hint" ng-show="AddSnippets.title.$dirty && AddSnippets.title.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <input type="text" class="form-control" ng-class="(AddSnippets.title.$dirty && AddSnippets.title.$invalid) ? 'error' : ''"
-                                id="title" name="title" placeholder="Enter snippet title" ng-required="true" ng-model="title">
+                                id="title" name="title" placeholder="Enter snippet title" ng-required="true" ng-model="$parent.title">
                         </div>
                         <div class="form-group">
                             <label for="body" translate="user_profile.SNIPPET_BODY"></label>
                             <div class="error form-hint" ng-show="AddSnippets.body.$dirty && AddSnippets.body.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <textarea class="form-control" ng-class="(AddSnippets.body.$dirty && AddSnippets.body.$invalid) ? 'error' : ''" id="user"
-                                name="body" placeholder="Enter snippet body" ng-required="true" ng-model="body"></textarea>
+                                name="body" placeholder="Enter snippet body" ng-required="true" ng-model="$parent.body"></textarea>
                         </div>
                     </form>
                 </div>
@@ -211,7 +211,7 @@
                         <i class="ti-close"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.CLOSE"></label>
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-controller="AddSnippetsCtrl" ng-disabled="AddSnippets.$invalid" ng-click="addSnippets(title,body)">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="AddSnippets.$invalid" ng-click="addSnippets()">
                         <i class="ti-plus"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD"></label>
                     </a>
@@ -222,8 +222,7 @@
     <!-- end: MODAL SNIPPETS-->
 
     <!-- start: MODAL SOCIAL NETWORK-->
-    <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true"
-        ng-controller="AddSocialNetworkCtrl">
+    <div class="modal fade" id="modalSocialNetwork" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="FormController">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header padding-15">
@@ -241,7 +240,7 @@
                             <label for="socialnetwork" translate="user_profile.SOCIAL_NETWORK"></label>
                             <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''"
-                                ng-model="socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
+                                ng-model="$parent.socialnetwork" id="socialnetwork" name="socialnetwork" ng-required="true">
                                 <option ng-selected="true" value="0" disabled selected translate="user_profile.SELECT_SOCIAL"></option>
                                 <option value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
@@ -282,10 +281,10 @@
                             </a>
                         </div>
                         <label class="margin-top-10" ng-show="activeFacebook">
-                            <input type="checkbox" ng-model="manuallyCheck" ng-change="activeManually()">
+                            <input type="checkbox" ng-model="$parent.manuallyCheck" ng-change="activeManually()">
                             <strong translate="user_profile.TYPE_URL"></strong>
                         </label>
-                        <div class="form-group" ng-controller="FormController" ng-show="showUrlCamp">
+                        <div class="form-group" ng-show="showUrlCamp">
                             <label for="url" translate="user_profile.SOCIAL_URL"></label>
                             <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak>{{"This field is required."}}</div>
                             <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''"
@@ -298,7 +297,7 @@
                         <i class="ti-close"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.CLOSE"></label>
                     </a>
-                    <a class="btn btn-primary ButtonRadius" ng-controller="FormController" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork(socialnetwork,url)">
+                    <a class="btn btn-primary ButtonRadius" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork()">
                         <i class="ti-plus"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD"></label>
                     </a>
