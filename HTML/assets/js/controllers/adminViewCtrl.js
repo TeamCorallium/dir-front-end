@@ -6,6 +6,8 @@
 app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
 
+        console.log($("#searchUsersInput") + " input");
+        
         $scope.stuff = {
             color: '',
             size: '',
