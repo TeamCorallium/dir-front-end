@@ -179,4 +179,47 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 $scope.getProfiles(1);
             }
         });
+
+        $scope.changeOrderClapFlag = function() {
+            if ($(window).width() >= 768) {
+                if ($('#ScoreFilterMD').is(':checked')) {
+                    $scope.applyScoreFilter = true;
+                } else {
+                    $scope.applyScoreFilter = false;
+                }
+
+                if ($('#RatingFilterMD').is(':checked')) {
+                    $scope.applyRatingFilter = true;
+                } else {
+                    $scope.applyRatingFilter = false;
+                }
+
+                if ($('#DateFilterMD').is(':checked')) {
+                    $scope.applyDateFilter = true;
+                } else {
+                    $scope.applyDateFilter = false;
+                }
+            } else {
+                if ($('#ScoreFilter').is(':checked')) {
+                    $scope.applyScoreFilter = true;
+                } else {
+                    $scope.applyScoreFilter = false;
+                }
+
+                if ($('#RatingFilter').is(':checked')) {
+                    $scope.applyRatingFilter = true;
+                } else {
+                    $scope.applyRatingFilter = false;
+                }
+
+                if ($('#DateFilter').is(':checked')) {
+                    $scope.applyDateFilter = true;
+                } else {
+                    $scope.applyDateFilter = false;
+                }
+            }
+            console.log($scope.applyScoreFilter +" "+ $scope.applyDateFilter +" "+ $scope.applyRatingFilter + " changeFunction");
+
+        };
+
     }]);
