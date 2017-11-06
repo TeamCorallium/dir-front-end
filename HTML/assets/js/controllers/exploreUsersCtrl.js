@@ -71,6 +71,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             var filters = '';
 
+            console.log($scope.applyScoreFilter +" "+ $scope.applyDateFilter +" "+ $scope.applyRatingFilter);
+
             if ($scope.applyScoreFilter || $scope.applyDateFilter || $scope.applyRatingFilter) {
                 filters = '?ordering=';
                 var flag = false;
