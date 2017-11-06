@@ -1593,9 +1593,17 @@ span.stars span {
   }
 
   .adminInfoUser {
-      width: 90% !important;
+      width: 85% !important;
+      text-align: left !important;
+      display: block;
+      position: relative;
+      float: left;
   }
 
   .adminDeleteUser {
-      width: 10% !important;
+      width: 5% !important;
+      text-align: left !important;
+      display: block;
+      position: relative;
+      float: left;
   }

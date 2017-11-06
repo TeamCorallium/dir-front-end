@@ -39,7 +39,7 @@
                 <fieldset ng-if="users.length > 0">
                     <legend translate="admin.USERS"></legend>
                     <div class="input-group well marginSearch">
-                        <input class="form-control" placeholder="Search..." type="text" id="searchInput" ng-model="$parent.search">
+                        <input class="form-control" placeholder="Search..." type="text" id="searchUsersInput" ng-model="$parent.search">
                         <span class="input-group-btn">
                             <a class="btn btn-primary" type="button" ng-click="searchUsers()">
                                 <i class="fa fa-search"></i>
@@ -61,7 +61,7 @@
                                     <div class="adminInfoUser">
                                         <a ng-show="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.owner}}</a>
                                         <a ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
-                                        <h5>{{user.info | htmlToPlaintext | words:10 :true}}</h5>
+                                        <h5>{{user.info | htmlToPlaintext | words:40 :true}}</h5>
                                     </div>
                                     <div class="adminDeleteUser">
                                         <a class="btn btn-red opacity6">
