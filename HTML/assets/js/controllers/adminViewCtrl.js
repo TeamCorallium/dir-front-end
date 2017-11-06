@@ -47,6 +47,8 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
                 );
         };
 
+        $scope.getUsers(1);
+
         $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
