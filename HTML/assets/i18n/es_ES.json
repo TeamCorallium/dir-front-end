@@ -25,7 +25,8 @@
     "FAQ": "FAQ",
     "CONTACT_US": "Contáctanos",
     "COPYRIGHT": "&copy; Derechos de autor",
-    "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados."
+    "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados.",
+    "MANAGE_PAGE": "Administrar página"
   },
   "user_profile": {
     "RATING": "Valoración:",

@@ -6,6 +6,8 @@
 app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
     function ($scope, RestService, $state, $rootScope, $cookies, growl) {
 
+        $scope.administrator = false;        
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -26,6 +28,13 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         };
 
         $rootScope.$on('connected', function (event, data) {
+            
+            if ($cookies.get('username') === 'admin') {
+                $scope.administrator = true;
+            } else {
+                $scope.administrator = false;
+            }
+
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
