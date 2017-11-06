@@ -179,5 +179,4 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 $scope.getProfiles(1);
             }
         });
-
     }]);
