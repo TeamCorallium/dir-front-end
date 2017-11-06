@@ -188,7 +188,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyDateFilter = false;
                 }
             } else {
-                if ($('#DateFilter').is(':checked')) {
+                if ($('#DateFilterXS').is(':checked')) {
                     $scope.applyDateFilter = true;
                 } else {
                     $scope.applyDateFilter = false;
@@ -206,7 +206,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyScoreFilter = false;
                 }
             } else {
-                if ($('#ScoreFilter').is(':checked')) {
+                if ($('#ScoreFilterXS').is(':checked')) {
                     $scope.applyScoreFilter = true;
                 } else {
                     $scope.applyScoreFilter = false;
@@ -224,7 +224,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.applyRatingFilter = false;
                 }
             } else {
-                if ($('#RatingFilter').is(':checked')) {
+                if ($('#RatingFilterXS').is(':checked')) {
                     $scope.applyRatingFilter = true;
                 } else {
                     $scope.applyRatingFilter = false;
