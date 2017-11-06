@@ -188,7 +188,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('addsnippets', function (event, data) {
             $scope.user.snippets = [];
             $('#modalSnippets').modal('hide');
-
+            
             getSnippets($cookies.get('username'), 1);
         });
 

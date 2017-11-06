@@ -247,13 +247,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             });            
         };
 
-        $rootScope.$on('deleteSocialNetwork', function (event, data) {
-            $scope.user.socialnetworks = [];
-            getSocialNetworks($cookies.get('username'));
-
-            $scope.cleanMessageSelected();
-            $scope.getMessageReceiver();
-            $scope.getMessageSend();
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {            
             SweetAlert.swal({
                 title: "Deleted!",
                 text: "Your social network has been deleted.",
@@ -261,6 +255,8 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                 confirmButtonColor: "#007AFF"
             });
 
+            $scope.user.socialnetworks = [];
+            getSocialNetworks($cookies.get('username'));
             // growl.success("Social network delete correctly.", { title: 'Delete Social Network' });
         });
 
@@ -268,13 +264,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             growl.error("Error when attempting to remove their social network. Please check the status of your network.", { title: 'Delete Social Network' });
         });
 
-        $rootScope.$on('deleteSnippet', function (event, data) {
-            $scope.user.snippets = [];
-            getSnippets($cookies.get('username'), 1);
-
-            $scope.cleanMessageSelected();
-            $scope.getMessageReceiver();
-            $scope.getMessageSend();
+        $rootScope.$on('deleteSnippet', function (event, data) {            
             SweetAlert.swal({
                 title: "Deleted!",
                 text: "Your snippet has been deleted.",
@@ -282,6 +272,8 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
                 confirmButtonColor: "#007AFF"
             });
 
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
             // growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
         });
 
@@ -352,6 +344,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.next = function () {
+            console.log($scope.noNext + " $scope.noNext");
             if (!$scope.noNext) {
                 $scope.currentPage += 1;
                 getSnippets($scope.user.username, $scope.currentPage);
