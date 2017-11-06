@@ -58,6 +58,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/faq',
             templateUrl: 'views/faq.html',
             resolve: loadSequence('faqCtrl')
+        }).state('admin', {
+            url: '/admin',
+            templateUrl: 'views/adminView.html',
+            resolve: loadSequence('adminViewCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
