@@ -138,7 +138,7 @@
                                         <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
                                         <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
                                         <p class="text-dark padding-left-10 padding-right-10">
-                                            {{profile.info}}
+                                            {{profile.info | htmlToPlaintext | words:18 :true}}
                                         </p>
                                     </div>
                                     <div class="buttonContainer">

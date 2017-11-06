@@ -170,7 +170,7 @@
                                                     <div class="post-info">
                                                         <a ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
                                                         <a ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
-                                                        <h5>{{popularUser.info | htmlToPlaintext | words:18 :true}}</h5>
+                                                        <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
                                                 <li class="ListMoreUser">
