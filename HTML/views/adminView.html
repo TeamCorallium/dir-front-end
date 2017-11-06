@@ -38,8 +38,8 @@
                 <label ng-if="users.length == 0" translate="admin.NO_USER"></label>
                 <fieldset ng-if="users.length > 0">
                     <legend translate="admin.USERS"></legend>
-                    <div class="input-group well marginSearch">
-                        <input class="form-control" placeholder="Search..." type="text" id="searchUsersInput" ng-model="$parent.search">
+                    <div class="input-group well">
+                        <input class="form-control" placeholder="Search..." type="text" id="searchUsersInput" ng-model="search">
                         <span class="input-group-btn">
                             <a class="btn btn-primary" type="button" ng-click="searchUsers()">
                                 <i class="fa fa-search"></i>
@@ -63,8 +63,8 @@
                                         <a ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
                                         <h5>{{user.info | htmlToPlaintext | words:40 :true}}</h5>
                                     </div>
-                                    <div class="adminDeleteUser">
-                                        <a class="btn btn-red opacity6">
+                                    <div class="adminDeleteUser pull-right">
+                                        <a class="btn btn-red opacity6 pull-right">
                                             <i class="ti-trash"></i>
                                         </a>
                                     </div>
