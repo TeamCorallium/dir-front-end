@@ -292,14 +292,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.next = function () {
-            if (!$scope.noNext) {
+            if (!$scope.noNext()) {
                 $scope.currentPage += 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }
         };
 
         $scope.previous = function () {
-            if (!$scope.noPrevious) {
+            if (!$scope.noPrevious()) {
                 $scope.currentPage -= 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }

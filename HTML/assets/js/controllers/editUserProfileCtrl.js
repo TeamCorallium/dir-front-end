@@ -257,7 +257,6 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
             $scope.user.socialnetworks = [];
             getSocialNetworks($cookies.get('username'));
-            // growl.success("Social network delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
@@ -274,7 +273,6 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
             $scope.user.snippets = [];
             getSnippets($cookies.get('username'), 1);
-            // growl.success("Snippet delete correctly.", { title: 'Delete Social Network' });
         });
 
         $rootScope.$on('deleteSnippetError', function (event, data) {
@@ -344,15 +342,14 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.next = function () {
-            console.log($scope.noNext + " $scope.noNext");
-            if (!$scope.noNext) {
+            if (!$scope.noNext()) {
                 $scope.currentPage += 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }
         };
 
         $scope.previous = function () {
-            if (!$scope.noPrevious) {
+            if (!$scope.noPrevious()) {
                 $scope.currentPage -= 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }
@@ -362,7 +359,6 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             if (psw === psw2) {
                 RestService.changePassword($scope.user.username, psw);
             } else {
-                // growl.error("Password not match.", { title: 'Password Change' });
                 $('#msg-block').show();
             }
         };
