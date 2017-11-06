@@ -77,6 +77,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         };
 
         $("#searchUsersInput").on('keyup', function (e) {
+            console.log($scope.search + " search");
             if (e.keyCode == 13) {
                 $scope.getUsers(1);
             }
