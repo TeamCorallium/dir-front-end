@@ -116,6 +116,10 @@
     "SIZE": "Size",
     "CODE": "Code",
     "PIN": "PIN",
-    "ADD": "Add stuff"
+    "ADD": "Add stuff",
+    "STUFFS": "Stuff",
+    "NEXT": "Next",
+    "PREVIOUS": "Previous",
+    "NO_USER": "No exist users"
   }
 }
