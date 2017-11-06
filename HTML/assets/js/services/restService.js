@@ -14,6 +14,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var imageDownload = 'http://www.dir.com:8888/api/qrcode';
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
     var messages = 'http://www.dir.com:8888/api/messages/';
+    var sendMessages = 'http://www.dir.com:8888/api/send-message/';
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
 
@@ -200,7 +201,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         sendMessage: function (sender, receiver, subject, body, readed) {
             $http({
                 method: 'POST',
-                url: messages,
+                url: sendMessages,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
@@ -459,8 +460,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchMessages: function (username, option) {
-            return $http.get(messages + "?" + option + "=" + username)
+        fetchMessages: function () {
+            return $http.get(messages)
                 .then(
                 function (response) {
                     return response.data;

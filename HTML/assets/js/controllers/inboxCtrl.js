@@ -30,38 +30,30 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                     $('#MessageInboxBox').show();
                     $('#MessageReadBox').hide();
                 }
-                $scope.getMessageReceiver();
             } else {
                 $scope.inboxFlag = false;
                 if ($(window).width() <= 767) {
                     $('#MessageSendBox').show();
                     $('#MessageReadBox').hide();
-                }
-                $scope.getMessageSend();
+                }                
             }
+            $scope.getMessages();
         };
 
-        $scope.getMessageSend = function () {
+        $scope.getMessages = function () {
             $scope.messagesSend = [];
-
-            RestService.fetchMessages($cookies.get('username'), "sender")
-                .then(
-                function (data) {
-                    $scope.messagesSend = data;
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
-                );
-        };
-
-        $scope.getMessageReceiver = function () {
             $scope.messagesInbox = [];
 
-            RestService.fetchMessages($cookies.get('username'), "receiver")
+            RestService.fetchMessages()
                 .then(
                 function (data) {
-                    $scope.messagesInbox = data;
+                    for (var i=0; i<data.length; i++){
+                        if (data[i].sender == $cookies.get('username')) {
+                            $scope.messagesSend.push(data[i]);
+                        } else {
+                            $scope.messagesInbox.push(data[i]);
+                        }
+                    }                    
                 },
                 function (errResponse) {
                     console.log(errResponse);
@@ -69,8 +61,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 );
         };
 
-        $scope.getMessageReceiver();
-        $scope.getMessageSend();
+        $scope.getMessages();
 
         $scope.getCount = function () {
             return filterFilter($scope.messagesInbox, { readed: false }).length;
@@ -238,8 +229,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
         $rootScope.$on('deleteMessage', function (event, data) {
             $scope.cleanMessageSelected();
-            $scope.getMessageReceiver();
-            $scope.getMessageSend();
+            $scope.getMessages();
             SweetAlert.swal({
                 title: "Deleted!",
                 text: "Your message has been deleted.",
