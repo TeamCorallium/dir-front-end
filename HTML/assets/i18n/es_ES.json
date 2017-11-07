@@ -123,6 +123,7 @@
     "PREVIOUS": "« Anterior",
     "NO_USER": "No existen usuarios",
     "USERS": "Usuarios",
-    "SEARCH": "Buscar"
+    "SEARCH": "Buscar",
+    "NO_STUFFS": "No existen objetos"
   }
 }

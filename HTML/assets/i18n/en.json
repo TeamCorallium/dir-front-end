@@ -118,11 +118,12 @@
     "CODE": "Code",
     "PIN": "PIN",
     "ADD": "Add stuff",
-    "STUFFS": "Stuff",
+    "STUFFS": "Stuffs",
     "NEXT": "Next »",
     "PREVIOUS": "« Previous",
     "NO_USER": "No exist users",
     "USERS": "Users",
-    "SEARCH": "Search"
+    "SEARCH": "Search",
+    "NO_STUFFS": "No exist stuff"
   }
 }
