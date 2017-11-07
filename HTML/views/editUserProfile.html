@@ -132,6 +132,11 @@
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 marginTop25XS">
                     <div>
+                        <a data-toggle="modal" data-target="#modalAddTShirt" type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-plus ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <span translate="edit_profile.ADD_TSHIRT"></span>
+                        </a>
+                    </div>
+                    <div>
                         <a data-toggle="modal" data-target="#modalChangePassword" type="button" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-key
                                                                         ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <span translate="edit_profile.CHANGE_PASSWORD"></span>
@@ -143,7 +148,7 @@
                             <span translate="edit_profile.SAVE_PROFILE"></span>
                         </a>
                     </div>
-                    <div class="paddingViewProfile">
+                    <!-- <div class="paddingViewProfile">
                         <aside class="sidebar">
                             <div class="tabbable">
                                 <div class="tabs">
@@ -185,7 +190,7 @@
                                 </div>
                             </div>
                         </aside>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>
@@ -272,4 +277,39 @@
         </div>
     </div>
     <!-- end: MODAL CHANGE PASSWORD-->
+
+    <!-- start: MODAL ADD T-SHIRTS-->
+    <div class="modal fade login-register-form" id="modalAddTShirt" role="dialog">
+            <div class="modal-dialog modal-sm" ng-controller="FormController">
+                <div class="modal-content">
+                    <div class="modal-header" ng-controller="CloseCtrl">
+                        <div class="modal-header padding-15">
+                            <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <h4 class="modal-title">
+                                <i class="ti-plus"></i>
+                                <label translate="edit_profile.ADD_TSHIRT"></label>
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="modal-body">
+                        <form name="AddTShirts" role="form">
+                            
+                        </form>
+                    </div>
+                    <div class="modal-footer padding-15">
+                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                            <i class="ti-close"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
+                        </a>
+                        <a class="btn btn-primary ButtonRadius" ng-disabled="AddTShirts.$invalid" ng-click="">
+                            <i class="ti-plus"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.ADD_TSHIRT"></label>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end: MODAL MODAL ADD T-SHIRTS-->
 </div>

@@ -100,7 +100,8 @@
     "TEXT_PASSWORD": "要符合我們的強密碼原則, 您需要使用足夠強的密碼。密碼必須超過7個字元.",
     "PASSWORD_AGAIN": "密碼:",
     "PASSWORD_MATCH": "密碼不匹配.",
-    "CLOSE": "關閉"
+    "CLOSE": "關閉",
+    "ADD_TSHIRT": "連結 t恤衫"
   },
   "home": {
     "TEXT_TSHIRTS" : "t恤衫與技術",

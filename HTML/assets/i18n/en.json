@@ -100,7 +100,8 @@
     "TEXT_PASSWORD": "To conform with our Strong Password policy, you are required to use a sufficiently strong password. Password must be more than 7 characters.",
     "PASSWORD_AGAIN": "Password again:",
     "PASSWORD_MATCH": "Passwords don't match.",
-    "CLOSE": "Close"
+    "CLOSE": "Close",
+    "ADD_TSHIRT": "Link T-Shirt"
   },
   "home": {
     "TEXT_TSHIRTS" : "T-shirts with technology",

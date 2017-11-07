@@ -100,7 +100,8 @@
     "TEXT_PASSWORD": "Para ajustarse a nuestra política de contraseñas fuertes, se requiere que utilice una contraseña suficientemente fuerte. La contraseña debe ser de más de 7 caracteres.",
     "PASSWORD_AGAIN": "Repetir contraseña:",
     "PASSWORD_MATCH": "Las contraseñas no coinciden.",
-    "CLOSE": "Cerrar"
+    "CLOSE": "Cerrar",
+    "ADD_TSHIRT": "Adicionar camiseta"
   },
   "home": {
     "TEXT_TSHIRTS" : "Camisetas con tecnología",
@@ -117,7 +118,7 @@
     "CODE": "Codigo",
     "PIN": "PIN",
     "ADD": "Adicionar objeto",
-    "STUFFS": "Objeto",
+    "STUFFS": "Objetos",
     "NEXT": "Siguiente »",
     "PREVIOUS": "« Anterior",
     "NO_USER": "No existen usuarios",
