@@ -557,7 +557,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchStcoks: function () {
+        fetchStocks: function () {
             return $http.get(stocks)
                 .then(
                 function (response) {

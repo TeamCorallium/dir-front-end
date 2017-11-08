@@ -22,7 +22,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
 
         $scope.getStocks = function () {
             $scope.stocks = [];
-            RestService.fetchStcoks()
+            RestService.fetchStocks()
                 .then( function (data) {
                     $scope.stocks = data;
                 },
