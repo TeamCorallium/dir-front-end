@@ -420,6 +420,17 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         // ADD T-Shirts 
         $scope.addTshirt = function() {
-            console.log($scope.codeModal + " $scope.codeModal = '';");
+            RestService.addTShirt($scope.codeModal);
         };
+
+        $scope.TShirtLinks = [];
+
+        $rootScope.$on('addTshirt', function (event, data) {
+            $scope.TShirtLinks.push($scope.codeModal);
+            $scope.codeModal = '';
+        });
+
+        $rootScope.$on('addTshirtErrorBad', function (event, data) {
+            growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
+        });
     }]);

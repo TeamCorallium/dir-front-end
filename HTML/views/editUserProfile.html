@@ -306,8 +306,8 @@
                             </div>
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 <ul class="list-unstyled">
-                                    <li ng-repeat="">
-
+                                    <li ng-repeat="tshirt in TShirtLinks">
+                                        <label>{{tshirt}}</label>
                                     </li>
                                 </ul>
                             </div>
@@ -318,10 +318,10 @@
                             <i class="ti-close"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
                         </a>
-                        <a class="btn btn-primary ButtonRadius" ng-disabled="AddTShirts.$invalid" ng-click="">
+                        <!-- <a class="btn btn-primary ButtonRadius" ng-disabled="AddTShirts.$invalid" ng-click="">
                             <i class="ti-plus"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.ADD_TSHIRT"></label>
-                        </a>
+                        </a> -->
                     </div>
                 </div>
             </div>
