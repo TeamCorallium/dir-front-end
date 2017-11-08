@@ -432,6 +432,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         });
 
         $rootScope.$on('addTshirtErrorBad', function (event, data) {
+            console.log("llega aqui");
             growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
         });
     }]);
