@@ -7,13 +7,26 @@
                     <form name="AddStuff" role="form" ng-controller="FormController">
                         <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <label for="color" translate="admin.COLOR"></label>
-                            <input type="text" class="form-control" id="color" ng-class="(AddStuff.color.$dirty && AddStuff.color.$invalid) ? 'error' : ''"
-                                placeholder="color of stuff" name="color" ng-model="$parent.stuff.color" required>
+                            <!-- <input type="text" class="form-control" id="color" ng-class="(AddStuff.color.$dirty && AddStuff.color.$invalid) ? 'error' : ''"
+                                placeholder="color of stuff" name="color" ng-model="$parent.stuff.color" required> -->
+                            <select class="cs-select cs-skin-elastic" ng-model="$parent.stuff.color">
+                                <option value="White" selected>White</option>
+                                <option value="Black">Black</option>
+                                <option value="Green">Green</option>
+                                <option value="Gray">Gray</option>
+                            </select>
                         </div>
                         <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <label for="size" translate="admin.SIZE"></label>
-                            <input type="text" class="form-control" id="size" ng-class="(AddStuff.size.$dirty && AddStuff.size.$invalid) ? 'error' : ''"
-                                placeholder="size of stuff" name="size" ng-model="$parent.stuff.size" required>
+                            <!-- <input type="text" class="form-control" id="size" ng-class="(AddStuff.size.$dirty && AddStuff.size.$invalid) ? 'error' : ''"
+                                placeholder="size of stuff" name="size" ng-model="$parent.stuff.size" required> -->
+                            <select class="cs-select cs-skin-elastic" ng-model="$parent.stuff.size">
+                                <option value="S" selected>S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option>
+                                <option value="XL">XL</option>
+                                <option value="XXL">XXL</option>
+                            </select>
                         </div>
                         <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
                             <label for="code" translate="admin.CODE"></label>
@@ -38,25 +51,49 @@
                 <fieldset>
                     <legend translate="admin.STUFFS"></legend>                    
                     <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" translate="admin.NO_STUFFS" ng-if="stocks.length == 0"></label>
+                    <form name="titleStuff" role="form" ng-if="stocks.length > 0">
+                        <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <label for="color" translate="admin.COLOR"></label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                <label for="size" translate="admin.SIZE"></label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <label for="code" translate="admin.CODE"></label>
+                        </div>
+                        <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <label for="pin" translate="admin.PIN"></label>
+                        </div>
+                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                            <a class="btn btn-red opacity6 pull-right">
+                                <i class="ti-trash"></i>
+                            </a>
+                        </div>
+                    </form>
                     <ul class="post-list" ng-if="stocks.length > 0">
                         <li ng-repeat="stock in stocks">
                             <form name="AddStuff" role="form">                                    
-                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                     <label>{{stock.color}}</label>
                                 </div>
-                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                     <label>{{stock.size}}</label>
                                 </div>
                                 <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
                                     <label>{{stock.code}}</label>
                                 </div>
                                 <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                    <label>{{stock.ping}}</label>
+                                    <label>{{stock.pin}}</label>
+                                </div>
+                                <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                    <a class="btn btn-red opacity6 pull-right">
+                                        <i class="ti-trash"></i>
+                                    </a>
                                 </div>
                             </form>
                         </li>
                     </ul>
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0" ng-if="$parent.stocks.lenght > 0">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0" ng-if="$parent.stocks.length > 0">
                         <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
                             <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
                                 <li ng-class="{disabled: noPreviousStuff()||ngDisabled, previous: align}" class="previous btnRadius10">
