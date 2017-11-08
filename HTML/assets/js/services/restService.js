@@ -34,6 +34,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var messages = 'http://www.dircoolstuff.com/api/messages/';
     // var updatePassword = 'http://www.dircoolstuff.com/api/api-auth/update/';
     // var clapDir = 'http://www.dircoolstuff.com/api/clap-profile/';
+    // var linkStuff = 'http://www.dircoolstuff.com/api/link-stuff/';
+    // var stocks = 'http://www.dircoolstuff.com/api/stocks/';
 
     return {
         loginNext: loginNext,
@@ -509,7 +511,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         deleteUser: function (id) {
             $http({
                 method: 'DELETE',
-                url: id + users + "/",
+                url: users + id + "/",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
