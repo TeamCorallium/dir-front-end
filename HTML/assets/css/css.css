@@ -1616,3 +1616,13 @@ span.stars span {
   .deleteStuffMargin{
     margin-top: -08px !important;
   }
+
+  .colorSuccessStock {
+      color: rgb(10, 228, 10);
+      opacity: 0.6;        
+  }
+
+  .colorErrorStock {
+    color: rgb(207, 7, 7);
+    opacity: 0.6;
+  }
