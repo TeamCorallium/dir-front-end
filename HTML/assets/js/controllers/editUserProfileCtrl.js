@@ -424,13 +424,27 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.TShirtLinks = [];
+        $scope.tshirt = {
+            code: '',
+            class: ''
+        };
 
         $rootScope.$on('addTshirt', function (event, data) {
-            $scope.TShirtLinks.push($scope.codeModal);
+            $scope.tshirt.code = $scope.codeModal;
+            $scope.tshirt.class = 'success';
+            $scope.TShirtLinks.push($scope.tshirt);
+            $scope.tshirt.code = '';
+            $scope.tshirt.class = '';
             $scope.codeModal = '';
         });
 
         $rootScope.$on('addTshirtErrorBad', function (event, data) {
+            $scope.tshirt.code = $scope.codeModal;
+            $scope.tshirt.class = 'wrong';
+            $scope.TShirtLinks.push($scope.tshirt);
+            $scope.tshirt.code = '';
+            $scope.tshirt.class = '';
+            $scope.codeModal = '';
             growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
         });
     }]);
