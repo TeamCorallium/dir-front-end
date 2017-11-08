@@ -433,11 +433,9 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             tshirtModal.code = $scope.codeModal;
             tshirtModal.class = 'success';
             $scope.TShirtLinks.push($scope.tshirtModal);
-            for (var i=0; i<$scope.TShirtLinks; i++) {
+            for (var i=0; i<$scope.TShirtLinks.length; i++) {
                 console.log($scope.TShirtLinks[i].code);
             }
-            tshirtModal.code = '';
-            tshirtModal.class = '';
             $scope.codeModal = '';
         });
 
@@ -445,7 +443,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             tshirtModal.code = $scope.codeModal;
             tshirtModal.class = 'wrong';
             $scope.TShirtLinks.push($scope.tshirtModal);
-            for (var i=0; i<$scope.TShirtLinks; i++) {
+            for (var i=0; i<$scope.TShirtLinks.length; i++) {
                 console.log($scope.TShirtLinks[i].code);
             }
             $scope.codeModal = '';
