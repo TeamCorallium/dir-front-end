@@ -47,7 +47,8 @@
     "CONTINUE_AS_OTHER": "Continua como otro usuario",
     "LOG_IN_FACEBOOK": "Inicia sesión con Facebook",
     "TYPE_URL": "Escribe la url manualmente:",
-    "SOCIAL_URL": "Url de la red social"
+    "SOCIAL_URL": "Url de la red social",
+    "EDIT_PROFILE": "Editar perfil"
   },
   "view_profile": {
     "RATING": "Valoración:",

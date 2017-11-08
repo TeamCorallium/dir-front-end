@@ -47,7 +47,8 @@
     "CONTINUE_AS_OTHER": "Continue as other",
     "LOG_IN_FACEBOOK": "Login with Facebook",
     "TYPE_URL": "Type Facebook URL manually:",
-    "SOCIAL_URL": "Social network url"
+    "SOCIAL_URL": "Social network url",
+    "EDIT_PROFILE": "Edit Profile"
   },
   "view_profile": {
     "RATING": "Rating:",
