@@ -433,6 +433,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             $scope.tshirtModal.code = $scope.codeModal;
             $scope.tshirtModal.class = 'success';
             $scope.TShirtLinks.push($scope.tshirtModal);
+            console.log($scope.TShirtLinks.length);
             $scope.codeModal = '';
         });
 
@@ -440,6 +441,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             $scope.tshirtModal.code = $scope.codeModal;
             $scope.tshirtModal.class = 'wrong';
             $scope.TShirtLinks.push($scope.tshirtModal);
+            console.log($scope.TShirtLinks.length);
             $scope.codeModal = '';
             growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
         });
