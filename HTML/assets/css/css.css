@@ -1612,3 +1612,7 @@ span.stars span {
     font-size: 24px !important;
     text-align: center !important;
   }
+
+  .deleteStuffMargin{
+    margin-top: -08px !important;
+  }
