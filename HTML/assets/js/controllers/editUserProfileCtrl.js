@@ -424,33 +424,37 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         };
 
         $scope.TShirtLinks = [];
-        $scope.tshirtModal = {
+        var tshirtModal = {
             code: '',
             class: ''
         };
 
         $rootScope.$on('addTshirt', function (event, data) {
-            $scope.tshirtModal.code = $scope.codeModal;
-            $scope.tshirtModal.class = 'success';
+            tshirtModal.code = $scope.codeModal;
+            tshirtModal.class = 'success';
             $scope.TShirtLinks.push($scope.tshirtModal);
             for (var i=0; i<$scope.TShirtLinks; i++) {
-                $scope.TShirtLinks[i].code;
+                console.log($scope.TShirtLinks[i].code);
             }
-            $scope.tshirtModal.code = '';
-            $scope.tshirtModal.class = '';
+            tshirtModal.code = '';
+            tshirtModal.class = '';
             $scope.codeModal = '';
         });
 
         $rootScope.$on('addTshirtErrorBad', function (event, data) {
-            $scope.tshirtModal.code = $scope.codeModal;
-            $scope.tshirtModal.class = 'wrong';
+            tshirtModal.code = $scope.codeModal;
+            tshirtModal.class = 'wrong';
             $scope.TShirtLinks.push($scope.tshirtModal);
             for (var i=0; i<$scope.TShirtLinks; i++) {
-                $scope.TShirtLinks[i].code;
+                console.log($scope.TShirtLinks[i].code);
             }
-            $scope.tshirtModal.code = '';
-            $scope.tshirtModal.class = '';
             $scope.codeModal = '';
             growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
+        });
+
+        $("#codeInput").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                $scope.addTshirt();
+            }
         });
     }]);
