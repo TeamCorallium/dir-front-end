@@ -37,30 +37,25 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
                 <fieldset>
                     <legend translate="admin.STUFFS"></legend>                    
-                    <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" translate="admin.NO_STUFFS" ng-if="stocks.lenght > 0"></label>
-                    <form name="StuffForm" role="form" ng-controller="FormController">
-                            {{$parent.stocks}} $parent
-                            {{stocks}} stocks
-                        <ul class="post-list">
-                            <li ng-repeat="stock in $parent.stocks">
-                                <form name="AddStuff" role="form" ng-controller="FormController">
-                                        
-                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                        <label ng-model="stock.color"></label>
-                                    </div>
-                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">                                       
-                                        <label ng-model="stock.size"></label>
-                                    </div>
-                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">                                        
-                                        <label ng-model="stock.code"></label>
-                                    </div>
-                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                        <label ng-model="stock.pin"></label>
-                                    </div>
-                                </form>
-                            </li>
-                        </ul>
-                    </form>
+                    <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" translate="admin.NO_STUFFS" ng-if="stocks.length == 0"></label>
+                    <ul class="post-list" ng-if="stocks.length > 0">
+                        <li ng-repeat="stock in stocks">
+                            <form name="AddStuff" role="form">                                    
+                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label>{{stock.color}}</label>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label>{{stock.size}}</label>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label>{{stock.code}}</label>
+                                </div>
+                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                    <label>{{stock.ping}}</label>
+                                </div>
+                            </form>
+                        </li>
+                    </ul>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0" ng-if="$parent.stocks.lenght > 0">
                         <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
                             <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
