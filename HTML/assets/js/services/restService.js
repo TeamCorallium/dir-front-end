@@ -17,6 +17,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var sendMessages = 'http://www.dir.com:8888/api/send-message/';
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
+    var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -152,6 +153,31 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 $rootScope.$broadcast('addsocialnetwork');
             }).error(function (response) {
                 $rootScope.$broadcast('addSocialNetworkError');
+            });
+        },
+
+        addTShirt: function (pin) {
+            $http({
+                method: 'POST',
+                url: linkStuff,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: { 'pin': pin, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+            }).success(function (data) {
+                if (data.response == 'ok') {
+                    $rootScope.$broadcast('addTshirt');
+                } else {
+                    $rootScope.$broadcast('addTshirtErrorBad');
+                }
+            }).error(function (response) {
+                
             });
         },
 
