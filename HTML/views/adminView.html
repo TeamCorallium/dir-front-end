@@ -37,8 +37,8 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
                 <fieldset>
                     <legend translate="admin.STUFFS"></legend>                    
-                    <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles"  translate="admin.NO_STUFFS" ng-if="stocks.lenght == 0"></label>
-                    <form name="StuffForm" role="form" ng-controller="FormController" ng-if="$parent.stocks.lenght > 0">
+                    <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" translate="admin.NO_STUFFS" ng-if="stocks.lenght > 0"></label>
+                    <form name="StuffForm" role="form" ng-controller="FormController">
                             {{$parent.stocks}} $parent
                             {{stocks}} stocks
                         <ul class="post-list">
