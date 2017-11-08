@@ -199,11 +199,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return str.join("&");
                 },
                 data: { 'color': color, 'size': size, 'code': code, 'pin': pin, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
-            }).success(function (data) {                
-                console.log(data);
+            }).success(function (data) {
                 $rootScope.$broadcast('addStock');
             }).error(function (response) {
-                
+                $rootScope.$broadcast('addStockError');
             });
         },
 

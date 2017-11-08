@@ -35,8 +35,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         $scope.getStocks();
 
         $scope.addStuff = function () {
-            RestService.addStock($scope.stuff.color, $scope.stuff.size, $scope.stuff.code, $scope.stuff.pin);
-            $scope.getStocks();
+            RestService.addStock($scope.stuff.color, $scope.stuff.size, $scope.stuff.code, $scope.stuff.pin);            
         };
 
         $scope.getUsers = function (page) {
@@ -109,5 +108,21 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
 
         $rootScope.$on('deleteStuff', function (event, data) {
             $scope.getStocks();
+        });
+
+        $rootScope.$on('addStock', function (event, data) {
+            $scope.getStocks();
+        });
+
+        $rootScope.$on('addStockError', function (event, data) {
+            growl.error("Can not be added to the stock.", { title: 'Add Stock' });
+        });
+
+        $rootScope.$on('deleteUserError', function (event, data) {
+            growl.error("The user can not be deleted.", { title: 'Delete User' });
+        });
+
+        $rootScope.$on('deleteStuffError', function (event, data) {
+            growl.error("The stuff can not be deleted.", { title: 'Delete Stuff' });
         });
     }]);
