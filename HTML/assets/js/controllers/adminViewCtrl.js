@@ -97,9 +97,11 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
 
         $scope.deleteUser = function(url) {
             RestService.deleteUser(url);
+            $scope.getUsers(1);
         };
 
         $scope.deleteStuff = function(url) {
             RestService.deleteStuff(url);
+            $scope.getStocks();
         };
     }]);
