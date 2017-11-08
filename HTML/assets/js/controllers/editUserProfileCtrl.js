@@ -425,13 +425,11 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $scope.TShirtLinks = [];
         $scope.tshirtModal = {
-            id: 0,
             code: '',
             class: ''
         };
 
         $rootScope.$on('addTshirt', function (event, data) {
-            $scope.tshirtModal.id += 1;
             $scope.tshirtModal.code = $scope.codeModal;
             $scope.tshirtModal.class = 'success';
             $scope.TShirtLinks.push($scope.tshirtModal);
@@ -440,7 +438,6 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         });
 
         $rootScope.$on('addTshirtErrorBad', function (event, data) {
-            $scope.tshirtModal.id += 1;
             $scope.tshirtModal.code = $scope.codeModal;
             $scope.tshirtModal.class = 'wrong';
             $scope.TShirtLinks.push($scope.tshirtModal);
