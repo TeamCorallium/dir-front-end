@@ -25,8 +25,6 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
             RestService.fetchStocks()
                 .then( function (data) {
                     $scope.stocks = data;
-                    
-                    console.log($scope.stocks);
                 },
                 function (errResponse) {
                     console.log(errResponse);
