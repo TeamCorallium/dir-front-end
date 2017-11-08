@@ -428,6 +428,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
         $rootScope.$on('addTshirt', function (event, data) {
             $scope.TShirtLinks.push($scope.codeModal);
             $scope.codeModal = '';
+            console.log($scope.TShirtLinks.length + " length");
         });
 
         $rootScope.$on('addTshirtErrorBad', function (event, data) {
