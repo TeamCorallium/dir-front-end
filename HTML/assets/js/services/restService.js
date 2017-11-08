@@ -506,10 +506,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteUser: function (url) {
+        deleteUser: function (id) {
             $http({
                 method: 'DELETE',
-                url: url,
+                url: id + users + "/",
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
