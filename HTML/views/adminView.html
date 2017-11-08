@@ -47,9 +47,9 @@
                     </form>
                 </fieldset>
             </div>
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">         
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <fieldset>
-                    <legend translate="admin.STUFFS"></legend>                    
+                    <legend translate="admin.STUFFS"></legend>
                     <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" translate="admin.NO_STUFFS" ng-if="stocks.length == 0"></label>
                     <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" name="titleStuff" role="form" ng-if="stocks.length > 0">
                         <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
@@ -67,7 +67,7 @@
                     </form>
                     <ul class="post-list" ng-if="stocks.length > 0">
                         <li ng-repeat="stock in stocks">
-                            <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" name="AddStuff" role="form">                                    
+                            <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" name="AddStuff" role="form">
                                 <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
                                     <label>{{stock.color}}</label>
                                 </div>
@@ -81,7 +81,7 @@
                                     <label>{{stock.pin}}</label>
                                 </div>
                                 <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                    <a class="btn btn-red opacity6 pull-right deleteStuffMargin">
+                                    <a class="btn btn-red opacity6 pull-right deleteStuffMargin" ng-click="deleteStuff(stock.url)">
                                         <i class="ti-trash"></i>
                                     </a>
                                 </div>
@@ -111,7 +111,7 @@
                             <label class="textColorWhite margin-bottom-0" translate="admin.SEARCH"></label>
                         </a>
                     </span>
-                </div>                
+                </div>
                 <fieldset>
                     <legend translate="admin.USERS"></legend>
                     <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles" ng-if="users.length == 0" translate="admin.NO_USER"></label>
@@ -132,7 +132,7 @@
                                         <h5>{{user.info | htmlToPlaintext | words:40 :true}}</h5>
                                     </div>
                                     <div class="adminDeleteUser pull-right">
-                                        <a class="btn btn-red opacity6 pull-right">
+                                        <a class="btn btn-red opacity6 pull-right" ng-click="deleteUser(user.url)">
                                             <i class="ti-trash"></i>
                                         </a>
                                     </div>
