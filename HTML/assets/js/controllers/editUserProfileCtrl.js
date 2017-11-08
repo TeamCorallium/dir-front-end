@@ -32,6 +32,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             tshirts: [],
             snippets: []
         };
+        $scope.codeModal = '';
 
         $scope.uploadFile = function (file) {
             if (file) {
@@ -415,5 +416,10 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
             var val = parseFloat(rating);
             var size = val / 5 * 100;
             return size + '%';
+        };
+
+        // ADD T-Shirts 
+        $scope.addTshirt = function() {
+            console.log($scope.codeModal + " $scope.codeModal = '';");
         };
     }]);

@@ -295,7 +295,22 @@
                     </div>
                     <div class="modal-body">
                         <form name="AddTShirts" role="form">
-                            
+                            <div class="input-group">
+                                <input class="form-control" placeholder="" type="text" id="codeInput" ng-model="$parent.codeModal">
+                                <span class="input-group-btn">
+                                    <a class="btn btn-primary" type="button" ng-click="addTshirt()">
+                                        <i class="ti-check-box"></i>
+                                        <label class="textColorWhite margin-bottom-0" translate="edit_profile.ENTER"></label>
+                                    </a>
+                                </span>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <ul class="list-unstyled">
+                                    <li ng-repeat="">
+
+                                    </li>
+                                </ul>
+                            </div>
                         </form>
                     </div>
                     <div class="modal-footer padding-15">

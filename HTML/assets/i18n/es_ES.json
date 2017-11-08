@@ -101,7 +101,8 @@
     "PASSWORD_AGAIN": "Repetir contraseña:",
     "PASSWORD_MATCH": "Las contraseñas no coinciden.",
     "CLOSE": "Cerrar",
-    "ADD_TSHIRT": "Adicionar camiseta"
+    "ADD_TSHIRT": "Adicionar camiseta",
+    "ENTER": "Adicionar código"
   },
   "home": {
     "TEXT_TSHIRTS" : "Camisetas con tecnología",

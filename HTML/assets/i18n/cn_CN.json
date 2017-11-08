@@ -101,7 +101,8 @@
     "PASSWORD_AGAIN": "密碼:",
     "PASSWORD_MATCH": "密碼不匹配.",
     "CLOSE": "關閉",
-    "ADD_TSHIRT": "連結 t恤衫"
+    "ADD_TSHIRT": "連結 t恤衫",
+    "ENTER": "輸入代碼"
   },
   "home": {
     "TEXT_TSHIRTS" : "t恤衫與技術",

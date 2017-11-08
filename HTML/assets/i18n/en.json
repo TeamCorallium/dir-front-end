@@ -101,7 +101,8 @@
     "PASSWORD_AGAIN": "Password again:",
     "PASSWORD_MATCH": "Passwords don't match.",
     "CLOSE": "Close",
-    "ADD_TSHIRT": "Link T-Shirt"
+    "ADD_TSHIRT": "Link T-Shirt",
+    "ENTER": "Enter code"
   },
   "home": {
     "TEXT_TSHIRTS" : "T-shirts with technology",
@@ -121,9 +122,9 @@
     "STUFFS": "Stuffs",
     "NEXT": "Next »",
     "PREVIOUS": "« Previous",
-    "NO_USER": "No exist users",
+    "NO_USER": "There are no users",
     "USERS": "Users",
     "SEARCH": "Search",
-    "NO_STUFFS": "No exist stuff"
+    "NO_STUFFS": "There are no stuffs"
   }
 }
