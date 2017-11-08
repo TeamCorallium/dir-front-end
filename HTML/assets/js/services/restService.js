@@ -18,6 +18,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
     var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
+    var stocks = 'http://www.dir.com:8888/api/stocks/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -176,6 +177,28 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('addTshirtErrorBad');
                 }
+            }).error(function (response) {
+                
+            });
+        },
+
+        addStock: function (color, size, code, pin) {
+            $http({
+                method: 'POST',
+                url: stocks,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: { 'color': color, 'size': size, 'code': code, 'pin': pin, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+            }).success(function (data) {                
+                console.log(data);
+                $rootScope.$broadcast('addStock');
             }).error(function (response) {
                 
             });
@@ -524,6 +547,18 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchObjectByUrl: function (url) {
             return $http.get(url)
+                .then(
+                function (response) {
+                    return response.data;
+                },
+                function (errResponse) {
+                    return $q.reject(errResponse);
+                }
+                );
+        },
+
+        fetchStcoks: function () {
+            return $http.get(stocks)
                 .then(
                 function (response) {
                     return response.data;

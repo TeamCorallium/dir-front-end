@@ -40,8 +40,21 @@
                     <label class="marging-top-10 col-xs-12 col-sm-12 col-md-12 col-lg-12 NoUserStyles"  translate="admin.NO_STUFFS"></label>
                     <form name="StuffForm" role="form" ng-controller="FormController">
                         <ul class="post-list">
-                            <li ng-repeat="">
-                                
+                            <li ng-repeat="stock in stocks">
+                                <form name="AddStuff" role="form" ng-controller="FormController">
+                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                        <label ng-model="stock.color"></label>
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">                                       
+                                        <label ng-model="stock.size"></label>
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">                                        
+                                        <label ng-model="stock.code"></label>
+                                    </div>
+                                    <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                        <label ng-model="stock.pin"></label>
+                                    </div>
+                                </form>
                             </li>
                         </ul>
                     </form>

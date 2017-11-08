@@ -14,16 +14,29 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         };
 
         $scope.users = [];
+        $scope.stocks = [];
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
-        $scope.search = '';
+        $scope.search = '';        
+
+        $scope.getStocks = function () {
+            $scope.stocks = [];
+            RestService.fetchStcoks()
+                .then( function (data) {
+                    $scope.stocks = data;
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+                );
+        };
+
+        $scope.getStocks();
 
         $scope.addStuff = function () {
-            console.log($scope.stuff.color);
-            console.log($scope.stuff.size);
-            console.log($scope.stuff.code);
-            console.log($scope.stuff.pin);
+            RestService.addStock($scope.stuff.color, $scope.stuff.size, $scope.stuff.code, $scope.stuff.pin);
+            $scope.getStocks();
         };
 
         $scope.getUsers = function (page) {
