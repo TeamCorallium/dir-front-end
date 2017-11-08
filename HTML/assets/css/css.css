@@ -1486,10 +1486,6 @@ a.ButtonImageSize {
     margin-top: 21px !important;
 }
 
-.btnRadius10{
-    border-radius: 10px !important;
-}
-
 .textColorWhite {
     color: #FFFFFF !important;
 }
@@ -1589,7 +1585,7 @@ span.stars span {
   }
 
   .border-radius10 {
-      border-radius: 10px !important;
+      border-radius: 6px !important;
   }
 
   .adminInfoUser {
@@ -1626,3 +1622,23 @@ span.stars span {
     color: rgb(207, 7, 7);
     opacity: 0.6;
   }
+
+  .dont-break-out {
+    
+      /* These are technically the same, but use both */
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+    
+      -ms-word-break: break-all;
+      /* This is the dangerous one in WebKit, as it breaks things wherever */
+      word-break: break-all;
+      /* Instead use this non-standard one: */
+      word-break: break-word;
+    
+      /* Adds a hyphen where the word breaks, if supported (No Blink) */
+      -ms-hyphens: auto;
+      -moz-hyphens: auto;
+      -webkit-hyphens: auto;
+      hyphens: auto;
+    
+    }

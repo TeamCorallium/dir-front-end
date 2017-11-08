@@ -105,10 +105,10 @@
                             </div>
                             <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-if="user.snippets.length > 0">
                                 <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
-                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous btnRadius10">
+                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
                                         <a ng-click="previous()" class="ng-binding border-radius10" translate="user_profile.PREVIOUS"></a>
                                     </li>
-                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next btnRadius10">
+                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
                                         <a ng-click="next()" class="ng-binding border-radius10" translate="user_profile.NEXT"></a>
                                     </li>
                                 </ul>
@@ -266,12 +266,6 @@
                                 <option value="WordPress">WordPress</option>
                                 <option value="Yahoo">Yahoo</option>
                                 <option value="Flickr">Flickr</option>
-                                <!-- <option value="Foursquare">Foursquare</option> -->
-                                <!-- <option value="Behance">Behance</option> -->
-                                <!-- <option value="VK">VK</option> -->
-                                <!-- <option value="Xing">Xing</option> -->
-                                <!-- <option value="Spotify">Spotify</option>
-                                    <option value="StumbleUpon">StumbleUpon</option> -->
                             </select>
                         </div>
                         <div class="form-group" ng-show="activeFacebook && !showUrlCamp">

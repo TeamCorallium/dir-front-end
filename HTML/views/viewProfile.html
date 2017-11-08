@@ -125,7 +125,7 @@
                                                 <h4>{{snippet.title}}</h4>
                                             </div>
                                         </div>
-                                        <h5 class="ltwt_tweet_text" ng-bind-html="snippet.body"></h5>
+                                        <h5 class="ltwt_tweet_text dont-break-out" ng-bind-html="snippet.body"></h5>
                                         <span class="block text-light margin-bottom-20">
                                             <i class="fa fa-fw fa-clock-o"></i> {{snippet.created | timeago}}</span>
                                     </li>
@@ -133,10 +133,10 @@
                             </div>
                             <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-if="user.snippets.length > 0">
                                 <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
-                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous btnRadius10">
+                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
                                         <a ng-click="previous()" class="ng-binding border-radius10">« Previous</a>
                                     </li>
-                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next btnRadius10">
+                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
                                         <a ng-click="next()" class="ng-binding border-radius10">Next »</a>
                                     </li>
                                 </ul>
