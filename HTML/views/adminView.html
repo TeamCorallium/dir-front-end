@@ -61,29 +61,31 @@
                             <label for="pin" translate="admin.PIN"></label>
                         </div>
                     </form>
-                    <ul class="post-list" ng-if="stocks.length > 0">
-                        <li ng-repeat="stock in stocks">
-                            <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" name="AddStuff" role="form">
-                                <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                    <label>{{stock.color}}</label>
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                    <label>{{stock.size}}</label>
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                    <label>{{stock.code}}</label>
-                                </div>
-                                <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
-                                    <label>{{stock.pin}}</label>
-                                </div>
-                                <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
-                                    <a class="btn btn-red opacity6 pull-right deleteStuffMargin" ng-click="deleteStuff(stock.url)">
-                                        <i class="ti-trash"></i>
-                                    </a>
-                                </div>
-                            </form>
-                        </li>
-                    </ul>
+                    <div class="margin-top-10">
+                        <ul class="post-list" ng-if="stocks.length > 0">
+                                <li ng-repeat="stock in stocks">
+                                    <form class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row" name="AddStuff" role="form">
+                                        <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                            <label>{{stock.color}}</label>
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                            <label>{{stock.size}}</label>
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                            <label>{{stock.code}}</label>
+                                        </div>
+                                        <div class="form-group col-xs-12 col-sm-3 col-md-3 col-lg-3">
+                                            <label>{{stock.pin}}</label>
+                                        </div>
+                                        <div class="pull-right col-xs-12 col-sm-2 col-md-2 col-lg-2">
+                                            <a class="btn btn-red opacity6 pull-right deleteStuffMargin" ng-click="deleteStuff(stock.url)">
+                                                <i class="ti-trash"></i>
+                                            </a>
+                                        </div>
+                                    </form>
+                                </li>
+                            </ul>
+                    </div>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 padding-0" ng-if="stocks.length > 0">
                         <div class="col-xs-12 col-xs-offset-0 col-sm-4 col-sm-offset-4 col-md-4 col-md-offset-4 col-lg-4 col-lg-offset-4">
                             <ul class="pager ng-isolate-scope ng-not-empty ng-valid">

@@ -111,6 +111,12 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         });
 
         $rootScope.$on('addStock', function (event, data) {
+            $scope.stuff = {
+                color: 'White',
+                size: 'S',
+                code: '',
+                pin: ''
+            };
             $scope.getStocks();
         });
 
