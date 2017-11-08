@@ -19,6 +19,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
     var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
     var stocks = 'http://www.dir.com:8888/api/stocks/';
+    var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -306,6 +307,27 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        deleteUser: function (id) {
+            $http({
+                method: 'POST',
+                url: deleteUser,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: { 'id': id, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+            }).success(function (data) {
+                $rootScope.$broadcast('deleteUser');
+            }).error(function (response) {
+                $rootScope.$broadcast('deleteUserError');
+            });
+        },
+
         updateProfile: function (profileurl, info, rating, score, avatar, fullname, email) {
             $http({
                 method: 'PUT',
@@ -505,27 +527,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 $rootScope.$broadcast('deleteStuff');
             }).error(function (response) {
                 $rootScope.$broadcast('deleteStuffError');
-            });
-        },
-
-        deleteUser: function (id) {
-            $http({
-                method: 'DELETE',
-                url: users + id + "/",
-                headers: {
-                    'Content-Type': 'application/x-www-form-urlencoded',
-                    'X-CSRFToken': $cookies.get('csrftoken')
-                },
-                transformRequest: function (obj) {
-                    var str = [];
-                    for (var p in obj)
-                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-                    return str.join("&");
-                }
-            }).success(function (result) {
-                $rootScope.$broadcast('deleteUser');
-            }).error(function (response) {
-                $rootScope.$broadcast('deleteUserError');
             });
         },
 
