@@ -425,7 +425,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $scope.TShirtLinks = [];
         $scope.tshirtModal = {
-            id: 1,
+            id: 0,
             code: '',
             class: ''
         };

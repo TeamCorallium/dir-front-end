@@ -307,6 +307,7 @@
                             <div class="margin-top-10">
                                 <ul class="list-unstyled">
                                     <li ng-repeat="tshirt in TShirtLinks">
+                                        <label hidden>{{tshirt.id}}</label>
                                         <i class="ti-check" ng-if="tshirt.class == 'success'"></i>
                                         <i class="ti-close" ng-if="tshirt.class == 'wrong'"></i>
                                         <label>{{tshirt.code}}</label>
