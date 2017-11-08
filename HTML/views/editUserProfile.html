@@ -213,16 +213,14 @@
                 <div class="modal-body">
                     <input type="file" id="fileInput" class="btn btn-primary LoadImageModalButton" onchange="angular.element(this).scope().uploadFile(this.files[0])">
                     <div class="cropArea margin-top-10">
-                        <i class="ti-close"></i>
+                        <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
                     </div>
                 </div>
                 <div class="modal-footer">
                     <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" data-dismiss="modal" translate="edit_profile.CANCEL">
-                        <img ng-src="assets/images/crop.png">
+                        <i class="ti-close"></i>
                     </a>
-                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP">
-                        <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
-                    </a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
                 </div>
             </div>
         </div>
@@ -284,53 +282,53 @@
 
     <!-- start: MODAL ADD T-SHIRTS-->
     <div class="modal fade login-register-form" id="modalAddTShirt" role="dialog">
-        <div class="modal-dialog modal-md" ng-controller="FormController">
-            <div class="modal-content">
-                <div class="modal-header" ng-controller="CloseCtrl">
-                    <div class="modal-header padding-15">
-                        <a type="button" class="close margin-top--10" data-dismiss="modal">
-                            <span class="glyphicon glyphicon-remove"></span>
-                        </a>
-                        <h4 class="modal-title">
-                            <i class="ti-plus"></i>
-                            <label translate="edit_profile.ADD_TSHIRT"></label>
-                        </h4>
+            <div class="modal-dialog modal-md" ng-controller="FormController">
+                <div class="modal-content">
+                    <div class="modal-header" ng-controller="CloseCtrl">
+                        <div class="modal-header padding-15">
+                            <a type="button" class="close margin-top--10" data-dismiss="modal">
+                                <span class="glyphicon glyphicon-remove"></span>
+                            </a>
+                            <h4 class="modal-title">
+                                <i class="ti-plus"></i>
+                                <label translate="edit_profile.ADD_TSHIRT"></label>
+                            </h4>
+                        </div>
                     </div>
-                </div>
-                <div class="modal-body">
-                    <form name="AddTShirts" role="form">
-                        <div class="input-group">
-                            <input class="form-control" placeholder="" type="text" id="codeInput" ng-model="$parent.codeModal">
-                            <span class="input-group-btn">
-                                <a class="btn btn-primary" type="button" ng-click="addTshirt()">
-                                    <i class="ti-check-box"></i>
-                                    <label class="textColorWhite margin-bottom-0" translate="edit_profile.ENTER"></label>
-                                </a>
-                            </span>
-                        </div>
-                        <div class="margin-top-10">
-                            <ul class="list-unstyled">
-                                <li ng-repeat="tshirt in TShirtLinks track by $index">
-                                    <i class="ti-check colorSuccessStock" ng-if="tshirt.class == 'success'"></i>
-                                    <i class="ti-close colorErrorStock" ng-if="tshirt.class == 'wrong'"></i>
-                                    <label>{{tshirt.code}}</label>
-                                </li>
-                            </ul>
-                        </div>
-                    </form>
-                </div>
-                <div class="modal-footer padding-15">
-                    <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
-                    </a>
-                    <!-- <a class="btn btn-primary ButtonRadius" ng-disabled="AddTShirts.$invalid" ng-click="">
+                    <div class="modal-body">
+                        <form name="AddTShirts" role="form">
+                            <div class="input-group">
+                                <input class="form-control" placeholder="" type="text" id="codeInput" ng-model="$parent.codeModal">
+                                <span class="input-group-btn">
+                                    <a class="btn btn-primary" type="button" ng-click="addTshirt()">
+                                        <i class="ti-check-box"></i>
+                                        <label class="textColorWhite margin-bottom-0" translate="edit_profile.ENTER"></label>
+                                    </a>
+                                </span>                                
+                            </div>
+                            <div class="margin-top-10">
+                                <ul class="list-unstyled">
+                                    <li ng-repeat="tshirt in TShirtLinks track by $index">
+                                        <i class="ti-check colorSuccessStock" ng-if="tshirt.class == 'success'"></i>
+                                        <i class="ti-close colorErrorStock" ng-if="tshirt.class == 'wrong'"></i>
+                                        <label>{{tshirt.code}}</label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer padding-15">
+                        <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                            <i class="ti-close"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
+                        </a>
+                        <!-- <a class="btn btn-primary ButtonRadius" ng-disabled="AddTShirts.$invalid" ng-click="">
                             <i class="ti-plus"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.ADD_TSHIRT"></label>
                         </a> -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- end: MODAL MODAL ADD T-SHIRTS-->
+        <!-- end: MODAL MODAL ADD T-SHIRTS-->
 </div>
