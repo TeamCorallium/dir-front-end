@@ -7,8 +7,8 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
  
         $scope.stuff = {
-            color: '',
-            size: '',
+            color: 'White',
+            size: 'S',
             code: '',
             pin: ''
         };
