@@ -1704,6 +1704,7 @@ span.stars span {
         background-color: #00B8B8 !important;
     }
 
-    .margin-right-100 {
-        margin-right: 100px !important;
+    .marginButtonEdit {
+        margin-right: 175px !important;
+        margin-top: 5px !important;
     }

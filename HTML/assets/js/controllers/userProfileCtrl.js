@@ -33,6 +33,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.viewInbox = true;
         $scope.pSnippet = '';
         $scope.EditSnippetFlag = false;
+        $scope.EditInfoFlag = false;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -169,6 +170,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.getUser($cookies.get('username'));
+
+        $scope.EditProfile = function() {
+            $scope.EditInfoFlag = !$scope.EditInfoFlag;
+        };
 
         $scope.changeFlatEdit = function() {
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;

@@ -52,7 +52,8 @@
     "PUBLISH": "Publicar",
     "EDIT": "Editar",
     "DELETE": "Eliminar",
-    "SAVE": "Salvar"
+    "SAVE": "Salvar",
+    "SAVE_PROFILE": "Salvar perfil"
   },
   "view_profile": {
     "RATING": "Valoración:",

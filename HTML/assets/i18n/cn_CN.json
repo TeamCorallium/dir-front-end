@@ -52,7 +52,8 @@
     "PUBLISH": "發佈",
     "EDIT": "編輯",
     "DELETE": "消除",
-    "SAVE": "保存"
+    "SAVE": "保存",
+    "SAVE_PROFILE": "保存設定檔"
   },
   "view_profile": {
     "RATING": "評級:",
