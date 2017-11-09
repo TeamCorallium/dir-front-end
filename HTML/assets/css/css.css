@@ -385,6 +385,14 @@
 }
 
 @media  (max-width: 767px) {
+    .marginLeft20XS {
+        margin-left: 20px !important;
+    }
+
+    .marginTop20XS {
+        margin-top: 20px !important;
+    }
+
     .TitleSnippetBox {
         width: 89% !important;
         text-align: left !important;
@@ -1711,12 +1719,4 @@ span.stars span {
 
     .borderRadius50 {
         border-radius: 50px !important;
-    }
-
-    .marginLeft20XS {
-        margin-left: 20px !important;
-    }
-
-    .marginTop20XS {
-        margin-top: 20px !important;
-    }
+    }   
