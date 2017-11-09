@@ -87,6 +87,10 @@
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
+                                <textarea class="SnippetsArea"></textarea>
+                                <div class="SnippetFooter"></div>
+                            </div>
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <ul class="ltwt">
                                     <li ng-repeat="snippet in user.snippets">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
@@ -97,9 +101,11 @@
                                                 <h4>{{snippet.title}}</h4>
                                             </div>
                                         </div>
-                                        <h5 class="ltwt_tweet_text dont-break-out" ng-bind-html="snippet.body"></h5>
+                                        <h5 class="ltwt_tweet_text dont-break-out" ng-bind-html="snippet.body | emoticons:{linkTarget:'_blank'}"></h5>
                                         <span class="block text-light margin-bottom-20">
-                                            <i class="fa fa-fw fa-clock-o"></i> {{snippet.created | timeago}}</span>
+                                            <i class="fa fa-fw fa-clock-o"></i> 
+                                            {{snippet.created | timeago}}
+                                        </span>
                                     </li>
                                 </ul>
                             </div>

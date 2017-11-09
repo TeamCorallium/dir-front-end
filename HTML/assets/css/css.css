@@ -1642,3 +1642,7 @@ span.stars span {
       hyphens: auto;
     
     }
+
+    .SnippetsArea {
+        resize: none;
+    }
