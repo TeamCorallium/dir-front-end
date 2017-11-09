@@ -51,7 +51,8 @@
     "EDIT_PROFILE": "編輯設定檔",
     "PUBLISH": "發佈",
     "EDIT": "編輯",
-    "DELETE": "消除"
+    "DELETE": "消除",
+    "SAVE": "保存"
   },
   "view_profile": {
     "RATING": "評級:",

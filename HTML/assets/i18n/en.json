@@ -51,7 +51,8 @@
     "EDIT_PROFILE": "Edit Profile",
     "PUBLISH": "Publish",
     "EDIT": "Edit",
-    "DELETE": "Delete"
+    "DELETE": "Delete",
+    "SAVE": "Save"
   },
   "view_profile": {
     "RATING": "Rating:",

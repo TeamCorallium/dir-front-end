@@ -182,6 +182,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
+        $scope.saveSnippetEdit = function() {
+
+        };
+
         $scope.openModalSnippets = function () {
             if ($cookies.get('sessionid') != undefined) {
                 $('#modalSnippets').modal('show');

@@ -115,15 +115,21 @@
                                                         </button>
                                                         <ul class="ListEdit dropdown-menu" role="menu">
                                                             <li>
-                                                                <a ng-click="changeFlatEdit()">
+                                                                <a ng-click="changeFlatEdit()" ng-show="EditSnippetFlag">
                                                                     <i class="ti-pencil-alt"></i>
-                                                                    <label class="textColorWhite margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                                    <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a ng-click="saveSnippetEdit()" ng-show="!EditSnippetFlag">
+                                                                    <i class="ti-save"></i>
+                                                                    <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                                 </a>
                                                             </li>
                                                             <li>
                                                                 <a>
                                                                     <i class="ti-trash"></i>
-                                                                    <label class="textColorWhite margin-bottom-0" translate="user_profile.DELETE"></label>
+                                                                    <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
                                                                 </a>
                                                             </li>
                                                         </ul>
