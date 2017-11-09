@@ -1646,3 +1646,7 @@ span.stars span {
     .SnippetsArea {
         resize: none;
     }
+
+    .SnippetFooter {
+        background-color: gray;
+    }

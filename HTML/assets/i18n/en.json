@@ -48,7 +48,8 @@
     "LOG_IN_FACEBOOK": "Login with Facebook",
     "TYPE_URL": "Type Facebook URL manually:",
     "SOCIAL_URL": "Social network url",
-    "EDIT_PROFILE": "Edit Profile"
+    "EDIT_PROFILE": "Edit Profile",
+    "PUBLISH": "Publish"
   },
   "view_profile": {
     "RATING": "Rating:",
