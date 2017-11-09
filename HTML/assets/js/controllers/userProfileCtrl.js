@@ -24,6 +24,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             snippets: []
         };
 
+        $scope.myImage = '';
+        $scope.myCroppedImage = '';
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
@@ -34,6 +36,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.pSnippet = '';
         $scope.EditSnippetFlag = false;
         $scope.EditInfoFlag = false;
+
+        $scope.uploadFile = function (file) {
+            if (file) {
+                // ng-img-crop
+                var imageReader = new FileReader();
+                imageReader.onload = function (image) {
+                    $scope.$apply(function ($scope) {
+                        $scope.myImage = image.target.result;
+                    });
+                };
+                imageReader.readAsDataURL(file);
+            }
+        };
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -171,6 +186,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
+        $scope.saveProfile = function () {
+            if ($scope.user.avatar == 'assets/images/default-user.png') {
+                $scope.user.avatar = '';
+            }
+
+            if ($scope.user.avatar instanceof File) {
+                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email);
+            } else {
+                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
+            }
+        };
+
         $scope.EditProfile = function() {
             $scope.EditInfoFlag = !$scope.EditInfoFlag;
         };
@@ -273,6 +300,25 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.makeQRCode = function () {
             RestService.imageDownload($scope.user.id);
+        };
+
+        $scope.crop = function () {
+            $scope.user.avatar = $scope.myCroppedImage;
+            //return a promise that resolves with a File instance
+            function urltoFile(url, filename, mimeType) {
+                return (fetch(url)
+                    .then(function (res) { return res.arrayBuffer(); })
+                    .then(function (buf) { return new File([buf], filename, { type: mimeType }); })
+                );
+            }
+
+            urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
+                .then(function (file) {
+                    console.log(file);
+                    $scope.user.avatar = file;
+                })
+
+            $('#ModalImageCropper').modal('hide');
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
@@ -550,6 +596,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('addSocialNetworkError', function (event, data) {
             growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+        });
+
+        $rootScope.$on('deleteSocialNetworkError', function (event, data) {
+            growl.error("Error when attempting to remove their social network. Please check the status of your network.", { title: 'Delete Social Network' });
         });
 
         $scope.activeManually = function () {
