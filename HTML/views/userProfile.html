@@ -94,29 +94,31 @@
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <ul class="ltwt padding-15">
-                                    <li ng-repeat="snippet in user.snippets" class="borderBox">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
-                                            <div class="IconSnippetBox">
-                                                <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
-                                            </div>
-                                            <div class="TitleSnippetBox">
-                                                <!-- <h4>{{snippet.title}}</h4> -->
-                                                <span class="block text-light margin-bottom-20 col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                                                    <i class="fa fa-fw fa-clock-o"></i>
-                                                    {{snippet.created | timeago}}
-                                                </span>
-                                                <div class="btn-group pull-right DropdownMargin" uib-dropdown>                                                    
-                                                    <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
-                                                        <span class="fa fa-ellipsis-h"></span>
-                                                    </button>
-                                                    <ul class="ListEdit dropdown-menu" role="menu">
-                                                        <li>
-                                                            <a>Edit</a>
-                                                        </li>
-                                                        <li>
-                                                            <a>Delete</a>
-                                                        </li>                                                        
-                                                    </ul>
+                                    <li ng-repeat="snippet in user.snippets">
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
+                                                <div class="IconSnippetBox">
+                                                    <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
+                                                </div>
+                                                <div class="TitleSnippetBox">
+                                                    <!-- <h4>{{snippet.title}}</h4> -->
+                                                    <span class="block text-light margin-bottom-20 col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                                                        <i class="fa fa-fw fa-clock-o"></i>
+                                                        {{snippet.created | timeago}}
+                                                    </span>
+                                                    <div class="btn-group pull-right DropdownMargin" uib-dropdown>
+                                                        <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
+                                                            <span class="fa fa-ellipsis-h"></span>
+                                                        </button>
+                                                        <ul class="ListEdit dropdown-menu" role="menu">
+                                                            <li>
+                                                                <a>Edit</a>
+                                                            </li>
+                                                            <li>
+                                                                <a>Delete</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
