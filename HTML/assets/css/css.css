@@ -1703,3 +1703,7 @@ span.stars span {
     .backgroundBlueSky{
         background-color: #00B8B8 !important;
     }
+
+    .margin-right-100 {
+        margin-right: 100px !important;
+    }
