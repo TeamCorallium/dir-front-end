@@ -115,7 +115,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     $scope.hasPrevious = data.previous;
                     data = data.results;
                     for (var i = 0; i < data.length; i++) {
-                        data[i].body = replaceURLWithHTMLLinks(data[i].body);
+                        // data[i].body = replaceURLWithHTMLLinks(data[i].body);
                         $scope.user.snippets.push(data[i]);
                     }
                 },
