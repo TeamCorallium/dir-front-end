@@ -756,4 +756,95 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         });
         // end: keyup snippets
+
+        // CHANGE PASSWORD
+        $scope.changePassword = function (psw, psw2) {
+            if (psw === psw2) {
+                RestService.changePassword($scope.user.username, psw);
+            } else {
+                $('#msg-block').show();
+            }
+        };
+
+        $rootScope.$on('changepassword', function (event, data) {
+            $('#modalChangePassword').modal('hide');
+            $('#msg-block').hide();
+            growl.success("Password changed correctly.", { title: 'Password Change' });
+        });
+
+        $rootScope.$on('changepasswordError', function (event, data) {
+            growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Password Change' });
+        });
+
+        // start:  keyup change password
+        $("#password").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
+                    } else {
+                        growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    }
+                }
+            }
+        });
+
+        $("#againPassHome").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
+                    } else {
+                        growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    }
+                }
+            }
+        });
+        // end: keyup change password
+
+        // ADD T-Shirts 
+        $scope.addTshirt = function() {
+            RestService.addTShirt($scope.codeModal);
+        };
+
+        $scope.TShirtLinks = [];        
+
+        $rootScope.$on('addTshirt', function (event, data) {
+            var tshirt = {
+                code: $scope.codeModal,
+                class: 'success'
+            };
+
+            $scope.TShirtLinks.unshift(tshirt);
+            $scope.codeModal = '';
+        });
+
+        $rootScope.$on('addTshirtErrorBad', function (event, data) {
+            var tshirt = {
+                code: $scope.codeModal,
+                class: 'wrong'
+            };
+
+            $scope.TShirtLinks.unshift(tshirt);
+            $scope.codeModal = '';
+            growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
+        });
+
+        $("#codeInput").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                $scope.addTshirt();
+            }
+        });
     }]);
