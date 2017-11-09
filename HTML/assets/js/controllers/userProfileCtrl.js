@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
-    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
+app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert",
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert) {
 
         $scope.user = {
             username: '',
@@ -182,9 +182,53 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.saveSnippetEdit = function() {
-
+        $scope.saveSnippetEdit = function(url, body) {
+            RestService.updateSnippet(url, body);
         };
+
+        $scope.deleteSnippet = function() {
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this snippet!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSnippet(url);
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your snippet is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+        };
+
+        $rootScope.$on('snippetUpdated', function (event, data) {            
+            $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
+
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
+        });
+
+        $rootScope.$on('deleteSnippet', function (event, data) {            
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your snippet has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
+
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
+        });
 
         $scope.openModalSnippets = function () {
             if ($cookies.get('sessionid') != undefined) {

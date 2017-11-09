@@ -121,13 +121,13 @@
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a ng-click="saveSnippetEdit()" ng-show="EditSnippetFlag">
+                                                                <a ng-click="saveSnippetEdit(snippet.body)" ng-show="EditSnippetFlag">
                                                                     <i class="ti-save"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a>
+                                                                <a ng-click="deleteSnippet(snippet.id)">
                                                                     <i class="ti-trash"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
                                                                 </a>
