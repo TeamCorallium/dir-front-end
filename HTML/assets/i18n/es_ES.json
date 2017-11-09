@@ -28,7 +28,7 @@
     "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados.",
     "MANAGE_PAGE": "Administrar página",
     "CHANGE_PASSWORD": "Cambiar contraseña",
-    "ADD_TSHIRT": "Adicionar camiseta"    
+    "ADD_TSHIRT": "Adicionar camiseta"
   },
   "user_profile": {
     "RATING": "Valoración:",
@@ -37,7 +37,7 @@
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
     "ADD_SNIPPETS" : "Añade un Snippet",
-    "ADD_SOCIAL": "Añade una red social",
+    "ADD_SOCIAL": "Red Social",
     "POPULAR_USER": "Usuarios más populares",
     "SEE_MORE": "Ver más",
     "SNIPPET_TITLE": "Título del Snippet",
