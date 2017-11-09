@@ -198,11 +198,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.EditProfile = function() {
+        $scope.EditProfile = function () {
             $scope.EditInfoFlag = !$scope.EditInfoFlag;
         };
 
-        $scope.changeFlatEdit = function() {
+        $scope.changeFlatEdit = function () {
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
         };
 
@@ -214,11 +214,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.saveSnippetEdit = function(url, body) {
+        $scope.saveSnippetEdit = function (url, body) {
             RestService.updateSnippet(url, body);
         };
 
-        $scope.deleteSnippet = function(url) {
+        $scope.deleteSnippet = function (url) {
             SweetAlert.swal({
                 title: "Are you sure?",
                 text: "Your will not be able to recover this snippet!",
@@ -268,18 +268,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         };
 
-        $rootScope.$on('snippetUpdated', function (event, data) {            
+        $rootScope.$on('snippetUpdated', function (event, data) {
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
 
             $scope.user.snippets = [];
             getSnippets($cookies.get('username'), 1);
         });
 
-        $rootScope.$on('updateProfile', function (event, data) {            
-            $scope.changeFlatEdit();
+        $rootScope.$on('updateProfile', function (event, data) {
+            $scope.EditProfile();
         });
 
-        $rootScope.$on('deleteSnippet', function (event, data) {            
+        $rootScope.$on('deleteSnippet', function (event, data) {
             SweetAlert.swal({
                 title: "Deleted!",
                 text: "Your snippet has been deleted.",
@@ -291,7 +291,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSnippets($cookies.get('username'), 1);
         });
 
-        $rootScope.$on('deleteSocialNetwork', function (event, data) {            
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {
             SweetAlert.swal({
                 title: "Deleted!",
                 text: "Your social network has been deleted.",
