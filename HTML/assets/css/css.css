@@ -368,6 +368,10 @@
 }
 
 @media  (max-width: 767px) {
+    .marginSnippetXS {
+        margin-left: 0px !important;
+    }
+    
     #MessageReadBox {
         display: none;
     }
