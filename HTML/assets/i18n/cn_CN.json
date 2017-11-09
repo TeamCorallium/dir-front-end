@@ -49,7 +49,9 @@
     "TYPE_URL": "手動鍵入 Facebook URL:",
     "SOCIAL_URL": "社交網路網址",
     "EDIT_PROFILE": "編輯設定檔",
-    "PUBLISH": "發佈"
+    "PUBLISH": "發佈",
+    "EDIT": "編輯",
+    "DELETE": "消除"
   },
   "view_profile": {
     "RATING": "評級:",

@@ -31,6 +31,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.profileQRCode = '';
         $rootScope.viewProfile = false;
         $rootScope.viewInbox = true;
+        $scope.pSnippet = '';
 
 
         $scope.getUser = function (username) {
@@ -169,6 +170,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
+        $scope.publishSnippets = function () {
+            if ($scope.pSnippet != '') {
+                RestService.addSnippet("", $scope.pSnippet);
+            } else {
+                growl.success("Cannot exist empty field", { title: 'Publish Snippet' });
+            }
+        };
+
         $scope.openModalSnippets = function () {
             if ($cookies.get('sessionid') != undefined) {
                 $('#modalSnippets').modal('show');
@@ -190,6 +199,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $('#modalSnippets').modal('hide');
             $scope.title = '';
             $scope.body = '';
+            $scope.pSnippet = '';
             getSnippets($cookies.get('username'), 1);
         });
 

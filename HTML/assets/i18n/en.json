@@ -49,7 +49,9 @@
     "TYPE_URL": "Type Facebook URL manually:",
     "SOCIAL_URL": "Social network url",
     "EDIT_PROFILE": "Edit Profile",
-    "PUBLISH": "Publish"
+    "PUBLISH": "Publish",
+    "EDIT": "Edit",
+    "DELETE": "Delete"
   },
   "view_profile": {
     "RATING": "Rating:",

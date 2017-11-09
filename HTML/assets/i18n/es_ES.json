@@ -49,7 +49,9 @@
     "TYPE_URL": "Escribe la url manualmente:",
     "SOCIAL_URL": "Url de la red social",
     "EDIT_PROFILE": "Editar perfil",
-    "PUBLISH": "Publicar"
+    "PUBLISH": "Publicar",
+    "EDIT": "Editar",
+    "DELETE": "Eliminar"
   },
   "view_profile": {
     "RATING": "Valoración:",

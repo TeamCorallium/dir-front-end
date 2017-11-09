@@ -87,9 +87,11 @@
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0">
-                                <textarea class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-15"></textarea>
+                                <textarea ng-model="pSnippet" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-15"></textarea>
                                 <div class="SnippetFooter col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <a class="btn btn-primary pull-right" translate="user_profile.PUBLISH"></a>
+                                    <a class="btn btn-primary pull-right" translate="user_profile.PUBLISH" ng-click="">
+                                        <i class="ti-check-box"></i>
+                                    </a>
                                 </div>
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 padding-0">
@@ -108,14 +110,18 @@
                                                     </span>
                                                     <div class="btn-group pull-right DropdownMargin" uib-dropdown>
                                                         <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
-                                                            <span class="fa fa-ellipsis-h"></span>
+                                                            <span class="ti-more"></span>
                                                         </button>
                                                         <ul class="ListEdit dropdown-menu" role="menu">
                                                             <li>
-                                                                <a>Edit</a>
+                                                                <a translate="user_profile.EDIT">
+                                                                    <i class="ti-pencil-alt"></i>
+                                                                </a>
                                                             </li>
                                                             <li>
-                                                                <a>Delete</a>
+                                                                <a translate="user_profile.DELETE">
+                                                                    <i class="ti-trash"></i>
+                                                                </a>
                                                             </li>
                                                         </ul>
                                                     </div>
