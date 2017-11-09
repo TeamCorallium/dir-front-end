@@ -80,9 +80,14 @@
                             </div>
                             <div class="padding-right-15 paddingLeft15XS">
                                 <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="col-xs-12" />
-                                <a type="button" href="{{user.qrcode}}" download ng-show="user.qrcode != ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-save ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                    <span translate="user_profile.SAVE_QR"></span>
-                                </a>
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12"  ng-show="user.qrcode != ''">
+                                    <a type="button" class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <i class="ti-reload"></i>
+                                    </a>
+                                    <a type="button" href="{{user.qrcode}}" download class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5 pull-right">
+                                        <i class="ti-save"></i>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
@@ -127,7 +132,7 @@
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a ng-click="deleteSnippet(snippet.id)">
+                                                                <a ng-click="deleteSnippet(snippet.url)">
                                                                     <i class="ti-trash"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
                                                                 </a>

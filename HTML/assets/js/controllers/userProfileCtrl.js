@@ -186,7 +186,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.updateSnippet(url, body);
         };
 
-        $scope.deleteSnippet = function() {
+        $scope.deleteSnippet = function(url) {
             SweetAlert.swal({
                 title: "Are you sure?",
                 text: "Your will not be able to recover this snippet!",
