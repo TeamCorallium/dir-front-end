@@ -55,6 +55,11 @@
 }
 
 @media  (min-width: 768px) {
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 5px !important;
+    }
+    
     .TitleSnippetBox {
         width: 95% !important;
         text-align: left !important;
@@ -1702,11 +1707,6 @@ span.stars span {
 
     .backgroundBlueSky{
         background-color: #00B8B8 !important;
-    }
-
-    .marginButtonEdit {
-        margin-right: 100px !important;
-        margin-top: 5px !important;
     }
 
     .borderRadius50 {

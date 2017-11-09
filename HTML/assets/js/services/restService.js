@@ -359,7 +359,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
-                $state.go('profile');
+                $rootScope.$broadcast('updateProfile');
             }).error(function (response) {
                 console.log("Entra al error");
             });
@@ -397,7 +397,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
-                $state.go('profile');
+                $rootScope.$broadcast('updateProfile');
             }).error(function (response) {
                 console.log("Entra al error");
             });

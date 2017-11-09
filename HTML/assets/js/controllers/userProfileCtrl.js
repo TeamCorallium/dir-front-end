@@ -275,6 +275,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSnippets($cookies.get('username'), 1);
         });
 
+        $rootScope.$on('updateProfile', function (event, data) {            
+            $scope.changeFlatEdit();
+        });
+
         $rootScope.$on('deleteSnippet', function (event, data) {            
             SweetAlert.swal({
                 title: "Deleted!",
