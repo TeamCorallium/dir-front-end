@@ -1328,7 +1328,7 @@ a.ButtonImageSize {
 }
 
 .TitleSnippetBox {
-    width: auto !important;
+    width: 95% !important;
     text-align: left !important;
     display: block;
     position: relative;
@@ -1651,7 +1651,7 @@ span.stars span {
     .SnippetFooter {
         height: 40px;
     }
-    
+
     .borderBox {
         border: 1px solid #E3E3E3;
         border-radius: 6px !important;
