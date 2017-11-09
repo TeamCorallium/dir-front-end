@@ -173,8 +173,12 @@
         width: 87% !important;
     }
 
-    .paddingStyle{
+    .paddingStyle {
         margin-top: 10px !important;
+        padding-left: 40px !important; 
+    }
+
+    .paddingStyleView {
         padding-left: 40px !important; 
     }
 
@@ -898,7 +902,7 @@
 }
 
 .paddingViewProfile {
-    padding-top: 125px !important;
+    padding-top: 5px !important;
 }
 
 .button-image-cover:hover {
