@@ -1708,3 +1708,7 @@ span.stars span {
         margin-right: 175px !important;
         margin-top: 5px !important;
     }
+
+    .borderRadius50 {
+        border-radius: 50px !important;
+    }
