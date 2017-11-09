@@ -59,7 +59,7 @@
         margin-right: 100px !important;
         margin-top: 5px !important;
     }
-    
+
     .TitleSnippetBox {
         width: 95% !important;
         text-align: left !important;
@@ -1711,4 +1711,12 @@ span.stars span {
 
     .borderRadius50 {
         border-radius: 50px !important;
+    }
+
+    .marginLeft20XS {
+        margin-left: 20px !important;
+    }
+
+    .marginTop20XS {
+        margin-top: 20px !important;
     }
