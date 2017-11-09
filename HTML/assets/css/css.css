@@ -55,6 +55,14 @@
 }
 
 @media  (min-width: 768px) {
+    .TitleSnippetBox {
+        width: 95% !important;
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
     .image_middle {
         float: left !important;
         height: 130px !important;
@@ -368,6 +376,14 @@
 }
 
 @media  (max-width: 767px) {
+    .TitleSnippetBox {
+        width: 89% !important;
+        text-align: left !important;
+        display: block;
+        position: relative;
+        float: left;
+    }
+
     .marginSnippetXS {
         margin-left: 0px !important;
     }
@@ -1331,14 +1347,6 @@ a.ButtonImageSize {
     float: left;
 }
 
-.TitleSnippetBox {
-    width: 95% !important;
-    text-align: left !important;
-    display: block;
-    position: relative;
-    float: left;
-}
-
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
     display: none !important;
 }
@@ -1676,4 +1684,8 @@ span.stars span {
 
     .backgroundGray {
         background-color: #f6f6f6 !important
+    }
+
+    .backgroundWhite {
+        background-color: white !important
     }
