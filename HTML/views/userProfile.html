@@ -86,7 +86,7 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
-                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-20 padding-0">
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
                                 <textarea class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-15"></textarea>
                                 <div class="SnippetFooter col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                     <a class="btn btn-primary pull-right" translate="user_profile.PUBLISH"></a>
@@ -94,7 +94,7 @@
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-20">
                                 <ul class="ltwt padding-15">
-                                    <li ng-repeat="snippet in user.snippets">
+                                    <li ng-repeat="snippet in user.snippets" class="borderBox">
                                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
                                             <div class="IconSnippetBox">
                                                 <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
@@ -105,11 +105,11 @@
                                                     <i class="fa fa-fw fa-clock-o"></i>
                                                     {{snippet.created | timeago}}
                                                 </span>
-                                                <div class="btn-group" uib-dropdown>                                                    
+                                                <div class="btn-group pull-right DropdownMargin" uib-dropdown>                                                    
                                                     <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
                                                         <span class="fa fa-ellipsis-h"></span>
                                                     </button>
-                                                    <ul class="dropdown-menu" role="menu">
+                                                    <ul class="ListEdit dropdown-menu" role="menu">
                                                         <li>
                                                             <a>Edit</a>
                                                         </li>

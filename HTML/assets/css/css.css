@@ -1656,3 +1656,12 @@ span.stars span {
         border: 1px solid #E3E3E3;
         border-radius: 6px !important;
     }
+
+    .ListEdit {
+        margin-top: -9px;        
+        margin-right: 10px;
+    }
+
+    .DropdownMargin {
+        margin-top: -9px;
+    }
