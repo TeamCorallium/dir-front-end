@@ -1689,3 +1689,13 @@ span.stars span {
     .backgroundWhite {
         background-color: white !important
     }
+
+    .ImagePlusSocialNetwork {
+        max-width: 30px;
+        margin-top: -8px;
+        margin-left: 1px;
+    }
+
+    .backgroundBlueSky{
+        background-color: #00B8B8 !important;
+    }
