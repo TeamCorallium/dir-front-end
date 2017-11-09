@@ -1645,6 +1645,7 @@ span.stars span {
 
     .SnippetsArea {
         resize: none;
+        border: none !important;
     }
 
     .SnippetFooter {
@@ -1658,4 +1659,5 @@ span.stars span {
 
     .borderBox {
         border: 1px solid #E3E3E3;
+        border-radius: 6px !important;
     }
