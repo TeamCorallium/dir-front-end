@@ -32,7 +32,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.viewProfile = false;
         $rootScope.viewInbox = true;
         $scope.pSnippet = '';
-
+        $scope.EditSnippetFlag = false;
 
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
@@ -170,11 +170,15 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
+        $scope.changeFlatEdit = function() {
+            $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
+        };
+
         $scope.publishSnippets = function () {
             if ($scope.pSnippet != '') {
                 RestService.addSnippet("", $scope.pSnippet);
             } else {
-                growl.success("Cannot exist empty field", { title: 'Publish Snippet' });
+                growl.error("Cannot exist empty field", { title: 'Publish Snippet' });
             }
         };
 
@@ -579,7 +583,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.title != '' && $scope.body != '') {
                 RestService.addSnippet($scope.title, $scope.body);
             } else {
-                growl.success("Cannot exist empty fields", { title: 'Add Snippet' });
+                growl.error("Cannot exist empty fields", { title: 'Add Snippet' });
             }
         };
 
@@ -590,8 +594,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         // start:  keyup snippets
         $("#title").on('keyup', function (e) {
             if (e.keyCode == 13) {
-                // var title = $('#title').val();
-                // var body = $('#body').val();
                 if ($scope.title != '' && $scope.body != '') {
                     RestService.addSnippet($scope.title, $scope.body);
                 } else {
@@ -602,8 +604,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $("#body").on('keyup', function (e) {
             if (e.keyCode == 13) {
-                // var title = $('#title').val();
-                // var body = $('#body').val();
                 if ($scope.title != '' && $scope.body != '') {
                     RestService.addSnippet($scope.title, $scope.body);
                 } else {
