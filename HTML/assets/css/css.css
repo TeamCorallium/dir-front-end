@@ -387,6 +387,7 @@
 @media  (max-width: 767px) {
     .marginLeft20XS {
         margin-left: 20px !important;
+        padding-right: 45px !important;
     }
 
     .marginTop20XS {
@@ -836,6 +837,7 @@
 }
 
 @media  (max-width: 320px) {
+
     .avatarXS{
         width: 50px;
         height: 50px;
