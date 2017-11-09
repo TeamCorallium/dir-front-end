@@ -1658,10 +1658,14 @@ span.stars span {
     }
 
     .ListEdit {
-        margin-top: -9px;        
-        margin-right: 10px;
+        margin-top: -9px !important;        
+        margin-right: 10px !important;
     }
 
     .DropdownMargin {
-        margin-top: -9px;
+        margin-top: -9px !important;
+    }
+
+    .margin-top-3 {
+        margin-top: 3px !important;
     }
