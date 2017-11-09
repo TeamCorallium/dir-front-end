@@ -34,10 +34,6 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/profile',
             templateUrl: 'views/userProfile.html',
             resolve: loadSequence('userProfileCtrl')
-        }).state('edit-profile', {
-            url: '/editprofile',
-            templateUrl: 'views/editUserProfile.html',
-            resolve: loadSequence('editUserProfileCtrl')
         }).state('tshirts', {
             url: '/tshirts/:id',
             templateUrl: 'views/viewProfile.html',
