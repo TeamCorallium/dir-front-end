@@ -5,6 +5,10 @@
 
 app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
+
+        if ($cookies.get('username') != 'admin'){
+            $state.go('home');
+        }
  
         $scope.stuff = {
             color: 'White',

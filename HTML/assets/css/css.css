@@ -371,7 +371,7 @@
     .marginSnippetXS {
         margin-left: 0px !important;
     }
-    
+
     #MessageReadBox {
         display: none;
     }
@@ -1672,4 +1672,8 @@ span.stars span {
 
     .margin-top-3 {
         margin-top: 3px !important;
+    }
+
+    .backgroundGray {
+        background-color: #f6f6f6 !important
     }
