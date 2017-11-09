@@ -86,10 +86,10 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyle">
-                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-20">
                                 <textarea class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12"></textarea>
                                 <div class="SnippetFooter col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <a class="btn btn-primary pull-right" translate="user_profile.PUBLISH"></a>
+                                    <a class="btn btn-primary pull-right buttonPublish" translate="user_profile.PUBLISH"></a>
                                 </div>
                             </div>
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20">
@@ -103,7 +103,7 @@
                                                 <h4>{{snippet.title}}</h4>
                                             </div>
                                         </div>
-                                        <h5 class="ltwt_tweet_text dont-break-out" ng-bind-html="snippet.body | emoticons:{linkTarget:'_blank'}"></h5>
+                                        <h5 class="ltwt_tweet_text dont-break-out" ng-bind-html="snippet.body | emoticons"></h5>
                                         <span class="block text-light margin-bottom-20">
                                             <i class="fa fa-fw fa-clock-o"></i> 
                                             {{snippet.created | timeago}}
