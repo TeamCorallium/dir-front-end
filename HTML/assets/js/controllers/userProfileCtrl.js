@@ -243,6 +243,31 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         };
 
+        $scope.deleteSocialNetwork = function (id) {
+            SweetAlert.swal({
+                title: "Are you sure?",
+                text: "Your will not be able to recover this social network!",
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: "Yes, delete it!",
+                cancelButtonText: "No, cancel!",
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSocialNetwork(id);
+                } else {
+                    SweetAlert.swal({
+                        title: "Cancelled",
+                        text: "Your social network is safe :)",
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+        };
+
         $rootScope.$on('snippetUpdated', function (event, data) {            
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
 
@@ -260,6 +285,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.user.snippets = [];
             getSnippets($cookies.get('username'), 1);
+        });
+
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {            
+            SweetAlert.swal({
+                title: "Deleted!",
+                text: "Your social network has been deleted.",
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
+
+            $scope.user.socialnetworks = [];
+            getSocialNetworks($cookies.get('username'));
         });
 
         $scope.openModalSnippets = function () {

@@ -26,7 +26,9 @@
     "CONTACT_US": "聯繫",
     "COPYRIGHT": "&copy; 版權",
     "RESERVED_RIGHT": "的 &lt;DIR&gt;. 保留擁有權利.",
-    "MANAGE_PAGE": "管理頁面"
+    "MANAGE_PAGE": "管理頁面",
+    "CHANGE_PASSWORD": "更改密碼",
+    "ADD_TSHIRT": "連結 t恤衫"
   },
   "user_profile": {
     "RATING": "評級:",
@@ -95,7 +97,6 @@
     "RATING": "評級:",
     "PREVIOUS": "« 以前",
     "NEXT": "下 »",
-    "CHANGE_PASSWORD": "更改密碼",
     "SAVE_PROFILE": "保存設定檔",
     "POPULAR_USER": "熱門使用者",
     "SEE_MORE": "查看更多",
@@ -107,6 +108,7 @@
     "PASSWORD_AGAIN": "密碼:",
     "PASSWORD_MATCH": "密碼不匹配.",
     "CLOSE": "關閉",
+    "CHANGE_PASSWORD": "更改密碼",
     "ADD_TSHIRT": "連結 t恤衫",
     "ENTER": "輸入代碼"
   },

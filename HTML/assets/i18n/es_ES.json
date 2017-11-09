@@ -26,7 +26,9 @@
     "CONTACT_US": "Contáctanos",
     "COPYRIGHT": "&copy; Derechos de autor",
     "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados.",
-    "MANAGE_PAGE": "Administrar página"
+    "MANAGE_PAGE": "Administrar página",
+    "CHANGE_PASSWORD": "Cambiar contraseña",
+    "ADD_TSHIRT": "Adicionar camiseta"    
   },
   "user_profile": {
     "RATING": "Valoración:",
@@ -95,7 +97,6 @@
     "RATING": "Valoración:",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
-    "CHANGE_PASSWORD": "Cambiar contraseña",
     "SAVE_PROFILE": "Salvar perfil",
     "POPULAR_USER": "Usuarios más populares",
     "SEE_MORE": "Ver más",
@@ -108,6 +109,7 @@
     "PASSWORD_MATCH": "Las contraseñas no coinciden.",
     "CLOSE": "Cerrar",
     "ADD_TSHIRT": "Adicionar camiseta",
+    "CHANGE_PASSWORD": "Cambiar contraseña",
     "ENTER": "Adicionar código"
   },
   "home": {
