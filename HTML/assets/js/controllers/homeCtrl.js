@@ -5,7 +5,7 @@
 
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
-        
+
         $rootScope.OptionsEdit = true;
 
         if ($cookies.get('sessionid')) {
@@ -75,7 +75,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
-                        
+
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {
@@ -83,8 +83,17 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             }
         };
 
-        $scope.getTracks = function() {
-            RestService.fetchTracking();
+        $scope.getTracks = function () {
+            RestService.fetchTracking().then(
+                function (data) {
+                    $scope.totalVisits = data.total;
+                    $scope.returnRatio = data.return_ratio;
+                    $scope.timeOnSite = data.time_on_site;
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+            );
         };
 
         $scope.getTracks();

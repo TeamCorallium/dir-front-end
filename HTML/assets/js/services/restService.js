@@ -599,8 +599,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             return $http.get(tracking + '?start=2014-11&end=2018-12')
                 .then(
                 function (response) {
-                    // return response;
-                    console.log(response);
+                    return response;
                 },
                 function (errResponse) {
                     return $q.reject(errResponse);
