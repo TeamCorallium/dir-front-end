@@ -7,6 +7,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert) {
 
         $scope.user = {
+            profileUrl: '',
             username: '',
             firstname: '',
             lastname: '',
@@ -56,6 +57,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 function (data) {
                     data = data.results;
                     if (data.length > 0) {
+                        $scope.user.profileUrl = data[0].profiles[0];
                         $scope.user.username = data[0].username;
                         $scope.user.firstname = data[0].first_name;
                         $scope.user.lastname = data[0].last_name;
@@ -276,6 +278,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('updateProfile', function (event, data) {
+            getProfile($scope.user.profileUrl);
             $scope.EditProfile();
         });
 
