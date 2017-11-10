@@ -267,7 +267,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
 
-            if ($stateParams.id != ''){
+            if ($stateParams.id != '' && $state.id != undefined){
                 RestService.fetchTshirt($stateParams.id)
                 .then(
                 function (data) {
