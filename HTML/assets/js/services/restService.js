@@ -600,7 +600,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 .then(
                 function (response) {
                     // return response;
-                    console.log(response.response);
+                    console.log(response);
                 },
                 function (errResponse) {
                     return $q.reject(errResponse);
