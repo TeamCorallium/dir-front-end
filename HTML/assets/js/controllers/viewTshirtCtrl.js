@@ -234,6 +234,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
+
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {

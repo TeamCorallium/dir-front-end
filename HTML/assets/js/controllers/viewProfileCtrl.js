@@ -234,6 +234,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
+
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {
@@ -268,6 +269,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
 
+            console.log($cookies.get('exploreUser') + " viewProfile");
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
