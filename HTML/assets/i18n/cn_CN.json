@@ -31,7 +31,10 @@
     "ADD_TSHIRT": "連結 t恤衫",
     "FIELD_REQUIRED": "此欄位是必需的",
     "EMAIL_INVALID": "電子郵件無效",
-    "USERNAME_PLACEHOLDER": "輸入您的使用者名"
+    "ENTER_USERNAME": "輸入您的使用者名",
+    "ENTER_PASSWORD": "輸入密碼",
+    "ENTER_EMAIL": "輸入電子郵件",
+    "ENTER_PIN": "輸入您的 PIN"
   },
   "user_profile": {
     "RATING": "評級:",
@@ -60,7 +63,15 @@
     "SAVE": "保存",
     "SAVE_PROFILE": "保存設定檔",
     "FIELD_REQUIRED": "此欄位是必需的",
-    "EMAIL_INVALID": "電子郵件無效"
+    "EMAIL_INVALID": "電子郵件無效",
+    "ENTER_FULL_NAME": "輸入您的全名",
+    "ENTER_INFO": "輸入您的個人資訊",
+    "ENTER_EMAIL": "輸入您的電子郵件地址",
+    "ENTER_SNIPPET_TITLE": "輸入程式碼片段標題",
+    "ENTER_SNIPPET_BODY": "輸入程式碼片段正文",
+    "ENTER_SOCIAL_NETWORK_URL": "進入社交網路網址",
+    "ENTER_PASSWORD": "輸入密碼",
+    "ENTER_TSHIRT_CODE": "輸入 t恤代碼"
   },
   "view_profile": {
     "RATING": "評級:",
@@ -69,7 +80,9 @@
     "LEAVE_MESSAGE": "留言",
     "CLOSE": "關閉",
     "SEND_MESSAGE": "發送消息",
-    "CLAP": "拍"
+    "CLAP": "拍",
+    "ENTER_SUBJECT": "輸入主題",
+    "ENTER_MESSAGE": "輸入您的留言"
   },
   "inbox": {
     "BROWSE": "流覽",
@@ -83,7 +96,8 @@
     "SEND_MESSAGE": "發送消息",
     "CLOSE": "關閉",
     "SUBJECT": "主題",
-    "FIELD_REQUIRED": "此欄位是必需的"
+    "FIELD_REQUIRED": "此欄位是必需的",
+    "ENTER_MESSAGE": "輸入您的留言"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "流覽設定檔",
@@ -118,7 +132,10 @@
     "ADD_TSHIRT": "連結 t恤衫",
     "ENTER": "輸入代碼",
     "FIELD_REQUIRED": "此欄位是必需的",
-    "EMAIL_INVALID": "電子郵件無效"
+    "EMAIL_INVALID": "電子郵件無效",
+    "ENTER_FULL_NAME": "輸入您的全名",
+    "ENTER_INFO": "輸入您的個人資訊",
+    "ENTER_EMAIL": "輸入您的電子郵件地址"
   },
   "home": {
     "TEXT_TSHIRTS" : "t恤衫與技術",
@@ -148,5 +165,17 @@
     "USERS": "使用者",
     "SEARCH": "搜索",
     "NO_STUFFS": "不存在的東西"
+  },
+  "contact": {
+    "SEND_SUCCESS": "成功!您的資訊已發送給我們",
+    "SEND_ERROR": "錯誤!發送郵件時出錯",
+    "CONTACT_US": "聯繫我們",
+    "EMAIL": "您的電子郵件地址",
+    "FIELD_REQUIRED": "此欄位是必需的.",
+    "EMAIL_INVALID": "電子郵件無效.",
+    "SUBJECT": "主題",
+    "MESSAGE_BODY": "輸入您的留言",
+    "MESSAGE": "消息",
+    "SEND_MESSAGE": "發送消息"
   }
 }

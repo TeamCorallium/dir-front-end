@@ -31,7 +31,10 @@
     "ADD_TSHIRT": "Link T-Shirt",
     "FIELD_REQUIRED": "This field is required.",
     "EMAIL_INVALID": "Email is invalid.",
-    "USERNAME_PLACEHOLDER": "Enter your username"
+    "ENTER_USERNAME": "Enter your username",
+    "ENTER_PASSWORD": "Enter your password",
+    "ENTER_EMAIL": "Enter email address",
+    "ENTER_PIN": "Enter your PIN"
   },
   "user_profile": {
     "RATING": "Rating:",
@@ -60,7 +63,15 @@
     "SAVE": "Save",
     "SAVE_PROFILE": "Save Profile",
     "FIELD_REQUIRED": "This field is required.",
-    "EMAIL_INVALID": "Email is invalid."
+    "EMAIL_INVALID": "Email is invalid.",
+    "ENTER_FULL_NAME": "Enter your full name",
+    "ENTER_INFO": "Enter your personal info",
+    "ENTER_EMAIL": "Enter your email address",
+    "ENTER_SNIPPET_TITLE": "Enter snippet title",
+    "ENTER_SNIPPET_BODY": "Enter snippet body",
+    "ENTER_SOCIAL_NETWORK_URL": "Enter social network URL",
+    "ENTER_PASSWORD": "Enter password",
+    "ENTER_TSHIRT_CODE": "Enter T-Shirt code"
   },
   "view_profile": {
     "RATING": "Rating:",
@@ -73,7 +84,8 @@
     "PREVIOUS": "« Previous",
     "NEXT": "Next »",
     "FIELD_REQUIRED": "This field is required.",
-    "EMAIL_INVALID": "Email is invalid."
+    "EMAIL_INVALID": "Email is invalid.",
+    "ENTER_SUBJECT": "Enter subject"
   },
   "inbox": {
     "BROWSE": "BROWSE",
@@ -87,7 +99,8 @@
     "SEND_MESSAGE": "Send message",
     "CLOSE": "Close",
     "SUBJECT": "Subject",
-    "FIELD_REQUIRED": "This field is required."
+    "FIELD_REQUIRED": "This field is required.",
+    "ENTER_MESSAGE": "Enter your message"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explore Profiles",
@@ -122,7 +135,10 @@
     "ADD_TSHIRT": "Link T-Shirt",
     "ENTER": "Enter code",
     "FIELD_REQUIRED": "This field is required.",
-    "EMAIL_INVALID": "Email is invalid."
+    "EMAIL_INVALID": "Email is invalid.",
+    "ENTER_FULL_NAME": "Enter your full name",
+    "ENTER_INFO": "Enter your personal info",
+    "ENTER_EMAIL": "Enter your email address"
   },
   "home": {
     "TEXT_TSHIRTS" : "T-shirts with technology",
@@ -152,5 +168,17 @@
     "USERS": "Users",
     "SEARCH": "Search",
     "NO_STUFFS": "There are no stuffs"
+  },
+  "contact": {
+    "SEND_SUCCESS": "Success! Your message has been sent to us.",
+    "SEND_ERROR": "Error! There was an error sending your message.",
+    "CONTACT_US": "Contact Us",
+    "EMAIL": "Your email address",
+    "FIELD_REQUIRED": "This field is required.",
+    "EMAIL_INVALID": "Email is invalid.",
+    "SUBJECT": "Subject",
+    "MESSAGE_BODY": "Enter your message",
+    "MESSAGE": "Message",
+    "SEND_MESSAGE": "Send message"
   }
 }

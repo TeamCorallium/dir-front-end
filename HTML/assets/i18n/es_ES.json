@@ -31,7 +31,10 @@
     "ADD_TSHIRT": "Adicionar camiseta",
     "FIELD_REQUIRED": "Este campo es requerido.",
     "EMAIL_INVALID": "Correo inválido.",
-    "USERNAME_PLACEHOLDER": "Introduzca el usuario"
+    "ENTER_USERNAME": "Ingrese el usuario",
+    "ENTER_PASSWORD": "Ingrese la contraseña",
+    "ENTER_EMAIL": "Ingrese el correo electrónico",
+    "ENTER_PIN": "Introduza su PIN"
   },
   "user_profile": {
     "RATING": "Valoración:",
@@ -60,7 +63,15 @@
     "SAVE": "Salvar",
     "SAVE_PROFILE": "Salvar perfil",
     "FIELD_REQUIRED": "Este campo es requerido.",
-    "EMAIL_INVALID": "Correo inválido."
+    "EMAIL_INVALID": "Correo inválido.",
+    "ENTER_FULL_NAME": "Ingrese su nombre",
+    "ENTER_INFO": "Ingrese su información personal",
+    "ENTER_EMAIL": "Ingrese su correo electrónico",
+    "ENTER_SNIPPET_TITLE": "Introduza el título",
+    "ENTER_SNIPPET_BODY": "Ingrese su snippet",
+    "ENTER_SOCIAL_NETWORK_URL": "Ingrese la URL de su red social",
+    "ENTER_PASSWORD": "Ingrese contraseña",
+    "ENTER_TSHIRT_CODE": "Ingrese el código de la camiseta"
   },
   "view_profile": {
     "RATING": "Valoración:",
@@ -69,7 +80,9 @@
     "LEAVE_MESSAGE": "Deja tu mensaje",
     "CLOSE": "Cerrar",
     "SEND_MESSAGE": "Enviar mensaje",
-    "CLAP": "palmadas"
+    "CLAP": "palmadas",
+    "ENTER_SUBJECT": "Ingrese el asunto",
+    "ENTER_MESSAGE": "Ingrese el mensaje"
   },
   "inbox": {
     "BROWSE": "Navegación",
@@ -83,7 +96,8 @@
     "SEND_MESSAGE": "Enviar mensaje",
     "CLOSE": "Cerrar",
     "SUBJECT": "Asunto",
-    "FIELD_REQUIRED": "Este campo es requerido."
+    "FIELD_REQUIRED": "Este campo es requerido.",
+    "ENTER_MESSAGE": "Ingrese el mensaje"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explorar perfiles",
@@ -118,7 +132,10 @@
     "CHANGE_PASSWORD": "Cambiar contraseña",
     "ENTER": "Adicionar código",
     "FIELD_REQUIRED": "Este campo es requerido.",
-    "EMAIL_INVALID": "Correo inválido."
+    "EMAIL_INVALID": "Correo inválido.",
+    "ENTER_FULL_NAME": "Ingrese su nombre",
+    "ENTER_INFO": "Ingrese su información personal",
+    "ENTER_EMAIL": "Ingrese su correo electrónico"
   },
   "home": {
     "TEXT_TSHIRTS" : "Camisetas con tecnología",
@@ -148,5 +165,17 @@
     "USERS": "Usuarios",
     "SEARCH": "Buscar",
     "NO_STUFFS": "No existen objetos"
+  },
+  "contact": {
+    "SEND_SUCCESS": "Éxito! Su mensaje ha sido enviado a nosotros.",
+    "SEND_ERROR": "Error! Hubo un error al enviar su mensaje.",
+    "CONTACT_US": "Contacte con nosotros",
+    "EMAIL": "Su dirección de correo electrónico",
+    "FIELD_REQUIRED": "Este campo es necesario.",
+    "EMAIL_INVALID": "El correo electrónico no es válido.",
+    "SUBJECT": "Asunto",
+    "MESSAGE_BODY": "Ingrese su mensaje",
+    "MESSAGE": "Mensaje",
+    "SEND_MESSAGE": "Enviar mensaje"
   }
 }

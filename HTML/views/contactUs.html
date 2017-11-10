@@ -3,37 +3,32 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                    <div class="alert alert-success hidden" id="contactSuccess">
-                        <strong>Success!</strong> Your message has been sent to us.
-                    </div>
-                    <div class="alert alert-error hidden" id="contactError">
-                        <strong>Error!</strong> There was an error sending your message.
-                    </div>
-                    <h2>Contact Us</h2>
+                    <div class="alert alert-success hidden" id="contactSuccess" translate="contact.SEND_SUCCESS"></div>
+                    <div class="alert alert-error hidden" id="contactError" translate="contact.SEND_ERROR"></div>
+                    <h2 translate="contact.CONTACT_US"></h2>
                     <form novalidate="novalidate" id="contactUsForm" name="contactUsForm" role="form" ng-controller="FormController">
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-6">
-                                    <label for="emailHome"> Your email address
+                                    <label for="emailHome" translate="contact.EMAIL">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" ng-cloak translate="contact.EMAIL_INVALID"></div>
                                     <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''"
-                                        id="emailHome" name="emailHome" placeholder="Enter Email Address" ng-required="true"
-                                        ng-model="message.email">
+                                        id="emailHome" name="emailHome" placeholder="{{ 'contact.EMAIL' | translate }}" ng-required="true" ng-model="message.email">
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <label for="subject"> Subject
+                                    <label for="subject" translate="contact.SUBJECT">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.subject.$dirty && contactUsForm.subject.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="contactUsForm.subject.$dirty && contactUsForm.subject.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
                                     <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''"
-                                        id="subject" name="subject" placeholder="Enter the subject of your message" ng-required="true"
+                                        id="subject" name="subject" placeholder="{{ 'contact.SUBJECT' | translate }}" ng-required="true"
                                         ng-model="$parent.message.subject" required>
                                 </div>
                             </div>
@@ -41,12 +36,12 @@
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-12">
-                                    <label for="body"> Message
+                                    <label for="body" translate="contact.MESSAGE">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
                                     <textarea class="form-control" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
-                                        name="body" placeholder="Enter your message" ng-required="true" ng-model="$parent.message.body" required></textarea>
+                                        name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body" required></textarea>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +49,7 @@
                             <div class="col-md-12">
                                 <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn"
                                     type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid || !viewProfile">
-                                    <span>Send Message</span>
+                                    <span class="pointerHover" translate="contact.SEND_MESSAGE"></span>
                                 </a>
                             </div>
                         </div>
