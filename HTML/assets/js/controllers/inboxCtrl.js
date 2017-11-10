@@ -75,7 +75,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 subject: message.subject,
                 body: message.body,
                 created: message.created,
-                readed: true
+                readed: message.readed
             };
 
             if ($(window).width() <= 767) {
@@ -94,9 +94,12 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 }
             }
 
-            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
+            if(!$scope.messageSelected.readed) {
+             $scope.messageSelected.readed = true;
+             RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
                 $scope.messageSelected.receiver, $scope.messageSelected.subject,
-                $scope.messageSelected.body, $scope.messageSelected.readed);
+                $scope.messageSelected.body, $scope.messageSelected.readed);   
+            }            
         };
 
         $scope.selectMessageSend = function (message) {
@@ -108,7 +111,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 subject: message.subject,
                 body: message.body,
                 created: message.created,
-                readed: true
+                readed: message.readed
             };
 
             if ($(window).width() <= 767) {
@@ -116,20 +119,20 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageReadBox').show();
             }
 
-            for (var i = 0; i < $scope.messagesSend.length; i++) {
-                if ($scope.messagesSend[i].id == message.id) {
-                    $scope.messagesSend[i].readed = true;
-                    var idClass = "#li-" + $scope.messagesSend[i].id;
-                    $(idClass).addClass("backgroundMessageSelectedColor");
-                } else {
-                    var idClass = "#li-" + $scope.messagesSend[i].id;
-                    $(idClass).removeClass("backgroundMessageSelectedColor");
-                }
-            }
+            // for (var i = 0; i < $scope.messagesSend.length; i++) {
+            //     if ($scope.messagesSend[i].id == message.id) {
+            //         $scope.messagesSend[i].readed = true;
+            //         var idClass = "#li-" + $scope.messagesSend[i].id;
+            //         $(idClass).addClass("backgroundMessageSelectedColor");
+            //     } else {
+            //         var idClass = "#li-" + $scope.messagesSend[i].id;
+            //         $(idClass).removeClass("backgroundMessageSelectedColor");
+            //     }
+            // }
 
-            RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
-                $scope.messageSelected.receiver, $scope.messageSelected.subject,
-                $scope.messageSelected.body, $scope.messageSelected.readed);
+            // RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
+            //     $scope.messageSelected.receiver, $scope.messageSelected.subject,
+            //     $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
         $scope.cleanMessageSelected = function () {

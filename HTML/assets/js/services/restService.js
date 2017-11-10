@@ -20,6 +20,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
     var stocks = 'http://www.dir.com:8888/api/stocks/';
     var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
+    var tracking = 'http://www.dir.com:8888/api/track/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -587,6 +588,19 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 .then(
                 function (response) {
                     return response.data;
+                },
+                function (errResponse) {
+                    return $q.reject(errResponse);
+                }
+                );
+        },
+
+        fetchTracking: function () {
+            return $http.get(tracking + '?start=2014-11&end=2018-12')
+                .then(
+                function (response) {
+                    // return response;
+                    console.log(response.response);
                 },
                 function (errResponse) {
                     return $q.reject(errResponse);

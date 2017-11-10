@@ -72,15 +72,17 @@
                             <span class="block counter text-white" ng-model="tracks.totalVisits"></span>
                             <hr class="white-hr" />
                             <p class="block text-light" translate="home.TOTAL_VISITS">
-                                
+
                             </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
                             <i class="ti-back-left fa-4x text-primary"></i>
-                            <span class="block counter text-white" ng-model="tracks.returnRatio"></span>
-                            <span class="counter-symbol text-white">%</span>
+                            <div class="block">
+                                <span class="block counter text-white" ng-model="tracks.returnRatio"></span>
+                                <span class="counter-symbol text-white">%</span>
+                            </div>
                             <hr class="white-hr" />
                             <p class="block text-light" translate="home.RETURN_RATIO"></p>
                         </div>
@@ -88,9 +90,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
                             <i class="ti-alarm-clock fa-4x text-primary"></i>
-                            <div class="block">
-                                <span class="counter text-white" ng-model="tracks.timeOnSite"></span>
-                            </div>
+                            <span class="counter text-white" ng-model="tracks.timeOnSite"></span>
                             <hr class="white-hr" />
                             <p class="block text-light" translate="home.TIME_ON_SITE"></p>
                         </div>

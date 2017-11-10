@@ -17,6 +17,12 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $rootScope.viewProfile = true;
         $scope.countLimit = 4;
         $scope.profiles = [];
+        $scope.tracks = {
+            totalVisits: '',
+            returnRatio: '',
+            timeOnSite: '',
+            satisfiedCustomers: ''
+        };
 
         if ($(window).width() >= 992) {
             $scope.countLimit = 4;
@@ -76,5 +82,11 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                 $state.go('tshirts');
             }
         };
+
+        $scope.getTracks = function() {
+            RestService.fetchTracking();
+        };
+
+        $scope.getTracks();
 
     }]);
