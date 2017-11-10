@@ -154,7 +154,10 @@ app.config(['$translateProvider',
         $translateProvider.useLocalStorage();
 
         // Enable sanitize
-        $translateProvider.useSanitizeValueStrategy('sanitize');
+        // $translateProvider.useSanitizeValueStrategy('sanitize');
+
+        // Enable escaping of HTML
+        $translateProvider.useSanitizeValueStrategy('escape');
 
     }]);
 
