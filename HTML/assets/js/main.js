@@ -469,7 +469,6 @@ var Main = function() {
 		numberElement.each(function() {
 			var _this = $(this), 
 			numberTo = _this.text();
-			console.log(numberTo + " numberTo");
 			_this.appear();
 			if (_this.is(':appeared')) {
 
