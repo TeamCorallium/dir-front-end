@@ -119,7 +119,9 @@
     "LOG_IN": "登錄",
     "SEE_PROFILE": "請參閱設定檔",
     "EXPLORE_MORE": "流覽更多...",
-    "BUY_TSHIRTS": "從 alibaba.com 購買所有技術."
+    "BUY_TSHIRTS": "從 alibaba.com 購買所有技術.",
+    "MEET_TEAM": "結識新員工",
+    "MEET_TEXT": "我們只是一座行人天橋, 參觀一下您的喜好。每個設定檔提供了一個簡短的描述和社會網路連結."
   },
   "admin": {
     "COLOR": "顏色",

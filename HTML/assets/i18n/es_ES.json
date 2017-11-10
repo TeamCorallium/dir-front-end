@@ -119,7 +119,9 @@
     "LOG_IN": "Iniciar Sesión",
     "SEE_PROFILE": "Ver perfil",
     "EXPLORE_MORE": "Explorar más...",
-    "BUY_TSHIRTS": "Compra toda la tecnología desde alibaba.com."
+    "BUY_TSHIRTS": "Compra toda la tecnología desde alibaba.com.",
+    "MEET_TEAM": "Conozca Nuevas Personas",
+    "MEET_TEXT": "Somos solamente una pasarela, visite los perfiles de su preferencia. Cada perfil ofrece una breve descripción y vínculos a las redes sociales."
   },
   "admin": {
     "COLOR": "Color",
