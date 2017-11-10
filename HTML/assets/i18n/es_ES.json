@@ -71,7 +71,8 @@
     "ENTER_SNIPPET_BODY": "Ingrese su snippet",
     "ENTER_SOCIAL_NETWORK_URL": "Ingrese la URL de su red social",
     "ENTER_PASSWORD": "Ingrese contraseña",
-    "ENTER_TSHIRT_CODE": "Ingrese el código de la camiseta"
+    "ENTER_TSHIRT_CODE": "Ingrese el código de la camiseta",
+    "ENTER_SNIPPET": "Ingrese su snippet"
   },
   "view_profile": {
     "RATING": "Valoración:",
@@ -81,6 +82,10 @@
     "CLOSE": "Cerrar",
     "SEND_MESSAGE": "Enviar mensaje",
     "CLAP": "palmadas",
+    "PREVIOUS": "« Anterior",
+    "NEXT": "Siguiente »",
+    "FIELD_REQUIRED": "Este campo es requerido.",
+    "EMAIL_INVALID": "Correo inválido.",
     "ENTER_SUBJECT": "Ingrese el asunto",
     "ENTER_MESSAGE": "Ingrese el mensaje"
   },

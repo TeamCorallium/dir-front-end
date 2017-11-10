@@ -71,7 +71,8 @@
     "ENTER_SNIPPET_BODY": "Enter snippet body",
     "ENTER_SOCIAL_NETWORK_URL": "Enter social network URL",
     "ENTER_PASSWORD": "Enter password",
-    "ENTER_TSHIRT_CODE": "Enter T-Shirt code"
+    "ENTER_TSHIRT_CODE": "Enter T-Shirt code",
+    "ENTER_SNIPPET": "Enter your snippet"
   },
   "view_profile": {
     "RATING": "Rating:",
@@ -85,7 +86,8 @@
     "NEXT": "Next »",
     "FIELD_REQUIRED": "This field is required.",
     "EMAIL_INVALID": "Email is invalid.",
-    "ENTER_SUBJECT": "Enter subject"
+    "ENTER_SUBJECT": "Enter subject",
+    "ENTER_MESSAGE": "Enter your message"
   },
   "inbox": {
     "BROWSE": "BROWSE",

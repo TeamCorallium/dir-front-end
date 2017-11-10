@@ -71,7 +71,8 @@
     "ENTER_SNIPPET_BODY": "輸入程式碼片段正文",
     "ENTER_SOCIAL_NETWORK_URL": "進入社交網路網址",
     "ENTER_PASSWORD": "輸入密碼",
-    "ENTER_TSHIRT_CODE": "輸入 t恤代碼"
+    "ENTER_TSHIRT_CODE": "輸入 t恤代碼",
+    "ENTER_SNIPPET": "輸入程式碼片段"
   },
   "view_profile": {
     "RATING": "評級:",
@@ -81,6 +82,10 @@
     "CLOSE": "關閉",
     "SEND_MESSAGE": "發送消息",
     "CLAP": "拍",
+    "PREVIOUS": "« 以前",
+    "NEXT": "下 »",
+    "FIELD_REQUIRED": "此欄位是必需的",
+    "EMAIL_INVALID": "電子郵件無效",
     "ENTER_SUBJECT": "輸入主題",
     "ENTER_MESSAGE": "輸入您的留言"
   },
