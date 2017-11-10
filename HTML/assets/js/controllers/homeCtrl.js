@@ -91,6 +91,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     $scope.tracks.returnRatio = data.return_ratio;
                     $scope.tracks.timeOnSite = data.time_on_site;
 
+                    console.log($scope.tracks.totalVisits + " " + $scope.tracks.return_ratio + " " + $scope.tracks.time_on_site)
                 },
                 function (errResponse) {
                     console.log(errResponse);
