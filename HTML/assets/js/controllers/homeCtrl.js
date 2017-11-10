@@ -86,10 +86,9 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.getTracks = function () {
             RestService.fetchTracking().then(
                 function (data) {
-                    console.log(data.data);
-                    $scope.totalVisits = data.total;
-                    $scope.returnRatio = data.return_ratio;
-                    $scope.timeOnSite = data.time_on_site;
+                    $scope.totalVisits = data.response.total;
+                    $scope.returnRatio = data.response.return_ratio;
+                    $scope.timeOnSite = data.response.time_on_site;
                 },
                 function (errResponse) {
                     console.log(errResponse);
