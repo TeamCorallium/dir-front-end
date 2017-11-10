@@ -7,6 +7,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert) {
 
         $rootScope.OptionsEdit = true;
+        $cookies.remove("exploreUser", { path: '/' });
 
         $scope.user = {
             profileUrl: '',

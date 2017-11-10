@@ -11,6 +11,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         }
 
         $rootScope.OptionsEdit = false;
+        $cookies.remove("exploreUser", { path: '/' });
  
         $scope.stuff = {
             color: 'White',

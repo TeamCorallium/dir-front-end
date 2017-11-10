@@ -7,6 +7,7 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
     function ($scope, $state, $rootScope, RestService, $cookies, growl) {
 
         $rootScope.OptionsEdit = false;
+        $cookies.remove("exploreUser", { path: '/' });
 
         $scope.message = {
             email: '',

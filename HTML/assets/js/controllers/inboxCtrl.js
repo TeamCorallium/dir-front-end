@@ -10,6 +10,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $rootScope.OptionsEdit = false;
         $scope.messagesInbox = [];
         $scope.messagesSend = [];
+        $cookies.remove("exploreUser", { path: '/' });
 
         $scope.messageSelected = {
             url: '',

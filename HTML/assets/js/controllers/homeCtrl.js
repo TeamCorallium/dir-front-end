@@ -7,6 +7,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
     function ($scope, $state, $rootScope, RestService, $cookies) {
 
         $rootScope.OptionsEdit = false;
+        $cookies.remove("exploreUser", { path: '/' });
 
         if ($cookies.get('sessionid')) {
             $rootScope.connected = true;
