@@ -267,24 +267,26 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
 
-            if ($cookies.get('exploreUser')) {                
+            if ($stateParams.id != ''){
+                RestService.fetchTshirt($stateParams.id)
+                .then(
+                function (data) {
+                    if (data.length > 0) {
+                        $scope.getUser(data[0].owner);
+                    } else {
+                        $state.go('home');
+                        $('#myModal').modal('show');
+                    }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+                );
+            } else if ($cookies.get('exploreUser')) {                
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
             } else {
-                RestService.fetchTshirt($stateParams.id)
-                    .then(
-                    function (data) {
-                        if (data.length > 0) {
-                            $scope.getUser(data[0].owner);
-                        } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
-                        }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
-                    );
+                $state.go('home');
             }
         };
 
