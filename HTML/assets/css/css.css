@@ -56,7 +56,6 @@
 
 @media  (min-width: 768px) {
     .marginButtonEdit {
-        margin-right: 100px !important;
         margin-top: 5px !important;
     }
 
@@ -129,7 +128,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 38.5% !important;
+        margin-left: 25% !important;
     }
 
     .UserInfoBox {
@@ -262,6 +261,11 @@
 }
 
 @media (min-width: 992px) {
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 5px !important;
+    }
+
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 29.3% !important;
