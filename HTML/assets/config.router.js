@@ -35,13 +35,13 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             templateUrl: 'views/userProfile.html',
             resolve: loadSequence('userProfileCtrl')
         }).state('tshirts', {
-            url: '/tshirts/:id',
+            url: '/tshirts',
             templateUrl: 'views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
-        }).state('externprofile', {
-            url: '/externprofile',
-            templateUrl: 'views/viewProfile.html',
-            resolve: loadSequence('viewProfileCtrl')
+        }).state('viewtshirts', {
+            url: '/viewtshirts/:id',
+            templateUrl: 'views/viewTshirt.html',
+            resolve: loadSequence('viewTshirtCtrl')
         }).state('users', {
             url: '/users',
             templateUrl: 'views/exploreUsers.html',
