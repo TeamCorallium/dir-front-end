@@ -38,6 +38,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/tshirts/:id',
             templateUrl: 'views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
+        }).state('externprofile', {
+            url: '/externprofile',
+            templateUrl: 'views/viewProfile.html',
+            resolve: loadSequence('viewProfileCtrl')
         }).state('users', {
             url: '/users',
             templateUrl: 'views/exploreUsers.html',

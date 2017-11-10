@@ -236,7 +236,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {
-                $scope.getTshirt();
+                $state.go('externprofile');
             }            
         };
 
