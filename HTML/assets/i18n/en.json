@@ -28,7 +28,9 @@
     "RESERVED_RIGHT": "by &lt;DIR&gt;. All Rights Reserved.",
     "MANAGE_PAGE": "Manage page",
     "CHANGE_PASSWORD": "Change Password",
-    "ADD_TSHIRT": "Link T-Shirt"
+    "ADD_TSHIRT": "Link T-Shirt",
+    "FIELD_REQUIRED": "This field is required.",
+    "EMAIL_INVALID": "Email is invalid."
   },
   "user_profile": {
     "RATING": "Rating:",

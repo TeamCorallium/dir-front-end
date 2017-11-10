@@ -218,8 +218,8 @@
                             <form name="RegisterTshirt" role="form">
                                 <div class="form-group">
                                     <label for="emailHome" translate="index.EMAIL"></label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak translate="index.EMAIL_INVALID"></div>
                                     <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''"
                                         id="emailHome" name="emailHome" placeholder="Enter Email Address" ng-required="true"
                                         ng-model="emailHome">
