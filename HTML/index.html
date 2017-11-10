@@ -226,7 +226,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="username" translate="index.USERNAME"></label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''"
                                         id="username" name="username" placeholder="Enter your username" ng-required="true" ng-model="username">
                                 </div>
@@ -290,14 +290,14 @@
                             <form name="RegisterTshirt" role="form">
                                 <div class="form-group">
                                     <label for="email" translate="index.EMAIL"></label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak>{{"This field is required."}}</div>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak>{{"Email is invalid."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak ng-cloak translate="index.EMAIL_INVALID"></div>
                                     <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''"
                                         id="email" name="email" placeholder="Enter Email Address" ng-required="true" ng-model="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="user" translate="index.USERNAME"></label>
-                                    <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''"
                                         id="user" name="user" placeholder="Enter your user" ng-required="true" ng-model="user">
                                 </div>
@@ -355,9 +355,9 @@
                             <form name="LogingForm" role="form">
                                 <div class="form-group">
                                     <label for="usernameHome" translate="index.USERNAME"></label>
-                                    <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak>{{"This field is required."}}</div>
+                                    <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''"
-                                        id="usernameHome" name="usernameHome" placeholder="Enter your user" ng-required="true"
+                                        id="usernameHome" name="usernameHome" placeholder="{{index.USERNAME_PLACEHOLDER | translate}}" ng-required="true"
                                         ng-model="usernameHome">
                                 </div>
                                 <div class="form-group">

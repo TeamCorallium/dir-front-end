@@ -16,9 +16,9 @@
                             data-appears-class="fadeInUp" ng-model="user.info"></textarea>
                         <div class="form-group">
                             <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required"
-                                ng-cloak>{{"This field is required."}}</div>
+                                ng-cloak translate="edit_profile.FIELD_REQUIRED"></div>
                             <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email"
-                                ng-cloak>{{"Email is invalid."}}</div>
+                                ng-cloak translate="edit_profile.EMAIL_INVALID"></div>
                             <input type="email" class="col-xs-12 form-control margin-top-10" ng-class="(editUserXS.emailHome.$dirty && editUserXS.emailHome.$invalid) ? 'error' : ''"
                                 id="emailHome" name="emailHome" placeholder="Enter your email address" ng-required="true" ng-model="user.email">
                         </div>
@@ -75,9 +75,9 @@
                                         ng-model="user.info"></textarea>
                                     <div class="form-group">
                                         <div class="col-md-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.required"
-                                            ng-cloak>{{"This field is required."}}</div>
+                                            ng-cloak translate="edit_profile.FIELD_REQUIRED"></div>
                                         <div class="col-md-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.emailMD.$dirty && editUserMD.emailMD.$error.email"
-                                            ng-cloak>{{"Email is invalid."}}</div>
+                                            ng-cloak translate="edit_profile.EMAIL_INVALID"></div>
                                         <input type="email" class="col-md-12 form-control margin-top-10" ng-class="(editUserMD.emailMD.$dirty && editUserMD.emailMD.$invalid) ? 'error' : ''"
                                             id="emailMD" name="emailMD" placeholder="Enter your email address" ng-required="true"
                                             ng-model="user.email">

@@ -28,7 +28,10 @@
     "RESERVED_RIGHT": "的 &lt;DIR&gt;. 保留擁有權利.",
     "MANAGE_PAGE": "管理頁面",
     "CHANGE_PASSWORD": "更改密碼",
-    "ADD_TSHIRT": "連結 t恤衫"
+    "ADD_TSHIRT": "連結 t恤衫",
+    "FIELD_REQUIRED": "此欄位是必需的",
+    "EMAIL_INVALID": "電子郵件無效",
+    "USERNAME_PLACEHOLDER": "輸入您的使用者名"
   },
   "user_profile": {
     "RATING": "評級:",
@@ -55,7 +58,9 @@
     "EDIT": "編輯",
     "DELETE": "消除",
     "SAVE": "保存",
-    "SAVE_PROFILE": "保存設定檔"
+    "SAVE_PROFILE": "保存設定檔",
+    "FIELD_REQUIRED": "此欄位是必需的",
+    "EMAIL_INVALID": "電子郵件無效"
   },
   "view_profile": {
     "RATING": "評級:",
@@ -77,7 +82,8 @@
     "DELETE": "刪除",
     "SEND_MESSAGE": "發送消息",
     "CLOSE": "關閉",
-    "SUBJECT": "主題"
+    "SUBJECT": "主題",
+    "FIELD_REQUIRED": "此欄位是必需的"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "流覽設定檔",
@@ -110,7 +116,9 @@
     "CLOSE": "關閉",
     "CHANGE_PASSWORD": "更改密碼",
     "ADD_TSHIRT": "連結 t恤衫",
-    "ENTER": "輸入代碼"
+    "ENTER": "輸入代碼",
+    "FIELD_REQUIRED": "此欄位是必需的",
+    "EMAIL_INVALID": "電子郵件無效"
   },
   "home": {
     "TEXT_TSHIRTS" : "t恤衫與技術",

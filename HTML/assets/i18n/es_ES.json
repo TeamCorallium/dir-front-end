@@ -28,7 +28,10 @@
     "RESERVED_RIGHT": "por &lt;DIR&gt;. Todos los derechos reservados.",
     "MANAGE_PAGE": "Administrar página",
     "CHANGE_PASSWORD": "Cambiar contraseña",
-    "ADD_TSHIRT": "Adicionar camiseta"
+    "ADD_TSHIRT": "Adicionar camiseta",
+    "FIELD_REQUIRED": "Este campo es requerido.",
+    "EMAIL_INVALID": "Correo inválido.",
+    "USERNAME_PLACEHOLDER": "Introduzca el usuario"
   },
   "user_profile": {
     "RATING": "Valoración:",
@@ -55,7 +58,9 @@
     "EDIT": "Editar",
     "DELETE": "Eliminar",
     "SAVE": "Salvar",
-    "SAVE_PROFILE": "Salvar perfil"
+    "SAVE_PROFILE": "Salvar perfil",
+    "FIELD_REQUIRED": "Este campo es requerido.",
+    "EMAIL_INVALID": "Correo inválido."
   },
   "view_profile": {
     "RATING": "Valoración:",
@@ -77,7 +82,8 @@
     "DELETE": "Eliminar",
     "SEND_MESSAGE": "Enviar mensaje",
     "CLOSE": "Cerrar",
-    "SUBJECT": "Asunto"
+    "SUBJECT": "Asunto",
+    "FIELD_REQUIRED": "Este campo es requerido."
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explorar perfiles",
@@ -110,7 +116,9 @@
     "CLOSE": "Cerrar",
     "ADD_TSHIRT": "Adicionar camiseta",
     "CHANGE_PASSWORD": "Cambiar contraseña",
-    "ENTER": "Adicionar código"
+    "ENTER": "Adicionar código",
+    "FIELD_REQUIRED": "Este campo es requerido.",
+    "EMAIL_INVALID": "Correo inválido."
   },
   "home": {
     "TEXT_TSHIRTS" : "Camisetas con tecnología",

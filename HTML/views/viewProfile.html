@@ -139,10 +139,10 @@
                             <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-if="user.snippets.length > 0">
                                 <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
                                     <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
-                                        <a ng-click="previous()" class="ng-binding border-radius10">« Previous</a>
+                                        <a ng-click="previous()" class="ng-binding border-radius10" translate="view_profile.PREVIOUS"></a>
                                     </li>
                                     <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
-                                        <a ng-click="next()" class="ng-binding border-radius10">Next »</a>
+                                        <a ng-click="next()" class="ng-binding border-radius10" translate="view_profile.NEXT"></a>
                                     </li>
                                 </ul>
                             </div>
@@ -213,12 +213,12 @@
                 <div class="modal-body padding-15">
                     <form name="LeaveMessage" role="form">
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak>{{"This field is required."}}</div>
+                            <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''"
                                 id="user" name="title" placeholder="Enter subject" ng-required="true" ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak>{{"This field is required."}}</div>
+                            <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
                             <textarea class="form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''" id="user"
                                 name="body" placeholder="Enter your message" ng-required="true" ng-model="$parent.message.body"></textarea>
                         </div>

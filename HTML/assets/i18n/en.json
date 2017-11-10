@@ -30,7 +30,8 @@
     "CHANGE_PASSWORD": "Change Password",
     "ADD_TSHIRT": "Link T-Shirt",
     "FIELD_REQUIRED": "This field is required.",
-    "EMAIL_INVALID": "Email is invalid."
+    "EMAIL_INVALID": "Email is invalid.",
+    "USERNAME_PLACEHOLDER": "Enter your username"
   },
   "user_profile": {
     "RATING": "Rating:",
@@ -57,7 +58,9 @@
     "EDIT": "Edit",
     "DELETE": "Delete",
     "SAVE": "Save",
-    "SAVE_PROFILE": "Save Profile"
+    "SAVE_PROFILE": "Save Profile",
+    "FIELD_REQUIRED": "This field is required.",
+    "EMAIL_INVALID": "Email is invalid."
   },
   "view_profile": {
     "RATING": "Rating:",
@@ -66,7 +69,11 @@
     "LEAVE_MESSAGE": "Leave a Message",
     "CLOSE": "Close",
     "SEND_MESSAGE": "Send message",
-    "CLAP": "claps"
+    "CLAP": "claps",
+    "PREVIOUS": "« Previous",
+    "NEXT": "Next »",
+    "FIELD_REQUIRED": "This field is required.",
+    "EMAIL_INVALID": "Email is invalid."
   },
   "inbox": {
     "BROWSE": "BROWSE",
@@ -79,7 +86,8 @@
     "DELETE": "Delete",
     "SEND_MESSAGE": "Send message",
     "CLOSE": "Close",
-    "SUBJECT": "Subject"
+    "SUBJECT": "Subject",
+    "FIELD_REQUIRED": "This field is required."
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explore Profiles",
@@ -112,7 +120,9 @@
     "PASSWORD_MATCH": "Passwords don't match.",
     "CLOSE": "Close",
     "ADD_TSHIRT": "Link T-Shirt",
-    "ENTER": "Enter code"
+    "ENTER": "Enter code",
+    "FIELD_REQUIRED": "This field is required.",
+    "EMAIL_INVALID": "Email is invalid."
   },
   "home": {
     "TEXT_TSHIRTS" : "T-shirts with technology",

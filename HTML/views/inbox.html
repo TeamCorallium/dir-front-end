@@ -137,12 +137,12 @@
                         </div>
                         <div class="form-group">
                             <label for="subject" translate="inbox.SUBJECT"></label>
-                            <div class="error form-hint" ng-show="SendMessage.subject.$dirty && SendMessage.subject.$error.required" ng-cloak>{{"This field is required."}}</div>
+                            <div class="error form-hint" ng-show="SendMessage.subject.$dirty && SendMessage.subject.$error.required" ng-cloak translate="inbox.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(SendMessage.subject.$dirty && SendMessage.subject.$invalid) ? 'error' : ''"
                                 id="subject" name="subject" placeholder="Subject" ng-required="true" ng-model="subject">
                         </div>
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="SendMessage.body.$dirty && SendMessage.body.$error.required" ng-cloak>{{"This field is required."}}</div>
+                            <div class="error form-hint" ng-show="SendMessage.body.$dirty && SendMessage.body.$error.required" ng-cloak translate="inbox.FIELD_REQUIRED"></div>
                             <textarea class="form-control" ng-class="(SendMessage.body.$dirty && SendMessage.body.$invalid) ? 'error' : ''" id="body"
                                 name="body" placeholder="Enter your message" ng-required="true" ng-model="body"></textarea>
                         </div>
