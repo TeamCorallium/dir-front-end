@@ -213,6 +213,11 @@
         height: 120px !important;
         background-image: url('../../assets/images/900.jpg');
     }
+
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 27% !important;
+    }
 }
 
 @media (min-width: 901px) {
@@ -224,7 +229,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 40% !important;
+        margin-left: 28% !important;
     }
 
     .UserInfoBox {
@@ -243,7 +248,7 @@
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 40.5% !important;
+        margin-left: 30% !important;
     }
 
     .UserInfoBox {
@@ -262,13 +267,13 @@
 
 @media (min-width: 992px) {
     .marginButtonEdit {
-        margin-right: 100px !important;
+        margin-right: 20px !important;
         margin-top: 5px !important;
     }
 
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 29.3% !important;
+        margin-left: 28% !important;
     }
 
     .navbar > .container .navbar-header .navbar-brand {
@@ -315,6 +320,11 @@
         margin-left: 30.3% !important;
     }
 
+    .marginButtonEdit {
+        margin-right: 50px !important;
+        margin-top: 5px !important;
+    }
+
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -327,6 +337,11 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1150.jpg');
+    }
+
+    .marginButtonEdit {
+        margin-right: 75px !important;
+        margin-top: 5px !important;
     }
 
     .SocialIcon {
@@ -348,6 +363,11 @@
         background-image: url('../../assets/images/1200.jpg');
     }
 
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 5px !important;
+    }
+
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 32% !important;
@@ -365,7 +385,12 @@
         width:100%;
         height: 120px !important;
         background-image: url('../../assets/images/1300.jpg');
-    }    
+    }
+
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 5px !important;
+    }
 
     .UserInfoBox {
         text-align: left !important;
@@ -1226,12 +1251,34 @@ ul li a.social-ti-foursquare {
         margin-top: 5px !important;
         margin-left: 23% !important;
     }
+
+    .marginButtonEdit {
+        margin-right: 60px !important;
+        margin-top: 5px !important;
+    }
+}
+
+@media (min-width: 1301px) {
+    .SocialIcon {
+        margin-top: 5px !important;
+        margin-left: 23% !important;
+    }
+
+    .marginButtonEdit {
+        margin-right: 80px !important;
+        margin-top: 5px !important;
+    }
 }
 
 @media (min-width: 1366px) {
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 25.4% !important;
+    }
+
+    .marginButtonEdit {
+        margin-right: 100px !important;
+        margin-top: 5px !important;
     }
 }
 
