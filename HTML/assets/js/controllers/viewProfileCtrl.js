@@ -26,6 +26,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         }
 
         $scope.user = {
+            profileUrl: '',
             username: '',
             firstname: '',
             lastname: '',
@@ -35,6 +36,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             rating: '',
             avatar: 'assets/images/default-user.png',
             id: '',
+            qrcode: '',
             profileurl: '',
             fullname: '',
             socialnetworks: [],
@@ -52,6 +54,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 function (data) {
                     data = data.results;
                     if (data.length > 0) {
+                        $scope.user.profileUrl = data[0].profiles[0];
                         $scope.user.username = data[0].username;
                         $scope.user.firstname = data[0].first_name;
                         $scope.user.lastname = data[0].last_name;
@@ -99,6 +102,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.rating = data.rating;
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
+
+                        if (data.qrcode != '') {
+                            $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                        }
 
                         if ($rootScope.viewInbox) {
                             $scope.TryClap();
