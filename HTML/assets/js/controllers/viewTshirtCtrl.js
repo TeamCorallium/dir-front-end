@@ -197,22 +197,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         };
 
-        $scope.openModalSnippets = function () {
-            if ($cookies.get('sessionid') != undefined) {
-                $('#modalSnippets').modal('show');
-            } else {
-                $('#myModal').modal('show');
-            }
-        };
-
-        $scope.openAddSocialNetworkModal = function () {
-            if ($cookies.get('sessionid') != undefined) {
-                $('#modalSocialNetwork').modal('show');
-            } else {
-                $('#myModal').modal('show');
-            }
-        };
-
         $scope.goToLink = function (link) {
             $window.open(link, '_blank');
         };

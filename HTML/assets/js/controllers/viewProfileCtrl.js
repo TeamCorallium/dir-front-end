@@ -269,7 +269,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
 
-            console.log($cookies.get('exploreUser') + " viewProfile");
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
