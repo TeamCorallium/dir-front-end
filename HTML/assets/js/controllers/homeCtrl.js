@@ -18,10 +18,10 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.countLimit = 4;
         $scope.profiles = [];
         $scope.tracks = {
-            totalVisits: 1000,
-            returnRatio: 99.9,
-            timeOnSite: 100,
-            satisfiedCustomers: 10
+            totalVisits: 0,
+            returnRatio: 0,
+            timeOnSite: 0,
+            satisfiedCustomers: 0
         };
 
         if ($(window).width() >= 992) {
@@ -83,23 +83,23 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             }
         };
 
-        // $scope.getTracks = function () {
-        //     RestService.fetchTracking().then(
-        //         function (data) {                    
-        //             data = data.response;
-        //             console.log(data.total)
-        //             $scope.tracks.totalVisits = data.total;
-        //             $scope.tracks.returnRatio = data.return_ratio;
-        //             $scope.tracks.timeOnSite = data.time_on_site;
+        $scope.getTracks = function () {
+            RestService.fetchTracking().then(
+                function (data) {                    
+                    data = data.response;
+                    console.log(data.total)
+                    $scope.tracks.totalVisits = data.total;
+                    $scope.tracks.returnRatio = data.return_ratio;
+                    $scope.tracks.timeOnSite = data.time_on_site;
 
-        //             console.log($scope.tracks.totalVisits + " " + $scope.tracks.return_ratio + " " + $scope.tracks.time_on_site)
-        //         },
-        //         function (errResponse) {
-        //             console.log(errResponse);
-        //         }
-        //     );
-        // };
+                    console.log($scope.tracks.totalVisits + " " + $scope.tracks.return_ratio + " " + $scope.tracks.time_on_site)
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+            );
+        };
 
-        // $scope.getTracks();
+        $scope.getTracks();
 
     }]);
