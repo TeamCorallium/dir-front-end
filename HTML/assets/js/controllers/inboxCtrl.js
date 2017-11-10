@@ -7,8 +7,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
     function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert) {
 
         $scope.inboxFlag = true;
-        $rootScope.viewProfile = true;
-        $rootScope.viewInbox = false;
+        $rootScope.OptionsEdit = true;
         $scope.messagesInbox = [];
         $scope.messagesSend = [];
 

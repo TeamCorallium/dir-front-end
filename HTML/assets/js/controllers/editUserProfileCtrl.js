@@ -8,8 +8,7 @@ app.controller('EditUserProfileCtrl', ["$scope", "$stateParams", "RestService", 
 
         $scope.myImage = '';
         $scope.myCroppedImage = '';
-        $rootScope.viewProfile = true;
-        $rootScope.viewInbox = true;
+        $rootScope.OptionsEdit = true;
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';

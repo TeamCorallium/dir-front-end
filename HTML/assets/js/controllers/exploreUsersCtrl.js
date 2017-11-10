@@ -6,13 +6,7 @@
 app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
-        if ($cookies.get('sessionid')) {
-            $rootScope.viewInbox = true;
-            $rootScope.viewProfile = true;
-        } else {
-            $rootScope.viewInbox = false;
-            $rootScope.viewProfile = false;
-        }
+        $rootScope.OptionsEdit = true;
 
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
@@ -98,7 +92,11 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
-            $state.go('tshirts');
+            if ($cookies.get('exploreUser') == $cookies.get('username')) {
+                $state.go('profile');
+            } else {
+                $state.go('tshirts');
+            }
         };
 
         $scope.changeFiltres = function () {

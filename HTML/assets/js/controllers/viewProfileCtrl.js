@@ -6,11 +6,7 @@
 app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
 
-        if ($cookies.get('sessionid')) {
-            $rootScope.viewInbox = true;
-        } else {
-            $rootScope.viewInbox = false;
-        }
+        $rootScope.OptionsEdit = false;
 
         var exploreUser = '';
         $scope.activateClap = false;
@@ -230,7 +226,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
-            $scope.getTshirt();
+            if ($cookies.get('exploreUser') == $cookies.get('username')) {
+                $state.go('profile');
+            } else {
+                $scope.getTshirt();
+            }            
         };
 
         $scope.getAvatar = function (avatar) {
@@ -260,7 +260,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
 
-            if ($cookies.get('exploreUser')) {
+            if ($cookies.get('exploreUser')) {                
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
             } else {

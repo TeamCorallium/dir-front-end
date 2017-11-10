@@ -9,6 +9,8 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         if ($cookies.get('username') != 'admin'){
             $state.go('home');
         }
+
+        $rootScope.OptionsEdit = true;
  
         $scope.stuff = {
             color: 'White',

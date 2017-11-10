@@ -6,13 +6,7 @@
 app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
     function ($scope, $state, $rootScope, RestService, $cookies, growl) {
 
-        if($cookies.get('sessionid')) {
-            $rootScope.viewInbox = true;
-            $rootScope.viewProfile = true;
-        } else {
-            $rootScope.viewInbox = false;
-            $rootScope.viewProfile = false;
-        }
+        $rootScope.OptionsEdit = true;
 
         $scope.message = {
             email: '',

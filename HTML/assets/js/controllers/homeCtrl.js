@@ -5,6 +5,8 @@
 
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
+        
+        $rootScope.OptionsEdit = true;
 
         if ($cookies.get('sessionid')) {
             $rootScope.connected = true;
@@ -67,7 +69,12 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
-            $state.go('tshirts');
+                        
+            if ($cookies.get('exploreUser') == $cookies.get('username')) {
+                $state.go('profile');
+            } else {
+                $state.go('tshirts');
+            }
         };
 
     }]);

@@ -6,6 +6,8 @@
 app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert) {
 
+        $rootScope.OptionsEdit = true;
+
         $scope.user = {
             profileUrl: '',
             username: '',
@@ -391,7 +393,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", { path: '/' });
             $cookies.put('exploreUser', owner, { path: '/' });
-            $state.go('tshirts');
+            if ($cookies.get('exploreUser') == $cookies.get('username')) {
+                $state.go('profile');
+            } else {
+                $state.go('tshirts');
+            }
         };
 
         $scope.getAvatar = function (avatar) {

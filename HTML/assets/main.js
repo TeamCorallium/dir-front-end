@@ -8,8 +8,7 @@ var app = angular.module('dirApp', ['pulloverDir']);
 app.run(['$rootScope', '$cookies',
     function ($rootScope, $cookies) {
 
-        $rootScope.viewProfile = true;
-        $rootScope.viewInbox = false;
+        $rootScope.OptionsEdit = false;
 
         $rootScope.userdata = {
             username: 'USER',

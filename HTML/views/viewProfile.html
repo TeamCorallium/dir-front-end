@@ -111,6 +111,9 @@
                                     </span>
                                 </div>
                             </div>
+                            <div class="padding-right-15 paddingLeft15XS">
+                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="col-xs-12" />                                
+                            </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyleView">
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-21 padding-0 marginSnippetXS">
@@ -128,7 +131,7 @@
                                                     </span>                                                    
                                                 </div>
                                             </div>
-                                            <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons"></h5>                                        
+                                            <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>                                        
                                         </div>
                                     </li>
                                 </ul>
