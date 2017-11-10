@@ -121,7 +121,11 @@
     "EXPLORE_MORE": "流覽更多...",
     "BUY_TSHIRTS": "從 alibaba.com 購買所有技術.",
     "MEET_TEAM": "結識新員工",
-    "MEET_TEXT": "我們只是一座行人天橋, 參觀一下您的喜好。每個設定檔提供了一個簡短的描述和社會網路連結."
+    "MEET_TEXT": "我們只是一座行人天橋, 參觀一下您的喜好。每個設定檔提供了一個簡短的描述和社會網路連結.",
+    "TOTAL_VISITS": "訪問總數",
+    "RETURN_RATIO": "返回百分比",
+    "TIME_ON_SITE": "現場時間",
+    "SATISFIED_CUSTOMERS": "滿意的客戶"
   },
   "admin": {
     "COLOR": "顏色",

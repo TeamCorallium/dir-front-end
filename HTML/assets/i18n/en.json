@@ -121,7 +121,11 @@
     "EXPLORE_MORE": "Explore more...",
     "BUY_TSHIRTS": "Buy all technology from alibaba.com.",
     "MEET_TEAM": "Meet New People",
-    "MEET_TEXT": "We are just a gateway, visit the profiles of your preference. Each profile offers a brief description and links to social networks."
+    "MEET_TEXT": "We are just a gateway, visit the profiles of your preference. Each profile offers a brief description and links to social networks.",
+    "TOTAL_VISITS": "Total Visits",
+    "RETURN_RATIO": "Return Percentage",
+    "TIME_ON_SITE": "Time on Site",
+    "SATISFIED_CUSTOMERS": "Satisfied Customers"
   },
   "admin": {
     "COLOR": "Color",

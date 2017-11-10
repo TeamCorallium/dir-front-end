@@ -68,45 +68,39 @@
                 <div class="row">
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
-                            <i class="ti-shortcode fa-4x text-primary"></i>
-                            <span class="block counter text-white">8522</span>
+                            <i class="ti-eye fa-4x text-primary"></i>
+                            <span class="block counter text-white" ng-model="tracks.totalVisits"></span>
                             <hr class="white-hr" />
-                            <p class="block text-light">
-                                LINES OF CODE
+                            <p class="block text-light" translate="home.TOTAL_VISITS">
+                                
                             </p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
-                            <i class="ti-folder fa-4x text-primary"></i>
-                            <span class="block counter text-white">532</span>
+                            <i class="ti-back-left fa-4x text-primary"></i>
+                            <span class="block counter text-white" ng-model="tracks.returnRatio"></span>
+                            <span class="counter-symbol text-white">%</span>
                             <hr class="white-hr" />
-                            <p class="block text-light">
-                                ANNUAL PROJECTS
-                            </p>
+                            <p class="block text-light" translate="home.RETURN_RATIO"></p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
-                            <i class="ti-stats-up fa-4x text-primary"></i>
+                            <i class="ti-alarm-clock fa-4x text-primary"></i>
                             <div class="block">
-                                <span class="counter text-white">118</span>
-                                <span class="counter-symbol text-white">%</span>
+                                <span class="counter text-white" ng-model="tracks.timeOnSite"></span>
                             </div>
                             <hr class="white-hr" />
-                            <p class="block text-light">
-                                AVERAGE PROFIT MARKUP
-                            </p>
+                            <p class="block text-light" translate="home.TIME_ON_SITE"></p>
                         </div>
                     </div>
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
                             <i class="ti-user fa-4x text-primary"></i>
-                            <span class="block counter text-white">4832</span>
+                            <span class="block counter text-white" ng-model="tracks.satisfiedCustomers"></span>
                             <hr class="white-hr" />
-                            <p class="block text-light">
-                                SATISFIED CUSTOMERS
-                            </p>
+                            <p class="block text-light" translate="home.SATISFIED_CUSTOMERS"></p>
                         </div>
                     </div>
                 </div>

@@ -121,7 +121,11 @@
     "EXPLORE_MORE": "Explorar más...",
     "BUY_TSHIRTS": "Compra toda la tecnología desde alibaba.com.",
     "MEET_TEAM": "Conozca Nuevas Personas",
-    "MEET_TEXT": "Somos solamente una pasarela, visite los perfiles de su preferencia. Cada perfil ofrece una breve descripción y vínculos a las redes sociales."
+    "MEET_TEXT": "Somos solamente una pasarela, visite los perfiles de su preferencia. Cada perfil ofrece una breve descripción y vínculos a las redes sociales.",
+    "TOTAL_VISITS": "Total de Visitas",
+    "RETURN_RATIO": "Porciento de Retorno",
+    "TIME_ON_SITE": "Tiempo en la web",
+    "SATISFIED_CUSTOMERS": "Clientes Satisfechos"
   },
   "admin": {
     "COLOR": "Color",
