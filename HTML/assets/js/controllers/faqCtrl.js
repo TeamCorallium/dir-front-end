@@ -6,6 +6,6 @@
 app.controller('FAQCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
 
     }]);

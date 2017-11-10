@@ -6,7 +6,7 @@
 app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
     function ($scope, $state, $rootScope, RestService, $cookies, growl) {
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
 
         $scope.message = {
             email: '',

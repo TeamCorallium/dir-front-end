@@ -6,7 +6,7 @@
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
     function ($scope, $state, $rootScope, RestService, $cookies) {
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
 
         if ($cookies.get('sessionid')) {
             $rootScope.connected = true;

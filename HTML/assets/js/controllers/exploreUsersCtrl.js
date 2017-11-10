@@ -6,7 +6,7 @@
 app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
 
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';

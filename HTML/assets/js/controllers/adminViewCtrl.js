@@ -10,7 +10,7 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
             $state.go('home');
         }
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
  
         $scope.stuff = {
             color: 'White',
