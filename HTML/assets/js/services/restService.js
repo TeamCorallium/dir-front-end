@@ -22,6 +22,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
     // var tracking = 'http://www.dir.com:8888/api/track/';
 
+    
     var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     var users = 'http://www.dircoolstuff.com/api/users/';
     var profiles = 'http://www.dircoolstuff.com/api/profiles/';
