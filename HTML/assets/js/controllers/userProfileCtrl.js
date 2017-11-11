@@ -228,14 +228,20 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.deleteSnippet = function (url) {
+            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE');
+            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
+            var noCancel = $translate.instant('user_profile.NO_CANCEL');
+            var cancelled = $translate.instant('user_profile.CANCELLED');
+            var snippetSafe = $translate.instant('user_profile.SAVE_SNIPPET');
             SweetAlert.swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this snippet!",
+                title: areYouSure,
+                text: textAreYouSure,
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel!",
+                confirmButtonText: yesDeleteIt,
+                cancelButtonText: noCancel,
                 closeOnConfirm: false,
                 closeOnCancel: false
             }, function (isConfirm) {
@@ -243,8 +249,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     RestService.deleteSnippet(url);
                 } else {
                     SweetAlert.swal({
-                        title: "Cancelled",
-                        text: "Your snippet is safe :)",
+                        title: cancelled,
+                        text: snippetSafe,
                         type: "error",
                         confirmButtonColor: "#007AFF"
                     });
@@ -253,14 +259,20 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.deleteSocialNetwork = function (id) {
+            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE_SOCIAL');
+            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
+            var noCancel = $translate.instant('user_profile.NO_CANCEL');
+            var cancelled = $translate.instant('user_profile.CANCELLED');
+            var socialSafe = $translate.instant('user_profile.SAVE_SOCIAL');
             SweetAlert.swal({
-                title: "Are you sure?",
-                text: "You will not be able to recover this social network!",
+                title: areYouSure,
+                text: textAreYouSure,
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel!",
+                confirmButtonText: yesDeleteIt,
+                cancelButtonText: noCancel,
                 closeOnConfirm: false,
                 closeOnCancel: false
             }, function (isConfirm) {
@@ -268,8 +280,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     RestService.deleteSocialNetwork(id);
                 } else {
                     SweetAlert.swal({
-                        title: "Cancelled",
-                        text: "Your social network is safe :)",
+                        title: cancelled,
+                        text: socialSafe,
                         type: "error",
                         confirmButtonColor: "#007AFF"
                     });
@@ -290,9 +302,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('deleteSnippet', function (event, data) {
+            var deleted = $translate.instant('user_profile.DELETED');
+            var deletedSnippet = $translate.instant('user_profile.DELETE_SNIPPET_SUCCESS');
             SweetAlert.swal({
-                title: "Deleted!",
-                text: "Your snippet has been deleted.",
+                title: deleted,
+                text: deletedSnippet,
                 type: "success",
                 confirmButtonColor: "#007AFF"
             });
@@ -302,9 +316,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('deleteSocialNetwork', function (event, data) {
+            var deleted = $translate.instant('user_profile.DELETED');
+            var deletedSocial = $translate.instant('user_profile.DELETE_SOCIAL_SUCCESS');
             SweetAlert.swal({
-                title: "Deleted!",
-                text: "Your social network has been deleted.",
+                title: deleted,
+                text: deletedSocial,
                 type: "success",
                 confirmButtonColor: "#007AFF"
             });
@@ -373,12 +389,16 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
-            growl.success("QR Code Generated Correctly", { title: 'Generate QR Code' });
+            var generateQR = $translate.instant('user_profile.GENERATE_QR');
+            var generateQRTitle = $translate.instant('user_profile.GENERATE_QR_TITLE');
+            growl.success(generateQR, { title: generateQRTitle });
             $scope.user.qrcode = data;
         });
 
         $rootScope.$on('makeQRCodeError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
         });
 
         $scope.getPopularUsers = function () {
@@ -645,16 +665,22 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 RestService.addSocialNetwork(name, url, type);
 
             } else {
-                growl.success("There can be no empty field", { title: 'Add Social Network' });
+                var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                growl.success(emptyField, { title: addSocial });
             }
         };
 
         $rootScope.$on('addSocialNetworkError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
-            growl.error("Error when attempting to remove their social network. Please check the status of your network.", { title: 'Delete Social Network' });
+            var errorRemoveSocial = $translate.instant('user_profile.ERROR_REMOVE_SOCIAL');
+            var deleteSocialNetwork = $translate.instant('user_profile.DELETE_SOCIAL_NETWORK');
+            growl.error(, { title: deleteSocialNetwork });
         });
 
         $scope.activeManually = function () {
@@ -714,7 +740,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 if (title != '' && title != null && url != '') {
                     $scope.addSocialNetwork(title, url);
                 } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
                 }
             }
         });
@@ -726,7 +754,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 if (title != '' && title != null && url != '') {
                     $scope.addSocialNetwork(title, url);
                 } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
                 }
             }
         });
@@ -748,7 +778,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $rootScope.$on('addSnippetsError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
         });
 
         // start:  keyup snippets
@@ -757,7 +789,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 if ($scope.title != '' && $scope.body != '') {
                     RestService.addSnippet($scope.title, $scope.body);
                 } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
                 }
             }
         });
@@ -767,7 +801,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 if ($scope.title != '' && $scope.body != '') {
                     RestService.addSnippet($scope.title, $scope.body);
                 } else {
-                    growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
                 }
             }
         });
@@ -787,13 +823,17 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $('#msg-block').hide();
             $scope.password = '';
             $scope.againPassHome = '';
-            growl.success("Password changed correctly.", { title: 'Password Change' });
+            var passwordSuccess = $translate.instant('user_profile.PASSWORD_SUCCESS');
+            var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+            growl.success(passwordSuccess, { title: passwordChange });
         });
 
         $rootScope.$on('changepasswordError', function (event, data) {            
             $scope.password = '';
             $scope.againPassHome = '';
-            growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Password Change' });
+            var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
+            var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+            growl.error(passwordError, { title: passwordChange });
         });
 
         // start:  keyup change password
@@ -809,6 +849,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $('#msg-block').show();
                         }
                     } else {
+                        var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
+                        var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
                         growl.error("Sorry all fields are required", { title: 'Empty fields' });
                     }
                 }
@@ -827,7 +869,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $('#msg-block').show();
                         }
                     } else {
-                        growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                        var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                        var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+                        growl.error(emptyField, { title: passwordChange });
                     }
                 }
             }
@@ -861,7 +905,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.TShirtLinks.unshift(tshirt);
             $scope.codeModal = '';
-            growl.error("This T-Shirt does not exist in stock.", { title: 'Add T-Shirt' });
+            var notTshirt = $translate.instant('user_profile.NOT_TSHIRT');
+            var addTshirt = $translate.instant('user_profile.ADD_TSHIRT');
+            growl.error(notTshirt, { title: addTshirt });
         });
 
         $("#codeInput").on('keyup', function (e) {
