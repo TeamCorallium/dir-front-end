@@ -74,7 +74,7 @@
     "ENTER_TSHIRT_CODE": "Enter T-Shirt code",
     "ENTER_SNIPPET": "Enter your snippet",
     "EMPTY_FIELDS": "There can be no empty field",
-    "ADD_SNIPPET_TITLE": "Add Snippet"
+    "PUBLISH_SNIPPET": "Publish Snippet"
   },
   "view_profile": {
     "RATING": "Rating:",

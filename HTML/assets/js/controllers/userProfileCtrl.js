@@ -217,7 +217,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.pSnippet != '') {
                 RestService.addSnippet("", $scope.pSnippet);
             } else {
-                growl.error("There can be no empty field", { title: 'Publish Snippet' });
+                var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
+                var publishSnippetTitle = $translate.instant('user_profile.PUBLISH_SNIPPET');
+                growl.error(emptyFields, { title: publishSnippetTitle});
             }
         };
 
