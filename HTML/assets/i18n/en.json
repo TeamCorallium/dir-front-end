@@ -98,8 +98,8 @@
     "ERROR_PASSWORD": "Error when attempting to change password. Please check the status of your network.",
     "NOT_TSHIRT": "This T-Shirt does not exist in stock.",
     "ADD_TSHIRT": "Add T-Shirt",
-    "FOLLOWERS": "Followers",
-    "FOLLOWING": "Following"
+    "FOLLOWERS": "Followers:",
+    "FOLLOWING": "Following:"
   },
   "view_profile": {
     "RATING": "Rating:",

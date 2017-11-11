@@ -42,7 +42,7 @@
     "SAVE_QR": "保存 QR 碼",
     "PREVIOUS": "« 以前",
     "NEXT": "下 »",
-    "ADD_SNIPPETS" : "添加程式碼片段",
+    "ADD_SNIPPETS": "添加程式碼片段",
     "ADD_SOCIAL": "紅色社會",
     "POPULAR_USER": "熱門使用者",
     "SEE_MORE": "查看更多",
@@ -50,7 +50,7 @@
     "SNIPPET_BODY": "程式碼片段正文",
     "CLOSE": "關閉",
     "ADD": "添加",
-    "SOCIAL_NETWORK" : "社交網路",
+    "SOCIAL_NETWORK": "社交網路",
     "SELECT_SOCIAL": "選擇社交網路",
     "CONTINUE_AS_OTHER": "繼續作為其他",
     "LOG_IN_FACEBOOK": "登錄 Facebook",
@@ -97,7 +97,9 @@
     "PASSWORD_CHANGE": "密碼更改",
     "ERROR_PASSWORD": "嘗試更改密碼時出錯. 請檢查您的網路狀態.",
     "NOT_TSHIRT": "這件 t恤不存在股票.",
-    "ADD_TSHIRT": "添加 t恤衫"
+    "ADD_TSHIRT": "添加 t恤衫",
+    "FOLLOWERS": "追隨:",
+    "FOLLOWING": "以下:"
   },
   "view_profile": {
     "RATING": "評級:",
@@ -170,7 +172,7 @@
     "ENTER_EMAIL": "輸入您的電子郵件地址"
   },
   "home": {
-    "TEXT_TSHIRTS" : "t恤衫與技術",
+    "TEXT_TSHIRTS": "t恤衫與技術",
     "TEXT_HOME": "一個新的方式來接觸您的客戶, 聯繫您和訪問您的業務.",
     "REGISTER": "註冊",
     "LOG_IN": "登錄",

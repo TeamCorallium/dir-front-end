@@ -42,7 +42,7 @@
     "SAVE_QR": "Guarda tu código QR",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
-    "ADD_SNIPPETS" : "Añade un Snippet",
+    "ADD_SNIPPETS": "Añade un Snippet",
     "ADD_SOCIAL": "Red Social",
     "POPULAR_USER": "Usuarios más populares",
     "SEE_MORE": "Ver más",
@@ -50,7 +50,7 @@
     "SNIPPET_BODY": "Cuerpo del Snippet",
     "CLOSE": "Cerrar",
     "ADD": "Añadir",
-    "SOCIAL_NETWORK" : "Redes Sociales",
+    "SOCIAL_NETWORK": "Redes Sociales",
     "SELECT_SOCIAL": "Selecciona una red social",
     "CONTINUE_AS_OTHER": "Continua como otro usuario",
     "LOG_IN_FACEBOOK": "Inicia sesión con Facebook",
@@ -97,7 +97,9 @@
     "PASSWORD_CHANGE": "Cambio de contraseña",
     "ERROR_PASSWORD": "Error al intentar cambiar la contraseña. Compruebe por favor el estado de su red.",
     "NOT_TSHIRT": "Esta camiseta no existe en stock.",
-    "ADD_TSHIRT": "Adicionar camiseta"
+    "ADD_TSHIRT": "Adicionar camiseta",
+    "FOLLOWERS": "Seguidores:",
+    "FOLLOWING": "Siguiendo:"
   },
   "view_profile": {
     "RATING": "Valoración:",
@@ -170,7 +172,7 @@
     "ENTER_EMAIL": "Ingrese su correo electrónico"
   },
   "home": {
-    "TEXT_TSHIRTS" : "Camisetas con tecnología",
+    "TEXT_TSHIRTS": "Camisetas con tecnología",
     "TEXT_HOME": "Una nueva manera de llegar a sus clientes, ponerse en contacto con usted y visitar su negocio.",
     "REGISTER": "Registrarse",
     "LOG_IN": "Iniciar Sesión",
