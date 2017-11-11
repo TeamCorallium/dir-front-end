@@ -223,40 +223,40 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        // $scope.saveSnippetEdit = function (url, body) {
-        //     RestService.updateSnippet(url, body);
-        // };
+        $scope.saveSnippetEdit = function (url, body) {
+            RestService.updateSnippet(url, body);
+        };
 
-        // $scope.deleteSnippet = function (url) {
-        //     var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
-        //     var textAreYouSure = $translate.instant('user_profile.TEXT_SURE');
-        //     var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
-        //     var noCancel = $translate.instant('user_profile.NO_CANCEL');
-        //     var cancelled = $translate.instant('user_profile.CANCELLED');
-        //     var snippetSafe = $translate.instant('user_profile.SAVE_SNIPPET');
-        //     SweetAlert.swal({
-        //         title: areYouSure,
-        //         text: textAreYouSure,
-        //         type: "warning",
-        //         showCancelButton: true,
-        //         confirmButtonColor: "#DD6B55",
-        //         confirmButtonText: yesDeleteIt,
-        //         cancelButtonText: noCancel,
-        //         closeOnConfirm: false,
-        //         closeOnCancel: false
-        //     }, function (isConfirm) {
-        //         if (isConfirm) {
-        //             RestService.deleteSnippet(url);
-        //         } else {
-        //             SweetAlert.swal({
-        //                 title: cancelled,
-        //                 text: snippetSafe,
-        //                 type: "error",
-        //                 confirmButtonColor: "#007AFF"
-        //             });
-        //         }
-        //     });
-        // };
+        $scope.deleteSnippet = function (url) {
+            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE');
+            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
+            var noCancel = $translate.instant('user_profile.NO_CANCEL');
+            var cancelled = $translate.instant('user_profile.CANCELLED');
+            var snippetSafe = $translate.instant('user_profile.SAVE_SNIPPET');
+            SweetAlert.swal({
+                title: areYouSure,
+                text: textAreYouSure,
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: yesDeleteIt,
+                cancelButtonText: noCancel,
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSnippet(url);
+                } else {
+                    SweetAlert.swal({
+                        title: cancelled,
+                        text: snippetSafe,
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+        };
 
         // $scope.deleteSocialNetwork = function (id) {
         //     var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
