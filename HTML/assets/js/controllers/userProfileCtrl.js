@@ -365,41 +365,41 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $window.open(link, '_blank');
         };
 
-        // $scope.makeQRCode = function () {
-        //     RestService.imageDownload($scope.user.id);
-        // };
+        $scope.makeQRCode = function () {
+            RestService.imageDownload($scope.user.id);
+        };
 
-        // $scope.crop = function () {
-        //     $scope.user.avatar = $scope.myCroppedImage;
-        //     //return a promise that resolves with a File instance
-        //     function urltoFile(url, filename, mimeType) {
-        //         return (fetch(url)
-        //             .then(function (res) { return res.arrayBuffer(); })
-        //             .then(function (buf) { return new File([buf], filename, { type: mimeType }); })
-        //         );
-        //     }
+        $scope.crop = function () {
+            $scope.user.avatar = $scope.myCroppedImage;
+            //return a promise that resolves with a File instance
+            function urltoFile(url, filename, mimeType) {
+                return (fetch(url)
+                    .then(function (res) { return res.arrayBuffer(); })
+                    .then(function (buf) { return new File([buf], filename, { type: mimeType }); })
+                );
+            }
 
-        //     urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
-        //         .then(function (file) {
-        //             console.log(file);
-        //             $scope.user.avatar = file;
-        //         })
+            urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
+                .then(function (file) {
+                    console.log(file);
+                    $scope.user.avatar = file;
+                })
 
-        //     $('#ModalImageCropper').modal('hide');
-        // };
+            $('#ModalImageCropper').modal('hide');
+        };
 
-        // $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
-        //     var generateQR = $translate.instant('user_profile.GENERATE_QR_SUCCESS');
-        //     var generateQRTitle = $translate.instant('user_profile.GENERATE_QR_TITLE');
-        //     growl.success(generateQR, { title: generateQRTitle });
-        //     $scope.user.qrcode = data;
-        // });
+        $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
+            var generateQR = $translate.instant('user_profile.GENERATE_QR_SUCCESS');
+            var generateQRTitle = $translate.instant('user_profile.GENERATE_QR_TITLE');
+            growl.success(generateQR, { title: generateQRTitle });
+            $scope.user.qrcode = data;
+        });
 
-        // $rootScope.$on('makeQRCodeError', function (event, data) {
-        //     var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
-        //     var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-        //     growl.error(serverNotFound, { title: networkConnection });
-        // });
+        $rootScope.$on('makeQRCodeError', function (event, data) {
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
+        });
 
         // $scope.getPopularUsers = function () {
         //     RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
