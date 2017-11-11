@@ -112,7 +112,9 @@
     "FIELD_REQUIRED": "This field is required.",
     "EMAIL_INVALID": "Email is invalid.",
     "ENTER_SUBJECT": "Enter subject",
-    "ENTER_MESSAGE": "Enter your message"
+    "ENTER_MESSAGE": "Enter your message",
+    "UNEXPECTED_ERROR": "An unexpected error has occurred, please try again.",
+    "SEND_CORRECTLY": "Message sended correctly"
   },
   "inbox": {
     "BROWSE": "BROWSE",
@@ -127,7 +129,23 @@
     "CLOSE": "Close",
     "SUBJECT": "Subject",
     "FIELD_REQUIRED": "This field is required.",
-    "ENTER_MESSAGE": "Enter your message"
+    "ENTER_MESSAGE": "Enter your message",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection",
+    "ERROR_DELETE_MESSAGE": "Error when try delete message, please try again",
+    "DELETE_MESSAGE": "Delete Message",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems",
+    "ERROR_SEND_MESSAGE": "Error sending message, please try again",
+    "DELETED": "Deleted!",
+    "MESSAGE_DELETED": "Your message has been deleted.",
+    "SENDED_SUCCESS": "Message sended correctly",
+    "ARE_YOU_SURE": "Are you sure?",
+    "TEXT_SURE": "You will not be able to recover this message!",
+    "YES_DELETE": "Yes, delete it!",
+    "NO_CANCEL": "No, cancel!",
+    "CANCELLED": "Cancelled",
+    "SAVE_MESSAGE": "Your message is safe :)"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explore Profiles",
@@ -207,5 +225,19 @@
     "MESSAGE_BODY": "Enter your message",
     "MESSAGE": "Message",
     "SEND_MESSAGE": "Send message"
+  },
+  "register": {
+    "SORRY_TRY": "Sorry try again",
+    "WRONG_USER_PASS": "Wrong User or Password",
+    "EMPTY_FIELDS": "There can be no empty field",
+    "REGISTER": "Register",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
+  },
+  "login": {
+    "LOGIN": "Login",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection",
+    "WE_PROBLEM": "We detected some problems, please try again"
   }
 }

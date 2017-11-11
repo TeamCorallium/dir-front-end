@@ -75,7 +75,7 @@
     "ENTER_SNIPPET": "輸入程式碼片段",
     "EMPTY_FIELDS": "不能有空欄位",
     "PUBLISH_SNIPPET": "發佈程式碼片段",
-    "ARE_YOU_SURE": "Are you sure?",
+    "ARE_YOU_SURE": "是否確定?",
     "TEXT_SURE": "您將無法恢復此程式碼片段!",
     "YES_DELETE": "是, 刪除它!",
     "NO_CANCEL": "否, 取消!",
@@ -112,7 +112,9 @@
     "FIELD_REQUIRED": "此欄位是必需的",
     "EMAIL_INVALID": "電子郵件無效",
     "ENTER_SUBJECT": "輸入主題",
-    "ENTER_MESSAGE": "輸入您的留言"
+    "ENTER_MESSAGE": "輸入您的留言",
+    "UNEXPECTED_ERROR": "發生意外錯誤, 請重試.",
+    "SEND_CORRECTLY": "消息寄正確"
   },
   "inbox": {
     "BROWSE": "流覽",
@@ -207,5 +209,19 @@
     "MESSAGE_BODY": "輸入您的留言",
     "MESSAGE": "消息",
     "SEND_MESSAGE": "發送消息"
+  },
+  "register": {
+    "SORRY_TRY": "對不起再試一次",
+    "WRONG_USER_PASS": "錯誤的使用者或密碼",
+    "EMPTY_FIELDS": "不能有空欄位",
+    "REGISTER": "註冊",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接"
+  },
+  "login": {
+    "LOGIN": "登錄",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次"
   }
 }

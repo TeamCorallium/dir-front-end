@@ -112,7 +112,9 @@
     "FIELD_REQUIRED": "Este campo es requerido.",
     "EMAIL_INVALID": "Correo inválido.",
     "ENTER_SUBJECT": "Ingrese el asunto",
-    "ENTER_MESSAGE": "Ingrese el mensaje"
+    "ENTER_MESSAGE": "Ingrese el mensaje",
+    "UNEXPECTED_ERROR": "Se ha producido un error inesperado, por favor inténtelo de nuevo.",
+    "SEND_CORRECTLY": "Mensaje enviado correctamente"
   },
   "inbox": {
     "BROWSE": "Navegación",
@@ -207,5 +209,19 @@
     "MESSAGE_BODY": "Ingrese su mensaje",
     "MESSAGE": "Mensaje",
     "SEND_MESSAGE": "Enviar mensaje"
+  },
+  "register": {
+    "SORRY_TRY": "Lo siento, inténtelo de nuevo",
+    "WRONG_USER_PASS": "Usuario o contraseña incorrecta",
+    "EMPTY_FIELDS": "No puede haber un campo vacío",
+    "REGISTER": "Registro",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red"
+  },
+  "login": {
+    "LOGIN": "Inicia sessión",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo"
   }
 }

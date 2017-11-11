@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert",
-    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert) {
+app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert", "$translate",
+    function ($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert, $translate) {
 
         $scope.inboxFlag = true;
         $rootScope.OptionsEdit = false;
@@ -186,14 +186,20 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.deleteMessage = function (url) {
+            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE');
+            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
+            var noCancel = $translate.instant('user_profile.NO_CANCEL');
+            var cancelled = $translate.instant('user_profile.CANCELLED');
+            var messageSafe = $translate.instant('user_profile.SAVE_MESSAGE');
             SweetAlert.swal({
-                title: "Are you sure?",
-                text: "Your will not be able to recover this message!",
+                title: areYouSure,
+                text: textAreYouSure,
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
-                confirmButtonText: "Yes, delete it!",
-                cancelButtonText: "No, cancel!",
+                confirmButtonText: yesDeleteIt,
+                cancelButtonText: noCancel,
                 closeOnConfirm: false,
                 closeOnCancel: false
             }, function (isConfirm) {
@@ -201,8 +207,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                     RestService.deleteMessage(url);
                 } else {
                     SweetAlert.swal({
-                        title: "Cancelled",
-                        text: "Your message is safe :)",
+                        title: cancelled,
+                        text: messageSafe,
                         type: "error",
                         confirmButtonColor: "#007AFF"
                     });
@@ -212,26 +218,34 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalMessage').modal('hide');
-            growl.success("Message sended correctly", { title: 'Send Message' });
+            var sendedSuccess = $translate.instant('inbox.SENDED_SUCCESS');
+            var sendMessage = $translate.instant('inbox.SEND_MESSAGE');
+            growl.success( sendedSuccess , { title: sendMessage });
         });
 
         $rootScope.$on('deleteMessage', function (event, data) {
             $scope.cleanMessageSelected();
             $scope.getMessages();
+            var deleted = $translate.instant('inbox.DELETED');
+            var messageDeleted = $translate.instant('inbox.MESSAGE_DELETED');
             SweetAlert.swal({
-                title: "Deleted!",
-                text: "Your message has been deleted.",
+                title: deleted,
+                text: messageDeleted,
                 type: "success",
                 confirmButtonColor: "#007AFF"
             });
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
-            growl.error("Error sending message, please try again", { title: 'Send Message' });
+            var errorSendMessage = $translate.instant('inbox.ERROR_SEND_MESSAGE');
+            var sendMessage = $translate.instant('inbox.SEND_MESSAGE');
+            growl.error( errorSendMessage , { title: sendMessage });
         });
 
         $rootScope.$on('deleteMessageError', function (event, data) {
-            growl.error("Error when try delete message, please try again", { title: 'Delete Message' });
+            var errorDeleteMessage = $translate.instant('inbox.ERROR_DELETE_MESSAGE');
+            var deleteMessage = $translate.instant('inbox.DELETE_MESSAGE');
+            growl.error( errorDeleteMessage , { title: deleteMessage });
         });
 
         $rootScope.$on('forbidden', function (event, data) {
@@ -250,10 +264,14 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
+            var weProblem = $translate.instant('inbox.WE_PROBLEM');
+            var loginProblem = $translate.instant('inbox.LOGIN_PROBLEM');
+            growl.error( weProblem , { title: loginProblem });
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('inbox.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('inbox.NETWORK_CONNECTION');
+            growl.error( serverNotFound , { title: networkConnection });
         });
     }]);

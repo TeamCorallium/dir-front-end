@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
-    function ($scope, RestService, $state, $rootScope, $cookies, growl) {
+app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate",
+    function ($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
 
         $scope.administrator = false;        
 
@@ -70,11 +70,15 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
+            var weProblem = $translate.instant('login.WE_PROBLEM');
+            var login = $translate.instant('login.LOGIN');
+            growl.error( weProblem , { title: login });
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('login.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('login.NETWORK_CONNECTION');
+            growl.error( serverNotFound , { title: networkConnection });            
         });
 
         $("#usernameHome").on('keyup', function (e) {

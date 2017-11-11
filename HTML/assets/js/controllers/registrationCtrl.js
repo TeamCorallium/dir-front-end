@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl",
-    function ($scope, RestService, $state, $rootScope, $cookies, growl) {
+app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate",
+    function ($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
 
         $scope.errorMessage = '';
 
@@ -31,10 +31,14 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
                 if (password === passAgain) {
                     RestService.register(username, password, email, pin);
                 } else {
-                    growl.error("Sorry try again", { title: 'Wrong User or Password' });
+                    var sorryTry = $translate.instant('register.SORRY_TRY');
+                    var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
+                    growl.error( sorryTry , { title: wrongUserPass });
                 }
             } else {
-                growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                var emptyField = $translate.instant('register.EMPTY_FIELDS');
+                var register = $translate.instant('register.REGISTER');
+                growl.error( emptyField , { title: register });
             }
         };
 
@@ -46,10 +50,14 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
                 if (password === passAgain) {
                     RestService.register(username, password, email);
                 } else {
-                    growl.error("Sorry try again", { title: 'Wrong User or Password' });
+                    var sorryTry = $translate.instant('register.SORRY_TRY');
+                    var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
+                    growl.error( sorryTry , { title: wrongUserPass });
                 }
             } else {
-                growl.error("Sorry all fields are required", { title: 'Empty fields' });
+                var emptyField = $translate.instant('register.EMPTY_FIELDS');
+                var register = $translate.instant('register.REGISTER');
+                growl.error( emptyField , { title: register });
             }
         };
 
@@ -69,6 +77,8 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         $rootScope.$on('withoutNetworkConnection', function (event, data) {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('register.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('register.NETWORK_CONNECTION');
+            growl.error( serverNotFound , { title: networkConnection });
         });
     }]);

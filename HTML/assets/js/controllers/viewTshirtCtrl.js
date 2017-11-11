@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
-    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
+app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, $translate) {
 
         $rootScope.OptionsEdit = false;
 
@@ -42,7 +42,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             socialnetworks: [],
             tshirts: [],
             snippets: []
-        };        
+        };
 
         $scope.TryClap = function () {
             RestService.takeClap($scope.user.id, true);
@@ -223,7 +223,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $state.go('profile');
             } else {
                 $state.go('tshirts');
-            }            
+            }
         };
 
         $scope.getAvatar = function (avatar) {
@@ -302,14 +302,18 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 var username = $cookies.get('username');
                 RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
             } else {
-                growl.error("An unexpected error has occurred, please try again.", { title: 'Send Message' });
+                var unexpectedError = $translate.instant('view_profile.UNEXPECTED_ERROR');
+                var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
+                growl.error(unexpectedError, { title: sendMessage });
                 $state.go('users');
             }
         };
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalLeaveMessage').modal('hide');
-            growl.success("Message sended correctly", { title: 'Send Message' });
+            var sendCorrectly = $translate.instant('view_profile.SEND_CORRECTLY');
+            var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
+            growl.success(sendCorrectly, { title: sendMessage });
         });
 
         $scope.clap = function () {
