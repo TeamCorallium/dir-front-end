@@ -224,7 +224,13 @@
     "SUBJECT": "Subject",
     "MESSAGE_BODY": "Enter your message",
     "MESSAGE": "Message",
-    "SEND_MESSAGE": "Send message"
+    "SEND_MESSAGE": "Send message",
+    "EMPTY_FIELDS": "There can be no empty field",
+    "SEND_CORRECTLY": "Message sended correctly",
+    "MESSAGE_ERROR": "Error sending message, please try again",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
   },
   "register": {
     "SORRY_TRY": "Sorry try again",

@@ -208,7 +208,13 @@
     "SUBJECT": "主題",
     "MESSAGE_BODY": "輸入您的留言",
     "MESSAGE": "消息",
-    "SEND_MESSAGE": "發送消息"
+    "SEND_MESSAGE": "發送消息",
+    "EMPTY_FIELDS": "不能有空欄位",
+    "SEND_CORRECTLY": "消息寄正確",
+    "MESSAGE_ERROR": "發送郵件時出錯, 請重試",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接"
   },
   "register": {
     "SORRY_TRY": "對不起再試一次",

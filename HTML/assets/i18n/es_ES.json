@@ -208,7 +208,13 @@
     "SUBJECT": "Asunto",
     "MESSAGE_BODY": "Ingrese su mensaje",
     "MESSAGE": "Mensaje",
-    "SEND_MESSAGE": "Enviar mensaje"
+    "SEND_MESSAGE": "Enviar mensaje",
+    "EMPTY_FIELDS": "No puede haber un campo vacío",
+    "SEND_CORRECTLY": "Mensaje enviado correctamente",
+    "MESSAGE_ERROR": "Error al enviar el mensaje, por favor inténtelo de nuevo",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red"
   },
   "register": {
     "SORRY_TRY": "Lo siento, inténtelo de nuevo",

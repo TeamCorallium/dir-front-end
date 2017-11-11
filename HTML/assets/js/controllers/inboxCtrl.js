@@ -186,12 +186,12 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.deleteMessage = function (url) {
-            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
-            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE');
-            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
-            var noCancel = $translate.instant('user_profile.NO_CANCEL');
-            var cancelled = $translate.instant('user_profile.CANCELLED');
-            var messageSafe = $translate.instant('user_profile.SAVE_MESSAGE');
+            var areYouSure = $translate.instant('inbox.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('inbox.TEXT_SURE');
+            var yesDeleteIt = $translate.instant('inbox.YES_DELETE');
+            var noCancel = $translate.instant('inbox.NO_CANCEL');
+            var cancelled = $translate.instant('inbox.CANCELLED');
+            var messageSafe = $translate.instant('inbox.SAVE_MESSAGE');
             SweetAlert.swal({
                 title: areYouSure,
                 text: textAreYouSure,

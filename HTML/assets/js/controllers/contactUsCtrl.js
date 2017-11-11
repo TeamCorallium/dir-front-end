@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
-    function ($scope, $state, $rootScope, RestService, $cookies, growl) {
+app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate",
+    function ($scope, $state, $rootScope, RestService, $cookies, growl, $translate) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", { path: '/' });
@@ -36,7 +36,9 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             if ($scope.message.email != '' && $scope.message.subject != '' && $scope.message.body != ''){
                 RestService.sendMessage($scope.message.email, 'admin', $scope.message.subject, $scope.message.body, false);
             } else {
-                growl.error("All fields are required", { title: 'Send Message' });
+                var emptyFields = $translate.instant('contact.EMPTY_FIELDS');
+                var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+                growl.error( emptyFields , { title: sendMessage });
             }            
         };
 
@@ -44,11 +46,15 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             $scope.message.email = '';
             $scope.message.subject = '';
             $scope.message.body = '';
-            growl.success("Message sended correctly", { title: 'Send Message' });
+            var sendSuccess = $translate.instant('contact.SEND_CORRECTLY');
+            var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+            growl.success( sendSuccess , { title: sendMessage });
         });
 
         $rootScope.$on('WrongMessage', function (event, data) {
-            growl.error("Error sending message, please try again", { title: 'Send Message' });
+            var messageError = $translate.instant('contact.MESSAGE_ERROR');
+            var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+            growl.error( messageError , { title: sendMessage });
         });
 
         $rootScope.$on('forbidden', function (event, data) {
@@ -67,11 +73,15 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
                 console.log(RestService.getCookie('csrftoken'));
             }
 
-            growl.error("We detected some problems, please try again", { title: 'Logins Problems' });
+            var weProblem = $translate.instant('contact.WE_PROBLEM');
+            var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+            growl.error( weProblem , { title: sendMessage });
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
-            growl.error("Server Not Found. Check your internet connection.", { title: 'Network Connection' });
+            var serverNotFound = $translate.instant('contact.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('contact.NETWORK_CONNECTION');
+            growl.error( serverNotFound , { title: networkConnection });
         });
 
     }]);
