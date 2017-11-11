@@ -453,7 +453,7 @@
                             <label for="password" translate="edit_profile.PASSWORD"></label>
                             <div class="form-hint" translate="edit_profile.TEXT_PASSWORD"></div>
                             <input type="password" class="form-control ok-password" ng-class="(ChangePassword.password.$dirty && ChangePassword.password.$invalid) ? 'error' : ''"
-                                id="password" name="password" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="password">
+                                id="password" name="password" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="$parent.password">
                             <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                             <div class="strength-meter">
                                 <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
@@ -461,7 +461,7 @@
                         </div>
                         <div class="form-group">
                             <label for="againPassHome" translate="edit_profile.PASSWORD_AGAIN"></label>
-                            <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="againPassHome"
+                            <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="$parent.againPassHome"
                                 pw-check="password">
                         </div>
                         <div id="msg-block" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
@@ -475,7 +475,7 @@
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
                     </a>
                     <a id="changePasswordButton" class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch"
-                        ng-click="changePassword(password,againPassHome)">
+                        ng-click="changePassword()">
                         <i class="ti-key"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CHANGE_PASSWORD"></label>
                     </a>

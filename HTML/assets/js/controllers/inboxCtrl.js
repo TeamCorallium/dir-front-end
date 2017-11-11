@@ -119,21 +119,6 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 $('#MessageSendBox').hide();
                 $('#MessageReadBox').show();
             }
-
-            // for (var i = 0; i < $scope.messagesSend.length; i++) {
-            //     if ($scope.messagesSend[i].id == message.id) {
-            //         $scope.messagesSend[i].readed = true;
-            //         var idClass = "#li-" + $scope.messagesSend[i].id;
-            //         $(idClass).addClass("backgroundMessageSelectedColor");
-            //     } else {
-            //         var idClass = "#li-" + $scope.messagesSend[i].id;
-            //         $(idClass).removeClass("backgroundMessageSelectedColor");
-            //     }
-            // }
-
-            // RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
-            //     $scope.messageSelected.receiver, $scope.messageSelected.subject,
-            //     $scope.messageSelected.body, $scope.messageSelected.readed);
         };
 
         $scope.cleanMessageSelected = function () {

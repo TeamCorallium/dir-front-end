@@ -40,6 +40,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.pSnippet = '';
         $scope.EditSnippetFlag = false;
         $scope.EditInfoFlag = false;
+        $scope.password = '';
+        $scope.againPassHome = '';
 
         $scope.uploadFile = function (file) {
             if (file) {
@@ -215,7 +217,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.pSnippet != '') {
                 RestService.addSnippet("", $scope.pSnippet);
             } else {
-                growl.error("Cannot exist empty field", { title: 'Publish Snippet' });
+                growl.error("There can be no empty field", { title: 'Publish Snippet' });
             }
         };
 
@@ -226,7 +228,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.deleteSnippet = function (url) {
             SweetAlert.swal({
                 title: "Are you sure?",
-                text: "Your will not be able to recover this snippet!",
+                text: "You will not be able to recover this snippet!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
@@ -251,7 +253,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.deleteSocialNetwork = function (id) {
             SweetAlert.swal({
                 title: "Are you sure?",
-                text: "Your will not be able to recover this social network!",
+                text: "You will not be able to recover this social network!",
                 type: "warning",
                 showCancelButton: true,
                 confirmButtonColor: "#DD6B55",
@@ -641,7 +643,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 RestService.addSocialNetwork(name, url, type);
 
             } else {
-                growl.success("Cannot exist empty fields", { title: 'Add Social Network' });
+                growl.success("There can be no empty field", { title: 'Add Social Network' });
             }
         };
 
@@ -737,7 +739,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.title != '' && $scope.body != '') {
                 RestService.addSnippet($scope.title, $scope.body);
             } else {
-                growl.error("Cannot exist empty fields", { title: 'Add Snippet' });
+                growl.error("There can be no empty field", { title: 'Add Snippet' });
             }
         };
 
@@ -768,9 +770,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         // end: keyup snippets
 
         // CHANGE PASSWORD
-        $scope.changePassword = function (psw, psw2) {
-            if (psw === psw2) {
-                RestService.changePassword($scope.user.username, psw);
+        $scope.changePassword = function () {
+            if ($scope.password === $parent.againPassHome) {
+                RestService.changePassword($scope.user.username, $scope.password);
             } else {
                 $('#msg-block').show();
             }
@@ -779,10 +781,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('changepassword', function (event, data) {
             $('#modalChangePassword').modal('hide');
             $('#msg-block').hide();
+            $scope.password = '';
+            $scope.againPassHome = '';
             growl.success("Password changed correctly.", { title: 'Password Change' });
         });
 
-        $rootScope.$on('changepasswordError', function (event, data) {
+        $rootScope.$on('changepasswordError', function (event, data) {            
+            $scope.password = '';
+            $scope.againPassHome = '';
             growl.error("Error when attempting to change password. Please check the status of your network.", { title: 'Password Change' });
         });
 
