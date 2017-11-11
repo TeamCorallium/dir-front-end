@@ -86,7 +86,7 @@
     "DELETED": "Deleted!",
     "DELETE_SNIPPET_SUCCESS": "Your snippet has been deleted.",
     "DELETE_SOCIAL_SUCCESS": "Your social network has been deleted.",
-    "GENERATE_QR": "QR Code Generated Correctly",
+    "GENERATE_QR_SUCCESS": "QR Code Generated Correctly",
     "GENERATE_QR_TITLE": "Generate QR Code",
     "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
     "NETWORK_CONNECTION": "Network Connection",

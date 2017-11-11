@@ -86,7 +86,7 @@
     "DELETED": "刪除!",
     "DELETE_SNIPPET_SUCCESS": "您的程式碼片段已被刪除.",
     "DELETE_SOCIAL_SUCCESS": "您的社交網路已被刪除.",
-    "GENERATE_QR": "正確生成 QR 碼",
+    "GENERATE_QR_SUCCESS": "正確生成 QR 碼",
     "GENERATE_QR_TITLE": "生成 QR 碼",
     "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
     "NETWORK_CONNECTION": "網路連接",
