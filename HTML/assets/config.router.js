@@ -62,6 +62,14 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/admin',
             templateUrl: 'views/adminView.html',
             resolve: loadSequence('adminViewCtrl')
+        }).state('followers', {
+            url: '/followers',
+            templateUrl: 'views/viewFollowers.html',
+            resolve: loadSequence('viewFollowersCtrl')
+        }).state('following', {
+            url: '/following',
+            templateUrl: 'views/viewMyFollowers.html',
+            resolve: loadSequence('viewMyFollowersCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
@@ -95,10 +103,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
                                         return jsRequires.modules[m];
                             return jsRequires.scripts && jsRequires.scripts[name];
                         }
-                    }]
+                    }
+                ]
             };
         }
-    }]);
+    }
+]);
 
 app.config(["$httpProvider", function ($httpProvider) {
 

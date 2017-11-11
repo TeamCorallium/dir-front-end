@@ -42,7 +42,7 @@
     "SAVE_QR": "Save QR Code",
     "PREVIOUS": "« Previous",
     "NEXT": "Next »",
-    "ADD_SNIPPETS" : "Add Snippet",
+    "ADD_SNIPPETS": "Add Snippet",
     "ADD_SOCIAL": "Add Social",
     "POPULAR_USER": "Popular Users",
     "SEE_MORE": "See more",
@@ -50,7 +50,7 @@
     "SNIPPET_BODY": "Snippet body",
     "CLOSE": "Close",
     "ADD": "Add",
-    "SOCIAL_NETWORK" : "Social Networks",
+    "SOCIAL_NETWORK": "Social Networks",
     "SELECT_SOCIAL": "Select a social network",
     "CONTINUE_AS_OTHER": "Continue as other",
     "LOG_IN_FACEBOOK": "Login with Facebook",
@@ -97,7 +97,9 @@
     "PASSWORD_CHANGE": "Password Change",
     "ERROR_PASSWORD": "Error when attempting to change password. Please check the status of your network.",
     "NOT_TSHIRT": "This T-Shirt does not exist in stock.",
-    "ADD_TSHIRT": "Add T-Shirt"
+    "ADD_TSHIRT": "Add T-Shirt",
+    "FOLLOWERS": "Followers",
+    "FOLLOWING": "Following"
   },
   "view_profile": {
     "RATING": "Rating:",
@@ -186,7 +188,7 @@
     "ENTER_EMAIL": "Enter your email address"
   },
   "home": {
-    "TEXT_TSHIRTS" : "T-shirts with technology",
+    "TEXT_TSHIRTS": "T-shirts with technology",
     "TEXT_HOME": "A new way to reach your customers, to contact you and visit your business.",
     "REGISTER": "Register",
     "LOG_IN": "Log In",

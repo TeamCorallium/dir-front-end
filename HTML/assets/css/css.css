@@ -1,37 +1,45 @@
 .modal-header {
     padding: 0;
 }
+
 .modal-header .close {
     padding: 10px 15px;
 }
+
 .modal-header ul {
     border: none;
 }
+
 .modal-header ul li {
     margin: 0;
 }
+
 .modal-header ul li a {
     border: none;
     border-radius: 0;
 }
+
 .modal-header ul li.active a {
     color: #e12f27;
 }
+
 .modal-header ul li a:hover {
     border: none;
 }
+
 .modal-header ul li a span {
     margin-left: 10px;
 }
+
 .modal-body .form-group {
     margin-bottom: 10px;
 }
 
-.style-link{
+.style-link {
     color: #00B8B8 !important;
 }
 
-.style-link:hover{
+.style-link:hover {
     cursor: pointer !important;
     color: #337ab7;
 }
@@ -40,11 +48,11 @@
     opacity: 1.0 !important;
 }
 
-.button-image-right:hover{
+.button-image-right:hover {
     opacity: 1.0 !important;
 }
 
-.resize-none{
+.resize-none {
     resize: none !important;
 }
 
@@ -54,11 +62,10 @@
     }
 }
 
-@media  (min-width: 768px) {
+@media (min-width: 768px) {
     .marginButtonEdit {
         margin-top: 5px !important;
     }
-
     .TitleSnippetBox {
         width: 95% !important;
         text-align: left !important;
@@ -66,7 +73,6 @@
         position: relative;
         float: left;
     }
-
     .image_middle {
         float: left !important;
         height: 130px !important;
@@ -75,7 +81,6 @@
         margin-left: 15% !important;
         margin-top: -60% !important;
     }
-
     .image_qrcode {
         float: left !important;
         height: 130px !important;
@@ -83,16 +88,13 @@
         padding: 0px !important;
         margin-left: 19% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .min-height-80 {
         min-height: 70px !important;
     }
-
-    .button-image-left{
+    .button-image-left {
         margin-top: -42% !important;
         margin-left: 35% !important;
         position: absolute !important;
@@ -103,7 +105,6 @@
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
-
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -114,61 +115,51 @@
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/768.jpg');
     }
-
     .marginButtonUserHome {
         margin-left: 43% !important;
         border-radius: 5px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 25% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
     }
-
     .InboxBox {
         min-height: 600px !important;
     }
-
     .OptionsBox {
         min-height: 600px !important;
     }
-
-    #MessageSendBox, #MessageReadBox, #MessageInboxBox {
+    #MessageSendBox,
+    #MessageReadBox,
+    #MessageInboxBox {
         min-height: 600px !important;
     }
-
-    .displayBlock{
+    .displayBlock {
         display: none !important;
     }
-
-    .marginTopFilter{
+    .marginTopFilter {
         margin-top: 60px !important;
     }
-
     .marginSearch {
         margin-left: 15px !important;
         margin-right: 15px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -176,16 +167,13 @@
         float: left;
         width: 87% !important;
     }
-
     .paddingStyle {
         margin-top: 10px !important;
-        padding-left: 40px !important; 
+        padding-left: 40px !important;
     }
-
     .paddingStyleView {
-        padding-left: 40px !important; 
+        padding-left: 40px !important;
     }
-
     .marginTop25XS {
         margin-top: 25px !important;
     }
@@ -193,7 +181,7 @@
 
 @media (min-width: 770px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/800.jpg');
     }
@@ -201,7 +189,7 @@
 
 @media (min-width: 801px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/850.jpg');
     }
@@ -209,11 +197,10 @@
 
 @media (min-width: 851px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/900.jpg');
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 27% !important;
@@ -222,16 +209,14 @@
 
 @media (min-width: 901px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/950.jpg');
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 28% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -241,16 +226,14 @@
 
 @media (min-width: 951px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1000.jpg');
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 30% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -259,7 +242,7 @@
 }
 
 @media (max-width: 991px) {
-    .navbar > .container .navbar-header .navbar-brand {
+    .navbar>.container .navbar-header .navbar-brand {
         float: right !important;
         margin-right: 5% !important;
     }
@@ -270,16 +253,13 @@
         margin-right: 20px !important;
         margin-top: 5px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 28% !important;
     }
-
-    .navbar > .container .navbar-header .navbar-brand {
+    .navbar>.container .navbar-header .navbar-brand {
         float: right !important;
     }
-
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -291,16 +271,14 @@
 
 @media (min-width: 1001px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1050.jpg');
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 29.3% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -310,21 +288,18 @@
 
 @media (min-width: 1051px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1100.jpg');
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 30.3% !important;
     }
-
     .marginButtonEdit {
         margin-right: 50px !important;
         margin-top: 5px !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -334,21 +309,18 @@
 
 @media (min-width: 1101px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1150.jpg');
     }
-
     .marginButtonEdit {
         margin-right: 75px !important;
         margin-top: 5px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 31.4% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -358,21 +330,18 @@
 
 @media (min-width: 1151px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1200.jpg');
     }
-
     .marginButtonEdit {
         margin-right: 100px !important;
         margin-top: 5px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 32% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -382,16 +351,14 @@
 
 @media (min-width: 1251px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1300.jpg');
     }
-
     .marginButtonEdit {
         margin-right: 100px !important;
         margin-top: 5px !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -401,11 +368,10 @@
 
 @media (min-width: 1301px) {
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1366.jpg');
-    }    
-
+    }
     .UserInfoBox {
         text-align: left !important;
         min-height: 180px !important;
@@ -413,16 +379,14 @@
     }
 }
 
-@media  (max-width: 767px) {
+@media (max-width: 767px) {
     .marginLeft20XS {
         margin-left: 20px !important;
         padding-right: 45px !important;
     }
-
     .marginTop20XS {
         margin-top: 20px !important;
     }
-
     .TitleSnippetBox {
         width: 89% !important;
         text-align: left !important;
@@ -430,29 +394,23 @@
         position: relative;
         float: left;
     }
-
     .marginSnippetXS {
         margin-left: 0px !important;
     }
-
     #MessageReadBox {
         display: none;
     }
-
     .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-    
     .marginTopMovil {
         margin-top: 25px !important;
     }
-
     .marginTopMovil-10 {
         margin-top: 10px !important;
     }
-
     .image_qrcode {
         float: left !important;
         height: 180px !important;
@@ -460,73 +418,59 @@
         padding: 0px !important;
         margin-left: 38% !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 3% !important;
     }
-
     .AvatarXSBox {
         width: 10% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
         position: relative;
         float: left;
         width: 90% !important;
-    }    
-
+    }
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .min-height-80 {
         min-height: 50px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/480.jpg');
     }
-
-    .center-box{
+    .center-box {
         margin-left: 36% !important;
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 33% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 33% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 40.6% !important;
         border-radius: 5px !important;
     }
-
-    .displayBlock{
+    .displayBlock {
         display: block !important;
     }
-
-    .centerTextExploreUser{
+    .centerTextExploreUser {
         text-align: center !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -534,28 +478,24 @@
         float: left;
         width: 92% !important;
     }
-
     .HiddenIfXS {
         display: none !important;
     }
-
     .paddingLeft15XS {
         padding-left: 15px !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 32% !important;
     }
 }
 
-@media  (max-width: 480px) {
-    .avatarXS{
+@media (max-width: 480px) {
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-
     .image_qrcode {
         float: left !important;
         height: 150px !important;
@@ -563,19 +503,16 @@
         padding: 0px !important;
         margin-left: 32% !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 5% !important;
     }
-
     .AvatarXSBox {
         width: 15% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
@@ -583,37 +520,30 @@
         float: left;
         width: 85% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/480.jpg');
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 21% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 20% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 34% !important;
         border-radius: 5px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -621,20 +551,18 @@
         float: left;
         width: 86% !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 20% !important;
     }
 }
 
-@media  (max-width: 415px) {
-    .avatarXS{
+@media (max-width: 415px) {
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-
     .image_qrcode {
         float: left !important;
         height: 150px !important;
@@ -642,19 +570,16 @@
         padding: 0px !important;
         margin-left: 28% !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 6% !important;
     }
-
     .AvatarXSBox {
         width: 18% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
@@ -662,37 +587,30 @@
         float: left;
         width: 82% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/480.jpg');
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 15% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 14% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 31% !important;
         border-radius: 5px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -700,20 +618,18 @@
         float: left;
         width: 83% !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 15% !important;
     }
 }
 
-@media  (max-width: 375px) {
-    .avatarXS{
+@media (max-width: 375px) {
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-
     .image_qrcode {
         float: left !important;
         height: 150px !important;
@@ -721,19 +637,16 @@
         padding: 0px !important;
         margin-left: 25% !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 6% !important;
     }
-
     .AvatarXSBox {
         width: 20% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
@@ -741,37 +654,30 @@
         float: left;
         width: 80% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/375.jpg');
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 10% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 10% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 28% !important;
         border-radius: 5px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -779,20 +685,18 @@
         float: left;
         width: 80% !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 10% !important;
     }
 }
 
-@media  (max-width: 360px) {
-    .avatarXS{
+@media (max-width: 360px) {
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-
     .image_qrcode {
         float: left !important;
         height: 150px !important;
@@ -800,23 +704,19 @@
         padding: 0px !important;
         margin-left: 25% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 6% !important;
     }
-
     .AvatarXSBox {
         width: 20% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
@@ -824,33 +724,27 @@
         float: left;
         width: 80% !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/360.jpg');
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 8% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 8% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 27% !important;
         border-radius: 5px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -858,21 +752,18 @@
         float: left;
         width: 79% !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 9% !important;
     }
 }
 
-@media  (max-width: 320px) {
-
-    .avatarXS{
+@media (max-width: 320px) {
+    .avatarXS {
         width: 50px;
         height: 50px;
         margin: 10px;
     }
-
     .image_qrcode {
         float: left !important;
         height: 150px !important;
@@ -880,19 +771,16 @@
         padding: 0px !important;
         margin-left: 21% !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 7% !important;
     }
-
     .AvatarXSBox {
         width: 25% !important;
         display: block;
         position: relative;
         float: left;
     }
-
     .UserInfoBox {
         text-align: left !important;
         display: block;
@@ -900,37 +788,30 @@
         float: left;
         width: 75% !important;
     }
-
     .paddingProfile {
         padding-top: 45px !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/320.jpg');
     }
-
-    .marginUserHome{
+    .marginUserHome {
         margin-left: 0% !important;
     }
-
-    .marginExploreUser{
+    .marginExploreUser {
         margin-left: 1% !important;
     }
-
     .marginButtonUserHome {
         margin-left: 23% !important;
         border-radius: 5px !important;
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -938,7 +819,6 @@
         float: left;
         width: 75% !important;
     }
-
     .qrcodeImage {
         max-width: 250px !important;
         margin-left: 1% !important;
@@ -964,8 +844,7 @@
         opacity: 0.5 !important;
         padding-top: 06px !important;
     }
-
-    .button-image-left{
+    .button-image-left {
         margin-top: -42% !important;
         margin-left: 37% !important;
         position: absolute !important;
@@ -976,18 +855,15 @@
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
-
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 22.5% !important;
     }
-
     .UserInfoBox {
         text-align: left !important;
         min-height: 130px !important;
         margin-top: 10px !important;
     }
-
     .image_middle {
         margin-left: 18% !important;
         float: left !important;
@@ -996,7 +872,6 @@
         padding: 0px !important;
         margin-top: -60% !important;
     }
-
     .image_qrcode {
         float: left !important;
         height: 120px !important;
@@ -1004,20 +879,17 @@
         padding: 0px !important;
         margin-left: 18% !important;
     }
-
     .pictureFrontCover {
-        width:100%;
+        width: 100%;
         height: 120px !important;
         background-image: url('../../assets/images/1250.jpg');
     }
-
     .DeleteSnippetBox {
         width: 50px !important;
         display: block;
         position: relative;
         float: left;
     }
-    
     .SnippetBox {
         text-align: left !important;
         display: block;
@@ -1053,7 +925,7 @@
     margin-left: 50px !important;
 }
 
-.avatar-users:hover{
+.avatar-users:hover {
     cursor: pointer;
     cursor: hand;
 }
@@ -1072,6 +944,7 @@
     width: 100%;
     height: 400px;
 }
+
 img-crop {
     display: block;
     height: 100%;
@@ -1116,7 +989,7 @@ img-crop canvas {
     border-radius: 1px !important;
 }
 
-.SocialList{
+.SocialList {
     display: block;
     height: 40px;
     opacity: 0.6;
@@ -1232,6 +1105,7 @@ ul li a.social-ti-reddit {
 ul li a.social-ti-flickr {
     background: #FF4DA9;
 }
+
 ul li a.social-ti-foursquare {
     background: #6FCCF4;
 }
@@ -1243,7 +1117,7 @@ ul li a.social-ti-foursquare {
 
 .ButtonRadius {
     border-radius: 4px !important;
-	margin-top: 5px !important;
+    margin-top: 5px !important;
 }
 
 @media (min-width: 1251px) {
@@ -1251,7 +1125,6 @@ ul li a.social-ti-foursquare {
         margin-top: 5px !important;
         margin-left: 23% !important;
     }
-
     .marginButtonEdit {
         margin-right: 60px !important;
         margin-top: 5px !important;
@@ -1263,7 +1136,6 @@ ul li a.social-ti-foursquare {
         margin-top: 5px !important;
         margin-left: 23% !important;
     }
-
     .marginButtonEdit {
         margin-right: 80px !important;
         margin-top: 5px !important;
@@ -1273,9 +1145,8 @@ ul li a.social-ti-foursquare {
 @media (min-width: 1366px) {
     .SocialIcon {
         margin-top: 5px !important;
-        margin-left: 25.4% !important;
+        margin-left: 24.4% !important;
     }
-
     .marginButtonEdit {
         margin-right: 100px !important;
         margin-top: 5px !important;
@@ -1307,11 +1178,11 @@ a.ButtonImageSize {
 }
 
 .MessageFromSender {
-	font-weight: bold;
-	font-size: 16px !important;
-	margin-top: 2px;
-	color: #0b0b0b;
-	opacity: 0.6;
+    font-weight: bold;
+    font-size: 16px !important;
+    margin-top: 2px;
+    color: #0b0b0b;
+    opacity: 0.6;
 }
 
 .MessageFromReceiver {
@@ -1417,7 +1288,12 @@ a.ButtonImageSize {
     float: left;
 }
 
-[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+[ng\:cloak],
+[ng-cloak],
+[data-ng-cloak],
+[x-ng-cloak],
+.ng-cloak,
+.x-ng-cloak {
     display: none !important;
 }
 
@@ -1509,7 +1385,9 @@ a.ButtonImageSize {
     width: 100%;
 }
 
-.btn.disabled, .btn[disabled], fieldset[disabled] .btn {
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
     cursor: not-allowed;
     filter: alpha(opacity=65);
     -webkit-box-shadow: none;
@@ -1518,23 +1396,23 @@ a.ButtonImageSize {
 }
 
 .msg-block {
-    margin-top:5px;
+    margin-top: 5px;
 }
 
 .msg-error {
-    color:#F00;
-    font-size:14px;
+    color: #F00;
+    font-size: 14px;
 }
 
-.cursordefault{
+.cursordefault {
     cursor: default;
 }
 
-.ButtonMoreUser{
+.ButtonMoreUser {
     border: none !important;
 }
 
-.ListMoreUser{
+.ListMoreUser {
     min-height: 45px !important;
     border-bottom: none !important;
 }
@@ -1543,7 +1421,7 @@ a.ButtonImageSize {
     margin-top: 80px !important;
 }
 
-.displayBlockAll{
+.displayBlockAll {
     display: block !important;
 }
 
@@ -1555,7 +1433,7 @@ a.ButtonImageSize {
     margin-top: 12px !important;
 }
 
-.image-hand{
+.image-hand {
     width: 20px !important;
     height: 20px !important;
 }
@@ -1572,8 +1450,9 @@ a.ButtonImageSize {
     color: #FFFFFF !important;
 }
 
-span.stars, span.stars span {
-    display: block;  
+span.stars,
+span.stars span {
+    display: block;
     background: url('../images/stars.png') 0 -16px repeat-x;
     width: 80px;
     height: 16px;
@@ -1583,20 +1462,24 @@ span.stars span {
     background-position: 0 0;
 }
 
-.pointerHover:hover{
+.pointerHover:hover {
     cursor: pointer !important;
     cursor: hand !important;
 }
 
+
 /* ---------------------------------------------------------------------- */
+
+
 /*  Notification Icons
 /* ---------------------------------------------------------------------- */
+
 .demo-notification-icons notification-icon {
     display: table;
     margin: 0 auto;
-  }
-  
-  .custom-style .angular-notifications-icon {
+}
+
+.custom-style .angular-notifications-icon {
     left: -10px;
     background: yellow;
     color: black;
@@ -1604,176 +1487,172 @@ span.stars span {
     height: 30px;
     font-weight: bolder;
     font-size: 1.2em;
-  }
-  
-  .angular-notifications-icon.my-custom-animation {
+}
+
+.angular-notifications-icon.my-custom-animation {
     -moz-transition: linear 0.5s all;
     -o-transition: linear 0.5s all;
     -webkit-transition: linear 0.5s all;
     transition: linear 0.5s all;
-  }
-  
-  .angular-notifications-icon.my-custom-animation-add {
+}
+
+.angular-notifications-icon.my-custom-animation-add {
     background: black;
     color: white;
-  }
-  
-  .angular-notifications-icon.my-custom-animation-add-active {
+}
+
+.angular-notifications-icon.my-custom-animation-add-active {
     background: yellow;
     color: black;
-  }
+}
 
-  .positionInheritIcon {
-      position: absolute !important;      
-      left: 40px !important;
-      line-height: 20px !important;
-      font-size: 14px !important;
-  }
+.positionInheritIcon {
+    position: absolute !important;
+    left: 40px !important;
+    line-height: 20px !important;
+    font-size: 14px !important;
+}
 
-  .iconClose {
+.iconClose {
     position: absolute;
     top: -1px;
     z-index: 2;
     font-size: 12px;
     left: 32px;
-  }
+}
 
-  .opacity6 {
+.opacity6 {
     opacity: 0.6 !important;
-  }
+}
 
-  .opacity6:hover {
+.opacity6:hover {
     opacity: 1.0 !important;
-  }
+}
 
-  .verticalOverflow {
+.verticalOverflow {
     overflow-y: scroll !important;
     overflow-x: hidden !important;
-  }
+}
 
-  .iconClap {
+.iconClap {
     width: 30px !important;
     margin-top: -10px !important;
-  }
-  
-  .iconMessage {
+}
+
+.iconMessage {
     width: 30px !important;
     margin-top: -5px !important;
-  }
+}
 
-  .iconClapMini {
+.iconClapMini {
     width: 16px !important;
     margin-top: -6px !important;
-  }
+}
 
-  .border-radius10 {
-      border-radius: 6px !important;
-  }
+.border-radius10 {
+    border-radius: 6px !important;
+}
 
-  .adminInfoUser {
-      width: 88% !important;
-      text-align: left !important;
-      display: block;
-      position: relative;
-      float: left;
-  }
+.adminInfoUser {
+    width: 88% !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
 
-  .adminDeleteUser {
-      width: 5% !important;
-      text-align: left !important;
-      display: block;
-      position: relative;
-      float: left;
-  }
+.adminDeleteUser {
+    width: 5% !important;
+    text-align: left !important;
+    display: block;
+    position: relative;
+    float: left;
+}
 
-  .NoUserStyles {
+.NoUserStyles {
     font-size: 24px !important;
     text-align: center !important;
-  }
+}
 
-  .deleteStuffMargin{
+.deleteStuffMargin {
     margin-top: -08px !important;
-  }
+}
 
-  .colorSuccessStock {
-      color: rgb(10, 228, 10);
-      opacity: 0.6;        
-  }
+.colorSuccessStock {
+    color: rgb(10, 228, 10);
+    opacity: 0.6;
+}
 
-  .colorErrorStock {
+.colorErrorStock {
     color: rgb(207, 7, 7);
     opacity: 0.6;
-  }
+}
 
-  .dont-break-out {
-    
-      /* These are technically the same, but use both */
-      overflow-wrap: break-word;
-      word-wrap: break-word;
-    
-      -ms-word-break: break-all;
-      /* This is the dangerous one in WebKit, as it breaks things wherever */
-      word-break: break-all;
-      /* Instead use this non-standard one: */
-      word-break: break-word;
-    
-      /* Adds a hyphen where the word breaks, if supported (No Blink) */
-      -ms-hyphens: auto;
-      -moz-hyphens: auto;
-      -webkit-hyphens: auto;
-      hyphens: auto;
-    
-    }
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
 
-    .SnippetsArea {
-        resize: none;
-        border: none !important;
-    }
+.SnippetsArea {
+    resize: none;
+    border: none !important;
+}
 
-    .SnippetFooter {
-        height: 40px;
-    }
+.SnippetFooter {
+    height: 40px;
+}
 
-    .borderBox {
-        border: 1px solid #E3E3E3;
-        border-radius: 6px !important;
-    }
+.borderBox {
+    border: 1px solid #E3E3E3;
+    border-radius: 6px !important;
+}
 
-    .ListEdit {
-        margin-top: -9px !important;        
-        margin-right: 10px !important;
-    }
+.ListEdit {
+    margin-top: -9px !important;
+    margin-right: 10px !important;
+}
 
-    .DropdownMargin {
-        margin-top: -9px !important;
-    }
+.DropdownMargin {
+    margin-top: -9px !important;
+}
 
-    .margin-top-3 {
-        margin-top: 3px !important;
-    }
+.margin-top-3 {
+    margin-top: 3px !important;
+}
 
-    .backgroundGray {
-        background-color: #f6f6f6 !important
-    }
+.backgroundGray {
+    background-color: #f6f6f6 !important
+}
 
-    .backgroundWhite {
-        background-color: white !important
-    }
+.backgroundWhite {
+    background-color: white !important
+}
 
-    .ImagePlusSocialNetwork {
-        max-width: 30px;
-        margin-top: -8px;
-        margin-left: 1px;
-    }
+.ImagePlusSocialNetwork {
+    max-width: 30px;
+    margin-top: -8px;
+    margin-left: 1px;
+}
 
-    .backgroundBlueSky{
-        background-color: #00B8B8 !important;
-    }
+.backgroundBlueSky {
+    background-color: #00B8B8 !important;
+}
 
-    .borderRadius50 {
-        border-radius: 50px !important;
-    }
+.borderRadius50 {
+    border-radius: 50px !important;
+}
 
-    .font-size-50 {
-        font-size: 50px !important;
-    }
+.font-size-50 {
+    font-size: 50px !important;
+}

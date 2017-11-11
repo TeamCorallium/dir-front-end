@@ -21,8 +21,9 @@ app.constant('JS_REQUIRED', {
         'inboxCtrl': 'assets/js/controllers/inboxCtrl.js',
         'contactUsCtrl': 'assets/js/controllers/contactUsCtrl.js',
         'faqCtrl': 'assets/js/controllers/faqCtrl.js',
-        'adminViewCtrl': 'assets/js/controllers/adminViewCtrl.js'
+        'adminViewCtrl': 'assets/js/controllers/adminViewCtrl.js',
+        'viewFollowersCtrl': 'assets/js/controllers/viewFollowersCtrl.js',
+        'viewMyFollowersCtrl': 'assets/js/controllers/viewMyFollowersCtrl.js'
     },
-    modules: [{
-    }]
+    modules: [{}]
 });
