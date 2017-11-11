@@ -856,6 +856,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $("#codeInput").on('keyup', function (e) {
             if (e.keyCode == 13) {
+                console.log($scope.codeModal + " codeModal");
                 $scope.addTshirt();
             }
         });
