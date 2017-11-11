@@ -860,4 +860,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.addTshirt();
             }
         });
+
+        console.log($("#codeInput").val() + " codeModal");
     }]);
