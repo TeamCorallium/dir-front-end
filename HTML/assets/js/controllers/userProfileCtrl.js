@@ -401,275 +401,275 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             growl.error(serverNotFound, { title: networkConnection });
         });
 
-        // $scope.getPopularUsers = function () {
-        //     RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
-        //         .then(
-        //         function (data) {
-        //             $scope.users = data.results;
-        //         },
-        //         function (errResponse) {
-        //             console.log(errResponse);
-        //         }
-        //         );
-        // };
+        $scope.getPopularUsers = function () {
+            RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
+                .then(
+                function (data) {
+                    $scope.users = data.results;
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
+                );
+        };
 
-        // $scope.getPopularUsers();
+        $scope.getPopularUsers();
 
-        // $scope.goToProfile = function (owner) {
-        //     $cookies.remove("exploreUser", { path: '/' });
-        //     $cookies.put('exploreUser', owner, { path: '/' });
-        //     if ($cookies.get('exploreUser') == $cookies.get('username')) {
-        //         $state.go('profile');
-        //     } else {
-        //         $state.go('tshirts');
-        //     }
-        // };
+        $scope.goToProfile = function (owner) {
+            $cookies.remove("exploreUser", { path: '/' });
+            $cookies.put('exploreUser', owner, { path: '/' });
+            if ($cookies.get('exploreUser') == $cookies.get('username')) {
+                $state.go('profile');
+            } else {
+                $state.go('tshirts');
+            }
+        };
 
-        // $scope.getAvatar = function (avatar) {
-        //     var dirAvatar = '';
+        $scope.getAvatar = function (avatar) {
+            var dirAvatar = '';
 
-        //     if (avatar != '' && avatar != null) {
-        //         var avatarArray = avatar.split("/");
-        //         dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-        //     } else {
-        //         dirAvatar = 'assets/images/default-user.png';
-        //     }
+            if (avatar != '' && avatar != null) {
+                var avatarArray = avatar.split("/");
+                dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+            } else {
+                dirAvatar = 'assets/images/default-user.png';
+            }
 
-        //     return dirAvatar;
-        // };
+            return dirAvatar;
+        };
 
-        // $scope.noPrevious = function () {
-        //     return $scope.hasPrevious == null;
-        // };
+        $scope.noPrevious = function () {
+            return $scope.hasPrevious == null;
+        };
 
-        // $scope.noNext = function () {
-        //     return $scope.hasNext == null;
-        // };
+        $scope.noNext = function () {
+            return $scope.hasNext == null;
+        };
 
-        // $scope.next = function () {
-        //     if (!$scope.noNext()) {
-        //         $scope.currentPage += 1;
-        //         getSnippets($scope.user.username, $scope.currentPage);
-        //     }
-        // };
+        $scope.next = function () {
+            if (!$scope.noNext()) {
+                $scope.currentPage += 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
+        };
 
-        // $scope.previous = function () {
-        //     if (!$scope.noPrevious()) {
-        //         $scope.currentPage -= 1;
-        //         getSnippets($scope.user.username, $scope.currentPage);
-        //     }
-        // };
+        $scope.previous = function () {
+            if (!$scope.noPrevious()) {
+                $scope.currentPage -= 1;
+                getSnippets($scope.user.username, $scope.currentPage);
+            }
+        };
 
-        // $scope.getStars = function (rating) {
-        //     var val = parseFloat(rating);
-        //     var size = val / 5 * 100;
-        //     return size + '%';
-        // };
+        $scope.getStars = function (rating) {
+            var val = parseFloat(rating);
+            var size = val / 5 * 100;
+            return size + '%';
+        };
 
 
-        // // Add Social Network
-        // $scope.socialnetwork = '';
-        // $scope.url = '';
-        // $scope.facebookName = '';
-        // $scope.showUrlCamp = false;
-        // $scope.activeFacebook = false;
-        // $scope.manuallyCheck = false;
-        // $scope.isConnected = false;
+        // Add Social Network
+        $scope.socialnetwork = '';
+        $scope.url = '';
+        $scope.facebookName = '';
+        $scope.showUrlCamp = false;
+        $scope.activeFacebook = false;
+        $scope.manuallyCheck = false;
+        $scope.isConnected = false;
 
-        // $scope.updateUrl = function () {
+        $scope.updateUrl = function () {
 
-        //     $scope.url = '';
+            $scope.url = '';
 
-        //     switch ($scope.socialnetwork) {
-        //         case "Facebook": {
-        //             $scope.url = 'https://www.facebook.com/';
-        //             $scope.showUrlCamp = false;
-        //             $scope.activeFacebook = true;
-        //             $scope.isFacebookConnected();
-        //             break;
-        //         };
-        //         case "Twitter": {
-        //             $scope.url = 'https://twitter.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "LinkedIn": {
-        //             $scope.url = 'https://www.linkedin.com/in/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Instagram": {
-        //             $scope.url = 'https://www.instagram.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Reddit": {
-        //             $scope.url = 'https://www.reddit.com/user/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Google": {
-        //             $scope.url = 'https://plus.google.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "YouTube": {
-        //             $scope.url = 'https://www.youtube.com/user/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "RSS": {
-        //             $scope.url = 'https://www.rss.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Dropbox": {
-        //             $scope.url = 'https://www.dropbox.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "GitHub": {
-        //             $scope.url = 'https://github.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Skype": {
-        //             $scope.url = 'https://www.skype.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Tumblr": {
-        //             $scope.url = 'https://www.tumblr.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Vimeo": {
-        //             $scope.url = 'https://vimeo.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "WordPress": {
-        //             $scope.url = 'https://es.wordpress.org/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Yahoo": {
-        //             $scope.url = 'https://www.yahoo.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         case "Flickr": {
-        //             $scope.url = 'https://www.flickr.com/';
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         };
-        //         default: {
-        //             $scope.showUrlCamp = true;
-        //             $scope.activeFacebook = false;
-        //             break;
-        //         }
-        //     }
-        // };
+            switch ($scope.socialnetwork) {
+                case "Facebook": {
+                    $scope.url = 'https://www.facebook.com/';
+                    $scope.showUrlCamp = false;
+                    $scope.activeFacebook = true;
+                    $scope.isFacebookConnected();
+                    break;
+                };
+                case "Twitter": {
+                    $scope.url = 'https://twitter.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "LinkedIn": {
+                    $scope.url = 'https://www.linkedin.com/in/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Instagram": {
+                    $scope.url = 'https://www.instagram.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Reddit": {
+                    $scope.url = 'https://www.reddit.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Google": {
+                    $scope.url = 'https://plus.google.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "YouTube": {
+                    $scope.url = 'https://www.youtube.com/user/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "RSS": {
+                    $scope.url = 'https://www.rss.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Dropbox": {
+                    $scope.url = 'https://www.dropbox.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "GitHub": {
+                    $scope.url = 'https://github.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Skype": {
+                    $scope.url = 'https://www.skype.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Tumblr": {
+                    $scope.url = 'https://www.tumblr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Vimeo": {
+                    $scope.url = 'https://vimeo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "WordPress": {
+                    $scope.url = 'https://es.wordpress.org/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Yahoo": {
+                    $scope.url = 'https://www.yahoo.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                case "Flickr": {
+                    $scope.url = 'https://www.flickr.com/';
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                };
+                default: {
+                    $scope.showUrlCamp = true;
+                    $scope.activeFacebook = false;
+                    break;
+                }
+            }
+        };
 
-        // $scope.updateUrl();
+        $scope.updateUrl();
 
-        // $scope.addSocialNetwork = function () {
-        //     var name = $scope.socialnetwork;
-        //     var url = $scope.url;
+        $scope.addSocialNetwork = function () {
+            var name = $scope.socialnetwork;
+            var url = $scope.url;
 
-        //     var type = '';
+            var type = '';
 
-        //     if (name != '' && url != '') {
-        //         switch (name) {
-        //             case "Facebook": {
-        //                 type = 'ti-facebook';
-        //                 break;
-        //             };
-        //             case "Twitter": {
-        //                 type = 'ti-twitter';
-        //                 break;
-        //             };
-        //             case "LinkedIn": {
-        //                 type = 'ti-linkedin';
-        //                 break;
-        //             };
-        //             case "Instagram": {
-        //                 type = 'ti-instagram';
-        //                 break;
-        //             };
-        //             case "Reddit": {
-        //                 type = 'ti-reddit';
-        //                 break;
-        //             };
-        //             case "Google": {
-        //                 type = 'ti-google';
-        //                 break;
-        //             };
-        //             case "YouTube": {
-        //                 type = 'ti-youtube';
-        //                 break;
-        //             };
-        //             case "RSS": {
-        //                 type = 'ti-rss';
-        //                 break;
-        //             };
-        //             case "Dropbox": {
-        //                 type = 'ti-dropbox';
-        //                 break;
-        //             };
-        //             case "GitHub": {
-        //                 type = 'ti-github';
-        //                 break;
-        //             };
-        //             case "Skype": {
-        //                 type = 'ti-skype';
-        //                 break;
-        //             };
-        //             case "Tumblr": {
-        //                 type = 'ti-tumblr';
-        //                 break;
-        //             };
-        //             case "Vimeo": {
-        //                 type = 'ti-vimeo';
-        //                 break;
-        //             };
-        //             case "WordPress": {
-        //                 type = 'ti-wordpress';
-        //                 break;
-        //             };
-        //             case "Yahoo": {
-        //                 type = 'ti-yahoo';
-        //                 break;
-        //             };
-        //             case "Flickr": {
-        //                 type = 'ti-flickr';
-        //                 break;
-        //             };
-        //         }
+            if (name != '' && url != '') {
+                switch (name) {
+                    case "Facebook": {
+                        type = 'ti-facebook';
+                        break;
+                    };
+                    case "Twitter": {
+                        type = 'ti-twitter';
+                        break;
+                    };
+                    case "LinkedIn": {
+                        type = 'ti-linkedin';
+                        break;
+                    };
+                    case "Instagram": {
+                        type = 'ti-instagram';
+                        break;
+                    };
+                    case "Reddit": {
+                        type = 'ti-reddit';
+                        break;
+                    };
+                    case "Google": {
+                        type = 'ti-google';
+                        break;
+                    };
+                    case "YouTube": {
+                        type = 'ti-youtube';
+                        break;
+                    };
+                    case "RSS": {
+                        type = 'ti-rss';
+                        break;
+                    };
+                    case "Dropbox": {
+                        type = 'ti-dropbox';
+                        break;
+                    };
+                    case "GitHub": {
+                        type = 'ti-github';
+                        break;
+                    };
+                    case "Skype": {
+                        type = 'ti-skype';
+                        break;
+                    };
+                    case "Tumblr": {
+                        type = 'ti-tumblr';
+                        break;
+                    };
+                    case "Vimeo": {
+                        type = 'ti-vimeo';
+                        break;
+                    };
+                    case "WordPress": {
+                        type = 'ti-wordpress';
+                        break;
+                    };
+                    case "Yahoo": {
+                        type = 'ti-yahoo';
+                        break;
+                    };
+                    case "Flickr": {
+                        type = 'ti-flickr';
+                        break;
+                    };
+                }
 
-        //         RestService.addSocialNetwork(name, url, type);
+                RestService.addSocialNetwork(name, url, type);
 
-        //     } else {
-        //         var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //         var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-        //         growl.success(emptyField, { title: addSocial });
-        //     }
-        // };
+            } else {
+                var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                growl.success(emptyField, { title: addSocial });
+            }
+        };
 
         // $rootScope.$on('addSocialNetworkError', function (event, data) {
         //     var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
