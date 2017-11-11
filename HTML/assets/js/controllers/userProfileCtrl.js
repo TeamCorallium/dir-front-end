@@ -671,25 +671,25 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        // $rootScope.$on('addSocialNetworkError', function (event, data) {
-        //     var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
-        //     var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-        //     growl.error(serverNotFound, { title: networkConnection });
-        // });
+        $rootScope.$on('addSocialNetworkError', function (event, data) {
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
+        });
 
-        // $rootScope.$on('deleteSocialNetworkError', function (event, data) {
-        //     var errorRemoveSocial = $translate.instant('user_profile.ERROR_REMOVE_SOCIAL');
-        //     var deleteSocialNetwork = $translate.instant('user_profile.DELETE_SOCIAL_NETWORK');
-        //     growl.error(, { title: deleteSocialNetwork });
-        // });
+        $rootScope.$on('deleteSocialNetworkError', function (event, data) {
+            var errorRemoveSocial = $translate.instant('user_profile.ERROR_REMOVE_SOCIAL');
+            var deleteSocialNetwork = $translate.instant('user_profile.DELETE_SOCIAL_NETWORK');
+            growl.error(, { title: deleteSocialNetwork });
+        });
 
-        // $scope.activeManually = function () {
-        //     if ($scope.manuallyCheck) {
-        //         $scope.showUrlCamp = true;
-        //     } else {
-        //         $scope.showUrlCamp = false;
-        //     }
-        // };
+        $scope.activeManually = function () {
+            if ($scope.manuallyCheck) {
+                $scope.showUrlCamp = true;
+            } else {
+                $scope.showUrlCamp = false;
+            }
+        };
 
         // $scope.facebookLogin = function () {
         //     if (!$scope.isFacebookConnected()) {
