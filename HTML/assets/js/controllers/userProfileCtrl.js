@@ -213,15 +213,15 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
         };
 
-        // $scope.publishSnippets = function () {
-        //     if ($scope.pSnippet != '') {
-        //         RestService.addSnippet("", $scope.pSnippet);
-        //     } else {
-        //         var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
-        //         var publishSnippetTitle = $translate.instant('user_profile.PUBLISH_SNIPPET');
-        //         growl.error(emptyFields, { title: publishSnippetTitle});
-        //     }
-        // };
+        $scope.publishSnippets = function () {
+            if ($scope.pSnippet != '') {
+                RestService.addSnippet("", $scope.pSnippet);
+            } else {
+                var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
+                var publishSnippetTitle = $translate.instant('user_profile.PUBLISH_SNIPPET');
+                growl.error( emptyFields , { title: publishSnippetTitle });
+            }
+        };
 
         // $scope.saveSnippetEdit = function (url, body) {
         //     RestService.updateSnippet(url, body);
