@@ -296,38 +296,38 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSnippets($cookies.get('username'), 1);
         });
 
-        // $rootScope.$on('updateProfile', function (event, data) {
-        //     getProfile($scope.user.profileUrl);
-        //     $scope.EditProfile();
-        // });
+        $rootScope.$on('updateProfile', function (event, data) {
+            getProfile($scope.user.profileUrl);
+            $scope.EditProfile();
+        });
 
-        // $rootScope.$on('deleteSnippet', function (event, data) {
-        //     var deleted = $translate.instant('user_profile.DELETED');
-        //     var deletedSnippet = $translate.instant('user_profile.DELETE_SNIPPET_SUCCESS');
-        //     SweetAlert.swal({
-        //         title: deleted,
-        //         text: deletedSnippet,
-        //         type: "success",
-        //         confirmButtonColor: "#007AFF"
-        //     });
+        $rootScope.$on('deleteSnippet', function (event, data) {
+            var deleted = $translate.instant('user_profile.DELETED');
+            var deletedSnippet = $translate.instant('user_profile.DELETE_SNIPPET_SUCCESS');
+            SweetAlert.swal({
+                title: deleted,
+                text: deletedSnippet,
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
 
-        //     $scope.user.snippets = [];
-        //     getSnippets($cookies.get('username'), 1);
-        // });
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
+        });
 
-        // $rootScope.$on('deleteSocialNetwork', function (event, data) {
-        //     var deleted = $translate.instant('user_profile.DELETED');
-        //     var deletedSocial = $translate.instant('user_profile.DELETE_SOCIAL_SUCCESS');
-        //     SweetAlert.swal({
-        //         title: deleted,
-        //         text: deletedSocial,
-        //         type: "success",
-        //         confirmButtonColor: "#007AFF"
-        //     });
+        $rootScope.$on('deleteSocialNetwork', function (event, data) {
+            var deleted = $translate.instant('user_profile.DELETED');
+            var deletedSocial = $translate.instant('user_profile.DELETE_SOCIAL_SUCCESS');
+            SweetAlert.swal({
+                title: deleted,
+                text: deletedSocial,
+                type: "success",
+                confirmButtonColor: "#007AFF"
+            });
 
-        //     $scope.user.socialnetworks = [];
-        //     getSocialNetworks($cookies.get('username'));
-        // });
+            $scope.user.socialnetworks = [];
+            getSocialNetworks($cookies.get('username'));
+        });
 
         // $scope.openModalSnippets = function () {
         //     if ($cookies.get('sessionid') != undefined) {
