@@ -826,7 +826,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         // ADD T-Shirts 
         $scope.addTshirt = function() {
-            if ($scope.codeModal != '') {
+            if ($scope.codeModal != '' && $scope.codeModal != undefined && $scope.codeModal != null) {
                 RestService.addTShirt($scope.codeModal);
             }
         };
@@ -856,7 +856,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $("#codeInput").on('keyup', function (e) {
             if (e.keyCode == 13) {
-                console.log($scope.codeModal + " codeModal");
                 $scope.addTshirt();
             }
         });
