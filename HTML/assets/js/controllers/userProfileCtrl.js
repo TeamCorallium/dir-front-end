@@ -329,41 +329,41 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSocialNetworks($cookies.get('username'));
         });
 
-        // $scope.openModalSnippets = function () {
-        //     if ($cookies.get('sessionid') != undefined) {
-        //         $('#modalSnippets').modal('show');
-        //     } else {
-        //         $('#myModal').modal('show');
-        //     }
-        // };
+        $scope.openModalSnippets = function () {
+            if ($cookies.get('sessionid') != undefined) {
+                $('#modalSnippets').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
+        };
 
-        // $scope.openAddSocialNetworkModal = function () {
-        //     if ($cookies.get('sessionid') != undefined) {
-        //         $('#modalSocialNetwork').modal('show');
-        //     } else {
-        //         $('#myModal').modal('show');
-        //     }
-        // };
+        $scope.openAddSocialNetworkModal = function () {
+            if ($cookies.get('sessionid') != undefined) {
+                $('#modalSocialNetwork').modal('show');
+            } else {
+                $('#myModal').modal('show');
+            }
+        };
 
-        // $rootScope.$on('addsnippets', function (event, data) {
-        //     $scope.user.snippets = [];
-        //     $('#modalSnippets').modal('hide');
-        //     $scope.title = '';
-        //     $scope.body = '';
-        //     $scope.pSnippet = '';
-        //     getSnippets($cookies.get('username'), 1);
-        // });
+        $rootScope.$on('addsnippets', function (event, data) {
+            $scope.user.snippets = [];
+            $('#modalSnippets').modal('hide');
+            $scope.title = '';
+            $scope.body = '';
+            $scope.pSnippet = '';
+            getSnippets($cookies.get('username'), 1);
+        });
 
-        // $rootScope.$on('addsocialnetwork', function (event, data) {
-        //     $scope.user.socialnetworks = [];
-        //     $('#modalSocialNetwork').modal('hide');
+        $rootScope.$on('addsocialnetwork', function (event, data) {
+            $scope.user.socialnetworks = [];
+            $('#modalSocialNetwork').modal('hide');
 
-        //     getSocialNetworks($cookies.get('username'));
-        // });
+            getSocialNetworks($cookies.get('username'));
+        });
 
-        // $scope.goToLink = function (link) {
-        //     $window.open(link, '_blank');
-        // };
+        $scope.goToLink = function (link) {
+            $window.open(link, '_blank');
+        };
 
         // $scope.makeQRCode = function () {
         //     RestService.imageDownload($scope.user.id);
