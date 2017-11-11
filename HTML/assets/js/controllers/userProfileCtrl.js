@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert",
-    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert) {
+app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate"
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
 
         $rootScope.OptionsEdit = true;
         $cookies.remove("exploreUser", { path: '/' });
@@ -739,7 +739,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.title != '' && $scope.body != '') {
                 RestService.addSnippet($scope.title, $scope.body);
             } else {
-                growl.error("There can be no empty field", { title: 'Add Snippet' });
+                var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
+                var addSnippetTitle = $translate.instant('user_profile.ADD_SNIPPET_TITLE');
+                growl.error(emptyFields, { title: addSnippetTitle });
             }
         };
 
