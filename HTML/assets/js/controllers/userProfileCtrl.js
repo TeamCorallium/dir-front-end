@@ -258,43 +258,43 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         };
 
-        // $scope.deleteSocialNetwork = function (id) {
-        //     var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
-        //     var textAreYouSure = $translate.instant('user_profile.TEXT_SURE_SOCIAL');
-        //     var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
-        //     var noCancel = $translate.instant('user_profile.NO_CANCEL');
-        //     var cancelled = $translate.instant('user_profile.CANCELLED');
-        //     var socialSafe = $translate.instant('user_profile.SAVE_SOCIAL');
-        //     SweetAlert.swal({
-        //         title: areYouSure,
-        //         text: textAreYouSure,
-        //         type: "warning",
-        //         showCancelButton: true,
-        //         confirmButtonColor: "#DD6B55",
-        //         confirmButtonText: yesDeleteIt,
-        //         cancelButtonText: noCancel,
-        //         closeOnConfirm: false,
-        //         closeOnCancel: false
-        //     }, function (isConfirm) {
-        //         if (isConfirm) {
-        //             RestService.deleteSocialNetwork(id);
-        //         } else {
-        //             SweetAlert.swal({
-        //                 title: cancelled,
-        //                 text: socialSafe,
-        //                 type: "error",
-        //                 confirmButtonColor: "#007AFF"
-        //             });
-        //         }
-        //     });
-        // };
+        $scope.deleteSocialNetwork = function (id) {
+            var areYouSure = $translate.instant('user_profile.ARE_YOU_SURE');
+            var textAreYouSure = $translate.instant('user_profile.TEXT_SURE_SOCIAL');
+            var yesDeleteIt = $translate.instant('user_profile.YES_DELETE');
+            var noCancel = $translate.instant('user_profile.NO_CANCEL');
+            var cancelled = $translate.instant('user_profile.CANCELLED');
+            var socialSafe = $translate.instant('user_profile.SAVE_SOCIAL');
+            SweetAlert.swal({
+                title: areYouSure,
+                text: textAreYouSure,
+                type: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#DD6B55",
+                confirmButtonText: yesDeleteIt,
+                cancelButtonText: noCancel,
+                closeOnConfirm: false,
+                closeOnCancel: false
+            }, function (isConfirm) {
+                if (isConfirm) {
+                    RestService.deleteSocialNetwork(id);
+                } else {
+                    SweetAlert.swal({
+                        title: cancelled,
+                        text: socialSafe,
+                        type: "error",
+                        confirmButtonColor: "#007AFF"
+                    });
+                }
+            });
+        };
 
-        // $rootScope.$on('snippetUpdated', function (event, data) {
-        //     $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
+        $rootScope.$on('snippetUpdated', function (event, data) {
+            $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
 
-        //     $scope.user.snippets = [];
-        //     getSnippets($cookies.get('username'), 1);
-        // });
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
+        });
 
         // $rootScope.$on('updateProfile', function (event, data) {
         //     getProfile($scope.user.profileUrl);
