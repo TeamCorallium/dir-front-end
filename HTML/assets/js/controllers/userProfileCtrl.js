@@ -861,5 +861,5 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         });
 
-        console.log($(".modal-body").val() + " codeModal");
+        console.log($("#inputGroupAddTShirts").text() + " codeModal");
     }]);

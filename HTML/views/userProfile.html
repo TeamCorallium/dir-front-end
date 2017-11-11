@@ -503,7 +503,7 @@
                 <div class="modal-body">
                     <form name="AddTShirts" role="form">
                         <div class="error form-hint" ng-show="AddTShirts.url.$dirty && AddTShirts.url.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
-                        <div class="input-group">                                
+                        <div class="input-group" id="inputGroupAddTShirts">                                
                             <input class="form-control" ng-class="(AddTShirts.url.$dirty && AddTShirts.url.$invalid) ? 'error' : ''" id="url"
                                 name="url" placeholder="{{ 'user_profile.ENTER_TSHIRT_CODE' | translate }}" ng-required="true" type="text" id="codeInput"
                                 ng-model="$parent.codeModal">
