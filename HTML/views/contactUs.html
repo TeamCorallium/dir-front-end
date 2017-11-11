@@ -40,7 +40,7 @@
                                         <span class="symbol required"></span>
                                     </label>
                                     <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
-                                    <textarea class="form-control" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
+                                    <textarea class="form-control resize-none" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
                                         name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body" required></textarea>
                                 </div>
                             </div>

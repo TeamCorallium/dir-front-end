@@ -502,10 +502,13 @@
                 </div>
                 <div class="modal-body">
                     <form name="AddTShirts" role="form">
-                        <div class="input-group">
-                            <input class="form-control" placeholder="{{ 'user_profile.ENTER_TSHIRT_CODE' | translate }}" type="text" id="codeInput" ng-model="$parent.codeModal">
+                        <div class="error form-hint" ng-show="AddTShirts.url.$dirty && AddTShirts.url.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                        <div class="input-group">                                
+                            <input class="form-control" ng-class="(AddTShirts.url.$dirty && AddTShirts.url.$invalid) ? 'error' : ''" id="url"
+                                name="url" placeholder="{{ 'user_profile.ENTER_TSHIRT_CODE' | translate }}" ng-required="true" type="text" id="codeInput"
+                                ng-model="$parent.codeModal">                            
                             <span class="input-group-btn">
-                                <a class="btn btn-primary" type="button" ng-click="addTshirt()">
+                                <a class="btn btn-primary" type="button" ng-disabled="AddTShirts.$invalid" ng-click="addTshirt()">
                                     <i class="ti-check-box"></i>
                                     <label class="textColorWhite margin-bottom-0" translate="edit_profile.ENTER"></label>
                                 </a>

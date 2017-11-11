@@ -826,7 +826,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         // ADD T-Shirts 
         $scope.addTshirt = function() {
-            RestService.addTShirt($scope.codeModal);
+            if ($scope.codeModal != '') {
+                RestService.addTShirt($scope.codeModal);
+            }
         };
 
         $scope.TShirtLinks = [];        
@@ -849,7 +851,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.TShirtLinks.unshift(tshirt);
             $scope.codeModal = '';
-            growl.error("This T-Shirt no exist in stock.", { title: 'Add T-Shirt' });
+            growl.error("This T-Shirt does not exist in stock.", { title: 'Add T-Shirt' });
         });
 
         $("#codeInput").on('keyup', function (e) {
