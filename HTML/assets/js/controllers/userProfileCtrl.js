@@ -219,7 +219,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
                 var publishSnippetTitle = $translate.instant('user_profile.PUBLISH_SNIPPET');
-                growl.error( emptyFields , { title: publishSnippetTitle });
+                growl.error(emptyFields, { title: publishSnippetTitle });
             }
         };
 
@@ -680,7 +680,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
             var errorRemoveSocial = $translate.instant('user_profile.ERROR_REMOVE_SOCIAL');
             var deleteSocialNetwork = $translate.instant('user_profile.DELETE_SOCIAL_NETWORK');
-            growl.error(, { title: deleteSocialNetwork });
+            growl.error(errorRemoveSocial, { title: deleteSocialNetwork });
         });
 
         $scope.activeManually = function () {
@@ -691,228 +691,228 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        // $scope.facebookLogin = function () {
-        //     if (!$scope.isFacebookConnected()) {
-        //         FB.login(function (response) {
-        //             if (response.status === 'connected') {
-        //                 $scope.isConnected = true;
-        //                 FB.api('me', function (response) {
-        //                     console.log(response);
-        //                     $scope.facebookName = response.name;
-        //                     $scope.url = 'https://www.facebook.com/' + response.id;
-        //                     $scope.addSocialNetwork("Facebook", $scope.url);
-        //                 });
-        //             } else {
-        //                 console.log("user canceled login or did not fully authorize");
-        //             }
-        //         });
-        //     } else {
-        //         FB.api('me', function (response) {
-        //             console.log(response);
-        //         });
-        //     }
-        // };
+        $scope.facebookLogin = function () {
+            if (!$scope.isFacebookConnected()) {
+                FB.login(function (response) {
+                    if (response.status === 'connected') {
+                        $scope.isConnected = true;
+                        FB.api('me', function (response) {
+                            console.log(response);
+                            $scope.facebookName = response.name;
+                            $scope.url = 'https://www.facebook.com/' + response.id;
+                            $scope.addSocialNetwork("Facebook", $scope.url);
+                        });
+                    } else {
+                        console.log("user canceled login or did not fully authorize");
+                    }
+                });
+            } else {
+                FB.api('me', function (response) {
+                    console.log(response);
+                });
+            }
+        };
 
-        // $scope.isFacebookConnected = function () {
-        //     FB.getLoginStatus(function (response) {
-        //         if (response.status === 'connected') {
-        //             $scope.isConnected = true;
-        //         } else {
-        //             $scope.isConnected = false;
-        //         }
-        //     });
-        // };
+        $scope.isFacebookConnected = function () {
+            FB.getLoginStatus(function (response) {
+                if (response.status === 'connected') {
+                    $scope.isConnected = true;
+                } else {
+                    $scope.isConnected = false;
+                }
+            });
+        };
 
-        // $scope.isFacebookConnected();
+        $scope.isFacebookConnected();
 
-        // $scope.continueAsOther = function () {
-        //     $scope.isConnected = false;
-        //     FB.logout(function (response) {
-        //         $scope.facebookLogin();
-        //     });
-        // };
+        $scope.continueAsOther = function () {
+            $scope.isConnected = false;
+            FB.logout(function (response) {
+                $scope.facebookLogin();
+            });
+        };
 
-        // // start: keyup social network
-        // $("#socialnetwork").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         var title = $('#socialnetwork').val();
-        //         var url = $('#url').val();
-        //         if (title != '' && title != null && url != '') {
-        //             $scope.addSocialNetwork(title, url);
-        //         } else {
-        //             var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //             var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-        //             growl.error(emptyField, { title: addSocial });
-        //         }
-        //     }
-        // });
+        // start: keyup social network
+        $("#socialnetwork").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && title != null && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
+                }
+            }
+        });
 
-        // $("#url").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         var title = $('#socialnetwork').val();
-        //         var url = $('#url').val();
-        //         if (title != '' && title != null && url != '') {
-        //             $scope.addSocialNetwork(title, url);
-        //         } else {
-        //             var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //             var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-        //             growl.error(emptyField, { title: addSocial });
-        //         }
-        //     }
-        // });
-        // // end: keyup social network
+        $("#url").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var title = $('#socialnetwork').val();
+                var url = $('#url').val();
+                if (title != '' && title != null && url != '') {
+                    $scope.addSocialNetwork(title, url);
+                } else {
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
+                }
+            }
+        });
+        // end: keyup social network
 
-        // // Add Snippets
-        // $scope.snippets = '';
-        // $scope.title = '';
-        // $scope.body = '';
+        // Add Snippets
+        $scope.snippets = '';
+        $scope.title = '';
+        $scope.body = '';
 
-        // $scope.addSnippets = function () {
-        //     if ($scope.title != '' && $scope.body != '') {
-        //         RestService.addSnippet($scope.title, $scope.body);
-        //     } else {
-        //         var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
-        //         var addSnippetTitle = $translate.instant('user_profile.ADD_SNIPPET_TITLE');
-        //         growl.error(emptyFields, { title: addSnippetTitle });
-        //     }
-        // };
+        $scope.addSnippets = function () {
+            if ($scope.title != '' && $scope.body != '') {
+                RestService.addSnippet($scope.title, $scope.body);
+            } else {
+                var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
+                var addSnippetTitle = $translate.instant('user_profile.ADD_SNIPPET_TITLE');
+                growl.error(emptyFields, { title: addSnippetTitle });
+            }
+        };
 
-        // $rootScope.$on('addSnippetsError', function (event, data) {
-        //     var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
-        //     var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-        //     growl.error(serverNotFound, { title: networkConnection });
-        // });
+        $rootScope.$on('addSnippetsError', function (event, data) {
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, { title: networkConnection });
+        });
 
-        // // start:  keyup snippets
-        // $("#title").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         if ($scope.title != '' && $scope.body != '') {
-        //             RestService.addSnippet($scope.title, $scope.body);
-        //         } else {
-        //             var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //             var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-        //             growl.error(emptyField, { title: addSocial });
-        //         }
-        //     }
-        // });
+        // start:  keyup snippets
+        $("#title").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                if ($scope.title != '' && $scope.body != '') {
+                    RestService.addSnippet($scope.title, $scope.body);
+                } else {
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
+                }
+            }
+        });
 
-        // $("#body").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         if ($scope.title != '' && $scope.body != '') {
-        //             RestService.addSnippet($scope.title, $scope.body);
-        //         } else {
-        //             var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //             var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-        //             growl.error(emptyField, { title: addSocial });
-        //         }
-        //     }
-        // });
-        // // end: keyup snippets
+        $("#body").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                if ($scope.title != '' && $scope.body != '') {
+                    RestService.addSnippet($scope.title, $scope.body);
+                } else {
+                    var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                    var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                    growl.error(emptyField, { title: addSocial });
+                }
+            }
+        });
+        // end: keyup snippets
 
-        // // CHANGE PASSWORD
-        // $scope.changePassword = function () {
-        //     if ($scope.password === $parent.againPassHome) {
-        //         RestService.changePassword($scope.user.username, $scope.password);
-        //     } else {
-        //         $('#msg-block').show();
-        //     }
-        // };
+        // CHANGE PASSWORD
+        $scope.changePassword = function () {
+            if ($scope.password === $parent.againPassHome) {
+                RestService.changePassword($scope.user.username, $scope.password);
+            } else {
+                $('#msg-block').show();
+            }
+        };
 
-        // $rootScope.$on('changepassword', function (event, data) {
-        //     $('#modalChangePassword').modal('hide');
-        //     $('#msg-block').hide();
-        //     $scope.password = '';
-        //     $scope.againPassHome = '';
-        //     var passwordSuccess = $translate.instant('user_profile.PASSWORD_SUCCESS');
-        //     var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-        //     growl.success(passwordSuccess, { title: passwordChange });
-        // });
+        $rootScope.$on('changepassword', function (event, data) {
+            $('#modalChangePassword').modal('hide');
+            $('#msg-block').hide();
+            $scope.password = '';
+            $scope.againPassHome = '';
+            var passwordSuccess = $translate.instant('user_profile.PASSWORD_SUCCESS');
+            var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+            growl.success(passwordSuccess, { title: passwordChange });
+        });
 
-        // $rootScope.$on('changepasswordError', function (event, data) {            
-        //     $scope.password = '';
-        //     $scope.againPassHome = '';
-        //     var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
-        //     var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-        //     growl.error(passwordError, { title: passwordChange });
-        // });
+        $rootScope.$on('changepasswordError', function (event, data) {
+            $scope.password = '';
+            $scope.againPassHome = '';
+            var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
+            var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+            growl.error(passwordError, { title: passwordChange });
+        });
 
-        // // start:  keyup change password
-        // $("#password").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         var pass = $('#password').val();
-        //         var passA = $('#againPassHome').val();
-        //         if ($("#changePasswordButton").prop('disabled') != undefined) {
-        //             if (pass != '' && passA != '') {
-        //                 if (pass == passA) {
-        //                     RestService.changePassword(pass, passA);
-        //                 } else {
-        //                     $('#msg-block').show();
-        //                 }
-        //             } else {
-        //                 var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
-        //                 var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-        //                 growl.error("Sorry all fields are required", { title: 'Empty fields' });
-        //             }
-        //         }
-        //     }
-        // });
+        // start:  keyup change password
+        $("#password").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
+                    } else {
+                        var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                        var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+                        growl.error(emptyField, { title: passwordChange });
+                    }
+                }
+            }
+        });
 
-        // $("#againPassHome").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         var pass = $('#password').val();
-        //         var passA = $('#againPassHome').val();
-        //         if ($("#changePasswordButton").prop('disabled') != undefined) {
-        //             if (pass != '' && passA != '') {
-        //                 if (pass == passA) {
-        //                     RestService.changePassword(pass, passA);
-        //                 } else {
-        //                     $('#msg-block').show();
-        //                 }
-        //             } else {
-        //                 var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-        //                 var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-        //                 growl.error(emptyField, { title: passwordChange });
-        //             }
-        //         }
-        //     }
-        // });
-        // // end: keyup change password
+        $("#againPassHome").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                var pass = $('#password').val();
+                var passA = $('#againPassHome').val();
+                if ($("#changePasswordButton").prop('disabled') != undefined) {
+                    if (pass != '' && passA != '') {
+                        if (pass == passA) {
+                            RestService.changePassword(pass, passA);
+                        } else {
+                            $('#msg-block').show();
+                        }
+                    } else {
+                        var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                        var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
+                        growl.error(emptyField, { title: passwordChange });
+                    }
+                }
+            }
+        });
+        // end: keyup change password
 
-        // // ADD T-Shirts 
-        // $scope.addTshirt = function() {
-        //     if ($scope.codeModal != '' && $scope.codeModal != undefined && $scope.codeModal != null) {
-        //         RestService.addTShirt($scope.codeModal);
-        //     }
-        // };
+        // ADD T-Shirts 
+        $scope.addTshirt = function () {
+            if ($scope.codeModal != '' && $scope.codeModal != undefined && $scope.codeModal != null) {
+                RestService.addTShirt($scope.codeModal);
+            }
+        };
 
-        // $scope.TShirtLinks = [];        
+        $scope.TShirtLinks = [];
 
-        // $rootScope.$on('addTshirt', function (event, data) {
-        //     var tshirt = {
-        //         code: $scope.codeModal,
-        //         class: 'success'
-        //     };
+        $rootScope.$on('addTshirt', function (event, data) {
+            var tshirt = {
+                code: $scope.codeModal,
+                class: 'success'
+            };
 
-        //     $scope.TShirtLinks.unshift(tshirt);
-        //     $scope.codeModal = '';
-        // });
+            $scope.TShirtLinks.unshift(tshirt);
+            $scope.codeModal = '';
+        });
 
-        // $rootScope.$on('addTshirtErrorBad', function (event, data) {
-        //     var tshirt = {
-        //         code: $scope.codeModal,
-        //         class: 'wrong'
-        //     };
+        $rootScope.$on('addTshirtErrorBad', function (event, data) {
+            var tshirt = {
+                code: $scope.codeModal,
+                class: 'wrong'
+            };
 
-        //     $scope.TShirtLinks.unshift(tshirt);
-        //     $scope.codeModal = '';
-        //     var notTshirt = $translate.instant('user_profile.NOT_TSHIRT');
-        //     var addTshirt = $translate.instant('user_profile.ADD_TSHIRT');
-        //     growl.error(notTshirt, { title: addTshirt });
-        // });
+            $scope.TShirtLinks.unshift(tshirt);
+            $scope.codeModal = '';
+            var notTshirt = $translate.instant('user_profile.NOT_TSHIRT');
+            var addTshirt = $translate.instant('user_profile.ADD_TSHIRT');
+            growl.error( notTshirt, { title: addTshirt });
+        });
 
-        // $("#codeInput").on('keyup', function (e) {
-        //     if (e.keyCode == 13) {
-        //         $scope.addTshirt();
-        //     }
-        // });
+        $("#codeInput").on('keyup', function (e) {
+            if (e.keyCode == 13) {
+                $scope.addTshirt();
+            }
+        });
     }]);
