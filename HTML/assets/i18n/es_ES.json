@@ -72,7 +72,9 @@
     "ENTER_SOCIAL_NETWORK_URL": "Ingrese la URL de su red social",
     "ENTER_PASSWORD": "Ingrese contraseña",
     "ENTER_TSHIRT_CODE": "Ingrese el código de la camiseta",
-    "ENTER_SNIPPET": "Ingrese su snippet"
+    "ENTER_SNIPPET": "Ingrese su snippet",
+    "EMPTY_FIELDS": "No puede haber un campo vacío",
+    "PUBLISH_SNIPPET": "Publicar Snippet"
   },
   "view_profile": {
     "RATING": "Valoración:",

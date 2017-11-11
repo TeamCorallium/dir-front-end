@@ -72,7 +72,9 @@
     "ENTER_SOCIAL_NETWORK_URL": "進入社交網路網址",
     "ENTER_PASSWORD": "輸入密碼",
     "ENTER_TSHIRT_CODE": "輸入 t恤代碼",
-    "ENTER_SNIPPET": "輸入程式碼片段"
+    "ENTER_SNIPPET": "輸入程式碼片段",
+    "EMPTY_FIELDS": "不能有空欄位",
+    "PUBLISH_SNIPPET": "發佈程式碼片段"
   },
   "view_profile": {
     "RATING": "評級:",
