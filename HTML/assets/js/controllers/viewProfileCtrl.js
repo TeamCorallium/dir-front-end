@@ -353,25 +353,25 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.leaveMessage = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                $('#myModalLoginHome').modal('show');
-            } else {
                 $('#modalLeaveMessage').modal('show');
+            } else {                
+                $('#myModalLoginHome').modal('show');
             }
         };
 
         $scope.makeClap = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                $('#myModalLoginHome').modal('show');
-            } else {
                 $scope.clap();
+            } else {
+                $('#myModalLoginHome').modal('show');
             }
         };
 
         $scope.follow = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                $('#myModalLoginHome').modal('show');
+                
             } else {
-
+                $('#myModalLoginHome').modal('show');
             }
         };
     }
