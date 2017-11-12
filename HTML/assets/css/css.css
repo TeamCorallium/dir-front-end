@@ -1664,3 +1664,7 @@ span.stars span {
     margin-top: 11px;
     margin-left: -20px;
 }
+
+.borderBottomNone {
+    border-bottom: none !important;
+}

@@ -253,17 +253,19 @@
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 padding-0 marginSnippetXS">
                                     <ul class="post-list">
                                         <li ng-repeat="followers in users">
-                                            <div class="post-image">
-                                                <div class="img-thumbnail">
-                                                    <a ng-click="goToProfile(followers.owner)">
-                                                        <img ng-src="{{getAvatar(followers.avatar)}}" class="img-responsive">
-                                                    </a>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite borderBottomNone">
+                                                <div class="post-image">
+                                                    <div class="img-thumbnail">
+                                                        <a ng-click="goToProfile(followers.owner)">
+                                                            <img ng-src="{{getAvatar(followers.avatar)}}" class="img-responsive">
+                                                        </a>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="post-info">
-                                                <a ng-show="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.owner}}</a>
-                                                <a ng-hide="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.fullname}}</a>
-                                                <h5>{{followers.info}}</h5>
+                                                <div class="post-info">
+                                                    <a ng-show="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.owner}}</a>
+                                                    <a ng-hide="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.fullname}}</a>
+                                                    <h5>{{followers.info}}</h5>
+                                                </div>
                                             </div>
                                         </li>
                                     </ul>
