@@ -1656,3 +1656,11 @@ span.stars span {
 .font-size-50 {
     font-size: 50px !important;
 }
+
+.lineMiddleSelect {
+    background-color: #00B8B8;
+    height: 5px;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: -20px;
+}

@@ -220,14 +220,17 @@
                                         <a ng-click="changeMiddle(0)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                             <img class="IconSnippet" ng-src="./assets/images/iconosnniper_v2.png"></img>
                                             <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
                                         </a>
                                         <a ng-click="changeMiddle(1)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                             <img class="IconSnippet" ng-src="assets/images/followers.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWERS"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 1"></div>
                                         </a>
                                         <a ng-click="changeMiddle(2)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                             <img class="IconSnippet" ng-src="assets/images/following.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWING"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 2"></div>
                                         </a>
                                         <hr class="tall margin-0">
                                     </li>
