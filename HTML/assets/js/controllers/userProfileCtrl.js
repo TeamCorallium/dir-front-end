@@ -7,7 +7,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
 
         $rootScope.OptionsEdit = true;
-        $cookies.remove("exploreUser", { path: '/' });
+        $cookies.remove("exploreUser", {
+            path: '/'
+        });
 
         $scope.user = {
             profileUrl: '',
@@ -43,6 +45,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.password = '';
         $scope.againPassHome = '';
 
+        $scope.indexShowMiddle = 0;
+
         $scope.uploadFile = function (file) {
             if (file) {
                 // ng-img-crop
@@ -59,60 +63,60 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
-                function (data) {
-                    data = data.results;
-                    if (data.length > 0) {
-                        $scope.user.profileUrl = data[0].profiles[0];
-                        $scope.user.username = data[0].username;
-                        $scope.user.firstname = data[0].first_name;
-                        $scope.user.lastname = data[0].last_name;
+                    function (data) {
+                        data = data.results;
+                        if (data.length > 0) {
+                            $scope.user.profileUrl = data[0].profiles[0];
+                            $scope.user.username = data[0].username;
+                            $scope.user.firstname = data[0].first_name;
+                            $scope.user.lastname = data[0].last_name;
 
-                        if (data[0].profiles.length > 0) {
-                            getProfile(data[0].profiles[0]);
+                            if (data[0].profiles.length > 0) {
+                                getProfile(data[0].profiles[0]);
+                            }
+
+                            getSnippets(data[0].username, 1);
+                            getSocialNetworks(data[0].username);
+
+                        } else {
+                            $state.go('home');
+                            $('#myModal').modal('show');
                         }
-
-                        getSnippets(data[0].username, 1);
-                        getSocialNetworks(data[0].username);
-
-                    } else {
-                        $state.go('home');
-                        $('#myModal').modal('show');
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
         var getProfile = function (url) {
             RestService.fetchObjectByUrl(url)
                 .then(
-                function (data) {
+                    function (data) {
 
-                    if (data != undefined) {
-                        $scope.user.info = data.info;
-                        if (data.avatar != '' && data.avatar != null) {
-                            var avatarArray = data.avatar.split("/");
-                            $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                        } else {
-                            $scope.user.avatar = 'assets/images/default-user.png';
-                        }
-                        $scope.user.id = data.id;
-                        $scope.user.email = data.email;
-                        $scope.user.score = data.score;
-                        $scope.user.rating = data.rating;
-                        $scope.user.fullname = data.fullname;
-                        $scope.user.profileurl = data.url;
+                        if (data != undefined) {
+                            $scope.user.info = data.info;
+                            if (data.avatar != '' && data.avatar != null) {
+                                var avatarArray = data.avatar.split("/");
+                                $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.user.avatar = 'assets/images/default-user.png';
+                            }
+                            $scope.user.id = data.id;
+                            $scope.user.email = data.email;
+                            $scope.user.score = data.score;
+                            $scope.user.rating = data.rating;
+                            $scope.user.fullname = data.fullname;
+                            $scope.user.profileurl = data.url;
 
-                        if (data.qrcode != '') {
-                            $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                            if (data.qrcode != '') {
+                                $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                            }
                         }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -120,12 +124,12 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             for (var i = 0; i < urls.length; i++) {
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
-                    function (data) {
-                        $scope.user.tshirts.push(data);
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
+                        function (data) {
+                            $scope.user.tshirts.push(data);
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
                     );
             }
         };
@@ -134,32 +138,32 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.snippets = [];
             RestService.fetchSnippets(username + "&page=" + page)
                 .then(
-                function (data) {
-                    $scope.hasNext = data.next;
-                    $scope.hasPrevious = data.previous;
-                    data = data.results;
-                    for (var i = 0; i < data.length; i++) {
-                        // data[i].body = replaceURLWithHTMLLinks(data[i].body);
-                        $scope.user.snippets.push(data[i]);
+                    function (data) {
+                        $scope.hasNext = data.next;
+                        $scope.hasPrevious = data.previous;
+                        data = data.results;
+                        for (var i = 0; i < data.length; i++) {
+                            // data[i].body = replaceURLWithHTMLLinks(data[i].body);
+                            $scope.user.snippets.push(data[i]);
+                        }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
         var getSocialNetworks = function (username) {
             RestService.fetchSocialNetworks(username)
                 .then(
-                function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        $scope.user.socialnetworks.push(data[i]);
+                    function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            $scope.user.socialnetworks.push(data[i]);
+                        }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -219,7 +223,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
                 var publishSnippetTitle = $translate.instant('user_profile.PUBLISH_SNIPPET');
-                growl.error(emptyFields, { title: publishSnippetTitle });
+                growl.error(emptyFields, {
+                    title: publishSnippetTitle
+                });
             }
         };
 
@@ -374,8 +380,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             //return a promise that resolves with a File instance
             function urltoFile(url, filename, mimeType) {
                 return (fetch(url)
-                    .then(function (res) { return res.arrayBuffer(); })
-                    .then(function (buf) { return new File([buf], filename, { type: mimeType }); })
+                    .then(function (res) {
+                        return res.arrayBuffer();
+                    })
+                    .then(function (buf) {
+                        return new File([buf], filename, {
+                            type: mimeType
+                        });
+                    })
                 );
             }
 
@@ -391,33 +403,41 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('imageDownloadSuccesfull', function (event, data) {
             var generateQR = $translate.instant('user_profile.GENERATE_QR_SUCCESS');
             var generateQRTitle = $translate.instant('user_profile.GENERATE_QR_TITLE');
-            growl.success(generateQR, { title: generateQRTitle });
+            growl.success(generateQR, {
+                title: generateQRTitle
+            });
             $scope.user.qrcode = data;
         });
 
         $rootScope.$on('makeQRCodeError', function (event, data) {
             var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-            growl.error(serverNotFound, { title: networkConnection });
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
         });
 
         $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                function (data) {
-                    $scope.users = data.results;
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
+                    function (data) {
+                        $scope.users = data.results;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
                 );
         };
 
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
-            $cookies.remove("exploreUser", { path: '/' });
-            $cookies.put('exploreUser', owner, { path: '/' });
+            $cookies.remove("exploreUser", {
+                path: '/'
+            });
+            $cookies.put('exploreUser', owner, {
+                path: '/'
+            });
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {
@@ -481,108 +501,125 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.url = '';
 
             switch ($scope.socialnetwork) {
-                case "Facebook": {
-                    $scope.url = 'https://www.facebook.com/';
-                    $scope.showUrlCamp = false;
-                    $scope.activeFacebook = true;
-                    $scope.isFacebookConnected();
-                    break;
-                };
-                case "Twitter": {
-                    $scope.url = 'https://twitter.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "LinkedIn": {
-                    $scope.url = 'https://www.linkedin.com/in/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Instagram": {
-                    $scope.url = 'https://www.instagram.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Reddit": {
-                    $scope.url = 'https://www.reddit.com/user/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Google": {
-                    $scope.url = 'https://plus.google.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "YouTube": {
-                    $scope.url = 'https://www.youtube.com/user/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "RSS": {
-                    $scope.url = 'https://www.rss.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Dropbox": {
-                    $scope.url = 'https://www.dropbox.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "GitHub": {
-                    $scope.url = 'https://github.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Skype": {
-                    $scope.url = 'https://www.skype.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Tumblr": {
-                    $scope.url = 'https://www.tumblr.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Vimeo": {
-                    $scope.url = 'https://vimeo.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "WordPress": {
-                    $scope.url = 'https://es.wordpress.org/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Yahoo": {
-                    $scope.url = 'https://www.yahoo.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                case "Flickr": {
-                    $scope.url = 'https://www.flickr.com/';
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                };
-                default: {
-                    $scope.showUrlCamp = true;
-                    $scope.activeFacebook = false;
-                    break;
-                }
+                case "Facebook":
+                    {
+                        $scope.url = 'https://www.facebook.com/';
+                        $scope.showUrlCamp = false;
+                        $scope.activeFacebook = true;
+                        $scope.isFacebookConnected();
+                        break;
+                    };
+                case "Twitter":
+                    {
+                        $scope.url = 'https://twitter.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "LinkedIn":
+                    {
+                        $scope.url = 'https://www.linkedin.com/in/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Instagram":
+                    {
+                        $scope.url = 'https://www.instagram.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Reddit":
+                    {
+                        $scope.url = 'https://www.reddit.com/user/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Google":
+                    {
+                        $scope.url = 'https://plus.google.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "YouTube":
+                    {
+                        $scope.url = 'https://www.youtube.com/user/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "RSS":
+                    {
+                        $scope.url = 'https://www.rss.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Dropbox":
+                    {
+                        $scope.url = 'https://www.dropbox.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "GitHub":
+                    {
+                        $scope.url = 'https://github.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Skype":
+                    {
+                        $scope.url = 'https://www.skype.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Tumblr":
+                    {
+                        $scope.url = 'https://www.tumblr.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Vimeo":
+                    {
+                        $scope.url = 'https://vimeo.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "WordPress":
+                    {
+                        $scope.url = 'https://es.wordpress.org/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Yahoo":
+                    {
+                        $scope.url = 'https://www.yahoo.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                case "Flickr":
+                    {
+                        $scope.url = 'https://www.flickr.com/';
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    };
+                default:
+                    {
+                        $scope.showUrlCamp = true;
+                        $scope.activeFacebook = false;
+                        break;
+                    }
             }
         };
 
@@ -596,70 +633,86 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if (name != '' && url != '') {
                 switch (name) {
-                    case "Facebook": {
-                        type = 'ti-facebook';
-                        break;
-                    };
-                    case "Twitter": {
-                        type = 'ti-twitter';
-                        break;
-                    };
-                    case "LinkedIn": {
-                        type = 'ti-linkedin';
-                        break;
-                    };
-                    case "Instagram": {
-                        type = 'ti-instagram';
-                        break;
-                    };
-                    case "Reddit": {
-                        type = 'ti-reddit';
-                        break;
-                    };
-                    case "Google": {
-                        type = 'ti-google';
-                        break;
-                    };
-                    case "YouTube": {
-                        type = 'ti-youtube';
-                        break;
-                    };
-                    case "RSS": {
-                        type = 'ti-rss';
-                        break;
-                    };
-                    case "Dropbox": {
-                        type = 'ti-dropbox';
-                        break;
-                    };
-                    case "GitHub": {
-                        type = 'ti-github';
-                        break;
-                    };
-                    case "Skype": {
-                        type = 'ti-skype';
-                        break;
-                    };
-                    case "Tumblr": {
-                        type = 'ti-tumblr';
-                        break;
-                    };
-                    case "Vimeo": {
-                        type = 'ti-vimeo';
-                        break;
-                    };
-                    case "WordPress": {
-                        type = 'ti-wordpress';
-                        break;
-                    };
-                    case "Yahoo": {
-                        type = 'ti-yahoo';
-                        break;
-                    };
-                    case "Flickr": {
-                        type = 'ti-flickr';
-                        break;
-                    };
+                    case "Facebook":
+                        {
+                            type = 'ti-facebook';
+                            break;
+                        };
+                    case "Twitter":
+                        {
+                            type = 'ti-twitter';
+                            break;
+                        };
+                    case "LinkedIn":
+                        {
+                            type = 'ti-linkedin';
+                            break;
+                        };
+                    case "Instagram":
+                        {
+                            type = 'ti-instagram';
+                            break;
+                        };
+                    case "Reddit":
+                        {
+                            type = 'ti-reddit';
+                            break;
+                        };
+                    case "Google":
+                        {
+                            type = 'ti-google';
+                            break;
+                        };
+                    case "YouTube":
+                        {
+                            type = 'ti-youtube';
+                            break;
+                        };
+                    case "RSS":
+                        {
+                            type = 'ti-rss';
+                            break;
+                        };
+                    case "Dropbox":
+                        {
+                            type = 'ti-dropbox';
+                            break;
+                        };
+                    case "GitHub":
+                        {
+                            type = 'ti-github';
+                            break;
+                        };
+                    case "Skype":
+                        {
+                            type = 'ti-skype';
+                            break;
+                        };
+                    case "Tumblr":
+                        {
+                            type = 'ti-tumblr';
+                            break;
+                        };
+                    case "Vimeo":
+                        {
+                            type = 'ti-vimeo';
+                            break;
+                        };
+                    case "WordPress":
+                        {
+                            type = 'ti-wordpress';
+                            break;
+                        };
+                    case "Yahoo":
+                        {
+                            type = 'ti-yahoo';
+                            break;
+                        };
+                    case "Flickr":
+                        {
+                            type = 'ti-flickr';
+                            break;
+                        };
                 }
 
                 RestService.addSocialNetwork(name, url, type);
@@ -667,20 +720,26 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                 var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                growl.success(emptyField, { title: addSocial });
+                growl.success(emptyField, {
+                    title: addSocial
+                });
             }
         };
 
         $rootScope.$on('addSocialNetworkError', function (event, data) {
             var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-            growl.error(serverNotFound, { title: networkConnection });
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
         });
 
         $rootScope.$on('deleteSocialNetworkError', function (event, data) {
             var errorRemoveSocial = $translate.instant('user_profile.ERROR_REMOVE_SOCIAL');
             var deleteSocialNetwork = $translate.instant('user_profile.DELETE_SOCIAL_NETWORK');
-            growl.error(errorRemoveSocial, { title: deleteSocialNetwork });
+            growl.error(errorRemoveSocial, {
+                title: deleteSocialNetwork
+            });
         });
 
         $scope.activeManually = function () {
@@ -742,7 +801,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 } else {
                     var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                     var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                    growl.error(emptyField, { title: addSocial });
+                    growl.error(emptyField, {
+                        title: addSocial
+                    });
                 }
             }
         });
@@ -756,7 +817,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 } else {
                     var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                     var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                    growl.error(emptyField, { title: addSocial });
+                    growl.error(emptyField, {
+                        title: addSocial
+                    });
                 }
             }
         });
@@ -773,14 +836,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 var emptyFields = $translate.instant('user_profile.EMPTY_FIELDS');
                 var addSnippetTitle = $translate.instant('user_profile.ADD_SNIPPET_TITLE');
-                growl.error(emptyFields, { title: addSnippetTitle });
+                growl.error(emptyFields, {
+                    title: addSnippetTitle
+                });
             }
         };
 
         $rootScope.$on('addSnippetsError', function (event, data) {
             var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
-            growl.error(serverNotFound, { title: networkConnection });
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
         });
 
         // start:  keyup snippets
@@ -791,7 +858,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 } else {
                     var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                     var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                    growl.error(emptyField, { title: addSocial });
+                    growl.error(emptyField, {
+                        title: addSocial
+                    });
                 }
             }
         });
@@ -803,7 +872,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 } else {
                     var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                     var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                    growl.error(emptyField, { title: addSocial });
+                    growl.error(emptyField, {
+                        title: addSocial
+                    });
                 }
             }
         });
@@ -825,7 +896,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.againPassHome = '';
             var passwordSuccess = $translate.instant('user_profile.PASSWORD_SUCCESS');
             var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-            growl.success(passwordSuccess, { title: passwordChange });
+            growl.success(passwordSuccess, {
+                title: passwordChange
+            });
         });
 
         $rootScope.$on('changepasswordError', function (event, data) {
@@ -833,7 +906,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.againPassHome = '';
             var passwordError = $translate.instant('user_profile.ERROR_PASSWORD');
             var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-            growl.error(passwordError, { title: passwordChange });
+            growl.error(passwordError, {
+                title: passwordChange
+            });
         });
 
         // start:  keyup change password
@@ -851,7 +926,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     } else {
                         var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                         var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-                        growl.error(emptyField, { title: passwordChange });
+                        growl.error(emptyField, {
+                            title: passwordChange
+                        });
                     }
                 }
             }
@@ -871,7 +948,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     } else {
                         var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
                         var passwordChange = $translate.instant('user_profile.PASSWORD_CHANGE');
-                        growl.error(emptyField, { title: passwordChange });
+                        growl.error(emptyField, {
+                            title: passwordChange
+                        });
                     }
                 }
             }
@@ -907,7 +986,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.codeModal = '';
             var notTshirt = $translate.instant('user_profile.NOT_TSHIRT');
             var addTshirt = $translate.instant('user_profile.ADD_TSHIRT');
-            growl.error( notTshirt, { title: addTshirt });
+            growl.error(notTshirt, {
+                title: addTshirt
+            });
         });
 
         $("#codeInput").on('keyup', function (e) {
@@ -915,4 +996,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.addTshirt();
             }
         });
-    }]);
+
+        $scope.changeMiddle = function (num) {
+            $scope.indexShowMiddle = num;
+        };
+    }
+]);
