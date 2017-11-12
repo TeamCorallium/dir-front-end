@@ -97,4 +97,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             }
         });
 
+        $scope.raiseModalRegister = function() {
+            $('#myModalLoginHome').modal('hide');
+            $('#myModalRegisterHome').modal('show');
+        };
     }]);

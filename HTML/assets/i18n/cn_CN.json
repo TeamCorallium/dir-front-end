@@ -34,7 +34,9 @@
     "ENTER_USERNAME": "輸入您的使用者名",
     "ENTER_PASSWORD": "輸入密碼",
     "ENTER_EMAIL": "輸入電子郵件",
-    "ENTER_PIN": "輸入您的 PIN"
+    "ENTER_PIN": "輸入您的 PIN",
+    "ACCOUNT": "你有帳戶嗎?",
+    "NO_ACCOUNT": "你沒有帳戶?"
   },
   "user_profile": {
     "RATING": "評級:",

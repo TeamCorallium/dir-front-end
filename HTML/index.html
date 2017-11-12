@@ -257,6 +257,7 @@
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
                                     <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT"></a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15">
@@ -322,6 +323,7 @@
                                 <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
                                     <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT">Do you have an account?</a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15">
@@ -367,6 +369,7 @@
                                 <div class="msg-block" id="errorBoxHome" hidden>
                                     <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
                                 </div>
+                                <a ng-click="raiseModalRegister()" translate="index.NO_ACCOUNT"></a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15" ng-controller="LoginCtrl">

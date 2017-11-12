@@ -34,7 +34,9 @@
     "ENTER_USERNAME": "Enter your username",
     "ENTER_PASSWORD": "Enter your password",
     "ENTER_EMAIL": "Enter email address",
-    "ENTER_PIN": "Enter your PIN"
+    "ENTER_PIN": "Enter your PIN",
+    "ACCOUNT": "Do you have an account?",
+    "NO_ACCOUNT": "You don't have an account?"
   },
   "user_profile": {
     "RATING": "Rating:",

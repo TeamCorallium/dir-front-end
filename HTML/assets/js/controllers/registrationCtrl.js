@@ -81,4 +81,9 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             var networkConnection = $translate.instant('register.NETWORK_CONNECTION');
             growl.error( serverNotFound , { title: networkConnection });
         });
+
+        $scope.raiseModalLogin = function() {
+            $('#myModalRegisterHome').modal('hide');
+            $('#myModalLoginHome').modal('show');
+        };
     }]);
