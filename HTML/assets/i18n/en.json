@@ -100,7 +100,10 @@
     "ADD_TSHIRT": "Add T-Shirt",
     "FOLLOWERS": "Followers",
     "FOLLOWING": "Following",
-    "SNIPPETS": "Snippets"
+    "SNIPPETS": "Snippets",
+    "LEAVE_MESSAGE": "Leave a Message",
+    "FOLLOW": "Follow",
+    "CLAP": "Clap"
   },
   "view_profile": {
     "RATING": "Rating:",

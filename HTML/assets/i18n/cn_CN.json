@@ -100,7 +100,10 @@
     "ADD_TSHIRT": "添加 t恤衫",
     "FOLLOWERS": "追隨",
     "FOLLOWING": "以下",
-    "SNIPPETS": "Snippets"
+    "SNIPPETS": "Snippets",
+    "LEAVE_MESSAGE": "留言",
+    "FOLLOW": "按照",
+    "CLAP": "拍"
   },
   "view_profile": {
     "RATING": "評級:",

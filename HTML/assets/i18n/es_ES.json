@@ -100,7 +100,10 @@
     "ADD_TSHIRT": "Adicionar camiseta",
     "FOLLOWERS": "Seguidores",
     "FOLLOWING": "Siguiendo",
-    "SNIPPETS": "Snippets"
+    "SNIPPETS": "Snippets",
+    "LEAVE_MESSAGE": "Deja tu mensaje",
+    "FOLLOW": "Seguir",
+    "CLAP": "Aplaudir"
   },
   "view_profile": {
     "RATING": "Valoración:",
