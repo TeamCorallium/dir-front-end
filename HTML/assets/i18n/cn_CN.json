@@ -99,7 +99,8 @@
     "NOT_TSHIRT": "這件 t恤不存在股票.",
     "ADD_TSHIRT": "添加 t恤衫",
     "FOLLOWERS": "追隨",
-    "FOLLOWING": "以下"
+    "FOLLOWING": "以下",
+    "SNIPPETS": "Snippets"
   },
   "view_profile": {
     "RATING": "評級:",

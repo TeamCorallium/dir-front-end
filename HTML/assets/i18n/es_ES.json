@@ -99,7 +99,8 @@
     "NOT_TSHIRT": "Esta camiseta no existe en stock.",
     "ADD_TSHIRT": "Adicionar camiseta",
     "FOLLOWERS": "Seguidores",
-    "FOLLOWING": "Siguiendo"
+    "FOLLOWING": "Siguiendo",
+    "SNIPPETS": "Snippets"
   },
   "view_profile": {
     "RATING": "Valoración:",

@@ -1,4 +1,4 @@
-<div class="profile-padding" ng-controller="ViewProfileCtrl">  
+<div class="profile-padding" ng-controller="ViewProfileCtrl">
     <img class="pictureFrontCover img-responsive hidden-xs" />
     <div class="row">
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
@@ -39,7 +39,7 @@
                         <img class="iconClap" ng-src="assets/images/Like_dislike-10.png" ng-show="activateClap">
                     </a>
                     <a type="button" ng-disabled="viewInbox" class="btn btn-o col-xs-1 padding-0 font-size-25" data-toggle="modal" data-target="#modalLeaveMessage">
-                        <img class="iconMessage" ng-src="assets/images/message.png">
+                        <img class="iconMessage" ng-src="assets/images/message.jpg">
                     </a>
                 </div>
                 <div class="col-xs-12 margin-bottom-10">
@@ -112,7 +112,7 @@
                                 </div>
                             </div>
                             <div class="padding-right-15 paddingLeft15XS">
-                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="col-xs-12" />                                
+                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="col-xs-12" />
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyleView">
@@ -128,10 +128,10 @@
                                                     <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
                                                         <i class="fa fa-fw fa-clock-o"></i>
                                                         {{snippet.created | timeago}}
-                                                    </span>                                                    
+                                                    </span>
                                                 </div>
                                             </div>
-                                            <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>                                        
+                                            <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>
                                         </div>
                                     </li>
                                 </ul>
@@ -215,7 +215,8 @@
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''"
-                                id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
+                                id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true"
+                                ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>

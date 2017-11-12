@@ -99,7 +99,8 @@
     "NOT_TSHIRT": "This T-Shirt does not exist in stock.",
     "ADD_TSHIRT": "Add T-Shirt",
     "FOLLOWERS": "Followers",
-    "FOLLOWING": "Following"
+    "FOLLOWING": "Following",
+    "SNIPPETS": "Snippets"
   },
   "view_profile": {
     "RATING": "Rating:",
