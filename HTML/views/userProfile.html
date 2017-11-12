@@ -255,15 +255,15 @@
                                         <li ng-repeat="followers in users">
                                             <div class="post-image">
                                                 <div class="img-thumbnail">
-                                                    <a ng-click="goToProfile(popularUser.owner)">
-                                                        <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
+                                                    <a ng-click="goToProfile(followers.owner)">
+                                                        <img ng-src="{{getAvatar(followers.avatar)}}" class="img-responsive">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="post-info">
-                                                <a ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                <a ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
-                                                <h5>{{popularUser.info}}</h5>
+                                                <a ng-show="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.owner}}</a>
+                                                <a ng-hide="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.fullname}}</a>
+                                                <h5>{{followers.info}}</h5>
                                             </div>
                                         </li>
                                     </ul>
