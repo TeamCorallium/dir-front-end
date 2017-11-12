@@ -98,8 +98,8 @@
     "ERROR_PASSWORD": "Error al intentar cambiar la contraseña. Compruebe por favor el estado de su red.",
     "NOT_TSHIRT": "Esta camiseta no existe en stock.",
     "ADD_TSHIRT": "Adicionar camiseta",
-    "FOLLOWERS": "Seguidores:",
-    "FOLLOWING": "Siguiendo:"
+    "FOLLOWERS": "Seguidores",
+    "FOLLOWING": "Siguiendo"
   },
   "view_profile": {
     "RATING": "Valoración:",

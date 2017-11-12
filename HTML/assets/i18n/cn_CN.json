@@ -98,8 +98,8 @@
     "ERROR_PASSWORD": "嘗試更改密碼時出錯. 請檢查您的網路狀態.",
     "NOT_TSHIRT": "這件 t恤不存在股票.",
     "ADD_TSHIRT": "添加 t恤衫",
-    "FOLLOWERS": "追隨:",
-    "FOLLOWING": "以下:"
+    "FOLLOWERS": "追隨",
+    "FOLLOWING": "以下"
   },
   "view_profile": {
     "RATING": "評級:",
