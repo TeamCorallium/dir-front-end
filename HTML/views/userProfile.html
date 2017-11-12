@@ -162,17 +162,17 @@
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS">
                                 <ul class="nav nav-tabs nav-justified">
                                     <li class="active">
-                                        <a ng-click="changeMiddle(0)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <a ng-click="changeMiddle(0)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="./assets/images/iconosnniper_v2.png"></img>
                                             <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
                                         </a>
-                                        <a ng-click="changeMiddle(1)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <a ng-click="changeMiddle(1)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="assets/images/followers.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWERS"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 1"></div>
                                         </a>
-                                        <a ng-click="changeMiddle(2)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                        <a ng-click="changeMiddle(2)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="assets/images/following.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWING"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 2"></div>
@@ -251,8 +251,8 @@
                             <div ng-if="indexShowMiddle == 1">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-10 padding-0 marginSnippetXS">
                                     <ul class="post-list">
-                                        <li ng-repeat="followers in users">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                        <li class="borderBottomNone" ng-repeat="followers in users">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image">
                                                     <div class="img-thumbnail">
                                                         <a ng-click="goToProfile(followers.owner)">
