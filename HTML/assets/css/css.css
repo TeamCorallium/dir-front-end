@@ -1668,3 +1668,7 @@ span.stars span {
 .borderBottomNone {
     border-bottom: none !important;
 }
+
+.borderTopFollower {
+    border-top: 1px solid #E3E3E3;
+}
