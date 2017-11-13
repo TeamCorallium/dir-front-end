@@ -753,44 +753,50 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.facebookLogin = function () {
-            if (!$scope.isFacebookConnected()) {
-                FB.login(function (response) {
-                    if (response.status === 'connected') {
-                        $scope.isConnected = true;
-                        FB.api('me', function (response) {
-                            console.log(response);
-                            $scope.facebookName = response.name;
-                            $scope.url = 'https://www.facebook.com/' + response.id;
-                            $scope.addSocialNetwork("Facebook", $scope.url);
-                        });
-                    } else {
-                        console.log("user canceled login or did not fully authorize");
-                    }
-                });
-            } else {
-                FB.api('me', function (response) {
-                    console.log(response);
-                });
+            if (typeof FB != "undefined") {
+                if (!$scope.isFacebookConnected()) {
+                    FB.login(function (response) {
+                        if (response.status === 'connected') {
+                            $scope.isConnected = true;
+                            FB.api('me', function (response) {
+                                console.log(response);
+                                $scope.facebookName = response.name;
+                                $scope.url = 'https://www.facebook.com/' + response.id;
+                                $scope.addSocialNetwork("Facebook", $scope.url);
+                            });
+                        } else {
+                            console.log("user canceled login or did not fully authorize");
+                        }
+                    });
+                } else {
+                    FB.api('me', function (response) {
+                        console.log(response);
+                    });
+                }
             }
         };
 
         $scope.isFacebookConnected = function () {
-            FB.getLoginStatus(function (response) {
-                if (response.status === 'connected') {
-                    $scope.isConnected = true;
-                } else {
-                    $scope.isConnected = false;
-                }
-            });
+            if (typeof FB != "undefined") {
+                FB.getLoginStatus(function (response) {
+                    if (response.status === 'connected') {
+                        $scope.isConnected = true;
+                    } else {
+                        $scope.isConnected = false;
+                    }
+                });
+            }
         };
 
         $scope.isFacebookConnected();
 
         $scope.continueAsOther = function () {
             $scope.isConnected = false;
-            FB.logout(function (response) {
-                $scope.facebookLogin();
-            });
+            if (typeof FB != "undefined") {
+                FB.logout(function (response) {
+                    $scope.facebookLogin();
+                });
+            }
         };
 
         // start: keyup social network
