@@ -375,7 +375,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.makeClap = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                $scope.clap();
+                if (!$scope.activateClap) {
+                    $scope.clap();
+                }
             } else {
                 $('#myModalLoginHome').modal('show');
             }
@@ -383,7 +385,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.follow = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                if (!$scope.activateClap) {
+                if (!$scope.activateFollow) {
                     RestService.follow($scope.user.id, false);
                 }
             } else {
