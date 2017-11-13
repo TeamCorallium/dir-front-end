@@ -115,6 +115,7 @@
     "CLOSE": "關閉",
     "SEND_MESSAGE": "發送消息",
     "CLAP": "拍",
+    "CLAPPED": "拍",
     "PREVIOUS": "« 以前",
     "NEXT": "下 »",
     "FIELD_REQUIRED": "此欄位是必需的",

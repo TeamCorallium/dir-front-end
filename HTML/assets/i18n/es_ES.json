@@ -115,6 +115,7 @@
     "CLOSE": "Cerrar",
     "SEND_MESSAGE": "Enviar mensaje",
     "CLAP": "palmadas",
+    "CLAPPED": "Aplaudido",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
     "FIELD_REQUIRED": "Este campo es requerido.",
