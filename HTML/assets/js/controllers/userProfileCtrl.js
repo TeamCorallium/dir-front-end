@@ -1050,6 +1050,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.clipMessage = function (user) {
             $scope.message.user = user;
+            $('#modalLeaveMessageUserProfile').modal('show');
         };
 
         $scope.leaveMessage = function (user) {
