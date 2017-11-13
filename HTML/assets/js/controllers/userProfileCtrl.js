@@ -220,7 +220,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.publishSnippets = function () {
-            console.log($scope.pSnippet + " pSnippet");
             if ($scope.pSnippet != '') {
                 RestService.addSnippet("", $scope.pSnippet);
             } else {
