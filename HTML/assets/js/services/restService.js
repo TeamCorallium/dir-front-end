@@ -22,6 +22,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
     var tracking = 'http://www.dir.com:8888/api/track/';
     var followDir = 'http://www.dir.com:8888/api/follow/';
+    var followersDir = 'http://www.dir.com:8888/api/followers/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -758,6 +759,30 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchStocks: function () {
             return $http.get(stocks)
+                .then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchFollowers: function (profileid, me) {
+            return $http.get(followersDir + "?profileId=" + profileid + "&me=" + me)
+                .then(
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
+                );
+        },
+
+        fetchFollowing: function (profileid, me) {
+            return $http.get(followersDir + "?profileId=" + profileid + "&me=" + me)
                 .then(
                     function (response) {
                         return response.data;

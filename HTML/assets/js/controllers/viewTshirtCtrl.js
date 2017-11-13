@@ -56,73 +56,73 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
-                function (data) {
-                    data = data.results;
-                    if (data.length > 0) {
-                        $scope.user.profileUrl = data[0].profiles[0];
-                        $scope.user.username = data[0].username;
-                        $scope.user.firstname = data[0].first_name;
-                        $scope.user.lastname = data[0].last_name;
+                    function (data) {
+                        data = data.results;
+                        if (data.length > 0) {
+                            $scope.user.profileUrl = data[0].profiles[0];
+                            $scope.user.username = data[0].username;
+                            $scope.user.firstname = data[0].first_name;
+                            $scope.user.lastname = data[0].last_name;
 
-                        if ($scope.user.username == $cookies.get('username')) {
-                            $scope.mySelf = true;
+                            if ($scope.user.username == $cookies.get('username')) {
+                                $scope.mySelf = true;
+                            } else {
+                                $scope.mySelf = false;
+                            }
+
+                            if (data[0].profiles.length > 0) {
+                                getProfile(data[0].profiles[0]);
+                            }
+
+                            getSnippets(data[0].username, 1);
+                            getSocialNetworks(data[0].username);
+
                         } else {
-                            $scope.mySelf = false;
+                            $state.go('home');
+                            $('#myModal').modal('show');
                         }
-
-                        if (data[0].profiles.length > 0) {
-                            getProfile(data[0].profiles[0]);
-                        }
-
-                        getSnippets(data[0].username, 1);
-                        getSocialNetworks(data[0].username);
-
-                    } else {
-                        $state.go('home');
-                        $('#myModal').modal('show');
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
         var getProfile = function (url) {
             RestService.fetchObjectByUrl(url)
                 .then(
-                function (data) {
+                    function (data) {
 
-                    if (data != undefined) {
-                        $scope.user.info = data.info;
-                        if (data.avatar != '' && data.avatar != null) {
-                            var avatarArray = data.avatar.split("/");
-                            $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                        if (data != undefined) {
+                            $scope.user.info = data.info;
+                            if (data.avatar != '' && data.avatar != null) {
+                                var avatarArray = data.avatar.split("/");
+                                $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.user.avatar = 'assets/images/default-user.png';
+                            }
+                            $scope.user.id = data.id;
+                            $scope.user.email = data.email;
+                            $scope.user.score = data.score;
+                            $scope.user.rating = data.rating;
+                            $scope.user.fullname = data.fullname;
+                            $scope.user.profileurl = data.url;
+
+                            if (data.qrcode != '') {
+                                $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                            }
+
+                            if ($rootScope.viewInbox) {
+                                $scope.TryClap();
+                                $scope.TryFollow();
+                            }
                         } else {
-                            $scope.user.avatar = 'assets/images/default-user.png';
+                            $state.go('home');
                         }
-                        $scope.user.id = data.id;
-                        $scope.user.email = data.email;
-                        $scope.user.score = data.score;
-                        $scope.user.rating = data.rating;
-                        $scope.user.fullname = data.fullname;
-                        $scope.user.profileurl = data.url;
-
-                        if (data.qrcode != '') {
-                            $scope.user.qrcode = RestService.imageDir + data.qrcode;
-                        }
-
-                        if ($rootScope.viewInbox) {
-                            $scope.TryClap();
-                            $scope.TryFollow();
-                        }
-                    } else {
-                        $state.go('home');
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -130,13 +130,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             for (var i = 0; i < urls.length; i++) {
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
-                    function (data) {
-                        $scope.user.tshirts.push(data);
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                        // throw toaster with message errResponse
-                    }
+                        function (data) {
+                            $scope.user.tshirts.push(data);
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                            // throw toaster with message errResponse
+                        }
                     );
             }
         };
@@ -145,18 +145,18 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.snippets = [];
             RestService.fetchSnippets(username + "&page=" + page)
                 .then(
-                function (data) {
-                    $scope.hasNext = data.next;
-                    $scope.hasPrevious = data.previous;
-                    data = data.results;
-                    for (var i = 0; i < data.length; i++) {
-                        // data[i].body = replaceURLWithHTMLLinks(data[i].body);
-                        $scope.user.snippets.push(data[i]);
+                    function (data) {
+                        $scope.hasNext = data.next;
+                        $scope.hasPrevious = data.previous;
+                        data = data.results;
+                        for (var i = 0; i < data.length; i++) {
+                            // data[i].body = replaceURLWithHTMLLinks(data[i].body);
+                            $scope.user.snippets.push(data[i]);
+                        }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -164,14 +164,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.socialnetworks = [];
             RestService.fetchSocialNetworks(username)
                 .then(
-                function (data) {
-                    for (var i = 0; i < data.length; i++) {
-                        $scope.user.socialnetworks.push(data[i]);
+                    function (data) {
+                        for (var i = 0; i < data.length; i++) {
+                            $scope.user.socialnetworks.push(data[i]);
+                        }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -210,20 +210,24 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                function (data) {
-                    $scope.users = data.results;
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
+                    function (data) {
+                        $scope.users = data.results;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
                 );
         };
 
         $scope.getPopularUsers();
 
         $scope.goToProfile = function (owner) {
-            $cookies.remove("exploreUser", { path: '/' });
-            $cookies.put('exploreUser', owner, { path: '/' });
+            $cookies.remove("exploreUser", {
+                path: '/'
+            });
+            $cookies.put('exploreUser', owner, {
+                path: '/'
+            });
 
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
@@ -262,17 +266,17 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($stateParams.id != null && $stateParams.id != '' && $stateParams.id != undefined) {
                 RestService.fetchTshirt($stateParams.id)
                     .then(
-                    function (data) {
-                        if (data.length > 0) {
-                            $scope.getUser(data[0].owner);
-                        } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
+                        function (data) {
+                            if (data.length > 0) {
+                                $scope.getUser(data[0].owner);
+                            } else {
+                                $state.go('home');
+                                $('#myModal').modal('show');
+                            }
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
                         }
-                    },
-                    function (errResponse) {
-                        console.log(errResponse);
-                    }
                     );
             } else {
                 $state.go('home');
@@ -310,7 +314,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else {
                 var unexpectedError = $translate.instant('view_profile.UNEXPECTED_ERROR');
                 var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
-                growl.error(unexpectedError, { title: sendMessage });
+                growl.error(unexpectedError, {
+                    title: sendMessage
+                });
                 $state.go('users');
             }
         };
@@ -319,7 +325,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $('#modalLeaveMessage').modal('hide');
             var sendCorrectly = $translate.instant('view_profile.SEND_CORRECTLY');
             var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
-            growl.success(sendCorrectly, { title: sendMessage });
+            growl.success(sendCorrectly, {
+                title: sendMessage
+            });
         });
 
         $scope.clap = function () {
@@ -371,14 +379,17 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.follow = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                RestService.follow($scope.user.id, false);
+                if (!$scope.activateClap) {
+                    RestService.follow($scope.user.id, false);
+                }
             } else {
                 $('#myModalLoginHome').modal('show');
             }
-        };        
+        };
 
         $rootScope.$on('followSuccesfully', function (event, data) {
             $scope.activateFollow = true;
         });
 
-    }]);
+    }
+]);

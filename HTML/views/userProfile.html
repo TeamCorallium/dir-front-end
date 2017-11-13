@@ -251,19 +251,19 @@
                             <div ng-if="indexShowMiddle == 1">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
                                     <ul class="post-list">
-                                        <li class="borderBottomNone" ng-repeat="followers in users">
+                                        <li class="borderBottomNone" ng-repeat="follower in followers">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image">
                                                     <div class="img-thumbnail">
-                                                        <a ng-click="goToProfile(followers.owner)">
-                                                            <img ng-src="{{getAvatar(followers.avatar)}}" class="img-responsive">
+                                                        <a ng-click="goToProfile(follower.owner)">
+                                                            <img ng-src="{{getAvatar(follower.avatar)}}" class="img-responsive">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a ng-show="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.owner}}</a>
-                                                    <a ng-hide="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.fullname}}</a>
-                                                    <h5>{{followers.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <a ng-show="follower.fullname == ''" ng-click="goToProfile(follower.owner)">{{follower.owner}}</a>
+                                                    <a ng-hide="follower.fullname == ''" ng-click="goToProfile(follower.owner)">{{follower.fullname}}</a>
+                                                    <h5>{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
                                                         <a ng-click="" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <img class="IconSnippet" ng-src="./assets/images/message.jpg"></img>
@@ -275,7 +275,7 @@
                                                             <label class="pointerHover" translate="user_profile.CLAP"></label>
                                                         </a>
                                                         <a ng-click="" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                            <img class="IconSnippet" ng-src="assets/images/followers.jpg">
+                                                            <img class="IconSnippet" ng-src="assets/images/follower.jpg">
                                                             <label class="pointerHover" translate="user_profile.FOLLOW"></label>
                                                         </a>
                                                     </div>
@@ -288,19 +288,19 @@
                             <div ng-if="indexShowMiddle == 2">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
                                     <ul class="post-list">
-                                        <li class="borderBottomNone" ng-repeat="followers in users">
+                                        <li class="borderBottomNone" ng-repeat="followTo in following">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image">
                                                     <div class="img-thumbnail">
-                                                        <a ng-click="goToProfile(followers.owner)">
-                                                            <img ng-src="{{getAvatar(followers.avatar)}}" class="img-responsive">
+                                                        <a ng-click="goToProfile(followTo.owner)">
+                                                            <img ng-src="{{getAvatar(followTo.avatar)}}" class="img-responsive">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a ng-show="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.owner}}</a>
-                                                    <a ng-hide="followers.fullname == ''" ng-click="goToProfile(followers.owner)">{{followers.fullname}}</a>
-                                                    <h5>{{followers.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <a ng-show="followTo.fullname == ''" ng-click="goToProfile(followTo.owner)">{{followTo.owner}}</a>
+                                                    <a ng-hide="followTo.fullname == ''" ng-click="goToProfile(followTo.owner)">{{followTo.fullname}}</a>
+                                                    <h5>{{followTo.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
                                                         <a ng-click="" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <img class="IconSnippet" ng-src="./assets/images/message.jpg"></img>
@@ -312,7 +312,7 @@
                                                             <label class="pointerHover" translate="user_profile.CLAP"></label>
                                                         </a>
                                                         <a ng-click="" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                                                            <img class="IconSnippet" ng-src="assets/images/followers.jpg">
+                                                            <img class="IconSnippet" ng-src="assets/images/following.jpg">
                                                             <label class="pointerHover" translate="user_profile.FOLLOW"></label>
                                                         </a>
                                                     </div>

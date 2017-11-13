@@ -44,6 +44,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.EditInfoFlag = false;
         $scope.password = '';
         $scope.againPassHome = '';
+        $scope.following = [];
+        $scope.followers = [];
 
         $scope.indexShowMiddle = 0;
 
@@ -998,7 +1000,38 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.changeMiddle = function (num) {
+            if (num == 1) {
+                $scope.getFollowers();
+            } else if (num == 2) {
+                $scope.getFollowing();
+            } else {
+                getSnippets($scope.user.username, 1);
+            }
             $scope.indexShowMiddle = num;
+        };
+
+        $scope.getFollowers = function () {
+            RestService.fetchFollowers($scope.user.id, true)
+                .then(
+                    function (data) {
+                        $scope.followers = data.results;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getFollowing = function () {
+            RestService.fetchFollowing($scope.user.id, false)
+                .then(
+                    function (data) {
+                        $scope.following = data.results;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
+                );
         };
     }
 ]);

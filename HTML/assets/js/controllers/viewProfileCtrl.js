@@ -383,7 +383,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.follow = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-                RestService.follow($scope.user.id, false);
+                if (!$scope.activateClap) {
+                    RestService.follow($scope.user.id, false);
+                }
             } else {
                 $('#myModalLoginHome').modal('show');
             }
