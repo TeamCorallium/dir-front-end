@@ -108,7 +108,10 @@
     "CLAP": "Clap",
     "UNFOLLOW": "Unfollow",
     "SEND_MESSAGE": "Send message",
-    "SEND_CORRECTLY": "Message sended correctly"
+    "SEND_CORRECTLY": "Message sended correctly",
+    "ENTER_SUBJECT": "Enter subject",
+    "ENTER_MESSAGE": "Enter your message",
+    "SEND_ERROR": "Error when attempting to send message"
   },
   "view_profile": {
     "RATING": "Rating:",

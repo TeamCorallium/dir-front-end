@@ -315,7 +315,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
-                $rootScope.$broadcast('SendMessage');
+                if (data.response == "ok") {
+                    $rootScope.$broadcast('SendMessage');
+                } else {
+                    $rootScope.$broadcast('SendMessageError');
+                }
             }).error(function (response, status) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);

@@ -1048,8 +1048,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 );
         };
 
-        $scope.clipMessage = function (user) {
-            $scope.message.user = user;
+        $scope.clipMessage = function (username) {
+            console.log(username);
+            $scope.message.user = username;
+            console.log($scope.message.user);
             $('#modalLeaveMessageUserProfile').modal('show');
         };
 
@@ -1061,9 +1063,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $('#modalLeaveMessageUserProfile').modal('hide');
             $scope.message.title = '';
             $scope.message.body = '';
+            $scope.message.user = '';
             var sendCorrectly = $translate.instant('user_profile.SEND_CORRECTLY');
             var sendMessage = $translate.instant('user_profile.SEND_MESSAGE');
             growl.success(sendCorrectly, {
+                title: sendMessage
+            });
+        });
+
+        $rootScope.$on('SendMessageError', function (event, data) {
+            var sendError = $translate.instant('user_profile.SEND_ERROR');
+            var sendMessage = $translate.instant('user_profile.SEND_MESSAGE');
+            growl.error(sendError, {
                 title: sendMessage
             });
         });

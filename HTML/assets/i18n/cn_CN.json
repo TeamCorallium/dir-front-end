@@ -108,7 +108,10 @@
     "CLAP": "拍",
     "UNFOLLOW": "追隨",
     "SEND_MESSAGE": "發送消息",
-    "SEND_CORRECTLY": "消息寄正確"
+    "SEND_CORRECTLY": "消息寄正確",
+    "ENTER_SUBJECT": "輸入主題",
+    "ENTER_MESSAGE": "輸入您的留言",
+    "SEND_ERROR": "嘗試發送郵件時出錯"
   },
   "view_profile": {
     "RATING": "評級:",
