@@ -111,7 +111,9 @@
     "SEND_CORRECTLY": "Mensaje enviado correctamente",
     "ENTER_SUBJECT": "Ingrese el asunto",
     "ENTER_MESSAGE": "Ingrese el mensaje",
-    "SEND_ERROR": "Error al intentar enviar un mensaje"
+    "SEND_ERROR": "Error al intentar enviar un mensaje",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión"
   },
   "view_profile": {
     "RATING": "Valoración:",
@@ -130,7 +132,12 @@
     "ENTER_MESSAGE": "Ingrese el mensaje",
     "UNEXPECTED_ERROR": "Se ha producido un error inesperado, por favor inténtelo de nuevo.",
     "SEND_CORRECTLY": "Mensaje enviado correctamente",
-    "FOLLOW": "Seguir"
+    "FOLLOW": "Seguir",
+    "SEND_ERROR": "Error al intentar enviar un mensaje",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red"
   },
   "inbox": {
     "BROWSE": "Navegación",
@@ -145,7 +152,23 @@
     "CLOSE": "Cerrar",
     "SUBJECT": "Asunto",
     "FIELD_REQUIRED": "Este campo es requerido.",
-    "ENTER_MESSAGE": "Ingrese el mensaje"
+    "ENTER_MESSAGE": "Ingrese el mensaje",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red",
+    "ERROR_DELETE_MESSAGE": "Error al intentar eliminar el mensaje, por favor inténtelo de nuevo.",
+    "DELETE_MESSAGE": "Eliminar mensaje",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo.",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión",
+    "ERROR_SEND_MESSAGE": "Error al enviar el mensaje, por favor inténtelo de nuevo.",
+    "DELETED": "Eliminados!",
+    "MESSAGE_DELETED": "Su mensaje ha sido eliminado.",
+    "SENDED_SUCCESS": "Mensaje enviado correctamente.",
+    "ARE_YOU_SURE": "Estás seguro?",
+    "TEXT_SURE": "No podrá recuperar este mensaje!",
+    "YES_DELETE": "Sí, eliminarlo!",
+    "NO_CANCEL": "No, cancelar!",
+    "CANCELLED": "Cancelado",
+    "SAVE_MESSAGE": "Su mensaje es seguro :)"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "Explorar perfiles",
@@ -159,7 +182,11 @@
     "SEE_PROFILE": "Ver perfil",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
-    "APPLY": "Aplicar"
+    "APPLY": "Aplicar",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión"
   },
   "edit_profile": {
     "RATING": "Valoración:",
@@ -198,7 +225,11 @@
     "TOTAL_VISITS": "TOTAL DE VISITAS",
     "RETURN_RATIO": "PORCIENTO DE RETORNO",
     "TIME_ON_SITE": "TIEMPO EN LA WEB",
-    "SATISFIED_CUSTOMERS": "CLIENTES SATISFECHOS"
+    "SATISFIED_CUSTOMERS": "CLIENTES SATISFECHOS",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red"
   },
   "admin": {
     "COLOR": "Color",
@@ -212,7 +243,11 @@
     "NO_USER": "No existen usuarios",
     "USERS": "Usuarios",
     "SEARCH": "Buscar",
-    "NO_STUFFS": "No existen objetos"
+    "NO_STUFFS": "No existen objetos",
+    "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+    "NETWORK_CONNECTION": "Conexión de red",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión"
   },
   "contact": {
     "SEND_SUCCESS": "Éxito! Su mensaje ha sido enviado a nosotros.",
@@ -238,7 +273,9 @@
     "EMPTY_FIELDS": "No puede haber un campo vacío",
     "REGISTER": "Registro",
     "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
-    "NETWORK_CONNECTION": "Conexión de red"
+    "NETWORK_CONNECTION": "Conexión de red",
+    "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión"
   },
   "login": {
     "LOGIN": "Inicia sessión",

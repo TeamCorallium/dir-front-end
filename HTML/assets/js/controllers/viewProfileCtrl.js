@@ -150,7 +150,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.hasPrevious = data.previous;
                         data = data.results;
                         for (var i = 0; i < data.length; i++) {
-                            // data[i].body = replaceURLWithHTMLLinks(data[i].body);
                             $scope.user.snippets.push(data[i]);
                         }
                     },
@@ -173,34 +172,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         console.log(errResponse);
                     }
                 );
-        };
-
-        var replaceURLWithHTMLLinks = function (text) {
-            var re = /(\(.*?)?\b((?:https?|ftp|file):\/\/[-a-z0-9+&@#\/%?=~_()|!:,.;]*[-a-z0-9+&@#\/%=~_()|])/ig;
-            return text.replace(re, function (match, lParens, url) {
-                var rParens = '';
-                lParens = lParens || '';
-
-                // Try to strip the same number of right parens from url
-                // as there are left parens.  Here, lParenCounter must be
-                // a RegExp object.  You cannot use a literal
-                //     while (/\(/g.exec(lParens)) { ... }
-                // because an object is needed to store the lastIndex state.
-                var lParenCounter = /\(/g;
-                while (lParenCounter.exec(lParens)) {
-                    var m;
-                    // We want m[1] to be greedy, unless a period precedes the
-                    // right parenthesis.  These tests cannot be simplified as
-                    //     /(.*)(\.?\).*)/.exec(url)
-                    // because if (.*) is greedy then \.? never gets a chance.
-                    if (m = /(.*)(\.\).*)/.exec(url) ||
-                        /(.*)(\).*)/.exec(url)) {
-                        url = m[1];
-                        rParens = m[2] + rParens;
-                    }
-                }
-                return lParens + "<a href='" + url + "'>" + url + "</a>" + rParens;
-            });
         };
 
         $scope.openModalSnippets = function () {
@@ -327,9 +298,19 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('SendMessage', function (event, data) {
             $('#modalLeaveMessage').modal('hide');
+            $scope.message.title = '';
+            $scope.message.body = '';
             var sendCorrectly = $translate.instant('view_profile.SEND_CORRECTLY');
             var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
             growl.success(sendCorrectly, {
+                title: sendMessage
+            });
+        });
+
+        $rootScope.$on('SendMessageError', function (event, data) {
+            var sendError = $translate.instant('view_profile.SEND_ERROR');
+            var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
+            growl.wrong(sendError, {
                 title: sendMessage
             });
         });
@@ -395,6 +376,37 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('followSuccesfully', function (event, data) {
             $scope.activateFollow = true;
+        });
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('view_profile.WE_PROBLEM');
+            var loginProblem = $translate.instant('view_profile.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            var serverNotFound = $translate.instant('view_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('view_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
         });
     }
 ]);

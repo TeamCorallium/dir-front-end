@@ -111,7 +111,9 @@
     "SEND_CORRECTLY": "消息寄正確",
     "ENTER_SUBJECT": "輸入主題",
     "ENTER_MESSAGE": "輸入您的留言",
-    "SEND_ERROR": "嘗試發送郵件時出錯"
+    "SEND_ERROR": "嘗試發送郵件時出錯",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次.",
+    "LOGIN_PROBLEM": "登錄問題"
   },
   "view_profile": {
     "RATING": "評級:",
@@ -130,7 +132,12 @@
     "ENTER_MESSAGE": "輸入您的留言",
     "UNEXPECTED_ERROR": "發生意外錯誤, 請重試.",
     "SEND_CORRECTLY": "消息寄正確",
-    "FOLLOW": "按照"
+    "FOLLOW": "按照",
+    "SEND_ERROR": "嘗試發送郵件時出錯",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接"
   },
   "inbox": {
     "BROWSE": "流覽",
@@ -145,7 +152,23 @@
     "CLOSE": "關閉",
     "SUBJECT": "主題",
     "FIELD_REQUIRED": "此欄位是必需的",
-    "ENTER_MESSAGE": "輸入您的留言"
+    "ENTER_MESSAGE": "輸入您的留言",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接",
+    "ERROR_DELETE_MESSAGE": "嘗試刪除郵件時出錯, 請重試",
+    "DELETE_MESSAGE": "刪除郵件",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題",
+    "ERROR_SEND_MESSAGE": "發送郵件時出錯, 請重試",
+    "DELETED": "刪除!",
+    "MESSAGE_DELETED": "您的郵件已被刪除.",
+    "SENDED_SUCCESS": "消息寄正確",
+    "ARE_YOU_SURE": "是否確定?",
+    "TEXT_SURE": "您將無法恢復此消息!",
+    "YES_DELETE": "是, 刪除它!",
+    "NO_CANCEL": "否, 取消!",
+    "CANCELLED": "取消",
+    "SAVE_MESSAGE": "您的資訊是安全的 :)"
   },
   "explore_user": {
     "EXPLORE_PROFILES": "流覽設定檔",
@@ -159,7 +182,11 @@
     "SEE_PROFILE": "請參閱設定檔",
     "PREVIOUS": "« 以前",
     "NEXT": "下 »",
-    "APPLY": "應用"
+    "APPLY": "應用",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題"
   },
   "edit_profile": {
     "RATING": "評級:",
@@ -198,7 +225,11 @@
     "TOTAL_VISITS": "訪問總數",
     "RETURN_RATIO": "返回百分比",
     "TIME_ON_SITE": "現場時間",
-    "SATISFIED_CUSTOMERS": "滿意的客戶"
+    "SATISFIED_CUSTOMERS": "滿意的客戶",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接"
   },
   "admin": {
     "COLOR": "顏色",
@@ -212,7 +243,11 @@
     "NO_USER": "不存在使用者",
     "USERS": "使用者",
     "SEARCH": "搜索",
-    "NO_STUFFS": "不存在的東西"
+    "NO_STUFFS": "不存在的東西",
+    "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+    "NETWORK_CONNECTION": "網路連接",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題"
   },
   "contact": {
     "SEND_SUCCESS": "成功!您的資訊已發送給我們",
@@ -238,7 +273,9 @@
     "EMPTY_FIELDS": "不能有空欄位",
     "REGISTER": "註冊",
     "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
-    "NETWORK_CONNECTION": "網路連接"
+    "NETWORK_CONNECTION": "網路連接",
+    "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
+    "LOGIN_PROBLEM": "登錄問題"
   },
   "login": {
     "LOGIN": "登錄",

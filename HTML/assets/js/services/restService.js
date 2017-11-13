@@ -129,11 +129,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('wrongRegister');
                 }
             }).error(function (response) {
-                $rootScope.$broadcast('withoutNetworkConnection');
-                if (response == null) {
-                    console.log("response null register");
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
                 } else {
-                    console.log(response + " response");
+                    $rootScope.$broadcast('withoutNetworkConnection');
                 }
             });
         },
@@ -159,7 +158,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('addsnippets');
             }).error(function (response) {
-                $rootScope.$broadcast('addSnippetsError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('addSnippetsError');
+                }
             });
         },
 
@@ -185,7 +190,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('addsocialnetwork');
             }).error(function (response) {
-                $rootScope.$broadcast('addSocialNetworkError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('addSocialNetworkError');
+                }
             });
         },
 
@@ -213,7 +224,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('addTshirtErrorBad');
                 }
             }).error(function (response) {
-
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
             });
         },
 
@@ -240,7 +255,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('addStock');
             }).error(function (response) {
-                $rootScope.$broadcast('addStockError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('addStockError');
+                }
             });
         },
 
@@ -264,7 +285,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
             }).error(function (response) {
-                $rootScope.$broadcast('makeQRCodeError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('makeQRCodeError');
+                }
             });
         },
 
@@ -289,7 +316,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('changepassword');
             }).error(function (response) {
-                $rootScope.$broadcast('changepasswordError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('changepasswordError');
+                }
             });
         },
 
@@ -358,7 +391,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('clapSuccesfully', data.response);
                 }
             }).error(function (response) {
-                $rootScope.$broadcast('clapError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('clapError');
+                }
             });
         },
 
@@ -382,7 +421,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('deleteUser');
             }).error(function (response) {
-                $rootScope.$broadcast('deleteUserError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteUserError');
+                }
             });
         },
 
@@ -413,7 +458,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('followSuccesfully', data.response);
                 }
             }).error(function (response) {
-                $rootScope.$broadcast('followError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('followError');
+                }
             });
         },
 
@@ -456,7 +507,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('updateProfile');
             }).error(function (response) {
-                console.log("Entra al error");
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
             });
         },
 
@@ -499,7 +554,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (data) {
                 $rootScope.$broadcast('updateProfile');
             }).error(function (response) {
-                console.log("Entra al error");
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
             });
         },
 
@@ -610,7 +669,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteSocialNetwork');
             }).error(function (response) {
-                $rootScope.$broadcast('deleteSocialNetworkError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteSocialNetworkError');
+                }
             });
         },
 
@@ -631,7 +696,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteSnippet');
             }).error(function (response) {
-                $rootScope.$broadcast('deleteSnippetError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteSnippetError');
+                }
             });
         },
 
@@ -652,7 +723,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteMessage');
             }).error(function (response) {
-                $rootScope.$broadcast('deleteMessageError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteMessageError');
+                }
             });
         },
 
@@ -673,7 +750,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).success(function (result) {
                 $rootScope.$broadcast('deleteStuff');
             }).error(function (response) {
-                $rootScope.$broadcast('deleteStuffError');
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteStuffError');
+                }
             });
         },
 
@@ -684,7 +767,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -696,7 +783,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -708,7 +799,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -720,7 +815,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -732,7 +831,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -744,7 +847,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -756,7 +863,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -768,7 +879,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -780,7 +895,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },
@@ -792,7 +911,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function (errResponse) {
-                        return $q.reject(errResponse);
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
                     }
                 );
         },

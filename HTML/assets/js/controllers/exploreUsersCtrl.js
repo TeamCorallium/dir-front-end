@@ -7,7 +7,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
     function ($scope, RestService, $state, $rootScope, $cookies) {
 
         $rootScope.OptionsEdit = false;
-        $cookies.remove("exploreUser", { path: '/' });
+        $cookies.remove("exploreUser", {
+            path: '/'
+        });
 
         $scope.orderDate = 'AscendingDate';
         $scope.orderScore = 'AscendingScore';
@@ -68,31 +70,35 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             RestService.fetchObjectByUrl(RestService.profileDir + filters + '&page=' + page)
                 .then(
-                function (data) {
-                    $scope.profiles = data.results;
-                    $scope.hasNext = data.next;
-                    $scope.hasPrevious = data.previous;
+                    function (data) {
+                        $scope.profiles = data.results;
+                        $scope.hasNext = data.next;
+                        $scope.hasPrevious = data.previous;
 
-                    for (var i = 0; i < $scope.profiles.length; i++) {
-                        if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
-                            var avatarArray = $scope.profiles[i].avatar.split("/");
-                            $scope.profiles[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                        } else {
-                            $scope.profiles[i].avatar = 'assets/images/default-user.png';
+                        for (var i = 0; i < $scope.profiles.length; i++) {
+                            if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
+                                var avatarArray = $scope.profiles[i].avatar.split("/");
+                                $scope.profiles[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.profiles[i].avatar = 'assets/images/default-user.png';
+                            }
                         }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
         $scope.getProfiles(1);
 
         $scope.goToProfile = function (owner) {
-            $cookies.remove("exploreUser", { path: '/' });
-            $cookies.put('exploreUser', owner, { path: '/' });
+            $cookies.remove("exploreUser", {
+                path: '/'
+            });
+            $cookies.put('exploreUser', owner, {
+                path: '/'
+            });
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
             } else {
@@ -184,4 +190,36 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-    }]);
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('explore_user.WE_PROBLEM');
+            var loginProblem = $translate.instant('explore_user.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            var serverNotFound = $translate.instant('explore_user.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('explore_user.NETWORK_CONNECTION');
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
+        });
+
+    }
+]);

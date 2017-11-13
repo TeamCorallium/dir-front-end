@@ -111,7 +111,9 @@
     "SEND_CORRECTLY": "Message sended correctly",
     "ENTER_SUBJECT": "Enter subject",
     "ENTER_MESSAGE": "Enter your message",
-    "SEND_ERROR": "Error when attempting to send message"
+    "SEND_ERROR": "Error when attempting to send message",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems"
   },
   "view_profile": {
     "RATING": "Rating:",
@@ -130,7 +132,12 @@
     "UNEXPECTED_ERROR": "An unexpected error has occurred, please try again.",
     "SEND_CORRECTLY": "Message sended correctly",
     "LEAVE_MESSAGE": "Message",
-    "FOLLOW": "Follow"
+    "FOLLOW": "Follow",
+    "SEND_ERROR": "Error when attempting to send message",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
   },
   "inbox": {
     "BROWSE": "BROWSE",
@@ -175,7 +182,11 @@
     "SEE_PROFILE": "See Profile",
     "PREVIOUS": "« Previous",
     "NEXT": "Next »",
-    "APPLY": "Apply"
+    "APPLY": "Apply",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
   },
   "edit_profile": {
     "RATING": "Rating:",
@@ -214,7 +225,11 @@
     "TOTAL_VISITS": "TOTAL OF VISITS",
     "RETURN_RATIO": "RETURN PERCENTAGE",
     "TIME_ON_SITE": "TIME ON SITE",
-    "SATISFIED_CUSTOMERS": "SATISFIED CUSTOMERS"
+    "SATISFIED_CUSTOMERS": "SATISFIED CUSTOMERS",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
   },
   "admin": {
     "COLOR": "Color",
@@ -228,7 +243,11 @@
     "NO_USER": "There are no users",
     "USERS": "Users",
     "SEARCH": "Search",
-    "NO_STUFFS": "There are no stuffs"
+    "NO_STUFFS": "There are no stuffs",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems",
+    "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+    "NETWORK_CONNECTION": "Network Connection"
   },
   "contact": {
     "SEND_SUCCESS": "Success! Your message has been sent to us.",
@@ -254,7 +273,9 @@
     "EMPTY_FIELDS": "There can be no empty field",
     "REGISTER": "Register",
     "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
-    "NETWORK_CONNECTION": "Network Connection"
+    "NETWORK_CONNECTION": "Network Connection",
+    "WE_PROBLEM": "We detected some problems, please try again",
+    "LOGIN_PROBLEM": "Login Problems"
   },
   "login": {
     "LOGIN": "Login",

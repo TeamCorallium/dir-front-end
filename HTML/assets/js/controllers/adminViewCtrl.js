@@ -6,13 +6,15 @@
 app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl",
     function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl) {
 
-        if ($cookies.get('username') != 'admin'){
+        if ($cookies.get('username') != 'admin') {
             $state.go('home');
         }
 
         $rootScope.OptionsEdit = false;
-        $cookies.remove("exploreUser", { path: '/' });
- 
+        $cookies.remove("exploreUser", {
+            path: '/'
+        });
+
         $scope.stuff = {
             color: 'White',
             size: 'S',
@@ -25,45 +27,45 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';
-        $scope.search = '';        
+        $scope.search = '';
 
         $scope.getStocks = function () {
             $scope.stocks = [];
             RestService.fetchStocks()
-                .then( function (data) {
-                    $scope.stocks = data;
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
+                .then(function (data) {
+                        $scope.stocks = data;
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
                 );
         };
 
         $scope.getStocks();
 
         $scope.addStuff = function () {
-            RestService.addStock($scope.stuff.color, $scope.stuff.size, $scope.stuff.code, $scope.stuff.pin);            
+            RestService.addStock($scope.stuff.color, $scope.stuff.size, $scope.stuff.code, $scope.stuff.pin);
         };
 
         $scope.getUsers = function (page) {
             RestService.fetchObjectByUrl(RestService.profileDir + '?&search=' + $scope.search + '&page=' + page)
-                .then( function (data) {
-                    $scope.users = data.results;
-                    $scope.hasNext = data.next;
-                    $scope.hasPrevious = data.previous;
+                .then(function (data) {
+                        $scope.users = data.results;
+                        $scope.hasNext = data.next;
+                        $scope.hasPrevious = data.previous;
 
-                    for (var i = 0; i < $scope.users.length; i++) {
-                        if ($scope.users[i].avatar != '' && $scope.users[i].avatar != null) {
-                            var avatarArray = $scope.users[i].avatar.split("/");
-                            $scope.users[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                        } else {
-                            $scope.users[i].avatar = 'assets/images/default-user.png';
+                        for (var i = 0; i < $scope.users.length; i++) {
+                            if ($scope.users[i].avatar != '' && $scope.users[i].avatar != null) {
+                                var avatarArray = $scope.users[i].avatar.split("/");
+                                $scope.users[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.users[i].avatar = 'assets/images/default-user.png';
+                            }
                         }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
@@ -101,11 +103,11 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
             }
         });
 
-        $scope.deleteUser = function(id) {
+        $scope.deleteUser = function (id) {
             RestService.deleteUser(id);
         };
 
-        $scope.deleteStuff = function(url) {
+        $scope.deleteStuff = function (url) {
             RestService.deleteStuff(url);
         };
 
@@ -128,14 +130,52 @@ app.controller('AdminViewCtrl', ["$rootScope", "$scope", "$stateParams", "RestSe
         });
 
         $rootScope.$on('addStockError', function (event, data) {
-            growl.error("Can not be added to the stock.", { title: 'Add Stock' });
+            growl.error("Can not be added to the stock.", {
+                title: 'Add Stock'
+            });
         });
 
         $rootScope.$on('deleteUserError', function (event, data) {
-            growl.error("The user can not be deleted.", { title: 'Delete User' });
+            growl.error("The user can not be deleted.", {
+                title: 'Delete User'
+            });
         });
 
         $rootScope.$on('deleteStuffError', function (event, data) {
-            growl.error("The stuff can not be deleted.", { title: 'Delete Stuff' });
+            growl.error("The stuff can not be deleted.", {
+                title: 'Delete Stuff'
+            });
         });
-    }]);
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('admin.WE_PROBLEM');
+            var loginProblem = $translate.instant('admin.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            var serverNotFound = $translate.instant('admin.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('admin.NETWORK_CONNECTION');
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
+        });
+    }
+]);

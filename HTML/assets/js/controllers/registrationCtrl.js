@@ -11,12 +11,12 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
-                function (data) {
-                    console.log('get get ' + RestService.getCookie('csrftoken'));
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
+                    function (data) {
+                        console.log('get get ' + RestService.getCookie('csrftoken'));
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
+                    }
                 );
 
         } else {
@@ -33,12 +33,16 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
                 } else {
                     var sorryTry = $translate.instant('register.SORRY_TRY');
                     var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
-                    growl.error( sorryTry , { title: wrongUserPass });
+                    growl.error(sorryTry, {
+                        title: wrongUserPass
+                    });
                 }
             } else {
                 var emptyField = $translate.instant('register.EMPTY_FIELDS');
                 var register = $translate.instant('register.REGISTER');
-                growl.error( emptyField , { title: register });
+                growl.error(emptyField, {
+                    title: register
+                });
             }
         };
 
@@ -52,12 +56,16 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
                 } else {
                     var sorryTry = $translate.instant('register.SORRY_TRY');
                     var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
-                    growl.error( sorryTry , { title: wrongUserPass });
+                    growl.error(sorryTry, {
+                        title: wrongUserPass
+                    });
                 }
             } else {
                 var emptyField = $translate.instant('register.EMPTY_FIELDS');
                 var register = $translate.instant('register.REGISTER');
-                growl.error( emptyField , { title: register });
+                growl.error(emptyField, {
+                    title: register
+                });
             }
         };
 
@@ -79,11 +87,37 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             $('#RegisterWrongUserPasswordHome').hide();
             var serverNotFound = $translate.instant('register.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('register.NETWORK_CONNECTION');
-            growl.error( serverNotFound , { title: networkConnection });
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
         });
 
-        $scope.raiseModalLogin = function() {
+        $scope.raiseModalLogin = function () {
             $('#myModalRegisterHome').modal('hide');
             $('#myModalLoginHome').modal('show');
         };
-    }]);
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('register.WE_PROBLEM');
+            var loginProblem = $translate.instant('register.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+    }
+]);

@@ -1078,5 +1078,36 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 title: sendMessage
             });
         });
+
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('user_profile.WE_PROBLEM');
+            var loginProblem = $translate.instant('user_profile.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
+        });
     }
 ]);

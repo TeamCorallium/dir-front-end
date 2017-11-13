@@ -3,11 +3,13 @@
  */
 'use strict';
 
-app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies",
-    function ($scope, $state, $rootScope, RestService, $cookies) {
+app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
+    function ($scope, $state, $rootScope, RestService, $cookies, grwol) {
 
         $rootScope.OptionsEdit = false;
-        $cookies.remove("exploreUser", { path: '/' });
+        $cookies.remove("exploreUser", {
+            path: '/'
+        });
 
         if ($cookies.get('sessionid')) {
             $rootScope.connected = true;
@@ -53,29 +55,33 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.getProfiles = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                function (data) {
-                    $scope.profiles = data.results;
+                    function (data) {
+                        $scope.profiles = data.results;
 
-                    for (var i = 0; i < $scope.profiles.length; i++) {
-                        if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
-                            var avatarArray = $scope.profiles[i].avatar.split("/");
-                            $scope.profiles[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                        } else {
-                            $scope.profiles[i].avatar = 'assets/images/default-user.png';
+                        for (var i = 0; i < $scope.profiles.length; i++) {
+                            if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
+                                var avatarArray = $scope.profiles[i].avatar.split("/");
+                                $scope.profiles[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.profiles[i].avatar = 'assets/images/default-user.png';
+                            }
                         }
+                    },
+                    function (errResponse) {
+                        console.log(errResponse);
                     }
-                },
-                function (errResponse) {
-                    console.log(errResponse);
-                }
                 );
         };
 
         $scope.getProfiles();
 
         $scope.goToProfile = function (owner) {
-            $cookies.remove("exploreUser", { path: '/' });
-            $cookies.put('exploreUser', owner, { path: '/' });
+            $cookies.remove("exploreUser", {
+                path: '/'
+            });
+            $cookies.put('exploreUser', owner, {
+                path: '/'
+            });
 
             if ($cookies.get('exploreUser') == $cookies.get('username')) {
                 $state.go('profile');
@@ -86,7 +92,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.getTracks = function () {
             RestService.fetchTracking().then(
-                function (data) {                    
+                function (data) {
                     data = data.response;
 
                     $scope.tracks.totalVisits = data.total;
@@ -101,4 +107,36 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.getTracks();
 
-    }]);
+        $rootScope.$on('forbidden', function (event, data) {
+            if (RestService.getCookie('csrftoken') == null) {
+                RestService.fetchObjectByUrl(RestService.loginNext)
+                    .then(
+                        function (data) {
+                            console.log('get get ' + RestService.getCookie('csrftoken'));
+                        },
+                        function (errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+
+            } else {
+                console.log(RestService.getCookie('csrftoken'));
+            }
+
+            var weProblem = $translate.instant('home.WE_PROBLEM');
+            var loginProblem = $translate.instant('home.LOGIN_PROBLEM');
+            growl.error(weProblem, {
+                title: loginProblem
+            });
+        });
+
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            var serverNotFound = $translate.instant('home.SERVER_NOT_FOUND');
+            var networkConnection = $translate.instant('home.NETWORK_CONNECTION');
+            growl.error(serverNotFound, {
+                title: networkConnection
+            });
+        });
+
+    }
+]);
