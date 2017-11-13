@@ -180,7 +180,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div ng-if="indexShowMiddle == 0">
+                            <div ng-show="indexShowMiddle == 0">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS">
                                     <textarea ng-model="pSnippet" placeholder="{{ 'user_profile.ENTER_SNIPPET' | translate }}" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-15"></textarea>
                                     <div class="SnippetFooter col-xs-12 col-sm-12 col-md-12 col-lg-12 backgroundWhite">
@@ -248,7 +248,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div ng-if="indexShowMiddle == 1">
+                            <div ng-show="indexShowMiddle == 1">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="follower in followers">
@@ -285,7 +285,7 @@
                                     </ul>
                                 </div>
                             </div>
-                            <div ng-if="indexShowMiddle == 2">
+                            <div ng-show="indexShowMiddle == 2">
                                 <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="followTo in following">
