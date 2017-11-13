@@ -30,6 +30,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             snippets: []
         };
 
+        $scope.message = {
+            username: '',
+            user: '',
+            title: '',
+            body: '',
+            readed: ''
+        }
+
         $scope.myImage = '';
         $scope.myCroppedImage = '';
         $scope.currentPage = 1;
@@ -1039,5 +1047,24 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     }
                 );
         };
+
+        $scope.clipMessage = function (user) {
+            $scope.message.user = user;
+        };
+
+        $scope.leaveMessage = function (user) {
+            RestService.sendMessage($scope.user.username, $scope.message.user, $scope.message.title, $scope.message.body, false);
+        };
+
+        $rootScope.$on('SendMessage', function (event, data) {
+            $('#modalLeaveMessageUserProfile').modal('hide');
+            $scope.message.title = '';
+            $scope.message.body = '';
+            var sendCorrectly = $translate.instant('user_profile.SEND_CORRECTLY');
+            var sendMessage = $translate.instant('user_profile.SEND_MESSAGE');
+            growl.success(sendCorrectly, {
+                title: sendMessage
+            });
+        });
     }
 ]);

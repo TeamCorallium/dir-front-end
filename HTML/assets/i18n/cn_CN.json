@@ -105,7 +105,10 @@
     "SNIPPETS": "Snippets",
     "LEAVE_MESSAGE": "消息",
     "FOLLOW": "按照",
-    "CLAP": "拍"
+    "CLAP": "拍",
+    "UNFOLLOW": "追隨",
+    "SEND_MESSAGE": "發送消息",
+    "SEND_CORRECTLY": "消息寄正確"
   },
   "view_profile": {
     "RATING": "評級:",

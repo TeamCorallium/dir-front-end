@@ -105,7 +105,10 @@
     "SNIPPETS": "Snippets",
     "LEAVE_MESSAGE": "Escríbele",
     "FOLLOW": "Seguir",
-    "CLAP": "Aplaudir"
+    "CLAP": "Aplaudir",
+    "UNFOLLOW": "No seguir",
+    "SEND_MESSAGE": "Enviar mensaje",
+    "SEND_CORRECTLY": "Mensaje enviado correctamente"
   },
   "view_profile": {
     "RATING": "Valoración:",
