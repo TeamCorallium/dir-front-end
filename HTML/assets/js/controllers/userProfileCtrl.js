@@ -1014,7 +1014,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchFollowers($scope.user.id, true)
                 .then(
                     function (data) {
-                        $scope.followers = data.results;
+                        $scope.followers = data;
                     },
                     function (errResponse) {
                         console.log(errResponse);
@@ -1026,7 +1026,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchFollowing($scope.user.id, false)
                 .then(
                     function (data) {
-                        $scope.following = data.results;
+                        $scope.following = data;
                     },
                     function (errResponse) {
                         console.log(errResponse);
