@@ -10,6 +10,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         var exploreUser = '';
         $scope.activateClap = false;
+        $scope.activateFollow = false;
         $scope.mySelf = false;
         $scope.currentPage = 1;
         $scope.hasNext = '';
@@ -46,6 +47,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.TryClap = function () {
             RestService.takeClap($scope.user.id, true);
+        };
+
+        $scope.TryFollow = function () {
+            RestService.follow($scope.user.id, true);
         };
 
         $scope.getUser = function (username) {
@@ -109,6 +114,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         if ($rootScope.viewInbox) {
                             $scope.TryClap();
+                            $scope.TryFollow();
                         }
                     } else {
                         $state.go('home');
@@ -337,6 +343,42 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('testClapNo', function (event, data) {
             $scope.activateClap = true;
+        });
+
+        $rootScope.$on('testFollowYes', function (event, data) {
+            $scope.activateFollow = false;
+        });
+
+        $rootScope.$on('testFollowNo', function (event, data) {
+            $scope.activateFollow = true;
+        });
+
+        $scope.leaveMessage = function () {
+            if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
+                $('#modalLeaveMessage').modal('show');
+            } else {
+                $('#myModalLoginHome').modal('show');
+            }
+        };
+
+        $scope.makeClap = function () {
+            if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
+                $scope.clap();
+            } else {
+                $('#myModalLoginHome').modal('show');
+            }
+        };
+
+        $scope.follow = function () {
+            if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
+                RestService.follow($scope.user.id, false);
+            } else {
+                $('#myModalLoginHome').modal('show');
+            }
+        };        
+
+        $rootScope.$on('followSuccesfully', function (event, data) {
+            $scope.activateFollow = true;
         });
 
     }]);

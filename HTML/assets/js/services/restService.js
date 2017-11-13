@@ -21,6 +21,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var stocks = 'http://www.dir.com:8888/api/stocks/';
     var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
     var tracking = 'http://www.dir.com:8888/api/track/';
+    var followDir = 'http://www.dir.com:8888/api/follow/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -41,6 +42,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var stocks = 'http://www.dircoolstuff.com/api/stocks/';
     // var deleteUser = 'http://www.dircoolstuff.com/api/delete-user/';
     // var tracking = 'http://www.dircoolstuff.com/api/track/';
+    // var followDir = 'http://www.dircoolstuff.com/api/follow/';
 
     return {
         loginNext: loginNext,
@@ -71,10 +73,16 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'username': username, 'password': password, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'username': username,
+                    'password': password,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (result) {
                 if (result['users'] != undefined && $cookies.get('sessionid') != undefined) {
-                    $cookies.put('username', username, { path: '/' });
+                    $cookies.put('username', username, {
+                        path: '/'
+                    });
                     $rootScope.$broadcast('connected', username);
                 } else {
                     $rootScope.$broadcast('wrongLogin', username);
@@ -101,7 +109,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'username': username, 'password': password, 'email': email, 'pin': pin, 'first_name': "", 'last_name': "" }
+                data: {
+                    'username': username,
+                    'password': password,
+                    'email': email,
+                    'pin': pin,
+                    'first_name': "",
+                    'last_name': ""
+                }
             }).success(function (data) {
                 if (data['response'] == 'ok') {
                     var register = {
@@ -135,7 +150,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'title': title, 'body': body, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'title': title,
+                    'body': body,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('addsnippets');
             }).error(function (response) {
@@ -156,7 +175,12 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'name': name, 'url': url, 'type': type, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'name': name,
+                    'url': url,
+                    'type': type,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('addsocialnetwork');
             }).error(function (response) {
@@ -177,7 +201,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'pin': pin, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'pin': pin,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 if (data.response == 'ok') {
                     $rootScope.$broadcast('addTshirt');
@@ -185,7 +212,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('addTshirtErrorBad');
                 }
             }).error(function (response) {
-                
+
             });
         },
 
@@ -202,7 +229,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'color': color, 'size': size, 'code': code, 'pin': pin, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'color': color,
+                    'size': size,
+                    'code': code,
+                    'pin': pin,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('addStock');
             }).error(function (response) {
@@ -224,7 +257,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'id': id }
+                data: {
+                    'id': id
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
             }).error(function (response) {
@@ -245,7 +280,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'username': username, 'password': password, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'username': username,
+                    'password': password,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('changepassword');
             }).error(function (response) {
@@ -267,7 +306,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return str.join("&");
                 },
                 data: {
-                    'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'sender': sender,
+                    'receiver': receiver,
+                    'subject': subject,
+                    'body': body,
+                    'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
@@ -296,7 +339,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'id': id, 'test': test, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'id': id,
+                    'test': test,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 if (test && data.response == 'yes') {
                     $rootScope.$broadcast('testClapYes');
@@ -323,11 +370,45 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 },
-                data: { 'id': id, 'csrfmiddlewaretoken': $cookies.get('csrftoken') }
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
             }).success(function (data) {
                 $rootScope.$broadcast('deleteUser');
             }).error(function (response) {
                 $rootScope.$broadcast('deleteUserError');
+            });
+        },
+
+        follow: function (id, test) {
+            $http({
+                method: 'POST',
+                url: followDir,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    'id': id,
+                    'test': test,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function (data) {
+                if (test && data.response == 'yes') {
+                    $rootScope.$broadcast('testFollowYes');
+                } else if (test && data.response == 'not') {
+                    $rootScope.$broadcast('testFollowNo');
+                } else if (!test) {
+                    $rootScope.$broadcast('followSuccesfully', data.response);
+                }
+            }).error(function (response) {
+                $rootScope.$broadcast('followError');
             });
         },
 
@@ -359,8 +440,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'info': info, 'rating': rating, 'score': score, 'avatar': avatar,
-                    'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                    'info': info,
+                    'rating': rating,
+                    'score': score,
+                    'avatar': avatar,
+                    'fullname': fullname,
+                    'email': email,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
                 $rootScope.$broadcast('updateProfile');
@@ -397,8 +483,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'id': id, 'info': info, 'rating': rating, 'score': score,
-                    'fullname': fullname, 'email': email, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                    'id': id,
+                    'info': info,
+                    'rating': rating,
+                    'score': score,
+                    'fullname': fullname,
+                    'email': email,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
                 $rootScope.$broadcast('updateProfile');
@@ -435,7 +526,12 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'url': url, 'sender': sender, 'receiver': receiver, 'subject': subject, 'body': body, 'readed': readed,
+                    'url': url,
+                    'sender': sender,
+                    'receiver': receiver,
+                    'subject': subject,
+                    'body': body,
+                    'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
@@ -477,7 +573,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return fd;
                 },
                 data: {
-                    'title': '', 'body': body, 'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                    'title': '',
+                    'body': body,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function (data) {
                 $rootScope.$broadcast('snippetUpdated');
@@ -577,96 +675,96 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         fetchTshirt: function (code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchUserByUser: function (username) {
             return $http.get(users + "?username=" + username)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchTracking: function () {
             return $http.get(tracking + '?start=2014-11&end=2018-12')
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchMessages: function () {
             return $http.get(messages)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchSocialNetworks: function (username) {
             return $http.get(socialnetwork + "?username=" + username)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchSnippets: function (username) {
             return $http.get(snippets + "?username=" + username)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchObjectByUrl: function (url) {
             return $http.get(url)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
 
         fetchStocks: function () {
             return $http.get(stocks)
                 .then(
-                function (response) {
-                    return response.data;
-                },
-                function (errResponse) {
-                    return $q.reject(errResponse);
-                }
+                    function (response) {
+                        return response.data;
+                    },
+                    function (errResponse) {
+                        return $q.reject(errResponse);
+                    }
                 );
         },
     };
