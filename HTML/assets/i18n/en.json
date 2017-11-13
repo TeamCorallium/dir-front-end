@@ -111,7 +111,6 @@
     "RATING": "Rating:",
     "POPULAR_USER": "Popular Users",
     "SEE_MORE": "See more",
-    "LEAVE_MESSAGE": "Leave a Message",
     "CLOSE": "Close",
     "SEND_MESSAGE": "Send message",
     "CLAP": "claps",
@@ -123,7 +122,9 @@
     "ENTER_SUBJECT": "Enter subject",
     "ENTER_MESSAGE": "Enter your message",
     "UNEXPECTED_ERROR": "An unexpected error has occurred, please try again.",
-    "SEND_CORRECTLY": "Message sended correctly"
+    "SEND_CORRECTLY": "Message sended correctly",
+    "LEAVE_MESSAGE": "Message",
+    "FOLLOW": "Follow"
   },
   "inbox": {
     "BROWSE": "BROWSE",

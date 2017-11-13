@@ -123,7 +123,8 @@
     "ENTER_SUBJECT": "Ingrese el asunto",
     "ENTER_MESSAGE": "Ingrese el mensaje",
     "UNEXPECTED_ERROR": "Se ha producido un error inesperado, por favor inténtelo de nuevo.",
-    "SEND_CORRECTLY": "Mensaje enviado correctamente"
+    "SEND_CORRECTLY": "Mensaje enviado correctamente",
+    "FOLLOW": "Seguir"
   },
   "inbox": {
     "BROWSE": "Navegación",
