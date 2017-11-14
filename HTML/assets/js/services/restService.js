@@ -468,6 +468,40 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        // unfollow: function (id) {
+        //     $http({
+        //         method: 'POST',
+        //         url: followDir,
+        //         headers: {
+        //             'Content-Type': 'application/x-www-form-urlencoded'
+        //         },
+        //         transformRequest: function (obj) {
+        //             var str = [];
+        //             for (var p in obj)
+        //                 str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+        //             return str.join("&");
+        //         },
+        //         data: {
+        //             'id': id,
+        //             'csrfmiddlewaretoken': $cookies.get('csrftoken')
+        //         }
+        //     }).success(function (data) {
+        //         if (data.response == 'yes') {
+        //             $rootScope.$broadcast('testFollowYes');
+        //         } else if (data.response == 'not') {
+        //             $rootScope.$broadcast('testFollowNo');
+        //         }
+        //     }).error(function (response) {
+        //         if (status == 403) {
+        //             $rootScope.$broadcast('forbidden', username);
+        //         } else if (status == null) {
+        //             $rootScope.$broadcast('LoginNetworkConnectionError');
+        //         } else {
+        //             $rootScope.$broadcast('followError');
+        //         }
+        //     });
+        // },
+
         updateProfile: function (profileurl, info, rating, score, avatar, fullname, email) {
             $http({
                 method: 'PUT',

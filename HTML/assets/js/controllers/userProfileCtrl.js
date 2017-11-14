@@ -1109,5 +1109,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 title: networkConnection
             });
         });
+
+        $scope.follow = function (id, pos) {
+            console.log(id + "  id " + pos + " pos");
+            RestService.follow(id, false);
+            $scope.followers[pos].currentFollowed = false;
+        };
     }
 ]);
