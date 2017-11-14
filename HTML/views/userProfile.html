@@ -43,6 +43,13 @@
                         </span>
                     </div>
                 </div>
+                <div class="col-xs-12 margin-bottom-10">
+                    <hr class="tall margin-top-5 margin-bottom-5">
+                    <span ng-cloak>
+                        <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
+                        <label translate="user_profile.CLAP"></label>
+                    </span>
+                </div>
             </div>
         </div>
         <div class="col-xs-12">
@@ -113,6 +120,13 @@
                                         </span>
                                     </div>
                                 </div>
+                                <div ng-show="!EditInfoFlag" class="col-md-12 padding-0">
+                                    <hr class="tall margin-top-5 margin-bottom-5">
+                                    <span ng-cloak>
+                                        <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
+                                        <label translate="user_profile.CLAP"></label>
+                                    </span>
+                                </div>
                                 <form ng-show="EditInfoFlag" name="editUserMD" role="form" ng-controller="FormController">
                                     <h4 class="col-md-12 padding-0 margin-top-10">@{{user.username}}</h4>
                                     <input type="text" placeholder="{{ 'user_profile.ENTER_FULL_NAME' | translate }}" class="col-xs-12 padding-0 margin-top-10"
@@ -138,6 +152,13 @@
                                                 <span ng-style="{ 'width': getStars(user.rating) }"></span>
                                             </span>
                                         </div>
+                                    </div>
+                                    <div ng-show="EditInfoFlag" class="col-md-12 padding-0">
+                                        <hr class="tall margin-top-5 margin-bottom-5">
+                                        <span ng-cloak>
+                                            <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
+                                            <label translate="user_profile.CLAP"></label>
+                                        </span>
                                     </div>
                                 </form>
                             </div>
