@@ -138,7 +138,8 @@
     "WE_PROBLEM": "We detected some problems, please try again",
     "LOGIN_PROBLEM": "Login Problems",
     "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
-    "NETWORK_CONNECTION": "Network Connection"
+    "NETWORK_CONNECTION": "Network Connection",
+    "ALREADY_CLAPPED": "You have already clapped this user"
   },
   "inbox": {
     "BROWSE": "BROWSE",

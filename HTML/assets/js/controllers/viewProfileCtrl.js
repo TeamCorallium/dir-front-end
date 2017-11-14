@@ -358,6 +358,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
                 if (!$scope.activateClap) {
                     $scope.clap();
+                } else {
+                    var alreadyClapped = $translate.instant('view_profile.ALREADY_CLAPPED');
+                    growl.error(alreadyClapped);
                 }
             } else {
                 $('#myModalLoginHome').modal('show');
