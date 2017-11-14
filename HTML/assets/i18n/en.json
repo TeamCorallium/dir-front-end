@@ -134,6 +134,7 @@
     "SEND_CORRECTLY": "Message sended correctly",
     "LEAVE_MESSAGE": "Message",
     "FOLLOW": "Follow",
+    "UNFOLLOW": "Unfollow",
     "SEND_ERROR": "Error when attempting to send message",
     "WE_PROBLEM": "We detected some problems, please try again",
     "LOGIN_PROBLEM": "Login Problems",
