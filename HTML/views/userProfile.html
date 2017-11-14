@@ -319,8 +319,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a ng-show="followTo.fullname == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
-                                                    <a ng-hide="followTo.fullname == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
+                                                    <a ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
+                                                    <a ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
                                                     <h5>{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
                                                         <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
