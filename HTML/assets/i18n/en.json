@@ -123,6 +123,7 @@
     "CLOSE": "Close",
     "SEND_MESSAGE": "Send message",
     "CLAP": "claps",
+    "CLAP_BUTTON": "Clap",
     "CLAPPED": "Clapped",
     "PREVIOUS": "« Previous",
     "NEXT": "Next »",

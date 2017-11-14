@@ -124,6 +124,7 @@
     "CLOSE": "Cerrar",
     "SEND_MESSAGE": "Enviar mensaje",
     "CLAP": "palmadas",
+    "CLAP_BUTTON": "Palmada",
     "CLAPPED": "Aplaudido",
     "PREVIOUS": "« Anterior",
     "NEXT": "Siguiente »",
