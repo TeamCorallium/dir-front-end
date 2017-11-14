@@ -1672,3 +1672,7 @@ span.stars span {
 .borderTopFollower {
     border-top: 1px solid #E3E3E3;
 }
+
+.margin-left--15 {
+    margin-left: -15px;
+}
