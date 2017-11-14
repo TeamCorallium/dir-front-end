@@ -113,7 +113,8 @@
     "ENTER_MESSAGE": "Ingrese el mensaje",
     "SEND_ERROR": "Error al intentar enviar un mensaje",
     "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
-    "LOGIN_PROBLEM": "Problemas de inicio de sesión"
+    "LOGIN_PROBLEM": "Problemas de inicio de sesión",
+    "SEE_PROFILE": "Ver perfil"
   },
   "view_profile": {
     "RATING": "Valoración:",

@@ -113,7 +113,8 @@
     "ENTER_MESSAGE": "輸入您的留言",
     "SEND_ERROR": "嘗試發送郵件時出錯",
     "WE_PROBLEM": "我們發現了一些問題, 請再試一次.",
-    "LOGIN_PROBLEM": "登錄問題"
+    "LOGIN_PROBLEM": "登錄問題",
+    "SEE_PROFILE": "請參閱設定檔"
   },
   "view_profile": {
     "RATING": "評級:",
