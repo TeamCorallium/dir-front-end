@@ -1041,6 +1041,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 .then(
                     function (data) {
                         $scope.following = data;
+
+                        for (var i = 0; i < $scope.following.length; i++) {
+                            $scope.following[i].stateFollow = true;
+                        }
                     },
                     function (errResponse) {
                         console.log(errResponse);
@@ -1118,6 +1122,16 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.unfollow = function (id, pos) {
             RestService.unfollow(id);
             $scope.followers[pos].currentFollowed = false;
+        };
+
+        $scope.followFollowing = function (id, pos) {
+            RestService.follow(id, false);
+            $scope.following[pos].stateFollow = true;
+        };
+
+        $scope.unfollowFollowing = function (id, pos) {
+            RestService.unfollow(id);
+            $scope.following[pos].stateFollow = false;
         };
     }
 ]);
