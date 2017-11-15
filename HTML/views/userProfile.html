@@ -295,7 +295,7 @@
                                                             <img class="IconSnippet" ng-src="assets/images/followers.jpg">
                                                             <label class="pointerHover" translate="user_profile.FOLLOW"></label>
                                                         </a>
-                                                        <a ng-click="" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="follower.currentFollowed">
+                                                        <a ng-click="unfollow(follower.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="follower.currentFollowed">
                                                             <img class="IconSnippet" ng-src="assets/images/unfollow.png">
                                                             <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
                                                         </a>

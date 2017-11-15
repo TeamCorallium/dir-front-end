@@ -1111,11 +1111,13 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.follow = function (id, pos) {
-            console.log(id + "  id " + pos + " pos");
-            console.log($scope.followers[pos].currentFollowed + " pos");
             RestService.follow(id, false);
             $scope.followers[pos].currentFollowed = true;
-            console.log($scope.followers[pos].currentFollowed + " pos");
+        };
+
+        $scope.unfollow = function (id, pos) {
+            RestService.unfollow(id);
+            $scope.followers[pos].currentFollowed = false;
         };
     }
 ]);

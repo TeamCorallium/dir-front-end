@@ -23,6 +23,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var tracking = 'http://www.dir.com:8888/api/track/';
     var followDir = 'http://www.dir.com:8888/api/follow/';
     var followersDir = 'http://www.dir.com:8888/api/followers/';
+    var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -468,39 +469,39 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        // unfollow: function (id) {
-        //     $http({
-        //         method: 'POST',
-        //         url: followDir,
-        //         headers: {
-        //             'Content-Type': 'application/x-www-form-urlencoded'
-        //         },
-        //         transformRequest: function (obj) {
-        //             var str = [];
-        //             for (var p in obj)
-        //                 str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
-        //             return str.join("&");
-        //         },
-        //         data: {
-        //             'id': id,
-        //             'csrfmiddlewaretoken': $cookies.get('csrftoken')
-        //         }
-        //     }).success(function (data) {
-        //         if (data.response == 'yes') {
-        //             $rootScope.$broadcast('testFollowYes');
-        //         } else if (data.response == 'not') {
-        //             $rootScope.$broadcast('testFollowNo');
-        //         }
-        //     }).error(function (response) {
-        //         if (status == 403) {
-        //             $rootScope.$broadcast('forbidden', username);
-        //         } else if (status == null) {
-        //             $rootScope.$broadcast('LoginNetworkConnectionError');
-        //         } else {
-        //             $rootScope.$broadcast('followError');
-        //         }
-        //     });
-        // },
+        unfollow: function (id) {
+            $http({
+                method: 'POST',
+                url: unfollowDir,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function (obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    'id': id,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function (data) {
+                // if (data.response == 'yes') {
+                //     $rootScope.$broadcast('testFollowYes');
+                // } else if (data.response == 'not') {
+                //     $rootScope.$broadcast('testFollowNo');
+                // }
+            }).error(function (response) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('unfollowError');
+                }
+            });
+        },
 
         updateProfile: function (profileurl, info, rating, score, avatar, fullname, email) {
             $http({
