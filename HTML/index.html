@@ -67,6 +67,7 @@
                             <img src="assets/images/logo.png">
                         </a>
                         <div class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                            {{notificationCount}}
                             <notification-icon count='1' class="notificationXSIcon">
                                 <i class="ti-bell fontSize20"></i>
                             </notification-icon>
@@ -159,7 +160,7 @@
                         <ul class="nav navbar-nav navbar-right hidden-xs" ng-show="userdata.connected">
                             <li>
                                 <a ui-sref="notifications">
-                                    <notification-icon count='1' class="notificationXSIcon">
+                                    <notification-icon count='1' class="notificationMDIcon">
                                         <i class="ti-bell fontSize20"></i>
                                     </notification-icon>
                                     <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
