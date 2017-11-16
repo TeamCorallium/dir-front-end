@@ -55,6 +55,16 @@
             <div class="navbar navbar-default" role="navigation">
                 <!-- start: TOP NAVIGATION CONTAINER -->
                 <div class="container">
+                    <div class="navbar-header pull-right">
+                        <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
+                            <li>
+                                <a ui-sref="notifications">
+                                    <i class="ti-bell"></i>
+                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                     <div class="navbar-header">
                         <!-- start: RESPONSIVE MENU TOGGLER -->
                         <a class="pull-left menu-toggler hidden-md hidden-lg mobile-button" id="menu-toggler" data-toggle="collapse" href=".navbar-collapse">
@@ -183,14 +193,6 @@
                         </div>
                         <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
                     </div>
-                    <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
-                        <li>
-                            <a ui-sref="notifications">
-                                <i class="ti-bell"></i>
-                                <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
-                            </a>
-                        </li>
-                    </ul>
                     <!-- end: NAVBAR -->
                 </div>
                 <!-- end: TOP NAVIGATION CONTAINER -->
