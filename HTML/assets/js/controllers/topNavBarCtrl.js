@@ -7,7 +7,6 @@
 app.controller('TopNavBarCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
 
-        $rootScope.OptionsEdit = false;
         $scope.notificationCount = 1;
 
     }

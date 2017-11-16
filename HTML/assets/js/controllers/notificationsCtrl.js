@@ -6,7 +6,7 @@
 app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
 
-        $rootScope.OptionsEdit = true;
+        $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
             path: '/'
         });
