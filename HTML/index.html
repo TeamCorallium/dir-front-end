@@ -131,6 +131,14 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="hidden-xs">
+                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                                    <notification-icon count='notificationCount' class="notificationMDIcon">
+                                        <i class="ti-bell fontSize20"></i>
+                                    </notification-icon>
+                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                                </a>
+                            </li>
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle">
@@ -153,16 +161,6 @@
                                 <a>
                                     <i class="ti-shopping-cart"></i>
                                     <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right hidden-xs" ng-show="userdata.connected">
-                            <li>
-                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                                    <notification-icon count='notificationCount' class="notificationMDIcon">
-                                        <i class="ti-bell fontSize20"></i>
-                                    </notification-icon>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
                                 </a>
                             </li>
                         </ul>
