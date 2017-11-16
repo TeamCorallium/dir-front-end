@@ -1691,6 +1691,10 @@ span.stars span {
     font-size: 20px !important;
 }
 
+.fontSize18 {
+    font-size: 18px !important;
+}
+
 .notificationXSIcon {
     position: absolute !important;
     left: 40px !important;

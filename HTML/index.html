@@ -131,10 +131,10 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="hidden-xs">
+                            <li class="hidden-xs" ng-show="userdata.connected">
                                 <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
                                     <notification-icon count='notificationCount' class="notificationMDIcon">
-                                        <i class="ti-bell fontSize20"></i>
+                                        <i class="ti-bell fontSize18"></i>
                                     </notification-icon>
                                     <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
                                 </a>
