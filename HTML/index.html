@@ -151,14 +151,6 @@
                                 </a>
                             </li>
                         </ul>
-                        <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
-                            <li>
-                                <a ui-sref="notifications">
-                                    <i class="ti-bell"></i>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
-                                </a>
-                            </li>
-                        </ul>
                         <!-- start: TOP BAR SOCIAL ICONS -->
                         <div class="social-icons hidden-xs">
                             <ul class="nav navbar-nav navbar-right padding-top-3">
@@ -191,6 +183,14 @@
                         </div>
                         <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
                     </div>
+                    <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
+                        <li>
+                            <a ui-sref="notifications">
+                                <i class="ti-bell"></i>
+                                <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                            </a>
+                        </li>
+                    </ul>
                     <!-- end: NAVBAR -->
                 </div>
                 <!-- end: TOP NAVIGATION CONTAINER -->
