@@ -1,7 +1,7 @@
 'use strict';
 
 app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRED', '$httpProvider',
-    function ($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires, $httpProvider) {
+    function($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires, $httpProvider) {
 
         app.controller = $controllerProvider.register;
         app.directive = $compileProvider.directive;
@@ -62,6 +62,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/admin',
             templateUrl: 'views/adminView.html',
             resolve: loadSequence('adminViewCtrl')
+        }).state('notifications', {
+            url: '/notifications',
+            templateUrl: 'views/notifications.html',
+            resolve: loadSequence('notificationsCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
@@ -69,7 +73,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             var _args = arguments;
             return {
                 deps: ['$ocLazyLoad', '$q',
-                    function ($ocLL, $q) {
+                    function($ocLL, $q) {
                         var promise = $q.when(1);
                         for (var i = 0, len = _args.length; i < len; i++) {
                             promise = promiseThen(_args[i]);
@@ -80,7 +84,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
                             if (typeof _arg == 'function')
                                 return promise.then(_arg);
                             else
-                                return promise.then(function () {
+                                return promise.then(function() {
                                     var nowLoad = requiredData(_arg);
                                     if (!nowLoad)
                                         return $.error('Route resolve: Bad resource name [' + _arg + ']');
@@ -102,7 +106,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
     }
 ]);
 
-app.config(["$httpProvider", function ($httpProvider) {
+app.config(["$httpProvider", function($httpProvider) {
 
     function buildKey(parentKey, subKey) {
         return parentKey + "[" + subKey + "]";
@@ -115,25 +119,25 @@ app.config(["$httpProvider", function ($httpProvider) {
     }
 
     function join(array) {
-        return array.filter(function (entry) {
+        return array.filter(function(entry) {
             return entry;
         }).join("&");
     }
 
     function arrayToQueryString(parentKey, array) {
-        return join(array.map(function (value, subKey) {
+        return join(array.map(function(value, subKey) {
             return toQueryString(buildObject(buildKey(parentKey, subKey), value));
         }));
     }
 
     function objectToQueryString(parentKey, object) {
-        return join(Object.keys(object).map(function (subKey) {
+        return join(Object.keys(object).map(function(subKey) {
             return toQueryString(buildObject(buildKey(parentKey, subKey), object[subKey]));
         }));
     }
 
     function toQueryString(input) {
-        return join(Object.keys(input).map(function (key) {
+        return join(Object.keys(input).map(function(key) {
             var value = input[key];
             if (value instanceof Array) {
                 return arrayToQueryString(key, value);
@@ -151,9 +155,9 @@ app.config(["$httpProvider", function ($httpProvider) {
         return null !== input && "object" === typeof input && "[object File]" !== String(input);
     }
 
-    var interceptor = [function () {
+    var interceptor = [function() {
         return {
-            request: function (config) {
+            request: function(config) {
                 if (0 <= ["post", "put", "patch"].indexOf(config.method.toLowerCase()) && isQueryStringEligible(config.data)) {
                     config.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=utf-8";
                     config.data = toQueryString(config.data);

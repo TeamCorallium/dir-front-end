@@ -66,6 +66,10 @@
                         <a ui-sref="home" class="navbar-brand" id="floatLogo">
                             <img src="assets/images/logo.png">
                         </a>
+                        <a ui-sref="notifications" class="navbar-brand">
+                            <i class="ti-bell"></i>
+                            <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                        </a>
                         <!-- end: LOGO -->
                     </div>
                     <!-- start: NAVBAR -->
@@ -220,21 +224,18 @@
                                     <label for="emailHome" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak translate="index.EMAIL_INVALID"></div>
-                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''"
-                                        id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true"
-                                        ng-model="emailHome">
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="emailHome">
                                 </div>
                                 <div class="form-group">
                                     <label for="username" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''"
-                                        id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="username">
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="username">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
-                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''"
-                                        id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="password">
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
+                                        ng-model="password">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                     <div class="strength-meter">
                                         <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
@@ -242,16 +243,14 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
-                                    <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="againPassHome"
-                                        pw-check="password">
+                                    <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="againPassHome" pw-check="password">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="pin" translate="index.PIN"></label>
-                                    <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''"
-                                        placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
+                                    <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
                                         required>
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
@@ -261,8 +260,7 @@
                             </form>
                         </div>
                         <div class="modal-footer padding-15">
-                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
                                 <i class="ti-write"></i>
                                 <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
                             </a>
@@ -293,20 +291,17 @@
                                     <label for="email" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak ng-cloak translate="index.EMAIL_INVALID"></div>
-                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''"
-                                        id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="email">
+                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="email">
                                 </div>
                                 <div class="form-group">
                                     <label for="user" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''"
-                                        id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="user">
+                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="user">
                                 </div>
                                 <div class="form-group">
                                     <label for="pass" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
-                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''"
-                                        id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="pass">
+                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="pass">
                                     <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                     <div class="strength-meter">
                                         <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
@@ -314,8 +309,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
-                                    <input type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" ng-model="pass_verify"
-                                        pw-check="pass">
+                                    <input type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" ng-model="pass_verify" pw-check="pass">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
@@ -327,8 +321,7 @@
                             </form>
                         </div>
                         <div class="modal-footer padding-15">
-                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid"
-                                ng-click="registerModalHome(email, user, pass, pass_verify)">
+                            <a class="btn btn-primary ButtonRadius pull-right" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
                                 <i class="ti-write"></i>
                                 <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
                             </a>
@@ -358,9 +351,7 @@
                                 <div class="form-group">
                                     <label for="usernameHome" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''"
-                                        id="usernameHome" name="usernameHome" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true"
-                                        ng-model="usernameHome">
+                                    <input type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''" id="usernameHome" name="usernameHome" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="usernameHome">
                                 </div>
                                 <div class="form-group">
                                     <label for="pwdHome" translate="index.PASSWORD"></label>
@@ -381,7 +372,7 @@
                     </div>
                 </div>
             </div>
-            <!-- end: MODAL LOGIN HOME-->            
+            <!-- end: MODAL LOGIN HOME-->
 
             <a id="scroll-top" href="#">
                 <i class="fa fa-angle-up"></i>
@@ -504,7 +495,7 @@
     <script src="../bower_components/ng-emoticons/src/ng-emoticons.js"></script>
     <!-- end: ANGULAR EMOTICONS -->
     <script>
-        jQuery(document).ready(function () {
+        jQuery(document).ready(function() {
             Main.init();
             Index.init();
         });
@@ -516,7 +507,7 @@
             if (charCode > 31 && (charCode < 48 || charCode > 57))
                 return false;
             return true;
-        }    
+        }
     </script>
 </body>
 
