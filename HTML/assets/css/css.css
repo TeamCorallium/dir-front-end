@@ -1690,3 +1690,12 @@ span.stars span {
 .fontSize20 {
     font-size: 20px !important;
 }
+
+.notificationXSIcon {
+    position: absolute !important;
+    left: 40px !important;
+    line-height: 14px !important;
+    font-size: 11px !important;
+    margin-top: 10px;
+    margin-left: 10px;
+}

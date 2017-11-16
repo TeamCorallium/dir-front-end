@@ -67,10 +67,7 @@
                             <img src="assets/images/logo.png">
                         </a>
                         <div class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                            <!-- <i class="ti-bell fontSize20"></i> -->
-                            <!-- <notification-icon count='1'></notification-icon> -->
-                            <notification-icon count='1'>
-                                <!-- <i class="fa fa-envelope-o fa-3x"></i> -->
+                            <notification-icon count='1' class="notificationXSIcon">
                                 <i class="ti-bell fontSize20"></i>
                             </notification-icon>
                         </div>
@@ -162,7 +159,9 @@
                         <ul class="nav navbar-nav navbar-right hidden-xs" ng-show="userdata.connected">
                             <li>
                                 <a ui-sref="notifications">
-                                    <i class="ti-bell"></i>
+                                    <notification-icon count='1' class="notificationXSIcon">
+                                        <i class="ti-bell fontSize20"></i>
+                                    </notification-icon>
                                     <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
                                 </a>
                             </li>
