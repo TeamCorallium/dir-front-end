@@ -151,22 +151,14 @@
                                 </a>
                             </li>
                         </ul>
-                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
-                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                            <div class="arrow-left"></div>
-                            <div class="arrow-right"></div>
-                        </div>
-                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
-                    </div>
-                    <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
-                        <li>
-                            <a ui-sref="notifications">
-                                <i class="ti-bell"></i>
-                                <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
-                            </a>
-                        </li>
-                    </ul>
-                    <div class="navbar-collapse collapse margin-left-0">
+                        <ul class="nav navbar-nav navbar-right" ng-show="userdata.connected">
+                            <li>
+                                <a ui-sref="notifications">
+                                    <i class="ti-bell"></i>
+                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                                </a>
+                            </li>
+                        </ul>
                         <!-- start: TOP BAR SOCIAL ICONS -->
                         <div class="social-icons hidden-xs">
                             <ul class="nav navbar-nav navbar-right padding-top-3">
@@ -191,6 +183,13 @@
                             </ul>
                         </div>
                         <!-- end: TOP BAR SOCIAL ICONS -->
+
+                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                            <div class="arrow-left"></div>
+                            <div class="arrow-right"></div>
+                        </div>
+                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
                     </div>
                     <!-- end: NAVBAR -->
                 </div>
