@@ -1684,6 +1684,7 @@ span.stars span {
 .styleNotification {
     margin-top: 5px !important;
     float: left !important;
+    margin-left: 10px !important;
 }
 
 .fontSize20 {

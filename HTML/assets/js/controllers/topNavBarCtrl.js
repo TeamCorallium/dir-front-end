@@ -4,8 +4,10 @@
 
 'use strict';
 
-app.controller('TopNavBarCtrl', ["$scope", "localStorageService", "$rootScope",
-    function ($scope, localStorageService, $rootScope) {
+app.controller('TopNavBarCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate",
+    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
 
+        $scope.notificationCount = 1;
 
-    }]);
+    }
+]);
