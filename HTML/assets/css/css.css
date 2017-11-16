@@ -1676,3 +1676,16 @@ span.stars span {
 .margin-left--15 {
     margin-left: -15px;
 }
+
+.padding-top3 {
+    padding-top: 3px !important;
+}
+
+.styleNotification {
+    margin-top: 5px !important;
+    float: left !important;
+}
+
+.fontSize20 {
+    font-size: 20px !important;
+}
