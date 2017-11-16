@@ -66,139 +66,142 @@
                         <a ui-sref="home" class="navbar-brand" id="floatLogo">
                             <img src="assets/images/logo.png">
                         </a>
-                        <a class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                        <div class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
                             <i class="ti-bell fontSize20"></i>
-                            <notification-icon class="positionInheritIcon" count='1'></notification-icon>
-                        </a>
-                        <!-- end: LOGO -->
-                    </div>
-                    <!-- start: NAVBAR -->
-                    <div class="navbar-collapse collapse margin-left-0">
-                        <ul class="nav navbar-nav navbar-right">
-                            <li class="dropdown">
-                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                                <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
-                                    <i class="ti-user"></i> {{userdata.username}}</a>
-                                <ul class="dropdown-menu" ng-controller="LoginCtrl">
-                                    <li ng-show="(userdata.connected)">
-                                        <a ui-sref="profile">
-                                            <i class="ti-id-badge padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.VIEW_PROFILE"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
-                                        <a data-toggle="modal" data-target="#modalChangePassword">
-                                            <i class="ti-key padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.CHANGE_PASSWORD"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
-                                        <a data-toggle="modal" data-target="#modalAddTShirt">
-                                            <i class="ti-plus padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.ADD_TSHIRT"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-show="(userdata.connected)">
-                                        <a ng-show="userdata.connected" ui-sref="inbox">
-                                            <i class="ti-import padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.INBOX"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalLoginHome">
-                                            <i class="ti-shift-right padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_IN"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-hide="userdata.connected">
-                                        <a data-toggle="modal" data-target="#myModalRegisterHome">
-                                            <i class="ti-write padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.REGISTER"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-show="userdata.connected && administrator">
-                                        <a ui-sref="admin">
-                                            <i class="ti-settings padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.MANAGE_PAGE"></label>
-                                        </a>
-                                    </li>
-                                    <li ng-show="userdata.connected">
-                                        <a ng-click="logout()">
-                                            <i class="ti-shift-left padding-right-10"></i>
-                                            <label class="margin-bottom-0 pointerHover" translate="index.LOG_OUT"></label>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
-                                <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
-                                <a data-toggle="dropdown" class="dropdown-toggle">
-                                    <i class="ti-world"></i>
-                                    <label translate="index.LANGUAGE"></label>
-                                </a>
-                                <ul class="dropdown-menu" ng-controller="LanguageCtrl">
-                                    <li ng-click="language.set('en', $event)">
-                                        <a translate="index.ENGLISH"></a>
-                                    </li>
-                                    <li ng-click="language.set('cn_CN', $event)">
-                                        <a translate="index.CHINESE"></a>
-                                    </li>
-                                    <li ng-click="language.set('es_ES', $event)">
-                                        <a translate="index.SPANISH"></a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <a>
-                                    <i class="ti-shopping-cart"></i>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label>
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right hidden-xs" ng-show="userdata.connected">
-                            <li>
-                                <a ui-sref="notifications">
-                                    <i class="ti-bell"></i>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
-                                </a>
-                            </li>
-                        </ul>
-                        <!-- start: TOP BAR SOCIAL ICONS -->
-                        <div class="social-icons hidden-xs">
-                            <ul class="nav navbar-nav navbar-right padding-top-3">
-                                <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
-                                    <a href="http://www.twitter.com" target="_blank"></a>
+                            <!-- <notification-icon count='1'></notification-icon> -->
+                            <notification-icon animation='grow' ng-init="notificationCount = 0" count='notificationCount'>
+                                <i class="fa fa-envelope-o fa-3x"></i>
+                            </notification-icon>
+                            </a>
+                            <!-- end: LOGO -->
+                        </div>
+                        <!-- start: NAVBAR -->
+                        <div class="navbar-collapse collapse margin-left-0">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li class="dropdown">
+                                    <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                    <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
+                                        <i class="ti-user"></i> {{userdata.username}}</a>
+                                    <ul class="dropdown-menu" ng-controller="LoginCtrl">
+                                        <li ng-show="(userdata.connected)">
+                                            <a ui-sref="profile">
+                                                <i class="ti-id-badge padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.VIEW_PROFILE"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                            <a data-toggle="modal" data-target="#modalChangePassword">
+                                                <i class="ti-key padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.CHANGE_PASSWORD"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                            <a data-toggle="modal" data-target="#modalAddTShirt">
+                                                <i class="ti-plus padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.ADD_TSHIRT"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-show="(userdata.connected)">
+                                            <a ng-show="userdata.connected" ui-sref="inbox">
+                                                <i class="ti-import padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.INBOX"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-hide="userdata.connected">
+                                            <a data-toggle="modal" data-target="#myModalLoginHome">
+                                                <i class="ti-shift-right padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.LOG_IN"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-hide="userdata.connected">
+                                            <a data-toggle="modal" data-target="#myModalRegisterHome">
+                                                <i class="ti-write padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.REGISTER"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-show="userdata.connected && administrator">
+                                            <a ui-sref="admin">
+                                                <i class="ti-settings padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.MANAGE_PAGE"></label>
+                                            </a>
+                                        </li>
+                                        <li ng-show="userdata.connected">
+                                            <a ng-click="logout()">
+                                                <i class="ti-shift-left padding-right-10"></i>
+                                                <label class="margin-bottom-0 pointerHover" translate="index.LOG_OUT"></label>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
-                                    <a href="http://dribbble.com" target="_blank"></a>
+                                <li class="dropdown">
+                                    <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
+                                    <a data-toggle="dropdown" class="dropdown-toggle">
+                                        <i class="ti-world"></i>
+                                        <label translate="index.LANGUAGE"></label>
+                                    </a>
+                                    <ul class="dropdown-menu" ng-controller="LanguageCtrl">
+                                        <li ng-click="language.set('en', $event)">
+                                            <a translate="index.ENGLISH"></a>
+                                        </li>
+                                        <li ng-click="language.set('cn_CN', $event)">
+                                            <a translate="index.CHINESE"></a>
+                                        </li>
+                                        <li ng-click="language.set('es_ES', $event)">
+                                            <a translate="index.SPANISH"></a>
+                                        </li>
+                                    </ul>
                                 </li>
-                                <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
-                                    <a href="http://facebook.com" target="_blank"></a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
-                                    <a href="http://google.com" target="_blank"></a>
-                                </li>
-                                <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
-                                    <a href="http://linkedin.com" target="_blank"></a>
-                                </li>
-                                <li class="padding-top-10 padding-left-15 padding-right-15">
-                                    <h4 class="cursordefault">|</h4>
+                                <li>
+                                    <a>
+                                        <i class="ti-shopping-cart"></i>
+                                        <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label>
+                                    </a>
                                 </li>
                             </ul>
-                        </div>
-                        <!-- end: TOP BAR SOCIAL ICONS -->
+                            <ul class="nav navbar-nav navbar-right hidden-xs" ng-show="userdata.connected">
+                                <li>
+                                    <a ui-sref="notifications">
+                                        <i class="ti-bell"></i>
+                                        <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
+                                    </a>
+                                </li>
+                            </ul>
+                            <!-- start: TOP BAR SOCIAL ICONS -->
+                            <div class="social-icons hidden-xs">
+                                <ul class="nav navbar-nav navbar-right padding-top-3">
+                                    <li data-placement="bottom" data-original-title="Twitter" class="social-twitter tooltips">
+                                        <a href="http://www.twitter.com" target="_blank"></a>
+                                    </li>
+                                    <li data-placement="bottom" data-original-title="Dribbble" class="social-dribbble tooltips">
+                                        <a href="http://dribbble.com" target="_blank"></a>
+                                    </li>
+                                    <li data-placement="bottom" data-original-title="Facebook" class="social-facebook tooltips">
+                                        <a href="http://facebook.com" target="_blank"></a>
+                                    </li>
+                                    <li data-placement="bottom" data-original-title="Google" class="social-google tooltips">
+                                        <a href="http://google.com" target="_blank"></a>
+                                    </li>
+                                    <li data-placement="bottom" data-original-title="LinkedIn" class="social-linkedin tooltips">
+                                        <a href="http://linkedin.com" target="_blank"></a>
+                                    </li>
+                                    <li class="padding-top-10 padding-left-15 padding-right-15">
+                                        <h4 class="cursordefault">|</h4>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- end: TOP BAR SOCIAL ICONS -->
 
-                        <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
-                        <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
-                            <div class="arrow-left"></div>
-                            <div class="arrow-right"></div>
+                            <!-- start: MENU TOGGLER FOR MOBILE DEVICES -->
+                            <div class="close-handle visible-sm-block visible-xs-block menu-toggler" data-toggle="collapse" href=".navbar-collapse">
+                                <div class="arrow-left"></div>
+                                <div class="arrow-right"></div>
+                            </div>
+                            <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
                         </div>
-                        <!-- end: MENU TOGGLER FOR MOBILE DEVICES -->
+                        <!-- end: NAVBAR -->
                     </div>
-                    <!-- end: NAVBAR -->
-                </div>
-                <!-- end: TOP NAVIGATION CONTAINER -->
-                <!-- <div id="overlay-search">
+                    <!-- end: TOP NAVIGATION CONTAINER -->
+                    <!-- <div id="overlay-search">
                     <form method="get" action="search.html">
                         <input type="text" placeholder="Type &amp; Hit Enter.." value="" class="form-control" name="q">
                     </form>
@@ -206,7 +209,7 @@
                         <i class="ti-close"></i>
                     </a>
                 </div> -->
-            </div>
+                </div>
         </header>
         <div class="app-content">
             <div ui-view></div>
@@ -416,107 +419,107 @@
             </footer>
         </div>
         <!-- end: APP CONTENT -->
-    </div>
-    <!-- start: MAIN JAVASCRIPTS -->
-    <script src="../bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
-    <script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
-    <script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
-    <script src="../bower_components/slick.js/slick/slick.min.js"></script>
-    <script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
-    <script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
-    <script src="../bower_components/countto/jquery.countTo.js"></script>
-    <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
-    <script src="assets/js/main.js"></script>
-    <script src="assets/js/index.js"></script>
-    <!-- end: MAIN JAVASCRIPTS -->
+        </div>
+        <!-- start: MAIN JAVASCRIPTS -->
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="../bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js"></script>
+        <script src="../bower_components/sticky-kit/jquery.sticky-kit.min.js"></script>
+        <script src="../bower_components/jquery.appear.js/jquery.appear.js"></script>
+        <script src="../bower_components/slick.js/slick/slick.min.js"></script>
+        <script src="../bower_components/swiper/dist/js/swiper.jquery.min.js"></script>
+        <script src="../bower_components/jquery.stellar/jquery.stellar.min.js"></script>
+        <script src="../bower_components/countto/jquery.countTo.js"></script>
+        <script src="../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/index.js"></script>
+        <!-- end: MAIN JAVASCRIPTS -->
 
-    <!-- start: ANGULAR SCRIPTS-->
-    <script src="../bower_components/angular/angular.js"></script>
-    <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
-    <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
-    <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
-    <script src="../bower_components/angular-animate/angular-animate.js"></script>
-    <script src="../bower_components/ng-timeago/ngtimeago.js"></script>
-    <script src="../bower_components/zxcvbn/dist/zxcvbn.js"></script>
-    <script src="../bower_components/ngSweetAlert/SweetAlert.min.js"></script>
-    <script src="../bower_components/sweetalert/lib/sweet-alert.js"></script>
-    <script src="../bower_components/angular-notification-icons/dist/angular-notification-icons.min.js"></script>
-    <script src="assets/js/SweetAlertAux.js"></script>
-    <script src="assets/app.js"></script>
-    <script src="assets/main.js"></script>
-    <script src="assets/config.constant.js"></script>
-    <script src="assets/config.router.js"></script>
-    <!-- end: ANGULAR SCRIPTS-->
+        <!-- start: ANGULAR SCRIPTS-->
+        <script src="../bower_components/angular/angular.js"></script>
+        <script src="../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+        <script src="../bower_components/angular-sanitize/angular-sanitize.js"></script>
+        <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+        <script src="../bower_components/angular-cookies/angular-cookies.js"></script>
+        <script src="../bower_components/angular-count-to/build/angular-count-to.min.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.js"></script>
+        <script src="../bower_components/ng-timeago/ngtimeago.js"></script>
+        <script src="../bower_components/zxcvbn/dist/zxcvbn.js"></script>
+        <script src="../bower_components/ngSweetAlert/SweetAlert.min.js"></script>
+        <script src="../bower_components/sweetalert/lib/sweet-alert.js"></script>
+        <script src="../bower_components/angular-notification-icons/dist/angular-notification-icons.min.js"></script>
+        <script src="assets/js/SweetAlertAux.js"></script>
+        <script src="assets/app.js"></script>
+        <script src="assets/main.js"></script>
+        <script src="assets/config.constant.js"></script>
+        <script src="assets/config.router.js"></script>
+        <!-- end: ANGULAR SCRIPTS-->
 
-    <!-- start: CROPPER CONTROLLERS-->
-    <!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
-    <!-- start: CROPPER CONTROLLERS-->
+        <!-- start: CROPPER CONTROLLERS-->
+        <!--<script src="../bower_components/angular-image-crop/image-cropper.js"></script>-->
+        <!-- start: CROPPER CONTROLLERS-->
 
-    <!-- oclazyload -->
-    <script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
+        <!-- oclazyload -->
+        <script src="../bower_components/oclazyload/dist/ocLazyLoad.js"></script>
 
-    <!-- start: SERVICES-->
-    <script src="assets/js/services/restService.js"></script>
-    <!-- end: SERVICES-->
+        <!-- start: SERVICES-->
+        <script src="assets/js/services/restService.js"></script>
+        <!-- end: SERVICES-->
 
-    <!-- start: SPINNER CONTROLLERS-->
-    <script src="../bower_components/spin.js/spin.js"></script>
-    <script src="../bower_components/angular-spinner/angular-spinner.js"></script>
-    <script src="../bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
-    <!-- end: SPINNER CONTROLLERS-->
+        <!-- start: SPINNER CONTROLLERS-->
+        <script src="../bower_components/spin.js/spin.js"></script>
+        <script src="../bower_components/angular-spinner/angular-spinner.js"></script>
+        <script src="../bower_components/angular-loading-spinner/angular-loading-spinner.js"></script>
+        <!-- end: SPINNER CONTROLLERS-->
 
-    <!-- start: TOASTER CONTROLLERS -->
-    <script src="../bower_components/angular-growl-v2/build/angular-growl.js"></script>
-    <!-- end: TOASTER CONTROLLERS -->
+        <!-- start: TOASTER CONTROLLERS -->
+        <script src="../bower_components/angular-growl-v2/build/angular-growl.js"></script>
+        <!-- end: TOASTER CONTROLLERS -->
 
-    <!-- start: CONTROLLERS-->
-    <script src="assets/js/controllers/loginCtrl.js"></script>
-    <script src="assets/js/controllers/closeCtrl.js"></script>
-    <script src="assets/js/controllers/registrationCtrl.js"></script>
-    <script src="assets/js/controllers/topNavBarCtrl.js"></script>
-    <script src="assets/js/controllers/languageCtrl.js"></script>
-    <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
-    <script src="assets/js/filters/htmlToPlaintext.js"></script>
-    <!-- end: CONTROLLERS-->
+        <!-- start: CONTROLLERS-->
+        <script src="assets/js/controllers/loginCtrl.js"></script>
+        <script src="assets/js/controllers/closeCtrl.js"></script>
+        <script src="assets/js/controllers/registrationCtrl.js"></script>
+        <script src="assets/js/controllers/topNavBarCtrl.js"></script>
+        <script src="assets/js/controllers/languageCtrl.js"></script>
+        <script src="../node_modules/ng-file-upload/dist/ng-file-upload.min.js"></script>
+        <script src="assets/js/filters/htmlToPlaintext.js"></script>
+        <!-- end: CONTROLLERS-->
 
-    <!-- start: ANGULAR NngImgCrop-->
-    <script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
-    <!-- end: ANGULAR NngImgCrop-->
+        <!-- start: ANGULAR NngImgCrop-->
+        <script src="../bower_components/ng-img-crop/compile/minified/ng-img-crop.js"></script>
+        <!-- end: ANGULAR NngImgCrop-->
 
-    <!-- start: CONTROLLERS ANIMATIONS-->
-    <script src="assets/js/animations.js"></script>
-    <!-- end: CONTROLLERS ANIMATIONS-->
+        <!-- start: CONTROLLERS ANIMATIONS-->
+        <script src="assets/js/animations.js"></script>
+        <!-- end: CONTROLLERS ANIMATIONS-->
 
-    <!-- start: ANGULAR TRANSLATE -->
-    <script src="../bower_components/angular-translate/angular-translate.js"></script>
-    <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
-    <script src="../bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
-    <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
-    <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
-    <!-- end: ANGULAR TRANSLATE -->
+        <!-- start: ANGULAR TRANSLATE -->
+        <script src="../bower_components/angular-translate/angular-translate.js"></script>
+        <script src="../bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+        <script src="../bower_components/angular-translate-loader-url/angular-translate-loader-url.js"></script>
+        <script src="../bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+        <script src="../bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+        <!-- end: ANGULAR TRANSLATE -->
 
-    <!-- start: ANGULAR EMOTICONS -->
-    <script src="../bower_components/ng-emoticons/src/ng-emoticons.js"></script>
-    <!-- end: ANGULAR EMOTICONS -->
-    <script>
-        jQuery(document).ready(function() {
-            Main.init();
-            Index.init();
-        });
-    </script>
+        <!-- start: ANGULAR EMOTICONS -->
+        <script src="../bower_components/ng-emoticons/src/ng-emoticons.js"></script>
+        <!-- end: ANGULAR EMOTICONS -->
+        <script>
+            jQuery(document).ready(function() {
+                Main.init();
+                Index.init();
+            });
+        </script>
 
-    <script>
-        function isNumberKey(evt) {
-            var charCode = (evt.which) ? evt.which : event.keyCode
-            if (charCode > 31 && (charCode < 48 || charCode > 57))
-                return false;
-            return true;
-        }
-    </script>
+        <script>
+            function isNumberKey(evt) {
+                var charCode = (evt.which) ? evt.which : event.keyCode
+                if (charCode > 31 && (charCode < 48 || charCode > 57))
+                    return false;
+                return true;
+            }
+        </script>
 </body>
 
 </html>
