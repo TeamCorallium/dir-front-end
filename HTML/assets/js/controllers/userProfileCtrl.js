@@ -54,9 +54,33 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.againPassHome = '';
         $scope.following = [];
         $scope.followers = [];
-        $scope.limitSocialNetwork = 4;
+        $scope.limitSocialNetwork = 12;
 
         $scope.indexShowMiddle = 0;
+
+        if ($(window).width() >= 1350) {
+            $scope.limitSocialNetwork = 12;
+        } else if ($(window).width() >= 992) {
+            $scope.limitSocialNetwork = 8;
+        } else if ($(window).width() >= 768) {
+            $scope.limitSocialNetwork = 6;
+        } else {
+            $scope.limitSocialNetwork = 4;
+        }
+
+        $(window).on("resize.doResize", function() {
+            $scope.$apply(function() {
+                if ($(window).width() >= 1350) {
+                    $scope.limitSocialNetwork = 12;
+                } else if ($(window).width() >= 992) {
+                    $scope.limitSocialNetwork = 8;
+                } else if ($(window).width() >= 768) {
+                    $scope.limitSocialNetwork = 6;
+                } else {
+                    $scope.limitSocialNetwork = 4;
+                }
+            });
+        });
 
         $scope.uploadFile = function(file) {
             if (file) {

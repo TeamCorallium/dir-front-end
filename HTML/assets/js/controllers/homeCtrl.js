@@ -4,7 +4,7 @@
 'use strict';
 
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl",
-    function ($scope, $state, $rootScope, RestService, $cookies, grwol) {
+    function($scope, $state, $rootScope, RestService, $cookies, grwol) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
@@ -35,9 +35,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $scope.countLimit = 1;
         }
 
-        $(window).on("resize.doResize", function () {
-
-            $scope.$apply(function () {
+        $(window).on("resize.doResize", function() {
+            $scope.$apply(function() {
                 if ($(window).width() >= 992) {
                     $scope.countLimit = 4;
                 } else if ($(window).width() >= 768) {
@@ -48,14 +47,14 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             });
         });
 
-        $scope.$on("$destroy", function () {
+        $scope.$on("$destroy", function() {
             $(window).off("resize.doResize"); //remove the handler added earlier
         });
 
-        $scope.getProfiles = function () {
+        $scope.getProfiles = function() {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                    function (data) {
+                    function(data) {
                         $scope.profiles = data.results;
 
                         for (var i = 0; i < $scope.profiles.length; i++) {
@@ -67,7 +66,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                             }
                         }
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         console.log(errResponse);
                     }
                 );
@@ -75,7 +74,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.getProfiles();
 
-        $scope.goToProfile = function (owner) {
+        $scope.goToProfile = function(owner) {
             $cookies.remove("exploreUser", {
                 path: '/'
             });
@@ -90,16 +89,16 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             }
         };
 
-        $scope.getTracks = function () {
+        $scope.getTracks = function() {
             RestService.fetchTracking().then(
-                function (data) {
+                function(data) {
                     data = data.response;
 
                     $scope.tracks.totalVisits = data.total;
                     $scope.tracks.returnRatio = Math.round(data.return_ratio * 100) / 100;
                     $scope.tracks.timeOnSite = data.time_on_site;
                 },
-                function (errResponse) {
+                function(errResponse) {
                     console.log(errResponse);
                 }
             );
@@ -107,14 +106,14 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.getTracks();
 
-        $rootScope.$on('forbidden', function (event, data) {
+        $rootScope.$on('forbidden', function(event, data) {
             if (RestService.getCookie('csrftoken') == null) {
                 RestService.fetchObjectByUrl(RestService.loginNext)
                     .then(
-                        function (data) {
+                        function(data) {
                             console.log('get get ' + RestService.getCookie('csrftoken'));
                         },
-                        function (errResponse) {
+                        function(errResponse) {
                             console.log(errResponse);
                         }
                     );
@@ -130,7 +129,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             });
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+        $rootScope.$on('LoginNetworkConnectionError', function(event, data) {
             var serverNotFound = $translate.instant('home.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('home.NETWORK_CONNECTION');
             growl.error(serverNotFound, {
