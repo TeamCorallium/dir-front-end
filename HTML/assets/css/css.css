@@ -1681,6 +1681,10 @@ span.stars span {
     padding-top: 3px !important;
 }
 
+.margin-top3 {
+    margin-top: 3px !important;
+}
+
 .styleNotification {
     margin-top: 5px !important;
     float: left !important;
