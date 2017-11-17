@@ -424,6 +424,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.unfollow = function() {
             RestService.unfollow($scope.user.id);
+            $scope.activateFollow = false;
         };
 
         $rootScope.$on('unfollowError', function(event, data) {
