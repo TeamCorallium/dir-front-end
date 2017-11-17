@@ -54,6 +54,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.againPassHome = '';
         $scope.following = [];
         $scope.followers = [];
+        $scope.limitSocialNetwork = 4;
 
         $scope.indexShowMiddle = 0;
 
