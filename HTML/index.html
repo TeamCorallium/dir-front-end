@@ -79,8 +79,7 @@
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
-                                    <i class="ti-user"></i>
-                                    <!-- {{userdata.username}} -->
+                                    <i class="ti-user"></i> {{userdata.username}}
                                 </a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="(userdata.connected)">
@@ -137,7 +136,7 @@
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle">
                                     <i class="ti-world"></i>
-                                    <!-- <label translate="index.LANGUAGE"></label> -->
+                                    <label translate="index.LANGUAGE"></label>
                                 </a>
                                 <ul class="dropdown-menu" ng-controller="LanguageCtrl">
                                     <li ng-click="language.set('en', $event)">
@@ -150,6 +149,9 @@
                                         <a translate="index.SPANISH"></a>
                                     </li>
                                 </ul>
+                            </li>
+                            <li class="padding-top-10 padding-left-15 padding-right-15">
+                                <h4 class="cursordefault">|</h4>
                             </li>
                             <li class="hidden-xs" ng-show="userdata.connected" ng-cloak>
                                 <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
