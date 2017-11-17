@@ -66,7 +66,7 @@
                         <a ui-sref="home" class="navbar-brand" id="floatLogo">
                             <img src="assets/images/logo.png">
                         </a>
-                        <div class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                        <div ng-hide="(userdata.connected)" class="styleNotification hidden-md hidden-lg" ui-sref="notifications" ng-controller="TopNavBarCtrl">
                             <notification-icon count='notificationCount' class="notificationXSIcon">
                                 <i class="ti-bell fontSize20"></i>
                             </notification-icon>
@@ -150,7 +150,7 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="padding-top-10 padding-left-15 padding-right-15 margin-top3">
+                            <li class="padding-top-10 padding-left-15 padding-right-15 margin-top3 hidden-xs">
                                 <h4 class="cursordefault">|</h4>
                             </li>
                             <li class="hidden-xs margin-top3" ng-show="userdata.connected" ng-cloak>
