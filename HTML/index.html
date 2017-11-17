@@ -79,7 +79,9 @@
                             <li class="dropdown">
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle" ng-cloak>
-                                    <i class="ti-user"></i> {{userdata.username}}</a>
+                                    <i class="ti-user"></i>
+                                    <!-- {{userdata.username}} -->
+                                </a>
                                 <ul class="dropdown-menu" ng-controller="LoginCtrl">
                                     <li ng-show="(userdata.connected)">
                                         <a ui-sref="profile">
@@ -131,19 +133,11 @@
                                     </li>
                                 </ul>
                             </li>
-                            <li class="hidden-xs" ng-show="userdata.connected" ng-cloak>
-                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                                    <notification-icon count='notificationCount' class="notificationMDIcon">
-                                        <i class="ti-bell fontSize18"></i>
-                                    </notification-icon>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label>
-                                </a>
-                            </li>
                             <li class="dropdown" ng-cloak>
                                 <!-- ng-cloak is for prevent that AngularJS are loading after HTML -->
                                 <a data-toggle="dropdown" class="dropdown-toggle">
                                     <i class="ti-world"></i>
-                                    <label translate="index.LANGUAGE"></label>
+                                    <!-- <label translate="index.LANGUAGE"></label> -->
                                 </a>
                                 <ul class="dropdown-menu" ng-controller="LanguageCtrl">
                                     <li ng-click="language.set('en', $event)">
@@ -157,10 +151,18 @@
                                     </li>
                                 </ul>
                             </li>
+                            <li class="hidden-xs" ng-show="userdata.connected" ng-cloak>
+                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
+                                    <notification-icon count='notificationCount' class="notificationMDIcon">
+                                        <i class="ti-bell fontSize18"></i>
+                                    </notification-icon>
+                                    <!-- <label class="margin-bottom-0 pointerHover" translate="index.NOTIFICATIONS"></label> -->
+                                </a>
+                            </li>
                             <li ng-cloak>
                                 <a>
                                     <i class="ti-shopping-cart"></i>
-                                    <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label>
+                                    <!-- <label class="margin-bottom-0 pointerHover" translate="index.BUY"></label> -->
                                 </a>
                             </li>
                         </ul>
