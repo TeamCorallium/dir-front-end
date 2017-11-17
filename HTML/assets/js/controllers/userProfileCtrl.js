@@ -54,9 +54,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.againPassHome = '';
         $scope.following = [];
         $scope.followers = [];
-        $scope.limitSocialNetwork = 12;
 
         $scope.indexShowMiddle = 0;
+
+        $scope.limitSocialNetwork = 12;
 
         if ($(window).width() >= 1350) {
             $scope.limitSocialNetwork = 12;

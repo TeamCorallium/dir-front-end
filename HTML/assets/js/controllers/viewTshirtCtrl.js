@@ -45,6 +45,72 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             snippets: []
         };
 
+        $scope.limitSocialNetwork = 12;
+
+        if ($(window).width() >= 1350) {
+            $scope.limitSocialNetwork = 12;
+        } else if ($(window).width() >= 1201) {
+            $scope.limitSocialNetwork = 11;
+        } else if ($(window).width() >= 992) {
+            $scope.limitSocialNetwork = 8;
+        } else if ($(window).width() >= 825) {
+            $scope.limitSocialNetwork = 7;
+        } else if ($(window).width() >= 768) {
+            $scope.limitSocialNetwork = 6;
+        } else if ($(window).width() >= 700) {
+            $scope.limitSocialNetwork = 13;
+        } else if ($(window).width() >= 650) {
+            $scope.limitSocialNetwork = 12;
+        } else if ($(window).width() >= 600) {
+            $scope.limitSocialNetwork = 11;
+        } else if ($(window).width() >= 550) {
+            $scope.limitSocialNetwork = 10;
+        } else if ($(window).width() >= 500) {
+            $scope.limitSocialNetwork = 9;
+        } else if ($(window).width() >= 450) {
+            $scope.limitSocialNetwork = 8;
+        } else if ($(window).width() >= 400) {
+            $scope.limitSocialNetwork = 7;
+        } else if ($(window).width() >= 350) {
+            $scope.limitSocialNetwork = 6;
+        } else {
+            $scope.limitSocialNetwork = 5;
+        }
+
+        $(window).on("resize.doResize", function() {
+            $scope.$apply(function() {
+                if ($(window).width() >= 1350) {
+                    $scope.limitSocialNetwork = 12;
+                } else if ($(window).width() >= 1201) {
+                    $scope.limitSocialNetwork = 11;
+                } else if ($(window).width() >= 992) {
+                    $scope.limitSocialNetwork = 8;
+                } else if ($(window).width() >= 825) {
+                    $scope.limitSocialNetwork = 7;
+                } else if ($(window).width() >= 768) {
+                    $scope.limitSocialNetwork = 6;
+                } else if ($(window).width() >= 700) {
+                    $scope.limitSocialNetwork = 13;
+                } else if ($(window).width() >= 650) {
+                    $scope.limitSocialNetwork = 12;
+                } else if ($(window).width() >= 600) {
+                    $scope.limitSocialNetwork = 11;
+                } else if ($(window).width() >= 550) {
+                    $scope.limitSocialNetwork = 10;
+                } else if ($(window).width() >= 500) {
+                    $scope.limitSocialNetwork = 9;
+                } else if ($(window).width() >= 450) {
+                    $scope.limitSocialNetwork = 8;
+                } else if ($(window).width() >= 400) {
+                    $scope.limitSocialNetwork = 7;
+                } else if ($(window).width() >= 350) {
+                    $scope.limitSocialNetwork = 6;
+                } else {
+                    $scope.limitSocialNetwork = 5;
+                }
+            });
+        });
+
         $scope.TryClap = function() {
             RestService.takeClap($scope.user.id, true);
         };
