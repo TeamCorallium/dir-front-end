@@ -1133,5 +1133,20 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.unfollow(id);
             $scope.following[pos].stateFollow = false;
         };
+
+        $rootScope.$on('unfollowError', function(event, data) {
+            var noUnfollow = $translate.instant('user_profile.NO_UNFOLLOW');
+            growl.error(noUnfollow);
+        });
+
+        $rootScope.$on('UnfollowBad', function(event, data) {
+            var noUnfollow = $translate.instant('user_profile.NO_UNFOLLOW');
+            growl.error(noUnfollow);
+            if ($scope.indexShowMiddle == 1) {
+                $scope.getFollowers();
+            } else if ($scope.indexShowMiddle == 2) {
+                $scope.getFollowing();
+            }
+        });
     }
 ]);

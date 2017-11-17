@@ -1,6 +1,6 @@
 'use strict';
 
-app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParamSerializer', '$state', function ($rootScope, $http, $q, $cookies, $httpParamSerializer, $state) {
+app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParamSerializer', '$state', function($rootScope, $http, $q, $cookies, $httpParamSerializer, $state) {
 
     var tshirt = 'http://www.dir.com:8888/api/tshirts/';
     var users = 'http://www.dir.com:8888/api/users/';
@@ -57,19 +57,19 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         messageDir: messages,
 
-        getCookie: function (name) {
+        getCookie: function(name) {
             console.log($cookies.getAll());
             return $cookies.get('csrftoken');
         },
 
-        login: function (username, password) {
+        login: function(username, password) {
             $http({
                 method: 'POST',
                 url: login,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -80,7 +80,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'password': password,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (result) {
+            }).success(function(result) {
                 if (result['users'] != undefined && $cookies.get('sessionid') != undefined) {
                     $cookies.put('username', username, {
                         path: '/'
@@ -89,7 +89,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('wrongLogin', username);
                 }
-            }).error(function (response, status, header, config, statusText) { // data, status, header, config, statusText
+            }).error(function(response, status, header, config, statusText) { // data, status, header, config, statusText
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -98,14 +98,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        register: function (username, password, email, pin) {
+        register: function(username, password, email, pin) {
             $http({
                 method: 'POST',
                 url: register,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -119,7 +119,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'first_name': "",
                     'last_name': ""
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 if (data['response'] == 'ok') {
                     var register = {
                         username: username,
@@ -129,7 +129,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('wrongRegister');
                 }
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -138,14 +138,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        addSnippet: function (title, body) {
+        addSnippet: function(title, body) {
             $http({
                 method: 'POST',
                 url: snippets,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -156,9 +156,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'body': body,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('addsnippets');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -169,14 +169,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        addSocialNetwork: function (name, url, type) {
+        addSocialNetwork: function(name, url, type) {
             $http({
                 method: 'POST',
                 url: socialnetwork,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -188,9 +188,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'type': type,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('addsocialnetwork');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -201,14 +201,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        addTShirt: function (pin) {
+        addTShirt: function(pin) {
             $http({
                 method: 'POST',
                 url: linkStuff,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -218,13 +218,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'pin': pin,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 if (data.response == 'ok') {
                     $rootScope.$broadcast('addTshirt');
                 } else {
                     $rootScope.$broadcast('addTshirtErrorBad');
                 }
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -233,14 +233,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        addStock: function (color, size, code, pin) {
+        addStock: function(color, size, code, pin) {
             $http({
                 method: 'POST',
                 url: stocks,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -253,9 +253,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'pin': pin,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('addStock');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -266,7 +266,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        imageDownload: function (id) {
+        imageDownload: function(id) {
             $http({
                 method: 'POST',
                 url: imageDownload,
@@ -274,7 +274,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -283,9 +283,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 data: {
                     'id': id
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -296,14 +296,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        changePassword: function (username, password) {
+        changePassword: function(username, password) {
             $http({
                 method: 'POST',
                 url: updatePassword,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -314,9 +314,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'password': password,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('changepassword');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -327,14 +327,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        sendMessage: function (sender, receiver, subject, body, readed) {
+        sendMessage: function(sender, receiver, subject, body, readed) {
             $http({
                 method: 'POST',
                 url: sendMessages,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -348,13 +348,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 if (data.response == "ok") {
                     $rootScope.$broadcast('SendMessage');
                 } else {
                     $rootScope.$broadcast('SendMessageError');
                 }
-            }).error(function (response, status) {
+            }).error(function(response, status) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -365,14 +365,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        takeClap: function (id, test) {
+        takeClap: function(id, test) {
             $http({
                 method: 'POST',
                 url: clapDir,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -383,7 +383,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'test': test,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 if (test && data.response == 'yes') {
                     $rootScope.$broadcast('testClapYes');
                 } else if (test && data.response == 'not') {
@@ -391,7 +391,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else if (!test) {
                     $rootScope.$broadcast('clapSuccesfully', data.response);
                 }
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -402,14 +402,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteUser: function (id) {
+        deleteUser: function(id) {
             $http({
                 method: 'POST',
                 url: deleteUser,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -419,9 +419,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'id': id,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('deleteUser');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -432,14 +432,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        follow: function (id, test) {
+        follow: function(id, test) {
             $http({
                 method: 'POST',
                 url: followDir,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -450,7 +450,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'test': test,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 if (test && data.response == 'yes') {
                     $rootScope.$broadcast('testFollowYes');
                 } else if (test && data.response == 'not') {
@@ -458,7 +458,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else if (!test) {
                     $rootScope.$broadcast('followSuccesfully', data.response);
                 }
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -469,14 +469,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        unfollow: function (id) {
+        unfollow: function(id) {
             $http({
                 method: 'POST',
                 url: unfollowDir,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
@@ -486,13 +486,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'id': id,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
-                // if (data.response == 'yes') {
-                //     $rootScope.$broadcast('testFollowYes');
-                // } else if (data.response == 'not') {
-                //     $rootScope.$broadcast('testFollowNo');
-                // }
-            }).error(function (response) {
+            }).success(function(data) {
+                if (data.response == 'bad') {
+                    $rootScope.$broadcast('UnfollowBad');
+                }
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -503,7 +501,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateProfile: function (profileurl, info, rating, score, avatar, fullname, email) {
+        updateProfile: function(profileurl, info, rating, score, avatar, fullname, email) {
             $http({
                 method: 'PUT',
                 url: profileurl,
@@ -511,16 +509,16 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': undefined,
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (data) {
+                transformRequest: function(data) {
                     if (data === undefined)
                         return data;
                     var fd = new FormData();
-                    angular.forEach(data, function (value, key) {
+                    angular.forEach(data, function(value, key) {
                         if (value instanceof FileList) {
                             if (value.length == 1) {
                                 fd.append(key, value[0]);
                             } else {
-                                angular.forEach(value, function (file, index) {
+                                angular.forEach(value, function(file, index) {
                                     fd.append(key + '_' + index, file);
                                 });
                             }
@@ -539,9 +537,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'email': email,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('updateProfile');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -550,7 +548,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateProfileWithOutAvatar: function (profileurl, id, info, rating, score, fullname, email) {
+        updateProfileWithOutAvatar: function(profileurl, id, info, rating, score, fullname, email) {
             $http({
                 method: 'PUT',
                 url: updateWithOutImage,
@@ -558,16 +556,16 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': undefined,
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (data) {
+                transformRequest: function(data) {
                     if (data === undefined)
                         return data;
                     var fd = new FormData();
-                    angular.forEach(data, function (value, key) {
+                    angular.forEach(data, function(value, key) {
                         if (value instanceof FileList) {
                             if (value.length == 1) {
                                 fd.append(key, value[0]);
                             } else {
-                                angular.forEach(value, function (file, index) {
+                                angular.forEach(value, function(file, index) {
                                     fd.append(key + '_' + index, file);
                                 });
                             }
@@ -586,9 +584,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'email': email,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('updateProfile');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -597,7 +595,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateMessage: function (url, sender, receiver, subject, body, readed) {
+        updateMessage: function(url, sender, receiver, subject, body, readed) {
             $http({
                 method: 'PUT',
                 url: url,
@@ -605,16 +603,16 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': undefined,
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (data) {
+                transformRequest: function(data) {
                     if (data === undefined)
                         return data;
                     var fd = new FormData();
-                    angular.forEach(data, function (value, key) {
+                    angular.forEach(data, function(value, key) {
                         if (value instanceof FileList) {
                             if (value.length == 1) {
                                 fd.append(key, value[0]);
                             } else {
-                                angular.forEach(value, function (file, index) {
+                                angular.forEach(value, function(file, index) {
                                     fd.append(key + '_' + index, file);
                                 });
                             }
@@ -633,9 +631,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('messageUpdated');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -644,7 +642,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateSnippet: function (url, body) {
+        updateSnippet: function(url, body) {
             $http({
                 method: 'PUT',
                 url: url,
@@ -652,16 +650,16 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': undefined,
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (data) {
+                transformRequest: function(data) {
                     if (data === undefined)
                         return data;
                     var fd = new FormData();
-                    angular.forEach(data, function (value, key) {
+                    angular.forEach(data, function(value, key) {
                         if (value instanceof FileList) {
                             if (value.length == 1) {
                                 fd.append(key, value[0]);
                             } else {
-                                angular.forEach(value, function (file, index) {
+                                angular.forEach(value, function(file, index) {
                                     fd.append(key + '_' + index, file);
                                 });
                             }
@@ -676,9 +674,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'body': body,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
-            }).success(function (data) {
+            }).success(function(data) {
                 $rootScope.$broadcast('snippetUpdated');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -687,7 +685,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteSocialNetwork: function (id) {
+        deleteSocialNetwork: function(id) {
             $http({
                 method: 'DELETE',
                 url: socialnetwork + id + '/',
@@ -695,15 +693,15 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 }
-            }).success(function (result) {
+            }).success(function(result) {
                 $rootScope.$broadcast('deleteSocialNetwork');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -714,7 +712,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteSnippet: function (url) {
+        deleteSnippet: function(url) {
             $http({
                 method: 'DELETE',
                 url: url,
@@ -722,15 +720,15 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 }
-            }).success(function (result) {
+            }).success(function(result) {
                 $rootScope.$broadcast('deleteSnippet');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -741,7 +739,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteMessage: function (url) {
+        deleteMessage: function(url) {
             $http({
                 method: 'DELETE',
                 url: url,
@@ -749,15 +747,15 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 }
-            }).success(function (result) {
+            }).success(function(result) {
                 $rootScope.$broadcast('deleteMessage');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -768,7 +766,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        deleteStuff: function (url) {
+        deleteStuff: function(url) {
             $http({
                 method: 'DELETE',
                 url: url,
@@ -776,15 +774,15 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'Content-Type': 'application/x-www-form-urlencoded',
                     'X-CSRFToken': $cookies.get('csrftoken')
                 },
-                transformRequest: function (obj) {
+                transformRequest: function(obj) {
                     var str = [];
                     for (var p in obj)
                         str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
                     return str.join("&");
                 }
-            }).success(function (result) {
+            }).success(function(result) {
                 $rootScope.$broadcast('deleteStuff');
-            }).error(function (response) {
+            }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -795,13 +793,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        fetchTshirt: function (code) {
+        fetchTshirt: function(code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -811,13 +809,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchUserByUser: function (username) {
+        fetchUserByUser: function(username) {
             return $http.get(users + "?username=" + username)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -827,13 +825,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchTracking: function () {
+        fetchTracking: function() {
             return $http.get(tracking + '?start=2014-11&end=2018-12')
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -843,13 +841,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchMessages: function () {
+        fetchMessages: function() {
             return $http.get(messages)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -859,13 +857,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchSocialNetworks: function (username) {
+        fetchSocialNetworks: function(username) {
             return $http.get(socialnetwork + "?username=" + username)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -875,13 +873,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchSnippets: function (username) {
+        fetchSnippets: function(username) {
             return $http.get(snippets + "?username=" + username)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -891,13 +889,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchObjectByUrl: function (url) {
+        fetchObjectByUrl: function(url) {
             return $http.get(url)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -907,13 +905,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchStocks: function () {
+        fetchStocks: function() {
             return $http.get(stocks)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -923,13 +921,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchFollowers: function (profileid, me) {
+        fetchFollowers: function(profileid, me) {
             return $http.get(followersDir + "?profileId=" + profileid + "&me=" + me)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -939,13 +937,13 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchFollowing: function (profileid, me) {
+        fetchFollowing: function(profileid, me) {
             return $http.get(followersDir + "?profileId=" + profileid + "&me=" + me)
                 .then(
-                    function (response) {
+                    function(response) {
                         return response.data;
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
