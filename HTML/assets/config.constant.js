@@ -22,7 +22,8 @@ app.constant('JS_REQUIRED', {
         'contactUsCtrl': 'assets/js/controllers/contactUsCtrl.js',
         'faqCtrl': 'assets/js/controllers/faqCtrl.js',
         'adminViewCtrl': 'assets/js/controllers/adminViewCtrl.js',
-        'notificationsCtrl': 'assets/js/controllers/notificationsCtrl.js'
+        'notificationsCtrl': 'assets/js/controllers/notificationsCtrl.js',
+        'configurationCtrl': 'assets/js/controllers/configurationCtrl.js'
     },
     modules: [{}]
 });

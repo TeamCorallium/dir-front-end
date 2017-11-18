@@ -66,6 +66,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/notifications',
             templateUrl: 'views/notifications.html',
             resolve: loadSequence('notificationsCtrl')
+        }).state('configurations', {
+            url: '/configurations',
+            templateUrl: 'views/configuration.html',
+            resolve: loadSequence('configurationCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
