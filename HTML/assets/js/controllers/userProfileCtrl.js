@@ -315,6 +315,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.saveSocialEdit = function(url, name, type, id) {
+            console.log(url + " " + name + " " + type + " " + id);
             RestService.updateSocial(url, name, type, id);
         };
 
