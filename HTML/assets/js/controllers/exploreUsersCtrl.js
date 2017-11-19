@@ -4,16 +4,16 @@
 'use strict';
 
 app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
-    function ($scope, RestService, $state, $rootScope, $cookies) {
+    function($scope, RestService, $state, $rootScope, $cookies) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
             path: '/'
         });
 
-        $scope.orderDate = 'AscendingDate';
-        $scope.orderScore = 'AscendingScore';
-        $scope.orderRating = 'AscendingRating';
+        $scope.orderDate = 'DescendingDate';
+        $scope.orderScore = 'DescendingScore';
+        $scope.orderRating = 'DescendingRating';
         $scope.applyDateFilter = false;
         $scope.applyScoreFilter = true;
         $scope.applyRatingFilter = false;
@@ -23,7 +23,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.profiles = [];
         $scope.search = '';
 
-        $scope.getProfiles = function (page) {
+        $scope.getProfiles = function(page) {
 
             var filters = '?';
 
@@ -70,7 +70,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             RestService.fetchObjectByUrl(RestService.profileDir + filters + '&page=' + page)
                 .then(
-                    function (data) {
+                    function(data) {
                         $scope.profiles = data.results;
                         $scope.hasNext = data.next;
                         $scope.hasPrevious = data.previous;
@@ -84,7 +84,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                             }
                         }
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         console.log(errResponse);
                     }
                 );
@@ -92,7 +92,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.getProfiles(1);
 
-        $scope.goToProfile = function (owner) {
+        $scope.goToProfile = function(owner) {
             $cookies.remove("exploreUser", {
                 path: '/'
             });
@@ -106,43 +106,43 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.changeFiltres = function () {
+        $scope.changeFiltres = function() {
             $scope.getProfiles(1);
         }
 
-        $scope.noPrevious = function () {
+        $scope.noPrevious = function() {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function () {
+        $scope.noNext = function() {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function () {
+        $scope.next = function() {
             if (!$scope.noNext()) {
                 $scope.currentPage += 1;
                 $scope.getProfiles($scope.currentPage);
             }
         };
 
-        $scope.previous = function () {
+        $scope.previous = function() {
             if (!$scope.noPrevious()) {
                 $scope.currentPage -= 1;
                 $scope.getProfiles($scope.currentPage);
             }
         };
 
-        $scope.searchProfile = function () {
+        $scope.searchProfile = function() {
             $scope.getProfiles(1);
         };
 
-        $("#searchInput").on('keyup', function (e) {
+        $("#searchInput").on('keyup', function(e) {
             if (e.keyCode == 13) {
                 $scope.getProfiles(1);
             }
         });
 
-        $scope.changeOrderClapFlagDate = function () {
+        $scope.changeOrderClapFlagDate = function() {
             if ($(window).width() >= 768) {
                 if ($('#DateFilterMD').is(':checked')) {
                     $scope.applyDateFilter = true;
@@ -158,7 +158,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.changeOrderClapFlagScore = function () {
+        $scope.changeOrderClapFlagScore = function() {
             if ($(window).width() >= 768) {
                 if ($('#ScoreFilterMD').is(':checked')) {
                     $scope.applyScoreFilter = true;
@@ -174,7 +174,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.changeOrderClapFlagRating = function () {
+        $scope.changeOrderClapFlagRating = function() {
             if ($(window).width() >= 768) {
                 if ($('#RatingFilterMD').is(':checked')) {
                     $scope.applyRatingFilter = true;
@@ -190,14 +190,14 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $rootScope.$on('forbidden', function (event, data) {
+        $rootScope.$on('forbidden', function(event, data) {
             if (RestService.getCookie('csrftoken') == null) {
                 RestService.fetchObjectByUrl(RestService.loginNext)
                     .then(
-                        function (data) {
+                        function(data) {
                             console.log('get get ' + RestService.getCookie('csrftoken'));
                         },
-                        function (errResponse) {
+                        function(errResponse) {
                             console.log(errResponse);
                         }
                     );
@@ -213,7 +213,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             });
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+        $rootScope.$on('LoginNetworkConnectionError', function(event, data) {
             var serverNotFound = $translate.instant('explore_user.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('explore_user.NETWORK_CONNECTION');
             growl.error(serverNotFound, {
