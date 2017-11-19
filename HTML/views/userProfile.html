@@ -152,20 +152,25 @@
                             <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS">
                                 <ul class="nav nav-tabs nav-justified">
                                     <li class="active">
-                                        <a ng-click="changeMiddle(0)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
+                                        <a ng-click="changeMiddle(0)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="./assets/images/iconosnniper_v2.png"></img>
                                             <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
                                         </a>
-                                        <a ng-click="changeMiddle(1)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
+                                        <a ng-click="changeMiddle(1)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="assets/images/followers.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWERS"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 1"></div>
                                         </a>
-                                        <a ng-click="changeMiddle(2)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-bottom-0">
+                                        <a ng-click="changeMiddle(2)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
                                             <img class="IconSnippet" ng-src="assets/images/following.jpg">
                                             <label class="pointerHover" translate="user_profile.FOLLOWING"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 2"></div>
+                                        </a>
+                                        <a ng-click="changeMiddle(3)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <i class="ti-plus"></i>
+                                            <label class="pointerHover" translate="user_profile.SOCIAL_NETWORK"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 3"></div>
                                         </a>
                                     </li>
                                 </ul>
@@ -311,6 +316,31 @@
                                                             <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
                                                         </a>
                                                     </div>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="indexShowMiddle == 3">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
+                                    <ul class="post-list">
+                                        <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="post-image">
+                                                    <div class="img-thumbnail">
+                                                        <ul class="list-inline SocialIcon list-unstyled">
+                                                            <li class="padding-5">
+                                                                <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                                                                    <i class="{{sn.type}}"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div class="post-info">
+                                                    <a>{{sn.name}}</a>
+                                                    <h5>{{sn.url}}</h5>
                                                 </div>
                                             </div>
                                         </li>
