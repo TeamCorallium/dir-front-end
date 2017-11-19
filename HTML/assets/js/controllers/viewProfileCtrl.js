@@ -17,6 +17,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.hasPrevious = '';
         $scope.users = [];
         $rootScope.viewProfile = true;
+        $scope.indexShowMiddle = 0;
 
         $scope.message = {
             username: '',
@@ -493,5 +494,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             growl.error(noUnfollow);
             RestService.follow($scope.user.id, true);
         });
+
+        $scope.changeMiddle = function(num) {
+            if (num == 1) {
+                getSocialNetworks($scope.user.username);
+            } else {
+                getSnippets($scope.user.username, 1);
+            }
+            $scope.indexShowMiddle = num;
+        };
     }
 ]);

@@ -128,35 +128,74 @@
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-8 col-md-8 col-lg-9 paddingStyleView">
-                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-21 padding-0 marginSnippetXS">
-                                <ul class="ltwt">
-                                    <li ng-repeat="snippet in user.snippets">
-                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
-                                                <div class="IconSnippetBox">
-                                                    <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
-                                                </div>
-                                                <div class="TitleSnippetBox">
-                                                    <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
-                                                            <i class="fa fa-fw fa-clock-o"></i>
-                                                            {{snippet.created | timeago}}
-                                                        </span>
-                                                </div>
-                                            </div>
-                                            <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>
-                                        </div>
+                            <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-20 borderBox padding-0 marginSnippetXS">
+                                <ul class="nav nav-tabs nav-justified">
+                                    <li class="active">
+                                        <a ng-click="changeMiddle(0)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet" ng-src="./assets/images/iconosnniper_v2.png"></img>
+                                            <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
+                                        </a>
+                                        <a ng-click="changeMiddle(1)" class="col-xs-6 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
+                                            <img class="IconSnippet" ng-src="assets/images/following.jpg">
+                                            <label class="pointerHover" translate="user_profile.SOCIAL"></label>
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 3"></div>
+                                        </a>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-hide="user.snippets.length < 5 && currentPage == 1">
-                                <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
-                                    <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
-                                        <a ng-click="previous()" class="ng-binding border-radius10" translate="view_profile.PREVIOUS"></a>
-                                    </li>
-                                    <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
-                                        <a ng-click="next()" class="ng-binding border-radius10" translate="view_profile.NEXT"></a>
-                                    </li>
-                                </ul>
+                            <div ng-show="indexShowMiddle == 0">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-top-21 padding-0 marginSnippetXS">
+                                    <ul class="ltwt">
+                                        <li ng-repeat="snippet in user.snippets">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
+                                                    <div class="IconSnippetBox">
+                                                        <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
+                                                    </div>
+                                                    <div class="TitleSnippetBox">
+                                                        <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                                <i class="fa fa-fw fa-clock-o"></i>
+                                                                {{snippet.created | timeago}}
+                                                            </span>
+                                                    </div>
+                                                </div>
+                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-xs-12 col-xs-offset-0 col-sm-6 col-sm-offset-3 col-md-6 col-md-offset-3 col-lg-6 col-lg-offset-3 row" ng-hide="user.snippets.length < 5 && currentPage == 1">
+                                    <ul class="pager ng-isolate-scope ng-not-empty ng-valid">
+                                        <li ng-class="{disabled: noPrevious()||ngDisabled, previous: align}" class="previous">
+                                            <a ng-click="previous()" class="ng-binding border-radius10" translate="view_profile.PREVIOUS"></a>
+                                        </li>
+                                        <li ng-class="{disabled: noNext()||ngDisabled, next: align}" class="next">
+                                            <a ng-click="next()" class="ng-binding border-radius10" translate="view_profile.NEXT"></a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div ng-show="indexShowMiddle == 1">
+                                <div class="row col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 marginSnippetXS">
+                                    <ul class="post-list">
+                                        <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
+                                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                                <div class="post-image">
+                                                    <div class="img-thumbnail">
+                                                        <a type="button" class="SocialListPage HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                                                            <i class="{{sn.type}}"></i>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                                <div class="post-info">
+                                                    <a ng-click="goToLink(sn.url)">{{sn.name}}</a>
+                                                    <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
                     </div>
