@@ -506,11 +506,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.changeMiddle = function(num) {
-            if (num == 1) {
-                getSocialNetworks($scope.user.username);
-            } else {
-                getSnippets($scope.user.username, 1);
-            }
+            // if (num == 1) {
+            //     getSocialNetworks($scope.user.username);
+            // } else {
+            //     getSnippets($scope.user.username, 1);
+            // }
             $scope.indexShowMiddle = num;
         };
     }
