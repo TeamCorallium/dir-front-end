@@ -1006,6 +1006,22 @@ img-crop canvas {
     border-radius: 10px;
 }
 
+.SocialListPage {
+    display: block;
+    height: 40px;
+    opacity: 0.6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    left: 0;
+    text-align: center;
+    color: #FFFFFF;
+}
+
 .SocialList:hover {
     opacity: 1.0 !important;
 }
