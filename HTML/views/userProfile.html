@@ -337,6 +337,31 @@
                                                 <div class="post-info">
                                                     <a>{{sn.name}}</a>
                                                     <h5>{{sn.url}}</h5>
+                                                    <div class="btn-group pull-right DropdownMargin" uib-dropdown>
+                                                        <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
+                                                            <span class="fa fa-ellipsis-h"></span>
+                                                        </button>
+                                                        <ul class="ListEdit dropdown-menu" role="menu">
+                                                            <li>
+                                                                <a ng-click="changeFlatEdit()" ng-show="!EditSnippetFlag">
+                                                                    <i class="ti-pencil-alt"></i>
+                                                                    <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a ng-click="saveSnippetEdit(snippet.url, snippet.body)" ng-show="EditSnippetFlag">
+                                                                    <i class="ti-save"></i>
+                                                                    <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
+                                                                </a>
+                                                            </li>
+                                                            <li>
+                                                                <a ng-click="deleteSnippet(snippet.url)">
+                                                                    <i class="ti-trash"></i>
+                                                                    <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </li>
