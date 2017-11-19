@@ -23,7 +23,8 @@ app.constant('JS_REQUIRED', {
         'faqCtrl': 'assets/js/controllers/faqCtrl.js',
         'adminViewCtrl': 'assets/js/controllers/adminViewCtrl.js',
         'notificationsCtrl': 'assets/js/controllers/notificationsCtrl.js',
-        'configurationCtrl': 'assets/js/controllers/configurationCtrl.js'
+        'configurationCtrl': 'assets/js/controllers/configurationCtrl.js',
+        'socialNetworksCtrl': 'assets/js/controllers/socialNetworksCtrl.js'
     },
     modules: [{}]
 });

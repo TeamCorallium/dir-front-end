@@ -70,6 +70,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/configurations',
             templateUrl: 'views/configuration.html',
             resolve: loadSequence('configurationCtrl')
+        }).state('socialnetworks', {
+            url: '/socialnetworks',
+            templateUrl: 'views/socialNetworks.html',
+            resolve: loadSequence('socialNetworksCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
