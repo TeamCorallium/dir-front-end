@@ -390,8 +390,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('socialUpdated', function(event, data) {
             $scope.EditSocialFlag = !$scope.EditSocialFlag;
 
-            $scope.user.snippets = [];
-            getSnippets($cookies.get('username'), 1);
+            $scope.user.socialnetworks = [];
+            getSocialNetworks($cookies.get('username'));
         });
 
         $rootScope.$on('updateProfile', function(event, data) {
