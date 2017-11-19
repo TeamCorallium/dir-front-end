@@ -685,7 +685,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateSocial: function(url, id) {
+        updateSocial: function(url, name, type, id) {
             $http({
                 method: 'PUT',
                 url: socialnetwork + id,
@@ -714,6 +714,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 },
                 data: {
                     'url': url,
+                    'name': name,
+                    'type': type,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function(data) {
