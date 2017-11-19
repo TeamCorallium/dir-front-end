@@ -96,8 +96,14 @@
                                     </li>
                                     <li ng-show="(userdata.connected) && (OptionsEdit)">
                                         <a data-toggle="modal" data-target="#modalAddTShirt">
-                                            <i class="ti-plus padding-right-10"></i>
+                                            <i class="ti-link padding-right-10"></i>
                                             <label class="margin-bottom-0 pointerHover" translate="index.ADD_TSHIRT"></label>
+                                        </a>
+                                    </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a ui-sref="socialnetworks">
+                                            <i class="ti-plus padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.ADD_SOCIAL"></label>
                                         </a>
                                     </li>
                                     <li ng-show="(userdata.connected)">

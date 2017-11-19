@@ -37,7 +37,8 @@
         "ENTER_PIN": "Introduza su PIN",
         "ACCOUNT": "¿Tienes una cuenta?",
         "NO_ACCOUNT": "¿No tienes una cuenta?",
-        "NOTIFICATIONS": "Notificaciones"
+        "NOTIFICATIONS": "Notificaciones",
+        "ADD_SOCIAL": "Red Social"
     },
     "user_profile": {
         "RATING": "Valoración:",

@@ -37,7 +37,8 @@
         "ENTER_PIN": "Enter your PIN",
         "ACCOUNT": "Do you have an account?",
         "NO_ACCOUNT": "You don't have an account?",
-        "NOTIFICATIONS": "Notifications"
+        "NOTIFICATIONS": "Notifications",
+        "ADD_SOCIAL": "Add Social"
     },
     "user_profile": {
         "RATING": "Rating:",

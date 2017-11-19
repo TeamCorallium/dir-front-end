@@ -37,7 +37,8 @@
         "ENTER_PIN": "輸入您的 PIN",
         "ACCOUNT": "你有帳戶嗎?",
         "NO_ACCOUNT": "你沒有帳戶?",
-        "NOTIFICATIONS": "通知"
+        "NOTIFICATIONS": "通知",
+        "ADD_SOCIAL": "紅色社會"
     },
     "user_profile": {
         "RATING": "評級:",
