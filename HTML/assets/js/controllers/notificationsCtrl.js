@@ -30,6 +30,8 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             snippets: []
         };
 
+        $scope.notifications = [];
+
         $scope.getUser = function(username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -224,5 +226,28 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                 title: networkConnection
             });
         });
+
+        $scope.getNotifications = function() {
+            RestService.fetchNotification()
+                .then(
+                    function(data) {
+                        $scope.notifications = data.results;
+
+                        for (var i = 0; i < $scope.notifications.length; i++) {
+                            if ($scope.notifications[i].avatar != '' && $scope.notifications[i].avatar != null) {
+                                var avatarArray = $scope.notifications[i].avatar.split("/");
+                                $scope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $scope.notifications[i].avatar = 'assets/images/default-user.png';
+                            }
+                        }
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getNotifications();
     }
 ]);
