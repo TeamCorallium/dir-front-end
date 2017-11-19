@@ -314,8 +314,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.updateSnippet(url, body);
         };
 
-        $scope.saveSocialEdit = function(url) {
-            RestService.updateSocial(url);
+        $scope.saveSocialEdit = function(url, id) {
+            RestService.updateSocial(url, id);
         };
 
         $scope.deleteSnippet = function(url) {
