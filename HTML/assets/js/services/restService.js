@@ -24,6 +24,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var followDir = 'http://www.dir.com:8888/api/follow/';
     var followersDir = 'http://www.dir.com:8888/api/followers/';
     var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
+    var notifications = 'http://www.dir.com:8888/api/notifications/';
 
     // var tshirt = 'http://www.dircoolstuff.com/api/tshirts/';
     // var users = 'http://www.dircoolstuff.com/api/users/';
@@ -45,6 +46,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var deleteUser = 'http://www.dircoolstuff.com/api/delete-user/';
     // var tracking = 'http://www.dircoolstuff.com/api/track/';
     // var followDir = 'http://www.dircoolstuff.com/api/follow/';
+    // var unfollowDir = 'http://www.dircoolstuff.com/api/unfollow/';
+    // var notifications = 'http://www.dircoolstuff.com/api/notifications/';
 
     return {
         loginNext: loginNext,
@@ -983,6 +986,22 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchFollowing: function(profileid, me) {
             return $http.get(followersDir + "?profileId=" + profileid + "&me=" + me)
+                .then(
+                    function(response) {
+                        return response.data;
+                    },
+                    function(errResponse) {
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
+                    }
+                );
+        },
+
+        fetchNotification: function() {
+            return $http.get(notifications)
                 .then(
                     function(response) {
                         return response.data;
