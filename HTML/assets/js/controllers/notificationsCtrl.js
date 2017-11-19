@@ -30,7 +30,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             snippets: []
         };
 
-        $scope.notifications = [];
+        $rootScope.notifications = [];
 
         $scope.getUser = function(username) {
             RestService.fetchUserByUser(username)
@@ -227,18 +227,24 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             });
         });
 
+        $scope.getCount = function() {
+            $rootScope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
+        };
+
         $scope.getNotifications = function() {
             RestService.fetchNotification()
                 .then(
                     function(data) {
-                        $scope.notifications = data.results;
+                        $rootScope.notifications = data.results;
 
-                        for (var i = 0; i < $scope.notifications.length; i++) {
-                            if ($scope.notifications[i].avatar != '' && $scope.notifications[i].avatar != null) {
-                                var avatarArray = $scope.notifications[i].avatar.split("/");
-                                $scope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                        $scope.getCount();
+
+                        for (var i = 0; i < $rootScope.notifications.length; i++) {
+                            if ($rootScope.notifications[i].avatar != '' && $rootScope.notifications[i].avatar != null) {
+                                var avatarArray = $rootScope.notifications[i].avatar.split("/");
+                                $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
-                                $scope.notifications[i].avatar = 'assets/images/default-user.png';
+                                $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
                             }
                         }
                     },
