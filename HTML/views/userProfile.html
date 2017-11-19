@@ -335,33 +335,34 @@
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a>{{sn.name}}</a>
-                                                    <h5>{{sn.url}}</h5>
                                                     <div class="btn-group pull-right DropdownMargin" uib-dropdown>
                                                         <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
-                                                            <span class="fa fa-ellipsis-h"></span>
-                                                        </button>
+                                                                    <span class="fa fa-ellipsis-h"></span>
+                                                                </button>
                                                         <ul class="ListEdit dropdown-menu" role="menu">
                                                             <li>
-                                                                <a ng-click="changeFlatEdit()" ng-show="!EditSnippetFlag">
+                                                                <a ng-click="changeFlagSocialEdit()" ng-show="!EditSocialFlag">
                                                                     <i class="ti-pencil-alt"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a ng-click="saveSnippetEdit(snippet.url, snippet.body)" ng-show="EditSnippetFlag">
+                                                                <a ng-click="saveSocialEdit(sn.url, sn.id)" ng-show="EditSocialFlag">
                                                                     <i class="ti-save"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                                 </a>
                                                             </li>
                                                             <li>
-                                                                <a ng-click="deleteSnippet(snippet.url)">
+                                                                <a ng-click="deleteSocialNetwork(sn.id)">
                                                                     <i class="ti-trash"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
                                                                 </a>
                                                             </li>
                                                         </ul>
                                                     </div>
+                                                    <a>{{sn.name}}</a>
+                                                    <h5 ng-show="!EditSocialFlag">{{sn.url}}</h5>
+                                                    <textarea ng-model="sn.url" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="EditSocialFlag"></textarea>
                                                 </div>
                                             </div>
                                         </li>

@@ -49,6 +49,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.viewInbox = true;
         $scope.pSnippet = '';
         $scope.EditSnippetFlag = false;
+        $scope.EditSocialFlag = false;
         $scope.EditInfoFlag = false;
         $scope.password = '';
         $scope.againPassHome = '';
@@ -293,6 +294,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
         };
 
+        $scope.changeFlagSocialEdit = function() {
+            $scope.EditSocialFlag = !$scope.EditSocialFlag;
+        };
+
         $scope.publishSnippets = function() {
             if ($scope.pSnippet != '') {
                 RestService.addSnippet("", $scope.pSnippet);
@@ -307,6 +312,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.saveSnippetEdit = function(url, body) {
             RestService.updateSnippet(url, body);
+        };
+
+        $scope.saveSocialEdit = function(url) {
+            RestService.updateSnippet(url);
         };
 
         $scope.deleteSnippet = function(url) {
