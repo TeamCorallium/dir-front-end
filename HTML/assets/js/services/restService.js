@@ -688,7 +688,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         updateSocial: function(url, name, type, id) {
             $http({
                 method: 'PUT',
-                url: socialnetwork + id,
+                url: socialnetwork + id + "/",
                 headers: {
                     'Content-Type': undefined,
                     'X-CSRFToken': $cookies.get('csrftoken')
