@@ -1734,6 +1734,7 @@ span.stars span {
     margin-top: 10px;
 }
 
-.min-height-10 {
+.styleLiSocial {
     min-height: 10px !important;
+    padding: 0px !important;
 }
