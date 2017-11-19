@@ -409,8 +409,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 confirmButtonColor: "#007AFF"
             });
 
-            $scope.user.socialnetworks = [];
-            getSocialNetworks($cookies.get('username'));
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
         });
 
         $rootScope.$on('deleteSocialNetwork', function(event, data) {
