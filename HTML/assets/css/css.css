@@ -1733,3 +1733,7 @@ span.stars span {
     font-size: 11px !important;
     margin-top: 10px;
 }
+
+.min-height-10 {
+    min-height: 10px !important;
+}
