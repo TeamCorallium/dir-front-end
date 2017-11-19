@@ -315,7 +315,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.saveSocialEdit = function(url) {
-            RestService.updateSnippet(url);
+            RestService.updateSocial(url);
         };
 
         $scope.deleteSnippet = function(url) {
@@ -387,6 +387,13 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getSnippets($cookies.get('username'), 1);
         });
 
+        $rootScope.$on('socialUpdated', function(event, data) {
+            $scope.EditSocialFlag = !$scope.EditSocialFlag;
+
+            $scope.user.snippets = [];
+            getSnippets($cookies.get('username'), 1);
+        });
+
         $rootScope.$on('updateProfile', function(event, data) {
             getProfile($scope.user.profileUrl);
             $scope.EditProfile();
@@ -402,8 +409,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 confirmButtonColor: "#007AFF"
             });
 
-            $scope.user.snippets = [];
-            getSnippets($cookies.get('username'), 1);
+            $scope.user.socialnetworks = [];
+            getSocialNetworks($cookies.get('username'));
         });
 
         $rootScope.$on('deleteSocialNetwork', function(event, data) {

@@ -169,7 +169,7 @@
                                         </a>
                                         <a ng-click="changeMiddle(3)" class="col-xs-3 col-sm-3 col-md-3 col-lg-3 margin-bottom-0">
                                             <i class="ti-plus"></i>
-                                            <label class="pointerHover" translate="user_profile.SOCIAL_NETWORK"></label>
+                                            <label class="pointerHover" translate="user_profile.SOCIAL"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 3"></div>
                                         </a>
                                     </li>
@@ -340,14 +340,14 @@
                                                                     <span class="fa fa-ellipsis-h"></span>
                                                                 </button>
                                                         <ul class="ListEdit dropdown-menu" role="menu">
-                                                            <li class="min-height-10" ng-show="!EditSocialFlag">
+                                                            <li class="styleLiSocial" ng-show="!EditSocialFlag">
                                                                 <a ng-click="changeFlagSocialEdit()">
                                                                     <i class="ti-pencil-alt"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
                                                                 </a>
                                                             </li>
                                                             <li class="styleLiSocial" ng-show="EditSocialFlag">
-                                                                <a ng-click="saveSocialEdit(sn.url, sn.id)">
+                                                                <a ng-click="saveSocialEdit(sn.url)">
                                                                     <i class="ti-save"></i>
                                                                     <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                                 </a>
@@ -362,7 +362,7 @@
                                                     </div>
                                                     <a>{{sn.name}}</a>
                                                     <h5 ng-show="!EditSocialFlag">{{sn.url}}</h5>
-                                                    <textarea ng-model="sn.url" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="EditSocialFlag"></textarea>
+                                                    <textarea ng-model="sn.url" class="resize-none" ng-show="EditSocialFlag"></textarea>
                                                 </div>
                                             </div>
                                         </li>

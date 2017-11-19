@@ -685,6 +685,48 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        updateSocial: function(url) {
+            $http({
+                method: 'PUT',
+                url: url,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function(data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function(value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function(file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {
+                    'url': url,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function(data) {
+                $rootScope.$broadcast('socialUpdated');
+            }).error(function(response) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
+            });
+        },
+
         deleteSocialNetwork: function(id) {
             $http({
                 method: 'DELETE',
