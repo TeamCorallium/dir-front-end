@@ -4,7 +4,7 @@
 'use strict';
 
 app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate",
-    function($scope, $state, $rootScope, RestService, $cookies, grwol, $translate) {
+    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
