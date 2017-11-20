@@ -24,7 +24,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         } else {
             console.log(RestService.getCookie('csrftoken'));
         }
-        
+
         $scope.getCount = function() {
             $scope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
         };
@@ -50,7 +50,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                         console.log(errResponse);
                     }
                 );
-        };        
+        };
 
         $scope.loginModal = function(username, pass) {
             RestService.login(username, pass);
@@ -62,7 +62,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                 $scope.administrator = true;
             } else {
                 $scope.administrator = false;
-            }            
+            }
 
             $scope.getNotifications();
 

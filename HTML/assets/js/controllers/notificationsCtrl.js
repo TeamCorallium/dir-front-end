@@ -235,7 +235,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             RestService.fetchNotification()
                 .then(
                     function(data) {
-                        $rootScope.notifications = data;                        
+                        $rootScope.notifications = data;
 
                         for (var i = 0; i < data.length; i++) {
                             if (data[i].profileAvatar != '' && data[i].profileAvatar != null) {
