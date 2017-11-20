@@ -1000,8 +1000,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 );
         },
 
-        fetchNotification: function() {
-            return $http.get(notifications)
+        fetchNotification: function(id) {
+            return $http.get(notifications + "?id=" + id)
                 .then(
                     function(response) {
                         return response.data;
