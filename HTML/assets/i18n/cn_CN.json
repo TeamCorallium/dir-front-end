@@ -293,6 +293,7 @@
         "WE_PROBLEM": "我們發現了一些問題, 請再試一次"
     },
     "notifications": {
-        "FOLLOW_YOU": " 跟著你"
+        "FOLLOW_YOU": " 跟著你",
+        "NEW_SNIPPET": " 創建了一個新的程式碼片段"
     }
 }

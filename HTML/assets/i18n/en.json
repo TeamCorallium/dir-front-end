@@ -293,6 +293,7 @@
         "WE_PROBLEM": "We detected some problems, please try again"
     },
     "notifications": {
-        "FOLLOW_YOU": " follow you"
+        "FOLLOW_YOU": " follow you",
+        "NEW_SNIPPET": " has created a new snippet"
     }
 }
