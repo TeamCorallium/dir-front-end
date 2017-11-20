@@ -181,6 +181,9 @@
     .marginTop25XS {
         margin-top: 25px !important;
     }
+    .styleBoxConfiguration {
+        min-height: 506px !important;
+    }
 }
 
 @media (min-width: 770px) {
