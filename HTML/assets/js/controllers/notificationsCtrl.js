@@ -239,9 +239,11 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
 
                         $scope.getCount();
 
-                        for (var i = 0; i < $rootScope.notifications.length; i++) {
-                            if ($rootScope.notifications[i].profileAvatar != '' && $rootScope.notifications[i].profileAvatar != null) {
-                                var avatarArray = $rootScope.notifications[i].profileAvatar.split("/");
+                        for (var i = 0; i < data.length; i++) {
+                            console.log(data[i].profileAvatar + " antes");
+                            if (data[i].profileAvatar != '' && data[i].profileAvatar != null) {
+                                console.log(data[i].profileAvatar + " despues");
+                                var avatarArray = data[i].profileAvatar.split("/");
                                 $rootScope.notifications[i].profileAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
                                 $rootScope.notifications[i].profileAvatar = 'assets/images/default-user.png';
