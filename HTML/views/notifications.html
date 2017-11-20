@@ -140,6 +140,23 @@
                                             </span>
                                         </div>
                                     </div>
+                                    <div ng-show="notification.type == 'newSocialNetwork'" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
+                                        <div class="post-image padding-bottom-10">
+                                            <div class="img-thumbnail">
+                                                <img ng-src="{{notification.profileAvatar}}">
+                                            </div>
+                                        </div>
+                                        <div class="post-info">
+                                            <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 padding-left-0 padding-right-0 font-size-15">
+                                                <label class="margin-bottom-0">{{notification.profileFullName}}</label>
+                                                <label class="margin-bottom-0" translate="notifications.ADD_SOCIAL"></label>
+                                            </div>
+                                            <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
+                                                <i class="fa fa-fw fa-clock-o"></i>
+                                                {{notification.created | timeago}}
+                                            </span>
+                                        </div>
+                                    </div>
                                 </li>
                             </ul>
                         </div>

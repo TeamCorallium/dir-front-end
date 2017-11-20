@@ -294,6 +294,7 @@
     },
     "notifications": {
         "FOLLOW_YOU": " 跟著你",
-        "NEW_SNIPPET": " 創建了一個新的程式碼片段"
+        "NEW_SNIPPET": " 創建了一個新的程式碼片段",
+        "ADD_SOCIAL": " 添加新的社交網路"
     }
 }
