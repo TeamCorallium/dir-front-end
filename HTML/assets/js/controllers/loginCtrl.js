@@ -3,10 +3,12 @@
  */
 'use strict';
 
-app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate",
-    function($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
+app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate", "filterFilter",
+    function($scope, RestService, $state, $rootScope, $cookies, growl, $translate, filterFilter) {
 
         $scope.administrator = false;
+        $rootScope.notificationCount = 0;
+        $rootScope.notifications = [];
 
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
@@ -34,6 +36,35 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             } else {
                 $scope.administrator = false;
             }
+
+            $scope.getNotifications = function() {
+                RestService.fetchNotification()
+                    .then(
+                        function(data) {
+                            $rootScope.notifications = data.results;
+
+                            for (var i = 0; i < data.length; i++) {
+                                if (data[i].avatar != '' && data[i].avatar != null) {
+                                    var avatarArray = data[i].avatar.split("/");
+                                    $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                                } else {
+                                    $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
+                                }
+                            }
+                        },
+                        function(errResponse) {
+                            console.log(errResponse);
+                        }
+                    );
+            };
+
+            $scope.getNotifications();
+
+            $scope.getCount = function() {
+                $scope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
+            };
+
+            $scope.getCount();
 
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
