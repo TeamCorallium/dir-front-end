@@ -190,7 +190,7 @@
                                                 </div>
                                                 <div class="post-info">
                                                     <a ng-click="goToLink(sn.url)">{{sn.name}}</a>
-                                                    <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                    <h5 class="whitespace" ng-bind-html="sn.url" ng-show="!EditSocialFlag"></h5>
                                                 </div>
                                             </div>
                                         </li>
