@@ -291,5 +291,8 @@
         "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
         "NETWORK_CONNECTION": "Network Connection",
         "WE_PROBLEM": "We detected some problems, please try again"
+    },
+    "notifications": {
+        "FOLLOW_YOU": " follow you"
     }
 }

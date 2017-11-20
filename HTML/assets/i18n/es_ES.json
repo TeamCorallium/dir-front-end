@@ -291,5 +291,8 @@
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
         "NETWORK_CONNECTION": "Conexión de red",
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo"
+    },
+    "notifications": {
+        "FOLLOW_YOU": " te sigue"
     }
 }

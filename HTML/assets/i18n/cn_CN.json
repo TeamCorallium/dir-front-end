@@ -291,5 +291,8 @@
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
         "WE_PROBLEM": "我們發現了一些問題, 請再試一次"
+    },
+    "notifications": {
+        "FOLLOW_YOU": " 跟著你"
     }
 }

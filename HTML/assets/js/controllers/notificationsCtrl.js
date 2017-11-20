@@ -240,11 +240,11 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                         $scope.getCount();
 
                         for (var i = 0; i < $rootScope.notifications.length; i++) {
-                            if ($rootScope.notifications[i].avatar != '' && $rootScope.notifications[i].avatar != null) {
-                                var avatarArray = $rootScope.notifications[i].avatar.split("/");
-                                $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            if ($rootScope.notifications[i].profileAvatar != '' && $rootScope.notifications[i].profileAvatar != null) {
+                                var avatarArray = $rootScope.notifications[i].profileAvatar.split("/");
+                                $rootScope.notifications[i].profileAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
-                                $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
+                                $rootScope.notifications[i].profileAvatar = 'assets/images/default-user.png';
                             }
                         }
                     },
