@@ -327,43 +327,36 @@
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                                <div class="post-image">
-                                                    <div class="img-thumbnail">
-                                                        <a type="button" class="SocialListPage HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
-                                                            <i class="{{sn.type}}"></i>
-                                                        </a>
-                                                    </div>
+                                                <div class="btn-group pull-right DropdownMargin" uib-dropdown>
+                                                    <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
+                                                            <span class="fa fa-ellipsis-h"></span>
+                                                        </button>
+                                                    <ul class="ListEdit dropdown-menu" role="menu">
+                                                        <li class="styleLiSocial" ng-show="!EditSocialFlag">
+                                                            <a ng-click="changeFlagSocialEdit()">
+                                                                <i class="ti-pencil-alt"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
+                                                            </a>
+                                                        </li>
+                                                        <li class="styleLiSocial" ng-show="EditSocialFlag">
+                                                            <a ng-click="saveSocialEdit(sn.url, sn.name, sn.type, sn.id)">
+                                                                <i class="ti-save"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
+                                                            </a>
+                                                        </li>
+                                                        <li class="styleLiSocial">
+                                                            <a ng-click="deleteSocialNetwork(sn.id)">
+                                                                <i class="ti-trash"></i>
+                                                                <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
                                                 </div>
-                                                <div class="post-info">
-                                                    <div class="btn-group pull-right DropdownMargin" uib-dropdown>
-                                                        <button type="button" class="btn btn-o dropdown-toggle" uib-dropdown-toggle>
-                                                                    <span class="fa fa-ellipsis-h"></span>
-                                                                </button>
-                                                        <ul class="ListEdit dropdown-menu" role="menu">
-                                                            <li class="styleLiSocial" ng-show="!EditSocialFlag">
-                                                                <a ng-click="changeFlagSocialEdit()">
-                                                                    <i class="ti-pencil-alt"></i>
-                                                                    <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
-                                                                </a>
-                                                            </li>
-                                                            <li class="styleLiSocial" ng-show="EditSocialFlag">
-                                                                <a ng-click="saveSocialEdit(sn.url, sn.name, sn.type, sn.id)">
-                                                                    <i class="ti-save"></i>
-                                                                    <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
-                                                                </a>
-                                                            </li>
-                                                            <li class="styleLiSocial">
-                                                                <a ng-click="deleteSocialNetwork(sn.id)">
-                                                                    <i class="ti-trash"></i>
-                                                                    <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
-                                                                </a>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <a ng-click="goToLink(sn.url)">{{sn.name}}</a>
-                                                    <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
-                                                    <textarea ng-model="sn.url" class="height30 col-xs-10 col-sm-10 col-md-10 col-lg-10 resize-none" ng-show="EditSocialFlag"></textarea>
-                                                </div>
+                                                <a class="text-dark" ng-click="goToLink(sn.url)">
+                                                    <i class="{{sn.type}}"></i> {{sn.name}}
+                                                </a>
+                                                <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                <textarea ng-model="sn.url" class="height30 col-xs-10 col-sm-10 col-md-10 col-lg-10 resize-none" ng-show="EditSocialFlag"></textarea>
                                             </div>
                                         </li>
                                     </ul>

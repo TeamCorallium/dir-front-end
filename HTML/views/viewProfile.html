@@ -181,20 +181,10 @@
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                                <!-- <div class="post-image">
-                                                    <div class="img-thumbnail">
-                                                        <a type="button" class="SocialListPage HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
-                                                            <i class="{{sn.type}}"></i>
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="post-info"> -->
-
-                                                <a class="text-dark">
+                                                <a class="text-dark" ng-click="goToLink(sn.url)">
                                                     <i class="{{sn.type}}"></i> {{sn.name}}
                                                 </a>
                                                 <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
-                                                <!-- </div> -->
                                             </div>
                                         </li>
                                     </ul>
