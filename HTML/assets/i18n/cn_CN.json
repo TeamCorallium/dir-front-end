@@ -38,7 +38,8 @@
         "ACCOUNT": "你有帳戶嗎?",
         "NO_ACCOUNT": "你沒有帳戶?",
         "NOTIFICATIONS": "通知",
-        "ADD_SOCIAL": "紅色社會"
+        "ADD_SOCIAL": "紅色社會",
+        "CONFIGURATIONS": "配置"
     },
     "user_profile": {
         "RATING": "評級:",

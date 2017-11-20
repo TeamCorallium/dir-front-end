@@ -124,6 +124,12 @@
                                             <label class="margin-bottom-0 pointerHover" translate="index.MANAGE_PAGE"></label>
                                         </a>
                                     </li>
+                                    <li ng-show="(userdata.connected) && (OptionsEdit)">
+                                        <a ui-sref="configurations">
+                                            <i class="ti-link padding-right-10"></i>
+                                            <label class="margin-bottom-0 pointerHover" translate="index.CONFIGURATIONS"></label>
+                                        </a>
+                                    </li>
                                     <li ng-show="userdata.connected">
                                         <a ng-click="logout()">
                                             <i class="ti-shift-left padding-right-10"></i>

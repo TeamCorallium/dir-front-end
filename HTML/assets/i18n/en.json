@@ -38,7 +38,8 @@
         "ACCOUNT": "Do you have an account?",
         "NO_ACCOUNT": "You don't have an account?",
         "NOTIFICATIONS": "Notifications",
-        "ADD_SOCIAL": "Add Social"
+        "ADD_SOCIAL": "Add Social",
+        "CONFIGURATIONS": "Configuration"
     },
     "user_profile": {
         "RATING": "Rating:",
