@@ -235,7 +235,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             RestService.fetchNotification()
                 .then(
                     function(data) {
-                        $rootScope.notifications = data.results;
+                        $rootScope.notifications = data;
 
                         $scope.getCount();
 
