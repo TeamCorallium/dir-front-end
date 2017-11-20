@@ -59,6 +59,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.indexShowMiddle = 0;
 
         $scope.limitSocialNetwork = 12;
+        $rootScope.notificationCount = 0;
+        $rootScope.notifications = [];
 
         if ($(window).width() >= 1350) {
             $scope.limitSocialNetwork = 12;
@@ -125,10 +127,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.getCount = function() {
-            $scope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
+            $rootScope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
         };
 
-        $scope.getNotifications = function() {
+        var getNotifications = function() {
             RestService.fetchNotification()
                 .then(
                     function(data) {
@@ -302,7 +304,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
-        $scope.getNotifications();
+        getNotifications();
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {
