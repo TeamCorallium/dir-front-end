@@ -19,5 +19,6 @@ angular.module("pulloverDir", [
     'oitozero.ngSweetAlert',
     'pascalprecht.translate',
     'angular-notification-icons',
-    'ngEmoticons'
+    'ngEmoticons',
+    'uiSwitch'
 ]);
