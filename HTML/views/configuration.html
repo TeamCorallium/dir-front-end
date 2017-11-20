@@ -6,27 +6,29 @@
                     <div>
                         <div class="panel panel-transparent">
                             <div class="panel-heading">
-                                <h5 class="panel-title">Alertas y notificaciones</h5>
-                                <hr class="tall">
+                                <div class="padding-0 col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                    <h5 class="panel-title">Alertas y notificaciones</h5>
+                                </div>
+                                <hr class="tall margin-bottom-0">
                             </div>
                             <div class="panel-body">
-                                <div class="checkbox clip-check check-primary">
-                                    <input type="checkbox" id="emailNotifications" value="1">
-                                    <label for="emailNotifications">
-                                        Recive notificaciones by email
-                                    </label>
+                                <p>
+                                    Ocultar perfil
+                                </p>
+                                <div class="checkbox">
+                                    <switch ng-model="switchsetting" ng-init="switchsetting = true" class="green"></switch>
                                 </div>
-                                <div class="checkbox clip-check check-primary">
-                                    <input type="checkbox" id="checkbox7" value="1">
-                                    <label for="checkbox7">
-                                        Checkbox 2
-                                    </label>
+                                <p>
+                                    Recivir notificaciones por email
+                                </p>
+                                <div class="checkbox">
+                                    <switch ng-model="switchsetting" ng-init="switchsetting = true" class="green"></switch>
                                 </div>
-                                <div class="checkbox clip-check check-primary">
-                                    <input type="checkbox" id="checkbox8" value="1">
-                                    <label for="checkbox8">
-                                        Checkbox 3
-                                    </label>
+                                <p>
+                                    Mostrar email
+                                </p>
+                                <div class="checkbox">
+                                    <switch ng-model="switchsetting" ng-init="switchsetting = true" class="green"></switch>
                                 </div>
                             </div>
                         </div>
