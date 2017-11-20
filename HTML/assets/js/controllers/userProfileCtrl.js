@@ -3,8 +3,8 @@
  */
 'use strict';
 
-app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate",
-    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
+app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate", "filterFilter",
+    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate, filterFilter) {
 
         $rootScope.OptionsEdit = true;
         $cookies.remove("exploreUser", {
@@ -123,6 +123,33 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 }
             });
         });
+
+        $scope.getCount = function() {
+            $scope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
+        };
+
+        $scope.getNotifications = function() {
+            RestService.fetchNotification()
+                .then(
+                    function(data) {
+                        $rootScope.notifications = data.results;
+
+                        for (var i = 0; i < data.length; i++) {
+                            if (data[i].avatar != '' && data[i].avatar != null) {
+                                var avatarArray = data[i].avatar.split("/");
+                                $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
+                            } else {
+                                $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
+                            }
+                        }
+
+                        $scope.getCount();
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
 
         $scope.uploadFile = function(file) {
             if (file) {
@@ -274,6 +301,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.getUser($cookies.get('username'));
+
+        $scope.getNotifications();
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {

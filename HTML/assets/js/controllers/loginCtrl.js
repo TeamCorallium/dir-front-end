@@ -25,33 +25,6 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.getCount = function() {
-            $scope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
-        };
-
-        $scope.getNotifications = function() {
-            RestService.fetchNotification()
-                .then(
-                    function(data) {
-                        $rootScope.notifications = data.results;
-
-                        for (var i = 0; i < data.length; i++) {
-                            if (data[i].avatar != '' && data[i].avatar != null) {
-                                var avatarArray = data[i].avatar.split("/");
-                                $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                            } else {
-                                $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
-                            }
-                        }
-
-                        $scope.getCount();
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
-
         $scope.loginModal = function(username, pass) {
             RestService.login(username, pass);
         };
@@ -63,8 +36,6 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             } else {
                 $scope.administrator = false;
             }
-
-            $scope.getNotifications();
 
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
