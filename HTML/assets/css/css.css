@@ -171,6 +171,10 @@
         margin-top: 10px !important;
         padding-left: 40px !important;
     }
+    .paddingStyleNotifications {
+        margin-top: 15px !important;
+        padding-left: 40px !important;
+    }
     .paddingStyleView {
         padding-left: 40px !important;
     }
