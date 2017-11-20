@@ -132,7 +132,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchNotification()
                 .then(
                     function(data) {
-                        $rootScope.notifications = data.results;
+                        $rootScope.notifications = data;
 
                         for (var i = 0; i < data.length; i++) {
                             if (data[i].avatar != '' && data[i].avatar != null) {
