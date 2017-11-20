@@ -231,6 +231,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var getSocialNetworks = function(username) {
+            $scope.user.socialnetworks = [];
             RestService.fetchSocialNetworks(username)
                 .then(
                     function(data) {
