@@ -12,6 +12,9 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             path: '/'
         });
 
+        $scope.switchProfile = true;
+        $scope.switchEmail = true;
+        $scope.switchShowEmail = true;
 
     }
 ]);
