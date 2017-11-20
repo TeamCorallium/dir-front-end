@@ -4,17 +4,17 @@
 'use strict';
 
 app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate",
-    function ($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
+    function($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
 
         $scope.errorMessage = '';
 
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
-                    function (data) {
+                    function(data) {
                         console.log('get get ' + RestService.getCookie('csrftoken'));
                     },
-                    function (errResponse) {
+                    function(errResponse) {
                         console.log(errResponse);
                     }
                 );
@@ -23,7 +23,7 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function (email, username, password, passAgain, pin) {
+        $scope.registerModal = function(email, username, password, passAgain, pin) {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
 
@@ -46,7 +46,7 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.registerModalHome = function (email, username, password, passAgain) {
+        $scope.registerModalHome = function(email, username, password, passAgain) {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
 
@@ -69,7 +69,7 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $rootScope.$on('register', function (event, data) {
+        $rootScope.$on('register', function(event, data) {
             $('#myModal').modal('hide');
             $('#myModalRegisterHome').modal('hide');
             $('#RegisterWrongUserPassword').hide();
@@ -77,12 +77,12 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             RestService.login(data.username, data.password);
         });
 
-        $rootScope.$on('wrongRegister', function (event, data) {
+        $rootScope.$on('wrongRegister', function(event, data) {
             $('#RegisterWrongUserPassword').show();
             $('#RegisterWrongUserPasswordHome').show();
         });
 
-        $rootScope.$on('withoutNetworkConnection', function (event, data) {
+        $rootScope.$on('withoutNetworkConnection', function(event, data) {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
             var serverNotFound = $translate.instant('register.SERVER_NOT_FOUND');
@@ -92,19 +92,20 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             });
         });
 
-        $scope.raiseModalLogin = function () {
+        $scope.raiseModalLogin = function() {
             $('#myModalRegisterHome').modal('hide');
+            $('#myModal').modal('hide');
             $('#myModalLoginHome').modal('show');
         };
 
-        $rootScope.$on('forbidden', function (event, data) {
+        $rootScope.$on('forbidden', function(event, data) {
             if (RestService.getCookie('csrftoken') == null) {
                 RestService.fetchObjectByUrl(RestService.loginNext)
                     .then(
-                        function (data) {
+                        function(data) {
                             console.log('get get ' + RestService.getCookie('csrftoken'));
                         },
-                        function (errResponse) {
+                        function(errResponse) {
                             console.log(errResponse);
                         }
                     );
