@@ -51,6 +51,18 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $(window).off("resize.doResize"); //remove the handler added earlier
         });
 
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
         $scope.getProfiles = function() {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
@@ -137,5 +149,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             });
         });
 
+        if ($cookies.get('username')) {
+            $scope.getCount();
+        }
     }
 ]);

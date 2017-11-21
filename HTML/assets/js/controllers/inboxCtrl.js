@@ -23,7 +23,17 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             readed: ''
         };
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
 
         $scope.changeInboxFlag = function(flag) {
             if (flag) {
@@ -276,5 +286,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
             var networkConnection = $translate.instant('inbox.NETWORK_CONNECTION');
             growl.error(serverNotFound, { title: networkConnection });
         });
+
+        $scope.getCount();
     }
 ]);

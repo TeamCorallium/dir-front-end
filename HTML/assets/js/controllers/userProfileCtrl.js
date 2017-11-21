@@ -279,7 +279,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchNotificationUnreaded()
                 .then(
                     function(data) {
-                        console.log(data + " data");
+                        $rootScope.notificationCount = data;
                     },
                     function(errResponse) {
                         console.log(errResponse);

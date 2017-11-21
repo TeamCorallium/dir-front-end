@@ -15,9 +15,17 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             body: ''
         };
 
-        if ($cookies.get('username')) {
-            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
-        }
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
 
         var getUser = function(username) {
             RestService.fetchUserByUser(username)
@@ -88,5 +96,8 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             growl.error(serverNotFound, { title: networkConnection });
         });
 
+        if ($cookies.get('username')) {
+            $scope.getCount();
+        }
     }
 ]);

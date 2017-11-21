@@ -491,8 +491,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         if ($cookies.get('username')) {
-            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
-
             $scope.TryClap = function() {
                 RestService.takeClap($scope.user.id, true);
             };
@@ -500,6 +498,20 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.TryFollow = function() {
                 RestService.follow($scope.user.id, true);
             };
+
+            $scope.getCount();
         }
+
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
     }
 ]);

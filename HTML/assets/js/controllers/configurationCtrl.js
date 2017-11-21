@@ -16,7 +16,21 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $scope.switchEmail = true;
         $scope.switchShowEmail = true;
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        if ($cookies.get('username')) {
+            $scope.getCount();
+        }
 
     }
 ]);
