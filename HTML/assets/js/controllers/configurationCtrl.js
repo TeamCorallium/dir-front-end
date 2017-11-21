@@ -4,8 +4,8 @@
 
 'use strict';
 
-app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate",
-    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate) {
+app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate", "$location",
+    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate, $location) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
@@ -32,5 +32,9 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             $scope.getCount();
         }
 
+        $scope.jumpToLocation = function(key) {
+            $location.hash(key);
+            $anchorScroll();
+        }
     }
 ]);
