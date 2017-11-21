@@ -855,7 +855,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     return str.join("&");
                 }
             }).success(function(result) {
-                $rootScope.$broadcast('deleteNotification');
+                $rootScope.$broadcast('deleteNotification', url);
             }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);

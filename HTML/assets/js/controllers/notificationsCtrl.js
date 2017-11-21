@@ -261,7 +261,13 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         };
 
         $rootScope.$on('deleteNotification', function(event, data) {
-            var deleteNotification = $translate.instant('user_profile.DELETE_NOTIFICATION');
+            for (var i = 0; i < $rootScope.notifications.length; i++) {
+                if ($rootScope.notifications[i].url == data) {
+                    $rootScope.notifications.splice(i, 1);
+                }
+            }
+
+            var deleteNotification = $translate.instant('notification.DELETE_NOTIFICATION');
             growl.success(deleteNotification);
         });
     }
