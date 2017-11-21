@@ -276,7 +276,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getUser($cookies.get('username'));
 
         var o = RestService.fetchNotificationUnreaded();
-        Object.values(o);
+        console.log(Object.values(o));
         // console.dir(o.values());
         // console.dir(o);
         // $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
