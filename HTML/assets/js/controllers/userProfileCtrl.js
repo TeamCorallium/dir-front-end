@@ -275,13 +275,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
-        var o = [];
-        o = RestService.fetchNotificationUnreaded();
-        console.log(o[0]);
-        // console.dir(o);
-        // $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
-        $rootScope.notificationCount = o;
-        console.log($rootScope.notificationCount);
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        console.log(data + " data");
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getCount();
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {
