@@ -489,6 +489,18 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.changeMiddle = function(num) {
             $scope.indexShowMiddle = num;
         };
+        
+        $scope.getCount = function() {
+            RestService.fetchNotificationUnreaded()
+                .then(
+                    function(data) {
+                        $rootScope.notificationCount = data;
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
 
         if ($cookies.get('username')) {
             $scope.TryClap = function() {
@@ -501,17 +513,5 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.getCount();
         }
-
-        $scope.getCount = function() {
-            RestService.fetchNotificationUnreaded()
-                .then(
-                    function(data) {
-                        $rootScope.notificationCount = data;
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
     }
 ]);
