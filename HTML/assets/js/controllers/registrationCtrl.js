@@ -75,6 +75,7 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
             RestService.login(data.username, data.password);
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
         });
 
         $rootScope.$on('wrongRegister', function(event, data) {

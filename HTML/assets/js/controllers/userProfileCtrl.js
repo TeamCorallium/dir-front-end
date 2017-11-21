@@ -59,8 +59,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.indexShowMiddle = 0;
 
         $scope.limitSocialNetwork = 12;
-        $rootScope.notificationCount = 0;
-        $rootScope.notifications = [];
 
         if ($(window).width() >= 1350) {
             $scope.limitSocialNetwork = 12;
@@ -125,33 +123,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 }
             });
         });
-
-        $scope.getCount = function() {
-            $rootScope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
-        };
-
-        var getNotifications = function() {
-            RestService.fetchNotification()
-                .then(
-                    function(data) {
-                        $rootScope.notifications = data;
-
-                        for (var i = 0; i < data.length; i++) {
-                            if (data[i].avatar != '' && data[i].avatar != null) {
-                                var avatarArray = data[i].avatar.split("/");
-                                $rootScope.notifications[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                            } else {
-                                $rootScope.notifications[i].avatar = 'assets/images/default-user.png';
-                            }
-                        }
-
-                        $scope.getCount();
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
-                    }
-                );
-        };
 
         $scope.uploadFile = function(file) {
             if (file) {
@@ -249,7 +220,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.hasPrevious = data.previous;
                         data = data.results;
                         for (var i = 0; i < data.length; i++) {
-                            // data[i].body = replaceURLWithHTMLLinks(data[i].body);
                             $scope.user.snippets.push(data[i]);
                         }
                     },
@@ -304,7 +274,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
-        getNotifications();
+        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {
@@ -416,7 +386,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.EditSnippetFlag = !$scope.EditSnippetFlag;
 
             $scope.user.snippets = [];
-            getSnippets($cookies.get('username'), 1);
+            $scope.currentPage = 1;
+            getSnippets($cookies.get('username'), $scope.currentPage);
         });
 
         $rootScope.$on('socialUpdated', function(event, data) {
@@ -1171,9 +1142,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.clipMessage = function(username) {
-            console.log(username);
             $scope.message.user = username;
-            console.log($scope.message.user);
             $('#modalLeaveMessageUserProfile').modal('show');
         };
 

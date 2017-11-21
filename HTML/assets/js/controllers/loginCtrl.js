@@ -36,6 +36,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             $('#myModal').modal('hide');
             $('#myModalLoginHome').modal('hide');
 
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+
             if ($cookies.get('username') === 'admin') {
                 $scope.administrator = true;
                 $state.go('admin');

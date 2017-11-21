@@ -16,5 +16,7 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $scope.switchEmail = true;
         $scope.switchShowEmail = true;
 
+        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+
     }
 ]);

@@ -267,7 +267,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                 }
             }
 
-            var deleteNotification = $translate.instant('notification.DELETE_NOTIFICATION');
+            var deleteNotification = $translate.instant('notifications.DELETE_NOTIFICATION');
             growl.success(deleteNotification);
         });
     }
