@@ -279,7 +279,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         console.dir(o);
         // $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
         $rootScope.notificationCount = o;
-        console.log($rootScope.notificationCount + " user_profile")
+        console.log($rootScope.notificationCount);
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {
