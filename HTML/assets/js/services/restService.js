@@ -1049,7 +1049,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 .then(
                     function(response) {
                         console.log(response);
-                        console.log(response.unreaded);
+                        console.log(response.data.unreaded);
                         return response.data.unreaded;
                     },
                     function(errResponse) {
