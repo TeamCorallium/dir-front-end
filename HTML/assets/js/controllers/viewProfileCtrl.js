@@ -112,18 +112,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
-        if ($cookies.get('username')) {
-            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
-        }
-
-        $scope.TryClap = function() {
-            RestService.takeClap($scope.user.id, true);
-        };
-
-        $scope.TryFollow = function() {
-            RestService.follow($scope.user.id, true);
-        };
-
         $scope.getUser = function(username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -352,8 +340,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.leaveMessage = function() {
-            console.log("here " + $cookies.get('username') + " " + exploreUser);
+        $scope.SendMessage = function() {
             if (exploreUser != '' && $cookies.get('username')) {
                 var username = $cookies.get('username');
                 RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
@@ -502,5 +489,17 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.changeMiddle = function(num) {
             $scope.indexShowMiddle = num;
         };
+
+        if ($cookies.get('username')) {
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+
+            $scope.TryClap = function() {
+                RestService.takeClap($scope.user.id, true);
+            };
+
+            $scope.TryFollow = function() {
+                RestService.follow($scope.user.id, true);
+            };
+        }
     }
 ]);
