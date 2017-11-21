@@ -6,19 +6,13 @@
                     <nav class="faq-sidebar hidden-print hidden-xs hidden-sm affix-top">
                         <ul class="nav bs-docs-sidenav">
                             <li>
-                                <a href="#new-product" class="active-anchor">Alertas y notificaciones</a>
+                                <a href="#hideProfile" class="active-anchor">Hide Profile</a>
                             </li>
                             <li>
-                                <a href="#buying-product" class="active-anchor">Buying Product</a>
+                                <a href="#emailRecive" class="active-anchor">Notifications by Email</a>
                             </li>
                             <li>
-                                <a href="#download-product" class="active-anchor">Download and install the Product</a>
-                            </li>
-                            <li>
-                                <a href="#billing" class="active-anchor">Billing and renewal</a>
-                            </li>
-                            <li>
-                                <a href="#support" class="active-anchor">Support and resources</a>
+                                <a href="#showEmail" class="active-anchor">Show Email</a>
                             </li>
                         </ul>
                     </nav>
@@ -33,19 +27,19 @@
                                 <hr class="tall margin-bottom-0">
                             </div>
                             <div class="panel-body">
-                                <p>
+                                <p id="hideProfile">
                                     Ocultar perfil
                                 </p>
                                 <div class="checkbox">
                                     <switch ng-model="switchProfile"></switch>
                                 </div>
-                                <p>
-                                    Recivir notificaciones por email
+                                <p id="emailRecive">
+                                    Recibir notificaciones por email
                                 </p>
                                 <div class="checkbox">
                                     <switch ng-model="switchEmail"></switch>
                                 </div>
-                                <p>
+                                <p id="showEmail">
                                     Mostrar email
                                 </p>
                                 <div class="checkbox">
