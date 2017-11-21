@@ -1048,7 +1048,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             return $http.get(notificationsUnreaded)
                 .then(
                     function(response) {
-                        return response.data.unreaded;
+                        var i = response.data.unreaded;
+                        return i;
+                        // return response.data.unreaded;
                     },
                     function(errResponse) {
                         if (status == 403) {
