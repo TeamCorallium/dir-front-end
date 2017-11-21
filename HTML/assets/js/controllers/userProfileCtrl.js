@@ -7,6 +7,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate, filterFilter) {
 
         $rootScope.OptionsEdit = true;
+        $rootScope.notificationCount = 0;
         $cookies.remove("exploreUser", {
             path: '/'
         });
@@ -274,7 +275,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getUser($cookies.get('username'));
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        var o = RestService.fetchNotificationUnreaded();
+        console.log(o + " user_profile")
+            // $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        $rootScope.notificationCount = o;
+        console.log($rootScope.notificationCount + " user_profile")
 
         $scope.saveProfile = function() {
             if ($scope.user.avatar == 'assets/images/default-user.png') {

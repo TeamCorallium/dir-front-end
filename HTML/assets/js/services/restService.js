@@ -1048,8 +1048,6 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             return $http.get(notificationsUnreaded)
                 .then(
                     function(response) {
-                        console.log(response);
-                        console.log(response.data.unreaded);
                         return response.data.unreaded;
                     },
                     function(errResponse) {
