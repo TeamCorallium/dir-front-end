@@ -31,8 +31,6 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $scope.countLimit = 4;
         } else if ($(window).width() >= 768) {
             $scope.countLimit = 3;
-        } else {
-            $scope.countLimit = 1;
         }
 
         $(window).on("resize.doResize", function() {
@@ -41,8 +39,6 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     $scope.countLimit = 4;
                 } else if ($(window).width() >= 768) {
                     $scope.countLimit = 3;
-                } else {
-                    $scope.countLimit = 1;
                 }
             });
         });
