@@ -1762,3 +1762,7 @@ span.stars span {
 .styleBoxConfiguration {
     min-height: 525px !important;
 }
+
+.margin-top--5 {
+    margin-top: -5px !important;
+}
