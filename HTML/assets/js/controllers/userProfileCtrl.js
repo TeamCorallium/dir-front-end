@@ -442,7 +442,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
 
             $scope.user.snippets = [];
-            getSnippets($cookies.get('username'), 1);
+            $scope.currentPage = 1;
+            getSnippets($cookies.get('username'), $scope.currentPage);
         });
 
         $rootScope.$on('deleteSocialNetwork', function(event, data) {
@@ -481,7 +482,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.title = '';
             $scope.body = '';
             $scope.pSnippet = '';
-            getSnippets($cookies.get('username'), 1);
+            $scope.currentPage = 1;
+            getSnippets($cookies.get('username'), $scope.currentPage);
         });
 
         $rootScope.$on('addsocialnetwork', function(event, data) {
