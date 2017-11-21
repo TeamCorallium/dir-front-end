@@ -15,7 +15,9 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             body: ''
         };
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        if ($cookies.get('username')) {
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        }
 
         var getUser = function(username) {
             RestService.fetchUserByUser(username)

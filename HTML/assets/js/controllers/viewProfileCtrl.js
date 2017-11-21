@@ -112,7 +112,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        if ($cookies.get('username')) {
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        }
 
         $scope.TryClap = function() {
             RestService.takeClap($scope.user.id, true);

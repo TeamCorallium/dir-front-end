@@ -9,7 +9,9 @@ app.controller('FAQCtrl', ["$scope", "RestService", "$state", "$rootScope", '$co
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", { path: '/' });
 
-        $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        if ($cookies.get('username')) {
+            $rootScope.notificationCount = RestService.fetchNotificationUnreaded();
+        }
 
     }
 ]);
