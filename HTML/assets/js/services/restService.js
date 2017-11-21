@@ -1050,7 +1050,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         console.log(response);
                         console.log(response.unreaded);
-                        return response.unreaded;
+                        return response.data.unreaded;
                     },
                     function(errResponse) {
                         if (status == 403) {
