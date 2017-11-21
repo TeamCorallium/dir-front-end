@@ -31,17 +31,19 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
 
         $rootScope.$on('connected', function(event, data) {
 
-            if ($cookies.get('username') === 'admin') {
-                $scope.administrator = true;
-            } else {
-                $scope.administrator = false;
-            }
-
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
             $('#myModalLoginHome').modal('hide');
-            $state.go('profile');
+
+            if ($cookies.get('username') === 'admin') {
+                $scope.administrator = true;
+                $state.go('admin');
+            } else {
+                $scope.administrator = false;
+                $state.go('profile');
+            }
+
         });
 
         $scope.logout = function() {
