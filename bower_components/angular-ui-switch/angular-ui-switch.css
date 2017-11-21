@@ -33,8 +33,10 @@
   -webkit-transition: 0.3s ease-out all;
 }
 .switch.checked {
-  background: rgb(100, 189, 99);
-  border-color: rgb(100, 189, 99);
+  /*background: rgb(100, 189, 99);
+  border-color: rgb(100, 189, 99);*/
+  background: rgb(0, 184, 184);
+  border-color: rgb(0, 184, 184);
 }
 .switch.checked small {
   left: 22px;
