@@ -296,6 +296,7 @@
     "notifications": {
         "FOLLOW_YOU": " 跟著你",
         "NEW_SNIPPET": " 創建了一個新的程式碼片段",
-        "ADD_SOCIAL": " 添加新的社交網路"
+        "ADD_SOCIAL": " 添加新的社交網路",
+        "DELETE_NOTIFICATION": "您的通知已被刪除"
     }
 }

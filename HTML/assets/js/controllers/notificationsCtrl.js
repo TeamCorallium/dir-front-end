@@ -255,5 +255,14 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         };
 
         $scope.getNotifications();
+
+        $scope.deleteNotification = function(url) {
+            RestService.deleteNotification(url);
+        };
+
+        $rootScope.$on('deleteNotification', function(event, data) {
+            var deleteNotification = $translate.instant('user_profile.DELETE_NOTIFICATION');
+            growl.success(deleteNotification);
+        });
     }
 ]);

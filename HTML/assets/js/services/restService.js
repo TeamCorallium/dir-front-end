@@ -840,6 +840,33 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
+        deleteNotification: function(url) {
+            $http({
+                method: 'DELETE',
+                url: url,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded',
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                }
+            }).success(function(result) {
+                $rootScope.$broadcast('deleteNotification');
+            }).error(function(response) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('deleteNotificationError');
+                }
+            });
+        },
+
         fetchTshirt: function(code) {
             return $http.get(tshirt + "?code=" + code)
                 .then(

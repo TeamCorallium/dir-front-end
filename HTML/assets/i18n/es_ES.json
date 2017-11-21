@@ -296,6 +296,7 @@
     "notifications": {
         "FOLLOW_YOU": " te sigue",
         "NEW_SNIPPET": " ha creado un nuevo snippet",
-        "ADD_SOCIAL": " agregó una nueva red social"
+        "ADD_SOCIAL": " agregó una nueva red social",
+        "DELETE_NOTIFICATION": "Su notificación ha sido eliminada"
     }
 }
