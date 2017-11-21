@@ -351,6 +351,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.leaveMessage = function() {
+            console.log("here " + $cookies.get('username') + " " + exploreUser);
             if (exploreUser != '' && $cookies.get('username')) {
                 var username = $cookies.get('username');
                 RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
