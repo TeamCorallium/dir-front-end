@@ -36,5 +36,17 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             $location.hash(key);
             $anchorScroll();
         }
+
+        $scope.switchEmailChange = function() {
+            console.log(switchEmail + " switchEmail");
+        };
+
+        $scope.switchProfileChange = function() {
+            console.log(switchProfile + " switchProfile");
+        };
+
+        $scope.switchShowEmailChange = function() {
+            console.log(switchShowEmail + " switchShowEmail");
+        };
     }
 ]);

@@ -32,19 +32,19 @@
                                     Ocultar perfil
                                 </p>
                                 <div class="checkbox">
-                                    <switch ng-model="switchProfile"></switch>
+                                    <switch ng-change="switchProfileChange()" ng-model="switchProfile"></switch>
                                 </div>
                                 <p id="emailRecive">
                                     Recibir notificaciones por email
                                 </p>
                                 <div class="checkbox">
-                                    <switch ng-model="switchEmail"></switch>
+                                    <switch ng-change="switchEmailChange()" ng-model="switchEmail"></switch>
                                 </div>
                                 <p id="showEmail">
                                     Mostrar email
                                 </p>
                                 <div class="checkbox">
-                                    <switch ng-model="switchShowEmail"></switch>
+                                    <switch ng-change="switchShowEmailChange()" ng-model="switchShowEmail"></switch>
                                 </div>
                             </div>
                         </div>
