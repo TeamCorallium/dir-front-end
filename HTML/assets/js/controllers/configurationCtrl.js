@@ -38,15 +38,15 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         }
 
         $scope.switchEmailChange = function() {
-            console.log(switchEmail + " switchEmail");
+            console.log($scope.switchEmail + " switchEmail");
         };
 
         $scope.switchProfileChange = function() {
-            console.log(switchProfile + " switchProfile");
+            console.log($scope.switchProfile + " switchProfile");
         };
 
         $scope.switchShowEmailChange = function() {
-            console.log(switchShowEmail + " switchShowEmail");
+            console.log($scope.switchShowEmail + " switchShowEmail");
         };
     }
 ]);
