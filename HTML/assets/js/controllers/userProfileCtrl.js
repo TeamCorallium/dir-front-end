@@ -168,6 +168,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var getProfile = function(url) {
+            url = url.replace("/api", RestService.urlBaseDir);
             RestService.fetchObjectByUrl(url)
                 .then(
                     function(data) {
