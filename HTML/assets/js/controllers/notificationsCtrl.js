@@ -127,6 +127,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         };
 
         var getProfile = function(url) {
+            url = url.replace("/api", RestService.urlBaseDir);
             RestService.fetchObjectByUrl(url)
                 .then(
                     function(data) {
@@ -159,6 +160,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
 
         var getTshirts = function(urls) {
             for (var i = 0; i < urls.length; i++) {
+                url = url.replace("/api", RestService.urlBaseDir);
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
                         function(data) {
@@ -323,6 +325,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         $scope.getNotifications();
 
         $scope.deleteNotification = function(url) {
+            url = url.replace("/api", RestService.urlBaseDir);
             RestService.deleteNotification(url);
         };
 

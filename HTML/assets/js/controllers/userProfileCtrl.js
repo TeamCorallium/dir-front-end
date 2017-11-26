@@ -201,6 +201,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         var getTshirts = function(urls) {
             for (var i = 0; i < urls.length; i++) {
+                url = url.replace("/api", RestService.urlBaseDir);
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
                         function(data) {
@@ -327,6 +328,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.saveSnippetEdit = function(url, body) {
+            url = url.replace("/api", RestService.urlBaseDir);
             RestService.updateSnippet(url, body);
         };
 
@@ -353,6 +355,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
+                    url = url.replace("/api", RestService.urlBaseDir);
                     RestService.deleteSnippet(url);
                 } else {
                     SweetAlert.swal({

@@ -148,6 +148,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var getProfile = function(url) {
+            url = url.replace("/api", RestService.urlBaseDir);
             RestService.fetchObjectByUrl(url)
                 .then(
                     function(data) {
@@ -187,6 +188,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         var getTshirts = function(urls) {
             for (var i = 0; i < urls.length; i++) {
+                url = url.replace("/api", RestService.urlBaseDir);
                 RestService.fetchObjectByUrl(urls[i])
                     .then(
                         function(data) {
@@ -489,7 +491,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.changeMiddle = function(num) {
             $scope.indexShowMiddle = num;
         };
-        
+
         $scope.getCount = function() {
             RestService.fetchNotificationUnreaded()
                 .then(

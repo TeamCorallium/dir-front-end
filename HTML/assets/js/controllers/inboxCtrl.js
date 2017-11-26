@@ -109,6 +109,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
             if (!$scope.messageSelected.readed) {
                 $scope.messageSelected.readed = true;
+                $scope.messageSelected.url = $scope.messageSelected.url.replace("/api", RestService.urlBaseDir);
                 RestService.updateMessage($scope.messageSelected.url, $scope.messageSelected.sender,
                     $scope.messageSelected.receiver, $scope.messageSelected.subject,
                     $scope.messageSelected.body, $scope.messageSelected.readed);
@@ -216,6 +217,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 closeOnCancel: false
             }, function(isConfirm) {
                 if (isConfirm) {
+                    url = url.replace("/api", RestService.urlBaseDir);
                     RestService.deleteMessage(url);
                 } else {
                     SweetAlert.swal({
