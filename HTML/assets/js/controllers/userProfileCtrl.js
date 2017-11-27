@@ -295,11 +295,12 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.user.avatar == 'assets/images/default-user.png') {
                 $scope.user.avatar = '';
             }
-
+            url = $scope.user.profileurl;
+            url = url.replace("/api", RestService.urlBaseDir);
             if ($scope.user.avatar instanceof File) {
-                RestService.updateProfile($scope.user.profileurl, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email);
+                RestService.updateProfile(url, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email);
             } else {
-                RestService.updateProfileWithOutAvatar($scope.user.profileurl, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
+                RestService.updateProfileWithOutAvatar(url, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
             }
         };
 
@@ -415,7 +416,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('updateProfile', function(event, data) {
-            getProfile($scope.user.profileUrl);
+            url = $scope.user.profileurl;
+            url = url.replace("/api", RestService.urlBaseDir);
+            getProfile(url);
             $scope.EditProfile();
         });
 
