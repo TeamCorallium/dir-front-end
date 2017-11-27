@@ -416,8 +416,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('updateProfile', function(event, data) {
-            var url = $scope.user.profileurl;
-            url = url.replace("/api", RestService.urlBaseDir);
             getProfile(url);
             $scope.EditProfile();
         });
