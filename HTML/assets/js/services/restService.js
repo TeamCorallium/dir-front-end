@@ -52,7 +52,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var notifications = 'http://www.dirstuff.com/server/api/notifications/';
     // var notificationsUnreaded = 'http://www.dirstuff.com/server/api/notifications-unreaded/';
 
-    var urlBase = '/server/api';
+    // var urlBase = '/server/api';
+    var urlBase = '/api';
 
     return {
         loginNext: loginNext,
