@@ -416,7 +416,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('updateProfile', function(event, data) {
-            getProfile(url);
+            getProfile($scope.user.profileurl);
             $scope.EditProfile();
         });
 
