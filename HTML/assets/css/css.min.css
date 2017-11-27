@@ -1,1 +1,1707 @@
-.modal-header{padding:0}.modal-header .close{padding:10px 15px}.modal-header ul{border:none}.modal-header ul li{margin:0}.modal-header ul li a{border:none;border-radius:0}.modal-header ul li.active a{color:#e12f27}.modal-header ul li a:hover{border:none}.modal-header ul li a span{margin-left:10px}.modal-body .form-group{margin-bottom:10px}.style-link{color:#00B8B8!important}.style-link:hover{cursor:pointer!important;color:#337ab7}.button-image-left:hover,.button-image-right:hover{opacity:1!important}.resize-none{resize:none!important}@media (min-width:768px){.SnippetBox,.TitleSnippetBox,.UserInfoBox{text-align:left!important}.marginButtonEdit{margin-top:5px!important}.TitleSnippetBox{width:95%!important;display:block;position:relative;float:left}.image_middle,.image_qrcode{float:left!important;height:130px!important;width:130px!important;padding:0!important}.image_middle{margin-left:15%!important;margin-top:-60%!important}.image_qrcode{margin-left:19%!important}.paddingProfile{padding-top:45px!important}.button-image-cover,.button-image-left{position:absolute!important;width:35px!important;height:35px!important;padding-left:10px!important;opacity:.5!important;padding-top:7px!important}.min-height-80{min-height:70px!important}.button-image-left{margin-top:-42%!important;margin-left:35%!important;border-radius:100%!important}.button-image-cover{margin-left:1%!important;margin-top:1%!important}.paddingStyle,.paddingStyleNotifications,.paddingStyleView{padding-left:40px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/768.jpg)}.marginButtonUserHome{margin-left:43%!important;border-radius:5px!important}.SocialIcon{margin-top:5px!important;margin-left:25%!important}.UserInfoBox{min-height:180px!important;margin-top:10px!important}#MessageInboxBox,#MessageReadBox,#MessageSendBox,.InboxBox,.OptionsBox{min-height:600px!important}.displayBlock{display:none!important}.DeleteSnippetBox,.SnippetBox{display:block;position:relative;float:left}.marginTopFilter{margin-top:60px!important}.marginSearch{margin-left:15px!important;margin-right:15px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:87%!important}.paddingStyle{margin-top:10px!important}.paddingStyleNotifications{margin-top:15px!important}.marginTop25XS{margin-top:25px!important}}@media (min-width:770px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/800.jpg)}}@media (min-width:801px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/850.jpg)}}@media (min-width:851px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/900.jpg)}.SocialIcon{margin-top:5px!important;margin-left:27%!important}}@media (min-width:901px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/950.jpg)}.SocialIcon{margin-top:5px!important;margin-left:28%!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:951px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1000.jpg)}.SocialIcon{margin-top:5px!important;margin-left:30%!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (max-width:991px){.profile-padding{padding-bottom:0!important}.navbar>.container .navbar-header .navbar-brand{float:right!important;margin-right:5%!important}}@media (min-width:992px){.marginButtonEdit{margin-right:20px!important;margin-top:5px!important}.SocialIcon{margin-top:5px!important;margin-left:28%!important}.navbar>.container .navbar-header .navbar-brand{float:right!important}.SnippetBox{text-align:left!important;display:block;position:relative;float:left;width:86%!important}}@media (min-width:1001px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1050.jpg)}.SocialIcon{margin-top:5px!important;margin-left:29.3%!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:1051px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1100.jpg)}.SocialIcon{margin-top:5px!important;margin-left:30.3%!important}.marginButtonEdit{margin-right:50px!important;margin-top:5px!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:1101px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1150.jpg)}.marginButtonEdit{margin-right:75px!important;margin-top:5px!important}.SocialIcon{margin-top:5px!important;margin-left:31.4%!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:1151px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1200.jpg)}.marginButtonEdit{margin-right:100px!important;margin-top:5px!important}.SocialIcon{margin-top:5px!important;margin-left:32%!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:1251px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1300.jpg)}.marginButtonEdit{margin-right:100px!important;margin-top:5px!important}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (min-width:1301px){.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1366.jpg)}.UserInfoBox{text-align:left!important;min-height:180px!important;margin-top:10px!important}}@media (max-width:767px){.marginLeft20XS{margin-left:20px!important;padding-right:45px!important}.marginTop20XS{margin-top:20px!important}.TitleSnippetBox{width:89%!important;text-align:left!important;display:block;position:relative;float:left}.marginSnippetXS{margin-left:0!important}#MessageReadBox{display:none}.avatarXS{width:50px;height:50px;margin:10px}.marginTopMovil{margin-top:25px!important}.marginTopMovil-10{margin-top:10px!important}.image_qrcode{float:left!important;height:180px!important;width:180px!important;padding:0!important;margin-left:38%!important}.AvatarXSBox,.UserInfoBox{display:block;position:relative;float:left}.SocialIcon{margin-top:5px!important;margin-left:3%!important}.AvatarXSBox{width:10%!important}.UserInfoBox{text-align:left!important;width:90%!important}.paddingProfile{padding-top:45px!important}.min-height-80{min-height:50px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/480.jpg)}.center-box{margin-left:36%!important}.marginExploreUser,.marginUserHome{margin-left:33%!important}.marginButtonUserHome{margin-left:40.6%!important;border-radius:5px!important}.displayBlock{display:block!important}.DeleteSnippetBox,.SnippetBox{display:block;position:relative;float:left}.centerTextExploreUser{text-align:center!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{text-align:left!important;width:92%!important}.HiddenIfXS{display:none!important}.paddingLeft15XS{padding-left:15px!important}.qrcodeImage{max-width:250px!important;margin-left:32%!important}}@media (max-width:480px){.SnippetBox,.UserInfoBox{text-align:left!important}.avatarXS{width:50px;height:50px;margin:10px}.image_qrcode{float:left!important;height:150px!important;width:150px!important;padding:0!important;margin-left:32%!important}.AvatarXSBox,.DeleteSnippetBox,.SnippetBox,.UserInfoBox{display:block;position:relative;float:left}.SocialIcon{margin-top:5px!important;margin-left:5%!important}.AvatarXSBox{width:15%!important}.UserInfoBox{width:85%!important}.paddingProfile{padding-top:45px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/480.jpg)}.marginUserHome{margin-left:21%!important}.marginExploreUser{margin-left:20%!important}.marginButtonUserHome{margin-left:34%!important;border-radius:5px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:86%!important}.qrcodeImage{max-width:250px!important;margin-left:20%!important}}@media (max-width:415px){.SnippetBox,.UserInfoBox{text-align:left!important}.avatarXS{width:50px;height:50px;margin:10px}.image_qrcode{float:left!important;height:150px!important;width:150px!important;padding:0!important;margin-left:28%!important}.AvatarXSBox,.DeleteSnippetBox,.SnippetBox,.UserInfoBox{display:block;position:relative;float:left}.SocialIcon{margin-top:5px!important;margin-left:6%!important}.AvatarXSBox{width:18%!important}.UserInfoBox{width:82%!important}.paddingProfile{padding-top:45px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/480.jpg)}.marginUserHome{margin-left:15%!important}.marginExploreUser{margin-left:14%!important}.marginButtonUserHome{margin-left:31%!important;border-radius:5px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:83%!important}.qrcodeImage{max-width:250px!important;margin-left:15%!important}}@media (max-width:375px){.SnippetBox,.UserInfoBox{text-align:left!important}.avatarXS{width:50px;height:50px;margin:10px}.image_qrcode{float:left!important;height:150px!important;width:150px!important;padding:0!important;margin-left:25%!important}.AvatarXSBox,.DeleteSnippetBox,.SnippetBox,.UserInfoBox{display:block;position:relative;float:left}.SocialIcon{margin-top:5px!important;margin-left:6%!important}.AvatarXSBox{width:20%!important}.UserInfoBox{width:80%!important}.paddingProfile{padding-top:45px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/375.jpg)}.marginExploreUser,.marginUserHome{margin-left:10%!important}.marginButtonUserHome{margin-left:28%!important;border-radius:5px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:80%!important}.qrcodeImage{max-width:250px!important;margin-left:10%!important}}@media (max-width:360px){.SnippetBox,.UserInfoBox{text-align:left!important}.avatarXS{width:50px;height:50px;margin:10px}.image_qrcode{float:left!important;height:150px!important;width:150px!important;padding:0!important;margin-left:25%!important}.AvatarXSBox,.DeleteSnippetBox,.SnippetBox,.UserInfoBox{display:block;position:relative;float:left}.paddingProfile{padding-top:45px!important}.SocialIcon{margin-top:5px!important;margin-left:6%!important}.AvatarXSBox{width:20%!important}.UserInfoBox{width:80%!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/360.jpg)}.marginExploreUser,.marginUserHome{margin-left:8%!important}.marginButtonUserHome{margin-left:27%!important;border-radius:5px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:79%!important}.qrcodeImage{max-width:250px!important;margin-left:9%!important}}@media (max-width:320px){.SnippetBox,.UserInfoBox{text-align:left!important}.avatarXS{width:50px;height:50px;margin:10px}.image_qrcode{float:left!important;height:150px!important;width:150px!important;padding:0!important;margin-left:21%!important}.AvatarXSBox,.DeleteSnippetBox,.SnippetBox,.UserInfoBox{display:block;position:relative;float:left}.SocialIcon{margin-top:5px!important;margin-left:7%!important}.AvatarXSBox{width:25%!important}.UserInfoBox{width:75%!important}.paddingProfile{padding-top:45px!important}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/320.jpg)}.marginUserHome{margin-left:0!important}.marginExploreUser{margin-left:1%!important}.marginButtonUserHome{margin-left:23%!important;border-radius:5px!important}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:75%!important}.qrcodeImage{max-width:250px!important;margin-left:1%!important}}.paddingViewProfile{padding-top:5px!important}.button-image-cover:hover{opacity:1!important}@media (min-width:1201px){.button-image-cover,.button-image-left{position:absolute!important;width:35px!important;height:35px!important;opacity:.5!important}.SnippetBox,.UserInfoBox{text-align:left!important}.button-image-cover{margin-left:1%!important;margin-top:1%!important;padding-left:9px!important;padding-top:6px!important}.button-image-left{margin-top:-42%!important;margin-left:37%!important;border-radius:100%!important;padding-left:10px!important;padding-top:7px!important}.SocialIcon{margin-top:5px!important;margin-left:22.5%!important}.image_middle,.image_qrcode{float:left!important;width:120px!important;padding:0!important;margin-left:18%!important;height:120px!important}.UserInfoBox{min-height:130px!important;margin-top:10px!important}.image_middle{margin-top:-60%!important}.DeleteSnippetBox,.SnippetBox{display:block;position:relative;float:left}.pictureFrontCover{width:100%;height:120px!important;background-image:url(../../assets/images/1250.jpg)}.DeleteSnippetBox{width:50px!important}.SnippetBox{width:90%!important}}@media (min-width:1251px){.SocialIcon{margin-top:5px!important;margin-left:24%!important}}.margin-0{margin:0!important}.font-size-30{font-size:30px!important}.padding-left-right-30{padding-left:30px!important;padding-right:30px!important}.avatar-users{width:120px!important;height:120px!important;margin-left:50px!important}.cropArea,img-crop{overflow:hidden;width:100%}.avatar-users:hover{cursor:pointer;cursor:hand}.max-width-160{max-width:160px!important}.user-box{height:280px!important}.cropArea{background:#E4E4E4;height:400px}img-crop{display:block;height:100%;position:relative}img-crop canvas{display:block;left:50%;outline:0;position:absolute;top:50%}.styleBox{position:relative!important;background-color:#F4F4F4;border:1px solid #E3E3E3;height:330px!important;max-width:225px!important;border-radius:7px!important}.styleBox:hover{box-shadow:0 1px 7px -4px rgba(0,0,0,.9)!important}.ImageBox{padding-top:15px!important;padding-bottom:15px!important}.buttonContainer{position:absolute!important;bottom:15px!important;margin-left:63px!important}.SocialList,.SocialListPage{display:block;height:40px;opacity:.6;width:40px;top:0;font-size:20px;position:relative;font-family:FontAwesome;text-indent:0;line-height:40px;color:#FFF;left:0;text-align:center}.buttonProfile{border-radius:1px!important}.SocialList{border-radius:10px}.SocialList:hover{opacity:1!important}.HoverWhite{color:#FFF!important}.padding-top-2{padding-top:2px!important}ul li a.social-ti-facebook{background:#3B5998}ul li a.social-ti-twitter{background:#48C4D2}ul li a.social-ti-dribbble{background:#EF5B92}ul li a.social-ti-google{background:#DD4B39}ul li a.social-ti-linkedin{background:#71B2D0}ul li a.social-ti-youtube{background:#F45750}ul li a.social-ti-rss{background:#FE9900}ul li a.social-ti-behance{background:#5EB5FB}ul li a.social-ti-dropbox{background:#85BEEC}ul li a.social-ti-github{background:#94A5B0}ul li a.social-ti-skype{background:#70CCEF}ul li a.social-ti-spotify{background:#8BD05A}ul li a.social-ti-stumbleupon{background:#F08066}ul li a.social-ti-tumblr{background:#85A5C3}ul li a.social-ti-vimeo{background:#7C99A8}ul li a.social-ti-wordpress{background:#649EB9}ul li a.social-ti-xing{background:#4F9394}ul li a.social-ti-yahoo{background:#C38DCF}ul li a.social-ti-vk{background:#708FAC}ul li a.social-ti-instagram{background:#CBAA97}ul li a.social-ti-reddit{background:#FF7A52}ul li a.social-ti-flickr{background:#FF4DA9}ul li a.social-ti-foursquare{background:#6FCCF4}.ColorNavBar{background-color:#EBEBEB!important;height:65px!important}.ButtonRadius{border-radius:4px!important;margin-top:5px!important}@media (min-width:1251px){.SocialIcon{margin-top:5px!important;margin-left:23%!important}.marginButtonEdit{margin-right:60px!important;margin-top:5px!important}}@media (min-width:1301px){.SocialIcon{margin-top:5px!important;margin-left:23%!important}.marginButtonEdit{margin-right:80px!important;margin-top:5px!important}}@media (min-width:1366px){.SocialIcon{margin-top:5px!important;margin-left:24.4%!important}.marginButtonEdit{margin-right:100px!important;margin-top:5px!important}}a.ButtonImageSize{min-width:50px!important;min-height:50px!important}.SendBox,.profile-padding-inbox{min-height:600px!important}.LoadImageModalButton{width:100%!important}.ListOptions{margin:8px 0 0;list-style:none;padding:0;line-height:34px}.MessageFrom{font-weight:700;margin-top:2px;color:#aeacb4;font-size:14px}.MessageFromSender{font-weight:700;font-size:16px!important;margin-top:2px;color:#0b0b0b;opacity:.6}.MessageFromReceiver{font-size:12px!important;margin-top:2px;color:#aeacb4}.MessageSubject{font-size:14px;margin-bottom:4px;color:#5b5b60}.MessageSubjectNoFound{font-size:16px;margin-bottom:4px;color:#5b5b60;opacity:.5;text-align:center}.MessageTime,.MessageTimeLeft{right:15px;top:8px;color:#8e8e93;font-size:11px}.MessageTime{float:right}.IconSnippetBox,.MessageListBox,.ReadUnreadBox{display:block;float:left}.MessageContent{font-size:12px;color:#c2c2c5;margin-bottom:4px}.profile-padding-inbox{position:relative!important;padding-top:50px;background-color:#FFF!important}.IconSnippetBox,.MessageListBox,.NoMessage,.ReadUnreadBox,.password-count,.strength-meter{position:relative}.InboxBox,.OptionsBox,.SendBox{background-color:#fff!important}.MessageUnread{font-weight:700!important}.ReadUnreadBox{width:5%!important}.MessageListBox{width:95%!important}.NoMessage{bottom:0;left:0;margin-top:50%;opacity:.5;right:0;text-align:center;font-weight:300}.IconSnippet{width:20px!important;height:20px!important}.IconSnippetBox{width:25px!important;text-align:left!important}.ng-cloak,.x-ng-cloak,[data-ng-cloak],[ng-cloak],[ng\:cloak],[x-ng-cloak]{display:none!important}.form-control.error{border-color:red}.form-hint{font-size:7pt;line-height:9pt;margin:-5px auto 5px;color:#999}.form-hint.error{color:#C00;font-weight:700;font-size:8pt}.password-count{float:right;bottom:27px;right:10px}.strength-meter{height:3px;background:#DDD;margin:10px auto 20px;border-radius:3px}.strength-meter:after,.strength-meter:before{content:'';height:inherit;background:0 0;display:block;border-color:#FFF;border-style:solid;border-width:0 5px;position:absolute;width:80px;z-index:10}.strength-meter:before{left:70px}.strength-meter:after{right:70px}.strength-meter-fill{background:0 0;height:inherit;position:absolute;width:0;border-radius:inherit;transition:width .5s ease-in-out,background .25s}.strength-meter-fill[data-strength='0']{background:#8b0000;width:20%}.strength-meter-fill[data-strength='1']{background:#ff4500;width:40%}.strength-meter-fill[data-strength='2']{background:orange;width:60%}.strength-meter-fill[data-strength='3']{background:#9acd32;width:80%}.strength-meter-fill[data-strength='4']{background:green;width:100%}.btn.disabled,.btn[disabled],fieldset[disabled] .btn{cursor:not-allowed;filter:alpha(opacity=65);-webkit-box-shadow:none;box-shadow:none;opacity:.65}.msg-block{margin-top:5px}.msg-error{color:red;font-size:14px}.cursordefault{cursor:default}.ButtonMoreUser{border:none!important}.ListMoreUser{min-height:45px!important;border-bottom:none!important}.margin-top-80{margin-top:80px!important}.displayBlockAll{display:block!important}.backgroundMessageSelectedColor{background-color:#cbf4fa!important}.margin-top-12{margin-top:12px!important}.image-hand{width:20px!important;height:20px!important}.font-size-25{font-size:25px!important}.margin-top-21{margin-top:21px!important}.textColorWhite{color:#FFF!important}span.stars,span.stars span{display:block;background:url(../images/stars.png) 0 -16px repeat-x;width:80px;height:16px}span.stars span{background-position:0 0}.pointerHover:hover{cursor:pointer!important;cursor:hand!important}.demo-notification-icons notification-icon{display:table;margin:0 auto}.custom-style .angular-notifications-icon{left:-10px;background:#ff0;color:#000;width:30px;height:30px;font-weight:bolder;font-size:1.2em}.angular-notifications-icon.my-custom-animation{-moz-transition:linear .5s all;-o-transition:linear .5s all;-webkit-transition:linear .5s all;transition:linear .5s all}.angular-notifications-icon.my-custom-animation-add{background:#000;color:#fff}.angular-notifications-icon.my-custom-animation-add-active{background:#ff0;color:#000}.positionInheritIcon{position:absolute!important;left:40px!important;line-height:20px!important;font-size:14px!important}.iconClose{position:absolute;top:-1px;z-index:2;font-size:12px;left:32px}.adminDeleteUser,.adminInfoUser{text-align:left!important;display:block;position:relative;float:left}.opacity6{opacity:.6!important}.opacity6:hover{opacity:1!important}.verticalOverflow{overflow-y:scroll!important;overflow-x:hidden!important}.iconClap{width:30px!important;margin-top:-10px!important}.iconMessage{width:30px!important;margin-top:-5px!important}.iconClapMini{width:16px!important;margin-top:-6px!important}.border-radius10{border-radius:6px!important}.adminInfoUser{width:88%!important}.adminDeleteUser{width:5%!important}.NoUserStyles{font-size:24px!important;text-align:center!important}.deleteStuffMargin{margin-top:8px!important}.DropdownMargin,.ListEdit{margin-top:-9px!important}.colorSuccessStock{color:#0ae40a;opacity:.6}.colorErrorStock{color:#cf0707;opacity:.6}.dont-break-out{overflow-wrap:break-word;word-wrap:break-word;-ms-word-break:break-all;word-break:break-all;word-break:break-word;-ms-hyphens:auto;-moz-hyphens:auto;-webkit-hyphens:auto;hyphens:auto}.SnippetsArea{resize:none;border:none!important}.SnippetFooter{height:40px}.borderBox{border:1px solid #E3E3E3;border-radius:6px!important}.ListEdit{margin-right:10px!important}.margin-top-3{margin-top:3px!important}.backgroundGray{background-color:#f6f6f6!important}.backgroundWhite{background-color:#fff!important}.ImagePlusSocialNetwork{max-width:30px;margin-top:-8px;margin-left:1px}.backgroundBlueSky{background-color:#00B8B8!important}.borderRadius50{border-radius:50px!important}.font-size-50{font-size:50px!important}.lineMiddleSelect{background-color:#00B8B8;height:5px;position:absolute;margin-top:11px;margin-left:-20px}.borderBottomNone{border-bottom:none!important}.borderTopFollower{border-top:1px solid #E3E3E3}.margin-left--15{margin-left:-15px}.padding-top3{padding-top:3px!important}.margin-top3{margin-top:3px!important}.styleNotification{margin-top:5px!important;float:left!important;margin-left:10px!important}.fontSize18{font-size:18px!important}.fontSize20{font-size:20px!important}.notificationMDIcon,.notificationXSIcon{line-height:14px!important;font-size:11px!important;margin-top:10px}.notificationXSIcon{position:absolute!important;left:40px!important;margin-left:10px}.styleLiSocial{min-height:10px!important;padding:0!important}.height30{height:30px!important}.font-size-15{font-size:15px!important}.margin-top--3{margin-top:-3px!important}.margin-top--2{margin-top:-2px!important}.styleBoxConfiguration{min-height:525px!important}.margin-top--5{margin-top:-5px!important}
+.modal-header {
+    padding: 0
+}
+
+.modal-header .close {
+    padding: 10px 15px
+}
+
+.modal-header ul {
+    border: none
+}
+
+.modal-header ul li {
+    margin: 0
+}
+
+.modal-header ul li a {
+    border: none;
+    border-radius: 0
+}
+
+.modal-header ul li.active a {
+    color: #e12f27
+}
+
+.modal-header ul li a:hover {
+    border: none
+}
+
+.modal-header ul li a span {
+    margin-left: 10px
+}
+
+.modal-body .form-group {
+    margin-bottom: 10px
+}
+
+.style-link {
+    color: #00B8B8!important
+}
+
+.style-link:hover {
+    cursor: pointer!important;
+    color: #337ab7
+}
+
+.button-image-left:hover,
+.button-image-right:hover {
+    opacity: 1!important
+}
+
+.resize-none {
+    resize: none!important
+}
+
+@media (min-width:768px) {
+    .SnippetBox,
+    .TitleSnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .marginButtonEdit {
+        margin-top: 5px!important
+    }
+    .TitleSnippetBox {
+        width: 95%!important;
+        display: block;
+        position: relative;
+        float: left
+    }
+    .image_middle,
+    .image_qrcode {
+        float: left!important;
+        height: 130px!important;
+        width: 130px!important;
+        padding: 0!important
+    }
+    .image_middle {
+        margin-left: 15%!important;
+        margin-top: -60%!important
+    }
+    .image_qrcode {
+        margin-left: 19%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .button-image-cover,
+    .button-image-left {
+        position: absolute!important;
+        width: 35px!important;
+        height: 35px!important;
+        padding-left: 10px!important;
+        opacity: .5!important;
+        padding-top: 7px!important
+    }
+    .min-height-80 {
+        min-height: 70px!important
+    }
+    .button-image-left {
+        margin-top: -42%!important;
+        margin-left: 35%!important;
+        border-radius: 100%!important
+    }
+    .button-image-cover {
+        margin-left: 1%!important;
+        margin-top: 1%!important
+    }
+    .paddingStyle,
+    .paddingStyleNotifications,
+    .paddingStyleView {
+        padding-left: 40px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/768.jpg)
+    }
+    .marginButtonUserHome {
+        margin-left: 43%!important;
+        border-radius: 5px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 25%!important
+    }
+    .UserInfoBox {
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+    #MessageInboxBox,
+    #MessageReadBox,
+    #MessageSendBox,
+    .InboxBox,
+    .OptionsBox {
+        min-height: 600px!important
+    }
+    .displayBlock {
+        display: none!important
+    }
+    .DeleteSnippetBox,
+    .SnippetBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .marginTopFilter {
+        margin-top: 60px!important
+    }
+    .marginSearch {
+        margin-left: 15px!important;
+        margin-right: 15px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 87%!important
+    }
+    .paddingStyle {
+        margin-top: 10px!important
+    }
+    .paddingStyleNotifications {
+        margin-top: 15px!important
+    }
+    .marginTop25XS {
+        margin-top: 25px!important
+    }
+}
+
+@media (min-width:770px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/800.jpg)
+    }
+}
+
+@media (min-width:801px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/850.jpg)
+    }
+}
+
+@media (min-width:851px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/900.jpg)
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 27%!important
+    }
+}
+
+@media (min-width:901px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/950.jpg)
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 28%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:951px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1000.jpg)
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 30%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (max-width:991px) {
+    .profile-padding {
+        padding-bottom: 0!important
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: right!important;
+        margin-right: 5%!important
+    }
+}
+
+@media (min-width:992px) {
+    .marginButtonEdit {
+        margin-right: 20px!important;
+        margin-top: 5px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 28%!important
+    }
+    .navbar>.container .navbar-header .navbar-brand {
+        float: right!important
+    }
+    .SnippetBox {
+        text-align: left!important;
+        display: block;
+        position: relative;
+        float: left;
+        width: 86%!important
+    }
+}
+
+@media (min-width:1001px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1050.jpg)
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 29.3%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:1051px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1100.jpg)
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 30.3%!important
+    }
+    .marginButtonEdit {
+        margin-right: 50px!important;
+        margin-top: 5px!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:1101px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1150.jpg)
+    }
+    .marginButtonEdit {
+        margin-right: 75px!important;
+        margin-top: 5px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 31.4%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:1151px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1200.jpg)
+    }
+    .marginButtonEdit {
+        margin-right: 100px!important;
+        margin-top: 5px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 32%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:1251px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1300.jpg)
+    }
+    .marginButtonEdit {
+        margin-right: 100px!important;
+        margin-top: 5px!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (min-width:1301px) {
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1366.jpg)
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        min-height: 180px!important;
+        margin-top: 10px!important
+    }
+}
+
+@media (max-width:767px) {
+    .marginLeft20XS {
+        margin-left: 20px!important;
+        padding-right: 45px!important
+    }
+    .marginTop20XS {
+        margin-top: 20px!important
+    }
+    .TitleSnippetBox {
+        width: 89%!important;
+        text-align: left!important;
+        display: block;
+        position: relative;
+        float: left
+    }
+    .marginSnippetXS {
+        margin-left: 0!important
+    }
+    #MessageReadBox {
+        display: none
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .marginTopMovil {
+        margin-top: 25px!important
+    }
+    .marginTopMovil-10 {
+        margin-top: 10px!important
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 180px!important;
+        width: 180px!important;
+        padding: 0!important;
+        margin-left: 38%!important
+    }
+    .AvatarXSBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 3%!important
+    }
+    .AvatarXSBox {
+        width: 10%!important
+    }
+    .UserInfoBox {
+        text-align: left!important;
+        width: 90%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .min-height-80 {
+        min-height: 50px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/480.jpg)
+    }
+    .center-box {
+        margin-left: 36%!important
+    }
+    .marginExploreUser,
+    .marginUserHome {
+        margin-left: 33%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 40.6%!important;
+        border-radius: 5px!important
+    }
+    .displayBlock {
+        display: block!important
+    }
+    .DeleteSnippetBox,
+    .SnippetBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .centerTextExploreUser {
+        text-align: center!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        text-align: left!important;
+        width: 92%!important
+    }
+    .HiddenIfXS {
+        display: none!important
+    }
+    .paddingLeft15XS {
+        padding-left: 15px!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 32%!important
+    }
+}
+
+@media (max-width:480px) {
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 150px!important;
+        width: 150px!important;
+        padding: 0!important;
+        margin-left: 32%!important
+    }
+    .AvatarXSBox,
+    .DeleteSnippetBox,
+    .SnippetBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 5%!important
+    }
+    .AvatarXSBox {
+        width: 15%!important
+    }
+    .UserInfoBox {
+        width: 85%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/480.jpg)
+    }
+    .marginUserHome {
+        margin-left: 21%!important
+    }
+    .marginExploreUser {
+        margin-left: 20%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 34%!important;
+        border-radius: 5px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 86%!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 20%!important
+    }
+}
+
+@media (max-width:415px) {
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 150px!important;
+        width: 150px!important;
+        padding: 0!important;
+        margin-left: 28%!important
+    }
+    .AvatarXSBox,
+    .DeleteSnippetBox,
+    .SnippetBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 6%!important
+    }
+    .AvatarXSBox {
+        width: 18%!important
+    }
+    .UserInfoBox {
+        width: 82%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/480.jpg)
+    }
+    .marginUserHome {
+        margin-left: 15%!important
+    }
+    .marginExploreUser {
+        margin-left: 14%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 31%!important;
+        border-radius: 5px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 83%!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 15%!important
+    }
+}
+
+@media (max-width:375px) {
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 150px!important;
+        width: 150px!important;
+        padding: 0!important;
+        margin-left: 25%!important
+    }
+    .AvatarXSBox,
+    .DeleteSnippetBox,
+    .SnippetBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 6%!important
+    }
+    .AvatarXSBox {
+        width: 20%!important
+    }
+    .UserInfoBox {
+        width: 80%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/375.jpg)
+    }
+    .marginExploreUser,
+    .marginUserHome {
+        margin-left: 10%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 28%!important;
+        border-radius: 5px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 80%!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 10%!important
+    }
+}
+
+@media (max-width:360px) {
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 150px!important;
+        width: 150px!important;
+        padding: 0!important;
+        margin-left: 25%!important
+    }
+    .AvatarXSBox,
+    .DeleteSnippetBox,
+    .SnippetBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 6%!important
+    }
+    .AvatarXSBox {
+        width: 20%!important
+    }
+    .UserInfoBox {
+        width: 80%!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/360.jpg)
+    }
+    .marginExploreUser,
+    .marginUserHome {
+        margin-left: 8%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 27%!important;
+        border-radius: 5px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 79%!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 9%!important
+    }
+}
+
+@media (max-width:320px) {
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .avatarXS {
+        width: 50px;
+        height: 50px;
+        margin: 10px
+    }
+    .image_qrcode {
+        float: left!important;
+        height: 150px!important;
+        width: 150px!important;
+        padding: 0!important;
+        margin-left: 21%!important
+    }
+    .AvatarXSBox,
+    .DeleteSnippetBox,
+    .SnippetBox,
+    .UserInfoBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 7%!important
+    }
+    .AvatarXSBox {
+        width: 25%!important
+    }
+    .UserInfoBox {
+        width: 75%!important
+    }
+    .paddingProfile {
+        padding-top: 45px!important
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/320.jpg)
+    }
+    .marginUserHome {
+        margin-left: 0!important
+    }
+    .marginExploreUser {
+        margin-left: 1%!important
+    }
+    .marginButtonUserHome {
+        margin-left: 23%!important;
+        border-radius: 5px!important
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 75%!important
+    }
+    .qrcodeImage {
+        max-width: 250px!important;
+        margin-left: 1%!important
+    }
+}
+
+.paddingViewProfile {
+    padding-top: 5px!important
+}
+
+.button-image-cover:hover {
+    opacity: 1!important
+}
+
+@media (min-width:1201px) {
+    .button-image-cover,
+    .button-image-left {
+        position: absolute!important;
+        width: 35px!important;
+        height: 35px!important;
+        opacity: .5!important
+    }
+    .SnippetBox,
+    .UserInfoBox {
+        text-align: left!important
+    }
+    .button-image-cover {
+        margin-left: 1%!important;
+        margin-top: 1%!important;
+        padding-left: 9px!important;
+        padding-top: 6px!important
+    }
+    .button-image-left {
+        margin-top: -42%!important;
+        margin-left: 37%!important;
+        border-radius: 100%!important;
+        padding-left: 10px!important;
+        padding-top: 7px!important
+    }
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 22.5%!important
+    }
+    .image_middle,
+    .image_qrcode {
+        float: left!important;
+        width: 120px!important;
+        padding: 0!important;
+        margin-left: 18%!important;
+        height: 120px!important
+    }
+    .UserInfoBox {
+        min-height: 130px!important;
+        margin-top: 10px!important
+    }
+    .image_middle {
+        margin-top: -60%!important
+    }
+    .DeleteSnippetBox,
+    .SnippetBox {
+        display: block;
+        position: relative;
+        float: left
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px!important;
+        background-image: url(../../assets/images/1250.jpg)
+    }
+    .DeleteSnippetBox {
+        width: 50px!important
+    }
+    .SnippetBox {
+        width: 90%!important
+    }
+}
+
+@media (min-width:1251px) {
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 24%!important
+    }
+}
+
+.margin-0 {
+    margin: 0!important
+}
+
+.font-size-30 {
+    font-size: 30px!important
+}
+
+.padding-left-right-30 {
+    padding-left: 30px!important;
+    padding-right: 30px!important
+}
+
+.avatar-users {
+    width: 120px!important;
+    height: 120px!important;
+    margin-left: 50px!important
+}
+
+.cropArea,
+img-crop {
+    overflow: hidden;
+    width: 100%
+}
+
+.avatar-users:hover {
+    cursor: pointer;
+    cursor: hand
+}
+
+.max-width-160 {
+    max-width: 160px!important
+}
+
+.user-box {
+    height: 280px!important
+}
+
+.cropArea {
+    background: #E4E4E4;
+    height: 400px
+}
+
+img-crop {
+    display: block;
+    height: 100%;
+    position: relative
+}
+
+img-crop canvas {
+    display: block;
+    left: 50%;
+    outline: 0;
+    position: absolute;
+    top: 50%
+}
+
+.styleBox {
+    position: relative!important;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    height: 330px!important;
+    max-width: 225px!important;
+    border-radius: 7px!important
+}
+
+.styleBox:hover {
+    box-shadow: 0 1px 7px -4px rgba(0, 0, 0, .9)!important
+}
+
+.ImageBox {
+    padding-top: 15px!important;
+    padding-bottom: 15px!important
+}
+
+.buttonContainer {
+    position: absolute!important;
+    bottom: 15px!important;
+    margin-left: 63px!important
+}
+
+.SocialList,
+.SocialListPage {
+    display: block;
+    height: 40px;
+    opacity: .6;
+    width: 40px;
+    top: 0;
+    font-size: 20px;
+    position: relative;
+    font-family: FontAwesome;
+    text-indent: 0;
+    line-height: 40px;
+    color: #FFF;
+    left: 0;
+    text-align: center
+}
+
+.buttonProfile {
+    border-radius: 1px!important
+}
+
+.SocialList {
+    border-radius: 10px
+}
+
+.SocialList:hover {
+    opacity: 1!important
+}
+
+.HoverWhite {
+    color: #FFF!important
+}
+
+.padding-top-2 {
+    padding-top: 2px!important
+}
+
+ul li a.social-ti-facebook {
+    background: #3B5998
+}
+
+ul li a.social-ti-twitter {
+    background: #48C4D2
+}
+
+ul li a.social-ti-dribbble {
+    background: #EF5B92
+}
+
+ul li a.social-ti-google {
+    background: #DD4B39
+}
+
+ul li a.social-ti-linkedin {
+    background: #71B2D0
+}
+
+ul li a.social-ti-youtube {
+    background: #F45750
+}
+
+ul li a.social-ti-rss {
+    background: #FE9900
+}
+
+ul li a.social-ti-behance {
+    background: #5EB5FB
+}
+
+ul li a.social-ti-dropbox {
+    background: #85BEEC
+}
+
+ul li a.social-ti-github {
+    background: #94A5B0
+}
+
+ul li a.social-ti-skype {
+    background: #70CCEF
+}
+
+ul li a.social-ti-spotify {
+    background: #8BD05A
+}
+
+ul li a.social-ti-stumbleupon {
+    background: #F08066
+}
+
+ul li a.social-ti-tumblr {
+    background: #85A5C3
+}
+
+ul li a.social-ti-vimeo {
+    background: #7C99A8
+}
+
+ul li a.social-ti-wordpress {
+    background: #649EB9
+}
+
+ul li a.social-ti-xing {
+    background: #4F9394
+}
+
+ul li a.social-ti-yahoo {
+    background: #C38DCF
+}
+
+ul li a.social-ti-vk {
+    background: #708FAC
+}
+
+ul li a.social-ti-instagram {
+    background: #CBAA97
+}
+
+ul li a.social-ti-reddit {
+    background: #FF7A52
+}
+
+ul li a.social-ti-flickr {
+    background: #FF4DA9
+}
+
+ul li a.social-ti-foursquare {
+    background: #6FCCF4
+}
+
+.ColorNavBar {
+    background-color: #EBEBEB!important;
+    height: 65px!important
+}
+
+.ButtonRadius {
+    border-radius: 4px!important;
+    margin-top: 5px!important
+}
+
+@media (min-width:1251px) {
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 23%!important
+    }
+    .marginButtonEdit {
+        margin-right: 60px!important;
+        margin-top: 5px!important
+    }
+}
+
+@media (min-width:1301px) {
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 23%!important
+    }
+    .marginButtonEdit {
+        margin-right: 80px!important;
+        margin-top: 5px!important
+    }
+}
+
+@media (min-width:1366px) {
+    .SocialIcon {
+        margin-top: 5px!important;
+        margin-left: 24.4%!important
+    }
+    .marginButtonEdit {
+        margin-right: 100px!important;
+        margin-top: 5px!important
+    }
+}
+
+a.ButtonImageSize {
+    min-width: 50px!important;
+    min-height: 50px!important
+}
+
+.SendBox,
+.profile-padding-inbox {
+    min-height: 600px!important
+}
+
+.LoadImageModalButton {
+    width: 100%!important
+}
+
+.ListOptions {
+    margin: 8px 0 0;
+    list-style: none;
+    padding: 0;
+    line-height: 34px
+}
+
+.MessageFrom {
+    font-weight: 700;
+    margin-top: 2px;
+    color: #aeacb4;
+    font-size: 14px
+}
+
+.MessageFromSender {
+    font-weight: 700;
+    font-size: 16px!important;
+    margin-top: 2px;
+    color: #0b0b0b;
+    opacity: .6
+}
+
+.MessageFromReceiver {
+    font-size: 12px!important;
+    margin-top: 2px;
+    color: #aeacb4
+}
+
+.MessageSubject {
+    font-size: 14px;
+    margin-bottom: 4px;
+    color: #5b5b60
+}
+
+.MessageSubjectNoFound {
+    font-size: 16px;
+    margin-bottom: 4px;
+    color: #5b5b60;
+    opacity: .5;
+    text-align: center
+}
+
+.MessageTime,
+.MessageTimeLeft {
+    right: 15px;
+    top: 8px;
+    color: #8e8e93;
+    font-size: 11px
+}
+
+.MessageTime {
+    float: right
+}
+
+.IconSnippetBox,
+.MessageListBox,
+.ReadUnreadBox {
+    display: block;
+    float: left
+}
+
+.MessageContent {
+    font-size: 12px;
+    color: #c2c2c5;
+    margin-bottom: 4px
+}
+
+.profile-padding-inbox {
+    position: relative!important;
+    padding-top: 50px;
+    background-color: #FFF!important
+}
+
+.IconSnippetBox,
+.MessageListBox,
+.NoMessage,
+.ReadUnreadBox,
+.password-count,
+.strength-meter {
+    position: relative
+}
+
+.InboxBox,
+.OptionsBox,
+.SendBox {
+    background-color: #fff!important
+}
+
+.MessageUnread {
+    font-weight: 700!important
+}
+
+.ReadUnreadBox {
+    width: 5%!important
+}
+
+.MessageListBox {
+    width: 95%!important
+}
+
+.NoMessage {
+    bottom: 0;
+    left: 0;
+    margin-top: 50%;
+    opacity: .5;
+    right: 0;
+    text-align: center;
+    font-weight: 300
+}
+
+.IconSnippet {
+    width: 20px!important;
+    height: 20px!important
+}
+
+.IconSnippetBox {
+    width: 25px!important;
+    text-align: left!important
+}
+
+.ng-cloak,
+.x-ng-cloak,
+[data-ng-cloak],
+[ng-cloak],
+[ng\:cloak],
+[x-ng-cloak] {
+    display: none!important
+}
+
+.form-control.error {
+    border-color: red
+}
+
+.form-hint {
+    font-size: 7pt;
+    line-height: 9pt;
+    margin: -5px auto 5px;
+    color: #999
+}
+
+.form-hint.error {
+    color: #C00;
+    font-weight: 700;
+    font-size: 8pt
+}
+
+.password-count {
+    float: right;
+    bottom: 27px;
+    right: 10px
+}
+
+.strength-meter {
+    height: 3px;
+    background: #DDD;
+    margin: 10px auto 20px;
+    border-radius: 3px
+}
+
+.strength-meter:after,
+.strength-meter:before {
+    content: '';
+    height: inherit;
+    background: 0 0;
+    display: block;
+    border-color: #FFF;
+    border-style: solid;
+    border-width: 0 5px;
+    position: absolute;
+    width: 80px;
+    z-index: 10
+}
+
+.strength-meter:before {
+    left: 70px
+}
+
+.strength-meter:after {
+    right: 70px
+}
+
+.strength-meter-fill {
+    background: 0 0;
+    height: inherit;
+    position: absolute;
+    width: 0;
+    border-radius: inherit;
+    transition: width .5s ease-in-out, background .25s
+}
+
+.strength-meter-fill[data-strength='0'] {
+    background: #8b0000;
+    width: 20%
+}
+
+.strength-meter-fill[data-strength='1'] {
+    background: #ff4500;
+    width: 40%
+}
+
+.strength-meter-fill[data-strength='2'] {
+    background: orange;
+    width: 60%
+}
+
+.strength-meter-fill[data-strength='3'] {
+    background: #9acd32;
+    width: 80%
+}
+
+.strength-meter-fill[data-strength='4'] {
+    background: green;
+    width: 100%
+}
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+    cursor: not-allowed;
+    filter: alpha(opacity=65);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    opacity: .65
+}
+
+.msg-block {
+    margin-top: 5px
+}
+
+.msg-error {
+    color: red;
+    font-size: 14px
+}
+
+.cursordefault {
+    cursor: default
+}
+
+.ButtonMoreUser {
+    border: none!important
+}
+
+.ListMoreUser {
+    min-height: 45px!important;
+    border-bottom: none!important
+}
+
+.margin-top-80 {
+    margin-top: 80px!important
+}
+
+.displayBlockAll {
+    display: block!important
+}
+
+.backgroundMessageSelectedColor {
+    background-color: #cbf4fa!important
+}
+
+.margin-top-12 {
+    margin-top: 12px!important
+}
+
+.image-hand {
+    width: 20px!important;
+    height: 20px!important
+}
+
+.font-size-25 {
+    font-size: 25px!important
+}
+
+.margin-top-21 {
+    margin-top: 21px!important
+}
+
+.textColorWhite {
+    color: #FFF!important
+}
+
+span.stars,
+span.stars span {
+    display: block;
+    background: url(../images/stars.png) 0 -16px repeat-x;
+    width: 80px;
+    height: 16px
+}
+
+span.stars span {
+    background-position: 0 0
+}
+
+.pointerHover:hover {
+    cursor: pointer!important;
+    cursor: hand!important
+}
+
+.demo-notification-icons notification-icon {
+    display: table;
+    margin: 0 auto
+}
+
+.custom-style .angular-notifications-icon {
+    left: -10px;
+    background: #ff0;
+    color: #000;
+    width: 30px;
+    height: 30px;
+    font-weight: bolder;
+    font-size: 1.2em
+}
+
+.angular-notifications-icon.my-custom-animation {
+    -moz-transition: linear .5s all;
+    -o-transition: linear .5s all;
+    -webkit-transition: linear .5s all;
+    transition: linear .5s all
+}
+
+.angular-notifications-icon.my-custom-animation-add {
+    background: #000;
+    color: #fff
+}
+
+.angular-notifications-icon.my-custom-animation-add-active {
+    background: #ff0;
+    color: #000
+}
+
+.positionInheritIcon {
+    position: absolute!important;
+    left: 40px!important;
+    line-height: 20px!important;
+    font-size: 14px!important
+}
+
+.iconClose {
+    position: absolute;
+    top: -1px;
+    z-index: 2;
+    font-size: 12px;
+    left: 32px
+}
+
+.adminDeleteUser,
+.adminInfoUser {
+    text-align: left!important;
+    display: block;
+    position: relative;
+    float: left
+}
+
+.opacity6 {
+    opacity: .6!important
+}
+
+.opacity6:hover {
+    opacity: 1!important
+}
+
+.verticalOverflow {
+    overflow-y: scroll!important;
+    overflow-x: hidden!important
+}
+
+.iconClap {
+    width: 30px!important;
+    margin-top: -10px!important
+}
+
+.iconMessage {
+    width: 30px!important;
+    margin-top: -5px!important
+}
+
+.iconClapMini {
+    width: 16px!important;
+    margin-top: -6px!important
+}
+
+.border-radius10 {
+    border-radius: 6px!important
+}
+
+.adminInfoUser {
+    width: 88%!important
+}
+
+.adminDeleteUser {
+    width: 5%!important
+}
+
+.NoUserStyles {
+    font-size: 24px!important;
+    text-align: center!important
+}
+
+.deleteStuffMargin {
+    margin-top: 8px!important
+}
+
+.DropdownMargin,
+.ListEdit {
+    margin-top: -9px!important
+}
+
+.colorSuccessStock {
+    color: #0ae40a;
+    opacity: .6
+}
+
+.colorErrorStock {
+    color: #cf0707;
+    opacity: .6
+}
+
+.dont-break-out {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-all;
+    word-break: break-word;
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto
+}
+
+.SnippetsArea {
+    resize: none;
+    border: none!important
+}
+
+.SnippetFooter {
+    height: 40px
+}
+
+.borderBox {
+    border: 1px solid #E3E3E3;
+    border-radius: 6px!important
+}
+
+.ListEdit {
+    margin-right: 10px!important
+}
+
+.margin-top-3 {
+    margin-top: 3px!important
+}
+
+.backgroundGray {
+    background-color: #f6f6f6!important
+}
+
+.backgroundWhite {
+    background-color: #fff!important
+}
+
+.ImagePlusSocialNetwork {
+    max-width: 30px;
+    margin-top: -8px;
+    margin-left: 1px
+}
+
+.backgroundBlueSky {
+    background-color: #00B8B8!important
+}
+
+.borderRadius50 {
+    border-radius: 50px!important
+}
+
+.font-size-50 {
+    font-size: 50px!important
+}
+
+.lineMiddleSelect {
+    background-color: #00B8B8;
+    height: 5px;
+    position: absolute;
+    margin-top: 11px;
+    margin-left: -20px
+}
+
+.borderBottomNone {
+    border-bottom: none!important
+}
+
+.borderTopFollower {
+    border-top: 1px solid #E3E3E3
+}
+
+.margin-left--15 {
+    margin-left: -15px
+}
+
+.padding-top3 {
+    padding-top: 3px!important
+}
+
+.margin-top3 {
+    margin-top: 3px!important
+}
+
+.styleNotification {
+    margin-top: 5px!important;
+    float: left!important;
+    margin-left: 10px!important
+}
+
+.fontSize18 {
+    font-size: 18px!important
+}
+
+.fontSize20 {
+    font-size: 20px!important
+}
+
+.notificationMDIcon,
+.notificationXSIcon {
+    line-height: 10px!important;
+    font-size: 11px!important;
+    margin-top: 10px
+}
+
+.notificationXSIcon {
+    position: absolute!important;
+    left: 40px!important;
+    margin-left: 10px
+}
+
+.styleLiSocial {
+    min-height: 10px!important;
+    padding: 0!important
+}
+
+.height30 {
+    height: 30px!important
+}
+
+.font-size-15 {
+    font-size: 15px!important
+}
+
+.margin-top--3 {
+    margin-top: -3px!important
+}
+
+.margin-top--2 {
+    margin-top: -2px!important
+}
+
+.styleBoxConfiguration {
+    min-height: 525px!important
+}
+
+.margin-top--5 {
+    margin-top: -5px!important
+}
