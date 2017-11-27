@@ -35,7 +35,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var register = 'http://www.dirstuff.com/server/api/api-auth/register/';
     var snippets = 'http://www.dirstuff.com/server/api/snippets/';
     var socialnetwork = 'http://www.dirstuff.com/server/api/socialnetworks/';
-    var imageDir = 'http://www.dirstuff.com/dir/images/';
+    var imageDir = 'http://www.dirstuff.com/images/';
     var imageDownload = 'http://www.dirstuff.com/server/api/qrcode';
     var updateWithOutImage = 'http://www.dirstuff.com/server/api/updateprofile';
     var messages = 'http://www.dirstuff.com/server/api/messages/';
