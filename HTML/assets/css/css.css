@@ -1627,6 +1627,7 @@ span.stars span {
 .SnippetsArea {
     resize: none;
     border: none !important;
+    margin-bottom: 5px !important;
 }
 
 .SnippetFooter {
