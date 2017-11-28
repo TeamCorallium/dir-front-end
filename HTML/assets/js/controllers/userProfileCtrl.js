@@ -1009,7 +1009,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         // CHANGE PASSWORD
         $scope.changePassword = function() {
-            if ($scope.password === $parent.againPassHome) {
+            if ($scope.password === $scope.againPassHome) {
                 RestService.changePassword($scope.user.username, $scope.password);
             } else {
                 $('#msg-block').show();
