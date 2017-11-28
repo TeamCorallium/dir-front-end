@@ -89,11 +89,12 @@
                                     <i class="ti-email"></i> {{user.email}}
                                 </h5>
                                 <div class="col-md-12 padding-0">
-                                    <span class="col-md-4 padding-left-0 padding-right-0" ng-cloak>
+                                    <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
                                         <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
-                                        <label translate="view_profile.CLAP"></label>
+                                        <label ng-hide="showClaps" translate="view_profile.CLAP"></label>
+                                        <label ng-show="showClaps" translate="view_profile.CLAPS"></label>
                                     </span>
-                                    <div class="col-md-8">
+                                    <div class="col-md-7">
                                         <span class="stars">
                                             <span ng-cloak ng-style="{ 'width': getStars(user.rating) }"></span>
                                         </span>

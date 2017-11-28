@@ -56,6 +56,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.againPassHome = '';
         $scope.following = [];
         $scope.followers = [];
+        $scope.showClaps = false;
 
         $scope.indexShowMiddle = 0;
 

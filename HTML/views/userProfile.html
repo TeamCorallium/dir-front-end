@@ -101,7 +101,8 @@
                                 <div ng-show="!EditInfoFlag" class="col-md-12 padding-0">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
                                         <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
-                                        <label translate="user_profile.CLAP"></label>
+                                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
                                     </span>
                                     <div class="col-md-7 padding-left-0 padding-right-0">
                                         <span class="stars">
@@ -122,7 +123,8 @@
                                     <div class="col-md-12 padding-0 margin-top-10">
                                         <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
                                             <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
-                                            <label translate="user_profile.CLAP"></label>
+                                            <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                            <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
                                         </span>
                                         <div class="col-md-7 padding-left-0 padding-right-0">
                                             <span class="stars">
