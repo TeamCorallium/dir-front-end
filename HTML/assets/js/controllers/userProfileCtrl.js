@@ -477,6 +477,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('addsocialnetwork', function(event, data) {
             $scope.user.socialnetworks = [];
+            $scope.socialnetwork = '';
+            $scope.url = '';
+            $scope.showUrlCamp = false;
+            $scope.manuallyCheck = false;
             $('#modalSocialNetwork').modal('hide');
 
             getSocialNetworks($cookies.get('username'));
