@@ -477,7 +477,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('addsocialnetwork', function(event, data) {
             $scope.user.socialnetworks = [];
-            $scope.socialnetwork = '';
+            $scope.socialnetwork = '0';
             $scope.url = '';
             $scope.selectedValueSocial = true;
             $scope.showUrlCamp = false;
@@ -608,7 +608,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
 
         // Add Social Network
-        $scope.socialnetwork = '';
+        $scope.socialnetwork = '0';
         $scope.url = '';
         $scope.selectedValueSocial = true;
         $scope.facebookName = '';
