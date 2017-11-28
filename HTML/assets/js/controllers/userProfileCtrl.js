@@ -479,6 +479,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.socialnetworks = [];
             $scope.socialnetwork = '';
             $scope.url = '';
+            $scope.selectedValueSocial = true;
             $scope.showUrlCamp = false;
             $scope.manuallyCheck = false;
             $('#modalSocialNetwork').modal('hide');
@@ -609,6 +610,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         // Add Social Network
         $scope.socialnetwork = '';
         $scope.url = '';
+        $scope.selectedValueSocial = true;
         $scope.facebookName = '';
         $scope.showUrlCamp = false;
         $scope.activeFacebook = false;
