@@ -22,7 +22,8 @@
                     <div class="col-xs-12 padding-0">
                         <span class="col-xs-3 padding-left-0 padding-right-0" ng-cloak>
                             <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
-                            <label translate="view_profile.CLAP"></label>
+                            <label ng-if="user.score == 1" translate="view_profile.CLAP"></label>
+                            <label ng-if="user.score != 1" translate="view_profile.CLAPS"></label>
                         </span>
                         <div class="col-xs-9">
                             <span class="stars">
