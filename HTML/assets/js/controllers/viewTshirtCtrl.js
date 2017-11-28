@@ -113,6 +113,14 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
+        $scope.TryClap = function() {
+            RestService.takeClap($scope.user.id, true);
+        };
+
+        $scope.TryFollow = function() {
+            RestService.follow($scope.user.id, true);
+        };
+
         $scope.getUser = function(username) {
             RestService.fetchUserByUser(username)
                 .then(
@@ -510,14 +518,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         if ($cookies.get('username')) {
-            $scope.TryClap = function() {
-                RestService.takeClap($scope.user.id, true);
-            };
-
-            $scope.TryFollow = function() {
-                RestService.follow($scope.user.id, true);
-            };
-
             $scope.getCount();
         }
 
