@@ -184,6 +184,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
                             $scope.user.score = data.score;
+                            if ($scope.user.score > 1) {
+                                $scope.showClaps = true;
+                            } else {
+                                $scope.showClaps = false;
+                            }
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
                             $scope.user.profileurl = data.url;
