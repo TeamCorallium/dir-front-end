@@ -614,6 +614,26 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
 
         // Add Social Network
+        var ScriptLoad = function(url, callback) {
+            var script = document.createElement('script');
+
+            if (script.readyState) { // Internet Explorer
+                script.onreadystatechange = function() {
+                    if (script.readyState === 'loaded' || script.readyState === 'complete') {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else { // Otros Navegadores
+                script.onload = function() {
+                    callback();
+                };
+            }
+
+            script.src = url;
+            document.getElementsByTagName('body')[0].appendChild(script);
+        }
+
         $scope.socialnetwork = '0';
         $scope.url = '';
         $scope.selectedValueSocial = true;
@@ -633,7 +653,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.url = 'https://www.facebook.com/';
                         $scope.showUrlCamp = false;
                         $scope.activeFacebook = true;
-                        $scope.isFacebookConnected();
+                        ScriptLoad('//connect.facebook.net/en_US/sdk.js', $scope.isFacebookConnected());
+                        // $scope.isFacebookConnected();
                         break;
                     };
                 case "Twitter":
