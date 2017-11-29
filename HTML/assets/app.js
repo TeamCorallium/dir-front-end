@@ -13,7 +13,7 @@ angular.module("pulloverDir", [
     'ngLoadingSpinner',
     // 'countTo',
     'ngAnimate',
-    'ngImgCrop',
+    // 'ngImgCrop',
     'ngtimeago',
     'angular-growl',
     'oitozero.ngSweetAlert',
