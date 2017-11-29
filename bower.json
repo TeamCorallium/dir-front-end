@@ -71,6 +71,7 @@
     "sweetalert": "~0.4.2",
     "ngSweetAlert": "angular-sweetalert#^1.1.2",
     "angular-notification-icons": "^0.4.4",
+    "ng-img-crop": "ngImgCrop#^0.3.2",
     "ng-emoticons": "^2.1.0"
   },
   "devDependencies": {
