@@ -1,7 +1,7 @@
 {
-  "name": "ClipTwo",
-  "version": "2.0.0",
-  "description": "Bootstrap FrontEnd Template",
+  "name": "Dirstuff",
+  "version": "0.0.1",
+  "description": "Dirstuff",
   "scripts": {
     "start": "node node_modules/http-server/bin/http-server -o"
   },
@@ -19,8 +19,8 @@
     "responsive"
   ],
   "repository": "",
-  "author": "ClipTheme",
-  "license": "Envato REGULAR LICENSE",
+  "author": "Corallium team",
+  "license": "MIT",
   "dependencies": {
     "angular-img-cropper": "0.0.2",
     "angular-timeago": "^0.4.6",
