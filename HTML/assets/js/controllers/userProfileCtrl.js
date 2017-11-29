@@ -651,9 +651,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 case "Facebook":
                     {
                         $scope.url = 'https://www.facebook.com/';
+                        if (typeof FB == "undefined") {
+                            ScriptLoad('//connect.facebook.net/en_US/sdk.js', $scope.isFacebookConnected());
+                        }
                         $scope.showUrlCamp = false;
                         $scope.activeFacebook = true;
-                        ScriptLoad('//connect.facebook.net/en_US/sdk.js', $scope.isFacebookConnected());
                         // $scope.isFacebookConnected();
                         break;
                     };
@@ -776,6 +778,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.addSocialNetwork = function() {
             var name = $scope.socialnetwork;
             var url = $scope.url;
+
+            console.log(name + " " + url + " social networks");
 
             var type = '';
 
