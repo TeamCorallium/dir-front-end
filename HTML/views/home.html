@@ -38,7 +38,7 @@
                         <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles | limitTo:countLimit">
                             <div class="styleBox marginUserHome">
                                 <div class="ImageBox">
-                                    <img ng-if="profile.avatar != 'http://www.dir.com/Front-End/HTML/%7B%7Bprofile.avatar%7D%7D'" src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
+                                    <img ng-if="profile.avatar != 'http://www.dir.com/Front-End/HTML/{{profile.avatar}}'" src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
                                 </div>
                                 <div class="center padding-left-10 padding-right-10">
                                     <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
