@@ -779,8 +779,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var name = $scope.socialnetwork;
             var url = $scope.url;
 
-            console.log(name + " " + url + " social networks");
-
             var type = '';
 
             if (name != '' && url != '') {
