@@ -65,6 +65,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     function(data) {
                         $scope.profiles = data.results;
 
+                        console.log($scope.profiles.length + " profiles length");
+
                         for (var i = 0; i < $scope.profiles.length; i++) {
                             if ($scope.profiles[i].avatar != '' && $scope.profiles[i].avatar != null) {
                                 var avatarArray = $scope.profiles[i].avatar.split("/");
