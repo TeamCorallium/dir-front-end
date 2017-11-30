@@ -1,8 +1,3 @@
-/**
- * Created by Ale on 9/7/2017.
- */
-'use strict';
-
 app.constant('APP_MEDIAQUERY', {
     'desktopXL': 1200,
     'desktop': 992,
@@ -11,20 +6,18 @@ app.constant('APP_MEDIAQUERY', {
 });
 app.constant('JS_REQUIRED', {
     scripts: {
-        //Controllers
-        'userProfileCtrl': 'assets/js/controllers/userProfileCtrl.js',
-        'editUserProfileCtrl': 'assets/js/controllers/editUserProfileCtrl.js',
-        'viewProfileCtrl': 'assets/js/controllers/viewProfileCtrl.js',
-        'viewTshirtCtrl': 'assets/js/controllers/viewTshirtCtrl.js',
-        'homeCtrl': 'assets/js/controllers/homeCtrl.js',
-        'exploreUsersCtrl': 'assets/js/controllers/exploreUsersCtrl.js',
-        'inboxCtrl': 'assets/js/controllers/inboxCtrl.js',
-        'contactUsCtrl': 'assets/js/controllers/contactUsCtrl.js',
-        'faqCtrl': 'assets/js/controllers/faqCtrl.js',
-        'adminViewCtrl': 'assets/js/controllers/adminViewCtrl.js',
-        'notificationsCtrl': 'assets/js/controllers/notificationsCtrl.js',
-        'configurationCtrl': 'assets/js/controllers/configurationCtrl.js',
-        'socialNetworksCtrl': 'assets/js/controllers/socialNetworksCtrl.js'
-    },
-    modules: [{}]
+        'userProfileCtrl': 'HTML/assets/js/controllers/userProfileCtrl.js',
+        'editUserProfileCtrl': 'HTML/assets/js/controllers/editUserProfileCtrl.js',
+        'viewProfileCtrl': 'HTML/assets/js/controllers/viewProfileCtrl.js',
+        'viewTshirtCtrl': 'HTML/assets/js/controllers/viewTshirtCtrl.js',
+        'homeCtrl': 'HTML/assets/js/controllers/homeCtrl.js',
+        'exploreUsersCtrl': 'HTML/assets/js/controllers/exploreUsersCtrl.js',
+        'inboxCtrl': 'HTML/assets/js/controllers/inboxCtrl.js',
+        'contactUsCtrl': 'HTML/assets/js/controllers/contactUsCtrl.js',
+        'faqCtrl': 'HTML/assets/js/controllers/faqCtrl.js',
+        'adminViewCtrl': 'HTML/assets/js/controllers/adminViewCtrl.js',
+        'notificationsCtrl': 'HTML/assets/js/controllers/notificationsCtrl.js',
+        'configurationCtrl': 'HTML/assets/js/controllers/configurationCtrl.js',
+        'socialNetworksCtrl': 'HTML/assets/js/controllers/socialNetworksCtrl.js'
+    }
 });

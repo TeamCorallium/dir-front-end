@@ -1,8 +1,3 @@
-/**
- * Created by Ale on 9/8/2017.
- */
-'use strict';
-
 app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert", "$translate",
     function($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert, $translate) {
 

@@ -1,8 +1,3 @@
-/**
- * Created by Ale on 9/8/2017.
- */
-'use strict';
-
 app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate",
     function($scope, $state, $rootScope, RestService, $cookies, growl, $translate) {
 

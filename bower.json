@@ -1,10 +1,10 @@
 {
-  "name": "ClipTwo Frontend",
-  "version": "2.0.0",
+  "name": "tshirts",
+  "version": "1.0.0",
   "authors": [
-    "ClipTheme"
+    "One & One"
   ],
-  "description": "Bootstrap Multi-Purpose Template",
+  "description": "TShirt DIR Page",
   "keywords": [
     "jQuery",
     "bootstrap",
@@ -21,8 +21,8 @@
     "animation",
     "web"
   ],
-  "license": "Envato REGULAR LICENSE",
-  "homepage": "http://themeforest.net/item/cliptwo-bootstrap-admin-template-with-angularjs/10290688",
+  "license": "ISC",
+  "homepage": "www.dir.com",
   "private": true,
   "ignore": [
     "**/.*",

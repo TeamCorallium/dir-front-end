@@ -1,8 +1,3 @@
-/**
- * Created by Ale on 9/8/2017.
- */
-'use strict';
-
 app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "growl", "$translate",
     function($scope, RestService, $state, $rootScope, $cookies, growl, $translate) {
 

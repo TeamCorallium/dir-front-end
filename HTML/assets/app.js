@@ -1,6 +1,3 @@
-/**
- * Created by Ale on 9/7/2017.
- */
 'use strict';
 
 angular.module("pulloverDir", [
@@ -11,7 +8,6 @@ angular.module("pulloverDir", [
     'ngCookies',
     'ngFileUpload',
     'ngLoadingSpinner',
-    // 'countTo',
     'ngAnimate',
     'ngImgCrop',
     'ngtimeago',
@@ -22,3 +18,5 @@ angular.module("pulloverDir", [
     'ngEmoticons',
     'uiSwitch'
 ]);
+
+var app = angular.module('dirApp', ['pulloverDir']);

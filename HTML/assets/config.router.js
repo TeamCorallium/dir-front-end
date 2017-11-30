@@ -1,5 +1,3 @@
-'use strict';
-
 app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$compileProvider', '$filterProvider', '$provide', '$ocLazyLoadProvider', 'JS_REQUIRED', '$httpProvider',
     function($stateProvider, $urlRouterProvider, $controllerProvider, $compileProvider, $filterProvider, $provide, $ocLazyLoadProvider, jsRequires, $httpProvider) {
 
@@ -24,55 +22,55 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
 
         $stateProvider.state('blank', {
             url: '',
-            templateUrl: 'views/home.html',
+            templateUrl: 'HTML/views/home.html',
             resolve: loadSequence('homeCtrl')
         }).state('home', {
             url: '/home',
-            templateUrl: 'views/home.html',
+            templateUrl: 'HTML/views/home.html',
             resolve: loadSequence('homeCtrl')
         }).state('profile', {
             url: '/profile',
-            templateUrl: 'views/userProfile.html',
+            templateUrl: 'HTML/views/userProfile.html',
             resolve: loadSequence('userProfileCtrl')
         }).state('tshirts', {
             url: '/tshirts',
-            templateUrl: 'views/viewProfile.html',
+            templateUrl: 'HTML/views/viewProfile.html',
             resolve: loadSequence('viewProfileCtrl')
         }).state('viewtshirts', {
             url: '/viewtshirts/:id',
-            templateUrl: 'views/viewTshirt.html',
+            templateUrl: 'HTML/views/viewTshirt.html',
             resolve: loadSequence('viewTshirtCtrl')
         }).state('users', {
             url: '/users',
-            templateUrl: 'views/exploreUsers.html',
+            templateUrl: 'HTML/views/exploreUsers.html',
             resolve: loadSequence('exploreUsersCtrl')
         }).state('inbox', {
             url: '/inbox',
-            templateUrl: 'views/inbox.html',
+            templateUrl: 'HTML/views/inbox.html',
             resolve: loadSequence('inboxCtrl')
         }).state('contact', {
             url: '/contact',
-            templateUrl: 'views/contactUs.html',
+            templateUrl: 'HTML/views/contactUs.html',
             resolve: loadSequence('contactUsCtrl')
         }).state('faq', {
             url: '/faq',
-            templateUrl: 'views/faq.html',
+            templateUrl: 'HTML/views/faq.html',
             resolve: loadSequence('faqCtrl')
         }).state('admin', {
             url: '/admin',
-            templateUrl: 'views/adminView.html',
+            templateUrl: 'HTML/views/adminView.html',
             resolve: loadSequence('adminViewCtrl')
         }).state('notifications', {
             url: '/notifications',
-            templateUrl: 'views/notifications.html',
+            templateUrl: 'HTML/views/notifications.html',
             resolve: loadSequence('notificationsCtrl')
         }).state('configurations', {
             url: '/configurations',
-            templateUrl: 'views/configuration.html',
+            templateUrl: 'HTML/views/configuration.html',
             resolve: loadSequence('configurationCtrl')
         }).state('socialnetworks', {
             url: '/socialnetworks',
-            templateUrl: 'views/socialNetworks.html',
+            templateUrl: 'HTML/views/socialNetworks.html',
             resolve: loadSequence('socialNetworksCtrl')
         });
 
@@ -162,19 +160,4 @@ app.config(["$httpProvider", function($httpProvider) {
     function isQueryStringEligible(input) {
         return null !== input && "object" === typeof input && "[object File]" !== String(input);
     }
-
-    var interceptor = [function() {
-        return {
-            request: function(config) {
-                if (0 <= ["post", "put", "patch"].indexOf(config.method.toLowerCase()) && isQueryStringEligible(config.data)) {
-                    config.headers["Content-Type"] = "application/x-www-form-urlencoded;charset=utf-8";
-                    config.data = toQueryString(config.data);
-                }
-                return config;
-            }
-        };
-    }];
-
-    // $httpProvider.interceptors.push(interceptor);
-
 }]);
