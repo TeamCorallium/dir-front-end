@@ -96,7 +96,6 @@ module.exports = function(grunt) {
                     'bower_components/slick.js/slick/slick-theme.css',
                     'bower_components/swiper/dist/css/swiper.css',
                     'bower_components/magnific-popup/dist/magnific-popup.css',
-                    'bower_components/angular-growl-v2/build/angular-growl.css',
                     'bower_components/sweetalert/lib/sweet-alert.css',
                     'bower_components/angular-ui-switch/angular-ui-switch.css',
                     'bower_components/ng-img-crop/compile/minified/ng-img-crop.css',
