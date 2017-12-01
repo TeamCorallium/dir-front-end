@@ -1153,10 +1153,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.getFollowers();
             } else if (num == 2) {
                 $scope.getFollowing();
-            } else if (num == 3) {
-                getSocialNetworks($scope.user.username);
-            } else {
+            } else if (num == 0) {
                 getSnippets($scope.user.username, 1);
+                
             }
             $scope.indexShowMiddle = num;
         };
