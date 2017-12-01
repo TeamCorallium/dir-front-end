@@ -21,7 +21,7 @@
                     </h5>
                     <div class="col-xs-12 padding-0">
                         <span class="col-xs-3 padding-left-0 padding-right-0" ng-cloak>
-                            <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
+                            <img class="iconClapMini" ng-src="HTML/images/Like_dislike-09.png"> {{user.score}}
                             <label ng-hide="showClaps" translate="view_profile.CLAP"></label>
                             <label ng-show="showClaps" translate="view_profile.CLAPS"></label>
                         </span>
@@ -35,21 +35,21 @@
                 <div class="col-xs-12 center padding-left-0 padding-right-0">
                     <hr class="tall margin-top-5 margin-bottom-5">
                     <a ng-click="leaveMessage()" class="col-xs-3">
-                        <img class="IconSnippet pointerHover" ng-src="./assets/images/message.jpg"></img>
+                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/message.jpg"></img>
                         <label class="col-xs-12 padding-left-0 padding-right-0 pointerHover" translate="view_profile.LEAVE_MESSAGE"></label>
                     </a>
                     <a ng-click="makeClap()" ng-disabled="activateClap" class="col-xs-3 col-xs-offset-1">
-                        <img class="IconSnippet pointerHover" ng-src="assets/images/Like_dislike-09.png" ng-hide="activateClap">
-                        <img class="IconSnippet pointerHover" ng-src="assets/images/Like_dislike-10.png" ng-show="activateClap">
+                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/Like_dislike-09.png" ng-hide="activateClap">
+                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/Like_dislike-10.png" ng-show="activateClap">
                         <label class="col-xs-12 padding-left-0 padding-right-0 pointerHover" ng-hide="activateClap" translate="view_profile.CLAP_BUTTON"></label>
                         <label class="col-xs-12 padding-left-0 padding-right-0 pointerHover" ng-show="activateClap" translate="view_profile.CLAPPED"></label>
                     </a>
                     <a ng-show="!activateFollow" ng-click="follow()" class="col-xs-3 col-xs-offset-1">
-                        <img class="IconSnippet pointerHover" ng-src="assets/images/followers.jpg">
+                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/followers.jpg">
                         <label class="col-xs-12 padding-left-0 padding-right-0 pointerHover" translate="view_profile.FOLLOW"></label>
                     </a>
                     <a ng-show="activateFollow" ng-click="unfollow()" class="col-xs-3 col-xs-offset-1">
-                        <img class="IconSnippet pointerHover" ng-src="assets/images/unfollow.png">
+                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/unfollow.png">
                         <label class="col-xs-12 padding-left-0 padding-right-0 pointerHover" translate="view_profile.UNFOLLOW"></label>
                     </a>
                 </div>
@@ -90,7 +90,7 @@
                                 </h5>
                                 <div class="col-md-12 padding-0">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
-                                        <img class="iconClapMini" ng-src="assets/images/Like_dislike-09.png"> {{user.score}}
+                                        <img class="iconClapMini" ng-src="HTML/assets/images/Like_dislike-09.png"> {{user.score}}
                                         <label ng-hide="showClaps" translate="view_profile.CLAP"></label>
                                         <label ng-show="showClaps" translate="view_profile.CLAPS"></label>
                                     </span>
@@ -103,21 +103,21 @@
                                 <div class="col-xs-12 center padding-left-0 padding-right-0">
                                     <hr class="tall margin-top-5 margin-bottom-5">
                                     <a ng-click="leaveMessage()" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 padding-left-0">
-                                        <img class="IconSnippet pointerHover" ng-src="./assets/images/message.jpg"></img>
+                                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/message.jpg"></img>
                                         <label class="col-xs-12 padding-right-0 padding-left-0 pointerHover" translate="view_profile.LEAVE_MESSAGE"></label>
                                     </a>
                                     <a ng-click="makeClap()" ng-disabled="activateClap" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-left--15">
-                                        <img class="IconSnippet pointerHover" ng-src="assets/images/Like_dislike-09.png" ng-hide="activateClap">
-                                        <img class="IconSnippet pointerHover" ng-src="assets/images/Like_dislike-10.png" ng-show="activateClap">
+                                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/Like_dislike-09.png" ng-hide="activateClap">
+                                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/Like_dislike-10.png" ng-show="activateClap">
                                         <label class="col-xs-12 padding-right-0 padding-left-0 pointerHover" ng-hide="activateClap" translate="view_profile.CLAP_BUTTON"></label>
                                         <label class="col-xs-12 padding-right-0 padding-left-0 pointerHover" ng-show="activateClap" translate="view_profile.CLAPPED"></label>
                                     </a>
                                     <a ng-show="!activateFollow" ng-click="follow()" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-left--15">
-                                        <img class="IconSnippet pointerHover" ng-src="assets/images/followers.jpg">
+                                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/followers.jpg">
                                         <label class="col-xs-12 padding-right-0 padding-left-0 pointerHover" translate="view_profile.FOLLOW"></label>
                                     </a>
                                     <a ng-show="activateFollow" ng-click="unfollow()" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 margin-left--15">
-                                        <img class="IconSnippet pointerHover" ng-src="assets/images/unfollow.png">
+                                        <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/unfollow.png">
                                         <label class="col-xs-12 padding-right-0 padding-left-0 pointerHover" translate="view_profile.UNFOLLOW"></label>
                                     </a>
                                 </div>
@@ -134,12 +134,12 @@
                                 <ul class="nav nav-tabs nav-justified">
                                     <li class="active">
                                         <a ng-click="changeMiddle(0)" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-0">
-                                            <img class="IconSnippet pointerHover" ng-src="./assets/images/iconosnniper_v2.png"></img>
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/iconosnniper_v2.png"></img>
                                             <label class="pointerHover" translate="user_profile.SNIPPETS"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 0"></div>
                                         </a>
                                         <a ng-click="changeMiddle(1)" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 margin-bottom-0">
-                                            <img class="IconSnippet pointerHover" ng-src="assets/images/networks_v3.png">
+                                            <img class="IconSnippet pointerHover" ng-src="HTML/assets/images/networks_v3.png">
                                             <label class="pointerHover" translate="user_profile.SOCIAL"></label>
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0 lineMiddleSelect" ng-if="indexShowMiddle == 1"></div>
                                         </a>
@@ -153,7 +153,7 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-top-10 margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0">
                                                     <div class="IconSnippetBox">
-                                                        <img class="IconSnippet" ng-src="./assets/images/iconosnniper.png"></img>
+                                                        <img class="IconSnippet" ng-src="HTML/assets/images/iconosnniper.png"></img>
                                                     </div>
                                                     <div class="TitleSnippetBox">
                                                         <span class="block text-light margin-top-3 margin-bottom-10 col-xs-9 col-sm-6 col-md-6 col-lg-6 padding-left-0 padding-right-0">
