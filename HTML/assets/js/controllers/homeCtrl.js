@@ -65,7 +65,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                                 var avatarArray = $scope.profiles[i].avatar.split("/");
                                 $scope.profiles[i].avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
-                                $scope.profiles[i].avatar = 'assets/images/default-user.png';
+                                $scope.profiles[i].avatar = 'HTML/assets/images/default-user.png';
                             }
                         }
                     },
