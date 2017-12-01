@@ -1,6 +1,6 @@
 app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParamSerializer', '$state', function($rootScope, $http, $q, $cookies, $httpParamSerializer, $state) {
 
-    var tshirt = 'http://www.dir.com:8888/api/tshirts/';
+    /*var tshirt = 'http://www.dir.com:8888/api/tshirts/';
     var users = 'http://www.dir.com:8888/api/users/';
     var profiles = 'http://www.dir.com:8888/api/profiles/';
     var login = 'http://www.dir.com:8888/api/api-auth/login/';
@@ -23,9 +23,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var followersDir = 'http://www.dir.com:8888/api/followers/';
     var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
     var notifications = 'http://www.dir.com:8888/api/notifications/';
-    var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';
+    var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';*/
 
-    /*var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
+    var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
     var users = 'https://www.dirstuff.com/server/api/users/';
     var profiles = 'https://www.dirstuff.com/server/api/profiles/';
     var login = 'https://www.dirstuff.com/server/api/api-auth/login/';
@@ -48,10 +48,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var followersDir = 'https://www.dirstuff.com/server/api/followers/';
     var unfollowDir = 'https://www.dirstuff.com/server/api/unfollow/';
     var notifications = 'https://www.dirstuff.com/server/api/notifications/';
-    var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';*/
+    var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
 
-    // var urlBase = '/server/api';
-    var urlBase = '/api';
+    var urlBase = '/server/api';
+    // var urlBase = '/api';
 
     return {
         loginNext: loginNext,
