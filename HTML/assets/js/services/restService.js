@@ -1,31 +1,31 @@
 app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParamSerializer', '$state', function($rootScope, $http, $q, $cookies, $httpParamSerializer, $state) {
 
-    var tshirt = 'http://www.dir.com:8888/api/tshirts/';
-    var users = 'http://www.dir.com:8888/api/users/';
-    var profiles = 'http://www.dir.com:8888/api/profiles/';
-    var login = 'http://www.dir.com:8888/api/api-auth/login/';
-    var loginNext = 'http://www.dir.com:8888/api/api-auth/login/?next=/';
-    var register = 'http://www.dir.com:8888/api/api-auth/register/';
-    var snippets = 'http://www.dir.com:8888/api/snippets/';
-    var socialnetwork = 'http://www.dir.com:8888/api/socialnetworks/';
-    var imageDir = 'http://www.dir.com/images/';
-    var imageDownload = 'http://www.dir.com:8888/api/qrcode';
-    var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
-    var messages = 'http://www.dir.com:8888/api/messages/';
-    var sendMessages = 'http://www.dir.com:8888/api/send-message/';
-    var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
-    var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
-    var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
-    var stocks = 'http://www.dir.com:8888/api/stocks/';
-    var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
-    var tracking = 'http://www.dir.com:8888/api/track/';
-    var followDir = 'http://www.dir.com:8888/api/follow/';
-    var followersDir = 'http://www.dir.com:8888/api/followers/';
-    var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
-    var notifications = 'http://www.dir.com:8888/api/notifications/';
-    var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';
+    // var tshirt = 'http://www.dir.com:8888/api/tshirts/';
+    // var users = 'http://www.dir.com:8888/api/users/';
+    // var profiles = 'http://www.dir.com:8888/api/profiles/';
+    // var login = 'http://www.dir.com:8888/api/api-auth/login/';
+    // var loginNext = 'http://www.dir.com:8888/api/api-auth/login/?next=/';
+    // var register = 'http://www.dir.com:8888/api/api-auth/register/';
+    // var snippets = 'http://www.dir.com:8888/api/snippets/';
+    // var socialnetwork = 'http://www.dir.com:8888/api/socialnetworks/';
+    // var imageDir = 'http://www.dir.com/images/';
+    // var imageDownload = 'http://www.dir.com:8888/api/qrcode';
+    // var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
+    // var messages = 'http://www.dir.com:8888/api/messages/';
+    // var sendMessages = 'http://www.dir.com:8888/api/send-message/';
+    // var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
+    // var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
+    // var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
+    // var stocks = 'http://www.dir.com:8888/api/stocks/';
+    // var deleteUser = 'http://www.dir.com:8888/api/delete-user/';
+    // var tracking = 'http://www.dir.com:8888/api/track/';
+    // var followDir = 'http://www.dir.com:8888/api/follow/';
+    // var followersDir = 'http://www.dir.com:8888/api/followers/';
+    // var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
+    // var notifications = 'http://www.dir.com:8888/api/notifications/';
+    // var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';
 
-    /*var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
+    var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
     var users = 'https://www.dirstuff.com/server/api/users/';
     var profiles = 'https://www.dirstuff.com/server/api/profiles/';
     var login = 'https://www.dirstuff.com/server/api/api-auth/login/';
@@ -48,10 +48,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var followersDir = 'https://www.dirstuff.com/server/api/followers/';
     var unfollowDir = 'https://www.dirstuff.com/server/api/unfollow/';
     var notifications = 'https://www.dirstuff.com/server/api/notifications/';
-    var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';*/
+    var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
 
-    // var urlBase = '/server/api';
-    var urlBase = '/api';
+    var urlBase = '/server/api';
+    // var urlBase = '/api';
 
     return {
         loginNext: loginNext,
