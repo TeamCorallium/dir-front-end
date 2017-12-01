@@ -91,7 +91,6 @@ module.exports = function(grunt) {
             css: {
                 src: [
                     'bower_components/ng-emoticons/src/ng-emoticons.css',
-                    'bower_components/bootstrap/dist/css/bootstrap.css',
                     'bower_components/animate.css/animate.css',
                     'bower_components/slick.js/slick/slick.css',
                     'bower_components/slick.js/slick/slick-theme.css',

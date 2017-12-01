@@ -118,7 +118,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/768.jpg');
+        background-image: url('HTML/assets/images/768.jpg');
     }
     .marginButtonUserHome {
         margin-left: 43% !important;
@@ -187,7 +187,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/800.jpg');
+        background-image: url('HTML/assets/images/800.jpg');
     }
 }
 
@@ -195,7 +195,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/850.jpg');
+        background-image: url('HTML/assets/images/850.jpg');
     }
 }
 
@@ -203,7 +203,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/900.jpg');
+        background-image: url('HTML/assets/images/900.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -215,7 +215,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/950.jpg');
+        background-image: url('HTML/assets/images/950.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -232,7 +232,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1000.jpg');
+        background-image: url('HTML/assets/images/1000.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -277,7 +277,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1050.jpg');
+        background-image: url('HTML/assets/images/1050.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -294,7 +294,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1100.jpg');
+        background-image: url('HTML/assets/images/1100.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -315,7 +315,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1150.jpg');
+        background-image: url('HTML/assets/images/1150.jpg');
     }
     .marginButtonEdit {
         margin-right: 75px !important;
@@ -336,7 +336,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1200.jpg');
+        background-image: url('HTML/assets/images/1200.jpg');
     }
     .marginButtonEdit {
         margin-right: 100px !important;
@@ -357,7 +357,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1300.jpg');
+        background-image: url('HTML/assets/images/1300.jpg');
     }
     .marginButtonEdit {
         margin-right: 100px !important;
@@ -374,7 +374,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1366.jpg');
+        background-image: url('HTML/assets/images/1366.jpg');
     }
     .UserInfoBox {
         text-align: left !important;
@@ -448,7 +448,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/480.jpg');
+        background-image: url('HTML/assets/images/480.jpg');
     }
     .center-box {
         margin-left: 36% !important;
@@ -530,7 +530,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/480.jpg');
+        background-image: url('HTML/assets/images/480.jpg');
     }
     .marginUserHome {
         margin-left: 21% !important;
@@ -597,7 +597,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/480.jpg');
+        background-image: url('HTML/assets/images/480.jpg');
     }
     .marginUserHome {
         margin-left: 15% !important;
@@ -664,7 +664,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/375.jpg');
+        background-image: url('HTML/assets/images/375.jpg');
     }
     .marginUserHome {
         margin-left: 10% !important;
@@ -731,7 +731,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/360.jpg');
+        background-image: url('HTML/assets/images/360.jpg');
     }
     .marginUserHome {
         margin-left: 8% !important;
@@ -798,7 +798,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/320.jpg');
+        background-image: url('HTML/assets/images/320.jpg');
     }
     .marginUserHome {
         margin-left: 0% !important;
@@ -886,7 +886,7 @@
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
-        background-image: url('../images/1250.jpg');
+        background-image: url('HTML/assets/images/1250.jpg');
     }
     .DeleteSnippetBox {
         width: 50px !important;
@@ -1473,7 +1473,7 @@ fieldset[disabled] .btn {
 span.stars,
 span.stars span {
     display: block;
-    background: url('../images/stars.png') 0 -16px repeat-x;
+    background: url('HTML/assets/images/stars.png') 0 -16px repeat-x;
     width: 80px;
     height: 16px;
 }

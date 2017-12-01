@@ -16,7 +16,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             info: '',
             score: '',
             rating: '',
-            avatar: 'assets/images/default-user.png',
+            avatar: 'HTML/assets/images/default-user.png',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -175,7 +175,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                                 var avatarArray = data.avatar.split("/");
                                 $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
-                                $scope.user.avatar = 'assets/images/default-user.png';
+                                $scope.user.avatar = 'HTML/assets/images/default-user.png';
                             }
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
@@ -293,7 +293,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.getCount();
 
         $scope.saveProfile = function() {
-            if ($scope.user.avatar == 'assets/images/default-user.png') {
+            if ($scope.user.avatar == 'HTML/assets/images/default-user.png') {
                 $scope.user.avatar = '';
             }
             var url = $scope.user.profileurl;
@@ -573,7 +573,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 var avatarArray = avatar.split("/");
                 dirAvatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
             } else {
-                dirAvatar = 'assets/images/default-user.png';
+                dirAvatar = 'HTML/assets/images/default-user.png';
             }
 
             return dirAvatar;
