@@ -1154,8 +1154,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             } else if (num == 2) {
                 $scope.getFollowing();
             } else if (num == 0) {
-                getSnippets($scope.user.username, 1);
-                
+                getSnippets($scope.user.username, 1);                
             }
             $scope.indexShowMiddle = num;
         };
