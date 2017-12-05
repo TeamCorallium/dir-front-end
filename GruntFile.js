@@ -66,7 +66,6 @@ module.exports = function(grunt) {
                     'bower_components/angular-bootstrap/ui-bootstrap-tpls.js',
                     'bower_components/angular-cookies/angular-cookies.js',
                     'bower_components/ng-timeago/ngtimeago.js',
-                    // 'bower_components/ngSweetAlert/SweetAlert.js',
                     'bower_components/sweetalert/src/sweet-alert.js',
                     'bower_components/angular-notification-icons/dist/angular-notification-icons.js',
                     'bower_components/oclazyload/dist/ocLazyLoad.js',
