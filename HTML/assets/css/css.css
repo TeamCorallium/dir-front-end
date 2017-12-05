@@ -1774,5 +1774,14 @@ span.stars span {
     margin-top: -20px !important;
     color: #fff;
     margin-left: 14px!important;
-    font-size: 15px;
+    font-size: 10px;
+}
+
+.labelPlusXS {
+    position: absolute;
+    z-index: 2;
+    margin-top: -22px!important;
+    color: #fff;
+    margin-left: 9px!important;
+    font-size: 10px;
 }
