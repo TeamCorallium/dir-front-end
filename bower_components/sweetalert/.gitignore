@@ -2,7 +2,4 @@
 *.sass-cache
 *.DS_STORE
 node_modules
-npm-debug.log
-types
-
-dist
+bower_components
