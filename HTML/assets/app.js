@@ -12,7 +12,7 @@ angular.module("pulloverDir", [
     'ngImgCrop',
     'ngtimeago',
     'angular-growl',
-    'oitozero.ngSweetAlert',
+    // 'oitozero.ngSweetAlert',
     'pascalprecht.translate',
     'angular-notification-icons',
     'ngEmoticons',
