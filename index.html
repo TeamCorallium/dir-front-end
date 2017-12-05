@@ -51,8 +51,12 @@
                             <img src="HTML/assets/images/logo.png">
                         </a>
                         <div ng-show="(userdata.connected)" class="styleNotification hidden-md hidden-lg pointerHover" ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                            <notification-icon count='notificationCount' class="notificationXSIcon pointerHover">
+                            <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationXSIcon pointerHover">
                                 <i class="ti-bell fontSize20"></i>
+                            </notification-icon>
+                            <notification-icon ng-hide="notificationCount != 10" count='notificationCount' class="notificationXSIcon pointerHover">
+                                <i class="ti-bell fontSize20"></i>
+                                <label class="labelPlus">+</label>
                             </notification-icon>
                         </div>
                         <!-- end: LOGO -->
@@ -144,8 +148,12 @@
                             </li>
                             <li class="hidden-xs margin-top3" ng-show="userdata.connected" ng-cloak>
                                 <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                                    <notification-icon count='notificationCount' class="notificationMDIcon pointerHover">
+                                    <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationMDIcon pointerHover">
                                         <i class="ti-bell fontSize18"></i>
+                                    </notification-icon>
+                                    <notification-icon ng-hide="notificationCount != 10" count='notificationCount' class="notificationMDIcon pointerHover">
+                                        <i class="ti-bell fontSize18"></i>
+                                        <label class="labelPlus">+</label>
                                     </notification-icon>
                                 </a>
                             </li>

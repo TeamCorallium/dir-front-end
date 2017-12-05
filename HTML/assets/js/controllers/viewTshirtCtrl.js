@@ -523,7 +523,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         var count = data;
                         
                         if (count > 9) {
-                            $rootScope.notificationCount = '9';
+                            $rootScope.notificationCount = '10';
                         } else {
                             $rootScope.notificationCount = count;
                         }

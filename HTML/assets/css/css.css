@@ -1767,3 +1767,11 @@ span.stars span {
 .margin-top--5 {
     margin-top: -5px !important;
 }
+
+.labelPlus {
+    position: absolute;
+    z-index: 5;
+    margin-top: 9px !important;
+    color: white;
+    margin-left: -2px !important;
+}
