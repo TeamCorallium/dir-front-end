@@ -520,7 +520,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchNotificationUnreaded()
                 .then(
                     function(data) {
-                        $rootScope.notificationCount = data;
+                        var count = data;
+                        
+                        if (count > 9) {
+                            $rootScope.notificationCount = 9+;
+                        } else {
+                            $rootScope.notificationCount = count;
+                        }
                     },
                     function(errResponse) {
                         console.log(errResponse);

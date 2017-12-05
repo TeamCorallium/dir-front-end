@@ -288,11 +288,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             growl.error(serverNotFound, {
                 title: networkConnection
             });
-        });
-
-        $scope.getCount = function() {
-            $rootScope.notificationCount = filterFilter($rootScope.notifications, { readed: false }).length;
-        };
+        });        
 
         $scope.getNotifications = function() {
             RestService.fetchNotification()
@@ -309,7 +305,6 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             }
                         }
 
-                        $scope.getCount();
                     },
                     function(errResponse) {
                         console.log(errResponse);
@@ -325,10 +320,8 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         };
 
         $rootScope.$on('deleteNotification', function(event, data) {
-            console.log("data " + data);
             for (var i = 0; i < $rootScope.notifications.length; i++) {
                 if ($rootScope.notifications[i].url == data) {
-                    console.log("aqui "+ i + " " + data);
                     $rootScope.notifications.splice(i, 1);
                 }
             }
