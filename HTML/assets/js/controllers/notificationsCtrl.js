@@ -15,7 +15,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             info: '',
             score: '',
             rating: '',
-            avatar: 'assets/images/default-user.png',
+            avatar: 'HTML/assets/images/default-user.png',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -325,8 +325,10 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         };
 
         $rootScope.$on('deleteNotification', function(event, data) {
+            console.log("data " + data);
             for (var i = 0; i < $rootScope.notifications.length; i++) {
                 if ($rootScope.notifications[i].url == data) {
+                    console.log("aqui "+ i + " " + data);
                     $rootScope.notifications.splice(i, 1);
                 }
             }
