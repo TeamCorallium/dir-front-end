@@ -1785,3 +1785,7 @@ span.stars span {
     margin-left: 9px !important;
     font-size: 10px;
 }
+
+.notificationMargin {
+    margin-left: -2px !important;
+}
