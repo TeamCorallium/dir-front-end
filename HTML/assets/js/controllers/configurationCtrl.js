@@ -15,13 +15,11 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
                 .then(
                     function(data) {
                         var count = data;
-                        console.log(data + " " + count + " data-count");
+                        
                         if (count > 9) {
-                            $rootScope.notificationCount = '9+';
-                            console.log($rootScope.notificationCount + " >9");
+                            $rootScope.notificationCount = '9';
                         } else {
                             $rootScope.notificationCount = count;
-                            console.log($rootScope.notificationCount + " <=9");
                         }
                     },
                     function(errResponse) {
