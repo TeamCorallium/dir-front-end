@@ -775,6 +775,8 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('wrongConfig');
                 }                
             }).error(function(response) {
+                $rootScope.$broadcast('wrongConfig');
+                
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden');
                 } else {
