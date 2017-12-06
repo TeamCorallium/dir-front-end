@@ -179,9 +179,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
                             $scope.user.profileurl = data.url;
-                            $scope.user.configVisible: data.confVisible;
-                            $scope.user.configEmailVisible: data.confEmailVisible;
-                            $scope.user.configReceiveEmails: data.confReceiveMails;
+                            $scope.user.configVisible = data.confVisible;
+                            $scope.user.configEmailVisible = data.confEmailVisible;
+                            $scope.user.configReceiveEmails = data.confReceiveMails;
 
                             $cookies.put('configVisible', $scope.user.configVisible, {
                                 path: '/'
