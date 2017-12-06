@@ -300,5 +300,15 @@
         "NEW_SNIPPET": " ha creado un nuevo snippet",
         "ADD_SOCIAL": " agregó una nueva red social",
         "DELETE_NOTIFICATION": "Su notificación ha sido eliminada"
+    },
+    "configurations": {
+        "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
+        "LOGIN_PROBLEM": "Problemas de inicio de sesión",
+        "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
+        "NETWORK_CONNECTION": "Conexión de red",
+        "HIDE_PROFILE": "Ocultar perfil",
+        "EMAIL_NOTIFICATIONS": "Notificar por correo electrónico",
+        "SHOW_EMAIL": "Mostrar correo electrónico",
+        "ALERT_NOTIFICATIONS": "Alertas y notificaciones"
     }
 }

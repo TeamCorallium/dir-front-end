@@ -7,13 +7,13 @@
                     <nav class="faq-sidebar hidden-print hidden-xs hidden-sm affix-top">
                         <ul class="nav bs-docs-sidenav">
                             <li>
-                                <a ng-click="jumpToLocation(hideProfile)" class="active-anchor">Hide Profile</a>
+                                <a ng-click="jumpToLocation(hideProfile)" class="active-anchor" translate="configurations.HIDE_PROFILE"></a>
                             </li>
                             <li>
-                                <a ng-click="jumpToLocation(emailRecive)" class="active-anchor">Notifications by Email</a>
+                                <a ng-click="jumpToLocation(emailRecive)" class="active-anchor" translate="configurations.EMAIL_NOTIFICATIONS"></a>
                             </li>
                             <li>
-                                <a ng-click="jumpToLocation(showEmail)" class="active-anchor">Show Email</a>
+                                <a ng-click="jumpToLocation(showEmail)" class="active-anchor" translate="configurations.SHOW_EMAIL"></a>
                             </li>
                         </ul>
                     </nav>
@@ -23,31 +23,23 @@
                         <div class="panel panel-transparent">
                             <div class="panel-heading">
                                 <div class="padding-0 col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                                    <h5 class="panel-title">Alertas y notificaciones</h5>
+                                    <h5 class="panel-title" translate="configurations.ALERT_NOTIFICATIONS"></h5>
                                 </div>
                                 <hr class="tall margin-bottom-0">
                             </div>
                             <div class="panel-body">
-                                <p id="hideProfile">
-                                    Ocultar perfil
-                                </p>
+                                <p id="hideProfile" translate="configurations.HIDE_PROFILE"></p>
                                 <div class="checkbox">
                                     <switch ng-change="switchProfileChange()" ng-model="switchProfile" on="Enable" off="Disable"></switch>
-                                    <br>{{switchProfile}}
                                 </div>
-                                <p id="emailRecive">
-                                    Recibir notificaciones por email
+                                <p id="emailRecive" translate="configurations.EMAIL_NOTIFICATIONS">
                                 </p>
                                 <div class="checkbox">
                                     <switch ng-change="switchEmailChange()" ng-model="switchEmail" on="Enable" off="Disable"></switch>
-                                    <br>{{switchEmail}}
                                 </div>
-                                <p id="showEmail">
-                                    Mostrar email
-                                </p>
+                                <p id="showEmail" translate="configurations.SHOW_EMAIL"></p>
                                 <div class="checkbox">
                                     <switch ng-change="switchShowEmailChange()" ng-model="switchShowEmail" on="Enable" off="Disable"></switch>
-                                    <br>{{switchShowEmail}}
                                 </div>
                             </div>
                         </div>

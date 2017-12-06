@@ -300,5 +300,15 @@
         "NEW_SNIPPET": " has created a new snippet",
         "ADD_SOCIAL": " add a new social network",
         "DELETE_NOTIFICATION": "Your notification has been deleted"
+    },
+    "configurations": {
+        "WE_PROBLEM": "We detected some problems, please try again",
+        "LOGIN_PROBLEM": "Login Problems",
+        "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
+        "NETWORK_CONNECTION": "Network Connection",
+        "HIDE_PROFILE": "Hide profile",
+        "EMAIL_NOTIFICATIONS": "Notifications by email",
+        "SHOW_EMAIL": "Show Email",
+        "ALERT_NOTIFICATIONS": "Alerts and Notifications"
     }
 }

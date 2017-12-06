@@ -300,5 +300,15 @@
         "NEW_SNIPPET": " 創建了一個新的程式碼片段",
         "ADD_SOCIAL": " 添加新的社交網路",
         "DELETE_NOTIFICATION": "您的通知已被刪除"
+    },
+    "configurations": {
+        "WE_PROBLEM": "我們發現了一些問題, 請再試一次.",
+        "LOGIN_PROBLEM": "登錄問題",
+        "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
+        "NETWORK_CONNECTION": "網路連接",
+        "HIDE_PROFILE": "隱藏設定檔",
+        "EMAIL_NOTIFICATIONS": "電子郵件通知",
+        "SHOW_EMAIL": "顯示電子郵件",
+        "ALERT_NOTIFICATIONS": "通知和通知"
     }
 }
