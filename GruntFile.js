@@ -77,7 +77,7 @@ module.exports = function(grunt) {
                     'bower_components/angular-translate-storage-local/angular-translate-storage-local.js',
                     'bower_components/ng-img-crop/compile/minified/ng-img-crop.js',
                     'bower_components/ng-emoticons/src/ng-emoticons.js',
-                    // 'bower_components/angular-ui-switch/angular-ui-switch.js',
+                    'bower_components/angular-ui-switch/angular-ui-switch.js',
                     'bower_components/spin.js/spin.js',
                     'bower_components/angular-loading-spinner/angular-loading-spinner.js',
                     'HTML/assets/*.js',
