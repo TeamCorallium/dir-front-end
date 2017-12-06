@@ -22,7 +22,10 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             fullname: '',
             socialnetworks: [],
             tshirts: [],
-            snippets: []
+            snippets: [],
+            configVisible: '',
+            configEmailVisible: '',
+            configReceiveEmails: ''
         };
 
         $rootScope.notifications = [];
@@ -133,7 +136,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                                 var avatarArray = data.avatar.split("/");
                                 $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                             } else {
-                                $scope.user.avatar = 'assets/images/default-user.png';
+                                $scope.user.avatar = 'HTML/assets/images/default-user.png';
                             }
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
@@ -141,6 +144,21 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
                             $scope.user.profileurl = data.url;
+                            $scope.user.configVisible: data.confVisible;
+                            $scope.user.configEmailVisible: data.confEmailVisible;
+                            $scope.user.configReceiveEmails: data.confReceiveMails;
+
+                            $cookies.put('configVisible', $scope.user.configVisible, {
+                                path: '/'
+                            });
+    
+                            $cookies.put('configEmailVisible', $scope.user.configEmailVisible, {
+                                path: '/'
+                            });
+    
+                            $cookies.put('configReceiveEmails', $scope.user.configReceiveEmails, {
+                                path: '/'
+                            });
 
                             if (data.qrcode != '') {
                                 $scope.user.qrcode = RestService.imageDir + data.qrcode;

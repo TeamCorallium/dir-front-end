@@ -6,9 +6,9 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             path: '/'
         });
 
-        $scope.switchProfile = true;
-        $scope.switchEmail = true;
-        $scope.switchShowEmail = true;
+        $scope.switchProfile = $cookies.get('configVisible');
+        $scope.switchEmail = $cookies.get('configEmailVisible');
+        $scope.switchShowEmail = $cookies.get('configReceiveEmails');
 
         var flag = ''; 
 
@@ -53,10 +53,6 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             flag = 'email';
             RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
         };
-
-        $rootScope.$on('updateConfig', function(event, data) {
-            
-        });
 
         $rootScope.$on('wrongConfig', function(event, data) {
             if (flag = 'visible') {

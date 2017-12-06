@@ -39,7 +39,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             fullname: '',
             socialnetworks: [],
             tshirts: [],
-            snippets: []
+            snippets: [],
+            configVisible: '',
+            configEmailVisible: '',
+            configReceiveEmails: ''
         };
 
         $scope.limitSocialNetwork = 12;
@@ -176,6 +179,21 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
                             $scope.user.profileurl = data.url;
+                            $scope.user.configVisible: data.confVisible;
+                            $scope.user.configEmailVisible: data.confEmailVisible;
+                            $scope.user.configReceiveEmails: data.confReceiveMails;
+
+                            $cookies.put('configVisible', $scope.user.configVisible, {
+                                path: '/'
+                            });
+    
+                            $cookies.put('configEmailVisible', $scope.user.configEmailVisible, {
+                                path: '/'
+                            });
+    
+                            $cookies.put('configReceiveEmails', $scope.user.configReceiveEmails, {
+                                path: '/'
+                            });
 
                             if (data.qrcode != '') {
                                 $scope.user.qrcode = RestService.imageDir + data.qrcode;
