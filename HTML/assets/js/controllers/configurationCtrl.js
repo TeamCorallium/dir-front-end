@@ -10,6 +10,8 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $scope.switchEmail = true;
         $scope.switchShowEmail = true;
 
+        var flag = ''; 
+
         $scope.getCount = function() {
             RestService.fetchNotificationUnreaded()
                 .then(
@@ -38,15 +40,32 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         }
 
         $scope.switchEmailChange = function() {
-            console.log($scope.switchEmail + " switchEmail");
+            flag = 'visible';
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
         };
 
         $scope.switchProfileChange = function() {
-            console.log($scope.switchProfile + " switchProfile");
+            flag = 'profile';
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
         };
 
         $scope.switchShowEmailChange = function() {
-            console.log($scope.switchShowEmail + " switchShowEmail");
+            flag = 'email';
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
         };
+
+        $rootScope.$on('updateConfig', function(event, data) {
+            
+        });
+
+        $rootScope.$on('wrongConfig', function(event, data) {
+            if (flag = 'visible') {
+                $scope.switchProfile != $scope.switchProfile;
+            } else if ( flag = 'profile') {
+                $scope.switchEmail != $scope.switchEmaill;
+            } else {
+                $scope.switchShowEmail != $scope.switchShowEmail;
+            }
+        });
     }
 ]);

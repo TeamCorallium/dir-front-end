@@ -24,6 +24,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var unfollowDir = 'http://www.dir.com:8888/api/unfollow/';
     var notifications = 'http://www.dir.com:8888/api/notifications/';
     var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';
+    var profileConfig = 'http://www.dir.com:8888/api/setprofileconfig/';
 
     // var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
     // var users = 'https://www.dirstuff.com/server/api/users/';
@@ -49,6 +50,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var unfollowDir = 'https://www.dirstuff.com/server/api/unfollow/';
     // var notifications = 'https://www.dirstuff.com/server/api/notifications/';
     // var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
+    // var profileConfig = 'http://www.dirstuff.com/server/api/setprofileconfig/';
 
     // var urlBase = '/server/api';
     var urlBase = '/api';
@@ -727,6 +729,54 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             }).error(function(response) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
+                } else {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                }
+            });
+        },
+
+        updateConfiguration: function(visible, emailVisible, receiveMails) {
+            $http({
+                method: 'PUT',
+                url: profileConfig,
+                headers: {
+                    'Content-Type': undefined,
+                    'X-CSRFToken': $cookies.get('csrftoken')
+                },
+                transformRequest: function(data) {
+                    if (data === undefined)
+                        return data;
+                    var fd = new FormData();
+                    angular.forEach(data, function(value, key) {
+                        if (value instanceof FileList) {
+                            if (value.length == 1) {
+                                fd.append(key, value[0]);
+                            } else {
+                                angular.forEach(value, function(file, index) {
+                                    fd.append(key + '_' + index, file);
+                                });
+                            }
+                        } else {
+                            fd.append(key, value);
+                        }
+                    });
+                    return fd;
+                },
+                data: {
+                    'visible': visible,
+                    'emailVisible': emailVisible,
+                    'receiveMails': receiveMails,
+                    'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function(data) {
+                if (data['response'] == 'ok') {
+                    $rootScope.$broadcast('updateConfig');
+                } else {
+                    $rootScope.$broadcast('wrongConfig');
+                }                
+            }).error(function(response) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden');
                 } else {
                     $rootScope.$broadcast('LoginNetworkConnectionError');
                 }
