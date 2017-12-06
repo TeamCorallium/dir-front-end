@@ -194,6 +194,8 @@ function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $windo
                         $scope.user.configVisible = data.confVisible;
                         $scope.user.configEmailVisible = data.confEmailVisible;
                         $scope.user.configReceiveEmails = data.confReceiveMails;
+
+                        console.log("configurations " + $scope.user.configVisible + " " + $scope.user.configEmailVisible + " " + $scope.user.configReceiveEmails);
                         
                         $cookies.put('configVisible', $scope.user.configVisible, {
                             path: '/'
