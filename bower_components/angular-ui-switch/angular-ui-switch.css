@@ -5,7 +5,7 @@
   display: inline-block;
   box-sizing: content-box;
   overflow: visible;
-  width: 52px;
+  width: 100px;
   height: 30px;
   padding: 0px;
   margin: 0px;
@@ -39,7 +39,7 @@
   border-color: rgb(0, 184, 184);
 }
 .switch.checked small {
-  left: 22px;
+  left: 70px;
 }
 /*wider switch text moves small further to the right*/
 .switch.wide.checked small {
