@@ -6,6 +6,7 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             path: '/'
         });
 
+        console.log($cookies.get('configVisible') + " " + $cookies.get('configEmailVisible') + " " + $cookies.get('configReceiveEmails'));
         $scope.switchProfile = $cookies.get('configVisible');
         $scope.switchEmail = $cookies.get('configEmailVisible');
         $scope.switchShowEmail = $cookies.get('configReceiveEmails');
