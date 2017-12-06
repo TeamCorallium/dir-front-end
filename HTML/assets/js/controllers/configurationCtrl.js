@@ -6,10 +6,31 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             path: '/'
         });
 
-        console.log($cookies.get('configVisible') + " " + $cookies.get('configEmailVisible') + " " + $cookies.get('configReceiveEmails'));
-        $scope.switchProfile = $cookies.get('configVisible');
-        $scope.switchEmail = $cookies.get('configEmailVisible');
-        $scope.switchShowEmail = $cookies.get('configReceiveEmails');
+        
+        
+        if ($cookies.get('configVisible') == 'true'){
+            $scope.switchProfile = true;
+            console.log($cookies.get('configVisible') + " visible");
+        } else {
+            $scope.switchProfile = false;
+            console.log($cookies.get('configVisible') + " visible");
+        }
+
+        if ($cookies.get('configEmailVisible') == 'true'){
+            $scope.switchEmail = true;
+            console.log($cookies.get('switchEmail') + " configEmailVisible");
+        } else {
+            $scope.switchEmail = false;
+            console.log($cookies.get('switchEmail') + " configEmailVisible");
+        }
+        
+        if ($cookies.get('configReceiveEmails') == 'true'){
+            $scope.switchShowEmail = true;
+            console.log($cookies.get('switchShowEmail') + " configReceiveEmails");
+        } else {
+            $scope.switchShowEmail = false;
+            console.log($cookies.get('switchShowEmail') + " configReceiveEmails");
+        }
 
         var flag = ''; 
 
