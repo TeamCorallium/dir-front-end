@@ -1,120 +1,123 @@
 <div class="profile-padding-inbox" ng-controller="InboxCtrl">
-    <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right OptionsBox">
-        <p class="email-options-title margin-top-10" translate="inbox.BROWSE"></p>
-        <ul class="ListOptions margin-left-15">
-            <li>
-                <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
-                    <span class="title">
-                        <i class="ti-import"></i>
-                        <label class="pointerHover" translate="inbox.INBOX"></label>
-                    </span>
-                    <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="getCount() > 0">{{getCount()}}</span>
-                </a>
-            </li>
-            <li>
-                <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
-                    <span class="title">
-                        <i class="ti-upload"></i>
-                        <label class="pointerHover" translate="inbox.SEND"></label>
-                    </span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox padding-0">
-        <div id="MessageInboxBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0 verticalOverflow" ng-if="inboxFlag">
-            <ul class="list-unstyled">
-                <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
-                    <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
+    <section class="container-fluid container-fullw bg-white">
+        <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right OptionsBox">
+            <p class="email-options-title margin-top-10" translate="inbox.BROWSE"></p>
+            <ul class="ListOptions margin-left-15">
+                <li>
+                    <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
+                        <span class="title">
+                            <i class="ti-import"></i>
+                            <label class="pointerHover" translate="inbox.INBOX"></label>
+                        </span>
+                        <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="getCount() > 0">{{getCount()}}</span>
+                    </a>
                 </li>
-                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-class="{MessageUnread: message.readed == false}"
-                    id="li-{{message.id}}" ng-repeat="message in messagesInbox">
-                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageInbox(message)">
-                        <div>
-                            <span class="MessageFrom"> {{message.sender}}</span>
-                            <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
-                        </div>
-                        <div>
-                            <span class="MessageSubject"> {{message.subject}}</span>
-                        </div>
-                        <div>
-                            <span class="MessageContent"> {{message.body | cut:true:20:' ...'}}</span>
-                        </div>
+                <li>
+                    <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
+                        <span class="title">
+                            <i class="ti-upload"></i>
+                            <label class="pointerHover" translate="inbox.SEND"></label>
+                        </span>
                     </a>
                 </li>
             </ul>
         </div>
-        <div id="MessageSendBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0 verticalOverflow" ng-if="!inboxFlag">
-            <ul class="list-unstyled">
-                <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
-                    <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
-                </li>
-                <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend"
-                    id="li-{{message.id}}">
-                    <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
-                        <div>
-                            <span class="MessageFrom"> {{message.sender}}</span>
-                            <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
+        <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 InboxBox padding-0">
+            <div id="MessageInboxBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0 verticalOverflow" ng-if="inboxFlag">
+                <ul class="list-unstyled">
+                    <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesInbox.length == 0">
+                        <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-class="{MessageUnread: message.readed == false}"
+                        id="li-{{message.id}}" ng-repeat="message in messagesInbox">
+                        <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageInbox(message)">
+                            <div>
+                                <span class="MessageFrom"> {{message.sender}}</span>
+                                <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageSubject"> {{message.subject}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageContent"> {{message.body | cut:true:20:' ...'}}</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="MessageSendBox" class="col-xs-12 col-sm-4 col-md-4 col-lg-4 border-right padding-0 verticalOverflow" ng-if="!inboxFlag">
+                <ul class="list-unstyled">
+                    <li class="padding-top-20 padding-bottom-10 border-bottom" ng-if="messagesSend.length == 0">
+                        <h2 class="MessageSubjectNoFound" translate="inbox.NO_MESSAGE_FOUND"></h2>
+                    </li>
+                    <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend"
+                        id="li-{{message.id}}">
+                        <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
+                            <div>
+                                <span class="MessageFrom"> {{message.sender}}</span>
+                                <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageSubject"> {{message.subject}}</span>
+                            </div>
+                            <div>
+                                <span class="MessageContent"> {{message.body}}</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div id="MessageReadBox" class="col-sm-8 col-md-8 col-lg-8 border-left verticalOverflow">
+                <div class="ng-scope" ng-if="messageSelected.id == ''">
+                    <div class="no-messages">
+                        <h2 translate="inbox.NO_SELECTED"></h2>
+                    </div>
+                </div>
+                <div ng-if="messageSelected.id != ''">
+                    <div class="message-actions ng-scope">
+                        <ul class="actions no-margin no-padding block">
+                            <li class="no-padding displayBlock">
+                                <a class="text-info" ng-click="backToMessageList(messageSelected)">
+                                    <i class="ti-arrow-left"></i>
+                                    <label class="margin-bottom-0 pointerHover" translate="inbox.BACK"></label>
+                                </a>
+                            </li>
+                            <li class="no-padding displayBlockAll" ng-show="inboxFlag">
+                                <a class="text-info" data-toggle="modal" data-target="#modalMessage">
+                                    <i class="ti-back-left"></i>
+                                    <label class="margin-bottom-0 pointerHover" translate="inbox.REPLY"></label>
+                                </a>
+                            </li>
+                            <li class="no-padding displayBlockAll" ng-click="deleteMessage(messageSelected.url)">
+                                <a class="text-info">
+                                    <i class="ti-trash"></i>
+                                    <label class="margin-bottom-0 pointerHover" translate="inbox.DELETE"></label>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="message-header row">
+                        <div class="message-time">
+                            {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
                         </div>
-                        <div>
-                            <span class="MessageSubject"> {{message.subject}}</span>
+                        <div class="message-from">
+                            {{messageSelected.sender}}
                         </div>
-                        <div>
-                            <span class="MessageContent"> {{message.body}}</span>
+                        <div class="message-to">
+                            To: {{messageSelected.receiver}}
                         </div>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div id="MessageReadBox" class="col-sm-8 col-md-8 col-lg-8 border-left verticalOverflow">
-            <div class="ng-scope" ng-if="messageSelected.id == ''">
-                <div class="no-messages">
-                    <h2 translate="inbox.NO_SELECTED"></h2>
+                        <div class="message-subject margin-top-15 padding-left-0 padding-right-0">
+                            {{messageSelected.subject}}
+                        </div>
+                        <div class="message-conten margin-top-30">
+                            {{messageSelected.body}}
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div ng-if="messageSelected.id != ''">
-                <div class="message-actions ng-scope">
-                    <ul class="actions no-margin no-padding block">
-                        <li class="no-padding displayBlock">
-                            <a class="text-info" ng-click="backToMessageList(messageSelected)">
-                                <i class="ti-arrow-left"></i>
-                                <label class="margin-bottom-0 pointerHover" translate="inbox.BACK"></label>
-                            </a>
-                        </li>
-                        <li class="no-padding displayBlockAll" ng-show="inboxFlag">
-                            <a class="text-info" data-toggle="modal" data-target="#modalMessage">
-                                <i class="ti-back-left"></i>
-                                <label class="margin-bottom-0 pointerHover" translate="inbox.REPLY"></label>
-                            </a>
-                        </li>
-                        <li class="no-padding displayBlockAll" ng-click="deleteMessage(messageSelected.url)">
-                            <a class="text-info">
-                                <i class="ti-trash"></i>
-                                <label class="margin-bottom-0 pointerHover" translate="inbox.DELETE"></label>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="message-header row">
-                    <div class="message-time">
-                        {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
-                    </div>
-                    <div class="message-from">
-                        {{messageSelected.sender}}
-                    </div>
-                    <div class="message-to">
-                        To: {{messageSelected.receiver}}
-                    </div>
-                    <div class="message-subject margin-top-15 padding-left-0 padding-right-0">
-                        {{messageSelected.subject}}
-                    </div>
-                    <div class="message-conten margin-top-30">
-                        {{messageSelected.body}}
-                    </div>
-                </div>
-            </div>
         </div>
-    </div>
+    </section>
+
     <!-- start: MODAL MESSAGE-->
     <div class="modal fade" id="modalMessage" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
         <div class="modal-dialog">
