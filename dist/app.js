@@ -77694,26 +77694,6 @@ function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $windo
         });
 
         $rootScope.$on('forbidden', function(event, data) {
-            // if (RestService.getCookie('csrftoken') == null) {
-            //     RestService.fetchObjectByUrl(RestService.loginNext)
-            //         .then(
-            //             function(data) {
-            //                 console.log('get get ' + RestService.getCookie('csrftoken'));
-            //             },
-            //             function(errResponse) {
-            //                 console.log(errResponse);
-            //             }
-            //         );
-
-            // } else {
-            //     console.log(RestService.getCookie('csrftoken'));
-            // }
-
-            // var weProblem = $translate.instant('view_profile.WE_PROBLEM');
-            // var loginProblem = $translate.instant('view_profile.LOGIN_PROBLEM');
-            // growl.error(weProblem, {
-            //     title: loginProblem
-            // });
             $state.go('userprivate');
         });
 
@@ -78252,26 +78232,6 @@ function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $windo
         });
 
         $rootScope.$on('forbidden', function(event, data) {
-            // if (RestService.getCookie('csrftoken') == null) {
-            //     RestService.fetchObjectByUrl(RestService.loginNext)
-            //         .then(
-            //             function(data) {
-            //                 console.log('get get ' + RestService.getCookie('csrftoken'));
-            //             },
-            //             function(errResponse) {
-            //                 console.log(errResponse);
-            //             }
-            //         );
-
-            // } else {
-            //     console.log(RestService.getCookie('csrftoken'));
-            // }
-
-            // var weProblem = $translate.instant('view_profile.WE_PROBLEM');
-            // var loginProblem = $translate.instant('view_profile.LOGIN_PROBLEM');
-            // growl.error(weProblem, {
-            //     title: loginProblem
-            // });
             $state.go('userprivate');
         });
 
@@ -79274,9 +79234,12 @@ function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $windo
                         return response.data;
                     },
                     function(errResponse) {
+                        console.status(status + " status");
                         if (status == 403) {
+                            console.status(status + " entro");
                             $rootScope.$broadcast('forbidden', username);
                         } else {
+                            console.status(status + " no status");
                             $rootScope.$broadcast('LoginNetworkConnectionError');
                         }
                     }
