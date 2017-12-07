@@ -1018,22 +1018,14 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchObjectByUrl: function(url) {
             return $http.get(url)
-                .success(
+                .then(
                     function(response) {
                         return response.data;
-                    }
-                ).error(
+                    },
                     function(response, status, header, config, statusText) {
-                        console.log(status + " status");
-                        if (status == 403) {
-                            console.log(status + " status 2");
-                            $rootScope.$broadcast('forbidden', username);
-                        } else {
-                            console.log(status + " status 3");
-                            $rootScope.$broadcast('LoginNetworkConnectionError');
-                        }
+                        
                     }
-                )
+                );
         },
 
         fetchStocks: function() {
