@@ -135,7 +135,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('wrongRegister');
                 }
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -164,7 +164,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('addsnippets');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -196,7 +196,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('addsocialnetwork');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -230,7 +230,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('addTshirtErrorBad');
                 }
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -261,7 +261,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('addStock');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -291,7 +291,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('imageDownloadSuccesfull', imageDir + data.qrfilename);
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -322,7 +322,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('changepassword');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -360,7 +360,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('SendMessageError');
                 }
-            }).error(function(response, status) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -397,7 +397,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else if (!test) {
                     $rootScope.$broadcast('clapSuccesfully', data.response);
                 }
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -427,7 +427,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('deleteUser');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -464,7 +464,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else if (!test) {
                     $rootScope.$broadcast('followSuccesfully', data.response);
                 }
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -496,7 +496,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 if (data.response == 'bad') {
                     $rootScope.$broadcast('UnfollowBad');
                 }
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -545,7 +545,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('updateProfile');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -592,7 +592,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('updateProfile');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -639,7 +639,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('messageUpdated');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -682,7 +682,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('snippetUpdated');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -726,7 +726,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 $rootScope.$broadcast('socialUpdated');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else {
@@ -774,7 +774,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 } else {
                     $rootScope.$broadcast('wrongConfig');
                 }                
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 $rootScope.$broadcast('wrongConfig');
                 
                 if (status == 403) {
@@ -801,7 +801,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(result) {
                 $rootScope.$broadcast('deleteSocialNetwork');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -828,7 +828,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(result) {
                 $rootScope.$broadcast('deleteSnippet');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -855,7 +855,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(result) {
                 $rootScope.$broadcast('deleteMessage');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -882,7 +882,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(result) {
                 $rootScope.$broadcast('deleteStuff');
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -909,7 +909,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(result) {
                 $rootScope.$broadcast('deleteNotification', url);
-            }).error(function(response) {
+            }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
                 } else if (status == null) {
@@ -926,7 +926,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -942,7 +942,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -958,7 +958,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -974,7 +974,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -990,7 +990,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1006,7 +1006,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1022,7 +1022,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1038,7 +1038,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1054,7 +1054,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1070,7 +1070,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1086,7 +1086,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {
@@ -1102,7 +1102,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     function(response) {
                         return response.data.unreaded;
                     },
-                    function(errResponse) {
+                    function(response, status, header, config, statusText) {
                         if (status == 403) {
                             $rootScope.$broadcast('forbidden', username);
                         } else {

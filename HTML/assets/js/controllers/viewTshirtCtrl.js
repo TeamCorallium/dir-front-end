@@ -212,7 +212,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.getCount();
                         }
                     } else {
-                        console.log("llega aqui 4");
                         $state.go('userprivate');
                     }
                 },
