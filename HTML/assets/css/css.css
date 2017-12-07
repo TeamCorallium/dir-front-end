@@ -1784,7 +1784,6 @@ span.stars span {
     color: #fff;
     margin-left: 9px !important;
     font-size: 10px;
-    pointer
 }
 
 .labelPlus:hover {
@@ -1799,4 +1798,9 @@ span.stars span {
 
 .notificationMargin {
     margin-left: -2px !important;
+}
+
+.iconEye {
+    position: absolute;
+    float: right;
 }
