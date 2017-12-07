@@ -1018,10 +1018,11 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchObjectByUrl: function(url) {
             return $http.get(url)
-                .then(
+                .success(
                     function(response) {
                         return response.data;
-                    },
+                    }
+                ).error(
                     function(response, status, header, config, statusText) {
                         console.log(status + " status");
                         if (status == 403) {
@@ -1032,7 +1033,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                             $rootScope.$broadcast('LoginNetworkConnectionError');
                         }
                     }
-                );
+                )
         },
 
         fetchStocks: function() {
