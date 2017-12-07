@@ -139,17 +139,13 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             if (data[0].profiles.length > 0) {
                                 getProfile(data[0].profiles[0]);
                             }
-
-                            getSnippets(data[0].username, 1);
-                            getSocialNetworks(data[0].username);
-
                         } else {
                             $state.go('home');
                             $('#myModal').modal('show');
                         }
                     },
                     function(errResponse) {
-                        console.log(errResponse);
+                        $state.go('userprivate');
                     }
                 );
         };
@@ -206,8 +202,17 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                                 $scope.TryClap();
                                 $scope.TryFollow();
                             }
+
+                            getSnippets(data[0].username, 1);
+                            getSocialNetworks(data[0].username);
+
+                            $scope.getPopularUsers();
+
+                            if ($cookies.get('username')) {
+                                $scope.getCount();
+                            }
                         } else {
-                            $state.go('home');
+                            $state.go('userprivate');
                         }
                     },
                     function(errResponse) {
@@ -296,8 +301,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 );
         };
 
-        $scope.getPopularUsers();
-
         $scope.goToProfile = function(owner) {
             $cookies.remove("exploreUser", {
                 path: '/'
@@ -339,12 +342,15 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
             $scope.user.snippets = [];
+            configVisible = '';
+            configEmailVisible = '';
+            configReceiveEmails = '';
 
             if ($cookies.get('exploreUser')) {
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
             } else {
-                $state.go('home');
+                $state.go('userprivate');
             }
         };
 
@@ -520,9 +526,5 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     }
                 );
         };
-
-        if ($cookies.get('username')) {
-            $scope.getCount();
-        }
     }
 ]);

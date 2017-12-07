@@ -943,12 +943,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function(errResponse) {
-                        console.status(status + " status");
                         if (status == 403) {
-                            console.status(status + " entro");
                             $rootScope.$broadcast('forbidden', username);
                         } else {
-                            console.status(status + " no status");
                             $rootScope.$broadcast('LoginNetworkConnectionError');
                         }
                     }
