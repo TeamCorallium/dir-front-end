@@ -194,7 +194,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.qrcode = RestService.imageDir + data.qrcode;
                         }
 
-                        if ($rootScope.viewInbox) {
+                        if ($cookies.get('username')) {
                             $scope.TryClap();
                             $scope.TryFollow();
                         }
