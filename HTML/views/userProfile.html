@@ -252,19 +252,17 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image">
                                                     <div class="img-thumbnail">
-                                                        {{follower.configVisible}}
-                                                        <a ng-disabled="!follower.configVisible" ng-click="goToProfile(follower.username)">
+                                                        <a ng-click="goToProfile(follower.username)">
                                                             <img ng-src="{{getAvatar(follower.avatar)}}" class="img-responsive">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    {{follower.configVisible}}
-                                                    <a ng-disabled="!follower.configVisible" ng-show="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.username}}</a>
-                                                    <a ng-disabled="!follower.configVisible" ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
+                                                    <a ng-show="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.username}}</a>
+                                                    <a ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
                                                     <h5>{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
-                                                        <a ng-disabled="!follower.configVisible" ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                        <a ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <i class="ti-user"></i>
                                                             <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
                                                         </a>
@@ -294,20 +292,17 @@
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image">
                                                     <div class="img-thumbnail">
-                                                        {{followTo.configVisible}}
-                                                        <a ng-disabled="!followTo.configVisible" ng-click="goToProfile(followTo.profileUserName)">
+                                                        <a ng-click="goToProfile(followTo.profileUserName)">
                                                             <img ng-src="{{getAvatar(followTo.profileAvatar)}}" class="img-responsive">
                                                         </a>
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    {{followTo.configVisible}}
-                                                    <a ng-disabled="!followTo.configVisible" ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
-                                                    <a ng-disabled="!followTo.configVisible" ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
+                                                    <a ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
+                                                    <a ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
                                                     <h5>{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
-                                                        {{followTo.configVisible}}
-                                                        <a ng-disabled="!followTo.configVisible" ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                        <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <i class="ti-user"></i>
                                                             <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
                                                         </a>
@@ -393,16 +388,14 @@
                                                 <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
                                                         <div class="img-thumbnail">
-                                                            {{popularUser.configVisible}}
-                                                            <a ng-disabled="!popularUser.configVisible" ng-click="goToProfile(popularUser.owner)">
+                                                            <a ng-disabled="!popularUser.confVisible" ng-click="goToProfile(popularUser.owner)">
                                                                 <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="post-info">
-                                                        {{popularUser.configVisible}}
-                                                        <a ng-disabled="!popularUser.configVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <a ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
                                                         <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
@@ -563,7 +556,7 @@
                 <div class="modal-body">
                     <input type="file" id="fileInput" class="btn btn-primary LoadImageModalButton" onchange="angular.element(this).scope().uploadFile(this.files[0])">
                     <div class="cropArea margin-top-10">
-                        <img-crop image="myImage" result-image="myCroppedImage"></img-crop>
+                        <img-crop image="myImage" result-image-size="50" result-image="myCroppedImage"></img-crop>
                     </div>
                 </div>
                 <div class="modal-footer">
