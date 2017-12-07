@@ -118,15 +118,15 @@
                             <li ng-repeat="user in users">
                                 <div class="post-image">
                                     <div class="img-thumbnail">
-                                        <a ng-click="goToProfile(user.owner)">
+                                        <a ng-disabled="!user.confVisible" ng-click="goToProfile(user.owner)">
                                             <img ng-src="{{user.avatar}}" class="img-responsive">
                                         </a>
                                     </div>
                                 </div>
                                 <div class="post-info">
                                     <div class="adminInfoUser">
-                                        <a ng-show="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.owner}}</a>
-                                        <a ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
+                                        <a ng-disabled="!user.confVisible" ng-show="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.owner}}</a>
+                                        <a ng-disabled="!user.confVisible" ng-hide="user.fullname == ''" ng-click="goToProfile(user.owner)">{{user.fullname}}</a>
                                         <h5>{{user.info | htmlToPlaintext | words:40 :true}}</h5>
                                     </div>
                                     <div class="adminDeleteUser pull-right">

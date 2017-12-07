@@ -215,14 +215,14 @@
                                                 <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
                                                         <div class="img-thumbnail">
-                                                            <a ng-click="goToProfile(popularUser.owner)">
+                                                            <a ng-disabled="!popularUser.confVisible" ng-click="goToProfile(popularUser.owner)">
                                                                 <img ng-src="{{getAvatar(popularUser.avatar)}}" class="img-responsive">
                                                             </a>
                                                         </div>
                                                     </div>
                                                     <div class="post-info">
-                                                        <a ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                        <a ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <a ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
                                                         <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
@@ -261,11 +261,15 @@
                     <form name="LeaveMessage" role="form">
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
-                            <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''" id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
+                            <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''"
+                                id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true"
+                                ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
-                            <textarea class="resize-none form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'view_profile.ENTER_MESSAGE' | translate }}" ng-required="true" ng-model="$parent.message.body"></textarea>
+                            <textarea class="resize-none form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''"
+                                id="user" name="body" placeholder="{{ 'view_profile.ENTER_MESSAGE' | translate }}" ng-required="true"
+                                ng-model="$parent.message.body"></textarea>
                         </div>
                     </form>
                 </div>
