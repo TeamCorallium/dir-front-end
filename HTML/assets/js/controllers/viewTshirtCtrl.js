@@ -483,26 +483,27 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('forbidden', function(event, data) {
-            if (RestService.getCookie('csrftoken') == null) {
-                RestService.fetchObjectByUrl(RestService.loginNext)
-                    .then(
-                        function(data) {
-                            console.log('get get ' + RestService.getCookie('csrftoken'));
-                        },
-                        function(errResponse) {
-                            console.log(errResponse);
-                        }
-                    );
+            // if (RestService.getCookie('csrftoken') == null) {
+            //     RestService.fetchObjectByUrl(RestService.loginNext)
+            //         .then(
+            //             function(data) {
+            //                 console.log('get get ' + RestService.getCookie('csrftoken'));
+            //             },
+            //             function(errResponse) {
+            //                 console.log(errResponse);
+            //             }
+            //         );
 
-            } else {
-                console.log(RestService.getCookie('csrftoken'));
-            }
+            // } else {
+            //     console.log(RestService.getCookie('csrftoken'));
+            // }
 
-            var weProblem = $translate.instant('view_profile.WE_PROBLEM');
-            var loginProblem = $translate.instant('view_profile.LOGIN_PROBLEM');
-            growl.error(weProblem, {
-                title: loginProblem
-            });
+            // var weProblem = $translate.instant('view_profile.WE_PROBLEM');
+            // var loginProblem = $translate.instant('view_profile.LOGIN_PROBLEM');
+            // growl.error(weProblem, {
+            //     title: loginProblem
+            // });
+            $state.go('userprivate');
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function(event, data) {
