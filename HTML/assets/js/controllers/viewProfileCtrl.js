@@ -137,7 +137,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             }
 
                             if (data[0].profiles.length > 0) {
-                                console.log("llega aqui");
                                 getProfile(data[0].profiles[0]);
                             }
                         } else {
@@ -156,9 +155,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             RestService.fetchObjectByUrl(url)
                 .then(
                     function(data) {
-                        console.log("llega aqui 1");
                         if (data != undefined) {
-                            console.log("llega aqui 2");
                             $scope.user.info = data.info;
                             if (data.avatar != '' && data.avatar != null) {
                                 var avatarArray = data.avatar.split("/");
@@ -178,9 +175,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.fullname = data.fullname;
                             $scope.user.profileurl = data.url;
                             $scope.user.configVisible = data.confVisible;
-                            if (!$scope.user.configVisible) {
-                                $state.go('userprivate')
-                            }
                             $scope.user.configEmailVisible = data.confEmailVisible;
                             $scope.user.configReceiveEmails = data.confReceiveMails;
 
@@ -205,9 +199,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                                 $scope.TryFollow();
                             }
 
-                            console.log("llega aqui 3");
-                            getSnippets(data[0].username, 1);
-                            getSocialNetworks(data[0].username);
+                            getSnippets($scope.user.username, 1);
+                            getSocialNetworks($scope.user.username);
 
                             $scope.getPopularUsers();
 
