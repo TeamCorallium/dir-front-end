@@ -1,5 +1,5 @@
 app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
-    function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, $translate) {
+    function ($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, $translate) {
 
         $rootScope.OptionsEdit = false;
 
@@ -77,8 +77,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.limitSocialNetwork = 5;
         }
 
-        $(window).on("resize.doResize", function() {
-            $scope.$apply(function() {
+        $(window).on("resize.doResize", function () {
+            $scope.$apply(function () {
                 if ($(window).width() >= 1350) {
                     $scope.limitSocialNetwork = 12;
                 } else if ($(window).width() >= 1201) {
@@ -111,162 +111,147 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
-        $scope.TryClap = function() {
+        $scope.TryClap = function () {
             RestService.takeClap($scope.user.id, true);
         };
 
-        $scope.TryFollow = function() {
+        $scope.TryFollow = function () {
             RestService.follow($scope.user.id, true);
         };
 
-        $scope.getUser = function(username) {
+        $scope.getUser = function (username) {
             RestService.fetchUserByUser(username)
                 .then(
-                    function(data) {
-                        data = data.results;
-                        if (data.length > 0) {
-                            $scope.user.profileUrl = data[0].profiles[0];
-                            $scope.user.username = data[0].username;
-                            $scope.user.firstname = data[0].first_name;
-                            $scope.user.lastname = data[0].last_name;
+                function (data) {
+                    data = data.results;
+                    if (data.length > 0) {
+                        $scope.user.profileUrl = data[0].profiles[0];
+                        $scope.user.username = data[0].username;
+                        $scope.user.firstname = data[0].first_name;
+                        $scope.user.lastname = data[0].last_name;
 
-                            if ($scope.user.username == $cookies.get('username')) {
-                                $scope.mySelf = true;
-                            } else {
-                                $scope.mySelf = false;
-                            }
-
-                            if (data[0].profiles.length > 0) {
-                                getProfile(data[0].profiles[0]);
-                            }
+                        if ($scope.user.username == $cookies.get('username')) {
+                            $scope.mySelf = true;
                         } else {
-                            $state.go('home');
-                            $('#myModal').modal('show');
+                            $scope.mySelf = false;
                         }
-                    },
-                    function(errResponse) {
-                        $state.go('userprivate');
+
+                        if (data[0].profiles.length > 0) {
+                            getProfile(data[0].profiles[0]);
+                        }
+                    } else {
+                        $state.go('home');
+                        $('#myModal').modal('show');
                     }
+                },
+                function (errResponse) {
+                    $state.go('userprivate');
+                }
                 );
         };
 
-        var getProfile = function(url) {
+        var getProfile = function (url) {
             url = url.replace("/api", RestService.urlBaseDir);
             RestService.fetchObjectByUrl(url)
                 .then(
-                    function(data) {
-                        if (data != undefined) {
-                            $scope.user.info = data.info;
-                            if (data.avatar != '' && data.avatar != null) {
-                                var avatarArray = data.avatar.split("/");
-                                $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                            } else {
-                                $scope.user.avatar = 'HTML/assets/images/default-user.png';
-                            }
-                            $scope.user.id = data.id;
-                            $scope.user.email = data.email;
-                            $scope.user.score = data.score;
-                            if ($scope.user.score > 1) {
-                                $scope.showClaps = true;
-                            } else {
-                                $scope.showClaps = false;
-                            }
-                            $scope.user.rating = data.rating;
-                            $scope.user.fullname = data.fullname;
-                            $scope.user.profileurl = data.url;
-                            $scope.user.configVisible = data.confVisible;
-                            $scope.user.configEmailVisible = data.confEmailVisible;
-                            $scope.user.configReceiveEmails = data.confReceiveMails;
-
-                            $cookies.put('configVisible', $scope.user.configVisible, {
-                                path: '/'
-                            });
-    
-                            $cookies.put('configEmailVisible', $scope.user.configEmailVisible, {
-                                path: '/'
-                            });
-    
-                            $cookies.put('configReceiveEmails', $scope.user.configReceiveEmails, {
-                                path: '/'
-                            });
-
-                            if (data.qrcode != '') {
-                                $scope.user.qrcode = RestService.imageDir + data.qrcode;
-                            }
-
-                            if ($rootScope.viewInbox) {
-                                $scope.TryClap();
-                                $scope.TryFollow();
-                            }
-
-                            getSnippets($scope.user.username, 1);
-                            getSocialNetworks($scope.user.username);
-
-                            $scope.getPopularUsers();
-
-                            if ($cookies.get('username')) {
-                                $scope.getCount();
-                            }
+                function (data) {
+                    if (data != undefined) {
+                        $scope.user.info = data.info;
+                        if (data.avatar != '' && data.avatar != null) {
+                            var avatarArray = data.avatar.split("/");
+                            $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
                         } else {
-                            console.log("llega aqui 4");
-                            $state.go('userprivate');
+                            $scope.user.avatar = 'HTML/assets/images/default-user.png';
                         }
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
+                        $scope.user.id = data.id;
+                        $scope.user.email = data.email;
+                        $scope.user.score = data.score;
+                        if ($scope.user.score > 1) {
+                            $scope.showClaps = true;
+                        } else {
+                            $scope.showClaps = false;
+                        }
+                        $scope.user.rating = data.rating;
+                        $scope.user.fullname = data.fullname;
+                        $scope.user.profileurl = data.url;
+                        $scope.user.configVisible = data.confVisible;
+                        $scope.user.configEmailVisible = data.confEmailVisible;
+                        $scope.user.configReceiveEmails = data.confReceiveMails;
+
+                        $cookies.put('configVisible', $scope.user.configVisible, {
+                            path: '/'
+                        });
+
+                        $cookies.put('configEmailVisible', $scope.user.configEmailVisible, {
+                            path: '/'
+                        });
+
+                        $cookies.put('configReceiveEmails', $scope.user.configReceiveEmails, {
+                            path: '/'
+                        });
+
+                        if (data.qrcode != '') {
+                            $scope.user.qrcode = RestService.imageDir + data.qrcode;
+                        }
+
+                        if ($rootScope.viewInbox) {
+                            $scope.TryClap();
+                            $scope.TryFollow();
+                        }
+
+                        getSnippets($scope.user.username, 1);
+                        getSocialNetworks($scope.user.username);
+
+                        $scope.getPopularUsers();
+
+                        if ($cookies.get('username')) {
+                            $scope.getCount();
+                        }
+                    } else {
+                        console.log("llega aqui 4");
+                        $state.go('userprivate');
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
-        // var getTshirts = function(urls) {
-        //     for (var i = 0; i < urls.length; i++) {
-        //         url = url.replace("/api", RestService.urlBaseDir);
-        //         RestService.fetchObjectByUrl(urls[i])
-        //             .then(
-        //                 function(data) {
-        //                     $scope.user.tshirts.push(data);
-        //                 },
-        //                 function(errResponse) {
-        //                     console.log(errResponse);
-        //                 }
-        //             );
-        //     }
-        // };
-
-        var getSnippets = function(username, page) {
+        var getSnippets = function (username, page) {
             $scope.user.snippets = [];
             RestService.fetchSnippets(username + "&page=" + page)
                 .then(
-                    function(data) {
-                        $scope.hasNext = data.next;
-                        $scope.hasPrevious = data.previous;
-                        data = data.results;
-                        for (var i = 0; i < data.length; i++) {
-                            $scope.user.snippets.push(data[i]);
-                        }
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
+                function (data) {
+                    $scope.hasNext = data.next;
+                    $scope.hasPrevious = data.previous;
+                    data = data.results;
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.user.snippets.push(data[i]);
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
-        var getSocialNetworks = function(username) {
+        var getSocialNetworks = function (username) {
             $scope.user.socialnetworks = [];
             RestService.fetchSocialNetworks(username)
                 .then(
-                    function(data) {
-                        for (var i = 0; i < data.length; i++) {
-                            $scope.user.socialnetworks.push(data[i]);
-                        }
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
+                function (data) {
+                    for (var i = 0; i < data.length; i++) {
+                        $scope.user.socialnetworks.push(data[i]);
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
-        $scope.openModalSnippets = function() {
+        $scope.openModalSnippets = function () {
             if ($cookies.get('sessionid') != undefined) {
                 $('#modalSnippets').modal('show');
             } else {
@@ -274,7 +259,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.openAddSocialNetworkModal = function() {
+        $scope.openAddSocialNetworkModal = function () {
             if ($cookies.get('sessionid') != undefined) {
                 $('#modalSocialNetwork').modal('show');
             } else {
@@ -282,23 +267,23 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.goToLink = function(link) {
+        $scope.goToLink = function (link) {
             $window.open(link, '_blank');
         };
 
-        $scope.getPopularUsers = function() {
+        $scope.getPopularUsers = function () {
             RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
                 .then(
-                    function(data) {
-                        $scope.users = data.results;
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
-                    }
+                function (data) {
+                    $scope.users = data.results;
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
 
-        $scope.goToProfile = function(owner) {
+        $scope.goToProfile = function (owner) {
             $cookies.remove("exploreUser", {
                 path: '/'
             });
@@ -313,7 +298,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.getAvatar = function(avatar) {
+        $scope.getAvatar = function (avatar) {
             var dirAvatar = '';
             if (avatar != '' && avatar != null) {
                 var avatarArray = avatar.split("/");
@@ -325,7 +310,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             return dirAvatar;
         };
 
-        $scope.getTshirt = function() {
+        $scope.getTshirt = function () {
 
             $scope.user.username = '';
             $scope.user.firstname = '';
@@ -353,29 +338,29 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.getTshirt();
 
-        $scope.noPrevious = function() {
+        $scope.noPrevious = function () {
             return $scope.hasPrevious == null;
         };
 
-        $scope.noNext = function() {
+        $scope.noNext = function () {
             return $scope.hasNext == null;
         };
 
-        $scope.next = function() {
+        $scope.next = function () {
             if (!$scope.noNext()) {
                 $scope.currentPage += 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }
         };
 
-        $scope.previous = function() {
+        $scope.previous = function () {
             if (!$scope.noPrevious()) {
                 $scope.currentPage -= 1;
                 getSnippets($scope.user.username, $scope.currentPage);
             }
         };
 
-        $scope.SendMessage = function() {
+        $scope.SendMessage = function () {
             if (exploreUser != '' && $cookies.get('username')) {
                 var username = $cookies.get('username');
                 RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
@@ -389,7 +374,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $rootScope.$on('SendMessage', function(event, data) {
+        $rootScope.$on('SendMessage', function (event, data) {
             $('#modalLeaveMessage').modal('hide');
             $scope.message.title = '';
             $scope.message.body = '';
@@ -400,7 +385,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
-        $rootScope.$on('SendMessageError', function(event, data) {
+        $rootScope.$on('SendMessageError', function (event, data) {
             var sendError = $translate.instant('view_profile.SEND_ERROR');
             var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
             growl.wrong(sendError, {
@@ -408,38 +393,38 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             });
         });
 
-        $scope.clap = function() {
+        $scope.clap = function () {
             RestService.takeClap($scope.user.id, false);
         };
 
-        $rootScope.$on('clapSuccesfully', function(event, data) {
+        $rootScope.$on('clapSuccesfully', function (event, data) {
             $scope.user.score = data;
             $scope.activateClap = true;
         });
 
-        $scope.getStars = function(rating) {
+        $scope.getStars = function (rating) {
             var val = parseFloat(rating);
             var size = val / 5 * 100;
             return size + '%';
         };
 
-        $rootScope.$on('testClapYes', function(event, data) {
+        $rootScope.$on('testClapYes', function (event, data) {
             $scope.activateClap = false;
         });
 
-        $rootScope.$on('testClapNo', function(event, data) {
+        $rootScope.$on('testClapNo', function (event, data) {
             $scope.activateClap = true;
         });
 
-        $rootScope.$on('testFollowYes', function(event, data) {
+        $rootScope.$on('testFollowYes', function (event, data) {
             $scope.activateFollow = false;
         });
 
-        $rootScope.$on('testFollowNo', function(event, data) {
+        $rootScope.$on('testFollowNo', function (event, data) {
             $scope.activateFollow = true;
         });
 
-        $scope.leaveMessage = function() {
+        $scope.leaveMessage = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
                 $('#modalLeaveMessage').modal('show');
             } else {
@@ -447,7 +432,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.makeClap = function() {
+        $scope.makeClap = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
                 if (!$scope.activateClap) {
                     $scope.clap();
@@ -460,7 +445,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.follow = function() {
+        $scope.follow = function () {
             if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
                 if (!$scope.activateFollow) {
                     RestService.follow($scope.user.id, false);
@@ -470,57 +455,53 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $rootScope.$on('followSuccesfully', function(event, data) {
+        $rootScope.$on('followSuccesfully', function (event, data) {
             $scope.activateFollow = true;
         });
 
-        $rootScope.$on('forbidden', function(event, data) {
+        $rootScope.$on('forbidden', function (event, data) {
             $state.go('userprivate');
         });
 
-        $rootScope.$on('LoginNetworkConnectionError', function(event, data) {
-            var serverNotFound = $translate.instant('view_profile.SERVER_NOT_FOUND');
-            var networkConnection = $translate.instant('view_profile.NETWORK_CONNECTION');
-            growl.error(serverNotFound, {
-                title: networkConnection
-            });
+        $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
+            $state.go('userprivate');
         });
 
-        $scope.unfollow = function() {
+        $scope.unfollow = function () {
             RestService.unfollow($scope.user.id);
             $scope.activateFollow = false;
         };
 
-        $rootScope.$on('unfollowError', function(event, data) {
+        $rootScope.$on('unfollowError', function (event, data) {
             var noUnfollow = $translate.instant('user_profile.NO_UNFOLLOW');
             growl.error(noUnfollow);
         });
 
-        $rootScope.$on('UnfollowBad', function(event, data) {
+        $rootScope.$on('UnfollowBad', function (event, data) {
             var noUnfollow = $translate.instant('user_profile.NO_UNFOLLOW');
             growl.error(noUnfollow);
             RestService.follow($scope.user.id, true);
         });
 
-        $scope.changeMiddle = function(num) {
+        $scope.changeMiddle = function (num) {
             $scope.indexShowMiddle = num;
         };
 
-        $scope.getCount = function() {
+        $scope.getCount = function () {
             RestService.fetchNotificationUnreaded()
                 .then(
-                    function(data) {
-                        var count = data;
-                        
-                        if (count > 9) {
-                            $rootScope.notificationCount = '10';
-                        } else {
-                            $rootScope.notificationCount = count;
-                        }
-                    },
-                    function(errResponse) {
-                        console.log(errResponse);
+                function (data) {
+                    var count = data;
+
+                    if (count > 9) {
+                        $rootScope.notificationCount = '10';
+                    } else {
+                        $rootScope.notificationCount = count;
                     }
+                },
+                function (errResponse) {
+                    console.log(errResponse);
+                }
                 );
         };
     }

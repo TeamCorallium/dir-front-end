@@ -221,22 +221,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 );
         };
 
-        // var getTshirts = function (urls) {
-        //     for (var i = 0; i < urls.length; i++) {
-        //         url = url.replace("/api", RestService.urlBaseDir);
-        //         RestService.fetchObjectByUrl(urls[i])
-        //             .then(
-        //             function (data) {
-        //                 $scope.user.tshirts.push(data);
-        //             },
-        //             function (errResponse) {
-        //                 console.log(errResponse);
-        //                 // throw toaster with message errResponse
-        //             }
-        //             );
-        //     }
-        // };
-
         var getSnippets = function (username, page) {
             $scope.user.snippets = [];
             RestService.fetchSnippets(username + "&page=" + page)
@@ -355,7 +339,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.user.id = '';
             $scope.user.socialnetworks = [];
             $scope.user.tshirts = [];
-            $scope.user.snippets = [];            
+            $scope.user.snippets = [];
             configVisible = '';
             configEmailVisible = '';
             configReceiveEmails = '';
@@ -493,11 +477,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
-            var serverNotFound = $translate.instant('view_profile.SERVER_NOT_FOUND');
-            var networkConnection = $translate.instant('view_profile.NETWORK_CONNECTION');
-            growl.error(serverNotFound, {
-                title: networkConnection
-            });
+            $state.go('userprivate');
         });
 
         $scope.unfollow = function () {
