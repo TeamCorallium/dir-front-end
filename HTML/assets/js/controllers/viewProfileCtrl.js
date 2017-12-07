@@ -175,6 +175,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.fullname = data.fullname;
                         $scope.user.profileurl = data.url;
                         $scope.user.configVisible = data.confVisible;
+						if($scope.user.configVisible) {
+							$state.go('userprivate');
+						}
                         $scope.user.configEmailVisible = data.confEmailVisible;
                         $scope.user.configReceiveEmails = data.confReceiveMails;
 
