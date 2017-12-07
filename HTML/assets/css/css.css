@@ -1425,7 +1425,7 @@ fieldset[disabled] .btn {
 }
 
 .cursordefault {
-    cursor: default;
+    cursor: default !important;
 }
 
 .ButtonMoreUser {
