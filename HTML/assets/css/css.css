@@ -1805,3 +1805,12 @@ span.stars span {
     margin-left: 90%;
     margin-top: 6px;
 }
+
+.privatePage {
+    min-height: 640px;
+    position: relative;
+}
+
+.margin-top10PC {
+    margin-top: 10%;
+}
