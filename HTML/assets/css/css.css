@@ -134,15 +134,15 @@
         margin-top: 10px !important;
     }
     .InboxBox {
-        min-height: 520px !important;
+        min-height: 526px !important;
     }
     .OptionsBox {
-        min-height: 520px !important;
+        min-height: 526px !important;
     }
     #MessageSendBox,
     #MessageReadBox,
     #MessageInboxBox {
-        min-height: 520px !important;
+        min-height: 526px !important;
     }
     .displayBlock {
         display: none !important;
@@ -1247,7 +1247,7 @@ a.ButtonImageSize {
 }
 
 .profile-padding-inbox {
-    min-height: 520px !important;
+    min-height: 526px !important;
     position: relative !important;
     padding-top: 50px;
     background-color: #FFFFFF !important;
@@ -1262,7 +1262,7 @@ a.ButtonImageSize {
 }
 
 .SendBox {
-    min-height: 520px !important;
+    min-height: 526px !important;
     background-color: #ffffff !important;
 }
 
