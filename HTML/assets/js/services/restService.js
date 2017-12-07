@@ -1023,9 +1023,12 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function(response, status, header, config, statusText) {
+                        console.log(status + " status");
                         if (status == 403) {
+                            console.log(status + " status 2");
                             $rootScope.$broadcast('forbidden', username);
                         } else {
+                            console.log(status + " status 3");
                             $rootScope.$broadcast('LoginNetworkConnectionError');
                         }
                     }
