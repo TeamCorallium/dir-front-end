@@ -1801,6 +1801,7 @@ span.stars span {
 }
 
 .iconEye {
-    position: absolute;
-    float: right;
+    position: absolute;    
+    margin-left: 180px;
+    margin-top: 5px;
 }

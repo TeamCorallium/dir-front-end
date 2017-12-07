@@ -37,7 +37,8 @@
                     <ul class="team-list list-unstyled">
                         <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 padding-top-15 padding-bottom-15" ng-repeat="profile in profiles | limitTo:countLimit">
                             <div class="styleBox marginUserHome">
-                                <i class="fa fa-eye iconEye"></i>
+                                <i class="fa fa-eye iconEye" ng-show="profile.visible"></i>
+                                <i class="fa fa-eye-slash iconEye" ng-hide="profile.visible"></i>
                                 <div class="ImageBox">
                                     <img ng-src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
                                 </div>
@@ -49,7 +50,7 @@
                                     </p>
                                 </div>
                                 <div class="buttonContainer">
-                                    <a class="btn btn-primary" ng-click="goToProfile(profile.owner)" translate="home.SEE_PROFILE"></a>
+                                    <a ng-disabled="!profile.visible" class="btn btn-primary" ng-click="goToProfile(profile.owner)" translate="home.SEE_PROFILE"></a>
                                 </div>
                             </div>
                         </li>
