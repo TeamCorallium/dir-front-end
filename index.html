@@ -250,9 +250,6 @@
                                     <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
                                         ng-model="password">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
-                                    <!-- <div class="strength-meter">
-                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
-                                    </div> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
@@ -263,8 +260,7 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="pin" translate="index.PIN"></label>
-                                    <input type="number" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" onkeypress="return isNumberKey(event)"
-                                        required>
+                                    <input type="text" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" ng-required="true">
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
                                     <span class="msg-error" translate="index.USER_USED"></span>
@@ -316,9 +312,6 @@
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
                                     <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="pass">
                                     <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
-                                    <!-- <div class="strength-meter">
-                                        <div class="strength-meter-fill" data-strength="{{passwordStrength}}"></div>
-                                    </div> -->
                                 </div>
                                 <div class="form-group">
                                     <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
