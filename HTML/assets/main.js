@@ -76,16 +76,16 @@ app.filter('passwordCount', [function() {
     };
 }])
 
-app.factory('zxcvbn', [function() {
-    return {
-        score: function() {
-            var compute = zxcvbn.apply(null, arguments);
-            return compute && compute.score;
-        }
-    };
-}])
+// app.factory('zxcvbn', [function() {
+//     return {
+//         score: function() {
+//             var compute = zxcvbn.apply(null, arguments);
+//             return compute && compute.score;
+//         }
+//     };
+// }])
 
-app.directive('okPassword', ['zxcvbn', function(zxcvbn) {
+app.directive('okPassword',[ function() {
     return {
         // restrict to only attribute and class
         restrict: 'AC',
@@ -101,7 +101,7 @@ app.directive('okPassword', ['zxcvbn', function(zxcvbn) {
                     var pwd = $scope.password = $element.val();
 
                     // resolve password strength score using zxcvbn service
-                    $scope.passwordStrength = pwd ? (pwd.length > 7 && zxcvbn.score(pwd) || 0) : null;
+                    $scope.passwordStrength = pwd ? (pwd.length > 7 || 0) : null;
 
                     // define the validity criterion for okPassword constraint
                     ngModelCtrl.$setValidity('okPassword', $scope.passwordStrength >= 2);
