@@ -101,7 +101,7 @@ app.directive('okPassword',[ function() {
                     var pwd = $scope.password = $element.val();
 
                     // resolve password strength score using zxcvbn service
-                    $scope.passwordStrength = pwd ? (pwd.length > 7 || 0) : null;
+                    $scope.passwordStrength = pwd ? (pwd.length > 7) : null;
 
                     // define the validity criterion for okPassword constraint
                     ngModelCtrl.$setValidity('okPassword', $scope.passwordStrength >= 2);
