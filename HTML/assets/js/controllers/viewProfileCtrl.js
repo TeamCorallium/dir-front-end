@@ -145,7 +145,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     }
                 },
                 function (errResponse) {
-                    console.log("este es 1");
                     $state.go('userprivate');
                 }
                 );
@@ -177,7 +176,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         $scope.user.profileurl = data.url;
                         $scope.user.configVisible = data.confVisible;
 						if(!$scope.user.configVisible) {
-                            console.log("este es 2");
 							$state.go('userprivate');
 						}
                         $scope.user.configEmailVisible = data.confEmailVisible;
@@ -213,12 +211,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.getCount();
                         }
                     } else {
-                        console.log("este es 3");
                         $state.go('userprivate');
                     }
                 },
                 function (errResponse) {
-                    console.log("este es 4");
                     $state.go('userprivate');
                 }
                 );
@@ -338,7 +334,6 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.getUser($cookies.get('exploreUser'));
                 exploreUser = $cookies.get('exploreUser');
             } else {
-                console.log("este es 5");
                 $state.go('userprivate');
             }
         };
@@ -467,12 +462,10 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('forbidden', function (event, data) {
-            console.log("este es 6");
             $state.go('userprivate');
         });
 
         $rootScope.$on('LoginNetworkConnectionError', function (event, data) {
-            console.log("este es 7");
             $state.go('userprivate');
         });
 
