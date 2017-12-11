@@ -50,7 +50,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var unfollowDir = 'https://www.dirstuff.com/server/api/unfollow/';
     var notifications = 'https://www.dirstuff.com/server/api/notifications/';
     var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
-    var profileConfig = 'http://www.dirstuff.com/server/api/setprofileconfig/';
+    var profileConfig = 'https://www.dirstuff.com/server/api/setprofileconfig/';
 
     var urlBase = '/server/api';
     // var urlBase = '/api';
