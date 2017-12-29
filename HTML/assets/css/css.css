@@ -1819,3 +1819,7 @@ span.stars span {
 .text-align-center {
     text-align: center !important;
 }
+
+.font-size-20 {
+    font-size: 20px !important;
+}
