@@ -176,7 +176,7 @@
         padding-left: 40px !important;
     }
     .paddingStyleView {
-		margin-top: 10px !important;
+        margin-top: 10px !important;
         padding-left: 40px !important;
     }
     .marginTop25XS {
@@ -1802,7 +1802,7 @@ span.stars span {
 }
 
 .iconEye {
-    position: absolute;    
+    position: absolute;
     margin-left: 90%;
     margin-top: 6px;
 }
@@ -1814,4 +1814,8 @@ span.stars span {
 
 .margin-top10PC {
     margin-top: 10%;
+}
+
+.text-align-center {
+    text-align: center !important;
 }
