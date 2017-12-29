@@ -341,13 +341,13 @@
                                                                 <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
                                                             </a>
                                                         </li>
-                                                        <li class="styleLiSocial font-size-15" ng-show="EditSocialFlag">
+                                                        <li class="styleLiSocial" ng-show="EditSocialFlag">
                                                             <a ng-click="saveSocialEdit(sn.url, sn.name, sn.type, sn.id)">
                                                                 <i class="ti-save"></i>
                                                                 <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                             </a>
                                                         </li>
-                                                        <li class="styleLiSocial font-size-15">
+                                                        <li class="styleLiSocial">
                                                             <a ng-click="deleteSocialNetwork(sn.id)">
                                                                 <i class="ti-trash"></i>
                                                                 <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
@@ -355,7 +355,7 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <a class="text-dark" ng-click="goToLink(sn.url)">
+                                                <a class="text-dark font-size-15" ng-click="goToLink(sn.url)">
                                                     <i class="{{sn.type}}"></i> {{sn.name}}
                                                 </a>
                                                 <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
