@@ -45,10 +45,10 @@
             <nav class="nav navbar-default ColorNavBar">
                 <ul class="list-inline SocialIcon list-unstyled">
                     <li ng-repeat="sn in user.socialnetworks | limitTo: limitSocialNetwork" class="padding-5">
-                        <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite font-size-15 padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                        <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
                             <i class="{{sn.type}}"></i>
                         </a>
-                        <a ng-show="EditInfoFlag" type="button" class="SocialList HoverWhite font-size-15 padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
+                        <a ng-show="EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
                             <i class="{{sn.type}}"></i>
                             <notification-icon class="positionInheritIcon" hide-count="true" count='1'></notification-icon>
                             <i class="ti-close iconClose"></i>
@@ -341,13 +341,13 @@
                                                                 <label class="margin-bottom-0" translate="user_profile.EDIT"></label>
                                                             </a>
                                                         </li>
-                                                        <li class="styleLiSocial" ng-show="EditSocialFlag">
+                                                        <li class="styleLiSocial font-size-15" ng-show="EditSocialFlag">
                                                             <a ng-click="saveSocialEdit(sn.url, sn.name, sn.type, sn.id)">
                                                                 <i class="ti-save"></i>
                                                                 <label class="margin-bottom-0" translate="user_profile.SAVE"></label>
                                                             </a>
                                                         </li>
-                                                        <li class="styleLiSocial">
+                                                        <li class="styleLiSocial font-size-15">
                                                             <a ng-click="deleteSocialNetwork(sn.id)">
                                                                 <i class="ti-trash"></i>
                                                                 <label class="margin-bottom-0" translate="user_profile.DELETE"></label>
