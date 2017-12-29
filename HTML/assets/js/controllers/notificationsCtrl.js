@@ -3,7 +3,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
 
         $rootScope.OptionsEdit = false;
         $rootScope.notificationCount = 0;
-        
+
         $cookies.remove("exploreUser", {
             path: '/'
         });
@@ -153,11 +153,11 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             $cookies.put('configVisible', $scope.user.configVisible, {
                                 path: '/'
                             });
-    
+
                             $cookies.put('configEmailVisible', $scope.user.configEmailVisible, {
                                 path: '/'
                             });
-    
+
                             $cookies.put('configReceiveEmails', $scope.user.configReceiveEmails, {
                                 path: '/'
                             });
@@ -308,7 +308,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             growl.error(serverNotFound, {
                 title: networkConnection
             });
-        });        
+        });
 
         $scope.getNotifications = function() {
             RestService.fetchNotification()
@@ -335,17 +335,17 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
         $scope.getNotifications();
 
         $scope.deleteNotification = function(url) {
+            for (var i = 0; i < $rootScope.notifications.length; i++) {
+                if ($rootScope.notifications[i].url == url) {
+                    $rootScope.notifications.splice(i, 1);
+                }
+            }
+
             url = url.replace("/api", RestService.urlBaseDir);
             RestService.deleteNotification(url);
         };
 
         $rootScope.$on('deleteNotification', function(event, data) {
-            for (var i = 0; i < $rootScope.notifications.length; i++) {
-                if ($rootScope.notifications[i].url == data) {
-                    $rootScope.notifications.splice(i, 1);
-                }
-            }
-
             var deleteNotification = $translate.instant('notifications.DELETE_NOTIFICATION');
             growl.success(deleteNotification);
         });
