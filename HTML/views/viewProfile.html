@@ -261,23 +261,19 @@
                     <form name="LeaveMessage" role="form">
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
-                            <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''"
-                                id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true"
-                                ng-model="$parent.message.title">
+                            <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''" id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
-                            <textarea class="resize-none form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''"
-                                id="user" name="body" placeholder="{{ 'view_profile.ENTER_MESSAGE' | translate }}" ng-required="true"
-                                ng-model="$parent.message.body"></textarea>
+                            <textarea class="resize-none form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'view_profile.ENTER_MESSAGE' | translate }}" ng-required="true" ng-model="$parent.message.body"></textarea>
                         </div>
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
-                    <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
+                    <!-- <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
                         <i class="ti-close"></i>
                         <label class="textColorWhite pointerHover margin-bottom-0" translate="view_profile.CLOSE"></label>
-                    </a>
+                    </a> -->
                     <a class="btn btn-primary ButtonRadius" ng-disabled="LeaveMessage.$invalid" ng-click="$parent.SendMessage()">
                         <i class="ti-email"></i>
                         <label class="textColorWhite pointerHover margin-bottom-0" translate="view_profile.SEND_MESSAGE"></label>
