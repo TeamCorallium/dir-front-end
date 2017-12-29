@@ -773,10 +773,10 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     $rootScope.$broadcast('updateConfig');
                 } else {
                     $rootScope.$broadcast('wrongConfig');
-                }                
+                }
             }).error(function(response, status, header, config, statusText) {
                 $rootScope.$broadcast('wrongConfig');
-                
+
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden');
                 } else {
@@ -1023,7 +1023,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                         return response.data;
                     },
                     function(response, status, header, config, statusText) {
-                        
+
                     }
                 );
         },
