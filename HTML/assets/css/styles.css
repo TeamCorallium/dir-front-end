@@ -909,9 +909,10 @@ header>.navbar {
     line-height: 50px !important;
 }
 
-.small-header .navbar .navbar-brand img {
+
+/* .small-header .navbar .navbar-brand img {
     max-width: none !important;
-}
+} */
 
 .small-header .navbar .navbar-header {
     height: 50px !important;
