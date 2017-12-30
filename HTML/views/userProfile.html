@@ -1,6 +1,6 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
     <img class="pictureFrontCover img-responsive hidden-xs" />
-    <div class="row">
+    <div class="row backgroundWhite">
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
             <div class="col-xs-12">
                 <div class="AvatarXSBox">
@@ -55,15 +55,15 @@
                         </a>
                     </li>
                     <li class="padding-top-5 padding-right-0 padding-left-0 pull-right marginButtonEdit marginTop20XS marginLeft20XS col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                        <a type="button" class="btn btn-primary margin-left-20XS" data-toggle="modal" data-target="#modalSocialNetwork">
+                        <a type="button" class="btn btn-primary col-lg-5 col-md-5 col-sm-5 col-xs-5 margin-left-20XS" data-toggle="modal" data-target="#modalSocialNetwork">
                             <i class="ti-plus"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD_SOCIAL"></label>
                         </a>
-                        <a type="button" class="btn btn-primary marginLeft20" ng-click="EditProfile()" ng-show="!EditInfoFlag">
+                        <a type="button" class="btn btn-primary col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1 marginLeft20" ng-click="EditProfile()" ng-show="!EditInfoFlag">
                             <i class="ti-pencil-alt"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.EDIT_PROFILE"></label>
                         </a>
-                        <a type="button" class="btn btn-primary marginLeft20" ng-click="saveProfile()" ng-show="EditInfoFlag">
+                        <a type="button" class="btn btn-primary col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-5 col-xs-offset-1 marginLeft20" ng-click="saveProfile()" ng-show="EditInfoFlag">
                             <i class="ti-save"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.SAVE_PROFILE"></label>
                         </a>
