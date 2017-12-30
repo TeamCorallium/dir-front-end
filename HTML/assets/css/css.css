@@ -182,6 +182,9 @@
     .marginTop25XS {
         margin-top: 25px !important;
     }
+    .paddingBottom60 {
+        padding-bottom: 60px !important;
+    }
 }
 
 @media (min-width: 770px) {
