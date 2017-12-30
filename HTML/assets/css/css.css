@@ -493,6 +493,12 @@
         max-width: 250px !important;
         margin-left: 32% !important;
     }
+    .marginLeft20 {
+        margin-left: 20% !important;
+    }
+    .margin-left-20XS {
+        margin-left: 20px !important;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1824,8 +1830,4 @@ span.stars span {
 
 .max-width-130 {
     max-width: 130px !important;
-}
-
-.marginLeft20 {
-    margin-left: 20% !important;
 }
