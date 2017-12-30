@@ -1828,3 +1828,7 @@ span.stars span {
     float: left !important;
     margin-left: 20% !important;
 }
+
+.max-width-130 {
+    max-width: 130px !important;
+}
