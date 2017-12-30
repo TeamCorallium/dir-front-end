@@ -1709,8 +1709,7 @@ span.stars span {
 
 .styleNotification {
     margin-top: 5px !important;
-    float: left !important;
-    margin-left: 10px !important;
+    float: right !important;
 }
 
 .fontSize20 {
@@ -1726,12 +1725,11 @@ span.stars span {
 }
 
 .notificationXSIcon {
-    position: absolute !important;
     left: 40px !important;
     line-height: 10px !important;
     font-size: 11px !important;
     margin-top: 10px;
-    margin-left: 10px;
+    margin-right: 15px;
 }
 
 .notificationMDIcon {
@@ -1826,4 +1824,8 @@ span.stars span {
 
 .max-width-130 {
     max-width: 130px !important;
+}
+
+.marginLeft20 {
+    margin-left: 20% !important;
 }
