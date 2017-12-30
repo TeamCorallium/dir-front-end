@@ -16,8 +16,7 @@
                                     </label>
                                     <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
                                     <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" ng-cloak translate="contact.EMAIL_INVALID"></div>
-                                    <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''"
-                                        id="emailHome" name="emailHome" placeholder="{{ 'contact.EMAIL' | translate }}" ng-required="true" ng-model="message.email">
+                                    <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'contact.EMAIL' | translate }}" ng-required="true" ng-model="message.email">
                                 </div>
                             </div>
                         </div>
@@ -28,9 +27,8 @@
                                         <span class="symbol required"></span>
                                     </label>
                                     <div class="error form-hint" ng-show="contactUsForm.subject.$dirty && contactUsForm.subject.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''"
-                                        id="subject" name="subject" placeholder="{{ 'contact.SUBJECT' | translate }}" ng-required="true"
-                                        ng-model="$parent.message.subject" required>
+                                    <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''" id="subject" name="subject" placeholder="{{ 'contact.SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.subject"
+                                        required>
                                 </div>
                             </div>
                         </div>
@@ -41,15 +39,14 @@
                                         <span class="symbol required"></span>
                                     </label>
                                     <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
-                                    <textarea class="form-control resize-none" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user"
-                                        name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body" required></textarea>
+                                    <textarea class="form-control resize-none" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body"
+                                        required></textarea>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn"
-                                    type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid || !viewProfile">
+                                <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn" type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid">
                                     <span class="pointerHover" translate="contact.SEND_MESSAGE"></span>
                                 </a>
                             </div>
@@ -59,8 +56,7 @@
                 <div class="col-md-6 marginTopMovil">
                     <h4>Get in touch</h4>
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae
-                        velit congue iaculis vitae at risus.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.
                     </p>
                     <hr>
                     <h4>The Office</h4>
