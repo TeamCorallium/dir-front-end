@@ -65,7 +65,7 @@
 @media (min-width: 768px) {
     #SocialBox {
         max-width: 300px !important;
-        max-height: 50px !important;
+        max-height: 55px !important;
     }
     .marginButtonEdit {
         margin-top: 5px !important;
@@ -388,6 +388,9 @@
         text-align: left !important;
         min-height: 180px !important;
         margin-top: 10px !important;
+    }
+    .SizeNetworksList {
+        width: 600px !important;
     }
 }
 
