@@ -44,14 +44,28 @@
         <div class="col-xs-12" ng-class="{HiddenIfXS: user.socialnetworks.length <= 0}">
             <nav class="nav navbar-default ColorNavBar">
                 <ul class="list-inline SocialIcon list-unstyled">
-                    <li ng-repeat="sn in user.socialnetworks | limitTo: limitSocialNetwork" class="padding-5">
-                        <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
-                            <i class="{{sn.type}}"></i>
+                    <li class="padding-top-5">
+                        <a type="button" class="btn btn-primary col-md-1">
+                            <i class="previous"></i>
                         </a>
-                        <a ng-show="EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
-                            <i class="{{sn.type}}"></i>
-                            <notification-icon class="positionInheritIcon" hide-count="true" count='1'></notification-icon>
-                            <i class="ti-close iconClose"></i>
+                    </li>
+                    <li>
+                        <div class="max-width-160 verticalOverflow">
+                            <li ng-repeat="sn in user.socialnetworks | limitTo: limitSocialNetwork" class="padding-5">
+                                <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
+                                    <i class="{{sn.type}}"></i>
+                                </a>
+                                <a ng-show="EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="deleteSocialNetwork(sn.id)">
+                                    <i class="{{sn.type}}"></i>
+                                    <notification-icon class="positionInheritIcon" hide-count="true" count='1'></notification-icon>
+                                    <i class="ti-close iconClose"></i>
+                                </a>
+                            </li>
+                        </div>
+                    </li>
+                    <li class="padding-top-5">
+                        <a type="button" class="btn btn-primary col-md-1">
+                            <i class="next"></i>
                         </a>
                     </li>
                     <li class="padding-top-5 padding-right-0 padding-left-0 pull-right marginButtonEdit marginTop20XS marginLeft20XS col-xs-12 col-sm-5 col-md-4 col-lg-3">
