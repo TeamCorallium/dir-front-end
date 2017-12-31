@@ -1576,10 +1576,6 @@ span.stars span {
     margin-top: -6px !important;
 }
 
-.border-radius10 {
-    border-radius: 6px !important;
-}
-
 .adminInfoUser {
     width: 88% !important;
     text-align: left !important;
@@ -1830,4 +1826,8 @@ span.stars span {
 
 .max-width-100 {
     max-width: 100px !important;
+}
+
+.border-radius6 {
+    border-radius: 6px !important;
 }
