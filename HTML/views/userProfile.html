@@ -46,7 +46,7 @@
                 <ul class="list-inline SocialIcon list-unstyled">
                     <li id="SocialBox">
                         <ul class="list-inline SocialIcon list-unstyled margin-left-0 SizeNetworksList">
-                            <li ng-repeat="sn in user.socialnetworks | limitTo: limitSocialNetwork" class="padding-5">
+                            <li ng-repeat="sn in user.socialnetworks" class="padding-5">
                                 <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
                                     <i class="{{sn.type}}"></i>
                                 </a>
