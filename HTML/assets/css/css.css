@@ -1838,8 +1838,7 @@ span.stars span {
     overflow-y: hidden;
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
-    padding: 1rem;
-    background-color: #ccc;
+    // Toggle this depending upon whether you want to see the scrollbar
     &::-webkit-scrollbar {
         display: none;
     }
