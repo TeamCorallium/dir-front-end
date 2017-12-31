@@ -306,7 +306,7 @@
         "LOGIN_PROBLEM": "Problemas de inicio de sesión",
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
         "NETWORK_CONNECTION": "Conexión de red",
-        "HIDE_PROFILE": "Ocultar perfil",
+        "HIDE_PROFILE": "Perfil activo",
         "EMAIL_NOTIFICATIONS": "Notificar por correo electrónico",
         "SHOW_EMAIL": "Mostrar correo electrónico",
         "ALERT_NOTIFICATIONS": "Alertas y notificaciones"

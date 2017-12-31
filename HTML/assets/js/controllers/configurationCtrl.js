@@ -7,9 +7,9 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         });
 
         if ($cookies.get('configVisible') == 'true') {
-            $scope.switchProfile = false;
-        } else {
             $scope.switchProfile = true;
+        } else {
+            $scope.switchProfile = false;
         }
 
         if ($cookies.get('configEmailVisible') == 'true') {

@@ -13,6 +13,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
     var messages = 'http://www.dir.com:8888/api/messages/';
     var sendMessages = 'http://www.dir.com:8888/api/send-message/';
+    var sendMessages = 'http://www.dir.com:8888/api/leave-message/';
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
     var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
@@ -39,6 +40,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var updateWithOutImage = 'https://www.dirstuff.com/server/api/updateprofile';
     // var messages = 'https://www.dirstuff.com/server/api/messages/';
     // var sendMessages = 'https://www.dirstuff.com/server/api/send-message/';
+    // var sendMessages = 'https://www.dirstuff.com/server/api/leave-message/';
     // var updatePassword = 'https://www.dirstuff.com/server/api/api-auth/update/';
     // var clapDir = 'https://www.dirstuff.com/server/api/clap-profile/';
     // var linkStuff = 'https://www.dirstuff.com/server/api/link-stuff/';
@@ -353,6 +355,41 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'body': body,
                     'readed': readed,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
+                }
+            }).success(function(data) {
+                if (data.response == "ok") {
+                    $rootScope.$broadcast('SendMessage');
+                } else {
+                    $rootScope.$broadcast('SendMessageError');
+                }
+            }).error(function(response, status, header, config, statusText) {
+                if (status == 403) {
+                    $rootScope.$broadcast('forbidden', username);
+                } else if (status == null) {
+                    $rootScope.$broadcast('LoginNetworkConnectionError');
+                } else {
+                    $rootScope.$broadcast('WrongMessage');
+                }
+            });
+        },
+
+        leaveMessage: function(sender, subject, body) {
+            $http({
+                method: 'POST',
+                url: leaveMessage,
+                headers: {
+                    'Content-Type': 'application/x-www-form-urlencoded'
+                },
+                transformRequest: function(obj) {
+                    var str = [];
+                    for (var p in obj)
+                        str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+                    return str.join("&");
+                },
+                data: {
+                    'sender': sender,
+                    'subject': subject,
+                    'body': body
                 }
             }).success(function(data) {
                 if (data.response == "ok") {

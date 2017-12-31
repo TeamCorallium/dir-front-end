@@ -306,7 +306,7 @@
         "LOGIN_PROBLEM": "登錄問題",
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
-        "HIDE_PROFILE": "隱藏設定檔",
+        "HIDE_PROFILE": "活動設定檔",
         "EMAIL_NOTIFICATIONS": "電子郵件通知",
         "SHOW_EMAIL": "顯示電子郵件",
         "ALERT_NOTIFICATIONS": "通知和通知"
