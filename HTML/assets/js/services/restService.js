@@ -13,7 +13,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var updateWithOutImage = 'http://www.dir.com:8888/api/updateprofile';
     var messages = 'http://www.dir.com:8888/api/messages/';
     var sendMessages = 'http://www.dir.com:8888/api/send-message/';
-    var sendMessages = 'http://www.dir.com:8888/api/leave-message/';
+    var leaveMessages = 'http://www.dir.com:8888/api/leave-message/';
     var updatePassword = 'http://www.dir.com:8888/api/api-auth/update/';
     var clapDir = 'http://www.dir.com:8888/api/clap-profile/';
     var linkStuff = 'http://www.dir.com:8888/api/link-stuff/';
@@ -376,7 +376,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
         leaveMessage: function(sender, subject, body) {
             $http({
                 method: 'POST',
-                url: leaveMessage,
+                url: leaveMessages,
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded'
                 },
