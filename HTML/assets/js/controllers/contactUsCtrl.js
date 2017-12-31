@@ -56,9 +56,9 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
         };
 
         $rootScope.$on('SendMessage', function(event, data) {
-            $scope.message.email = '';
-            $scope.message.subject = '';
-            $scope.message.body = '';
+            // $scope.message.email = '';
+            // $scope.message.subject = '';
+            // $scope.message.body = '';
             var sendSuccess = $translate.instant('contact.SEND_CORRECTLY');
             var sendMessage = $translate.instant('contact.SEND_MESSAGE');
             growl.success(sendSuccess, { title: sendMessage });

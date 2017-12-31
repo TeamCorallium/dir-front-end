@@ -144,6 +144,9 @@
     #MessageInboxBox {
         min-height: 526px !important;
     }
+    .InboxBoxHeight {
+        min-height: 550px !important;
+    }
     .displayBlock {
         display: none !important;
     }
