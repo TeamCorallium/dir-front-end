@@ -1837,5 +1837,5 @@ span.stars span {
     white-space: nowrap;
     overflow-y: hidden;
     overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: auto !important;
 }
