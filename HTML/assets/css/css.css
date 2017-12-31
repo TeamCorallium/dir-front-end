@@ -1832,6 +1832,12 @@ span.stars span {
     border-radius: 6px !important;
 }
 
+.wraper {
+    max-width: 300px !important;
+    overflow-y: hidden;
+    overflow-x: scroll;
+}
+
 
 /* Overlays CSS */
 
