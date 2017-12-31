@@ -7,7 +7,7 @@
                     <div class="alert alert-success hidden" id="contactSuccess" translate="contact.SEND_SUCCESS"></div>
                     <div class="alert alert-error hidden" id="contactError" translate="contact.SEND_ERROR"></div>
                     <h2 translate="contact.CONTACT_US"></h2>
-                    <form novalidate="novalidate" id="contactUsForm" name="contactUsForm" role="form" ng-controller="FormController">
+                    <form name="contactUsForm" role="form" ng-controller="FormController">
                         <div class="row">
                             <div class="form-group">
                                 <div class="col-md-6">
@@ -46,7 +46,8 @@
                         </div>
                         <div class="row">
                             <div class="col-md-12">
-                                <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn" type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid">
+                                <a data-caption-delay="900" data-caption-class="fadeIn" class="btn btn-primary margin-top-15 opacity-0 
+                                btn-wide btn-scroll btn-scroll-top fa-arrow-right animated fadeIn" type="button" ng-click="sendMessage()" ng-disabled="contactUsForm.$invalid">
                                     <span class="pointerHover" translate="contact.SEND_MESSAGE"></span>
                                 </a>
                             </div>
