@@ -1832,6 +1832,10 @@ span.stars span {
     border-radius: 6px !important;
 }
 
-.maxWidth300 {
-    max-width: 300px !important;
+.wrapper {
+    width: 320px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
 }
