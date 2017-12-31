@@ -63,6 +63,9 @@
 }
 
 @media (min-width: 768px) {
+    #SocialBox {
+        max-width: 300px !important;
+    }
     .marginButtonEdit {
         margin-top: 5px !important;
     }

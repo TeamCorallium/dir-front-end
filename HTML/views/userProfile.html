@@ -684,8 +684,12 @@
         OverlayScrollbars(document.getElementById('SocialBox'), {
             className: "os-theme-dark",
             resize: "both",
-            sizeAutoCapable: true,
-            paddingAbsolute: true
+            sizeAutoCapable: false,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            }
         });
     });
 </script>
