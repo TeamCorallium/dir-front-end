@@ -1831,15 +1831,3 @@ span.stars span {
 .border-radius6 {
     border-radius: 6px !important;
 }
-
-.wrapper {
-    width: 320px;
-    white-space: nowrap;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    // Toggle this depending upon whether you want to see the scrollbar
-    &::-webkit-scrollbar {
-        display: none;
-    }
-}

@@ -2577,6 +2577,7 @@
             },
             "version": "http://registry.npmjs.org/osx-release/-/osx-release-1.1.0.tgz"
         },
+        "overlayscrollbars": "^1.2.0",
         "p-throttler": {
             "dependencies": {
                 "q": {

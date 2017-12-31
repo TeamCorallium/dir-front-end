@@ -26,6 +26,7 @@
     <link href="bower_components/angular-growl-v2/build/angular-growl.min.css" rel="stylesheet" media="screen">
     <link href="bower_components/angular-ui-switch/angular-ui-switch.min.css" rel="stylesheet" media="screen">
 
+    <link href="node_modules/overlayscrollbars/css/OverlayScrollbars.min.css" rel="stylesheet" media="screen">
     <link href="dist/css.css" rel="stylesheet" media="screen" />
 
     <!-- start: FAVICON -->
@@ -420,6 +421,7 @@
     <script type="text/javascript" src="dist/app.js"></script>
     <script src="bower_components/angular-sanitize/angular-sanitize.min.js"></script>
     <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+    <script src="node_modules/overlayscrollbars/js/OverlayScrollbars.min.js"></script>
 
     <script src="bower_components/angular-spinner/angular-spinner.min.js"></script>
     <script src="bower_components/ngSweetAlert/SweetAlert.min.js"></script>
@@ -438,6 +440,12 @@
                 return false;
             return true;
         }
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            OverlayScrollbars(document.querySelectorAll('body'), {});
+        });
     </script>
 </body>
 
