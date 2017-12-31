@@ -5,33 +5,33 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $cookies.remove("exploreUser", {
             path: '/'
         });
-        
-        if ($cookies.get('configVisible') == 'true'){
-            $scope.switchProfile = true;
-        } else {
+
+        if ($cookies.get('configVisible') == 'true') {
             $scope.switchProfile = false;
+        } else {
+            $scope.switchProfile = true;
         }
 
-        if ($cookies.get('configEmailVisible') == 'true'){
+        if ($cookies.get('configEmailVisible') == 'true') {
             $scope.switchEmail = true;
         } else {
             $scope.switchEmail = false;
         }
-        
-        if ($cookies.get('configReceiveEmails') == 'true'){
+
+        if ($cookies.get('configReceiveEmails') == 'true') {
             $scope.switchShowEmail = true;
         } else {
             $scope.switchShowEmail = false;
         }
 
-        var flag = ''; 
+        var flag = '';
 
         $scope.getCount = function() {
             RestService.fetchNotificationUnreaded()
                 .then(
                     function(data) {
                         var count = data;
-                        
+
                         if (count > 9) {
                             $rootScope.notificationCount = '10';
                         } else {
@@ -71,7 +71,7 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $rootScope.$on('wrongConfig', function(event, data) {
             if (flag = 'visible') {
                 $scope.switchProfile != $scope.switchProfile;
-            } else if ( flag = 'profile') {
+            } else if (flag = 'profile') {
                 $scope.switchEmail != $scope.switchEmaill;
             } else {
                 $scope.switchShowEmail != $scope.switchShowEmail;
@@ -89,18 +89,18 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
                             console.log(errResponse);
                         }
                     );
-    
+
             } else {
                 console.log(RestService.getCookie('csrftoken'));
             }
-    
+
             var weProblem = $translate.instant('user_profile.WE_PROBLEM');
             var loginProblem = $translate.instant('user_profile.LOGIN_PROBLEM');
             growl.error(weProblem, {
                 title: loginProblem
             });
         });
-    
+
         $rootScope.$on('LoginNetworkConnectionError', function(event, data) {
             var serverNotFound = $translate.instant('user_profile.SERVER_NOT_FOUND');
             var networkConnection = $translate.instant('user_profile.NETWORK_CONNECTION');
