@@ -50,7 +50,7 @@
                         </a>
                     </li>
                     <li>
-                        <div class="wraper os-theme-thin-dark">
+                        <div class="os-host os-host-resize-disabled os-host-scrollbar-horizontal-hidden os-host-scrollbar-vertical-hidden os-host-overflow os-host-overflow-y os-host-transition os-theme-light">
                             <ul class="list-inline SocialIcon list-unstyled margin-left-0">
                                 <li ng-repeat="sn in user.socialnetworks | limitTo: limitSocialNetwork" class="padding-5">
                                     <a ng-show="!EditInfoFlag" type="button" class="SocialList HoverWhite padding-top-2 social-{{sn.type}}" ng-click="goToLink(sn.url)">
@@ -681,6 +681,6 @@
 </div>
 <script type="text/javascript">
     $(function() {
-        OverlayScrollbars(document.querySelectorAll('wrapper'), {});
+        OverlayScrollbars(document.querySelectorAll('body'), {});
     });
 </script>
