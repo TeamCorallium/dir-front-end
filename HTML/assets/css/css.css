@@ -142,7 +142,7 @@
     #MessageSendBox,
     #MessageReadBox,
     #MessageInboxBox {
-        min-height: 550px !important;
+        min-height: 545px !important;
     }
     .displayBlock {
         display: none !important;
@@ -1254,7 +1254,7 @@ a.ButtonImageSize {
 }
 
 .profile-padding-inbox {
-    min-height: 660px !important;
+    min-height: 655px !important;
     position: relative !important;
     padding-top: 50px;
     background-color: #FFFFFF !important;
