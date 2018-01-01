@@ -486,10 +486,6 @@
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
-                    <!-- <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.CLOSE"></label>
-                    </a> -->
                     <a class="btn btn-primary ButtonRadius" ng-disabled="AddSocialNetworks.$invalid" ng-click="addSocialNetwork()">
                         <i class="ti-plus"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD"></label>
@@ -522,7 +518,6 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <!-- <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" data-dismiss="modal" translate="edit_profile.CANCEL"></a> -->
                     <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
                 </div>
             </div>
@@ -564,10 +559,6 @@
                     </form>
                 </div>
                 <div class="modal-footer padding-15 text-align-center">
-                    <!-- <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
-                    </a> -->
                     <a id="changePasswordButton" class="btn btn-primary ButtonRadius" ng-disabled="ChangePassword.$invalid || ChangePassword.againPassHome.$error.pwmatch" ng-click="changePassword()">
                         <i class="ti-key"></i>
                         <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CHANGE_PASSWORD"></label>
@@ -616,12 +607,6 @@
                         </div>
                     </form>
                 </div>
-                <!-- <div class="modal-footer padding-15">
-                    <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="edit_profile.CLOSE"></label>
-                    </a>
-                </div> -->
             </div>
         </div>
     </div>
@@ -653,10 +638,6 @@
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
-                    <!-- <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite pointerHover margin-bottom-0" translate="user_profile.CLOSE"></label>
-                    </a> -->
                     <a class="btn btn-primary ButtonRadius" ng-disabled="LeaveMessageUserProfile.$invalid" ng-click="leaveMessage()">
                         <i class="ti-email"></i>
                         <label class="textColorWhite pointerHover margin-bottom-0" translate="user_profile.SEND_MESSAGE"></label>
@@ -671,7 +652,7 @@
     $(function() {
         OverlayScrollbars(document.getElementById('SocialBox'), {
             className: "os-theme-dark",
-            resize: "both",
+            resize: "none",
             sizeAutoCapable: true,
             paddingAbsolute: true,
             overflowBehavior: {
