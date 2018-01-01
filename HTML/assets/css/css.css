@@ -1993,8 +1993,8 @@ span.stars span {
     text-align: center !important;
 }
 
-.font-size-20 {
-    font-size: 20px !important;
+.font-size-18 {
+    font-size: 18px !important;
 }
 
 .max-width-100 {
@@ -2007,4 +2007,8 @@ span.stars span {
 
 .displayInlineFlex {
     display: inline-flex;
+}
+
+.margin-right-8 {
+    margin-right: 8px !important;
 }

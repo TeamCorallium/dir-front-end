@@ -359,11 +359,11 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                                <a class="text-dark font-size-20" ng-click="goToLink(sn.url)">
-                                                    <i class="{{sn.type}}"></i> {{sn.name}}
+                                                <a class="text-dark font-size-18" ng-click="goToLink(sn.url)">
+                                                    <i class="{{sn.type}} margin-right-8"></i> {{sn.name}}
                                                 </a>
-                                                <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
-                                                <textarea ng-model="sn.url" class="height30 col-xs-10 col-sm-10 col-md-10 col-lg-10 resize-none" ng-show="EditSocialFlag"></textarea>
+                                                <h5 class="margin-top-10" ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                <textarea ng-model="sn.url" class="margin-top-10 height30 col-xs-10 col-sm-10 col-md-10 col-lg-10 resize-none" ng-show="EditSocialFlag"></textarea>
                                             </div>
                                         </li>
                                     </ul>
