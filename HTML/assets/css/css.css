@@ -480,6 +480,9 @@
         max-width: 610px !important;
         max-height: 55px !important;
     }
+    .SizeNetworksList {
+        min-width: 600px !important;
+    }
     .marginLeft20XS {
         margin-left: 20px !important;
         padding-right: 45px !important;
