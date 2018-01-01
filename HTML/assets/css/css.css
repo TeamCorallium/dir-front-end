@@ -2005,6 +2005,10 @@ span.stars span {
     border-radius: 6px !important;
 }
 
+.displayInlineFlex {
+    display: inline-flex;
+}
+
 
 /*
 os-theme-thin-dark
