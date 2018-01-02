@@ -96,6 +96,8 @@
     .imgProfile {
         height: 130px !important;
         width: 130px !important;
+        margin-left: 3% !important;
+        margin-top: 3% !important;
     }
     .image_qrcode {
         float: left !important;
@@ -1055,10 +1057,16 @@
     .image_middle {
         margin-left: 18% !important;
         float: left !important;
-        height: 140px !important;
-        width: 140px !important;
+        height: 138px !important;
+        width: 138px !important;
         padding: 0px !important;
         margin-top: -60% !important;
+    }
+    .imgProfile {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 3% !important;
+        margin-top: 3% !important;
     }
     .image_qrcode {
         float: left !important;
