@@ -495,30 +495,6 @@
     }
 }
 
-@media (min-width: 1301px) {
-    #floatLogo {
-        margin-left: 48% !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1366.jpg');
-    }
-    .UserInfoBox {
-        text-align: left !important;
-        min-height: 180px !important;
-        margin-top: 10px !important;
-    }
-    .SizeNetworksList {
-        min-width: 600px !important;
-        max-height: 55px !important;
-    }
-    #SocialBox {
-        max-width: 610px !important;
-        max-height: 55px !important;
-    }
-}
-
 @media (max-width: 767px) {
     .navbar>.container .navbar-header .navbar-brand {
         float: left !important;
@@ -1386,6 +1362,27 @@ ul li a.social-ti-foursquare {
     .marginButtonEdit {
         margin-right: 80px !important;
         margin-top: 9px !important;
+    }
+    #floatLogo {
+        margin-left: 48% !important;
+    }
+    .pictureFrontCover {
+        width: 100%;
+        height: 120px !important;
+        background-image: url('../HTML/assets/images/1366.jpg');
+    }
+    .UserInfoBox {
+        text-align: left !important;
+        min-height: 180px !important;
+        margin-top: 10px !important;
+    }
+    .SizeNetworksList {
+        min-width: 600px !important;
+        max-height: 55px !important;
+    }
+    #SocialBox {
+        max-width: 610px !important;
+        max-height: 55px !important;
     }
 }
 
