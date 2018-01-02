@@ -1491,6 +1491,11 @@ a.ButtonImageSize {
     height: 20px !important;
 }
 
+.IconEmail {
+    width: 15px !important;
+    height: 15px !important;
+}
+
 .IconSnippetBox {
     width: 25px !important;
     text-align: left !important;
