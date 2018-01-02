@@ -603,8 +603,8 @@
                         <div class="margin-top-10">
                             <ul class="list-unstyled">
                                 <li ng-repeat="tshirt in TShirtLinks track by $index">
-                                    <i class="ti-check colorSuccessStock" ng-if="tshirt.class == 'success'"></i>
-                                    <i class="ti-close colorErrorStock" ng-if="tshirt.class == 'wrong'"></i>
+                                    <img ng-src="HTML/assets/images/success.png" class="width20" ng-if="tshirt.class == 'success'">
+                                    <img ng-src="HTML/assets/images/wrong.png" class="width20" ng-if="tshirt.class == 'wrong'">
                                     <label class="margin-left-5">{{tshirt.code}}</label>
                                 </li>
                             </ul>
