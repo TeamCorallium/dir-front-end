@@ -59,15 +59,15 @@
                         </ul>
                     </li>
                     <li class="padding-top-5 padding-right-0 padding-left-0 pull-right marginButtonEdit marginTop20XS marginLeft20XS col-xs-12 col-sm-5 col-md-4 col-lg-3">
-                        <a type="button" class="btn btn-primary col-lg-5 col-md-5 col-sm-5 col-xs-4 margin-left-20XS" data-toggle="modal" data-target="#modalSocialNetwork">
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-md-5 col-sm-5 col-xs-4 margin-left-20XS" data-toggle="modal" data-target="#modalSocialNetwork">
                             <i class="ti-plus"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.ADD_SOCIAL"></label>
                         </a>
-                        <a type="button" class="btn btn-primary col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="EditProfile()" ng-show="!EditInfoFlag">
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="EditProfile()" ng-show="!EditInfoFlag">
                             <i class="ti-pencil-alt"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.EDIT_PROFILE"></label>
                         </a>
-                        <a type="button" class="btn btn-primary col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="saveProfile()" ng-show="EditInfoFlag">
+                        <a type="button" class="btn btn-primary padding-left-5 padding-right-5 col-lg-5 col-lg-offset-1 col-md-5 col-md-offset-1 col-sm-5 col-sm-offset-1 col-xs-4 col-xs-offset-2" ng-click="saveProfile()" ng-show="EditInfoFlag">
                             <i class="ti-save"></i>
                             <label class="textColorWhite margin-bottom-0 pointerHover" translate="user_profile.SAVE_PROFILE"></label>
                         </a>
@@ -266,9 +266,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a ng-show="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.username}}</a>
-                                                    <a ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
-                                                    <h5>{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <a class="nameFollowerFollowing" ng-show="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.username}}</a>
+                                                    <a class="nameFollowerFollowing" ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
+                                                    <h5 class="borderFollowerFollowing">{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
                                                         <a ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
@@ -306,9 +306,9 @@
                                                     </div>
                                                 </div>
                                                 <div class="post-info">
-                                                    <a ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
-                                                    <a ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
-                                                    <h5>{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
+                                                    <a class="nameFollowerFollowing" ng-show="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileUserName}}</a>
+                                                    <a class="nameFollowerFollowing" ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
+                                                    <h5 class="borderFollowerFollowing">{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
                                                         <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>

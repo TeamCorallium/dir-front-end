@@ -2100,3 +2100,13 @@ span.stars span {
 .closeModals:hover {
     color: #00B8B8 !important;
 }
+
+.nameFollowerFollowing {
+    font-weight: bold !important;
+    font-size: 15px !important;
+}
+
+.borderFollowerFollowing {
+    border-bottom: 1px solid;
+    padding-bottom: 10px !important;
+}
