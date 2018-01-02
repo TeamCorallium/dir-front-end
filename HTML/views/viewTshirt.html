@@ -17,7 +17,7 @@
                         {{user.info}}
                     </h5>
                     <h5 class="padding-0" ng-show="user.email != ''">
-                        <i class="ti-email"></i> {{user.email}}
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet"> {{user.email}}
                     </h5>
                     <div class="col-xs-12 padding-0">
                         <span class="col-xs-3 padding-left-0 padding-right-0" ng-cloak>
@@ -86,7 +86,7 @@
                                     {{user.info}}
                                 </h5>
                                 <h5 class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-show="user.email != ''">
-                                    <i class="ti-email"></i> {{user.email}}
+                                    <img ng-src="HTML/assets/images/email.png" class="IconSnippet"> {{user.email}}
                                 </h5>
                                 <div class="col-md-12 padding-0">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
@@ -253,7 +253,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <i class="ti-email"></i>
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
                         <label translate="view_profile.LEAVE_MESSAGE"></label>
                     </h4>
                 </div>
@@ -270,12 +270,8 @@
                     </form>
                 </div>
                 <div class="modal-footer padding-15">
-                    <!-- <a class="btn btn-primary ButtonRadius" data-dismiss="modal">
-                        <i class="ti-close"></i>
-                        <label class="textColorWhite pointerHover margin-bottom-0" translate="view_profile.CLOSE"></label>
-                    </a> -->
                     <a class="btn btn-primary ButtonRadius" ng-disabled="LeaveMessage.$invalid" ng-click="$parent.SendMessage()">
-                        <i class="ti-email"></i>
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
                         <label class="textColorWhite pointerHover margin-bottom-0" translate="view_profile.SEND_MESSAGE"></label>
                     </a>
                 </div>

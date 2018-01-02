@@ -18,7 +18,7 @@
                     <h5 ng-show="!EditInfoFlag" class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
                     <textarea ng-show="EditInfoFlag" placeholder="{{ 'user_profile.ENTER_INFO' | translate }}" class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp" ng-model="user.info"></textarea>
                     <h5 ng-show="!EditInfoFlag && user.email != ''" class="padding-0">
-                        <i class="ti-email"></i> {{user.email}}
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet"> {{user.email}}
                     </h5>
                     <div class="form-group" ng-show="EditInfoFlag">
                         <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
@@ -104,7 +104,7 @@
                                 <h5 ng-show="!EditInfoFlag" class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
                                 </h5>
                                 <h5 ng-show="!EditInfoFlag && user.email != ''" class="col-xs-12 padding-0">
-                                    <i class="ti-email"></i> {{user.email}}
+                                    <img ng-src="HTML/assets/images/email.png" class="IconSnippet"> {{user.email}}
                                 </h5>
                                 <div ng-show="!EditInfoFlag" class="col-md-12 padding-0">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
@@ -236,8 +236,8 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSnippetFlag"></h5>
-                                                <textarea ng-model="snippet.body" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12" ng-show="EditSnippetFlag"></textarea>
+                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSnippetFlag"></h5>
+                                                <textarea ng-model="snippet.body" class="SnippetsArea col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30" ng-show="EditSnippetFlag"></textarea>
                                             </div>
                                         </li>
                                     </ul>
@@ -625,7 +625,7 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                     <h4 class="modal-title" id="myModalLabel">
-                        <i class="ti-email"></i>
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
                         <label translate="user_profile.LEAVE_MESSAGE"></label>
                     </h4>
                 </div>
@@ -643,7 +643,7 @@
                 </div>
                 <div class="modal-footer padding-15">
                     <a class="btn btn-primary ButtonRadius" ng-disabled="LeaveMessageUserProfile.$invalid" ng-click="leaveMessage()">
-                        <i class="ti-email"></i>
+                        <img ng-src="HTML/assets/images/email.png" class="IconSnippet">
                         <label class="textColorWhite pointerHover margin-bottom-0" translate="user_profile.SEND_MESSAGE"></label>
                     </a>
                 </div>
