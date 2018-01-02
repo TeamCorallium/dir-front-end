@@ -39,8 +39,8 @@
                             <div class="styleBox marginUserHome">
                                 <img ng-show="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/visible.png"></img>
                                 <img ng-hide="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/hide.png"></img>
-                                <div class="ImageBox">
-                                    <img ng-src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
+                                <div class="imageBox backgroundWhite border-radius50">
+                                    <img ng-src="{{profile.avatar}}" class="img-circle imgProfile" ng-click="goToProfile(profile.owner)" />
                                 </div>
                                 <div class="center padding-left-10 padding-right-10">
                                     <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>

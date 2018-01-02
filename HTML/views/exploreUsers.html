@@ -133,12 +133,9 @@
                                 <div class="styleBox marginExploreUser">
                                     <img ng-show="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/visible.png"></img>
                                     <img ng-hide="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/hide.png"></img>
-                                    <div class="image_middle backgroundWhite border-radius50">
+                                    <div class="imageBox backgroundWhite border-radius50">
                                         <img ng-src="{{profile.avatar}}" class="img-circle imgProfile" ng-click="goToProfile(profile.owner)" />
                                     </div>
-                                    <!-- <div class="ImageBox">
-                                        <img ng-src="{{profile.avatar}}" class="img-responsive img-circle avatar-users" ng-click="goToProfile(profile.owner)">
-                                    </div> -->
                                     <div class="center">
                                         <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
                                         <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
