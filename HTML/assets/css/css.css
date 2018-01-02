@@ -1524,6 +1524,18 @@ a.ButtonImageSize {
     height: 20px !important;
 }
 
+.IconPublish {
+    width: 17px !important;
+    height: 15px !important;
+    margin-top: -5px !important;
+}
+
+.IconPopular {
+    width: 17px !important;
+    height: 15px !important;
+    margin-top: -1px !important;
+}
+
 .IconEmail {
     width: 15px !important;
     height: 15px !important;
