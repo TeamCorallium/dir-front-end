@@ -87,15 +87,15 @@
     }
     .image_middle {
         float: left !important;
-        height: 130px !important;
-        width: 130px !important;
+        height: 136px !important;
+        width: 136px !important;
         padding: 0px !important;
         margin-left: 15% !important;
         margin-top: -60% !important;
     }
     .imgProfile {
-        height: 126px !important;
-        width: 126px !important;
+        height: 130px !important;
+        width: 130px !important;
     }
     .image_qrcode {
         float: left !important;
