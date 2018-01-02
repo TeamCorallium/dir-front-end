@@ -6,7 +6,7 @@
                 <li>
                     <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
                         <span class="title">
-                            <i class="ti-import"></i>
+                            <img ng-src="HTML/assets/images/inboxblue.png" class="IconEmail">
                             <label class="pointerHover" translate="inbox.INBOX"></label>
                         </span>
                         <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="getCount() > 0">{{getCount()}}</span>
@@ -15,7 +15,7 @@
                 <li>
                     <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
                         <span class="title">
-                            <i class="ti-upload"></i>
+                            <img ng-src="HTML/assets/images/sendblue.png" class="IconEmail">
                             <label class="pointerHover" translate="inbox.SEND"></label>
                         </span>
                     </a>
@@ -82,7 +82,7 @@
                             </li>
                             <li class="no-padding displayBlockAll" ng-show="inboxFlag">
                                 <a class="text-info" data-toggle="modal" data-target="#modalMessage">
-                                    <i class="ti-back-left"></i>
+                                    <img ng-src="HTML/assets/images/reply.png" class="IconEmail">
                                     <label class="margin-bottom-0 pointerHover" translate="inbox.REPLY"></label>
                                 </a>
                             </li>
@@ -132,14 +132,8 @@
                 <div class="modal-body padding-15">
                     <form name="SendMessage" role="form">
                         <div class="form-group">
-                            <label for="subject">
-                                <strong>To: {{messageSelected.sender}}</strong>
-                            </label>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject" translate="inbox.SUBJECT"></label>
                             <div class="error form-hint" ng-show="SendMessage.subject.$dirty && SendMessage.subject.$error.required" ng-cloak translate="inbox.FIELD_REQUIRED"></div>
-                            <input type="text" class="form-control" ng-class="(SendMessage.subject.$dirty && SendMessage.subject.$invalid) ? 'error' : ''" id="subject" name="subject" placeholder="{{ 'inbox.SUBJECT' | translate }}" ng-required="true" ng-model="subject">
+                            <input type="text" class="form-control" ng-class="(SendMessage.subject.$dirty && SendMessage.subject.$invalid) ? 'error' : ''" id="subject" name="subject" placeholder="{{ 'inbox.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="subject">
                         </div>
                         <div class="form-group">
                             <div class="error form-hint" ng-show="SendMessage.body.$dirty && SendMessage.body.$error.required" ng-cloak translate="inbox.FIELD_REQUIRED"></div>
@@ -149,7 +143,7 @@
                 </div>
                 <div class="modal-footer padding-15">
                     <a class="btn btn-primary ButtonRadius" ng-disabled="SendMessage.$invalid" ng-click="sendMessage(messageSelected.receiver, messageSelected.sender, subject, body)">
-                        <i class="ti-upload"></i>
+                        <img ng-src="HTML/assets/images/email.png" class="IconEmail">
                         <label class="textColorWhite margin-bottom-0" translate="inbox.SEND_MESSAGE"></label>
                     </a>
                 </div>

@@ -180,7 +180,8 @@
         "YES_DELETE": "Sí, eliminarlo!",
         "NO_CANCEL": "No, cancelar!",
         "CANCELLED": "Cancelado",
-        "SAVE_MESSAGE": "Su mensaje es seguro :)"
+        "SAVE_MESSAGE": "Su mensaje es seguro :)",
+        "ENTER_SUBJECT": "Ingrese el asunto"
     },
     "explore_user": {
         "EXPLORE_PROFILES": "Explorar perfiles",

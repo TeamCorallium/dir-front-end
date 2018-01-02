@@ -180,7 +180,8 @@
         "YES_DELETE": "是, 刪除它!",
         "NO_CANCEL": "否, 取消!",
         "CANCELLED": "取消",
-        "SAVE_MESSAGE": "您的資訊是安全的 :)"
+        "SAVE_MESSAGE": "您的資訊是安全的 :)",
+        "ENTER_SUBJECT": "主題"
     },
     "explore_user": {
         "EXPLORE_PROFILES": "流覽設定檔",
