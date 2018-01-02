@@ -317,7 +317,6 @@
         max-height: 55px !important;
     }
     .marginButtonEdit {
-        margin-right: 20px !important;
         margin-top: 5px !important;
     }
     .SocialIcon {
@@ -380,7 +379,7 @@
         margin-left: 30.3% !important;
     }
     .marginButtonEdit {
-        margin-right: 50px !important;
+        margin-right: 40px !important;
         margin-top: 5px !important;
     }
     .UserInfoBox {
@@ -2027,4 +2026,8 @@ span.stars span {
 
 .border-radius50 {
     border-radius: 50% !important;
+}
+
+.borderQR {
+    border: 1px solid #E3E3E3;
 }
