@@ -2086,6 +2086,11 @@ span.stars span {
     border-bottom: 1px solid #E3E3E3 !important;
 }
 
+.border-top-clap {
+    border-top: 1px solid #E3E3E3;
+    padding-top: 10px !important;
+}
+
 .width20 {
     width: 20px !important;
 }
