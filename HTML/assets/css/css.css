@@ -76,7 +76,7 @@
         max-height: 55px !important;
     }
     .marginButtonEdit {
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
     .TitleSnippetBox {
         width: 95% !important;
@@ -308,6 +308,17 @@
 }
 
 @media (min-width: 992px) {
+    #floatLogo {
+        margin-left: 24% !important;
+    }
+    .image_middle {
+        margin-left: 10% !important;
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-top: -60% !important;
+    }
     #SocialBox {
         max-width: 435px !important;
         max-height: 55px !important;
@@ -317,7 +328,7 @@
         max-height: 55px !important;
     }
     .marginButtonEdit {
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -336,6 +347,9 @@
 }
 
 @media (min-width: 1001px) {
+    #floatLogo {
+        margin-left: 24% !important;
+    }
     #SocialBox {
         max-width: 420px !important;
         max-height: 55px !important;
@@ -361,6 +375,9 @@
 }
 
 @media (min-width: 1051px) {
+    #floatLogo {
+        margin-left: 33% !important;
+    }
     #SocialBox {
         max-width: 420px !important;
         max-height: 55px !important;
@@ -380,7 +397,7 @@
     }
     .marginButtonEdit {
         margin-right: 40px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
     .UserInfoBox {
         text-align: left !important;
@@ -390,6 +407,9 @@
 }
 
 @media (min-width: 1101px) {
+    #floatLogo {
+        margin-left: 41% !important;
+    }
     #SocialBox {
         max-width: 420px !important;
         max-height: 55px !important;
@@ -405,7 +425,7 @@
     }
     .marginButtonEdit {
         margin-right: 75px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -419,6 +439,9 @@
 }
 
 @media (min-width: 1151px) {
+    #floatLogo {
+        margin-left: 47% !important;
+    }
     #SocialBox {
         max-width: 420px !important;
         max-height: 55px !important;
@@ -433,8 +456,8 @@
         background-image: url('../HTML/assets/images/1200.jpg');
     }
     .marginButtonEdit {
-        margin-right: 100px !important;
-        margin-top: 5px !important;
+        margin-right: 70px !important;
+        margin-top: 9px !important;
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -463,7 +486,7 @@
     }
     .marginButtonEdit {
         margin-right: 100px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
     .UserInfoBox {
         text-align: left !important;
@@ -473,6 +496,9 @@
 }
 
 @media (min-width: 1301px) {
+    #floatLogo {
+        margin-left: 48% !important;
+    }
     .pictureFrontCover {
         width: 100%;
         height: 120px !important;
@@ -1023,6 +1049,13 @@
 }
 
 @media (min-width: 1201px) {
+    .marginButtonEdit {
+        margin-right: 40px !important;
+        margin-top: 9px !important;
+    }
+    #floatLogo {
+        margin-left: 25% !important;
+    }
     .button-image-cover {
         margin-left: 1% !important;
         margin-top: 1% !important;
@@ -1054,7 +1087,7 @@
         margin-top: 10px !important;
     }
     .image_middle {
-        margin-left: 18% !important;
+        margin-left: 12% !important;
         float: left !important;
         height: 138px !important;
         width: 138px !important;
@@ -1095,6 +1128,9 @@
 }
 
 @media (min-width: 1251px) {
+    #floatLogo {
+        margin-left: 34% !important;
+    }
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 24% !important;
@@ -1338,7 +1374,7 @@ ul li a.social-ti-foursquare {
     }
     .marginButtonEdit {
         margin-right: 60px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
 }
 
@@ -1349,7 +1385,7 @@ ul li a.social-ti-foursquare {
     }
     .marginButtonEdit {
         margin-right: 80px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
 }
 
@@ -1360,7 +1396,7 @@ ul li a.social-ti-foursquare {
     }
     .marginButtonEdit {
         margin-right: 100px !important;
-        margin-top: 5px !important;
+        margin-top: 9px !important;
     }
 }
 
@@ -2035,6 +2071,10 @@ span.stars span {
 
 .borderQR {
     border: 1px solid #E3E3E3;
+}
+
+.borderTextAreaSnipets {
+    border-bottom: 1px solid #E3E3E3;
 }
 
 .width20 {
