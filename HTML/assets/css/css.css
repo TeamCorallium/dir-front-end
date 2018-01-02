@@ -93,6 +93,10 @@
         margin-left: 15% !important;
         margin-top: -60% !important;
     }
+    .imgProfile {
+        height: 126px !important;
+        width: 126px !important;
+    }
     .image_qrcode {
         float: left !important;
         height: 130px !important;
@@ -2011,4 +2015,8 @@ span.stars span {
 
 .margin-right-8 {
     margin-right: 8px !important;
+}
+
+.border-radius50 {
+    border-radius: 50% !important;
 }
