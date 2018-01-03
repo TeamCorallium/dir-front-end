@@ -498,7 +498,7 @@
 @media (max-width: 767px) {
     .inboxSection {
         min-height: 655px;
-        padding-left: 0px;
+        padding-left: 0px !important;
     }
     .sendInboxSection {
         padding-bottom: 0px !important;
