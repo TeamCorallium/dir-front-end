@@ -391,7 +391,7 @@
                                         </li>
                                     </ul>
                                     <div class="tab-content">
-                                        <div class="tab-pane active" id="popularUsers">
+                                        <div class="tab-pane active padding-bottom-0" id="popularUsers">
                                             <ul class="post-list">
                                                 <li ng-repeat="popularUser in users | limitTo: 3">
                                                     <div class="post-image">
@@ -402,8 +402,8 @@
                                                         </div>
                                                     </div>
                                                     <div class="post-info">
-                                                        <a ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                        <a ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <a class="MessageUnread font-size-15" ng-disabled="!popularUser.confVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
+                                                        <a class="MessageUnread font-size-15" ng-disabled="!popularUser.confVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
                                                         <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
