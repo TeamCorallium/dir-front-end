@@ -2151,8 +2151,9 @@ span.stars span {
 }
 
 .iconInboxEmail {
-    width: 20px !important;
-    height: 15px !important;
+    width: 23px !important;
+    height: 18px !important;
+    margin-top: -5px !important;
 }
 
 .fontSize13 {
