@@ -67,6 +67,9 @@
 }
 
 @media (min-width: 768px) {
+    .borderRight {
+        border-right: 1px solid #E3E3E3 !important;
+    }
     .paddingLeft15MD {
         padding-left: 15px !important;
     }
@@ -499,6 +502,9 @@
 }
 
 @media (max-width: 767px) {
+    .borderBottomXS {
+        border-bottom: 1px solid #E3E3E3 !important;
+    }
     .inboxSection {
         min-height: 655px;
         padding-left: 0px !important;
@@ -2166,10 +2172,6 @@ span.stars span {
 
 .fontSize17 {
     font-size: 17px !important;
-}
-
-.borderRight {
-    border-right: 1px solid #E3E3E3 !important;
 }
 
 .paddingSettingsList {
