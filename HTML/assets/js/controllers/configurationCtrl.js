@@ -6,6 +6,10 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
             path: '/'
         });
 
+        $scope.visibleProfile = true;
+        $scope.visibleEmailNotifications = false;
+        $scope.visibleEmail = false;
+
         if ($cookies.get('configVisible') == 'true') {
             $scope.switchProfile = true;
         } else {
@@ -108,5 +112,21 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
                 title: networkConnection
             });
         });
+
+        $scope.changeSettingViews = function(num) {
+            if (num == 1) {
+                $scope.visibleProfile = true;
+                $scope.visibleEmail = false;
+                $scope.visibleEmailNotifications = false;
+            } else if (num == 2) {
+                $scope.visibleProfile = false;
+                $scope.visibleEmail = false;
+                $scope.visibleEmailNotifications = true;
+            } else {
+                $scope.visibleEmail = true;
+                $scope.visibleEmailNotifications = false;
+                $scope.visibleProfile = false;
+            }
+        };
     }
 ]);
