@@ -109,14 +109,14 @@
                         </ul>
                     </div>
                     <div class="message-header row">
-                        <div class="message-time">
-                            {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
-                        </div>
                         <div class="message-from">
-                            {{messageSelected.sender}}
+                            <label translate="inbox.OF"></label> {{messageSelected.sender}}
                         </div>
                         <div class="message-to">
-                            To: {{messageSelected.receiver}}
+                            <label translate="inbox.TO"></label> {{messageSelected.receiver}}
+                        </div>
+                        <div class="message-time">
+                            <label translate="inbox.DATE"></label> {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
                         </div>
                         <div class="message-subject margin-top-15 padding-left-0 padding-right-0">
                             {{messageSelected.subject}}
@@ -166,57 +166,3 @@
     </div>
     <!-- end: MODAL MESSAGE-->
 </div>
-<script type="text/javascript">
-    $(function() {
-        OverlayScrollbars(document.getElementById('MessageInboxBox'), {
-            className: "os-theme-dark",
-            resize: "none",
-            sizeAutoCapable: true,
-            paddingAbsolute: true,
-            overflowBehavior: {
-                x: "scroll",
-                y: "hidden"
-            },
-            scrollbars: {
-                autoHide: "leave",
-                touchSupport: true
-            }
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(function() {
-        OverlayScrollbars(document.getElementById('MessageSendBox'), {
-            className: "os-theme-dark",
-            resize: "none",
-            sizeAutoCapable: true,
-            paddingAbsolute: true,
-            overflowBehavior: {
-                x: "scroll",
-                y: "hidden"
-            },
-            scrollbars: {
-                autoHide: "leave",
-                touchSupport: true
-            }
-        });
-    });
-</script>
-<script type="text/javascript">
-    $(function() {
-        OverlayScrollbars(document.getElementById('MessageReadBox'), {
-            className: "os-theme-dark",
-            resize: "none",
-            sizeAutoCapable: true,
-            paddingAbsolute: true,
-            overflowBehavior: {
-                x: "scroll",
-                y: "hidden"
-            },
-            scrollbars: {
-                autoHide: "leave",
-                touchSupport: true
-            }
-        });
-    });
-</script>

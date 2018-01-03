@@ -181,7 +181,10 @@
         "NO_CANCEL": "No, cancel!",
         "CANCELLED": "Cancelled",
         "SAVE_MESSAGE": "Your message is safe :)",
-        "ENTER_SUBJECT": "Enter your subject"
+        "ENTER_SUBJECT": "Enter your subject",
+        "OF": "Of",
+        "TO": "To",
+        "DATE": "Date"
     },
     "explore_user": {
         "EXPLORE_PROFILES": "Explore Profiles",

@@ -181,7 +181,10 @@
         "NO_CANCEL": "否, 取消!",
         "CANCELLED": "取消",
         "SAVE_MESSAGE": "您的資訊是安全的 :)",
-        "ENTER_SUBJECT": "主題"
+        "ENTER_SUBJECT": "主題",
+        "OF": "的",
+        "TO": "自",
+        "DATE": "日期"
     },
     "explore_user": {
         "EXPLORE_PROFILES": "流覽設定檔",
