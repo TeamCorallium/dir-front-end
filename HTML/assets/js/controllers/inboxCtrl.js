@@ -23,7 +23,7 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
                 .then(
                     function(data) {
                         var count = data;
-                        
+
                         if (count > 9) {
                             $rootScope.notificationCount = '10';
                         } else {
@@ -37,14 +37,13 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.changeInboxFlag = function(flag) {
+            $scope.inboxFlag = flag;
             if (flag) {
-                $scope.inboxFlag = true;
                 if ($(window).width() <= 767) {
                     $('#MessageInboxBox').show();
                     $('#MessageReadBox').hide();
                 }
             } else {
-                $scope.inboxFlag = false;
                 if ($(window).width() <= 767) {
                     $('#MessageSendBox').show();
                     $('#MessageReadBox').hide();

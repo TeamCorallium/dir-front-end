@@ -2136,3 +2136,8 @@ span.stars span {
 .marginLeft5 {
     margin-left: 5% !important;
 }
+
+.iconInboxEmail {
+    width: 20px !important;
+    height: 15px !important;
+}
