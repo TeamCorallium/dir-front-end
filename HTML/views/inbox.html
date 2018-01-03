@@ -110,13 +110,13 @@
                     </div>
                     <div class="message-header row">
                         <div class="message-from">
-                            <label translate="inbox.OF"></label> {{messageSelected.sender}}
+                            <label class="message-to MessageUnread fontSize13" translate="inbox.OF"></label> {{messageSelected.sender}}
                         </div>
                         <div class="message-to">
-                            <label translate="inbox.TO"></label> {{messageSelected.receiver}}
+                            <label class="message-to MessageUnread fontSize13" translate="inbox.TO"></label> {{messageSelected.receiver}}
                         </div>
                         <div class="message-time">
-                            <label translate="inbox.DATE"></label> {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
+                            <label class="message-to MessageUnread fontSize13" translate="inbox.DATE"></label> {{messageSelected.created | date:'dd/M/yyyy hh:mm a'}}
                         </div>
                         <div class="message-subject margin-top-15 padding-left-0 padding-right-0">
                             {{messageSelected.subject}}
