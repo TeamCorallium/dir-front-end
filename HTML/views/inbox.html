@@ -5,7 +5,7 @@
                 <li class="backgroundGray borderBottomClap">
                     <p class="email-options-title margin-bottom-0 margin-left-15" translate="inbox.BROWSE"></p>
                 </li>
-                <li>
+                <li class="borderBottomClap">
                     <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
                         <span class="title margin-left-15">
                             <img ng-show="inboxFlag" ng-src="HTML/assets/images/inboxblue.png" class="iconInboxEmail">
@@ -15,7 +15,7 @@
                         <span class="badge pull-right ng-binding ng-scope margin-top-8" ng-if="getCount() > 0">{{getCount()}}</span>
                     </a>
                 </li>
-                <li>
+                <li class="borderBottomClap">
                     <a ng-click="changeInboxFlag(false);cleanMessageSelected();">
                         <span class="title margin-left-15">
                             <img ng-show="!inboxFlag" ng-src="HTML/assets/images/sendblue.png" class="iconInboxEmail">
