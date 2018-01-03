@@ -1,8 +1,10 @@
 <div class="profile-padding-inbox" ng-controller="InboxCtrl">
     <section class="container-fluid container-fullw bg-white padding-top-0 padding-right-15 inboxSection">
         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 border-right OptionsBox">
-            <p class="email-options-title margin-top-10" translate="inbox.BROWSE"></p>
-            <ul class="ListOptions margin-left-15">
+            <ul class="ListOptions">
+                <li class="backgroundGray borderBottomClap">
+                    <p class="email-options-title margin-top-10" translate="inbox.BROWSE"></p>
+                </li>
                 <li>
                     <a ng-click="changeInboxFlag(true);cleanMessageSelected();">
                         <span class="title">
