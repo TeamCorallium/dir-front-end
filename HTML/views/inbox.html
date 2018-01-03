@@ -60,15 +60,20 @@
                     </li>
                     <li class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-10 border-bottom" ng-repeat="message in messagesSend" id="li-{{message.id}}">
                         <a class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-0" ng-click="selectMessageSend(message)">
-                            <div>
-                                <span class="MessageFrom"> {{message.sender}}</span>
-                                <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
+                            <div class="col-xs-1 padding-left-0 padding-right-0">
+                                <img ng-src="HTML/assets/images/user.png" class="IconEmail">
                             </div>
-                            <div>
-                                <span class="MessageSubject"> {{message.subject}}</span>
-                            </div>
-                            <div>
-                                <span class="MessageContent"> {{message.body}}</span>
+                            <div class="col-xs-11">
+                                <div>
+                                    <span class="MessageFrom"> {{message.sender}}</span>
+                                    <span class="text MessageTime"> {{message.created | date:'dd/M/yyyy hh:mm a'}}</span>
+                                </div>
+                                <div>
+                                    <span class="MessageSubject"> {{message.subject}}</span>
+                                </div>
+                                <div>
+                                    <span class="MessageContent"> {{message.body}}</span>
+                                </div>
                             </div>
                         </a>
                     </li>
@@ -161,3 +166,57 @@
     </div>
     <!-- end: MODAL MESSAGE-->
 </div>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('MessageInboxBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('MessageSendBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+</script>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('MessageReadBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+</script>
