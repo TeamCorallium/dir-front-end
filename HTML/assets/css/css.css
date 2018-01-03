@@ -70,7 +70,7 @@
     .paddingLeft50MD {
         padding-left: 50px !important;
     }
-    .marginLeft50 {
+    .marginLeft50MD {
         margin-left: 50px !important;
     }
     .paddingRight0MD {
@@ -2031,7 +2031,7 @@ span.stars span {
 }
 
 .styleBoxConfiguration {
-    min-height: 525px !important;
+    min-height: 426px !important;
 }
 
 .margin-top--5 {
@@ -2195,4 +2195,11 @@ span.stars span {
     margin-top: -7px !important;
     font-size: 17px !important;
     color: #858585 !important;
+}
+
+.profile-padding-configuration {
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+    padding-bottom: 0px !important;
 }
