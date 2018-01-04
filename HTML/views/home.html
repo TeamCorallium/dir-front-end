@@ -1,48 +1,21 @@
 <div class="main-content-home" ng-controller="HomeCtrl">
-    <div class="swiper-slider swiper-container full-height slider-parallax">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide" style="background-image: url('HTML/assets/images/slider/slide1.jpg');">
-                <div class="slider-caption caption-centered">
-                    <h2 class="text-white opacity-0" data-caption-class="fadeInUp" data-caption-delay="300">Build a beautiful website for your business</h2>
-                    <p class="text-white text-extra-large margin-top-15 opacity-0" data-caption-class="fadeInDown" data-caption-delay="300">
-                        Add the content and we'll do the rest to get you a great page rank
-                    </p>
+    <!-- <ui-carousel slides="ctrl.single.slides" dots="true">
+        <carousel-item>
+            <h3></h3>
+        </carousel-item>
+    </ui-carousel> -->
 
-                    <button type="button" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right" data-caption-class="fadeIn" data-caption-delay="900">
-                        <span>see more</span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('HTML/assets/images/slider/slide2.jpg');">
-                <div class="slider-caption caption-centered">
-                    <h2 class="text-white opacity-0" data-caption-class="fadeInUp" data-caption-delay="300">Build a beautiful website for your business</h2>
-                    <p class="text-white text-extra-large margin-top-15 opacity-0" data-caption-class="fadeInDown" data-caption-delay="300">
-                        Add the content and we'll do the rest to get you a great page rank
-                    </p>
-
-                    <button type="button" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right" data-caption-class="fadeIn" data-caption-delay="900">
-                        <span>see more</span>
-                    </button>
-                </div>
-            </div>
-            <div class="swiper-slide" style="background-image: url('HTML/assets/images/slider/slide3.jpg');">
-                <div class="slider-caption caption-centered">
-                    <h2 class="text-white opacity-0" data-caption-class="fadeInUp" data-caption-delay="300">Build a beautiful website for your business</h2>
-                    <p class="text-white text-extra-large margin-top-15 opacity-0" data-caption-class="fadeInDown" data-caption-delay="300">
-                        Add the content and we'll do the rest to get you a great page rank
-                    </p>
-
-                    <button type="button" class="btn btn-primary margin-top-15 opacity-0 btn-wide btn-scroll btn-scroll-top fa-arrow-right" data-caption-class="fadeIn" data-caption-delay="900">
-                        <span>see more</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-        <!-- Add Pagination -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-pagination"></div>
-    </div>
+    <ui-carousel slides="ctrl.fade.slides" slides-to-show="3" slides-to-scroll="1">
+        <carousel-item>
+            <div class="image"><img ng-src="HTML/assets/images/slider/slide1.jpg"></div>
+        </carousel-item>
+        <carousel-item>
+            <div class="image"><img ng-src="HTML/assets/images/slider/slide2.jpg"></div>
+        </carousel-item>
+        <carousel-item>
+            <div class="image"><img ng-src="HTML/assets/images/slider/slide3.jpg"></div>
+        </carousel-item>
+    </ui-carousel>
     <!-- <section id="page-title" class="page-title-background" style="background-image: url('HTML/assets/images/slider/about-slide1.jpg')">
         <div class="container">
             <div class="row">
