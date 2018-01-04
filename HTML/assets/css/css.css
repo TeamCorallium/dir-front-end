@@ -2120,15 +2120,16 @@ span.stars span {
 }
 
 .colorGrayDark {
-    background-color: #D5D5D5 !important
+    background-color: #D5D5D5 !important;
+    border-color: #D5D5D5 !important;
 }
 
 .backgroundGray {
-    background-color: #f6f6f6 !important
+    background-color: #f6f6f6 !important;
 }
 
 .backgroundWhite {
-    background-color: white !important
+    background-color: white !important;
 }
 
 .ImagePlusSocialNetwork {
