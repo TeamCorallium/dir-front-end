@@ -150,7 +150,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $scope.getCount();
         }
 
-        this.fade = {
+        $scope.fade = {
             slides: [
                 'HTML/assets/images/slide1.jpg',
                 'HTML/assets/images/slide2.jpg',
