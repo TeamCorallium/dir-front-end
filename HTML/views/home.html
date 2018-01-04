@@ -5,15 +5,9 @@
         </carousel-item>
     </ui-carousel> -->
 
-    <ui-carousel slides="ctrl.fade.slides" slides-to-show="3" slides-to-scroll="1">
+    <ui-carousel slides="images.slides" slides-to-show="3" slides-to-scroll="1">
         <carousel-item>
-            <div class="image"><img ng-src="HTML/assets/images/slide1.jpg"></div>
-        </carousel-item>
-        <carousel-item>
-            <div class="image"><img ng-src="HTML/assets/images/slide2.jpg"></div>
-        </carousel-item>
-        <carousel-item>
-            <div class="image"><img ng-src="HTML/assets/images/slide3.jpg"></div>
+            <div class="image"><img ng-src="{{ item }}"></div>
         </carousel-item>
     </ui-carousel>
     <!-- <section id="page-title" class="page-title-background" style="background-image: url('HTML/assets/images/slider/about-slide1.jpg')">

@@ -47,7 +47,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                 .then(
                     function(data) {
                         var count = data;
-                        
+
                         if (count > 9) {
                             $rootScope.notificationCount = '10';
                         } else {
@@ -149,5 +149,13 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         if ($cookies.get('username')) {
             $scope.getCount();
         }
+
+        $scope.images = {
+            slides: [
+                'HTML/assets/images/slide1.jpg',
+                'HTML/assets/images/slide2.jpg',
+                'HTML/assets/images/slide3.jpg',
+            ]
+        };
     }
 ]);
