@@ -316,6 +316,9 @@
         "ALERT_NOTIFICATIONS": "Alerts and Notifications"
     },
     "user_hidden": {
-        "BACK": "Back"
+        "USER_INVISIBLE": "User invisible",
+        "TEXT_INVISIBLE": "text invisible",
+        "HOME": "Go to home",
+        "PROFILE": "Go to profile"
     }
 }

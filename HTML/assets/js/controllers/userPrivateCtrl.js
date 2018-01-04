@@ -6,5 +6,13 @@ app.controller('UserPrivateCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $cookies.remove("exploreUser", {
             path: '/'
         });
+
+        $scope.connected = false;
+
+        if ($cookies.get('username')) {
+            $scope.connected = true;
+        } else {
+            $scope.connected = false;
+        }
     }
 ]);
