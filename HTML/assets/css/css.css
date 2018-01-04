@@ -2427,6 +2427,8 @@ span.stars span {
 .main-content-home {
     min-height: 100%;
     position: relative;
-    /* padding-bottom: 60px;
-padding-top: 90px; */
+}
+
+.track-wrapper {
+    max-height: 620px !important;
 }
