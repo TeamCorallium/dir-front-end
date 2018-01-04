@@ -183,11 +183,6 @@
         opacity: 0.5 !important;
         padding-top: 07px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/768.jpg');
-    }
     .marginButtonUserHome {
         margin-left: 43% !important;
         border-radius: 5px !important;
@@ -270,11 +265,6 @@
         min-width: 300px !important;
         max-height: 55px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/800.jpg');
-    }
 }
 
 @media (min-width: 801px) {
@@ -292,11 +282,6 @@
         min-width: 300px !important;
         max-height: 55px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/850.jpg');
-    }
 }
 
 @media (min-width: 851px) {
@@ -313,11 +298,6 @@
     .SizeNetworksList {
         min-width: 345px !important;
         max-height: 55px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/900.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -339,11 +319,6 @@
     .SizeNetworksList {
         min-width: 350px !important;
         max-height: 55px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/950.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -370,11 +345,6 @@
     .SizeNetworksList {
         min-width: 350px !important;
         max-height: 55px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1000.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -450,11 +420,6 @@
         min-width: 410px !important;
         max-height: 55px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1050.jpg');
-    }
     .SocialIcon {
         margin-top: 5px !important;
         margin-left: 29.3% !important;
@@ -483,11 +448,6 @@
     .SizeNetworksList {
         min-width: 410px !important;
         max-height: 55px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1100.jpg');
     }
     .SocialIcon {
         margin-top: 5px !important;
@@ -522,11 +482,6 @@
         min-width: 410px !important;
         max-height: 55px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1150.jpg');
-    }
     .marginButtonEdit {
         margin-right: 75px !important;
         margin-top: 9px !important;
@@ -560,11 +515,6 @@
         min-width: 410px !important;
         max-height: 55px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1200.jpg');
-    }
     .marginButtonEdit {
         margin-right: 70px !important;
         margin-top: 9px !important;
@@ -594,11 +544,6 @@
     .SizeNetworksList {
         min-width: 590px !important;
         max-height: 55px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1300.jpg');
     }
     .marginButtonEdit {
         margin-right: 100px !important;
@@ -737,11 +682,6 @@
     .min-height-80 {
         min-height: 50px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/480.jpg');
-    }
     .center-box {
         margin-left: 36% !important;
     }
@@ -848,11 +788,6 @@
     .paddingProfile {
         padding-top: 45px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/480.jpg');
-    }
     .marginUserHome {
         margin-left: 21% !important;
     }
@@ -940,11 +875,6 @@
     }
     .paddingProfile {
         padding-top: 45px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/480.jpg');
     }
     .marginUserHome {
         margin-left: 15% !important;
@@ -1034,11 +964,6 @@
     .paddingProfile {
         padding-top: 45px !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/375.jpg');
-    }
     .marginUserHome {
         margin-left: 10% !important;
     }
@@ -1127,11 +1052,6 @@
         float: left;
         width: 80% !important;
     }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/360.jpg');
-    }
     .marginUserHome {
         margin-left: 8% !important;
     }
@@ -1219,11 +1139,6 @@
     }
     .paddingProfile {
         padding-top: 45px !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/320.jpg');
     }
     .marginUserHome {
         margin-left: 0% !important;
@@ -1326,11 +1241,6 @@
         width: 120px !important;
         padding: 0px !important;
         margin-left: 18% !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1250.jpg');
     }
     .DeleteSnippetBox {
         width: 50px !important;
@@ -1610,11 +1520,6 @@ ul li a.social-ti-foursquare {
     }
     #floatLogo {
         margin-left: 48% !important;
-    }
-    .pictureFrontCover {
-        width: 100%;
-        height: 120px !important;
-        background-image: url('../HTML/assets/images/1366.jpg');
     }
     .UserInfoBox {
         text-align: left !important;
