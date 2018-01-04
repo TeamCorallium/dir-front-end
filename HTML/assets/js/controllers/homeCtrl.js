@@ -152,9 +152,9 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.fade = {
             slides: [
-                'HTML/assets/images/slide1.jpg',
-                'HTML/assets/images/slide2.jpg',
-                'HTML/assets/images/slide3.jpg',
+                'HTML/assets/images/slider/slide1.jpg',
+                'HTML/assets/images/slider/slide2.jpg',
+                'HTML/assets/images/slider/slide3.jpg',
             ],
             source: '<ui-carousel slides="ctrl.fade.slides" slides-to-show="3" slides-to-scroll="1">\n' +
                 '  <carousel-item>\n' +
