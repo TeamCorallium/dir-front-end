@@ -78,6 +78,11 @@
         margin-left: 5%;
         margin-top: 6px;
     }
+    .iconEyeHome {
+        position: absolute;
+        margin-left: 5%;
+        margin-top: 6px;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
