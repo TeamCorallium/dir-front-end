@@ -2433,16 +2433,6 @@ span.stars span {
     max-height: 620px !important;
 }
 
-.ui-carousel .carousel-prev .carousel-btn {
-    left: 0px !important;
-    font-size: 50px !important;
-}
-
-.ui-carousel .carousel-next .carousel-btn {
-    right: 0px !important;
-    font-size: 50px !important;
-}
-
 .marginTop--60 {
     margin-top: -60px !important;
 }
