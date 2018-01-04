@@ -2423,3 +2423,10 @@ span.stars span {
 .marginTopButtonUserHidden {
     margin-top: 60px !important;
 }
+
+.main-content-home {
+    min-height: 100%;
+    position: relative;
+    /* padding-bottom: 60px;
+padding-top: 90px; */
+}
