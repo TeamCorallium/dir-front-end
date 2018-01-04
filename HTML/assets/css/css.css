@@ -2119,8 +2119,8 @@ span.stars span {
     margin-top: 3px !important;
 }
 
-.colorGray {
-    color: #f6f6f6 !important
+.colorGrayDark {
+    background-color: #D5D5D5 !important
 }
 
 .backgroundGray {
