@@ -1,8 +1,8 @@
-<div class="profile-padding background-light" ng-controller="ExploreUsersCtrl">
+<div class="profile-padding background-light" ng-controller="UserPrivateCtrl">
     <div class="backgroundGray"></div>
-    <section class="padding-top-40 styleBoxConfiguration container-fluid container-fullw bg-white padding-top-10 padding-bottom-10 backgroundGray">
+    <section class="padding-top-40 styleBoxUserHidden container-fluid container-fullw bg-white padding-top-10 padding-bottom-10 backgroundGray">
         <div class="row">
-            <div class="styleBox marginExploreUser">
+            <div class="styleBox marginExploreUserHidden">
                 <div class="imageBox backgroundWhite border-radius50">
                     <img ng-src="HTML/assets/images/hide.png" class="img-circle imgProfile" />
                 </div>
@@ -12,8 +12,8 @@
                         This user is invisible
                     </p>
                 </div>
-                <div class="buttonContainer">
-                    <a class="btn btn-primary" ui-sref="profile" translate="user_hidden.BACK"></a>
+                <div class="center marginTopFilter">
+                    <a class="btn btn-primary backgroundGray" ui-sref="profile" translate="user_hidden.BACK"></a>
                 </div>
             </div>
         </div>

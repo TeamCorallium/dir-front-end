@@ -67,6 +67,10 @@
 }
 
 @media (min-width: 768px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -251,6 +255,10 @@
 }
 
 @media (min-width: 770px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -268,6 +276,10 @@
 }
 
 @media (min-width: 801px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -285,6 +297,10 @@
 }
 
 @media (min-width: 851px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -306,6 +322,10 @@
 }
 
 @media (min-width: 901px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -332,6 +352,10 @@
 }
 
 @media (min-width: 951px) {
+    .marginExploreUserHidden {
+        margin-left: 37% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -358,6 +382,10 @@
 }
 
 @media (min-width: 992px) {
+    .marginExploreUserHidden {
+        margin-left: 39% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -403,6 +431,10 @@
 }
 
 @media (min-width: 1001px) {
+    .marginExploreUserHidden {
+        margin-left: 39% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -432,6 +464,10 @@
 }
 
 @media (min-width: 1051px) {
+    .marginExploreUserHidden {
+        margin-left: 40% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -465,6 +501,10 @@
 }
 
 @media (min-width: 1101px) {
+    .marginExploreUserHidden {
+        margin-left: 41% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -498,6 +538,10 @@
 }
 
 @media (min-width: 1151px) {
+    .marginExploreUserHidden {
+        margin-left: 42% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -531,6 +575,10 @@
 }
 
 @media (min-width: 1251px) {
+    .marginExploreUserHidden {
+        margin-left: 44% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         width: 100%;
         display: block;
@@ -691,6 +739,10 @@
     .marginExploreUser {
         margin-left: 33% !important;
     }
+    .marginExploreUserHidden {
+        margin-left: 33% !important;
+        margin-top: 60px !important;
+    }
     .marginButtonUserHome {
         margin-left: 40.6% !important;
         border-radius: 5px !important;
@@ -794,6 +846,10 @@
     .marginExploreUser {
         margin-left: 20% !important;
     }
+    .marginExploreUserHidden {
+        margin-left: 20% !important;
+        margin-top: 60px !important;
+    }
     .marginButtonUserHome {
         margin-left: 34% !important;
         border-radius: 5px !important;
@@ -881,6 +937,10 @@
     }
     .marginExploreUser {
         margin-left: 14% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 14% !important;
+        margin-top: 60px !important;
     }
     .marginButtonUserHome {
         margin-left: 31% !important;
@@ -970,6 +1030,10 @@
     .marginExploreUser {
         margin-left: 10% !important;
     }
+    .marginExploreUserHidden {
+        margin-left: 10% !important;
+        margin-top: 60px !important;
+    }
     .marginButtonUserHome {
         margin-left: 28% !important;
         border-radius: 5px !important;
@@ -1057,6 +1121,10 @@
     }
     .marginExploreUser {
         margin-left: 8% !important;
+    }
+    .marginExploreUserHidden {
+        margin-left: 8% !important;
+        margin-top: 60px !important;
     }
     .marginButtonUserHome {
         margin-left: 27% !important;
@@ -1146,6 +1214,10 @@
     .marginExploreUser {
         margin-left: 1% !important;
     }
+    .marginExploreUserHidden {
+        margin-left: 1% !important;
+        margin-top: 60px !important;
+    }
     .marginButtonUserHome {
         margin-left: 23% !important;
         border-radius: 5px !important;
@@ -1178,6 +1250,10 @@
 }
 
 @media (min-width: 1201px) {
+    .marginExploreUserHidden {
+        margin-left: 43% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         width: 100%;
         display: block;
@@ -1504,6 +1580,10 @@ ul li a.social-ti-foursquare {
 }
 
 @media (min-width: 1301px) {
+    .marginExploreUserHidden {
+        margin-left: 45% !important;
+        margin-top: 60px !important;
+    }
     .pictureExploreUser {
         width: 100%;
         display: block;
@@ -2039,6 +2119,10 @@ span.stars span {
     margin-top: 3px !important;
 }
 
+.colorGray {
+    color: #f6f6f6 !important
+}
+
 .backgroundGray {
     background-color: #f6f6f6 !important
 }
@@ -2147,6 +2231,10 @@ span.stars span {
 
 .styleBoxConfiguration {
     min-height: 486px !important;
+}
+
+.styleBoxUserHidden {
+    min-height: 546px !important;
 }
 
 .margin-top--5 {

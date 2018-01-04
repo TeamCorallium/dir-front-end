@@ -18,6 +18,7 @@ app.constant('JS_REQUIRED', {
         'adminViewCtrl': 'HTML/assets/js/controllers/adminViewCtrl.js',
         'notificationsCtrl': 'HTML/assets/js/controllers/notificationsCtrl.js',
         'configurationCtrl': 'HTML/assets/js/controllers/configurationCtrl.js',
-        'socialNetworksCtrl': 'HTML/assets/js/controllers/socialNetworksCtrl.js'
+        'socialNetworksCtrl': 'HTML/assets/js/controllers/socialNetworksCtrl.js',
+        'userPrivateCtrl': 'HTML/assets/js/controllers/userPrivateCtrl.js'
     }
 });
