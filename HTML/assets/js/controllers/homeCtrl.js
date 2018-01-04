@@ -1,5 +1,5 @@
-app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate",
-    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate) {
+app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate", "Carousel",
+    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate, Carousel) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
@@ -150,7 +150,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $scope.getCount();
         }
 
-        $scope.images = {
+        this.images = {
             slides: [
                 'HTML/assets/images/slide1.jpg',
                 'HTML/assets/images/slide2.jpg',
