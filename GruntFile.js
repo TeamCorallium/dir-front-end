@@ -80,6 +80,7 @@ module.exports = function(grunt) {
                     'bower_components/angular-ui-switch/angular-ui-switch.js',
                     'bower_components/spin.js/spin.js',
                     'bower_components/angular-loading-spinner/angular-loading-spinner.js',
+                    'bower_components/angular-ui-carousel/dist/ui-carousel.js',
                     'HTML/assets/*.js',
                     'HTML/assets/js/*.js',
                     'HTML/assets/js/**/*.js',
@@ -97,6 +98,7 @@ module.exports = function(grunt) {
                     'bower_components/magnific-popup/dist/magnific-popup.css',
                     'bower_components/sweetalert/dist/sweetalert.css',
                     'bower_components/ng-img-crop/compile/minified/ng-img-crop.css',
+                    'bower_components/angular-ui-carousel/dist/ui-carousel.css',
                     'HTML/assets/css/*.css',
                 ],
                 dest: 'dist/css.css'
