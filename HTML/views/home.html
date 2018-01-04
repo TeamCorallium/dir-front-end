@@ -1,12 +1,5 @@
 <div class="main-content-home" ng-controller="HomeCtrl">
-    <!-- <ui-carousel slides="ctrl.single.slides" dots="true">
-        <carousel-item>
-            <h3></h3>
-        </carousel-item>
-    </ui-carousel> -->
-
-    {{fade.slides.length}}
-    <ui-carousel slides="fade.slides" slides-to-show="3" slides-to-scroll="1">
+    <ui-carousel slides="fade.slides" slides-to-show="3" slides-to-scroll="1" fade="true" initial-slide="1" autoplay="true" autoplay-speed="2000" dots="true" infinite="true">
         <carousel-item>
             <div class="image"><img src="{{ item }}"></div>
         </carousel-item>
