@@ -572,6 +572,7 @@
         width: 100%;
         display: block;
         height: 150px !important;
+        margin-left: 0px !important;
     }
     #SocialBox {
         max-width: 600px !important;
@@ -1211,6 +1212,7 @@
         width: 100%;
         display: block;
         height: 150px !important;
+        margin-left: 0px !important;
     }
     .marginButtonEdit {
         margin-right: 40px !important;
@@ -1541,6 +1543,7 @@ ul li a.social-ti-foursquare {
         width: 100%;
         display: block;
         height: 150px !important;
+        margin-left: 0px !important;
     }
     .SocialIcon {
         margin-top: 5px !important;
