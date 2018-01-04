@@ -314,5 +314,8 @@
         "EMAIL_NOTIFICATIONS": "電子郵件通知",
         "SHOW_EMAIL": "顯示電子郵件",
         "ALERT_NOTIFICATIONS": "通知和通知"
+    },
+    "user_hidden": {
+        "BACK": "返回"
     }
 }

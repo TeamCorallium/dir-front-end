@@ -1,21 +1,21 @@
-<div class="privatePage">
-    <div class="error-full-page">
-        <div class="container margin-top10PC">
-            <div class="row">
-                <div class="col-sm-12 page-error animated shake">
-                    <div class="error-number text-red">
-                        500
-                    </div>
-                    <div class="error-details col-sm-6 col-sm-offset-3">
-                        <h3>Oops! You are stuck at 500</h3>
-                        <p>
-                            Something's wrong!
-                            <br> It looks as though we've broken something on our system.
-                            <br> Don't panic, we are fixing it! Please come back in a while.
-                        </p>
-                    </div>
+<div class="profile-padding background-light" ng-controller="ExploreUsersCtrl">
+    <div class="backgroundGray"></div>
+    <section class="padding-top-40 styleBoxConfiguration container-fluid container-fullw bg-white padding-top-10 padding-bottom-10 backgroundGray">
+        <div class="row">
+            <div class="styleBox marginExploreUser">
+                <div class="imageBox backgroundWhite border-radius50">
+                    <img ng-src="HTML/assets/images/hide.png" class="img-circle imgProfile" />
+                </div>
+                <div class="center">
+                    <h3>User Invisible</h3>
+                    <p class="text-dark padding-left-10 padding-right-10">
+                        This user is invisible
+                    </p>
+                </div>
+                <div class="buttonContainer">
+                    <a class="btn btn-primary" ui-sref="profile" translate="user_hidden.BACK"></a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 </div>

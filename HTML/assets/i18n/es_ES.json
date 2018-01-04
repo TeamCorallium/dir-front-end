@@ -314,5 +314,8 @@
         "EMAIL_NOTIFICATIONS": "Notificar por correo electrónico",
         "SHOW_EMAIL": "Mostrar correo electrónico",
         "ALERT_NOTIFICATIONS": "Alertas y notificaciones"
+    },
+    "user_hidden": {
+        "BACK": "Atrás"
     }
 }
