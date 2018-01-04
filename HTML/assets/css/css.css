@@ -67,6 +67,14 @@
 }
 
 @media (min-width: 768px) {
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 42px !important;
+        margin-top: 20px !important;
+    }
     .paddingLeft50MD {
         padding-left: 50px !important;
     }
@@ -514,6 +522,20 @@
 }
 
 @media (max-width: 767px) {
+    .imageBox {
+        float: left !important;
+        height: 138px !important;
+        width: 138px !important;
+        padding: 0px !important;
+        margin-left: 29px !important;
+        margin-top: 20px !important;
+    }
+    .imgProfile {
+        height: 130px !important;
+        width: 130px !important;
+        margin-left: 4px !important;
+        margin-top: 4px !important;
+    }
     .borderBottomXS {
         border-bottom: 1px solid #E3E3E3 !important;
     }
@@ -1210,15 +1232,6 @@ img-crop canvas {
 
 .styleBox:hover {
     box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
-}
-
-.imageBox {
-    float: left !important;
-    height: 138px !important;
-    width: 138px !important;
-    padding: 0px !important;
-    margin-left: 42px !important;
-    margin-top: 20px !important;
 }
 
 .buttonContainer {
@@ -2207,4 +2220,18 @@ span.stars span {
 .pictureExploreUser {
     width: 100%;
     height: 150px !important;
+}
+
+.textPictureExploreUsers {
+    position: absolute;
+    text-align: center;
+    margin-top: -100px;
+    color: white;
+}
+
+.textPictureExploreUsersSeconds {
+    position: absolute;
+    text-align: center;
+    margin-top: -60px;
+    color: white;
 }
