@@ -2436,3 +2436,13 @@ span.stars span {
 .marginTop--60 {
     margin-top: -60px !important;
 }
+
+.ui-carousel .carousel-prev .carousel-btn {
+    font-size: 50px !important;
+    left: 0px !important;
+}
+
+.ui-carousel .carousel-next .carousel-btn {
+    font-size: 50px !important;
+    left: 0px !important;
+}
