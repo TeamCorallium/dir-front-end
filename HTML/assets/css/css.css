@@ -1411,6 +1411,19 @@ img-crop canvas {
     box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
 }
 
+.styleBoxBackers {
+    position: relative !important;
+    background-color: #F4F4F4;
+    border: 1px solid #E3E3E3;
+    height: 120px !important;
+    max-width: 225px !important;
+    border-radius: 7px !important;
+}
+
+.styleBoxBackers:hover {
+    box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
+}
+
 .buttonContainer {
     position: absolute !important;
     bottom: 15px !important;
