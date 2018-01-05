@@ -1425,8 +1425,8 @@ img-crop canvas {
     color: #00B8B8 !important;
 }
 
-.styleBoxBackersHover:hover {
-    color: #00B8B8 !important;
+.hoverColor {
+    color: inherit !important;
 }
 
 .buttonContainer {
