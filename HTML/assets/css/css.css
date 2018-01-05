@@ -1415,7 +1415,7 @@ img-crop canvas {
     position: relative !important;
     background-color: #F4F4F4;
     border: 1px solid #E3E3E3;
-    height: 120px !important;
+    height: 95px !important;
     max-width: 225px !important;
     border-radius: 7px !important;
 }
@@ -2458,4 +2458,9 @@ span.stars span {
 .ui-carousel .carousel-next .carousel-btn {
     font-size: 50px !important;
     right: 0px !important;
+}
+
+.IconFats {
+    width: 80px !important;
+    height: 60px !important;
 }
