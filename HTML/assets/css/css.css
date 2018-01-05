@@ -623,6 +623,9 @@
 }
 
 @media (max-width: 767px) {
+    .track {
+        max-height: 200px !important;
+    }
     .marginLeft25XS {
         margin-left: 25px !important;
     }
