@@ -2464,3 +2464,10 @@ span.stars span {
     width: 80px !important;
     height: 60px !important;
 }
+
+.Separator {
+    height: 10px !important;
+    background-color: #00B8B8;
+    width: 100% !important;
+    margin-top: 10px !important;
+}
