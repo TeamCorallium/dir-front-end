@@ -245,7 +245,8 @@
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
         "LOGIN_PROBLEM": "Problemas de inicio de sesión",
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
-        "NETWORK_CONNECTION": "Conexión de red"
+        "NETWORK_CONNECTION": "Conexión de red",
+        "OUR_BACKERS": "Nuestros patrocinadores"
     },
     "admin": {
         "COLOR": "Color",

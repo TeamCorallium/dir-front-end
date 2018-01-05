@@ -245,7 +245,8 @@
         "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
         "LOGIN_PROBLEM": "登錄問題",
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
-        "NETWORK_CONNECTION": "網路連接"
+        "NETWORK_CONNECTION": "網路連接",
+        "OUR_BACKERS": "我们的赞助商"
     },
     "admin": {
         "COLOR": "顏色",
