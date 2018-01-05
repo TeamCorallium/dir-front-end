@@ -161,75 +161,111 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.backers = {
             slides: [{
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: 'Antonio Cedeno',
+                    secondBacker: 'Gold Backer'
                 },
                 {
                     name: 'Alejandro Ravelo',
-                    backers: 'Silver Backers'
+                    backers: 'Silver Backer',
+                    secondName: '',
+                    secondBacker: ''
                 }
 
             ]
