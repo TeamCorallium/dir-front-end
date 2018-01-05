@@ -2478,13 +2478,19 @@ span.stars span {
 }
 
 .ButtonPrev {
-    margin-top: -118px;
-    position: absolute;
-    margin-left: -50px;
+    margin-top: -140px;
+    position: absolute !important;
+    margin-left: -70px;
 }
 
 .ButtonNext {
-    position: absolute;
-    right: 0px;
-    margin-top: -118px !important;
+    position: absolute !important;
+    right: 0px !important;
+    margin-top: -140px !important;
+    margin-right: -20px !important;
+}
+
+.IconSlideBackers {
+    width: 60px !important;
+    height: 60px !important;
 }
