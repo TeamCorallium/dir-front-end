@@ -620,6 +620,9 @@
 }
 
 @media (max-width: 767px) {
+    .marginLeft25XS {
+        margin-left: 25px !important;
+    }
     .IconSlideBackers {
         width: 30px !important;
         height: 35px !important;
