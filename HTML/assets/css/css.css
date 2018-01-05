@@ -1421,7 +1421,8 @@ img-crop canvas {
 }
 
 .styleBoxBackers:hover {
-    box-shadow: 0 1px 7px -4px rgba(0, 0, 0, 0.9) !important;
+    box-shadow: 0 1px 7px -4px #00B8B8 !important;
+    color: #00B8B8 !important;
 }
 
 .buttonContainer {
