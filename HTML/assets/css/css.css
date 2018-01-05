@@ -624,10 +624,16 @@
 
 @media (max-width: 767px) {
     .track {
-        max-height: 200px !important;
+        max-height: 220px !important;
+    }
+    .slide {
+        min-width: 340px !important;
     }
     .marginLeft25XS {
         margin-left: 25px !important;
+    }
+    .marginLeft-40XS {
+        margin-left: -40px !important;
     }
     .IconSlideBackers {
         width: 30px !important;
