@@ -1425,6 +1425,10 @@ img-crop canvas {
     color: #00B8B8 !important;
 }
 
+.styleBoxBackersHover:hover {
+    color: #00B8B8 !important;
+}
+
 .buttonContainer {
     position: absolute !important;
     bottom: 15px !important;
