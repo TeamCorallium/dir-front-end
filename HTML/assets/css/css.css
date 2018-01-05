@@ -2470,3 +2470,15 @@ span.stars span {
     background-color: #00B8B8;
     width: 100% !important;
 }
+
+.ButtonPrev {
+    margin-top: -118px;
+    position: absolute;
+    margin-left: -50px;
+}
+
+.ButtonNext {
+    position: absolute;
+    right: 0px;
+    margin-top: -118px !important;
+}
