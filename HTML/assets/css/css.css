@@ -1427,6 +1427,7 @@ img-crop canvas {
 
 .hoverColor {
     color: inherit !important;
+    cursor: default !important;
 }
 
 .buttonContainer {
