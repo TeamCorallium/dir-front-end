@@ -67,6 +67,21 @@
 }
 
 @media (min-width: 768px) {
+    .IconSlideBackers {
+        width: 50px !important;
+        height: 60px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -350px !important;
+        z-index: 10;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -350px !important;
+        z-index: 10;
+    }
     .marginExploreUserHidden {
         margin-left: 37% !important;
         margin-top: 40px !important;
@@ -605,6 +620,21 @@
 }
 
 @media (max-width: 767px) {
+    .IconSlideBackers {
+        width: 30px !important;
+        height: 35px !important;
+    }
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -110px !important;
+        z-index: 10;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -110px !important;
+        z-index: 10;
+    }
     .pictureExploreUser {
         height: 100%;
         display: block;
@@ -2488,22 +2518,4 @@ span.stars span {
     right: 0px !important;
     margin-top: -140px !important;
     margin-right: -20px !important;
-}
-
-.IconSlideBackers {
-    width: 50px !important;
-    height: 60px !important;
-}
-
-.ButtonPrevCarousel {
-    position: absolute !important;
-    margin-top: -350px !important;
-    z-index: 10;
-}
-
-.ButtonNextCarousel {
-    position: absolute !important;
-    right: 0px !important;
-    margin-top: -350px !important;
-    z-index: 10;
 }

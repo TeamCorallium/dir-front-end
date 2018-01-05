@@ -158,6 +158,32 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
+        $scope.countBackers = 4;
+
+        if ($(window).width() >= 992) {
+            $scope.countBackers = 4;
+        } else if ($(window).width() >= 768) {
+            $scope.countBackers = 3;
+        } else if ($(window).width() >= 480) {
+            $scope.countBackers = 2;
+        } else {
+            $scope.countBackers = 1;
+        }
+
+        $(window).on("resize.doResize", function() {
+            $scope.$apply(function() {
+                if ($(window).width() >= 992) {
+                    $scope.countBackers = 4;
+                } else if ($(window).width() >= 768) {
+                    $scope.countBackers = 3;
+                } else if ($(window).width() >= 480) {
+                    $scope.countBackers = 2;
+                } else {
+                    $scope.countBackers = 1;
+                }
+            });
+        });
+
         $scope.backers = {
             slides: [{
                     name: 'Alejandro Ravelo',
