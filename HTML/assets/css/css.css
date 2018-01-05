@@ -67,6 +67,9 @@
 }
 
 @media (min-width: 768px) {
+    .marginRightButtonCarouselNext {
+        margin-right: 45px !important;
+    }
     .IconSlideBackers {
         width: 50px !important;
         height: 60px !important;
@@ -2521,4 +2524,9 @@ span.stars span {
     right: 0px !important;
     margin-top: -140px !important;
     margin-right: -20px !important;
+}
+
+.ButtonCarousel {
+    background-color: transparent;
+    border: 0px !important;
 }
