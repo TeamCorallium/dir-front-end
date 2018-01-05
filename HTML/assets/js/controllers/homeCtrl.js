@@ -158,5 +158,82 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
+        $scope.backers = {
+            slides: [{
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                },
+                {
+                    name: 'Alejandro Ravelo',
+                    backers: 'Silver Backers'
+                }
+
+            ]
+        };
+
     }
 ]);
