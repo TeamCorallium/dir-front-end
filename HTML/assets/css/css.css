@@ -2491,6 +2491,19 @@ span.stars span {
 }
 
 .IconSlideBackers {
-    width: 60px !important;
+    width: 50px !important;
     height: 60px !important;
+}
+
+.ButtonPrevCarousel {
+    position: absolute !important;
+    margin-top: -350px !important;
+    z-index: 10;
+}
+
+.ButtonNextCarousel {
+    position: absolute !important;
+    right: 0px !important;
+    margin-top: -350px !important;
+    z-index: 10;
 }
