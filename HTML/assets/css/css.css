@@ -623,6 +623,12 @@
 }
 
 @media (max-width: 767px) {
+    .paddingBottom0XS {
+        padding-bottom: 0px !important;
+    }
+    .borderNoneXS {
+        border: none !important;
+    }
     .track {
         max-height: 220px !important;
     }
