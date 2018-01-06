@@ -630,7 +630,7 @@
         border: none !important;
     }
     .track {
-        max-height: 220px !important;
+        max-height: 270px !important;
     }
     .slide {
         min-width: 340px !important;
@@ -640,6 +640,7 @@
     }
     .marginLeftCarouselXS {
         margin-left: -28px !important;
+        margin-top: 50px !important;
     }
     .IconSlideBackers {
         width: 30px !important;
