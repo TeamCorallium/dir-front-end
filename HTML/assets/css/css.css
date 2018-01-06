@@ -630,7 +630,7 @@
         border: none !important;
     }
     .track {
-        max-height: 270px !important;
+        max-height: 370px !important;
     }
     .slide {
         min-width: 340px !important;
@@ -834,6 +834,13 @@
 }
 
 @media (max-width: 480px) {
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
@@ -926,6 +933,13 @@
 }
 
 @media (max-width: 415px) {
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
@@ -1018,6 +1032,13 @@
 }
 
 @media (max-width: 375px) {
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
@@ -1110,6 +1131,13 @@
 }
 
 @media (max-width: 360px) {
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: 0px !important;
+        margin-top: 50px !important;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
@@ -1202,6 +1230,13 @@
 }
 
 @media (max-width: 320px) {
+    .track {
+        max-height: 270px !important;
+    }
+    .marginLeftCarouselXS {
+        margin-left: -20px !important;
+        margin-top: 50px !important;
+    }
     .imageBox {
         float: left !important;
         height: 138px !important;
