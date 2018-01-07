@@ -251,5 +251,9 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $('#openImage').modal('show');
         };
 
+        $scope.closeImage = function(num) {
+            $('#openImage').modal('hide');
+        };
+
     }
 ]);
