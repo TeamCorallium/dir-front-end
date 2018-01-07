@@ -216,17 +216,18 @@
             <div class="Separator"></div>
         </section>
     </div>
-</div>
-<div class="modal fade" id="openImage">
-    <div class="modal-dialog modal-md">
-        <div class="modal-content padding-0">
-            <div class="modal-body">
-                {{imageOpenModal}}
-                <!-- <img class="img-responsive" src="HTML/assets/images/slider/slide3.jpg" /> -->
+    <div class="modal fade" id="openImage">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content padding-0">
+                <div class="modal-body">
+                    {{imageOpenModal}}
+                    <img class="img-responsive" ng-src="{{imageOpenModal}}" />
+                </div>
             </div>
         </div>
     </div>
 </div>
+
 <script>
     jQuery(document).ready(function() {
         Main.init();
