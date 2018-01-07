@@ -234,6 +234,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.imageOpenModal = '';
         $scope.OpenImage = function(num) {
+            console.log("llego aqui" + num);
             switch (num) {
                 case 1:
                     $scope.imageOpenModal = 'HTML/assets/images/slider/slide1.jpg';
