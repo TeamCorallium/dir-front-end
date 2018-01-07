@@ -89,7 +89,7 @@
     }
     .styleButtonGallery {
         font-size: 50px !important;
-        margin-left: 20px !important;
+        margin-left: 23px !important;
         margin-top: 3px !important;
         color: white !important;
     }
@@ -657,7 +657,7 @@
         position: absolute !important;
         width: 40px !important;
         height: 40px !important;
-        margin-top: 30% !important;
+        margin-top: 27% !important;
         left: 0px !important;
         margin-left: 15px !important;
         background-color: black !important;
@@ -667,7 +667,7 @@
         position: absolute !important;
         width: 40px !important;
         height: 40px !important;
-        margin-top: 30% !important;
+        margin-top: 27% !important;
         right: 0px !important;
         margin-right: 15px !important;
         background-color: black !important;
