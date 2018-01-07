@@ -232,38 +232,22 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
+        $scope.galery = [
+            'HTML/assets/images/slider/slide1.jpg',
+            'HTML/assets/images/slider/slide2.jpg',
+            'HTML/assets/images/slider/slide3.jpg',
+            'HTML/assets/images/slider/slide1.jpg',
+            'HTML/assets/images/slider/slide2.jpg',
+            'HTML/assets/images/slider/slide3.jpg',
+            'HTML/assets/images/slider/slide2.jpg',
+            'HTML/assets/images/slider/slide3.jpg'
+        ];
+
         $scope.imageOpenModal = '';
 
         $scope.OpenImage = function(num) {
-            console.log("llego aqui" + num);
-            switch (num) {
-                case 1:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide1.jpg';
-                    break;
-                case 2:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
-                    break;
-                case 3:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
-                    break;
-                case 4:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide1.jpg';
-                    break;
-                case 5:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
-                    break;
-                case 6:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
-                    break;
-                case 7:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
-                    break;
-                case 8:
-                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
-                    break;
-            }
+            $scope.imageOpenModal = $scope.galery[num];
 
-            console.log($scope.imageOpenModal + " dir");
             $('#openImage').modal('show');
         };
 
