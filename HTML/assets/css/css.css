@@ -2615,4 +2615,10 @@ span.stars span {
 .fontSize40 {
     font-size: 40px !important;
     margin-left: 15px !important;
+    margin-top: 3px !important;
+    color: white !important;
+}
+
+.fontSize40:hover {
+    color: #00B8B8 !important;
 }
