@@ -255,5 +255,16 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             $('#openImage').modal('hide');
         };
 
+        $scope.prevImageModal = function() {
+            $scope.imageOpenModal--;
+            console.log($scope.imageOpenModal + " num");
+        };
+
+        $scope.nextImageModal = function() {
+            $scope.imageOpenModal++;
+            console.log($scope.imageOpenModal + " num");
+        }
+
+
     }
 ]);
