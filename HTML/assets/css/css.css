@@ -2612,13 +2612,13 @@ span.stars span {
     opacity: 0.4 !important
 }
 
-.fontSize40 {
-    font-size: 40px !important;
+.styleButtonGallery {
+    font-size: 30px !important;
     margin-left: 15px !important;
     margin-top: 3px !important;
     color: white !important;
 }
 
-.fontSize40:hover {
+.styleButtonGallery:hover {
     color: #00B8B8 !important;
 }
