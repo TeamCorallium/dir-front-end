@@ -232,5 +232,37 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
+        $scope.imageOpenModal = '';
+        $scope.OpenImage = function(num) {
+            switch (num) {
+                case 1:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide1.jpg';
+                    break;
+                case 2:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
+                    break;
+                case 3:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
+                    break;
+                case 4:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide1.jpg';
+                    break;
+                case 5:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
+                    break;
+                case 6:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
+                    break;
+                case 7:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide2.jpg';
+                    break;
+                case 8:
+                    $scope.imageOpenModal = 'HTML/assets/images/slider/slide3.jpg';
+                    break;
+            }
+
+            $('#openImage').modal('show');
+        };
+
     }
 ]);
