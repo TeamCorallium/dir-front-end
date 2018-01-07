@@ -246,7 +246,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         $scope.imageOpenModal = '';
 
         $scope.OpenImage = function(num) {
-            $scope.imageOpenModal = $scope.galery[num];
+            $scope.imageOpenModal = num;
 
             $('#openImage').modal('show');
         };
