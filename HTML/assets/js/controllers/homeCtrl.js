@@ -233,6 +233,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         $scope.imageOpenModal = '';
+
         $scope.OpenImage = function(num) {
             console.log("llego aqui" + num);
             switch (num) {
@@ -262,6 +263,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     break;
             }
 
+            console.log($scope.imageOpenModal + "dir");
             $('#openImage').modal('show');
         };
 
