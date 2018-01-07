@@ -222,7 +222,7 @@
                 <a id="prevImage" ng-click="prevImageModal()" ng-show="imageOpenModal != 0">
                     <i class="fa fa-angle-left styleButtonGallery"></i>
                 </a>
-                <a id="nextImage" ng-click="nextImageModal()" ng-show="imageOpenModal != galery.length">
+                <a id="nextImage" ng-click="nextImageModal()" ng-show="imageOpenModal != (galery.length - 1)">
                     <i class="fa fa-angle-right styleButtonGallery"></i>
                 </a>
                 <img ng-click="closeImage()" class="img-responsive" ng-src="{{galery[imageOpenModal]}}" />
