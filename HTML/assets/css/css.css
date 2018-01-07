@@ -2589,3 +2589,19 @@ span.stars span {
 .pointerZoomIn:hover {
     cursor: zoom-in !important;
 }
+
+#prevImage {
+    position: absolute !important;
+    float: left !important;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 30% !important;
+}
+
+#nextImage {
+    position: absolute !important;
+    float: right !important;
+    width: 40px !important;
+    height: 40px !important;
+    margin-top: 30% !important;
+}
