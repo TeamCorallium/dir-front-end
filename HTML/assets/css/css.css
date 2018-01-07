@@ -2592,16 +2592,27 @@ span.stars span {
 
 #prevImage {
     position: absolute !important;
-    float: left !important;
     width: 40px !important;
     height: 40px !important;
     margin-top: 30% !important;
+    left: 0px !important;
+    margin-left: 15px !important;
+    background-color: black !important;
+    opacity: 0.4 !important
 }
 
 #nextImage {
     position: absolute !important;
-    float: right !important;
     width: 40px !important;
     height: 40px !important;
     margin-top: 30% !important;
+    right: 0px !important;
+    margin-right: 15px !important;
+    background-color: black !important;
+    opacity: 0.4 !important
+}
+
+.fontSize40 {
+    font-size: 40px !important;
+    margin-left: 15px !important;
 }
