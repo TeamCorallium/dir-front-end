@@ -263,7 +263,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     break;
             }
 
-            console.log($scope.imageOpenModal + "dir");
+            console.log($scope.imageOpenModal + " dir");
             $('#openImage').modal('show');
         };
 
