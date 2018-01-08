@@ -544,7 +544,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
             });
         },
 
-        updateProfile: function(profileurl, info, rating, score, avatar, fullname, email) {
+        updateProfile: function(profileurl, info, rating, score, avatar, fullname, email, confVisible, confEmailVisible, confReceiveMails) {
             $http({
                 method: 'PUT',
                 url: profileurl,
@@ -578,6 +578,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'avatar': avatar,
                     'fullname': fullname,
                     'email': email,
+                    'confVisible': confVisible,
+                    'confEmailVisible': confEmailVisible,
+                    'confReceiveMails': confReciveMails,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function(data) {
