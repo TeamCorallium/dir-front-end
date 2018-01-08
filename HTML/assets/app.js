@@ -17,7 +17,8 @@ angular.module("pulloverDir", [
     'angular-notification-icons',
     'ngEmoticons',
     'uiSwitch',
-    'ui.carousel'
+    'ui.carousel',
+    'slickCarousel'
 ]);
 
 var app = angular.module('dirApp', ['pulloverDir']);
