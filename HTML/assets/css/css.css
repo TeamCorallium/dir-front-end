@@ -67,6 +67,9 @@
 }
 
 @media (min-width: 768px) {
+    .marginXSBackersCarousel {
+        margin-left: 30px !important;
+    }
     #prevImage {
         position: absolute !important;
         width: 60px !important;
