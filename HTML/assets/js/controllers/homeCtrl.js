@@ -265,7 +265,6 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.slickConfig3 = {
             method: {},
-            dots: true,
             infinite: false,
             speed: 300,
             slidesToShow: 4,

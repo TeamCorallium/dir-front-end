@@ -653,6 +653,9 @@
 }
 
 @media (max-width: 767px) {
+    .marginXSBackersCarousel {
+        margin-left: 40px !important;
+    }
     #prevImage {
         position: absolute !important;
         width: 40px !important;
@@ -989,6 +992,9 @@
 }
 
 @media (max-width: 415px) {
+    .marginXSBackersCarousel {
+        margin-left: 80px !important;
+    }
     .track {
         max-height: 300px !important;
     }
@@ -1088,6 +1094,9 @@
 }
 
 @media (max-width: 375px) {
+    .marginXSBackersCarousel {
+        margin-left: 60px !important;
+    }
     .track {
         max-height: 270px !important;
     }
@@ -1187,6 +1196,9 @@
 }
 
 @media (max-width: 360px) {
+    .marginXSBackersCarousel {
+        margin-left: 55px !important;
+    }
     .track {
         max-height: 270px !important;
     }
@@ -1286,6 +1298,9 @@
 }
 
 @media (max-width: 320px) {
+    .marginXSBackersCarousel {
+        margin-left: 30px !important;
+    }
     .track {
         max-height: 270px !important;
     }
