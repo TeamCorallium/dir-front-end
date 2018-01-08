@@ -81,6 +81,8 @@ module.exports = function(grunt) {
                     'bower_components/spin.js/spin.js',
                     'bower_components/angular-loading-spinner/angular-loading-spinner.js',
                     'bower_components/angular-ui-carousel/dist/ui-carousel.js',
+                    'bower_components/slick-carousel/slick/slick.js',
+                    'bower_components/angular-slick-carousel/dist/angular-slick.min.js',
                     'HTML/assets/*.js',
                     'HTML/assets/js/*.js',
                     'HTML/assets/js/**/*.js',

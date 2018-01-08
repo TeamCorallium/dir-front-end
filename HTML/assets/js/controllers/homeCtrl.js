@@ -180,57 +180,55 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
-        $scope.backers = {
-            slides: [{
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                },
-                {
-                    name: 'Alejandro Ravelo',
-                    backers: 'Silver Backer'
-                }
-            ]
-        };
+        $scope.backers = [{
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            },
+            {
+                name: 'Alejandro Ravelo',
+                backers: 'Silver Backer'
+            }
+        ];
 
         $scope.galery = [
             'HTML/assets/images/slider/slide1.jpg',
