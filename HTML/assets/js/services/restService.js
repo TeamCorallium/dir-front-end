@@ -580,7 +580,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'email': email,
                     'confVisible': confVisible,
                     'confEmailVisible': confEmailVisible,
-                    'confReceiveMails': confReciveMails,
+                    'confReceiveMails': confReceiveMails,
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function(data) {
