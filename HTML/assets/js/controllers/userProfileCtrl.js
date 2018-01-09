@@ -496,7 +496,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.cropCover = function() {
-            $scope.user.avatar = $scope.myCroppedCoverImage;
+            $scope.user.cover = $scope.myCroppedCoverImage;
             //return a promise that resolves with a File instance
             function urltoFile(url, filename, mimeType) {
                 return (fetch(url)
