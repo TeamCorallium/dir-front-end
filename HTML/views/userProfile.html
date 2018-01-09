@@ -1,6 +1,6 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
     <div>
-        <img class="pictureExploreUser" ng-src="user.cover" />
+        <img class="pictureExploreUser" ng-src="{{user.cover}}" />
         <a data-toggle="modal" data-target="#ModalImageCoverCropper" class="btn btn-o buttonChangeCover">
             <i class="ti-pencil-alt"></i>
             <label class="textColorWhite" translate="user_profile.CHANGE_COVER"></label>
@@ -660,7 +660,7 @@
 
     <!-- start: MODAL IMAGE COVER CROPPER-->
     <div class="modal fade" id="ModalImageCoverCropper">
-        <div class="modal-dialog modal-md">
+        <div class="modal-dialog modal-lg">
             <div class="modal-content padding-0">
                 <div class="modal-header padding-0">
                     <div class="padding-15">
@@ -676,7 +676,7 @@
                 <div class="modal-body">
                     <input type="file" img-cropper-fileread image="myCroppedCoverImage" />
                     <div>
-                        <canvas width="600" height="150" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="400" crop-height="200" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
+                        <canvas width="500" height="300" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="400" crop-height="100" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                     </div>
                 </div>
                 <div class="modal-footer">
