@@ -65,6 +65,17 @@ app.filter('cut', function() {
     };
 });
 
+app.controller("ImageCropperCtrl", ['$scope', function($scope) {
+    $scope.cropper = {};
+    $scope.cropper.sourceImage = null;
+    $scope.cropper.croppedImage = null;
+    $scope.bounds = {};
+    $scope.bounds.left = 0;
+    $scope.bounds.right = 0;
+    $scope.bounds.top = 0;
+    $scope.bounds.bottom = 0;
+}]);
+
 app.controller('FormController', function($scope) {})
 
 app.filter('passwordCount', [function() {
@@ -85,7 +96,7 @@ app.filter('passwordCount', [function() {
 //     };
 // }])
 
-app.directive('okPassword',[ function() {
+app.directive('okPassword', [function() {
     return {
         // restrict to only attribute and class
         restrict: 'AC',

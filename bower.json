@@ -74,7 +74,8 @@
     "sweetalert": "^1.0.0",
     "ngSweetAlert": "angular-sweetalert#^1.1.2",
     "angular-ui-carousel": "^0.1.10",
-    "angular-slick-carousel": "^3.1.7"
+    "angular-slick-carousel": "^3.1.7",
+    "angular-img-cropper": "^1.1.0"
   },
   "devDependencies": {
     "angular-translate": "^2.15.2"
