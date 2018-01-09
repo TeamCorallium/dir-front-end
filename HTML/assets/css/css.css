@@ -2674,8 +2674,8 @@ span.stars span {
 }
 
 .buttonChangeCover {
-    position: absolute;
-    margin-top: -40px;
+    position: absolute !important;
+    margin-top: -40px !important;
     right: 0px !important;
     margin-right: 10px !important;
 }
