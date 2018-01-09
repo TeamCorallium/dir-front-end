@@ -1,8 +1,9 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
     <div>
         <img class="pictureExploreUser" ng-src="HTML/assets/images/profile.jpg" />
-        <a data-toggle="modal" data-target="#ModalImageCropper" class="btn btn-o buttonChangeCover" translate="user_profile.CHANGE_COVER">
+        <a data-toggle="modal" data-target="#ModalImageCropper" class="btn btn-o buttonChangeCover">
             <i class="ti-pencil-alt"></i>
+            <label class="textColorWhite" translate="user_profile.CHANGE_COVER"></label>
         </a>
     </div>
     <div class="row backgroundWhite">
@@ -656,6 +657,35 @@
         </div>
     </div>
     <!-- end: MODAL LEAVE MESSAGE-->
+
+    <!-- start: MODAL IMAGE COVER CROPPER-->
+    <div class="modal fade" id="ModalImageCoverCropper">
+        <div class="modal-dialog modal-md">
+            <div class="modal-content padding-0">
+                <div class="modal-header padding-0">
+                    <div class="padding-15">
+                        <button type="button" class="close closeModals margin-top--10" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title">
+                            <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
+                            <label translate="edit_profile.CROP_IMAGE"></label>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-body">
+                    <input type="file" id="fileInput" class="btn btn-primary LoadImageModalButton" onchange="angular.element(this).scope().uploadFileCover(this.files[0])">
+                    <div class="cropArea margin-top-10">
+                        <img-crop image="myImage" result-image-size="100" result-image="myCroppedCoverImage" area-type="{square}"></img-crop>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end: start: MODAL IMAGE COVER CROPPER-->
 </div>
 <script type="text/javascript">
     $(function() {

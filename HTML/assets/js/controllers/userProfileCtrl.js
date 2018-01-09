@@ -17,6 +17,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             score: '',
             rating: '',
             avatar: 'HTML/assets/images/default-user.png',
+            cover: '',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -38,6 +39,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         }
 
         $scope.myImage = '';
+        $scope.myImageCover = '';
         $scope.myCroppedImage = '';
         $scope.currentPage = 1;
         $scope.hasNext = '';
@@ -65,6 +67,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 imageReader.onload = function(image) {
                     $scope.$apply(function($scope) {
                         $scope.myImage = image.target.result;
+                    });
+                };
+                imageReader.readAsDataURL(file);
+            }
+        };
+
+        $scope.uploadFileCover = function(file) {
+            if (file) {
+                // ng-img-crop
+                var imageReader = new FileReader();
+                imageReader.onload = function(image) {
+                    $scope.$apply(function($scope) {
+                        $scope.myImageCover = image.target.result;
                     });
                 };
                 imageReader.readAsDataURL(file);
@@ -478,6 +493,31 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 })
 
             $('#ModalImageCropper').modal('hide');
+        };
+
+        $scope.cropCover = function() {
+            $scope.user.avatar = $scope.myCroppedCoverImage;
+            //return a promise that resolves with a File instance
+            function urltoFile(url, filename, mimeType) {
+                return (fetch(url)
+                    .then(function(res) {
+                        return res.arrayBuffer();
+                    })
+                    .then(function(buf) {
+                        return new File([buf], filename, {
+                            type: mimeType
+                        });
+                    })
+                );
+            }
+
+            urltoFile($scope.myCroppedCoverImage, 'filename.png', 'image/png')
+                .then(function(file) {
+                    console.log(file);
+                    $scope.user.cover = file;
+                })
+
+            $('#ModalImageCoverCropper').modal('hide');
         };
 
         $rootScope.$on('imageDownloadSuccesfull', function(event, data) {
