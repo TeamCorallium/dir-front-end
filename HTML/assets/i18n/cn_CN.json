@@ -149,7 +149,8 @@
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
         "ALREADY_CLAPPED": "你已經拍了這個使用者",
-        "NO_UNFOLLOW": "嘗試追隨此使用者時出錯"
+        "NO_UNFOLLOW": "嘗試追隨此使用者時出錯",
+        "CHANGE_COVER": "更改封面"
     },
     "inbox": {
         "BROWSE": "流覽",

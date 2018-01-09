@@ -120,7 +120,8 @@
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
         "LOGIN_PROBLEM": "Problemas de inicio de sesión",
         "SEE_PROFILE": "Ver perfil",
-        "NO_UNFOLLOW": "Error al intentar dejar de seguir este usuario"
+        "NO_UNFOLLOW": "Error al intentar dejar de seguir este usuario",
+        "CHANGE_COVER": "Cambiar portada"
     },
     "view_profile": {
         "RATING": "Valoración:",

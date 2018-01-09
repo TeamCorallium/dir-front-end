@@ -120,7 +120,8 @@
         "WE_PROBLEM": "We detected some problems, please try again",
         "LOGIN_PROBLEM": "Login Problems",
         "SEE_PROFILE": "See Profile",
-        "NO_UNFOLLOW": "Error when attempting to unfollow this user"
+        "NO_UNFOLLOW": "Error when attempting to unfollow this user",
+        "CHANGE_COVER": "Change cover"
     },
     "view_profile": {
         "RATING": "Rating:",
