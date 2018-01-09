@@ -1,6 +1,10 @@
 app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert", "$translate",
     function($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert, $translate) {
 
+        if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
+            $state.go('home');
+        }
+
         $scope.inboxFlag = true;
         $rootScope.OptionsEdit = false;
         $scope.messagesInbox = [];

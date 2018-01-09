@@ -1,6 +1,10 @@
 app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate", "filterFilter",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate, filterFilter) {
 
+        if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
+            $state.go('home');
+        }
+
         $rootScope.OptionsEdit = false;
         $rootScope.notificationCount = 0;
 
