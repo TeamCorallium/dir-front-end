@@ -21,4 +21,4 @@ angular.module("pulloverDir", [
     'slickCarousel'
 ]);
 
-var app = angular.module('dirApp', ['pulloverDir', require('angular-image-cropper')]);
+var app = angular.module('dirApp', ['pulloverDir']);
