@@ -55,6 +55,7 @@ module.exports = function(grunt) {
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.js',
                     'bower_components/angular/angular.js',
+                    'node_modules/angular-image-cropper/src/index.js',
                     'bower_components/bootstrap-hover-dropdown/bootstrap-hover-dropdown.js',
                     'bower_components/sticky-kit/jquery.sticky-kit.js',
                     'bower_components/jquery.appear.js/jquery.appear.js',
