@@ -29,6 +29,7 @@
             "integrity": "sha1-5gyR1puUzxNJzjigT6j5LWAD0qw=",
             "version": "https://registry.npmjs.org/angular/-/angular-1.4.9.tgz"
         },
+        "angular-image-cropper": "^1.2.0",
         "angular-img-cropper": {
             "integrity": "sha1-/wcim6A0tGJbaiPGpJiBruGNEMk=",
             "version": "https://registry.npmjs.org/angular-img-cropper/-/angular-img-cropper-0.0.2.tgz"
