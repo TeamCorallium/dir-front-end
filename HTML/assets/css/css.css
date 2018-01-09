@@ -2679,3 +2679,7 @@ span.stars span {
     right: 0px !important;
     margin-right: 10px !important;
 }
+
+img-crop#imageCover canvas {
+    width: 80% !important;
+}
