@@ -83,7 +83,7 @@ module.exports = function(grunt) {
                     'bower_components/angular-ui-carousel/dist/ui-carousel.js',
                     'bower_components/slick-carousel/slick/slick.js',
                     'bower_components/angular-slick-carousel/dist/angular-slick.min.js',
-                    'node_modules/angular-image-cropper/src/imageCropper.js',
+                    'node_modules/angular-image-cropper/src/index.js',
                     'HTML/assets/*.js',
                     'HTML/assets/js/*.js',
                     'HTML/assets/js/**/*.js',
