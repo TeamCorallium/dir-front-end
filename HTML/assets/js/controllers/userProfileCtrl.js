@@ -17,7 +17,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             score: '',
             rating: '',
             avatar: 'HTML/assets/images/default-user.png',
-            cover: '',
+            cover: 'HTML/assets/images/profile.jpg',
             id: '',
             qrcode: '',
             profileurl: '',

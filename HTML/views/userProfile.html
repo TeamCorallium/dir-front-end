@@ -1,6 +1,6 @@
 <div class="profile-padding" ng-controller="UserProfileCtrl">
     <div>
-        <img class="pictureExploreUser" ng-src="HTML/assets/images/profile.jpg" />
+        <img class="pictureExploreUser" ng-src="user.cover" />
         <a data-toggle="modal" data-target="#ModalImageCoverCropper" class="btn btn-o buttonChangeCover">
             <i class="ti-pencil-alt"></i>
             <label class="textColorWhite" translate="user_profile.CHANGE_COVER"></label>
@@ -676,13 +676,11 @@
                 <div class="modal-body">
                     <input type="file" img-cropper-fileread image="myCroppedCoverImage" />
                     <div>
-                        <canvas width="500" height="300" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="400" crop-height="200" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
+                        <canvas width="600" height="150" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="400" crop-height="200" keep-aspect="true" touch-radius="30" crop-area-bounds="bounds"></canvas>
                     </div>
-                    <div>Cropped Image (Left: {{bounds.left}} Right: {{bounds.right}} Top: {{bounds.top}} Bottom: {{bounds.bottom}})</div>
-                    <div ng-show="user.cover!=null"><img ng-src="{{user.cover}}" /></div>
                 </div>
                 <div class="modal-footer">
-                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="crop()" translate="edit_profile.CROP"></a>
+                    <a type="button" class="btn btn-primary pull-right ButtonRadius margin-left-5 margin-right-5" ng-click="cropCover()" translate="edit_profile.CROP"></a>
                 </div>
             </div>
         </div>
