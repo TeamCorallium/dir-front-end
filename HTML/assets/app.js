@@ -18,8 +18,7 @@ angular.module("pulloverDir", [
     'ngEmoticons',
     'uiSwitch',
     'ui.carousel',
-    'slickCarousel',
-    'imageCropper'
+    'slickCarousel'
 ]);
 
-var app = angular.module('dirApp', ['pulloverDir']);
+var app = angular.module('dirApp', ['pulloverDir', require('angular-image-cropper')]);
