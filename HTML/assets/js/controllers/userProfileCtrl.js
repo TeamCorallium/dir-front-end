@@ -31,8 +31,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             configReceiveEmails: ''
         };
 
-        $scope.coverCopy = '';
-
         $scope.message = {
             username: '',
             user: '',
@@ -298,7 +296,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var url = RestService.coverPicture + $scope.user.coverId + "/";
             url = url.replace("/api", RestService.urlBaseDir);
             if ($scope.user.cover instanceof File) {
-                angular.copy($scope.user.cover, $scope.coverCopy);
                 RestService.updateCover(url, $scope.user.cover);
             }
         };
@@ -1318,8 +1315,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $rootScope.$on('updateCover', function(event, data) {
-            console.log($scope.user.cover + " " + $scope.coverCopy);
-            $scope.user.cover = $scope.coverCopy;
+            getCoverPicture($scope.user.username);
         });
     }
 ]);
