@@ -18,6 +18,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             rating: '',
             avatar: 'HTML/assets/images/default-user.png',
             cover: '',
+            coverId: '',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -218,6 +219,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     function(data) {
                         if (data.length > 0) {
                             $scope.user.cover = $scope.getCover(data[0].banner);
+                            $scope.user.coverId = data[0].id;
                         }
                     },
                     function(errResponse) {
@@ -287,6 +289,14 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 RestService.updateProfile(url, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email, $scope.user.configVisible, $scope.user.configEmailVisible, $scope.user.configReceiveEmails);
             } else {
                 RestService.updateProfileWithOutAvatar(url, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
+            }
+        };
+
+        $scope.saveCover = function() {
+            var url = RestService.coverPicture + $scope.user.coverId;
+            url = url.replace("/api", RestService.urlBaseDir);
+            if ($scope.user.cover instanceof File) {
+                RestService.updateCover(url, $scope.user.cover);
             }
         };
 
@@ -499,7 +509,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             urltoFile($scope.myCroppedImage, 'filename.png', 'image/png')
                 .then(function(file) {
-                    console.log(file);
                     $scope.user.avatar = file;
                 })
 
