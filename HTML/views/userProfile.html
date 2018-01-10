@@ -284,11 +284,11 @@
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/message.png"></img>
                                                             <label class="pointerHover" translate="user_profile.LEAVE_MESSAGE"></label>
                                                         </a>
-                                                        <a ng-click="follow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="!follower.currentFollowed">
+                                                        <a ng-click="follow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="!follower.currentFollowed">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/follow.png">
                                                             <label class="pointerHover" translate="user_profile.FOLLOW"></label>
                                                         </a>
-                                                        <a ng-click="unfollow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="follower.currentFollowed">
+                                                        <a ng-click="unfollow(follower.userId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="follower.currentFollowed">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/unfollow.png">
                                                             <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
                                                         </a>
@@ -305,7 +305,7 @@
                                         <li class="borderBottomNone" ng-repeat="followTo in following">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
                                                 <div class="post-image marginPictureFollowerFollowingXS">
-                                                    <div class="img-thumbnail marginPictureFollowerFollowingXS">
+                                                    <div class="img-thumbnail">
                                                         <a ng-click="goToProfile(followTo.profileUserName)">
                                                             <img ng-src="{{getAvatar(followTo.profileAvatar)}}" class="img-responsive">
                                                         </a>
@@ -324,11 +324,11 @@
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/message.png"></img>
                                                             <label class="pointerHover" translate="user_profile.LEAVE_MESSAGE"></label>
                                                         </a>
-                                                        <a ng-click="followFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="!followTo.stateFollow">
+                                                        <a ng-click="followFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="!followTo.stateFollow">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/follow.png">
                                                             <label class="pointerHover" translate="user_profile.FOLLOW"></label>
                                                         </a>
-                                                        <a ng-click="unfollowFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4" ng-show="followTo.stateFollow">
+                                                        <a ng-click="unfollowFollowing(followTo.profileId, $index)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 PullRightXSif" ng-show="followTo.stateFollow">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/unfollow.png">
                                                             <label class="pointerHover" translate="user_profile.UNFOLLOW"></label>
                                                         </a>

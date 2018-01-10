@@ -1319,6 +1319,9 @@
 }
 
 @media (max-width: 320px) {
+    .PullRightXSif {
+        float: right !important;
+    }
     .HiddenXSif {
         display: none !important;
     }

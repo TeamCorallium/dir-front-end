@@ -1,4 +1,4 @@
-app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
+app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, $translate) {
 
         $rootScope.OptionsEdit = false;

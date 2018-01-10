@@ -185,10 +185,10 @@
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="sn in user.socialnetworks">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                                <a class="text-dark" ng-click="goToLink(sn.url)">
-                                                    <i class="{{sn.type}}"></i> {{sn.name}}
+                                                <a class="text-dark font-size-18" ng-click="goToLink(sn.url)">
+                                                    <i class="{{sn.type}} margin-right-8"></i> {{sn.name}}
                                                 </a>
-                                                <h5 ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
+                                                <h5 class="margin-top-10" ng-bind-html="sn.url | emoticons:{'linkTarget':'_blank'}" ng-show="!EditSocialFlag"></h5>
                                             </div>
                                         </li>
                                     </ul>
