@@ -296,8 +296,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var url = RestService.coverPicture + $scope.user.coverId + "/";
             url = url.replace("/api", RestService.urlBaseDir);
             if ($scope.user.cover instanceof File) {
-                console.log($scope.user.cover + " cover");
-                RestService.updateCover(url, $scope.user.cover);
+                var coverCopy = '';
+                angular.copy($scope.user.cover, coverCopy);
+                RestService.updateCover(url, coverCopy);
             }
         };
 
