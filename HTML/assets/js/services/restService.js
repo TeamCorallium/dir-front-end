@@ -26,6 +26,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var notifications = 'http://www.dir.com:8888/api/notifications/';
     var notificationsUnreaded = 'http://www.dir.com:8888/api/notifications-unreaded/';
     var profileConfig = 'http://www.dir.com:8888/api/setprofileconfig/';
+    var coverPicture = 'http://www.dir.com:8888/api/mediafiles/';
 
     // var tshirt = 'https://www.dirstuff.com/server/api/tshirts/';
     // var users = 'https://www.dirstuff.com/server/api/users/';
@@ -53,6 +54,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     // var notifications = 'https://www.dirstuff.com/server/api/notifications/';
     // var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
     // var profileConfig = 'https://www.dirstuff.com/server/api/setprofileconfig/';
+    // var coverPicture = 'http://www.dirstuff.com/server/api/mediafiles/';
 
     // var urlBase = '/server/api';
     var urlBase = '/api';
@@ -1026,6 +1028,22 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
 
         fetchSocialNetworks: function(username) {
             return $http.get(socialnetwork + "?username=" + username)
+                .then(
+                    function(response) {
+                        return response.data;
+                    },
+                    function(response, status, header, config, statusText) {
+                        if (status == 403) {
+                            $rootScope.$broadcast('forbidden', username);
+                        } else {
+                            $rootScope.$broadcast('LoginNetworkConnectionError');
+                        }
+                    }
+                );
+        },
+
+        fetchCoverPicture: function(username) {
+            return $http.get(coverPicture + "?username=" + username)
                 .then(
                     function(response) {
                         return response.data;

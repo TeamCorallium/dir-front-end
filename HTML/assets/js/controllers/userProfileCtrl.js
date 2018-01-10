@@ -103,6 +103,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                             getSnippets(data[0].username, 1);
                             getSocialNetworks(data[0].username);
+                            getCoverPicture(data[0].username);
 
                         } else {
                             $state.go('home');
@@ -207,6 +208,22 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     function(data) {
                         for (var i = 0; i < data.length; i++) {
                             $scope.user.socialnetworks.push(data[i]);
+                        }
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        var getCoverPicture = function(username) {
+            $scope.user.cover = '';
+            RestService.fetchCoverPicture(username)
+                .then(
+                    function(data) {
+                        if (data.length > 0) {
+                            $scope.user.cover = data[0].banner;
+                            console.log($scope.user.cover + "cover");
                         }
                     },
                     function(errResponse) {
