@@ -124,12 +124,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         if (data != undefined) {
                             $scope.user.info = data.info;
-                            if (data.avatar != '' && data.avatar != null) {
-                                var avatarArray = data.avatar.split("/");
-                                $scope.user.avatar = RestService.imageDir + avatarArray[avatarArray.length - 1];
-                            } else {
-                                $scope.user.avatar = 'HTML/assets/images/default-user.png';
-                            }
+                            $scope.user.avata = getAvatar(data.avatar);
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
                             $scope.user.score = data.score;
@@ -222,8 +217,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 .then(
                     function(data) {
                         if (data.length > 0) {
-                            $scope.user.cover = data[0].banner;
-                            console.log($scope.user.cover + "cover");
+                            $scope.user.cover = getCover(data[0].banner);
                         }
                     },
                     function(errResponse) {
@@ -592,6 +586,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
 
             return dirAvatar;
+        };
+
+        $scope.getCover = function(cover) {
+            var dirCover = '';
+
+            if (cover != '' && cover != null) {
+                var coverArray = cover.split("/");
+                dirCover = RestService.imageDir + coverArray[coverArray.length - 1];
+            } else {
+                dirAvatar = 'HTML/assets/images/profile.jpg';
+            }
+
+            return dirCover;
         };
 
         $scope.noPrevious = function() {
