@@ -124,7 +124,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         if (data != undefined) {
                             $scope.user.info = data.info;
-                            $scope.user.avata = getAvatar(data.avatar);
+                            $scope.user.avata = $scope.getAvatar(data.avatar);
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
                             $scope.user.score = data.score;
@@ -217,7 +217,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 .then(
                     function(data) {
                         if (data.length > 0) {
-                            $scope.user.cover = getCover(data[0].banner);
+                            $scope.user.cover = $scope.getCover(data[0].banner);
                         }
                     },
                     function(errResponse) {
