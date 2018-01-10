@@ -17,7 +17,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             score: '',
             rating: '',
             avatar: 'HTML/assets/images/default-user.png',
-            cover: 'HTML/assets/images/profile.jpg',
+            cover: '',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -124,7 +124,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         if (data != undefined) {
                             $scope.user.info = data.info;
-                            $scope.user.avata = $scope.getAvatar(data.avatar);
+                            $scope.user.avatar = $scope.getAvatar(data.avatar);
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
                             $scope.user.score = data.score;
