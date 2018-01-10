@@ -264,7 +264,7 @@
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="follower in followers">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                                <div class="post-image">
+                                                <div class="post-image marginPictureFollowerFollowingXS">
                                                     <div class="img-thumbnail">
                                                         <a ng-click="goToProfile(follower.username)">
                                                             <img ng-src="{{getAvatar(follower.avatar)}}" class="img-responsive">
@@ -276,7 +276,7 @@
                                                     <a class="nameFollowerFollowing" ng-hide="follower.fullName == ''" ng-click="goToProfile(follower.username)">{{follower.fullName}}</a>
                                                     <h5 class="borderFollowerFollowing">{{follower.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
-                                                        <a ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                        <a ng-click="goToProfile(follower.username)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 HiddenXSif">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
                                                             <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
                                                         </a>
@@ -304,8 +304,8 @@
                                     <ul class="post-list">
                                         <li class="borderBottomNone" ng-repeat="followTo in following">
                                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 borderBox margin-bottom-10 padding-top-15 padding-bottom-5 backgroundWhite">
-                                                <div class="post-image">
-                                                    <div class="img-thumbnail">
+                                                <div class="post-image marginPictureFollowerFollowingXS">
+                                                    <div class="img-thumbnail marginPictureFollowerFollowingXS">
                                                         <a ng-click="goToProfile(followTo.profileUserName)">
                                                             <img ng-src="{{getAvatar(followTo.profileAvatar)}}" class="img-responsive">
                                                         </a>
@@ -316,7 +316,7 @@
                                                     <a class="nameFollowerFollowing" ng-hide="followTo.profileFullName == ''" ng-click="goToProfile(followTo.profileUserName)">{{followTo.profileFullName}}</a>
                                                     <h5 class="borderFollowerFollowing">{{followTo.profileInfo | htmlToPlaintext | words:10 :true}}</h5>
                                                     <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 center padding-left-0 padding-right-0">
-                                                        <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                                        <a ng-click="goToProfile(followTo.profileUserName)" class="col-xs-4 col-sm-4 col-md-4 col-lg-4 HiddenXSif">
                                                             <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
                                                             <label class="pointerHover" translate="user_profile.SEE_PROFILE"></label>
                                                         </a>

@@ -659,6 +659,9 @@
 }
 
 @media (max-width: 767px) {
+    .marginPictureFollowerFollowingXS {
+        margin-left: 0 !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 10px !important;
     }
@@ -899,6 +902,9 @@
 }
 
 @media (max-width: 480px) {
+    .marginPictureFollowerFollowingXS {
+        margin-left: 42% !important;
+    }
     .track {
         max-height: 320px !important;
     }
@@ -998,6 +1004,9 @@
 }
 
 @media (max-width: 415px) {
+    .marginPictureFollowerFollowingXS {
+        margin-left: 40% !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 80px !important;
     }
@@ -1100,6 +1109,9 @@
 }
 
 @media (max-width: 375px) {
+    .marginPictureFollowerFollowingXS {
+        margin-left: 38% !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 60px !important;
     }
@@ -1202,6 +1214,9 @@
 }
 
 @media (max-width: 360px) {
+    .marginPictureFollowerFollowingXS {
+        margin-left: 37% !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 55px !important;
     }
@@ -1304,6 +1319,12 @@
 }
 
 @media (max-width: 320px) {
+    .HiddenXSif {
+        display: none !important;
+    }
+    .marginPictureFollowerFollowingXS {
+        margin-left: 35% !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 30px !important;
     }
