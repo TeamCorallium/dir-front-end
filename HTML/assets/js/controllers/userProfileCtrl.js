@@ -533,6 +533,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             urltoFile($scope.user.cover, 'filename.png', 'image/png')
                 .then(function(file) {
                     $scope.user.cover = file;
+                    $scope.saveCover();
                 })
 
             $('#ModalImageCoverCropper').modal('hide');
