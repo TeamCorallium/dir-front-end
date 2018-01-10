@@ -579,7 +579,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                     'csrfmiddlewaretoken': $cookies.get('csrftoken')
                 }
             }).success(function(data) {
-                $rootScope.$broadcast('updateCover');
+                // $rootScope.$broadcast('updateCover');
             }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {
                     $rootScope.$broadcast('forbidden', username);
