@@ -231,14 +231,14 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         ];
 
         $scope.galery = [
-            'HTML/assets/images/slider/slide1.jpg',
-            'HTML/assets/images/slider/slide2.jpg',
-            'HTML/assets/images/slider/slide3.jpg',
-            'HTML/assets/images/slider/slide1.jpg',
-            'HTML/assets/images/slider/slide2.jpg',
-            'HTML/assets/images/slider/slide3.jpg',
-            'HTML/assets/images/slider/slide2.jpg',
-            'HTML/assets/images/slider/slide3.jpg'
+            'HTML/assets/images/gallery/1.JPG',
+            'HTML/assets/images/gallery/2.JPG',
+            'HTML/assets/images/gallery/3.JPG',
+            'HTML/assets/images/gallery/4.JPG',
+            'HTML/assets/images/gallery/5.JPG',
+            'HTML/assets/images/gallery/6.JPG',
+            'HTML/assets/images/gallery/7.JPG',
+            'HTML/assets/images/gallery/8.JPG'
         ];
 
         $scope.imageOpenModal = '';
