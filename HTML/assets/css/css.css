@@ -125,6 +125,7 @@
         width: 30px !important;
         background-color: transparent !important;
         border: none !important;
+        margin-right: 20px !important;
     }
     .marginExploreUserHidden {
         margin-left: 37% !important;
@@ -754,6 +755,7 @@
         width: 30px !important;
         background-color: transparent !important;
         border: none !important;
+        margin-right: 20px !important;
     }
     .pictureExploreUser {
         height: 100%;
@@ -2782,4 +2784,8 @@ span.stars span {
 
 .font-size-17 {
     font-size: 17px !important;
+}
+
+.width30 {
+    width: 30px !important;
 }
