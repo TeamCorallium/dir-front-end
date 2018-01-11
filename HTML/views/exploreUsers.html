@@ -136,7 +136,7 @@
                                         <img ng-show="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/visible.png"></img>
                                         <img ng-hide="profile.confVisible" class="IconSnippet iconEye" ng-src="HTML/assets/images/hide.png"></img>
                                         <div class="imageBox backgroundWhite border-radius50">
-                                            <img ng-src="{{profile.avatar}}" class="img-circle imgProfile" ng-click="goToProfile(profile.owner)" />
+                                            <img ng-src="{{profile.avatar}}" class="img-circle imgProfile pointerHover" ng-click="goToProfile(profile.owner)" />
                                         </div>
                                         <div class="col-xs-12 center margin-top-5">
                                             <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
