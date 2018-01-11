@@ -3,6 +3,11 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.errorMessage = '';
 
+        $scope.username = '';
+        $scope.password = '';
+        $scope.email = '';
+        $scope.pin = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -69,6 +74,10 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             $('#myModalRegisterHome').modal('hide');
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
+            $scope.username = '';
+            $scope.password = '';
+            $scope.email = '';
+            $scope.pin = '';
             RestService.login(data.username, data.password);
         });
 
