@@ -67,6 +67,12 @@
 }
 
 @media (min-width: 768px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 300px !important;
+        margin-left: 50px !important;
+        color: white !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 10px !important;
     }
@@ -429,6 +435,12 @@
 }
 
 @media (min-width: 992px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 380px !important;
+        margin-left: 50px !important;
+        color: white !important;
+    }
     .marginXSBackersCarousel {
         margin-left: 30px !important;
     }
@@ -659,6 +671,12 @@
 }
 
 @media (max-width: 767px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 250px !important;
+        margin-left: 20px !important;
+        color: white !important;
+    }
     .marginPictureFollowerFollowingXS {
         margin-left: 0 !important;
     }
@@ -902,6 +920,12 @@
 }
 
 @media (max-width: 480px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 200px !important;
+        margin-left: 130px !important;
+        color: white !important;
+    }
     .marginPictureFollowerFollowingXS {
         margin-left: 42% !important;
     }
@@ -1004,6 +1028,12 @@
 }
 
 @media (max-width: 415px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 180px !important;
+        margin-left: 95px !important;
+        color: white !important;
+    }
     .marginPictureFollowerFollowingXS {
         margin-left: 40% !important;
     }
@@ -1109,6 +1139,12 @@
 }
 
 @media (max-width: 375px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 140px !important;
+        margin-left: 75px !important;
+        color: white !important;
+    }
     .marginPictureFollowerFollowingXS {
         margin-left: 38% !important;
     }
@@ -1214,6 +1250,12 @@
 }
 
 @media (max-width: 360px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 140px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
     .marginPictureFollowerFollowingXS {
         margin-left: 37% !important;
     }
@@ -1319,6 +1361,12 @@
 }
 
 @media (max-width: 320px) {
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 140px !important;
+        margin-left: 55px !important;
+        color: white !important;
+    }
     .PullRightXSif {
         float: right !important;
     }
@@ -2718,11 +2766,4 @@ span.stars span {
     width: 27px !important;
     height: 20px !important;
     margin-top: -3px;
-}
-
-.ButtonCarouselPosition {
-    position: absolute !important;
-    margin-top: 350px !important;
-    margin-left: 100px !important;
-    color: white !important;
 }
