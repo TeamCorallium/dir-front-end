@@ -247,7 +247,10 @@
         "LOGIN_PROBLEM": "登錄問題",
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
-        "OUR_BACKERS": "我们的赞助商"
+        "OUR_BACKERS": "我们的赞助商",
+        "TITLE_GALLERY": "",
+        "TEXT_GALLERY": "",
+        "LINE_BLUE": ""
     },
     "admin": {
         "COLOR": "顏色",

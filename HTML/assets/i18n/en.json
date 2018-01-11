@@ -230,7 +230,7 @@
         "ENTER_EMAIL": "Enter your email address"
     },
     "home": {
-        "TEXT_TSHIRTS": "T-shirts with technology",
+        "TEXT_TSHIRTS": "Dir Stuff Portal",
         "TEXT_HOME": "A new way to reach your customers, to contact you and visit your business.",
         "REGISTER": "Register",
         "LOG_IN": "Log In",
@@ -247,7 +247,10 @@
         "LOGIN_PROBLEM": "Login Problems",
         "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
         "NETWORK_CONNECTION": "Network Connection",
-        "OUR_BACKERS": "Our Backers"
+        "OUR_BACKERS": "Our Backers",
+        "TITLE_GALLERY": "",
+        "TEXT_GALLERY": "",
+        "LINE_BLUE": "Back our Kickstarter campaign"
     },
     "admin": {
         "COLOR": "Color",
