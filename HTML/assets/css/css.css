@@ -69,7 +69,7 @@
 @media (min-width: 768px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 300px !important;
+        margin-top: 175px !important;
         margin-left: 50px !important;
         color: white !important;
     }
@@ -437,7 +437,7 @@
 @media (min-width: 992px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 380px !important;
+        margin-top: 230px !important;
         margin-left: 50px !important;
         color: white !important;
     }
@@ -673,8 +673,8 @@
 @media (max-width: 767px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 250px !important;
-        margin-left: 20px !important;
+        margin-top: 102px !important;
+        margin-left: 280px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -922,7 +922,7 @@
 @media (max-width: 480px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 200px !important;
+        margin-top: 77px !important;
         margin-left: 130px !important;
         color: white !important;
     }
@@ -1030,8 +1030,8 @@
 @media (max-width: 415px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 180px !important;
-        margin-left: 95px !important;
+        margin-top: 67px !important;
+        margin-left: 100px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1141,8 +1141,8 @@
 @media (max-width: 375px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 140px !important;
-        margin-left: 75px !important;
+        margin-top: 53px !important;
+        margin-left: 80px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1252,8 +1252,8 @@
 @media (max-width: 360px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 140px !important;
-        margin-left: 70px !important;
+        margin-top: 53px !important;
+        margin-left: 74px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1363,8 +1363,8 @@
 @media (max-width: 320px) {
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 140px !important;
-        margin-left: 55px !important;
+        margin-top: 53px !important;
+        margin-left: 56px !important;
         color: white !important;
     }
     .PullRightXSif {
