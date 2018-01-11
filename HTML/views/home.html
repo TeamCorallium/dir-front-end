@@ -1,5 +1,5 @@
 <div class="main-content-home" ng-controller="HomeCtrl">
-    <ui-carousel class="margin-bottom-0" slides="fade.slides" arrows="true" slides-to-show="3" slides-to-scroll="1" fade="true" initial-slide="3" infinite="true">
+    <ui-carousel class="margin-bottom-0" slides="fade.slides" arrows="true" slides-to-show="3" slides-to-scroll="1" fade="true" initial-slide="2" infinite="true">
         <carousel-item>
             <div class="row ButtonCarouselPosition">
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -22,10 +22,14 @@
             </div>
         </carousel-item>
         <carousel-prev>
-            <button class="ButtonPrevCarousel"><img class="IconPopular" ng-src="HTML/assets/images/prevWhite.png"></img></button>
+            <button class="ButtonPrevCarousel">
+                <img ng-src="HTML/assets/images/prevWhite.png"></img>
+            </button>
         </carousel-prev>
         <carousel-next>
-            <button class="ButtonNextCarousel"><img class="IconPopular" ng-src="HTML/assets/images/nextWhite.png"></img></button>
+            <button class="ButtonNextCarousel">
+                <img ng-src="HTML/assets/images/nextWhite.png"></img>
+            </button>
         </carousel-next>
     </ui-carousel>
     <section class="container-fluid container-fullw bg-white borderBottomNone">
