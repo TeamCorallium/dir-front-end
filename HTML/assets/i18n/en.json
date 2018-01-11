@@ -238,7 +238,7 @@
         "EXPLORE_MORE": "Explore more...",
         "BUY_TSHIRTS": "Buy all technology from alibaba.com.",
         "MEET_TEAM": "How does it work",
-        "MEET_TEXT": "The DIRS portal works like a business card, just that its not only for business and its definitely not a card.",
+        "MEET_TEXT": "The Dirs Portal works like a business card. Just that its not only for business, and its definitely not a card.",
         "TOTAL_VISITS": "TOTAL OF VISITS",
         "RETURN_RATIO": "FUNDED",
         "TIME_ON_SITE": "DAYS TO GO",
@@ -248,8 +248,8 @@
         "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
         "NETWORK_CONNECTION": "Network Connection",
         "OUR_BACKERS": "Our Backers",
-        "TITLE_GALLERY": "",
-        "TEXT_GALLERY": "",
+        "TITLE_GALLERY": "Our Gallery",
+        "TEXT_GALLERY": "pictures of our team wearing our favorite product ever",
         "LINE_BLUE": "Back our Kickstarter campaign"
     },
     "admin": {
