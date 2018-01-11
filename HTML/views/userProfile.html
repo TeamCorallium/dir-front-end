@@ -2,7 +2,7 @@
     <div>
         <img class="pictureExploreUser" ng-src="{{user.cover}}" />
         <a ng-show="!EditInfoFlag" data-toggle="modal" data-target="#ModalImageCoverCropper" class="btn btn-o buttonChangeCover">
-            <i class="ti-pencil-alt"></i>
+            <img ng-src="HTML/assets/images/coverWhite.png" class="IconEmail">
             <label class="textColorWhite" translate="user_profile.CHANGE_COVER"></label>
         </a>
     </div>
@@ -674,13 +674,15 @@
                             <span aria-hidden="true">&times;</span>
                         </button>
                         <h4 class="modal-title">
-                            <img class="IconSnippet" ng-src="HTML/assets/images/user.png"></img>
+                            <img class="IconSnippet" ng-src="HTML/assets/images/coverBlue.png"></img>
                             <label translate="edit_profile.CROP_IMAGE"></label>
                         </h4>
                     </div>
                 </div>
                 <div class="modal-body">
-                    <input type="file" img-cropper-fileread image="myCroppedCoverImage" />
+                    <div class="col-xs-12 backgroundBlueSky margin-bottom-10">
+                        <input type="file" img-cropper-fileread image="myCroppedCoverImage" />
+                    </div>
                     <div>
                         <canvas width="868" height="434" id="canvas" image-cropper image="myCroppedCoverImage" cropped-image="user.cover" crop-width="1080" crop-height="120" touch-radius="30" crop-area-bounds="bounds"></canvas>
                     </div>
