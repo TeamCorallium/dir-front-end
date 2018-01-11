@@ -10,8 +10,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.orderScore = 'DescendingScore';
         $scope.orderRating = 'DescendingRating';
         $scope.applyDateFilter = false;
-        $scope.applyScoreFilter = true;
-        $scope.applyRatingFilter = false;
+        $scope.applyScoreFilter = false;
+        $scope.applyRatingFilter = true;
         $scope.currentPage = 1;
         $scope.hasNext = '';
         $scope.hasPrevious = '';

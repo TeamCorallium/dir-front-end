@@ -46,7 +46,7 @@
                                 <div class="imageBoxHome backgroundWhite border-radius50">
                                     <img ng-src="{{profile.avatar}}" class="img-circle imgProfile pointerHover" ng-click="goToProfile(profile.owner)" />
                                 </div>
-                                <div class="center padding-left-10 padding-right-10">
+                                <div class="col-xs-12 center padding-left-10 padding-right-10">
                                     <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
                                     <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
                                     <p class="text-dark">

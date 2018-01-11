@@ -83,7 +83,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         $scope.getProfiles = function() {
-            RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-score')
+            RestService.fetchObjectByUrl(RestService.profileDir + '?ordering=-rating')
                 .then(
                     function(data) {
                         $scope.profiles = data.results;
