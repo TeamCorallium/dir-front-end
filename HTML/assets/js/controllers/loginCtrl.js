@@ -5,9 +5,6 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         $rootScope.notificationCount = 0;
         $rootScope.notifications = [];
 
-        $scope.username = '';
-        $scope.pass = '';
-
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -33,8 +30,6 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
             $('#myModalLoginHome').modal('hide');
-            $scope.username = '';
-            $scope.pass = '';
 
             if ($cookies.get('username') === 'admin') {
                 $scope.administrator = true;
