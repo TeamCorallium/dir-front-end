@@ -1,7 +1,27 @@
 <div class="main-content-home" ng-controller="HomeCtrl">
     <ui-carousel slides="fade.slides" arrows="true" slides-to-show="3" slides-to-scroll="1" fade="true" initial-slide="1" dots="true" infinite="true">
         <carousel-item>
-            <div class="Carouselimage"><img class="img-responsive" ng-src="{{ item }}"></div>
+            <div class="Carouselimage">
+                <img class="img-responsive" ng-src="{{ item }}">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <h1 class="mainTitle title-white" translate="home.TEXT_TSHIRTS"></h1>
+                            <span class="mainDescription" translate="home.TEXT_HOME"></span>
+                            <div class="btn-group margin-top-10">
+                                <a ng-hide="connected" type="button" class="btn btn-primary margin-right-10 ButtonRadius" data-toggle="modal" data-target="#myModalLoginHome">
+                                    <i class="ti-shift-right"></i>
+                                    <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.LOG_IN"></label>
+                                </a>
+                                <a ng-hide="connected" type="button" class="btn btn-primary ButtonRadius" data-toggle="modal" data-target="#myModalRegisterHome">
+                                    <i class="ti-write"></i>
+                                    <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.REGISTER"></label>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </carousel-item>
         <carousel-prev>
             <button class="swiper-button-prev ButtonCarousel"></button>
@@ -68,70 +88,72 @@
         </div>
     </section>
     <section class="container-fluid container-fullw">
-        <div class="row">
-            <div class="col-md-12">
-                <h2 class="center no-visible" data-appears-class="fadeInUp" data-appears-delay="300">Take a look at some of our work</h2>
-                <hr>
-                <p class="text-center no-visible" data-appears-class="fadeInDown" data-appears-delay="300">
-                    Nulla consequat massa quis enim. <strong>Donec pede justo</strong> fringilla vel, aliquet nec, vulputate eget, arcu.
-                    <br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
-                </p>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-0 padding-right-0" data-appears-group-delay="0" data-appears-delay-increase="300" id="portfolio">
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(0)" src="HTML/assets/images/slider/slide1.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="center no-visible" data-appears-class="fadeInUp" data-appears-delay="300">Take a look at some of our work</h2>
+                    <hr>
+                    <p class="text-center no-visible" data-appears-class="fadeInDown" data-appears-delay="300">
+                        Nulla consequat massa quis enim. <strong>Donec pede justo</strong> fringilla vel, aliquet nec, vulputate eget, arcu.
+                        <br> In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-appears-group-delay="0" data-appears-delay-increase="300" id="portfolio">
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(0)" src="HTML/assets/images/slider/slide1.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(1)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(1)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(2)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(2)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(3)" src="HTML/assets/images/slider/slide1.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(3)" src="HTML/assets/images/slider/slide1.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(4)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(4)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(5)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(5)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible hidden-xs no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(6)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible hidden-xs no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(6)" src="HTML/assets/images/slider/slide2.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible hidden-xs no-padding" data-appears-class="fadeIn">
-                            <div class="figure-wrapper">
-                                <figure class="effect-zoe margin-top-0 margin-bottom-0">
-                                    <img ng-click="OpenImage(7)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
-                                </figure>
+                            <div class="col-xs-6 col-sm-3 col-md-3 col-lg-3 no-visible hidden-xs no-padding" data-appears-class="fadeIn">
+                                <div class="figure-wrapper">
+                                    <figure class="effect-zoe margin-top-0 margin-bottom-0">
+                                        <img ng-click="OpenImage(7)" src="HTML/assets/images/slider/slide3.jpg" class="img-responsive pointerZoomIn">
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -174,7 +196,7 @@
                     <div class="col-md-3 col-sm-6">
                         <div class="padding-40 text-center">
                             <img ng-src="HTML/assets/images/clients.png" class="IconFats">
-                            <span class="block font-size-50 text-white">{{tracks.satisfiedCustomers}}</span>
+                            <span class="block font-size-50 text-white">358</span>
                             <hr class="white-hr" />
                             <p class="block text-light" translate="home.SATISFIED_CUSTOMERS"></p>
                         </div>
