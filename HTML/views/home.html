@@ -1,22 +1,22 @@
 <div class="main-content-home" ng-controller="HomeCtrl">
     <ui-carousel slides="fade.slides" arrows="true" slides-to-show="3" slides-to-scroll="1" fade="true" initial-slide="1" dots="true" infinite="true">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h1 class="mainTitle title-white" translate="home.TEXT_TSHIRTS"></h1>
-                <span class="mainDescription" translate="home.TEXT_HOME"></span>
-                <div class="btn-group margin-top-10">
-                    <a ng-hide="connected" type="button" class="btn btn-primary margin-right-10 ButtonRadius" data-toggle="modal" data-target="#myModalLoginHome">
-                        <i class="ti-shift-right"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.LOG_IN"></label>
-                    </a>
-                    <a ng-hide="connected" type="button" class="btn btn-primary ButtonRadius" data-toggle="modal" data-target="#myModalRegisterHome">
-                        <i class="ti-write"></i>
-                        <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.REGISTER"></label>
-                    </a>
+        <carousel-item>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <h1 class="mainTitle title-white" translate="home.TEXT_TSHIRTS"></h1>
+                    <span class="mainDescription" translate="home.TEXT_HOME"></span>
+                    <div class="btn-group margin-top-10">
+                        <a ng-hide="connected" type="button" class="btn btn-primary margin-right-10 ButtonRadius" data-toggle="modal" data-target="#myModalLoginHome">
+                            <i class="ti-shift-right"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.LOG_IN"></label>
+                        </a>
+                        <a ng-hide="connected" type="button" class="btn btn-primary ButtonRadius" data-toggle="modal" data-target="#myModalRegisterHome">
+                            <i class="ti-write"></i>
+                            <label class="textColorWhite margin-bottom-0 pointerHover" translate="home.REGISTER"></label>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-        <carousel-item>
             <div class="Carouselimage">
                 <img class="img-responsive" ng-src="{{ item }}">
             </div>
