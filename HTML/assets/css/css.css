@@ -2707,3 +2707,15 @@ span.stars span {
 #SocialBox {
     margin-top: 3px !important;
 }
+
+.iconCover {
+    width: 20px !important;
+    height: 15px !important;
+    margin-top: -3px;
+}
+
+.iconCoverModal {
+    width: 27px !important;
+    height: 20px !important;
+    margin-top: -3px;
+}
