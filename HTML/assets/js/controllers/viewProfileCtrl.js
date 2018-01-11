@@ -434,6 +434,11 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $rootScope.$on('clapSuccesfully', function(event, data) {
             $scope.user.score = data;
             $scope.activateClap = true;
+            if ($scope.user.score > 1) {
+                $scope.showClaps = true;
+            } else {
+                $scope.showClaps = false;
+            }
         });
 
         $scope.getStars = function(rating) {

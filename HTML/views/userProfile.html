@@ -26,6 +26,9 @@
                     <h5 ng-show="!EditInfoFlag && user.email != ''" class="padding-0">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </h5>
+                    <h5 ng-show="!EditInfoFlag" class="padding-0">
+                        <img ng-src="HTML/assets/images/email.png" class="IconEmail"> 18313723675
+                    </h5>
                     <div class="form-group" ng-show="EditInfoFlag">
                         <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                         <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
@@ -111,6 +114,9 @@
                                 </h5>
                                 <h5 ng-show="!EditInfoFlag && user.email != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
+                                </h5>
+                                <h5 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail"> 18313723675
                                 </h5>
                                 <div ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
