@@ -2719,3 +2719,10 @@ span.stars span {
     height: 20px !important;
     margin-top: -3px;
 }
+
+.ButtonCarouselPosition {
+    position: absolute !important;
+    margin-top: 350px !important;
+    margin-left: 100px !important;
+    color: white !important;
+}
