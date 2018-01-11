@@ -181,51 +181,27 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         $scope.backers = [{
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
+                name: 'Juan Fung',
+                backers: 'Golden Backer'
+            },
+            {
+                name: 'Antonio Cedeno',
+                backers: 'Golden Backer'
             },
             {
                 name: 'Alejandro Ravelo',
                 backers: 'Silver Backer'
             },
             {
-                name: 'Alejandro Ravelo',
+                name: 'Raul Velazquez',
                 backers: 'Silver Backer'
             },
             {
-                name: 'Alejandro Ravelo',
+                name: 'Steven Wang',
                 backers: 'Silver Backer'
             },
             {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
-                backers: 'Silver Backer'
-            },
-            {
-                name: 'Alejandro Ravelo',
+                name: 'Luna Yao',
                 backers: 'Silver Backer'
             }
         ];
