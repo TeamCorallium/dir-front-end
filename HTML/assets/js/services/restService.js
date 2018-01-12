@@ -54,7 +54,7 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
     var notifications = 'https://www.dirstuff.com/server/api/notifications/';
     var notificationsUnreaded = 'https://www.dirstuff.com/server/api/notifications-unreaded/';
     var profileConfig = 'https://www.dirstuff.com/server/api/setprofileconfig/';
-    var coverPicture = 'http://www.dirstuff.com/api/mediafiles/';
+    var coverPicture = 'http://www.dirstuff.com/server/api/mediafiles/';
 
     var urlBase = '/server/api';
     // var urlBase = '/api';

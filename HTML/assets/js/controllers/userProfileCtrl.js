@@ -19,6 +19,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             avatar: 'HTML/assets/images/default-user.png',
             cover: '',
             coverId: '',
+            coverPictureUrl: '',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -222,6 +223,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         if (data.length > 0) {
                             $scope.user.cover = $scope.getCover(data[0].banner);
                             $scope.user.coverId = data[0].id;
+                            $scope.user.coverPictureUrl = data[0].url;
                         }
                     },
                     function(errResponse) {
@@ -286,7 +288,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.saveCover = function() {
-            var url = RestService.coverPicture + $scope.user.coverId + "/";
+            var url = $scope.user.coverPictureUrl;
             url = url.replace("/api", RestService.urlBaseDir);
             if ($scope.user.cover instanceof File) {
                 RestService.updateCover(url, $scope.user.cover);
