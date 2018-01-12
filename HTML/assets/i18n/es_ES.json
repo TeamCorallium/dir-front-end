@@ -73,6 +73,7 @@
         "ENTER_FULL_NAME": "Ingrese su nombre",
         "ENTER_INFO": "Ingrese su información personal",
         "ENTER_EMAIL": "Ingrese su correo electrónico",
+        "ENTER_PHONE": "Ingrese su número de teléfono",
         "ENTER_SNIPPET_TITLE": "Introduza el título",
         "ENTER_SNIPPET_BODY": "Ingrese su snippet",
         "ENTER_SOCIAL_NETWORK_URL": "Ingrese la URL de su red social",

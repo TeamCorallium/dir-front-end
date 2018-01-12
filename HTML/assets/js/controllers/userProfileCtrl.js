@@ -288,9 +288,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var url = $scope.user.profileurl;
             url = url.replace("/api", RestService.urlBaseDir);
             if ($scope.user.avatar instanceof File) {
-                RestService.updateProfile(url, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email, $scope.user.configVisible, $scope.user.configEmailVisible, $scope.user.configReceiveEmails);
+                RestService.updateProfile(url, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.avatar, $scope.user.fullname, $scope.user.email, $scope.user.phone, $scope.user.configVisible, $scope.user.configEmailVisible, $scope.user.configReceiveEmails);
             } else {
-                RestService.updateProfileWithOutAvatar(url, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email)
+                RestService.updateProfileWithOutAvatar(url, $scope.user.id, $scope.user.info, $scope.user.rating, $scope.user.score, $scope.user.fullname, $scope.user.email, $scope.user.phone)
             }
         };
 
