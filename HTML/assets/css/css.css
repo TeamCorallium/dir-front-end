@@ -1807,11 +1807,6 @@ img-crop canvas {
     color: #00B8B8 !important;
 }
 
-.hoverColor {
-    color: inherit !important;
-    cursor: default !important;
-}
-
 .buttonContainer {
     position: absolute !important;
     bottom: 15px !important;
@@ -2940,4 +2935,9 @@ span.stars span {
 
 .colorTextBackers {
     color: #5b5b60 !important;
+}
+
+.hoverColor {
+    color: inherit !important;
+    cursor: default !important;
 }
