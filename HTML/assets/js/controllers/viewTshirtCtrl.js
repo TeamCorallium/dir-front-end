@@ -39,6 +39,7 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
             qrcode: '',
             profileurl: '',
             fullname: '',
+            phone: '',
             socialnetworks: [],
             tshirts: [],
             snippets: [],
@@ -177,6 +178,7 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
                             }
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
+                            $scope.user.phone = data.phone;
                             $scope.user.profileurl = data.url;
                             $scope.user.configVisible = data.confVisible;
                             if (!$scope.user.configVisible) {
