@@ -3,6 +3,8 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.OptionsEdit = false;
 
+        $scope.spaceBlank = "  ";
+
         var exploreUser = '';
         $scope.activateClap = false;
         $scope.activateFollow = false;
