@@ -3,8 +3,6 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
 
         $rootScope.OptionsEdit = false;
 
-        $scope.spaceBlank = "  ";
-
         var exploreUser = '';
         $scope.activateClap = false;
         $scope.activateFollow = false;

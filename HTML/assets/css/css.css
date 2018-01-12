@@ -2941,3 +2941,8 @@ span.stars span {
     color: inherit !important;
     cursor: default !important;
 }
+
+.iconPhone {
+    width: 18px !important;
+    height: 15px !important;
+}
