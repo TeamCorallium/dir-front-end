@@ -678,6 +678,30 @@
 }
 
 @media (max-width: 767px) {
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -180px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -180px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 120px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 102px !important;
@@ -934,6 +958,30 @@
 }
 
 @media (max-width: 480px) {
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -160px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -160px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 90px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 77px !important;
@@ -1042,6 +1090,30 @@
 }
 
 @media (max-width: 415px) {
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -150px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -150px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 80px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 130px !important;
@@ -1153,9 +1225,33 @@
 }
 
 @media (max-width: 375px) {
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 100px !important;
+        margin-top: 60px !important;
+        margin-left: 70px !important;
+        color: white !important;
+    }
+    .ButtonCarouselPosition {
+        position: absolute !important;
+        margin-top: 62px !important;
         margin-left: 80px !important;
         color: white !important;
     }
@@ -1264,9 +1360,27 @@
 }
 
 @media (max-width: 360px) {
+    .ButtonPrevCarousel {
+        position: absolute !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+    }
+    .ButtonNextCarousel {
+        position: absolute !important;
+        right: 0px !important;
+        margin-top: -140px !important;
+        z-index: 10!important;
+        width: 30px !important;
+        background-color: transparent !important;
+        border: none !important;
+        margin-right: 20px !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 100px !important;
+        margin-top: 62px !important;
         margin-left: 75px !important;
         color: white !important;
     }
@@ -1395,7 +1509,7 @@
     }
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 70px !important;
+        margin-top: 60px !important;
         margin-left: 70px !important;
         color: white !important;
     }
