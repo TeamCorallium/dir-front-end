@@ -193,7 +193,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                 backers: 'Silver Backer'
             },
             {
-                name: 'Raul Velazquez',
+                name: 'Raúl Velázquez',
                 backers: 'Silver Backer'
             },
             {
