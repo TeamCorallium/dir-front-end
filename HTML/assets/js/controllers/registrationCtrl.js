@@ -3,6 +3,12 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
 
         $scope.errorMessage = '';
 
+        $scope.email = '';
+        $scope.username = '';
+        $scope.password = '';
+        $scope.passAgain = '';
+        $scope.pin = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -18,13 +24,15 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.registerModal = function(email, username, password, passAgain, pin) {
+        $scope.registerModal = function() {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
 
-            if (username != '' && password != '' && passAgain != '' && email != '' && pin != '') {
-                if (password === passAgain) {
-                    RestService.register(username, password, email, pin);
+            console.log($scope.email + " " + $scope.username + " " + $scope.password + " " + $scope.passAgain + " " + $scope.pin + " aqui");
+
+            if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '' && $scope.pin != '') {
+                if ($scope.password === $scope.passAgain) {
+                    RestService.register($scope.username, $scope.password, $scope.email, $scope.pin);
                 } else {
                     var sorryTry = $translate.instant('register.SORRY_TRY');
                     var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
@@ -41,13 +49,15 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        $scope.registerModalHome = function(email, username, password, passAgain) {
+        $scope.registerModalHome = function() {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
 
-            if (username != '' && password != '' && passAgain != '' && email != '') {
-                if (password === passAgain) {
-                    RestService.register(username, password, email);
+            console.log($scope.email + " " + $scope.username + " " + $scope.password + " " + $scope.passAgain + " " + $scope.pin + " aqui");
+
+            if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '') {
+                if ($scope.password === $scope.passAgain) {
+                    RestService.register($scope.username, $scope.password, $scope.email);
                 } else {
                     var sorryTry = $translate.instant('register.SORRY_TRY');
                     var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
@@ -65,6 +75,12 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         };
 
         $rootScope.$on('register', function(event, data) {
+            $scope.email = '';
+            $scope.username = '';
+            $scope.password = '';
+            $scope.passAgain = '';
+            $scope.pin = '';
+
             $('#myModal').modal('hide');
             $('#myModalRegisterHome').modal('hide');
             $('#RegisterWrongUserPassword').hide();

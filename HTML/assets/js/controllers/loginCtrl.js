@@ -88,7 +88,9 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
 
         $("#usernameHome").on('keyup', function(e) {
             if (e.keyCode == 13) {
-                RestService.login($scope.usernameHome, $scope.pwdHome);
+                if ($scope.usernameHome != '') {
+                    RestService.login($scope.usernameHome, $scope.pwdHome);
+                }
             }
         });
 

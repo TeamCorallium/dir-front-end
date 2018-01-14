@@ -226,8 +226,8 @@
 
             <!-- start: MODAL REGISTER-->
             <div class="modal fade login-register-form" id="myModal" role="dialog">
-                <div class="modal-dialog modal-sm" ng-controller="FormController">
-                    <div class="modal-content">
+                <div class="modal-dialog modal-sm" ng-controller="RegistrationCtrl">
+                    <div class="modal-content" ng-controller="FormController">
                         <div class="modal-header padding-0" ng-controller="CloseCtrl">
                             <div class="modal-header padding-15">
                                 <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
@@ -245,39 +245,39 @@
                                     <label for="emailHome" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$error.email" ng-cloak translate="index.EMAIL_INVALID"></div>
-                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="emailHome">
+                                    <input type="$parent.email" class="form-control" ng-class="(RegisterTshirt.emailHome.$dirty && RegisterTshirt.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="emailHome">
                                 </div>
                                 <div class="form-group">
                                     <label for="username" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.username.$dirty && RegisterTshirt.username.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="username">
+                                    <input ng-model="$parent.username" type="text" class="form-control" ng-class="(RegisterTshirt.username.$dirty && RegisterTshirt.username.$invalid) ? 'error' : ''" id="username" name="username" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true">
                                 </div>
                                 <div class="form-group">
                                     <label for="password" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
                                     <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.password.$dirty && RegisterTshirt.password.$invalid) ? 'error' : ''" id="password" name="password" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true"
-                                        ng-model="password">
+                                        ng-model="$parent.password">
                                     <div class="label password-count" ng-class="password.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="againPassHome" translate="index.PASSWORD_AGAIN"></label>
-                                    <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="againPassHome" pw-check="password">
+                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="againPassHome" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="againPassHome" pw-check="password">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.againPassHome.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
                                 </div>
                                 <div class="form-group">
                                     <label for="pin" translate="index.PIN"></label>
-                                    <input type="text" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-model="pin" ng-required="true">
+                                    <input ng-model="$parent.pin" type="text" class="form-control" id="pin" ng-class="(RegisterTshirt.pin.$dirty && RegisterTshirt.pin.$invalid) ? 'error' : ''" placeholder="{{ 'index.ENTER_PIN' | translate }}" name="pin" ng-required="true">
                                 </div>
                                 <div class="msg-block" id="RegisterWrongUserPassword" hidden>
                                     <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
-                                <a ng-controller="RegistrationCtrl" ng-click="raiseModalLogin()" translate="index.ACCOUNT"></a>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT"></a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15 text-align-center">
-                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal(emailHome, username, password, againPassHome, pin)">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModal()">
                                 <i class="ti-write"></i>
                                 <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
                             </a>
@@ -289,8 +289,8 @@
 
             <!-- start: MODAL REGISTER HOME-->
             <div class="modal fade login-register-form" id="myModalRegisterHome" role="dialog">
-                <div class="modal-dialog modal-sm" ng-controller="FormController">
-                    <div class="modal-content">
+                <div class="modal-dialog modal-sm" ng-controller="RegistrationCtrl">
+                    <div class="modal-content" ng-controller="FormController">
                         <div class="modal-header padding-0" ng-controller="CloseCtrl">
                             <div class="modal-header padding-15">
                                 <button type="button" class="close margin-top--10" data-dismiss="modal" aria-label="Close">
@@ -308,22 +308,22 @@
                                     <label for="email" translate="index.EMAIL"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <div class="error form-hint" ng-show="RegisterTshirt.email.$dirty && RegisterTshirt.email.$error.email" ng-cloak ng-cloak translate="index.EMAIL_INVALID"></div>
-                                    <input type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true" ng-model="email">
+                                    <input ng-model="$parent.email" type="email" class="form-control" ng-class="(RegisterTshirt.email.$dirty && RegisterTshirt.email.$invalid) ? 'error' : ''" id="email" name="email" placeholder="{{ 'index.ENTER_EMAIL' | translate }}" ng-required="true">
                                 </div>
                                 <div class="form-group">
                                     <label for="user" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="RegisterTshirt.user.$dirty && RegisterTshirt.user.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
-                                    <input type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true" ng-model="user">
+                                    <input ng-model="$parent.username" type="text" class="form-control" ng-class="(RegisterTshirt.user.$dirty && RegisterTshirt.user.$invalid) ? 'error' : ''" id="user" name="user" placeholder="{{ 'index.ENTER_USERNAME' | translate }}" ng-required="true">
                                 </div>
                                 <div class="form-group">
                                     <label for="pass" translate="index.PASSWORD"></label>
                                     <div class="form-hint" transalte="index.TEXT_PASSWORD"></div>
-                                    <input type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true" ng-model="pass">
+                                    <input ng-model="$parent.password" type="password" class="form-control ok-password" ng-class="(RegisterTshirt.pass.$dirty && RegisterTshirt.pass.$invalid) ? 'error' : ''" id="pass" name="pass" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" ng-required="true">
                                     <div class="label password-count" ng-class="pass.length > 7 ? 'label-success' : 'label-danger'" ng-cloak>{{ password | passwordCount:7 }}</div>
                                 </div>
                                 <div class="form-group">
                                     <label for="pass_verify" translate="index.PASSWORD_AGAIN"></label>
-                                    <input type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" ng-model="pass_verify" pw-check="pass">
+                                    <input ng-model="$parent.passAgain" type="password" class="form-control" id="pass_verify" placeholder="{{ 'index.ENTER_PASSWORD' | translate }}" name="pass_verify" pw-check="pass">
                                 </div>
                                 <div class="msg-block" ng-show="RegisterTshirt.pass_verify.$error.pwmatch">
                                     <span class="msg-error" translate="index.PASSWORD_MATCH"></span>
@@ -331,11 +331,11 @@
                                 <div class="msg-block" id="RegisterWrongUserPasswordHome" hidden>
                                     <span class="msg-error" translate="index.USER_USED"></span>
                                 </div>
-                                <a ng-controller="RegistrationCtrl" ng-click="raiseModalLogin()" translate="index.ACCOUNT">Do you have an account?</a>
+                                <a ng-click="raiseModalLogin()" translate="index.ACCOUNT">Do you have an account?</a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15 text-align-center">
-                            <a class="btn btn-primary ButtonRadius" ng-controller="RegistrationCtrl" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome(email, user, pass, pass_verify)">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="RegisterTshirt.$invalid" ng-click="registerModalHome()">
                                 <i class="ti-write"></i>
                                 <label translate="index.REGISTER" class="textColorWhite margin-bottom-0 pointerHover"></label>
                             </a>
