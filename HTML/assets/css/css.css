@@ -2948,6 +2948,6 @@ span.stars span {
     margin-top: 0px !important;
 }
 
-.figure.effect-zoe {
-    background: #00B8B8 !important;
+figure.effect-zoe {
+    background: rgba(0, 170, 170, 0.6) !important;
 }
