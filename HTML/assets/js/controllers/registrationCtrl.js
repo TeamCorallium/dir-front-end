@@ -28,8 +28,6 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
 
-            console.log($scope.email + " " + $scope.username + " " + $scope.password + " " + $scope.passAgain + " " + $scope.pin + " aqui");
-
             if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '' && $scope.pin != '') {
                 if ($scope.password === $scope.passAgain) {
                     RestService.register($scope.username, $scope.password, $scope.email, $scope.pin);
@@ -52,8 +50,6 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.registerModalHome = function() {
             $('#RegisterWrongUserPassword').hide();
             $('#RegisterWrongUserPasswordHome').hide();
-
-            console.log($scope.email + " " + $scope.username + " " + $scope.password + " " + $scope.passAgain + " " + $scope.pin + " aqui");
 
             if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '') {
                 if ($scope.password === $scope.passAgain) {
