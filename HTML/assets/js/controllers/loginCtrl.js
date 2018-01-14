@@ -29,6 +29,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         };
 
         $rootScope.$on('connected', function(event, data) {
+            $scope.usernameHome = '';
+            $scope.pwdHome = '';
 
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
@@ -86,9 +88,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
 
         $("#usernameHome").on('keyup', function(e) {
             if (e.keyCode == 13) {
-                var user = $('#usernameHome').val();
-                var pass = $('#pwdHome').val();
-                RestService.login(user, pass);
+                RestService.login($scope.usernameHome, $scope.pwdHome);
             }
         });
 
