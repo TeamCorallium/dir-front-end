@@ -1,10 +1,6 @@
 app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "SweetAlert", "$translate", "$location", "$anchorScroll",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, SweetAlert, $translate, $location, $anchorScroll) {
 
-        // if ($cookies.get('username') != '' && $cookies.get('username') != null && $cookies.get('username') != undefined) {
-        //     $state.go('home');
-        // }
-
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
             path: '/'
@@ -13,6 +9,8 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $scope.visibleProfile = true;
         $scope.visibleEmailNotifications = false;
         $scope.visibleEmail = false;
+
+        $scope.cover = $cookies.get('cover');
 
         if ($cookies.get('configVisible') == 'true') {
             $scope.switchProfile = true;

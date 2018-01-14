@@ -18,6 +18,8 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             score: '',
             rating: '',
             avatar: 'HTML/assets/images/default-user.png',
+            cover: '',
+            coverId: '',
             id: '',
             qrcode: '',
             profileurl: '',
@@ -114,6 +116,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             }
 
                             getSocialNetworks(data[0].username);
+                            getCoverPicture(data[0].username);
 
                         } else {
                             $state.go('home');
@@ -200,6 +203,36 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                         console.log(errResponse);
                     }
                 );
+        };
+
+        var getCoverPicture = function(username) {
+            $scope.user.cover = '';
+            RestService.fetchCoverPicture(username)
+                .then(
+                    function(data) {
+                        if (data.length > 0) {
+                            $scope.user.cover = $scope.getCover(data[0].banner);
+                            $scope.user.coverId = data[0].id;
+                            $scope.user.coverPictureUrl = data[0].url;
+                        }
+                    },
+                    function(errResponse) {
+                        console.log(errResponse);
+                    }
+                );
+        };
+
+        $scope.getCover = function(cover) {
+            var dirCover = '';
+
+            if (cover != '' && cover != null) {
+                var coverArray = cover.split("/");
+                dirCover = RestService.imageDir + coverArray[coverArray.length - 1];
+            } else {
+                dirAvatar = 'HTML/assets/images/profile.jpg';
+            }
+
+            return dirCover;
         };
 
         $scope.getUser($cookies.get('username'));
