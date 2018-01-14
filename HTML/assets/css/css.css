@@ -2873,7 +2873,7 @@ span.stars span {
 }
 
 .pointerZoomIn {
-    cursor: url("../HTML/assets/images/loupe.png"), auto;
+    cursor: url("../HTML/assets/images/loupe.png") !important;
 }
 
 .styleButtonGallery:hover {
