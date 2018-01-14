@@ -2948,10 +2948,6 @@ span.stars span {
     margin-top: 0px !important;
 }
 
-.pointerZoomIn {
-    cursor: url("../HTML/assets/images/loupe.png") !important;
-}
-
-.pointerZoomIn:hover {
-    cursor: url("../HTML/assets/images/loupe.png") !important;
+.figure.effect-zoe {
+    background: #00B8B8 !important;
 }
