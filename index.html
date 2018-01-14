@@ -361,7 +361,7 @@
                             </div>
                         </div>
                         <div class="modal-body">
-                            <form name="LogingForm" role="form">
+                            <form name="LogingForm" role="form" ng-controller="LoginCtrl">
                                 <div class="form-group">
                                     <label for="usernameHome" translate="index.USERNAME"></label>
                                     <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
@@ -374,11 +374,11 @@
                                 <div class="msg-block" id="errorBoxHome" hidden>
                                     <span class="msg-error" translate="index.INVALID_CREDENTIALS"></span>
                                 </div>
-                                <a ng-controller="LoginCtrl" ng-click="raiseModalRegister()" translate="index.NO_ACCOUNT"></a>
+                                <a ng-click="raiseModalRegister()" translate="index.NO_ACCOUNT"></a>
                             </form>
                         </div>
                         <div class="modal-footer padding-15 text-align-center" ng-controller="LoginCtrl">
-                            <a class="btn btn-primary ButtonRadius" ng-disabled="LogingForm.$invalid" ng-click="loginModal($parent.usernameHome, $parent.pwdHome)">
+                            <a class="btn btn-primary ButtonRadius" ng-disabled="LogingForm.$invalid" ng-click="loginModal()">
                                 <i class="ti-shift-right"></i>
                                 <label translate="index.LOG_IN" class="textColorWhite margin-bottom-0 pointerHover"></label>
                             </a>

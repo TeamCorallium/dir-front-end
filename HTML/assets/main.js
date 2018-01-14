@@ -140,6 +140,7 @@ app.directive('pwCheck', [function() {
 app.config(['growlProvider', function(growlProvider) {
     growlProvider.globalTimeToLive(4000);
     growlProvider.globalDisableCountDown(true);
+    growlProvider.onlyUniqueMessages(true);
 }]);
 
 // translate config

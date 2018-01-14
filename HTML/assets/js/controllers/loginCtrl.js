@@ -5,6 +5,9 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         $rootScope.notificationCount = 0;
         $rootScope.notifications = [];
 
+        $scope.usernameHome = '';
+        $scope.pwdHome = '';
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -20,8 +23,9 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
             console.log(RestService.getCookie('csrftoken'));
         }
 
-        $scope.loginModal = function(username, pass) {
-            RestService.login(username, pass);
+        $scope.loginModal = function() {
+            console.log($scope.usernameHome + " " + $scope.pwdHome);
+            RestService.login($scope.usernameHome, $scope.pwdHome);
         };
 
         $rootScope.$on('connected', function(event, data) {
