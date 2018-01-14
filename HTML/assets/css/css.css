@@ -2872,10 +2872,6 @@ span.stars span {
     border: 0px !important;
 }
 
-.pointerZoomIn {
-    cursor: url("../HTML/assets/images/loupe.png") !important;
-}
-
 .styleButtonGallery:hover {
     color: #00B8B8 !important;
 }
@@ -2950,4 +2946,8 @@ span.stars span {
 .slick-prev,
 .slick-next {
     margin-top: 0px !important;
+}
+
+.pointerZoomIn {
+    cursor: url("../HTML/assets/images/loupe.png") !important;
 }
