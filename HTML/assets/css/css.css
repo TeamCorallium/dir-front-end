@@ -2872,8 +2872,8 @@ span.stars span {
     border: 0px !important;
 }
 
-.pointerZoomIn:hover {
-    cursor: url('../HTML/assets/images/loupe.png') !important;
+.pointerZoomIn {
+    cursor: url("../HTML/assets/images/loupe.png") !important;
 }
 
 .styleButtonGallery:hover {
