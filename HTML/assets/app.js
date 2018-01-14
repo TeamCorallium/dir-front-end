@@ -18,6 +18,7 @@ angular.module("pulloverDir", [
     'ngEmoticons',
     'uiSwitch',
     'ui.carousel',
+    'slickCarousel',
     'angular-img-cropper'
 ]);
 
