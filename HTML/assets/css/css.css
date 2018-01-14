@@ -2948,6 +2948,6 @@ span.stars span {
     margin-top: 0px !important;
 }
 
-.pointerZoomIn {
+.pointerZoomIn:hover {
     cursor: url("../HTML/assets/images/loupe.png") !important;
 }
