@@ -2946,3 +2946,8 @@ span.stars span {
     width: 18px !important;
     height: 15px !important;
 }
+
+.slick-prev,
+.slick-prev {
+    margin-top: 0px !important;
+}
