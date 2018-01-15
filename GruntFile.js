@@ -101,6 +101,7 @@ module.exports = function(grunt) {
                     'bower_components/ng-img-crop/compile/minified/ng-img-crop.css',
                     'bower_components/slick-carousel/slick/slick.css',
                     'bower_components/slick-carousel/slick/slick-theme.css',
+                    'bower_components/slick.js/slick/slick.css',
                     'HTML/assets/css/*.css',
                 ],
                 dest: 'dist/css.css'
