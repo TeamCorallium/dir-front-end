@@ -81,7 +81,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             templateUrl: 'HTML/views/privacy.html'
         }).state('terms', {
             url: '/terms',
-            templateUrl: 'HTML/views/termsAndonditions.html'
+            templateUrl: 'HTML/views/termsAndConditions.html'
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
