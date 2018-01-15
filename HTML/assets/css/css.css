@@ -2943,11 +2943,6 @@ span.stars span {
     height: 15px !important;
 }
 
-.slick-prev,
-.slick-next {
-    margin-top: 0px !important;
-}
-
 figure.effect-zoe {
     background: rgba(0, 170, 170, 0.8) !important;
 }
