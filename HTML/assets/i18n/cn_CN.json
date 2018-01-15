@@ -39,7 +39,9 @@
         "NO_ACCOUNT": "你沒有帳戶?",
         "NOTIFICATIONS": "通知",
         "ADD_SOCIAL": "紅色社會",
-        "CONFIGURATIONS": "配置"
+        "CONFIGURATIONS": "配置",
+        "TERMS": "条款和条件",
+        "PRIVACY": "隐私"
     },
     "user_profile": {
         "RATING": "評級:",

@@ -76,6 +76,12 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/userprivate',
             templateUrl: 'HTML/views/userPrivate.html',
             resolve: loadSequence('userPrivateCtrl')
+        }).state('privacy', {
+            url: '/privacy',
+            templateUrl: 'HTML/views/privacy.html'
+        }).state('terms', {
+            url: '/terms',
+            templateUrl: 'HTML/views/termsAndonditions.html'
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)

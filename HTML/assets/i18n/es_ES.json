@@ -39,7 +39,9 @@
         "NO_ACCOUNT": "¿No tienes una cuenta?",
         "NOTIFICATIONS": "Notificaciones",
         "ADD_SOCIAL": "Red Social",
-        "CONFIGURATIONS": "Configuración"
+        "CONFIGURATIONS": "Configuración",
+        "TERMS": "Terminos y Condiciones",
+        "PRIVACY": "Privacidad"
     },
     "user_profile": {
         "RATING": "Valoración:",
