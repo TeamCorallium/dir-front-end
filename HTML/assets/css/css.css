@@ -2958,3 +2958,8 @@ figure.effect-zoe {
 .margin-top-60 {
     margin-top: 60px !important;
 }
+
+.paddingTerms {
+    padding-left: 120px !important;
+    padding-right: 120px !important;
+}

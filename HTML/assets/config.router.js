@@ -78,7 +78,8 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             resolve: loadSequence('userPrivateCtrl')
         }).state('privacy', {
             url: '/privacy',
-            templateUrl: 'HTML/views/privacy.html'
+            templateUrl: 'HTML/views/privacy.html',
+            resolve: loadSequence('privacyCtrl')
         }).state('terms', {
             url: '/terms',
             templateUrl: 'HTML/views/termsAndConditions.html',
