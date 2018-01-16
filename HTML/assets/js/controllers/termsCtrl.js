@@ -3,5 +3,7 @@ app.controller('TermsCtrl', ["$scope", "RestService", "$state", "$rootScope",
 
         $window.scrollTo(0, 0);
 
+        console.log("here");
+
     }
 ]);
