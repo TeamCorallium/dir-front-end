@@ -139,7 +139,7 @@
                                             <img ng-src="{{profile.avatar}}" class="img-circle imgProfile pointerHover" ng-click="goToProfile(profile.owner)" />
                                         </div>
                                         <div class="col-xs-12 center margin-top-5">
-                                            <h3 ng-hide="profile.fullname == ''">{{profile.fullname}}</h3>
+                                            <h3 ng-hide="profile.fullname == ''">{{profile.fullname | htmlToPlaintext | words:2 :true}}</h3>
                                             <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
                                             <p class="text-dark padding-left-10 padding-right-10">
                                                 {{profile.info | htmlToPlaintext | words:10 :true}}
