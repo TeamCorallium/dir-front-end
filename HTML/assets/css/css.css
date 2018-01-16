@@ -678,6 +678,12 @@
 }
 
 @media (max-width: 767px) {
+    .slick-prev {
+        margin-left: -20px !important;
+    }
+    .slick-next {
+        margin-right: -20px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -180px !important;
@@ -958,6 +964,12 @@
 }
 
 @media (max-width: 480px) {
+    .slick-prev {
+        margin-left: -20px !important;
+    }
+    .slick-next {
+        margin-right: -20px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -160px !important;
@@ -1090,6 +1102,12 @@
 }
 
 @media (max-width: 415px) {
+    .slick-prev {
+        margin-left: 40px !important;
+    }
+    .slick-next {
+        margin-right: 40px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -150px !important;
@@ -1225,6 +1243,12 @@
 }
 
 @media (max-width: 375px) {
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -140px !important;
@@ -1360,6 +1384,12 @@
 }
 
 @media (max-width: 360px) {
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -140px !important;
@@ -1489,6 +1519,12 @@
 }
 
 @media (max-width: 320px) {
+    .slick-prev {
+        margin-left: 20px !important;
+    }
+    .slick-next {
+        margin-right: 20px !important;
+    }
     .ButtonPrevCarousel {
         position: absolute !important;
         margin-top: -140px !important;

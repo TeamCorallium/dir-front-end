@@ -244,6 +244,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             infinite: false,
             speed: 300,
             infinite: true,
+            autoplay: true,
             slidesToShow: 4,
             slidesToScroll: 4,
             responsive: [{
