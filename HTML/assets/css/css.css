@@ -2963,3 +2963,10 @@ figure.effect-zoe {
     padding-left: 120px !important;
     padding-right: 120px !important;
 }
+
+.profile-terms {
+    padding-bottom: 0 !important;
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+}
