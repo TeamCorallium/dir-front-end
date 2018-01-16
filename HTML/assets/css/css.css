@@ -2946,3 +2946,7 @@ span.stars span {
 figure.effect-zoe {
     background: rgba(0, 170, 170, 0.8) !important;
 }
+
+.min-height-586 {
+    min-height: 586px !important;
+}
