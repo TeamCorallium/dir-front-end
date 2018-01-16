@@ -769,24 +769,6 @@
         width: 30px !important;
         height: 35px !important;
     }
-    .ButtonPrevCarousel {
-        position: absolute !important;
-        margin-top: -110px !important;
-        z-index: 10!important;
-        width: 30px !important;
-        background-color: transparent !important;
-        border: none !important;
-    }
-    .ButtonNextCarousel {
-        position: absolute !important;
-        right: 0px !important;
-        margin-top: -110px !important;
-        z-index: 10!important;
-        width: 30px !important;
-        background-color: transparent !important;
-        border: none !important;
-        margin-right: 20px !important;
-    }
     .pictureExploreUser {
         height: 100%;
         display: block;
