@@ -1,5 +1,5 @@
-app.controller('FAQCtrl', ["$scope", "RestService", "$state", "$rootScope", '$cookies',
-    function($scope, RestService, $state, $rootScope, $cookies) {
+app.controller('FAQCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "$window",
+    function($scope, RestService, $state, $rootScope, $cookies, $window) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", { path: '/' });
