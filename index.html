@@ -372,7 +372,7 @@
             <section class="container-fluid container-fullw bg-white padding-top-0 padding-left-0 padding-right-0 paddingBottom0XS borderNoneXS">
                 <div class="Separator"></div>
             </section>
-            <footer id="footer" class="borderNoneXS">
+            <footer id="footer" class="borderNoneXS" ng-controller="FooterCtrl">
                 <div class="footer-copyright">
                     <div class="container">
                         <div class="row">
@@ -386,7 +386,7 @@
                                 <nav id="sub-menu">
                                     <ul>
                                         <li>
-                                            <a href="#/terms" ui-sref='terms' translate="index.TERMS"></a>
+                                            <a ng-click="goToTerms()" translate="index.TERMS"></a>
                                         </li>
                                         <li>
                                             <a ui-sref='privacy' translate="index.PRIVACY"></a>
