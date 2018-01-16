@@ -1,10 +1,10 @@
 app.controller('FAQCtrl', ["$scope", "RestService", "$state", "$rootScope", "$cookies", "$window",
     function($scope, RestService, $state, $rootScope, $cookies, $window) {
 
+        $window.scrollTo(0, 0);
+
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", { path: '/' });
-
-        $window.scrollTo(0, 0);
 
         $scope.getCount = function() {
             RestService.fetchNotificationUnreaded()
