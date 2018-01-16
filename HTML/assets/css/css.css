@@ -2988,3 +2988,7 @@ figure.effect-zoe {
     position: relative !important;
     padding-top: 50px !important;
 }
+
+.styleButtonSocialEmpty {
+    border: 2px solid !important;
+}
