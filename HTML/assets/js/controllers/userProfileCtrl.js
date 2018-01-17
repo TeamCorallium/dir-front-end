@@ -225,9 +225,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.coverId = data[0].id;
                             $scope.user.coverPictureUrl = data[0].url;
 
-                            $cookies.put('cover', $scope.user.cover, {
-                                path: '/'
-                            });
+                            $rootScope.userdata.cover = $scope.user.cover;
                         }
                     },
                     function(errResponse) {

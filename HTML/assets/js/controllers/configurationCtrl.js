@@ -10,8 +10,6 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
         $scope.visibleEmailNotifications = false;
         $scope.visibleEmail = false;
 
-        $scope.cover = $cookies.get('cover');
-
         if ($cookies.get('configVisible') == 'true') {
             $scope.switchProfile = true;
         } else {

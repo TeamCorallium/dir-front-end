@@ -7,7 +7,8 @@ app.run(['$rootScope', '$cookies',
 
         $rootScope.userdata = {
             username: 'USER',
-            connected: false
+            connected: false,
+            cover: ''
         };
 
         if ($cookies.get('username') != undefined) {
