@@ -2998,3 +2998,10 @@ figure.effect-zoe {
 .margin-top--15 {
     margin-top: -15px !important;
 }
+
+.profile-padding-view {
+    min-height: 100% !important;
+    position: relative !important;
+    padding-top: 50px !important;
+    padding-bottom: 0px !important;
+}
