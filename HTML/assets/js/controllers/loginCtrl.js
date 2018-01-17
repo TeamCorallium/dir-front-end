@@ -29,13 +29,13 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         };
 
         $rootScope.$on('connected', function(event, data) {
-            $scope.usernameHome = '';
-            $scope.pwdHome = '';
-
             $('#errorBox').hide();
             $('#errorBoxHome').hide();
             $('#myModal').modal('hide');
             $('#myModalLoginHome').modal('hide');
+
+            $scope.usernameHome = '';
+            $scope.pwdHome = '';
 
             if ($cookies.get('username') === 'admin') {
                 $scope.administrator = true;

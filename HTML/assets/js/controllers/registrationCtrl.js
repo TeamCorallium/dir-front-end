@@ -71,16 +71,16 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         };
 
         $rootScope.$on('register', function(event, data) {
+            $('#myModal').modal('hide');
+            $('#myModalRegisterHome').modal('hide');
+            $('#RegisterWrongUserPassword').hide();
+            $('#RegisterWrongUserPasswordHome').hide();
+
             $scope.email = '';
             $scope.username = '';
             $scope.password = '';
             $scope.passAgain = '';
             $scope.pin = '';
-
-            $('#myModal').modal('hide');
-            $('#myModalRegisterHome').modal('hide');
-            $('#RegisterWrongUserPassword').hide();
-            $('#RegisterWrongUserPasswordHome').hide();
 
             RestService.login(data.username, data.password);
         });
