@@ -286,3 +286,21 @@
     </div>
     <!-- end: MODAL LEAVE MESSAGE-->
 </div>
+<script type="text/javascript">
+    $(function() {
+        OverlayScrollbars(document.getElementById('SocialBox'), {
+            className: "os-theme-dark",
+            resize: "none",
+            sizeAutoCapable: true,
+            paddingAbsolute: true,
+            overflowBehavior: {
+                x: "scroll",
+                y: "hidden"
+            },
+            scrollbars: {
+                autoHide: "leave",
+                touchSupport: true
+            }
+        });
+    });
+</script>
