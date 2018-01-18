@@ -85,7 +85,9 @@ module.exports = function(grunt) {
                     'bower_components/angular-slick-carousel/dist/angular-slick.min.js',
                     'HTML/assets/*.js',
                     'HTML/assets/js/*.js',
-                    'HTML/assets/js/**/*.js',
+                    'HTML/assets/js/services/*.js',
+                    'HTML/assets/js/controllers/*.js',
+                    'HTML/assets/js/filters/*.js',
                     'node_modules/ng-file-upload/dist/ng-file-upload.js'
                 ],
                 dest: 'dist/app.js'
