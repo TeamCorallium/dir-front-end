@@ -3005,3 +3005,13 @@ figure.effect-zoe {
     padding-top: 50px !important;
     padding-bottom: 0px !important;
 }
+
+.mailtoStyle {
+    font-weight: 300;
+    margin-top: 0;
+    color: #5b5b60;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}

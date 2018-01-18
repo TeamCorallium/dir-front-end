@@ -18,7 +18,7 @@
                     <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
                         {{user.info}}
                     </h5>
-                    <a class="padding-0" ng-show="user.email != ''" href="mailto:{{user.email}}">
+                    <a class="padding-0 mailtoStyle" ng-show="user.email != ''" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
                     <h5 class="padding-0" ng-show="user.phone != ''">
@@ -92,7 +92,7 @@
                                 <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
                                     {{user.info}}
                                 </h5>
-                                <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0" ng-show="user.email != ''" href="mailto:{{user.email}}">
+                                <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" ng-show="user.email != ''" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                                 </a>
                                 <h5 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0" ng-show="user.phone != ''">
