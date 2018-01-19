@@ -340,7 +340,7 @@
                             <form name="LogingForm" role="form">
                                 <div class="form-group">
                                     <label for="usernameHome" translate="index.USERNAME"></label>
-                                    <div class="error form-hint" ng-show="LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$error.required" ng-cloak translate="index.FIELD_REQUIRED"></div>
+                                    <div class="error form-hint" id="usernameLogin" ng-cloak translate="index.FIELD_REQUIRED"></div>
                                     <input ng-model="$parent.usernameHome" type="text" class="form-control" ng-class="(LogingForm.usernameHome.$dirty && LogingForm.usernameHome.$invalid) ? 'error' : ''" id="usernameHome" name="usernameHome" placeholder="{{ 'index.ENTER_USERNAME' | translate }}"
                                         ng-required="true">
                                 </div>

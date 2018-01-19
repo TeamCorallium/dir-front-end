@@ -1,5 +1,7 @@
-app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert", "$translate",
-    function($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert, $translate) {
+app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "filterFilter", "$rootScope", "growl", "SweetAlert", "$translate", "$window",
+    function($scope, $state, $cookies, RestService, filterFilter, $rootScope, growl, SweetAlert, $translate, $window) {
+
+        $window.scrollTo(0, 0);
 
         $scope.inboxFlag = true;
         $rootScope.OptionsEdit = false;

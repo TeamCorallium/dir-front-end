@@ -8,6 +8,8 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         $scope.usernameHome = '';
         $scope.pwdHome = '';
 
+        $('#usernameLogin').hide();
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -24,8 +26,15 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         }
 
         $scope.loginModal = function() {
-            console.log($scope.usernameHome + " " + $scope.pwdHome + " pwdHome");
-            RestService.login($scope.usernameHome, $scope.pwdHome);
+            if ($scope.usernameHome != '' && $scope.pwdHome != '') {
+                $('#usernameLogin').hide();
+                RestService.login($scope.usernameHome, $scope.pwdHome);
+            } else {
+                if ($scope.usernameHome == '') {
+                    $('#usernameLogin').show();
+                }
+            }
+
         };
 
         $rootScope.$on('connected', function(event, data) {
