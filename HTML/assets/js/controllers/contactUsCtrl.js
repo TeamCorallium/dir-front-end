@@ -56,9 +56,6 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
                 $('#errorBodyBox').hide();
                 RestService.leaveMessage($scope.message.email, $scope.message.subject, $scope.message.body);
             } else {
-                // var emptyFields = $translate.instant('contact.EMPTY_FIELDS');
-                // var sendMessage = $translate.instant('contact.SEND_MESSAGE');
-                // growl.error(emptyFields, { title: sendMessage });
                 if ($scope.message.email == '') {
                     $('#errorEmailEmptyBox').show();
                 }
