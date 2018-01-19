@@ -10,6 +10,10 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             body: ''
         };
 
+        $('#errorEmailEmptyBox').hide();
+        $('#errorSubjectBox').hide();
+        $('#errorBodyBox').hide();
+
         $scope.getCount = function() {
             RestService.fetchNotificationUnreaded()
                 .then(
@@ -47,6 +51,9 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
 
         $scope.sendMessage = function() {
             if ($scope.message.email != '' && $scope.message.subject != '' && $scope.message.body != '') {
+                $('#errorEmailEmptyBox').hide();
+                $('#errorSubjectBox').hide();
+                $('#errorBodyBox').hide();
                 RestService.leaveMessage($scope.message.email, $scope.message.subject, $scope.message.body);
             } else {
                 // var emptyFields = $translate.instant('contact.EMPTY_FIELDS');
