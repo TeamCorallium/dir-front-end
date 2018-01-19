@@ -5,6 +5,9 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
 
         $rootScope.OptionsEdit = false;
 
+        $('#MessageTitle').hide();
+        $('#MessageBody').hide();
+
         var exploreUser = '';
         $scope.activateClap = false;
         $scope.activateFollow = false;
@@ -427,7 +430,18 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
         $scope.SendMessage = function() {
             if (exploreUser != '' && $cookies.get('username')) {
                 var username = $cookies.get('username');
-                RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
+                if ($scope.message.title != '' && $scope.message.body != '') {
+                    $('#MessageTitle').hide();
+                    $('#MessageBody').hide();
+                    RestService.sendMessage(username, exploreUser, $scope.message.title, $scope.message.body, false);
+                } else {
+                    if ($scope.message.title == '') {
+                        $('#MessageTitle').show();
+                    }
+                    if ($scope.message.body == '') {
+                        $('#MessageBody').show();
+                    }
+                }
             } else {
                 var unexpectedError = $translate.instant('view_profile.UNEXPECTED_ERROR');
                 var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
@@ -440,6 +454,10 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
 
         $rootScope.$on('SendMessage', function(event, data) {
             $('#modalLeaveMessage').modal('hide');
+            $scope.message.title = '';
+            $scope.message.body = '';
+            $('#MessageTitle').hide();
+            $('#MessageBody').hide();
             var sendCorrectly = $translate.instant('view_profile.SEND_CORRECTLY');
             var sendMessage = $translate.instant('view_profile.SEND_MESSAGE');
             growl.success(sendCorrectly, {

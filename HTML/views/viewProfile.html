@@ -266,11 +266,11 @@
                 <div class="modal-body padding-15">
                     <form name="LeaveMessage" role="form">
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessage.title.$dirty && LeaveMessage.title.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
+                            <div class="error form-hint" id="MessageTitle" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(LeaveMessage.title.$dirty && LeaveMessage.title.$invalid) ? 'error' : ''" id="user" name="title" placeholder="{{ 'view_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessage.body.$dirty && LeaveMessage.body.$error.required" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
+                            <div class="error form-hint" id="MessageBody" ng-cloak translate="view_profile.FIELD_REQUIRED"></div>
                             <textarea class="resize-none form-control" ng-class="(LeaveMessage.body.$dirty && LeaveMessage.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'view_profile.ENTER_MESSAGE' | translate }}" ng-required="true" ng-model="$parent.message.body"></textarea>
                         </div>
                     </form>
