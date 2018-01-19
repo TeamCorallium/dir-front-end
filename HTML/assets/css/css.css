@@ -262,14 +262,17 @@
     }
     .InboxBox {
         min-height: 526px !important;
+        max-height: 526px !important;
     }
     .OptionsBox {
         min-height: 546px !important;
+        max-height: 546px !important;
     }
     #MessageSendBox,
     #MessageReadBox,
     #MessageInboxBox {
         min-height: 545px !important;
+        max-height: 545px !important;
     }
     .displayBlock {
         display: none !important;
