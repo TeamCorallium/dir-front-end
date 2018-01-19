@@ -26,7 +26,7 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
         }
 
         $scope.loginModal = function() {
-            if ($scope.usernameHome != '' && $scope.pwdHome != '') {
+            if ($scope.usernameHome != '') {
                 $('#usernameLogin').hide();
                 RestService.login($scope.usernameHome, $scope.pwdHome);
             } else {
