@@ -9,6 +9,14 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
         $scope.passAgain = '';
         $scope.pin = '';
 
+        $('#errorEmailEmptyBox').hide();
+        $('#errorUsernameEmptyBox').hide();
+        $('#errorPasswordMatch').hide();
+
+        $('#errorEmailResgisterEmpty').hide();
+        $('#errorUsernameResgisterEmpty').hide();
+        $('#errorPasswordRegisterMatch').hide();
+
         if (RestService.getCookie('csrftoken') == null) {
             RestService.fetchObjectByUrl(RestService.loginNext)
                 .then(
@@ -30,20 +38,26 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '' && $scope.pin != '') {
                 if ($scope.password === $scope.passAgain) {
+                    $('#errorEmailEmptyBox').hide();
+                    $('#errorUsernameEmptyBox').hide();
+                    $('#errorPasswordMatch').hide();
                     RestService.register($scope.username, $scope.password, $scope.email, $scope.pin);
                 } else {
-                    var sorryTry = $translate.instant('register.SORRY_TRY');
-                    var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
-                    growl.error(sorryTry, {
-                        title: wrongUserPass
-                    });
+                    $('#errorPasswordMatch').show();
                 }
             } else {
-                var emptyField = $translate.instant('register.EMPTY_FIELDS');
-                var register = $translate.instant('register.REGISTER');
-                growl.error(emptyField, {
-                    title: register
-                });
+                // var emptyField = $translate.instant('register.EMPTY_FIELDS');
+                // var register = $translate.instant('register.REGISTER');
+                // growl.error(emptyField, {
+                //     title: register
+                // });
+
+                if ($scope.email == '') {
+                    $('#errorEmailEmptyBox').show();
+                }
+                if ($scope.username == '') {
+                    $('#errorUsernameEmptyBox').show();
+                }
             }
         };
 
@@ -53,20 +67,32 @@ app.controller('RegistrationCtrl', ["$scope", "RestService", "$state", "$rootSco
 
             if ($scope.username != '' && $scope.password != '' && $scope.passAgain != '' && $scope.email != '') {
                 if ($scope.password === $scope.passAgain) {
+                    $('#errorEmailResgisterEmpty').hide();
+                    $('#errorUsernameResgisterEmpty').hide();
+                    $('#errorPasswordRegisterMatch').hide();
                     RestService.register($scope.username, $scope.password, $scope.email);
                 } else {
-                    var sorryTry = $translate.instant('register.SORRY_TRY');
-                    var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
-                    growl.error(sorryTry, {
-                        title: wrongUserPass
-                    });
+                    // var sorryTry = $translate.instant('register.SORRY_TRY');
+                    // var wrongUserPass = $translate.instant('register.WRONG_USER_PASS');
+                    // growl.error(sorryTry, {
+                    //     title: wrongUserPass
+                    // });
+                    $('#errorPasswordRegisterMatch').show();
                 }
             } else {
-                var emptyField = $translate.instant('register.EMPTY_FIELDS');
-                var register = $translate.instant('register.REGISTER');
-                growl.error(emptyField, {
-                    title: register
-                });
+                // var emptyField = $translate.instant('register.EMPTY_FIELDS');
+                // var register = $translate.instant('register.REGISTER');
+                // growl.error(emptyField, {
+                //     title: register
+                // });
+
+                if ($scope.username == '') {
+                    $('#errorUsernameResgisterEmpty').show();
+                }
+
+                if ($scope.email == '') {
+                    $('#errorEmailResgisterEmpty').show();
+                }
             }
         };
 

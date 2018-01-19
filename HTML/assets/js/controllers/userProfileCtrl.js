@@ -61,6 +61,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.followers = [];
         $scope.showClaps = false;
 
+        $scope.codeModal = '';
+        $('#errorAddTShirt').hide();
+
         $scope.indexShowMiddle = 0;
 
         $scope.uploadFile = function(file) {
@@ -660,6 +663,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.socialnetwork = '0';
         $scope.url = '';
+        $('#urlRequired').hide();
         $scope.selectedValueSocial = true;
         $scope.facebookName = '';
         $scope.showUrlCamp = false;
@@ -889,14 +893,19 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         };
                 }
 
+                $('#urlRequired').hide();
                 RestService.addSocialNetwork(name, url, type);
 
             } else {
-                var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
-                var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
-                growl.success(emptyField, {
-                    title: addSocial
-                });
+                // var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
+                // var addSocial = $translate.instant('user_profile.ADD_SOCIAL_NETWORK');
+                // growl.success(emptyField, {
+                //     title: addSocial
+                // });
+
+                if ($scope.url == '') {
+                    $('#urlRequired').show();
+                }
             }
         };
 
@@ -1065,13 +1074,13 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             if ($scope.password === $scope.againPassHome) {
                 RestService.changePassword($scope.user.username, $scope.password);
             } else {
-                $('#msg-block').show();
+                $('#passNotMatch').show();
             }
         };
 
         $rootScope.$on('changepassword', function(event, data) {
             $('#modalChangePassword').modal('hide');
-            $('#msg-block').hide();
+            $('#passNotMatch').hide();
             $scope.password = '';
             $scope.againPassHome = '';
             var passwordSuccess = $translate.instant('user_profile.PASSWORD_SUCCESS');
@@ -1101,7 +1110,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         if (pass == passA) {
                             RestService.changePassword(pass, passA);
                         } else {
-                            $('#msg-block').show();
+                            $('#passNotMatch').show();
                         }
                     } else {
                         var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
@@ -1123,7 +1132,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         if (pass == passA) {
                             RestService.changePassword(pass, passA);
                         } else {
-                            $('#msg-block').show();
+                            $('#passNotMatch').show();
                         }
                     } else {
                         var emptyField = $translate.instant('user_profile.EMPTY_FIELDS');
@@ -1140,7 +1149,12 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         // ADD T-Shirts 
         $scope.addTshirt = function() {
             if ($scope.codeModal != '' && $scope.codeModal != undefined && $scope.codeModal != null) {
+                $('#errorAddTShirt').hide();
                 RestService.addTShirt($scope.codeModal);
+            } else {
+                if ($scope.codeModal == '') {
+                    $('#errorAddTShirt').show();
+                }
             }
         };
 
@@ -1154,6 +1168,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.TShirtLinks.unshift(tshirt);
             $scope.codeModal = '';
+            $('#errorAddTShirt').hide();
         });
 
         $rootScope.$on('addTshirtErrorBad', function(event, data) {
@@ -1164,6 +1179,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             $scope.TShirtLinks.unshift(tshirt);
             $scope.codeModal = '';
+            $('#errorAddTShirt').hide();
             var notTshirt = $translate.instant('user_profile.NOT_TSHIRT');
             var addTshirt = $translate.instant('user_profile.ADD_TSHIRT');
             growl.error(notTshirt, {
@@ -1221,8 +1237,22 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $('#modalLeaveMessageUserProfile').modal('show');
         };
 
+        $('#errorTitleEmpty').hide();
+        $('#errorBodyEmpty').hide();
+
         $scope.leaveMessage = function(user) {
-            RestService.sendMessage($scope.user.username, $scope.message.user, $scope.message.title, $scope.message.body, false);
+            if ($scope.user.username != '' && $scope.message.user != '' && $scope.message.title != '' && $scope.message.body != '') {
+                $('#errorTitleEmpty').hide();
+                $('#errorBodyEmpty').hide();
+                RestService.sendMessage($scope.user.username, $scope.message.user, $scope.message.title, $scope.message.body, false);
+            } else {
+                if ($scope.user.title == '') {
+                    $('#errorTitleEmpty').hide();
+                }
+                if ($scope.user.body == '') {
+                    $('#errorBodyEmpty').hide();
+                }
+            }
         };
 
         $rootScope.$on('SendMessage', function(event, data) {
@@ -1230,6 +1260,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             $scope.message.title = '';
             $scope.message.body = '';
             $scope.message.user = '';
+            $('#errorTitleEmpty').hide();
+            $('#errorBodyEmpty').hide();
             var sendCorrectly = $translate.instant('user_profile.SEND_CORRECTLY');
             var sendMessage = $translate.instant('user_profile.SEND_MESSAGE');
             growl.success(sendCorrectly, {

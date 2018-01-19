@@ -34,7 +34,6 @@ app.controller('LoginCtrl', ["$scope", "RestService", "$state", "$rootScope", "$
                     $('#usernameLogin').show();
                 }
             }
-
         };
 
         $rootScope.$on('connected', function(event, data) {

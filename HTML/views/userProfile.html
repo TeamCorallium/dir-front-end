@@ -512,7 +512,7 @@
                         </label>
                         <div class="form-group" ng-show="showUrlCamp">
                             <label for="url" translate="user_profile.SOCIAL_URL"></label>
-                            <div class="error form-hint" ng-show="AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <div class="error form-hint" id="urlRequired" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(AddSocialNetworks.url.$dirty && AddSocialNetworks.url.$invalid) ? 'error' : ''" id="url" name="url" placeholder="{{ 'user_profile.ENTER_SOCIAL_NETWORK_URL' | translate }}" ng-required="true" ng-model="$parent.url">
                         </div>
                     </form>
@@ -585,7 +585,7 @@
                             <label for="againPassHome" translate="edit_profile.PASSWORD_AGAIN"></label>
                             <input type="password" class="form-control" id="againPassHome" placeholder="{{ 'user_profile.ENTER_PASSWORD' | translate }}" name="againPassHome" ng-model="$parent.againPassHome" pw-check="password">
                         </div>
-                        <div id="msg-block" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
+                        <div id="passNotMatch" class="msg-block" ng-show="ChangePassword.againPassHome.$error.pwmatch">
                             <span class="msg-error" translate="edit_profile.PASSWORD_MATCH"></span>
                         </div>
                     </form>
@@ -618,7 +618,7 @@
                 </div>
                 <div class="modal-body">
                     <form name="AddTShirts" role="form">
-                        <div class="error form-hint" ng-show="AddTShirts.url.$dirty && AddTShirts.url.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                        <div class="error form-hint" id="errorAddTShirt" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
                         <div class="input-group">
                             <input class="form-control" ng-class="(AddTShirts.url.$dirty && AddTShirts.url.$invalid) ? 'error' : ''" name="url" placeholder="{{ 'user_profile.ENTER_TSHIRT_CODE' | translate }}" ng-required="true" type="text" id="codeInput" ng-model="$parent.codeModal">
                             <span class="input-group-btn">
@@ -660,11 +660,11 @@
                 <div class="modal-body padding-15">
                     <form name="LeaveMessageUserProfile" role="form">
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessageUserProfile.title.$dirty && LeaveMessageUserProfile.title.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <div class="error form-hint" id="errorTitleEmpty" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
                             <input type="text" class="form-control" ng-class="(LeaveMessageUserProfile.title.$dirty && LeaveMessageUserProfile.title.$invalid) ? 'error' : ''" id="user" name="title" placeholder="{{ 'user_profile.ENTER_SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.title">
                         </div>
                         <div class="form-group">
-                            <div class="error form-hint" ng-show="LeaveMessageUserProfile.body.$dirty && LeaveMessageUserProfile.body.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
+                            <div class="error form-hint" id="errorBodyEmpty" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
                             <textarea class="form-control resize-none" ng-class="(LeaveMessageUserProfile.body.$dirty && LeaveMessageUserProfile.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'user_profile.ENTER_MESSAGE' | translate }}" ng-required="true" ng-model="$parent.message.body"></textarea>
                         </div>
                     </form>
