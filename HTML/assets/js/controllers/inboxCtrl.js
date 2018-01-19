@@ -9,6 +9,9 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         $scope.messagesSend = [];
         $cookies.remove("exploreUser", { path: '/' });
 
+        $('#errorSubject').hide();
+        $('#errorBody').hide();
+
         $scope.messageSelected = {
             url: '',
             id: '',
@@ -197,7 +200,18 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
         };
 
         $scope.sendMessage = function(sender, receiver, subject, body) {
-            RestService.sendMessage(sender, receiver, subject, body, false);
+            if (sender != '' && receiver != '' && subject != '' && body != '') {
+                $('#errorSubject').hide();
+                $('#errorBody').hide();
+                RestService.sendMessage(sender, receiver, subject, body, false);
+            } else {
+                if (subject == '') {
+                    $('#errorSubject').show();
+                }
+                if (body == '') {
+                    $('#errorBody').show();
+                }
+            }
         };
 
         $scope.deleteMessage = function(url) {
@@ -234,6 +248,8 @@ app.controller('InboxCtrl', ["$scope", "$state", "$cookies", "RestService", "fil
 
         $rootScope.$on('SendMessage', function(event, data) {
             $('#modalMessage').modal('hide');
+            $('#errorSubject').hide();
+            $('#errorBody').hide();
             var sendedSuccess = $translate.instant('inbox.SENDED_SUCCESS');
             var sendMessage = $translate.instant('inbox.SEND_MESSAGE');
             growl.success(sendedSuccess, { title: sendMessage });
