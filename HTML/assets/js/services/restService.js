@@ -396,9 +396,9 @@ app.factory('RestService', ['$rootScope', '$http', '$q', '$cookies', '$httpParam
                 }
             }).success(function(data) {
                 if (data.response == "ok") {
-                    $rootScope.$broadcast('SendMessage');
+                    $rootScope.$broadcast('LeaveMessage');
                 } else {
-                    $rootScope.$broadcast('SendMessageError');
+                    $rootScope.$broadcast('LeaveMessageError');
                 }
             }).error(function(response, status, header, config, statusText) {
                 if (status == 403) {

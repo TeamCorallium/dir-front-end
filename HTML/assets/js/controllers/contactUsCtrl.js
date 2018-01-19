@@ -68,13 +68,22 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             }
         };
 
-        $rootScope.$on('SendMessage', function(event, data) {
+        $rootScope.$on('LeaveMessage', function(event, data) {
             $scope.message.email = '';
             $scope.message.subject = '';
             $scope.message.body = '';
+            $('#errorEmailEmptyBox').hide();
+            $('#errorSubjectBox').hide();
+            $('#errorBodyBox').hide();
             var sendSuccess = $translate.instant('contact.SEND_CORRECTLY');
             var sendMessage = $translate.instant('contact.SEND_MESSAGE');
             growl.success(sendSuccess, { title: sendMessage });
+        });
+
+        rootScope.$on('LeaveMessageError', function(event, data) {
+            var messageError = $translate.instant('contact.MESSAGE_ERROR');
+            var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+            growl.error(messageError, { title: sendMessage });
         });
 
         $rootScope.$on('WrongMessage', function(event, data) {
