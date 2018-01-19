@@ -18,8 +18,8 @@
                                     <label for="emailHome" translate="contact.EMAIL">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
-                                    <div class="error form-hint" ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" ng-cloak translate="contact.EMAIL_INVALID"></div>
+                                    <div id="errorEmailEmptyBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <div ng-show="contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$error.email" class="error form-hint" ng-cloak translate="contact.EMAIL_INVALID"></div>
                                     <input type="email" class="form-control" ng-class="(contactUsForm.emailHome.$dirty && contactUsForm.emailHome.$invalid) ? 'error' : ''" id="emailHome" name="emailHome" placeholder="{{ 'contact.EMAIL' | translate }}" ng-required="true" ng-model="message.email">
                                 </div>
                             </div>
@@ -30,7 +30,7 @@
                                     <label for="subject" translate="contact.SUBJECT">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.subject.$dirty && contactUsForm.subject.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <div id="errorSubjectBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
                                     <input type="text" class="form-control" ng-class="(contactUsForm.subject.$dirty && contactUsForm.subject.$invalid) ? 'error' : ''" id="subject" name="subject" placeholder="{{ 'contact.SUBJECT' | translate }}" ng-required="true" ng-model="$parent.message.subject"
                                         required>
                                 </div>
@@ -42,7 +42,7 @@
                                     <label for="body" translate="contact.MESSAGE">
                                         <span class="symbol required"></span>
                                     </label>
-                                    <div class="error form-hint" ng-show="contactUsForm.body.$dirty && contactUsForm.body.$error.required" ng-cloak translate="contact.FIELD_REQUIRED"></div>
+                                    <div id="errorBodyBox" class="error form-hint" ng-cloak translate="contact.FIELD_REQUIRED"></div>
                                     <textarea class="form-control resize-none" ng-class="(contactUsForm.body.$dirty && contactUsForm.body.$invalid) ? 'error' : ''" id="user" name="body" placeholder="{{ 'contact.MESSAGE_BODY' | translate }}" ng-required="true" ng-model="$parent.message.body"
                                         required></textarea>
                                 </div>

@@ -49,16 +49,25 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             if ($scope.message.email != '' && $scope.message.subject != '' && $scope.message.body != '') {
                 RestService.leaveMessage($scope.message.email, $scope.message.subject, $scope.message.body);
             } else {
-                var emptyFields = $translate.instant('contact.EMPTY_FIELDS');
-                var sendMessage = $translate.instant('contact.SEND_MESSAGE');
-                growl.error(emptyFields, { title: sendMessage });
+                // var emptyFields = $translate.instant('contact.EMPTY_FIELDS');
+                // var sendMessage = $translate.instant('contact.SEND_MESSAGE');
+                // growl.error(emptyFields, { title: sendMessage });
+                if ($scope.message.email == '') {
+                    $('#errorEmailEmptyBox').show();
+                }
+                if ($scope.message.subject == '') {
+                    $('#errorSubjectBox').show();
+                }
+                if ($scope.message.body == '') {
+                    $('#errorBodyBox').show();
+                }
             }
         };
 
         $rootScope.$on('SendMessage', function(event, data) {
-            // $scope.message.email = '';
-            // $scope.message.subject = '';
-            // $scope.message.body = '';
+            $scope.message.email = '';
+            $scope.message.subject = '';
+            $scope.message.body = '';
             var sendSuccess = $translate.instant('contact.SEND_CORRECTLY');
             var sendMessage = $translate.instant('contact.SEND_MESSAGE');
             growl.success(sendSuccess, { title: sendMessage });
