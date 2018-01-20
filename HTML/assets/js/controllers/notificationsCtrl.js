@@ -24,6 +24,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             qrcode: '',
             profileurl: '',
             fullname: '',
+            phone: '',
             socialnetworks: [],
             tshirts: [],
             snippets: [],
@@ -148,6 +149,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
+                            $scope.user.phone = data.phone;
                             $scope.user.profileurl = data.url;
                             $scope.user.configVisible = data.confVisible;
                             $scope.user.configEmailVisible = data.confEmailVisible;
