@@ -26,7 +26,7 @@
                     <a ng-show="!EditInfoFlag && user.email != ''" class="padding-0 mailtoStyle" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
-                    <h5 ng-show="!EditInfoFlag && user.phone != ''" class="padding-0 margin-top-10">
+                    <h5 ng-show="!EditInfoFlag && user.phone != ''" class="padding-0 margin-top-10 margin-bottom-0">
                         <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
                     </h5>
                     <div class="form-group" ng-show="EditInfoFlag">
@@ -36,8 +36,7 @@
                             ng-model="user.email">
                     </div>
                     <div class="form-group" ng-show="EditInfoFlag">
-                        <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.phone.$dirty && editUserXS.phone.$error.required" ng-cloak>{{"This field is required."}}</div>
-                        <input type="text" class="col-xs-12 form-control margin-top-10" ng-class="(editUserXS.phone.$dirty && editUserXS.phone.$invalid) ? 'error' : ''" id="phone" name="phone" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}" ng-required="true" ng-model="user.phone">
+                        <input type="text" class="col-xs-12 form-control margin-top-10" id="phone" name="phone" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}" ng-required="true" ng-model="user.phone">
                     </div>
                 </div>
                 <div class="col-xs-11 marginLeft5 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
@@ -126,7 +125,7 @@
                                 <a ng-show="!EditInfoFlag && user.email != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                                 </a>
-                                <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10">
+                                <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
                                 </h5>
                                 <div ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
@@ -152,9 +151,7 @@
                                             ng-required="true" ng-model="user.email">
                                     </div>
                                     <div class="form-group">
-                                        <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 error form-hint margin-top-10 padding-left-0" ng-show="editUserMD.phoneMD.$dirty && editUserMD.phoneMD.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
-                                        <input type="text" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 form-control margin-top-10" ng-class="(editUserMD.phoneMD.$dirty && editUserMD.phoneMD.$invalid) ? 'error' : ''" id="phoneMD" name="phoneMD" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}"
-                                            ng-required="true" ng-model="user.phone">
+                                        <input type="text" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 form-control margin-top-10" id="phoneMD" name="phoneMD" placeholder="{{ 'user_profile.ENTER_PHONE' | translate }}" ng-required="true" ng-model="user.phone">
                                     </div>
                                     <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
                                         <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>

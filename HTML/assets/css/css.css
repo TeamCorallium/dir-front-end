@@ -2743,6 +2743,7 @@ span.stars span {
 .border-top-clap {
     border-top: 1px solid #E3E3E3;
     padding-top: 10px !important;
+    margin-top: 10px !important;
 }
 
 .width20 {
