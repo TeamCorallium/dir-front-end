@@ -681,6 +681,9 @@
 }
 
 @media (max-width: 767px) {
+    .margin-top--15XS {
+        margin-top: -15px !important;
+    }
     .slick-prev {
         margin-left: -20px !important;
     }
@@ -2999,10 +3002,6 @@ figure.effect-zoe {
     opacity: 0.8 !important;
 }
 
-.margin-top--15 {
-    margin-top: -15px !important;
-}
-
 .profile-padding-view {
     min-height: 100% !important;
     position: relative !important;
@@ -3017,4 +3016,8 @@ figure.effect-zoe {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 14px;
     line-height: 1.1;
+}
+
+.margin-top--15 {
+    margin-top: -15px !important;
 }
