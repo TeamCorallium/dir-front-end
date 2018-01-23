@@ -1356,23 +1356,16 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.showEmail = '';
 
         $scope.shortEmail = function() {
-            // if ($scope.user.email.length >= 25) {
-            //     for (var i = 0; i < 25; i++) {
-            //         console.log($scope.user.email.charAt(i) + " letter");
-            //         $scope.shortEmail.push($scope.user.email.charAt(i));
-            //     }
-            //     $scope.shortEmail.push('.');
-            //     $scope.shortEmail.push('.');
-            //     $scope.shortEmail.push('.');
-            // }
-            // console.log($scope.shortEmail + " email");
-
             var array = $scope.user.email.toString();
-            console.log(array + " email");
-            console.log(array.length + " email");
-            var array1 = String($scope.user.email);
-            console.log(array1 + " email1");
-            console.log(array1.length + " email1");
+
+            if (array >= 25) {
+                for (var i = 0; i < 25; i++) {
+                    $scope.shortEmail.push(array.charAt(i));
+                }
+                $scope.shortEmail.push('.');
+                $scope.shortEmail.push('.');
+                $scope.shortEmail.push('.');
+            }
         };
     }
 ]);

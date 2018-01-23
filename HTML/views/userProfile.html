@@ -24,7 +24,7 @@
                     <h5 ng-show="!EditInfoFlag" class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
                     <textarea ng-show="EditInfoFlag" placeholder="{{ 'user_profile.ENTER_INFO' | translate }}" class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp" ng-model="user.info"></textarea>
                     <a ng-show="!EditInfoFlag && user.email != ''" class="padding-0 mailtoStyle" href="mailto:{{user.email}}">
-                        <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
+                        <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.showEmail}}
                     </a>
                     <h5 ng-show="!EditInfoFlag && user.phone != ''" class="padding-0 margin-top-10 margin-bottom-0">
                         <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
@@ -71,7 +71,7 @@
                         </ul>
                         <ul class="list-inline SocialIcon list-unstyled margin-left-0 displayInlineFlex margin-top--15XS" ng-show="user.socialnetworks.length == 0">
                             <li class="padding-5">
-                                <a type="button" class="SocialList HoverWhite padding-top-2 styleButtonSocialEmpty" data-toggle="modal" data-target="#modalSocialNetwork">
+                                <a type="button" class="HoverWhite padding-top-2 styleButtonSocialEmpty" data-toggle="modal" data-target="#modalSocialNetwork">
 
                                 </a>
                             </li>
@@ -123,7 +123,7 @@
                                 <h5 ng-show="!EditInfoFlag" class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
                                 </h5>
                                 <a ng-show="!EditInfoFlag && user.email != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
-                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.showEmail}}
                                 </a>
                                 <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
