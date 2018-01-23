@@ -1359,15 +1359,15 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var array = $scope.user.email.toString();
             var emailAux = "";
 
-            if (array.length >= 25) {
-                for (var i = 0; i < 25; i++) {
+            if (array.length >= 21) {
+                for (var i = 0; i < 21; i++) {
                     emailAux = emailAux + array.charAt(i);
                 }
                 emailAux = emailAux + '...';
             }
             console.log(emailAux + " Aux");
-            $scope.shortEmail = emailAux;
-            console.log($scope.shortEmail + " Email");
+            $scope.showEmail = emailAux;
+            console.log($scope.showEmail + " Email");
         };
     }
 ]);
