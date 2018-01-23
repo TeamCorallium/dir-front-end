@@ -1361,11 +1361,12 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if (array.length >= 25) {
                 for (var i = 0; i < 25; i++) {
+                    console.log(array.charAt(i) + " letter");
                     emailAux.slice(i, array.charAt(i));
                 }
-                emailAux.slice(i, '.');
-                emailAux.slice(i, '.');
-                emailAux.slice(i, '.');
+                emailAux.slice(25, '.');
+                emailAux.slice(26, '.');
+                emailAux.slice(27, '.');
             }
             console.log(emailAux + " Aux");
             $scope.shortEmail = emailAux;
