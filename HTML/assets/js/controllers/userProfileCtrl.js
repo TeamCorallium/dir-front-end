@@ -1360,11 +1360,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
             if (array >= 25) {
                 for (var i = 0; i < 25; i++) {
-                    $scope.shortEmail.push(array.charAt(i));
+                    $scope.shortEmail.slice(i, array.charAt(i));
                 }
-                $scope.shortEmail.push('.');
-                $scope.shortEmail.push('.');
-                $scope.shortEmail.push('.');
+                $scope.shortEmail.slice(i, '.');
+                $scope.shortEmail.slice(i, '.');
+                $scope.shortEmail.slice(i, '.');
             }
         };
     }
