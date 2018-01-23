@@ -1365,9 +1365,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 }
                 emailAux = emailAux + '...';
             }
-            console.log(emailAux + " Aux");
             $scope.showEmail = emailAux;
-            console.log($scope.showEmail + " Email");
         };
     }
 ]);
