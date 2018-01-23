@@ -1357,15 +1357,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.shortEmail = function() {
             var array = $scope.user.email.toString();
+            var emailAux = "";
 
             if (array.length >= 25) {
                 for (var i = 0; i < 25; i++) {
-                    $scope.shortEmail.slice(i, array.charAt(i));
+                    emailAux.slice(i, array.charAt(i));
                 }
-                $scope.shortEmail.slice(i, '.');
-                $scope.shortEmail.slice(i, '.');
-                $scope.shortEmail.slice(i, '.');
+                emailAux.slice(i, '.');
+                emailAux.slice(i, '.');
+                emailAux.slice(i, '.');
             }
+
+            $scope.shortEmail = emailAux;
         };
     }
 ]);
