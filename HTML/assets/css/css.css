@@ -67,6 +67,9 @@
 }
 
 @media (min-width: 768px) {
+    .margin-top--15XS {
+        margin-top: -15px !important;
+    }
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 175px !important;
@@ -681,9 +684,6 @@
 }
 
 @media (max-width: 767px) {
-    .margin-top--15XS {
-        margin-top: -15px !important;
-    }
     .slick-prev {
         margin-left: -20px !important;
     }
