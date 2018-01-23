@@ -1355,16 +1355,18 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.showEmail = '';
 
         $scope.shortEmail = function() {
-            if ($scope.user.email.length >= 25) {
-                for (var i = 0; i < 25; i++) {
-                    console.log($scope.user.email.charAt(i) + " letter");
-                    $scope.shortEmail.push($scope.user.email.charAt(i));
-                }
-                $scope.shortEmail.push('.');
-                $scope.shortEmail.push('.');
-                $scope.shortEmail.push('.');
-            }
-            console.log($scope.shortEmail + " email");
+            // if ($scope.user.email.length >= 25) {
+            //     for (var i = 0; i < 25; i++) {
+            //         console.log($scope.user.email.charAt(i) + " letter");
+            //         $scope.shortEmail.push($scope.user.email.charAt(i));
+            //     }
+            //     $scope.shortEmail.push('.');
+            //     $scope.shortEmail.push('.');
+            //     $scope.shortEmail.push('.');
+            // }
+            // console.log($scope.shortEmail + " email");
+
+            console.log($scope.user.email.length + " email");
         };
 
         $scope.shortEmail();
