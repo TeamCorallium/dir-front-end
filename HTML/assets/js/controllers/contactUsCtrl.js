@@ -80,7 +80,7 @@ app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService"
             growl.success(sendSuccess, { title: sendMessage });
         });
 
-        rootScope.$on('LeaveMessageError', function(event, data) {
+        $rootScope.$on('LeaveMessageError', function(event, data) {
             var messageError = $translate.instant('contact.MESSAGE_ERROR');
             var sendMessage = $translate.instant('contact.SEND_MESSAGE');
             growl.error(messageError, { title: sendMessage });
