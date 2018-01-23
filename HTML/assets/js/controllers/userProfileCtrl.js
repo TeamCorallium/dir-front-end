@@ -133,6 +133,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             $scope.user.avatar = $scope.getAvatar(data.avatar);
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
+                            $scope.shortEmail();
                             $scope.user.score = data.score;
                             if ($scope.user.score > 1) {
                                 $scope.showClaps = true;
@@ -1373,7 +1374,5 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             console.log(array1 + " email1");
             console.log(array1.length + " email1");
         };
-
-        $scope.shortEmail();
     }
 ]);
