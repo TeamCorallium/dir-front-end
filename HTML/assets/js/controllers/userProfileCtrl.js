@@ -1367,7 +1367,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             // console.log($scope.shortEmail + " email");
 
             var array = $scope.user.email.toString();
+            console.log(array + " email");
             console.log(array.length + " email");
+            var array1 = String($scope.user.email);
+            console.log(array1 + " email1");
+            console.log(array1.length + " email1");
         };
 
         $scope.shortEmail();
