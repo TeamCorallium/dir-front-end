@@ -1367,8 +1367,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 emailAux.slice(i, '.');
                 emailAux.slice(i, '.');
             }
-
+            console.log(emailAux + " Aux");
             $scope.shortEmail = emailAux;
+            console.log($scope.shortEmail + " Email");
         };
     }
 ]);
