@@ -7,6 +7,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             path: '/'
         });
 
+        $scope.showEmail = '';
+
         $scope.user = {
             profileUrl: '',
             username: '',
@@ -1353,12 +1355,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             getCoverPicture($scope.user.username);
         });
 
-        $scope.showEmail = '';
-
         $scope.shortEmail = function() {
             var array = $scope.user.email.toString();
 
-            if (array >= 25) {
+            if (array.length >= 25) {
                 for (var i = 0; i < 25; i++) {
                     $scope.shortEmail.slice(i, array.charAt(i));
                 }
