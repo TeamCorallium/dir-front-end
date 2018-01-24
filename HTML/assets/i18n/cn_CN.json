@@ -289,7 +289,19 @@
         "MESSAGE_ERROR": "發送郵件時出錯, 請重試",
         "WE_PROBLEM": "我們發現了一些問題, 請再試一次",
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
-        "NETWORK_CONNECTION": "網路連接"
+        "NETWORK_CONNECTION": "網路連接",
+        "TITTLE": "联系",
+        "SUB_TITLE": "",
+        "GET_IN_TOUCH": "取得联系",
+        "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
+        "THE_OFFICE": "该办公室",
+        "ADDRESS": "Address: 1234 Street Name, City Name, United States",
+        "PHONE": "Phone: (123) 456-7890",
+        "EMAIL_DATE": "EMAIL",
+        "HOURS": "Business Hours",
+        "WEEK": "Monday - Friday 9am to 5pm",
+        "SATURDAY": "Saturday - 9am to 2pm",
+        "SUNDAY": "Sunday - Closed"
     },
     "register": {
         "SORRY_TRY": "對不起再試一次",

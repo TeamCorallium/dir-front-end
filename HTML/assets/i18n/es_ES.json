@@ -289,7 +289,19 @@
         "MESSAGE_ERROR": "Error al enviar el mensaje, por favor inténtelo de nuevo",
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
-        "NETWORK_CONNECTION": "Conexión de red"
+        "NETWORK_CONNECTION": "Conexión de red",
+        "TITTLE": "Contacto",
+        "SUB_TITLE": "",
+        "GET_IN_TOUCH": "Ponerse en contacto",
+        "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
+        "THE_OFFICE": "La oficina",
+        "ADDRESS": "Address: 1234 Street Name, City Name, United States",
+        "PHONE": "Phone: (123) 456-7890",
+        "EMAIL_DATE": "EMAIL",
+        "HOURS": "Business Hours",
+        "WEEK": "Monday - Friday 9am to 5pm",
+        "SATURDAY": "Saturday - 9am to 2pm",
+        "SUNDAY": "Sunday - Closed"
     },
     "register": {
         "SORRY_TRY": "Lo siento, inténtelo de nuevo",

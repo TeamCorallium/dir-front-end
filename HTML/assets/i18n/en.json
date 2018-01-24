@@ -289,7 +289,19 @@
         "MESSAGE_ERROR": "Error sending message, please try again",
         "WE_PROBLEM": "We detected some problems, please try again",
         "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
-        "NETWORK_CONNECTION": "Network Connection"
+        "NETWORK_CONNECTION": "Network Connection",
+        "TITTLE": "Contact",
+        "SUB_TITLE": "",
+        "GET_IN_TOUCH": "Get in touch",
+        "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
+        "THE_OFFICE": "The Office",
+        "ADDRESS": "Address: 1234 Street Name, City Name, United States",
+        "PHONE": "Phone: (123) 456-7890",
+        "EMAIL_DATE": "EMAIL",
+        "HOURS": "Business Hours",
+        "WEEK": "Monday - Friday 9am to 5pm",
+        "SATURDAY": "Saturday - 9am to 2pm",
+        "SUNDAY": "Sunday - Closed"
     },
     "register": {
         "SORRY_TRY": "Sorry try again",
