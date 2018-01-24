@@ -3022,13 +3022,11 @@ figure.effect-zoe {
     margin-top: -15px !important;
 }
 
-.textHoverHidden {
-    position: relative;
-    bottom: 30px;
-    left: 0px;
-    visibility: hidden;
-}
-
-.textHoverHidden:hover {
-    visibility: visible;
+.showEmailHover:hover {
+    content: 'Probando texto grande gradisimo';
+    position: absolute;
+    color: #989898;
+    font-size: 12px;
+    right: 22px;
+    top: 5px;
 }
