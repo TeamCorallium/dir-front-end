@@ -328,5 +328,17 @@
         "TEXT_INVISIBLE": "text invisible",
         "HOME": "Go to home",
         "PROFILE": "Go to profile"
+    },
+    "faq": {
+        "TITLE": "",
+        "SUB_TITLE": ""
+    },
+    "privacy": {
+        "TITLE": "Privacy Policy",
+        "SUB_TITLE": ""
+    },
+    "terms": {
+        "TITLE": "Web Site Terms and Conditions of Use",
+        "SUB_TITLE": ""
     }
 }

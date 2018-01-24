@@ -328,5 +328,17 @@
         "TEXT_INVISIBLE": "文本不可見",
         "HOME": "回家",
         "PROFILE": "轉到設定檔"
+    },
+    "faq": {
+        "TITLE": "",
+        "SUB_TITLE": ""
+    },
+    "privacy": {
+        "TITLE": "隐私政策",
+        "SUB_TITLE": ""
+    },
+    "terms": {
+        "TITLE": "网站条款和使用条件",
+        "SUB_TITLE": ""
     }
 }
