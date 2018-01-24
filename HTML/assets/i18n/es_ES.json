@@ -348,6 +348,29 @@
     },
     "terms": {
         "TITLE": "Términos y condiciones de uso del sitio web",
-        "SUB_TITLE": ""
+        "SUB_TITLE": "",
+        "TERM1": "1. Términos",
+        "SUB_TERM1": "Al acceder a este sitio web, usted está de acuerdo en estar obligado por estos términos y condiciones de uso del sitio web, todas las leyes y reglamentos aplicables, y acepta que usted es responsable del cumplimiento de las leyes locales aplicables. Si usted no está de acuerdo con cualquiera de estos términos, se le prohíbe utilizar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por la legislación aplicable en materia de derecho de autor y marcas.",
+        "USE_LICENSE": "2. Licencia de uso",
+        "USER_LICENSE_SUB": "El permiso se concede para descargar temporalmente una copia de los materiales (información o software) en el sitio web de DIRSTUFF para la visión transitoria personal, no comercial solamente. Esta es la concesión de una licencia, no una transferencia de título, y bajo esta licencia usted no puede:",
+        "LICENSE1": "modificar o copiar los materiales;",
+        "LICENSE2": "utilizar los materiales para cualquier propósito comercial, o para cualquier exhibición pública (comercial o no comercial);",
+        "LICENSE3": "intente descompilar o revertir cualquier software contenido en el sitio web de DIRSTUFF;",
+        "LICENSE4": "Elimine los derechos de autor u otras anotaciones propietarias de los materiales; o",
+        "LICENSE5": "Transfiera los materiales a otra persona o 'refleje' los materiales en cualquier otro servidor.",
+        "LICENSE_SUB2": "Esta licencia terminará automáticamente si usted viola cualquiera de estas restricciones y puede ser terminada por DIRSTUFF en cualquier momento. Al terminar la visualización de estos materiales o a la terminación de esta licencia, usted debe destruir cualquier material descargado en su posesión, ya sea en formato electrónico o impreso.",
+        "DISCLAIMER": "3. Descargo",
+        "DISCLAIMER_SUB": "Los materiales en el sitio web de DIRSTUFF se proporcionan 'tal cual'. DIRSTUFF no hace ninguna garantía, expresa o implícita, y por la presente renuncia y niega todas las demás garantías, incluyendo, sin limitación, garantías implícitas o condiciones de comerciabilidad, idoneidad para un propósito particular, o no infracción de propiedad intelectual u otra violación de derechos. Además, DIRSTUFF no garantiza ni hace ninguna declaración referente a la exactitud, los resultados probables, o la confiabilidad del uso de los materiales en su Web site del Internet o de otra manera referente a tales materiales o en cualesquiera sitios ligados a este sitio.",
+        "LIMITATIONS": "4. Limitaciones",
+        "LIMITATIONS_SUB": "En ningún caso DIRSTUFF o sus proveedores serán responsables de ningún daño (incluyendo, sin limitación, daños por pérdida de datos o ganancia, o por interrupción del negocio) que surja del uso o incapacidad para usar los materiales en el sitio de Internet de DIRSTUFF, incluso si DIRSTUFF o un representante autorizado de DIRSTUFF ha sido notificado oralmente o por escrito de la posibilidad de tales daños. Debido a que algunas jurisdicciones no permiten limitaciones a las garantías implícitas, o limitaciones de responsabilidad por daños consecuentes o incidentales, estas limitaciones pueden no aplicarse a usted.",
+        "REVITION": "5. Revisiones y erratas",
+        "REVITION_SUB": "Los materiales que aparecen en el sitio web de DIRSTUFF pueden incluir errores técnicos, tipográficos o fotográficos. DIRSTUFF no garantiza que ninguno de los materiales de su sitio web sean precisos, completos o actualizados. DIRSTUFF puede realizar cambios en los materiales contenidos en su sitio web en cualquier momento y sin previo aviso. Sin embargo, DIRSTUFF no hace ningún compromiso para actualizar los materiales.",
+        "LINKS": "6. Enlaces",
+        "LINKS_SUB": "DIRSTUFF no ha revisado todos los sitios vinculados a su sitio web de Internet y no es responsable de los contenidos de cualquier sitio enlazado. La inclusión de cualquier enlace no implica la aprobación por DIRSTUFF del sitio. El uso de cualquier sitio web vinculado es el propio riesgo del usuario.",
+        "SITE_TERM": "7. Condiciones de uso del sitio modificaciones",
+        "SITE_TERM_SUB": "DIRSTUFF puede revisar estas condiciones de uso para su sitio web en cualquier momento sin previo aviso. Al usar este sitio web usted está de acuerdo en estar obligado por la versión actual de estos términos y condiciones de uso.",
+        "LAW": "8. Ley aplicable",
+        "LAW_SUB": "Cualquier reclamación relacionada con el sitio web de DIRSTUFF se regirá por las leyes del estado de Shanghai, China, sin tener en cuenta su conflicto de disposiciones legales.",
+        "GENERAL": "Términos y condiciones generales aplicables al uso de un sitio Web."
     }
 }
