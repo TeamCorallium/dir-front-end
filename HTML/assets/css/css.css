@@ -3050,3 +3050,11 @@ figure.effect-zoe {
 p:hover .showTextHover {
     display: block;
 }
+
+.height-70 {
+    height: 70px !important;
+}
+
+.margin-top-17 {
+    margin-top: 17px !important;
+}
