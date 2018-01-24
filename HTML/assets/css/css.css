@@ -3029,6 +3029,8 @@ figure.effect-zoe {
     text-align: left;
     left: -30px;
     display: none;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
 }
 
 .showTextHover:after {
