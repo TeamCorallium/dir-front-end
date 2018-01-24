@@ -9,6 +9,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $('#MessageBody').hide();
 
         $scope.showEmail = '';
+        $scope.showShortEmailBox = false;
 
         var exploreUser = '';
         $scope.activateClap = false;
@@ -572,12 +573,16 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var emailAux = "";
 
             if (array.length >= 21) {
+                $scope.showShortEmailBox = true;
                 for (var i = 0; i < 21; i++) {
                     emailAux = emailAux + array.charAt(i);
                 }
                 emailAux = emailAux + '...';
+                $scope.showEmail = emailAux;
+            } else {
+                $scope.showShortEmailBox = false;
+                $scope.showEmail = $scope.user.email;
             }
-            $scope.showEmail = emailAux;
         };
     }
 ]);

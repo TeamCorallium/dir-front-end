@@ -8,6 +8,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.showEmail = '';
+        $scope.showShortEmailBox = false;
 
         $scope.user = {
             profileUrl: '',
@@ -1360,12 +1361,16 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var emailAux = "";
 
             if (array.length >= 21) {
+                $scope.showShortEmailBox = true;
                 for (var i = 0; i < 21; i++) {
                     emailAux = emailAux + array.charAt(i);
                 }
                 emailAux = emailAux + '...';
+                $scope.showEmail = emailAux;
+            } else {
+                $scope.showShortEmailBox = false;
+                $scope.showEmail = $scope.user.email;
             }
-            $scope.showEmail = emailAux;
         };
     }
 ]);

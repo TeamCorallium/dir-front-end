@@ -76,11 +76,14 @@
                                 <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
                                 <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
                                 </h5>
-                                <a ng-show="user.email != ''" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                <a ng-show="user.email != '' && showShortEmailBox" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail">
                                     <p class="margin-bottom-0  col-sm-11 col-md-11 col-lg-11 pull-right">{{showEmail}}
                                         <span class="showTextHover">{{user.email}}</span>
                                     </p>
+                                </a>
+                                <a ng-show="user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail">{{user.email}}
                                 </a>
                                 <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
