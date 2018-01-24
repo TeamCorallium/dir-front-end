@@ -1,8 +1,8 @@
 <div class="profile-padding padding-bottom-0 background-light" ng-controller="ExploreUsersCtrl">
     <div>
         <img class="pictureExploreUser" ng-src="HTML/assets/images/exploreusers.jpg" />
-        <!-- <h2 class="text-center textPictureExploreUsers col-xs-12" translate="explore_user.EXPLORE_PROFILES"></h2>
-        <p class="text-center font-size-15 textPictureExploreUsersSeconds col-xs-12" translate="explore_user.EXPLORE_PROFILES"></p> -->
+        <h2 class="text-center textPictureExploreUsers col-xs-12" translate="explore_user.EXPLORE_PROFILES"></h2>
+        <p class="text-center font-size-15 textPictureExploreUsersSeconds col-xs-12" translate="explore_user.EXPLORE_PROFILES"></p>
     </div>
     <section class="padding-top-40 styleBoxConfiguration container-fluid container-fullw bg-white padding-top-10 padding-bottom-10 backgroundGray">
         <div class="row">
@@ -139,8 +139,8 @@
                                             <img ng-src="{{profile.avatar}}" class="img-circle imgProfile pointerHover" ng-click="goToProfile(profile.owner)" />
                                         </div>
                                         <div class="col-xs-12 center margin-top-5">
-                                            <h3 ng-hide="profile.fullname == ''">{{profile.fullname | htmlToPlaintext | words:2 :true}}</h3>
-                                            <h3 ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
+                                            <h3 class="margin-top-10" ng-hide="profile.fullname == ''">{{profile.fullname | htmlToPlaintext | words:2 :true}}</h3>
+                                            <h3 class="margin-top-10" ng-show="profile.fullname == ''">@{{profile.owner}}</h3>
                                             <p class="text-dark padding-left-10 padding-right-10">
                                                 {{profile.info | htmlToPlaintext | words:10 :true}}
                                             </p>
