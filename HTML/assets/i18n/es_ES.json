@@ -335,7 +335,16 @@
     },
     "privacy": {
         "TITLE": "Políticas de privacidad",
-        "SUB_TITLE": ""
+        "SUB_TITLE": "",
+        "HEADER": "Su privacidad es muy importante para nosotros. En consecuencia, hemos desarrollado esta política para que usted entienda cómo recopilamos, utilizamos, comunicamos y divulgamos y hacemos uso de la información personal. El siguiente describe nuestra política de privacidad.",
+        "FOOTER": "Estamos comprometidos a llevar a cabo nuestro negocio de acuerdo con estos principios con el fin de asegurar que la confidencialidad de la información personal está protegida y mantenida.",
+        "TEXT1": "Antes o en el momento de recolectar información personal, identificaremos los propósitos para los cuales se recolecta la información.",
+        "TEXT2": "Recopilaremos y usaremos la información personal únicamente con el objetivo de cumplir con los propósitos especificados por nosotros y para otros propósitos compatibles, a menos que obtengamos el consentimiento de la persona interesada o según lo exija la ley.",
+        "TEXT3": "Sólo retendremos información personal siempre que sea necesario para el cumplimiento de esos propósitos.",
+        "TEXT4": "Recopilaremos información personal por medios lícitos y justos y, en su caso, con el conocimiento o consentimiento de la persona interesada.",
+        "TEXT5": "Los datos personales deben ser pertinentes a los fines para los que se utilizarán y, en la medida necesaria para esos fines, deben ser precisos, completos y actualizados.",
+        "TEXT6": "Protegeremos la información personal mediante salvaguardias de seguridad razonables contra pérdidas o robos, así como acceso no autorizado, divulgación, copia, uso o modificación.",
+        "TEXT7": "Vamos a poner a disposición de los clientes información sobre nuestras políticas y prácticas relacionadas con la gestión de la información personal."
     },
     "terms": {
         "TITLE": "Términos y condiciones de uso del sitio web",
