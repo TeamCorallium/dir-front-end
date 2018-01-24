@@ -196,7 +196,7 @@
         margin-top: 9px !important;
     }
     .TitleSnippetBox {
-        width: 95% !important;
+        width: 93% !important;
         text-align: left !important;
         display: block;
         position: relative;
@@ -3061,4 +3061,12 @@ p:hover .showTextHover {
 
 .padding-Bottom-60 {
     padding-bottom: 60px !important;
+}
+
+.margin-top-53 {
+    margin-top: 53px !important;
+}
+
+.colorTextSix {
+    color: #666666 !important;
 }
