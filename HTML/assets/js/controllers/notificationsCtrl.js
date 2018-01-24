@@ -8,6 +8,8 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             path: '/'
         });
 
+        $scope.showEmail = '';
+
         $scope.user = {
             profileUrl: '',
             username: '',
@@ -146,6 +148,7 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
                             }
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
+                            $scope.shortEmail();
                             $scope.user.score = data.score;
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
@@ -384,5 +387,18 @@ app.controller('NotificationsCtrl', ["$rootScope", "$scope", "$stateParams", "Re
             var deleteNotification = $translate.instant('notifications.DELETE_NOTIFICATION');
             growl.success(deleteNotification);
         });
+
+        $scope.shortEmail = function() {
+            var array = $scope.user.email.toString();
+            var emailAux = "";
+
+            if (array.length >= 21) {
+                for (var i = 0; i < 21; i++) {
+                    emailAux = emailAux + array.charAt(i);
+                }
+                emailAux = emailAux + '...';
+            }
+            $scope.showEmail = emailAux;
+        };
     }
 ]);

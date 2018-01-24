@@ -8,6 +8,8 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
         $('#MessageTitle').hide();
         $('#MessageBody').hide();
 
+        $scope.showEmail = '';
+
         var exploreUser = '';
         $scope.activateClap = false;
         $scope.activateFollow = false;
@@ -175,6 +177,7 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
                             }
                             $scope.user.id = data.id;
                             $scope.user.email = data.email;
+                            $scope.shortEmail();
                             $scope.user.score = data.score;
                             if ($scope.user.score > 1) {
                                 $scope.showClaps = true;
@@ -574,6 +577,19 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
                         console.log(errResponse);
                     }
                 );
+        };
+
+        $scope.shortEmail = function() {
+            var array = $scope.user.email.toString();
+            var emailAux = "";
+
+            if (array.length >= 21) {
+                for (var i = 0; i < 21; i++) {
+                    emailAux = emailAux + array.charAt(i);
+                }
+                emailAux = emailAux + '...';
+            }
+            $scope.showEmail = emailAux;
         };
     }
 ]);
