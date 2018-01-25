@@ -26,9 +26,9 @@
                     <a ng-show="!EditInfoFlag && user.email != ''" class="padding-0 mailtoStyle" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
-                    <h5 ng-show="!EditInfoFlag && user.phone != ''" class="padding-0 margin-top-10 margin-bottom-0">
+                    <a ng-show="!EditInfoFlag && user.phone != ''" class="padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
                         <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
-                    </h5>
+                    </a>
                     <div class="form-group" ng-show="EditInfoFlag">
                         <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.required" ng-cloak>{{"This field is required."}}</div>
                         <div class="col-xs-12 error form-hint margin-top-10 padding-left-0" ng-show="editUserXS.emailHome.$dirty && editUserXS.emailHome.$error.email" ng-cloak>{{"Email is invalid."}}</div>
@@ -131,9 +131,9 @@
                                 <a ng-show="!EditInfoFlag && user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
                                 </a>
-                                <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0">
+                                <a ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
-                                </h5>
+                                </a>
                                 <div ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
                                     <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
                                         <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
