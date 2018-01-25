@@ -290,7 +290,7 @@
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
         "NETWORK_CONNECTION": "Conexión de red",
-        "TITTLE": "Contacto",
+        "TITLE": "Contáctenos",
         "SUB_TITLE": "",
         "GET_IN_TOUCH": "Ponerse en contacto",
         "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
@@ -342,7 +342,7 @@
         "PROFILE": "ir al profile"
     },
     "faq": {
-        "TITLE": "",
+        "TITLE": "FAQ",
         "SUB_TITLE": ""
     },
     "privacy": {

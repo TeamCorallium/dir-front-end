@@ -290,7 +290,7 @@
         "WE_PROBLEM": "We detected some problems, please try again",
         "SERVER_NOT_FOUND": "Server Not Found. Check your internet connection.",
         "NETWORK_CONNECTION": "Network Connection",
-        "TITTLE": "Contact",
+        "TITLE": "Contact Us",
         "SUB_TITLE": "",
         "GET_IN_TOUCH": "Get in touch",
         "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
@@ -342,7 +342,7 @@
         "PROFILE": "Go to profile"
     },
     "faq": {
-        "TITLE": "",
+        "TITLE": "FAQ",
         "SUB_TITLE": ""
     },
     "privacy": {
