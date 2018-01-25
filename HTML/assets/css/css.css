@@ -3075,4 +3075,5 @@ p:hover .showTextHover {
 .BorderPageBlue {
     border-bottom: 3px solid #00B8B8 !important;
     width: 80px !important;
+    margin-top: -10px !important;
 }
