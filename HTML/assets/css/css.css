@@ -3078,3 +3078,10 @@ p:hover .showTextHover {
     margin-top: -10px !important;
     margin-bottom: 10px !important;
 }
+
+.BorderPageBlueTerms {
+    border-bottom: 3px solid #00B8B8 !important;
+    width: 70px !important;
+    margin-top: -10px !important;
+    margin-bottom: 10px !important;
+}
