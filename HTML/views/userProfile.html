@@ -124,12 +124,12 @@
                                 </h5>
                                 <a ng-show="!EditInfoFlag && user.email != '' && showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle showEmailHover" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail">
-                                    <p class="margin-bottom-0  col-sm-11 col-md-11 col-lg-11 pull-right">{{showEmail}}
+                                    <p class="margin-bottom-0 col-sm-11 col-md-11 col-lg-11 pull-right">{{showEmail}}
                                         <span class="showTextHover">{{user.email}}</span>
                                     </p>
                                 </a>
                                 <a ng-show="!EditInfoFlag && user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
-                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail">{{user.email}}
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
                                 </a>
                                 <h5 ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
