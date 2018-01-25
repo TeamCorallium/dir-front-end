@@ -3066,3 +3066,7 @@ p:hover .showTextHover {
     color: inherit !important;
     cursor: default !important;
 }
+
+.lineHeight20 {
+    line-height: 20px !important;
+}

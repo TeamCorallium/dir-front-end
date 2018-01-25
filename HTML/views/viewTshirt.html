@@ -15,7 +15,7 @@
                     <h5 class="padding-0">@{{user.username}}</h5>
                 </div>
                 <div class="col-xs-12">
-                    <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
+                    <h5 class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                         {{user.info}}
                     </h5>
                     <a class="padding-0 mailtoStyle" ng-show="user.email != ''" href="mailto:{{user.email}}">
@@ -89,7 +89,7 @@
                                     <strong>{{user.fullname}}</strong>
                                 </h4>
                                 <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.username}}</h4>
-                                <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
+                                <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                                     {{user.info}}
                                 </h5>
                                 <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" ng-show="user.email != '' && showShortEmailBox" href="mailto:{{user.email}}">
@@ -174,7 +174,7 @@
                                                         </span>
                                                     </div>
                                                 </div>
-                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30 padding-right-0" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>
+                                                <h5 class="ltwt_tweet_text dont-break-out col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-left-30 padding-right-0 lineHeight20" ng-bind-html="snippet.body | emoticons:{'linkTarget':'_blank'}"></h5>
                                             </div>
                                         </li>
                                     </ul>
@@ -235,7 +235,7 @@
                                                     <div class="post-info">
                                                         <a ng-disabled="!popularUser.configVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
                                                         <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
-                                                        <h5>{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
+                                                        <h5 class="lineHeight20">{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
                                                 <li class="ListMoreUser center">
