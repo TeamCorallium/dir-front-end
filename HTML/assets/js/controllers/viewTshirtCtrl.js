@@ -584,9 +584,9 @@ app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
             var array = $scope.user.email.toString();
             var emailAux = "";
 
-            if (array.length >= 21) {
+            if (array.length > 21) {
                 $scope.showShortEmailBox = true;
-                for (var i = 0; i < 21; i++) {
+                for (var i = 0; i <= 21; i++) {
                     emailAux = emailAux + array.charAt(i);
                 }
                 emailAux = emailAux + '...';

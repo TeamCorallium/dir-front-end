@@ -1,5 +1,7 @@
-app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate",
-    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate) {
+app.controller('ContactUsCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate", "$window",
+    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate, $window) {
+
+        $window.scrollTo(0, 0);
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", { path: '/' });

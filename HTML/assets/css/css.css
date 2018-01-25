@@ -2955,12 +2955,7 @@ span.stars span {
 }
 
 .colorTextBackers {
-    color: #5b5b60 !important;
-}
-
-.hoverColor {
-    color: inherit !important;
-    cursor: default !important;
+    color: #666666 !important;
 }
 
 .iconPhone {
@@ -3067,6 +3062,7 @@ p:hover .showTextHover {
     margin-top: 53px !important;
 }
 
-.colorTextSix {
-    color: #666666 !important;
+.hoverColor {
+    color: inherit !important;
+    cursor: default !important;
 }
