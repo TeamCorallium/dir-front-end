@@ -291,7 +291,7 @@
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
         "TITLE": "联系",
-        "SUB_TITLE": "",
+        "SUB_TITLE": "留下您的问题、建议或产品订购",
         "GET_IN_TOUCH": "取得联系",
         "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
         "THE_OFFICE": "该办公室",
@@ -348,6 +348,7 @@
     "privacy": {
         "TITLE": "隐私政策",
         "SUB_TITLE": "",
+        "HEADER1": "政策",
         "HEADER": "您的隐私对我们非常重要。因此, 我们制定了这一政策, 以便您了解我们如何收集、使用、沟通和披露, 并利用个人信息。以下概述了我们的隐私权政策。",
         "FOOTER": "我们承诺按照这些原则开展业务, 以确保个人信息的机密性得到保护和维护。",
         "TEXT1": "在收集个人信息之前或之前, 我们将确定收集信息的目的。",

@@ -290,8 +290,8 @@
         "WE_PROBLEM": "Detectamos algunos problemas, por favor inténtelo de nuevo",
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
         "NETWORK_CONNECTION": "Conexión de red",
-        "TITLE": "Contáctenos",
-        "SUB_TITLE": "",
+        "TITLE": "Contacto",
+        "SUB_TITLE": "Deje su pregunta, sugerencia o pedido de nuestro producto.",
         "GET_IN_TOUCH": "Ponerse en contacto",
         "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
         "THE_OFFICE": "La oficina",
@@ -348,6 +348,7 @@
     "privacy": {
         "TITLE": "Políticas de privacidad",
         "SUB_TITLE": "",
+        "HEADER1": "Politica",
         "HEADER": "Su privacidad es muy importante para nosotros. En consecuencia, hemos desarrollado esta política para que usted entienda cómo recopilamos, utilizamos, comunicamos y divulgamos y hacemos uso de la información personal. El siguiente describe nuestra política de privacidad.",
         "FOOTER": "Estamos comprometidos a llevar a cabo nuestro negocio de acuerdo con estos principios con el fin de asegurar que la confidencialidad de la información personal está protegida y mantenida.",
         "TEXT1": "Antes o en el momento de recolectar información personal, identificaremos los propósitos para los cuales se recolecta la información.",

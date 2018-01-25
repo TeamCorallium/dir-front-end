@@ -3071,3 +3071,7 @@ p:hover .showTextHover {
 .lineHeight20 {
     line-height: 20px !important;
 }
+
+.BorderPageBlue {
+    border-bottom: 3px #00B8B8 !important;
+}
