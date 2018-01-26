@@ -3088,4 +3088,5 @@ p:hover .showTextHover {
 
 #HintSocialNetwork {
     visibility: hidden;
+    z-index: 100 !important;
 }

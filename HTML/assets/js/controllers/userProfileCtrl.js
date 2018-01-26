@@ -1378,9 +1378,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             console.log(event.pageX + " " + event.pageY + " mouse");
 
             var element = document.getElementById('HintSocialNetwork');
-            element.style.width = "40px";
-            element.style.height = "40px";
-            element.style.backgroundColor = "#666666";
+            var txt = document.createElement("p", name);
+            element.appendChild(txt);
+
+            // element.style.backgroundColor = "#666666";
             element.style.position = "absolute";
             element.style.left = event.pageX + "px";
             element.style.top = event.pageY + "px";
@@ -1389,6 +1390,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mouseLeaveSocial = function() {
             var element = document.getElementById('HintSocialNetwork');
+            element.removeChild(element.firstChild);
             element.style.visibility = "hidden";
         };
     }
