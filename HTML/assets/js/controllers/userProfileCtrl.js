@@ -1375,7 +1375,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mouserOverSocial = function(name, event) {
             console.log(name + " name");
-            console.log(event.offsetX + " " + event.offsetY + " " + event.x + " " + event.y + " mouse");
+            console.log(event.offsetX + " " + event.offsetY + " " + event.pageX + " " + event.pageY + " mouse");
         };
     }
 ]);
