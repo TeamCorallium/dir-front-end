@@ -1382,7 +1382,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             element.style.height = "40px";
             element.style.backgroundColor = "#666666";
             element.style.position = "absolute";
-            element.style.top = event.pageX;
+            element.style.left = event.pageX;
             element.style.top = event.pageY;
             element.style.visibility = "visible";
         };
