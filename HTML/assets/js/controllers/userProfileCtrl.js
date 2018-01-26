@@ -1372,5 +1372,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.showEmail = $scope.user.email;
             }
         };
+
+        $scope.mouserOverSocial = function(name, event) {
+            console.log(name + " name");
+            console.log(event.offsetX + " " + event.offsetY + " " + event.x + " " + event.y + " mouse");
+        };
     }
 ]);
