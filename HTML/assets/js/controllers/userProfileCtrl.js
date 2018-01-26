@@ -1390,7 +1390,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mouseLeaveSocial = function() {
             var element = document.getElementById('HintSocialNetwork');
-            element.removeChild(element.firstChild);
+            var child = element.firstChild();
+            child.remove();
             element.style.visibility = "hidden";
         };
     }
