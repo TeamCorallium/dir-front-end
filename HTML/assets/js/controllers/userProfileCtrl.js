@@ -1373,9 +1373,22 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        $scope.mouserOverSocial = function(name, event) {
+        $scope.mouseOverSocial = function(name, event) {
             console.log(name + " name");
-            console.log(event.offsetX + " " + event.offsetY + " " + event.pageX + " " + event.pageY + " mouse");
+            console.log(event.pageX + " " + event.pageY + " mouse");
+
+            var element = document.getElementById('#HintSocialNetwork');
+            element.style.width = "40px";
+            element.style.height = "40px";
+            element.style.backgroundColor = "#666666";
+            element.style.position = "absolute";
+            element.style.top = event.pageX;
+            element.style.top = event.pageY;
+            element.style.visibility = "visible";
+        };
+
+        $scope.mouseLeaveSocial = function() {
+            element.style.visibility = "hidden";
         };
     }
 ]);
