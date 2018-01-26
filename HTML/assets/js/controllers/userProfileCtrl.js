@@ -1377,7 +1377,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             console.log(name + " name");
             console.log(event.pageX + " " + event.pageY + " mouse");
 
-            var element = document.getElementById('#HintSocialNetwork');
+            var element = document.getElementById('HintSocialNetwork');
             element.style.width = "40px";
             element.style.height = "40px";
             element.style.backgroundColor = "#666666";
@@ -1388,6 +1388,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.mouseLeaveSocial = function() {
+            var element = document.getElementById('HintSocialNetwork');
             element.style.visibility = "hidden";
         };
     }
