@@ -678,7 +678,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.selectedValueSocial = true;
         $scope.facebookName = '';
         $scope.showUrlCamp = false;
-        $scope.activeFacebook = false;
+        $scope.activeFacebook = true;
         $scope.manuallyCheck = false;
         $scope.isConnected = false;
 
@@ -1380,7 +1380,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var element = document.getElementById('HintSocialNetwork');
 
             element.style.position = "absolute";
-            element.style.left = event.pageX + 10 + "px";
+            element.style.left = event.pageX + 15 + "px";
             element.style.top = event.pageY + "px";
             element.style.visibility = "visible";
         };
