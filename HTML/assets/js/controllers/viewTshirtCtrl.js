@@ -1,4 +1,4 @@
-app.controller('viewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
+app.controller('ViewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestService", "$state", "$cookies", "$window", "growl", "$translate",
     function($rootScope, $scope, $stateParams, RestService, $state, $cookies, $window, growl, $translate) {
 
         $window.scrollTo(0, 0);

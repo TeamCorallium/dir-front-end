@@ -3095,3 +3095,17 @@ p:hover .showTextHover {
     background-color: #ebebeb;
     color: #666666;
 }
+
+.confirm {
+    background-color: #00B8B8 !important;
+    border-color: #00B8B8 !important;
+    font-size: 14px !important;
+}
+
+.cancel {
+    font-size: 14px !important;
+}
+
+.textModalDelete {
+    font-size: 14px !important;
+}

@@ -1,4 +1,4 @@
-<div class="profile-padding-view" ng-controller="viewTshirtCtrl" ng-cloak>
+<div class="profile-padding-view" ng-controller="ViewTshirtCtrl" ng-cloak>
     <div>
         <img class="pictureExploreUser" ng-src="{{user.cover}}" />
     </div>
@@ -18,7 +18,7 @@
                     <h5 class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                         {{user.info}}
                     </h5>
-                    <a class="col-xs-12 padding-0 mailtoStyle" ng-show="user.email != ''" href="mailto:{{user.email}}">
+                    <a class="col-xs-12 padding-0 mailtoStyle" ng-show="user.email != '' && user.configEmailVisible" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
                     <a class="col-xs-12 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" ng-show="user.phone != ''" href="tel:{{user.phone}}">
@@ -92,13 +92,13 @@
                                 <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                                     {{user.info}}
                                 </h5>
-                                <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" ng-show="user.email != '' && showShortEmailBox" href="mailto:{{user.email}}">
+                                <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" ng-show="user.email != '' && showShortEmailBox && user.configEmailVisible" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail">
                                     <p class="margin-bottom-0  col-sm-11 col-md-11 col-lg-11 padding-left-10 pull-right">{{showEmail}}
                                         <span class="showTextHover">{{user.email}}</span>
                                     </p>
                                 </a>
-                                <a ng-show="!EditInfoFlag && user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                <a ng-show="!EditInfoFlag && user.email != '' && !showShortEmailBox && user.configEmailVisible" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
                                 </a>
                                 <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" ng-show="user.phone != ''" href="tel:{{user.phone}}">
