@@ -672,13 +672,13 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             document.getElementsByTagName('body')[0].appendChild(script);
         }
 
-        $scope.socialnetwork = 'Facebook';
+        $scope.socialnetwork = '0';
         $scope.url = '';
         $('#urlRequired').hide();
         $scope.selectedValueSocial = true;
         $scope.facebookName = '';
         $scope.showUrlCamp = false;
-        $scope.activeFacebook = true;
+        $scope.activeFacebook = false;
         $scope.manuallyCheck = false;
         $scope.isConnected = false;
 
@@ -804,7 +804,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     };
                 default:
                     {
-                        $scope.showUrlCamp = true;
+                        $scope.showUrlCamp = false;
                         $scope.activeFacebook = false;
                         break;
                     }
