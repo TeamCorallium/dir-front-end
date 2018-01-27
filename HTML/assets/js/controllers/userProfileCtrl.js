@@ -672,7 +672,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             document.getElementsByTagName('body')[0].appendChild(script);
         }
 
-        $scope.socialnetwork = '0';
+        $scope.socialnetwork = 'Facebook';
         $scope.url = '';
         $('#urlRequired').hide();
         $scope.selectedValueSocial = true;
