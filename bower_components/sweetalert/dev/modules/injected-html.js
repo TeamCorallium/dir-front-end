@@ -1,10 +1,10 @@
-var injectedHTML = 
+var injectedHTML =
 
-  // Dark overlay
-  `<div class="sweet-overlay" tabIndex="-1"></div>` +
+    // Dark overlay
+    `<div class="sweet-overlay" tabIndex="-1"></div>` +
 
-  // Modal
-  `<div class="sweet-alert">` +
+    // Modal
+    `<div class="sweet-alert">` +
 
     // Error icon
     `<div class="sa-icon sa-error">
@@ -35,8 +35,8 @@ var injectedHTML =
     `<div class="sa-icon sa-custom"></div>` +
 
     // Title, text and input
-    `<h2>Title</h2>
-    <p>Text</p>
+    `<h4>Title</h4>
+    <p class=\"textModalDelete\">Text</p>
     <fieldset>
       <input type="text" tabIndex="3" />
       <div class="sa-input-error"></div>
@@ -45,17 +45,17 @@ var injectedHTML =
     // Input errors
     `<div class="sa-error-container">
       <div class="icon">!</div>
-      <p>Not valid!</p>
+      <p class=\"textModalDelete\">Not valid!</p>
     </div>` +
 
     // Cancel and confirm buttons
     `<div class="sa-button-container">
       <button class="cancel" tabIndex="2">Cancel</button>
       <div class="sa-confirm-button-container">
-        <button class="confirm" tabIndex="1">OK</button>` + 
+        <button class="confirm" tabIndex="1">OK</button>` +
 
-        // Loading animation
-        `<div class="la-ball-fall">
+    // Loading animation
+    `<div class="la-ball-fall">
           <div></div>
           <div></div>
           <div></div>
@@ -63,7 +63,7 @@ var injectedHTML =
       </div>
     </div>` +
 
-  // End of modal
-  `</div>`;
+    // End of modal
+    `</div>`;
 
 export default injectedHTML;
