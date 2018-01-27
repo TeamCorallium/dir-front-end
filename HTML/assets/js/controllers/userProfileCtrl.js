@@ -1378,7 +1378,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             console.log(event.pageX + " " + event.pageY + " mouse");
 
             var element = document.getElementById('HintSocialNetwork');
-            element.appendChild(document.createTextNode(name));
+            element.appendChild(document.createTextNode("name"));
 
             // element.style.backgroundColor = "#666666";
             element.style.position = "absolute";
