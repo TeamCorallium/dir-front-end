@@ -3090,3 +3090,8 @@ p:hover .showTextHover {
     visibility: hidden;
     z-index: 100 !important;
 }
+
+.SocialHoverText {
+    background-color: #ebebeb;
+    color: #666666;
+}

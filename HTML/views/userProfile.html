@@ -1,6 +1,6 @@
 <div class="profile-padding-view" ng-controller="UserProfileCtrl">
     <div id="HintSocialNetwork">
-        <p>{{SocialActive}}</p>
+        <p class="SocialHoverText">{{SocialActive}}</p>
     </div>
     <div>
         <img class="pictureExploreUser" ng-src="{{user.cover}}" />
@@ -479,8 +479,8 @@
                             <div class="error form-hint" ng-show="AddSocialNetworks.title.$dirty && AddSocialNetworks.title.$error.required" ng-cloak translate="user_profile.FIELD_REQUIRED"></div>
                             <select ng-change="updateUrl()" class="cs-select cs-skin-slide width-200 form-control" ng-class="(AddSocialNetworks.socialnetwork.$dirty && AddSocialNetworks.socialnetwork.$invalid) ? 'error' : ''" ng-model="$parent.socialnetwork" id="socialnetwork" name="socialnetwork"
                                 ng-required="true">
-                                <option ng-selected="$parent.selectedValueSocial" value="0" disabled selected translate="user_profile.SELECT_SOCIAL"></option>
-                                <option value="Facebook">Facebook</option>
+                                <!-- <option value="0" disabled translate="user_profile.SELECT_SOCIAL"></option> -->
+                                <option ng-selected="$parent.selectedValueSocial" selected  value="Facebook">Facebook</option>
                                 <option value="LinkedIn">LinkedIn</option>
                                 <option value="Twitter">Twitter</option>
                                 <option value="Instagram">Instagram</option>

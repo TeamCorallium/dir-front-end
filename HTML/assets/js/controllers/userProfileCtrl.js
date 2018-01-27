@@ -484,7 +484,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $rootScope.$on('addsocialnetwork', function(event, data) {
             $scope.user.socialnetworks = [];
-            $scope.socialnetwork = '0';
+            $scope.socialnetwork = 'Facebook';
             $scope.url = '';
             $scope.selectedValueSocial = true;
             $scope.showUrlCamp = false;
@@ -695,7 +695,6 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         }
                         $scope.showUrlCamp = false;
                         $scope.activeFacebook = true;
-                        // $scope.isFacebookConnected();
                         break;
                     };
                 case "Twitter":
@@ -1377,12 +1376,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mouseOverSocial = function(name, event) {
             $scope.SocialActive = name;
-            console.log(event.pageX + " " + event.pageY + " mouse");
 
             var element = document.getElementById('HintSocialNetwork');
 
             element.style.position = "absolute";
-            element.style.left = event.pageX + "px";
+            element.style.left = event.pageX + 10 + "px";
             element.style.top = event.pageY + "px";
             element.style.visibility = "visible";
         };
