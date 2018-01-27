@@ -10,6 +10,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.showEmail = '';
         $scope.showShortEmailBox = false;
 
+        $scope.SocialActive = '';
+
         $scope.user = {
             profileUrl: '',
             username: '',
@@ -1374,13 +1376,11 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         $scope.mouseOverSocial = function(name, event) {
-            console.log(name + " name");
+            $scope.SocialActive = name;
             console.log(event.pageX + " " + event.pageY + " mouse");
 
             var element = document.getElementById('HintSocialNetwork');
-            element.appendChild(document.createTextNode("name"));
 
-            // element.style.backgroundColor = "#666666";
             element.style.position = "absolute";
             element.style.left = event.pageX + "px";
             element.style.top = event.pageY + "px";
@@ -1389,9 +1389,8 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
         $scope.mouseLeaveSocial = function() {
             var element = document.getElementById('HintSocialNetwork');
-            var child = element.firstChild();
-            child.remove();
             element.style.visibility = "hidden";
+            $scope.SocialActive = '';
         };
     }
 ]);
