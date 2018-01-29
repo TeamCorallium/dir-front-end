@@ -18,7 +18,6 @@
                     <h5 class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                         {{user.info}}
                     </h5>
-                    {{user.configEmailVisible}}
                     <a class="col-xs-12 padding-0 mailtoStyle" ng-show="user.email != '' && user.configEmailVisible" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
@@ -93,7 +92,6 @@
                                 <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
                                     {{user.info}}
                                 </h5>
-                                {{user.configEmailVisible}}
                                 <a class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" ng-show="user.email != '' && showShortEmailBox && user.configEmailVisible" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail">
                                     <p class="margin-bottom-0  col-sm-11 col-md-11 col-lg-11 padding-left-10 pull-right">{{showEmail}}

@@ -59,17 +59,17 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
 
         $scope.switchEmailChange = function() {
             flag = 'visible';
-            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchShowEmail, $scope.switchEmail)
         };
 
         $scope.switchProfileChange = function() {
             flag = 'profile';
-            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchShowEmail, $scope.switchEmail)
         };
 
         $scope.switchShowEmailChange = function() {
             flag = 'email';
-            RestService.updateConfiguration($scope.switchProfile, $scope.switchEmail, $scope.switchShowEmail)
+            RestService.updateConfiguration($scope.switchProfile, $scope.switchShowEmail, $scope.switchEmail)
         };
 
         $rootScope.$on('wrongConfig', function(event, data) {
