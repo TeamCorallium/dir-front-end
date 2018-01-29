@@ -3106,6 +3106,10 @@ p:hover .showTextHover {
     font-size: 14px !important;
 }
 
-.textModalDelete {
+.sweet-alert p {
     font-size: 14px !important;
+}
+
+.sweet-alert h2 {
+    font-size: 18px !important;
 }

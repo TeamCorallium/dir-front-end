@@ -18,7 +18,7 @@ var alertTypes = ['error', 'warning', 'info', 'success', 'input', 'prompt'];
 var setParameters = function setParameters(params) {
     var modal = _getModal$getInput$setFocusStyle.getModal();
 
-    var $title = modal.querySelector('h4');
+    var $title = modal.querySelector('h2');
     var $text = modal.querySelector('p');
     var $cancelBtn = modal.querySelector('button.cancel');
     var $confirmBtn = modal.querySelector('button.confirm');
