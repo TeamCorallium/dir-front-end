@@ -188,7 +188,9 @@
         "ENTER_SUBJECT": "主題",
         "OF": "的:",
         "TO": "自:",
-        "DATE": "日期:"
+        "DATE": "日期:",
+        "TITLE": "",
+        "SUB_TITLE": ""
     },
     "explore_user": {
         "EXPLORE_PROFILES": "流覽設定檔",

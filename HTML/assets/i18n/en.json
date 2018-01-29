@@ -41,7 +41,9 @@
         "ADD_SOCIAL": "Add Social",
         "CONFIGURATIONS": "Settings",
         "TERMS": "Terms and Conditions",
-        "PRIVACY": "Privacy"
+        "PRIVACY": "Privacy",
+        "TITLE": "",
+        "SUB_TITLE": ""
     },
     "user_profile": {
         "RATING": "Rating:",

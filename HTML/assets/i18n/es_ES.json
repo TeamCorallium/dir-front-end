@@ -188,7 +188,9 @@
         "ENTER_SUBJECT": "Ingrese el asunto",
         "OF": "De:",
         "TO": "Para:",
-        "DATE": "Fecha:"
+        "DATE": "Fecha:",
+        "TITLE": "",
+        "SUB_TITLE": ""
     },
     "explore_user": {
         "EXPLORE_PROFILES": "Explorar perfiles",
