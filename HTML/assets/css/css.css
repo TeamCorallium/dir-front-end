@@ -67,6 +67,10 @@
 }
 
 @media (min-width: 768px) {
+    .paddingTerms {
+        padding-left: 120px !important;
+        padding-right: 120px !important;
+    }
     .margin-top--15XS {
         margin-top: -15px !important;
     }
@@ -684,6 +688,10 @@
 }
 
 @media (max-width: 767px) {
+    .paddingTerms {
+        padding-left: 40px !important;
+        padding-right: 40px !important;
+    }
     .slick-prev {
         margin-left: -20px !important;
     }
@@ -2977,11 +2985,6 @@ figure.effect-zoe {
     margin-top: 60px !important;
 }
 
-.paddingTerms {
-    padding-left: 120px !important;
-    padding-right: 120px !important;
-}
-
 .profile-terms {
     padding-bottom: 0 !important;
     min-height: 100% !important;
@@ -3083,7 +3086,6 @@ p:hover .showTextHover {
 .BorderPageBlueTerms {
     border-bottom: 3px solid #00B8B8 !important;
     width: 70px !important;
-    margin-top: -10px !important;
     margin-bottom: 10px !important;
 }
 
