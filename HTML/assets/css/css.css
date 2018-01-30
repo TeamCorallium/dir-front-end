@@ -3121,3 +3121,7 @@ p:hover .showTextHover {
     margin-top: 10px !important;
     margin-bottom: 15px !important;
 }
+
+.paddingStyleUserExplore {
+    padding: 30px 15px 30px 15px !important;
+}
