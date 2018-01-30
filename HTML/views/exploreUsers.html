@@ -13,10 +13,9 @@
                         <div class="form-group centerTextExploreUser">
                             <div class="checkbox">
                                 <label>
-                                <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterMD" ng-checked="applyScoreFilter" ng-model="applyScoreFilter"
-                                    checked>
-                                <strong translate="explore_user.ORDER_BY_SCORE"></strong>
-                            </label>
+                                    <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterMD" ng-checked="applyScoreFilter" ng-model="applyScoreFilter">
+                                    <strong translate="explore_user.ORDER_BY_SCORE"></strong>
+                                </label>
                             </div>
                             <div class="clip-radio radio-primary">
                                 <input ng-model="orderScore" type="radio" id="upScoreMD" name="upScoreMD" value="AscendingScore" checked="checked">
@@ -28,9 +27,9 @@
                         <div class="form-group centerTextExploreUser">
                             <div class="checkbox">
                                 <label>
-                                <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterMD" ng-checked="applyDateFilter" ng-model="applyDateFilter">
-                                <strong translate="explore_user.ORDER_BY_DATE"></strong>
-                            </label>
+                                    <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterMD" ng-checked="applyDateFilter" ng-model="applyDateFilter">
+                                    <strong translate="explore_user.ORDER_BY_DATE"></strong>
+                                </label>
                             </div>
                             <div class="clip-radio radio-primary">
                                 <input ng-model="orderDate" type="radio" id="upDateMD" name="upDateMD" value="AscendingDate" checked="checked">
@@ -42,9 +41,9 @@
                         <div class="form-group centerTextExploreUser">
                             <div class="checkbox">
                                 <label>
-                                <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterMD" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
-                                <strong translate="explore_user.ORDER_BY_RATING"></strong>
-                            </label>
+                                    <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterMD" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
+                                    <strong translate="explore_user.ORDER_BY_RATING"></strong>
+                                </label>
                             </div>
                             <div class="clip-radio radio-primary">
                                 <input ng-model="orderRating" type="radio" id="upRatingMD" name="upRatingMD" value="AscendingRating" checked="checked">
@@ -70,13 +69,12 @@
                             <div class="form-group centerTextExploreUser">
                                 <div class="checkbox">
                                     <label>
-                                    <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterXS" ng-checked="applyScoreFilter" ng-model="applyScoreFilter"
-                                        checked="checked">
-                                    <strong translate="explore_user.ORDER_BY_SCORE"></strong>
-                                </label>
+                                        <input ng-change="changeOrderClapFlagScore()" type="checkbox" id="ScoreFilterXS" ng-checked="applyScoreFilter" ng-model="applyScoreFilter">
+                                        <strong translate="explore_user.ORDER_BY_SCORE"></strong>
+                                    </label>
                                 </div>
                                 <div class="clip-radio radio-primary">
-                                    <input ng-model="orderScore" type="radio" id="upScore" name="Order by score" value="AscendingScore" checked="checked">
+                                    <input ng-model="$parent.orderScore" type="radio" id="upScore" name="Order by score" value="AscendingScore" checked="checked">
                                     <label for="upScore" translate="explore_user.ASCENDING"></label>
                                     <input ng-model="orderScore" type="radio" id="downScore" name="Order by score" value="DescendingScore">
                                     <label for="downScore" translate="explore_user.DESCENDING"></label>
@@ -85,9 +83,9 @@
                             <div class="form-group centerTextExploreUser">
                                 <div class="checkbox">
                                     <label>
-                                    <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterXS" ng-checked="applyDateFilter" ng-model="applyDateFilter">
-                                    <strong translate="explore_user.ORDER_BY_DATE"></strong>
-                                </label>
+                                        <input ng-change="changeOrderClapFlagDate()" type="checkbox" id="DateFilterXS" ng-checked="applyDateFilter" ng-model="applyDateFilter">
+                                        <strong translate="explore_user.ORDER_BY_DATE"></strong>
+                                    </label>
                                 </div>
                                 <div class="clip-radio radio-primary">
                                     <input ng-model="orderDate" type="radio" id="upDate" name="Order by date" value="AscendingDate" checked="checked">
@@ -99,12 +97,12 @@
                             <div class="form-group centerTextExploreUser">
                                 <div class="checkbox">
                                     <label>
-                                    <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterXS" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
-                                    <strong translate="explore_user.ORDER_BY_RATING"></strong>
-                                </label>
+                                        <input ng-change="changeOrderClapFlagRating()" type="checkbox" id="RatingFilterXS" ng-checked="applyRatingFilter" ng-model="applyRatingFilter">
+                                        <strong translate="explore_user.ORDER_BY_RATING"></strong>
+                                    </label>
                                 </div>
                                 <div class="clip-radio radio-primary">
-                                    <input ng-model="orderRating" type="radio" id="upRating" name="Order by rating" value="AscendingRating" checked="checked">
+                                    <input ng-model="orderRating" type="radio" id="upRating" name="Order by rating" value="AscendingRating">
                                     <label for="upRating" translate="explore_user.ASCENDING"></label>
                                     <input ng-model="orderRating" type="radio" id="downRating" name="Order by rating" value="DescendingRating">
                                     <label for="downRating" translate="explore_user.DESCENDING"></label>
