@@ -757,6 +757,7 @@
     }
     .borderNoneXS {
         border: none !important;
+        padding-top: 0px !important;
     }
     .track {
         max-height: 370px !important;
