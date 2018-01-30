@@ -220,7 +220,50 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         });
 
         $scope.changeScore = function() {
-            console.log($scope.orderScore + " test Score");
+            if ($(window).width() >= 768) {
+                if ($('#upScoreMD').is(':checked')) {
+                    $scope.orderScore = 'AscendingScore';
+                } else {
+                    $scope.orderScore = 'DescendingScore';
+                }
+            } else {
+                if ($('#upScore').is(':checked')) {
+                    $scope.orderScore = 'AscendingScore';
+                } else {
+                    $scope.orderScore = 'DescendingScore';
+                }
+            }
+        };
+
+        $scope.changeDate = function() {
+            if ($(window).width() >= 768) {
+                if ($('#upDateMD').is(':checked')) {
+                    $scope.orderDate = 'AscendingDate';
+                } else {
+                    $scope.orderDate = 'DescendingDate';
+                }
+            } else {
+                if ($('#upDate').is(':checked')) {
+                    $scope.orderDate = 'AscendingDate';
+                } else {
+                    $scope.orderDate = 'DescendingDate';
+                }
+            }
+        };
+        $scope.changeRating = function() {
+            if ($(window).width() >= 768) {
+                if ($('#upRatingMD').is(':checked')) {
+                    $scope.orderRating = 'AscendingRating';
+                } else {
+                    $scope.orderRating = 'DescendingRating';
+                }
+            } else {
+                if ($('#upRating').is(':checked')) {
+                    $scope.orderRating = 'AscendingRating';
+                } else {
+                    $scope.orderRating = 'DescendingRating';
+                }
+            }
         };
     }
 ]);
