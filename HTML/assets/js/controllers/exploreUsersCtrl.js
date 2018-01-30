@@ -26,9 +26,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 filters += 'ordering=';
                 var flag = false;
 
-                console.log($scope.applyScoreFilter + " " + $scope.applyDateFilter + " " + $scope.applyRatingFilter + " checkbox");
-                console.log($scope.orderScore + " " + $scope.orderDate + " " + $scope.orderRating + " value");
-
                 if ($scope.applyScoreFilter) {
                     if ($scope.orderScore == 'AscendingScore' || $scope.orderScore == 'AscendingScoreMD') {
                         filters += 'score';

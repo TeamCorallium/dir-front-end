@@ -120,11 +120,11 @@ app.controller('ConfigurationsCtrl', ["$rootScope", "$scope", "$stateParams", "R
                 $scope.visibleEmailNotifications = false;
             } else if (num == 2) {
                 $scope.visibleProfile = false;
-                $scope.visibleEmail = false;
-                $scope.visibleEmailNotifications = true;
-            } else {
                 $scope.visibleEmail = true;
                 $scope.visibleEmailNotifications = false;
+            } else {
+                $scope.visibleEmail = false;
+                $scope.visibleEmailNotifications = true;
                 $scope.visibleProfile = false;
             }
         };
