@@ -219,5 +219,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             });
         });
 
+        $scope.changeScore = function() {
+            console.log($scope.orderScore + " test Score");
+        };
     }
 ]);

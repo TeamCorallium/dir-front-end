@@ -74,7 +74,7 @@
                                     </label>
                                 </div>
                                 <div class="clip-radio radio-primary">
-                                    <input ng-model="orderScore" type="radio" id="upScore" name="upScore" value="AscendingScore" checked="checked">
+                                    <input ng-change="changeScore()" ng-model="orderScore" type="radio" id="upScore" name="upScore" value="AscendingScore" checked="checked">
                                     <label for="upScore" translate="explore_user.ASCENDING"></label>
                                     <input ng-model="orderScore" type="radio" id="downScore" name="downScore" value="DescendingScore">
                                     <label for="downScore" translate="explore_user.DESCENDING"></label>
