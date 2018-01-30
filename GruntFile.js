@@ -52,7 +52,6 @@ module.exports = function(grunt) {
             },
             dist: {
                 src: [
-                    'tmp/templates.js',
                     'bower_components/jquery/dist/jquery.js',
                     'bower_components/bootstrap/dist/js/bootstrap.js',
                     'bower_components/angular/angular.js',
@@ -89,7 +88,8 @@ module.exports = function(grunt) {
                     'HTML/assets/js/services/*.js',
                     'HTML/assets/js/controllers/*.js',
                     'HTML/assets/js/filters/*.js',
-                    'node_modules/ng-file-upload/dist/ng-file-upload.js'
+                    'node_modules/ng-file-upload/dist/ng-file-upload.js',
+                    'tmp/templates.js'
                 ],
                 dest: 'dist/app.js'
             },
