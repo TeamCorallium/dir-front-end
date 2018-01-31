@@ -67,6 +67,9 @@
 }
 
 @media (min-width: 768px) {
+    .margin-top-53 {
+        margin-top: 53px !important;
+    }
     .paddingTerms {
         padding-left: 120px !important;
         padding-right: 120px !important;
@@ -3057,10 +3060,6 @@ p:hover .showTextHover {
 
 .padding-Bottom-60 {
     padding-bottom: 60px !important;
-}
-
-.margin-top-53 {
-    margin-top: 53px !important;
 }
 
 .colorTextBackers {
