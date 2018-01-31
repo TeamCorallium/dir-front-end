@@ -190,7 +190,9 @@
         "ENTER_SUBJECT": "Enter your subject",
         "OF": "Of:",
         "TO": "To:",
-        "DATE": "Date:"
+        "DATE": "Date:",
+        "TITLE": "",
+        "SUB_TITLE": ""
     },
     "explore_user": {
         "EXPLORE_PROFILES": "Explore Profiles",
