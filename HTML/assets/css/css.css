@@ -691,6 +691,9 @@
 }
 
 @media (max-width: 767px) {
+    .BoxXsWidth {
+        max-width: 767px !important;
+    }
     .paddingTerms {
         padding-left: 40px !important;
         padding-right: 40px !important;
@@ -964,6 +967,9 @@
 }
 
 @media (max-width: 480px) {
+    .BoxXsWidth {
+        max-width: 480px !important;
+    }
     .slick-prev {
         margin-left: -20px !important;
     }
@@ -1102,6 +1108,9 @@
 }
 
 @media (max-width: 415px) {
+    .BoxXsWidth {
+        max-width: 415px !important;
+    }
     .slick-prev {
         margin-left: 40px !important;
     }
@@ -1243,6 +1252,9 @@
 }
 
 @media (max-width: 375px) {
+    .BoxXsWidth {
+        max-width: 375px !important;
+    }
     .slick-prev {
         margin-left: 20px !important;
     }
@@ -1384,6 +1396,9 @@
 }
 
 @media (max-width: 360px) {
+    .BoxXsWidth {
+        max-width: 360px !important;
+    }
     .slick-prev {
         margin-left: 20px !important;
     }
@@ -1519,6 +1534,9 @@
 }
 
 @media (max-width: 320px) {
+    .BoxXsWidth {
+        max-width: 320px !important;
+    }
     .slick-prev {
         margin-left: 20px !important;
     }
