@@ -88,8 +88,7 @@ module.exports = function(grunt) {
                     'HTML/assets/js/services/*.js',
                     'HTML/assets/js/controllers/*.js',
                     'HTML/assets/js/filters/*.js',
-                    'node_modules/ng-file-upload/dist/ng-file-upload.js',
-                    'tmp/templates.js'
+                    'node_modules/ng-file-upload/dist/ng-file-upload.js'
                 ],
                 dest: 'dist/app.js'
             },
