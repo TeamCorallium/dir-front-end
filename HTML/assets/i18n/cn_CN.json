@@ -297,13 +297,13 @@
         "GET_IN_TOUCH": "取得联系",
         "GET_IN_TOUCH_SUB": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget leo at velit imperdiet varius. In eu ipsum vitae velit congue iaculis vitae at risus.",
         "THE_OFFICE": "该办公室",
-        "ADDRESS": "Address: 1234 Street Name, City Name, United States",
-        "PHONE": "Phone: (123) 456-7890",
+        "ADDRESS": "地址: 1234 Street Name, City Name, United States",
+        "PHONE": "电话: (182) 1729 6762",
         "EMAIL_DATE": "manager@dirstuff.com",
-        "HOURS": "Business Hours",
-        "WEEK": "Monday - Friday 9am to 5pm",
-        "SATURDAY": "Saturday - 9am to 2pm",
-        "SUNDAY": "Sunday - Closed"
+        "HOURS": "营业时间",
+        "WEEK": "星期一 - 星期五 9am to 5pm",
+        "SATURDAY": "星期六 - 9am to 2pm",
+        "SUNDAY": "星期日 - 关闭"
     },
     "register": {
         "SORRY_TRY": "對不起再試一次",
