@@ -253,9 +253,10 @@
         "SERVER_NOT_FOUND": "Servidor no encontrado. Compruebe su conexión a Internet.",
         "NETWORK_CONNECTION": "Conexión de red",
         "OUR_BACKERS": "Nuestros patrocinadores",
-        "TITLE_GALLERY": "",
-        "TEXT_GALLERY": "",
-        "LINE_BLUE": ""
+        "TITLE_GALLERY": "Nuestra galería",
+        "TEXT_GALLERY": "Sólo algunas fotos al azar de nuestro equipo que lleva nuestro producto favorito nunca",
+        "LINE_BLUE": "Apoya nuestra campaña de Kickstarter",
+        "BUY": "Comprar"
     },
     "admin": {
         "COLOR": "Color",

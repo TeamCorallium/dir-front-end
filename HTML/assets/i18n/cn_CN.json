@@ -253,9 +253,10 @@
         "SERVER_NOT_FOUND": "找不到伺服器. 檢查您的互聯網連接.",
         "NETWORK_CONNECTION": "網路連接",
         "OUR_BACKERS": "我们的赞助商",
-        "TITLE_GALLERY": "",
-        "TEXT_GALLERY": "",
-        "LINE_BLUE": ""
+        "TITLE_GALLERY": "我们的画廊",
+        "TEXT_GALLERY": "只是一些随机的照片, 我们的团队穿着我们最喜爱的产品有史以来",
+        "LINE_BLUE": "支持我们的 Kickstarter 活动",
+        "BUY": "买"
     },
     "admin": {
         "COLOR": "顏色",

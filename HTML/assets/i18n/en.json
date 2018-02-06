@@ -257,7 +257,8 @@
         "OUR_BACKERS": "Our Backers",
         "TITLE_GALLERY": "Our Gallery",
         "TEXT_GALLERY": "Just some random pictures of our team wearing our favorite product ever",
-        "LINE_BLUE": "Back our Kickstarter campaign"
+        "LINE_BLUE": "Back our Kickstarter campaign",
+        "BUY": "Buy"
     },
     "admin": {
         "COLOR": "Color",
@@ -350,7 +351,30 @@
         "SUB_TITLE": "",
         "HEAD1": "About the Dirstuff Product",
         "QUESTION1": "What can I do about an Dirstuff product I bought that is defective?",
-        "ANSWER1": "If you are dissatisfied with the quality of your Dirstuff product, please contact with us through our website www.dirstuff.com/#/contact and let us know your problem, we will answer you as soon as possible."
+        "ANSWER1": "If you are dissatisfied with the quality of your Dirstuff product, please contact with us through our website www.dirstuff.com/#/contact and let us know your problem, we will answer you as soon as possible.",
+        "QUESTION2": "Where can I buy Dirstuff products?",
+        "ANSWER2": "",
+        "QUESTION3": "What is the life time of my <DIRS> T-Shirt?",
+        "ANSWER3": "",
+        "QUESTION4": "What is the composition of a pack of letters?",
+        "ANSWER4": "",
+        "QUESTION5": "How can I use all the advantages of a <DIRS> T-Shirt?",
+        "ANSWER5": "",
+        "HEAD2": "About the <DIRS> Portal",
+        "QUESTION6": "Can I have an account at <DIRS> Portal without having a <DIRS> T-Shirt?",
+        "ANSWER6": "",
+        "QUESTION7": "If I already have an account in <DIRS> Portal, how can I link a <DIRS> T-Shirt to my profile?",
+        "ANSWER7": "",
+        "QUESTION8": "Can I use my QR code where I want?",
+        "ANSWER8": "",
+        "QUESTION9": "What are the snippets?",
+        "ANSWER9": "",
+        "QUESTION10": "How can I add my social networks?",
+        "ANSWER10": "",
+        "QUESTION11": "Can I delete my social networks and snippets?",
+        "ANSWER11": "",
+        "QUESTION12": "Can I hide my profile or some data on it?",
+        "ANSWER12": ""
     },
     "privacy": {
         "TITLE": "Privacy Policy",
