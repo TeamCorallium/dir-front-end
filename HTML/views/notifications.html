@@ -95,12 +95,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="padding-right-15 paddingLeft15XS">
+                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
                                 <a type="button" ng-click="makeQRCode()" ng-show="user.qrcode == ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-settings ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <span translate="user_profile.GENERATE_QR"></span>
                                 </a>
                             </div>
-                            <div class="padding-right-15 paddingLeft15XS">
+                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
                                 <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="borderQR padding-15 col-xs-12" />
                                 <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12 padding-0 margin-top-10" ng-show="user.qrcode != ''">
                                     <a type="button" ng-click="makeQRCode()" class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5">

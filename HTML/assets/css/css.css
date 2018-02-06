@@ -691,6 +691,9 @@
 }
 
 @media (max-width: 767px) {
+    .marginTop0XS {
+        margin-top: 0px !important;
+    }
     .BoxXsWidth {
         max-width: 767px !important;
     }
