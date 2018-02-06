@@ -340,14 +340,17 @@
         "ALERT_NOTIFICATIONS": "Alerts and Notifications"
     },
     "user_hidden": {
-        "USER_INVISIBLE": "User invisible",
-        "TEXT_INVISIBLE": "text invisible",
+        "USER_INVISIBLE": "Hidden user",
+        "TEXT_INVISIBLE": "This user has temporarily hidden his profile",
         "HOME": "Go to home",
         "PROFILE": "Go to profile"
     },
     "faq": {
         "TITLE": "FAQ",
-        "SUB_TITLE": ""
+        "SUB_TITLE": "",
+        "HEAD1": "About the Dirstuff Product",
+        "QUESTION1": "What can I do about an Dirstuff product I bought that is defective?",
+        "ANSWER1": "If you are dissatisfied with the quality of your Dirstuff product, please contact with us through our website www.dirstuff.com/#/contact and let us know your problem, we will answer you as soon as possible."
     },
     "privacy": {
         "TITLE": "Privacy Policy",

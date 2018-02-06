@@ -2035,7 +2035,7 @@ ul li a.social-ti-foursquare {
 
 @media (min-width: 1301px) {
     .marginExploreUserHidden {
-        margin-left: 45% !important;
+        margin-left: 43% !important;
         margin-top: 40px !important;
     }
     .pictureExploreUser {
@@ -2567,6 +2567,11 @@ span.stars span {
 
 .DropdownMargin {
     margin-top: -9px !important;
+}
+
+.DropdownMarginSnippets {
+    margin-top: -9px !important;
+    margin-right: -20px !important;
 }
 
 .margin-top-3 {

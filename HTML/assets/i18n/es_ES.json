@@ -338,10 +338,10 @@
         "ALERT_NOTIFICATIONS": "Alertas y notificaciones"
     },
     "user_hidden": {
-        "USER_INVISIBLE": "Usuario invisible",
-        "TEXT_INVISIBLE": "texto invisible",
-        "HOME": "ir al home",
-        "PROFILE": "ir al profile"
+        "USER_INVISIBLE": "Usuario oculto",
+        "TEXT_INVISIBLE": "Este usuario ha ocultado su perfil temporalmente",
+        "HOME": "Ir al home",
+        "PROFILE": "Ir al profile"
     },
     "faq": {
         "TITLE": "FAQ",

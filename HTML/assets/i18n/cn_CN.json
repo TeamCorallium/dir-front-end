@@ -338,8 +338,8 @@
         "ALERT_NOTIFICATIONS": "通知和通知"
     },
     "user_hidden": {
-        "USER_INVISIBLE": "使用者不可見",
-        "TEXT_INVISIBLE": "文本不可見",
+        "USER_INVISIBLE": "隐藏用户",
+        "TEXT_INVISIBLE": "此用户暂时隐藏了他的个人资料",
         "HOME": "回家",
         "PROFILE": "轉到設定檔"
     },
