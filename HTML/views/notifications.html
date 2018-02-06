@@ -2,11 +2,12 @@
     <div class="BoxXsWidth">
         <img class="pictureExploreUser" ng-src="{{userdata.cover}}" />
     </div>
-    <div class="row">
+    <div class="row backgroundWhite">
         <div class="col-xs-12 hidden-sm hidden-md hidden-lg">
             <div class="col-xs-12">
                 <div class="AvatarXSBox">
-                    <img ng-src="{{user.avatar}}" class="img-circle avatarXS" />
+                    <img ng-show="!EditInfoFlag" ng-src="{{user.avatar}}" class="img-circle avatarXS" />
+                    <input ng-show="EditInfoFlag" type="image" ng-src="{{user.avatar}}" class="img-circle avatarXS" data-toggle="modal" data-target="#ModalImageCropper">
                 </div>
                 <div class="UserInfoBox">
                     <h4 class="padding-0 margin-top-10">
@@ -15,32 +16,25 @@
                     <h5 class="padding-0">@{{user.username}}</h5>
                 </div>
                 <div class="col-xs-12">
-                    <h5 class="testimonial-text padding-0" data-appears-class="fadeInUp" data-appears-delay="100">
-                        {{user.info}}
-                    </h5>
+                    <h5 class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
                     <a ng-show="user.email != ''" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                         <img ng-src="HTML/assets/images/email.png" class="IconEmail"> {{user.email}}
                     </a>
-                    <a ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                    <a ng-show="user.phone != ''" class="col-xs-12 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
                         <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
                     </a>
                 </div>
-                <div class="col-xs-12">
-                    <h5 class="col-xs-5 padding-left-0 padding-right-0">
-                        <i class="ti-stats-up"></i>
-                        <label class="margin-bottom-0" translate="edit_profile.RATING"></label>
-                    </h5>
-                    <div class="col-xs-7 padding-left-0 padding-right-0">
+                <div class="col-xs-11 marginLeft5 padding-left-0 padding-right-0 margin-top-10 border-top-clap margin-bottom-10">
+                    <span class="col-xs-6 padding-left-0" ng-cloak>
+                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                    </span>
+                    <div class="col-xs-6 padding-left-0 padding-right-0">
                         <span class="stars">
                             <span ng-style="{ 'width': getStars(user.rating) }"></span>
                         </span>
                     </div>
-                </div>
-                <div class="col-xs-12 margin-bottom-10">
-                    <span ng-cloak>
-                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
-                        <label translate="user_profile.CLAP"></label>
-                    </span>
                 </div>
             </div>
         </div>
@@ -60,7 +54,7 @@
             </nav>
         </div>
     </div>
-    <section class="container-fluid container-fullw bg-white padding-top-10 padding-bottom-10 backgroundGray">
+    <section class="container-fluid container-fullw bg-white padding-top-10 paddingBottom60 backgroundGray">
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
@@ -70,50 +64,45 @@
                                 <img ng-src="{{user.avatar}}" class="img-circle hidden-xs imgProfile" />
                             </div>
                             <div class="UserInfoBox hidden-xs">
-                                <h4 class="col-xs-12 padding-0 margin-top-10" ng-show="user.fullname != ''">
+                                <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10" ng-show="user.fullname != ''">
                                     <strong>{{user.fullname}}</strong>
                                 </h4>
-                                <h4 class="col-xs-12 padding-0">@{{user.username}}</h4>
-                                <h5 class="testimonial-text col-xs-12 padding-0" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
+                                <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.username}}</h4>
+                                <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
                                 </h5>
-                                <a ng-show="user.email != '' && showShortEmailBox" class="col-xs-12 padding-0 mailtoStyle" href="mailto:{{user.email}}">
+                                <a ng-show="user.email != '' && showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
                                     <img ng-src="HTML/assets/images/email.png" class="IconEmail">
-                                    <p class="margin-bottom-0  col-sm-11 col-md-11 col-lg-11 pull-right">{{showEmail}}
+                                    <p class="margin-bottom-0 col-sm-11 col-md-11 col-lg-11 padding-left-10 pull-right">{{showEmail}}
                                         <span class="showTextHover">{{user.email}}</span>
                                     </p>
                                 </a>
                                 <a ng-show="user.email != '' && !showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
-                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail">{{user.email}}
+                                    <img ng-src="HTML/assets/images/email.png" class="IconEmail margin-right-10">{{user.email}}
                                 </a>
-                                <a ng-show="!EditInfoFlag && user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
+                                <a ng-show="user.phone != ''" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10 margin-bottom-0 mailtoStyle" href="tel:{{user.phone}}">
                                     <img ng-src="HTML/assets/images/phone.png" class="iconPhone margin-top--5"> {{user.phone}}
                                 </a>
-                                <div class="col-md-12 padding-0">
-                                    <h5 class="col-md-5 padding-left-0 padding-right-0">
-                                        <i class="ti-stats-up"></i>
-                                        <label class="margin-bottom-0" translate="edit_profile.RATING"></label>
-                                    </h5>
+                                <div class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-left-0 padding-right-0 border-top-clap margin-bottom-10">
+                                    <span class="col-md-5 padding-left-0 padding-right-0" ng-cloak>
+                                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
+                                        <label ng-hide="showClaps" translate="user_profile.CLAP"></label>
+                                        <label ng-show="showClaps" translate="user_profile.CLAPS"></label>
+                                    </span>
                                     <div class="col-md-7 padding-left-0 padding-right-0">
                                         <span class="stars">
                                             <span ng-style="{ 'width': getStars(user.rating) }"></span>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="col-md-12 padding-0">
-                                    <span ng-cloak>
-                                        <img class="iconClapMini" ng-src="HTML/assets/images/clap.png"> {{user.score}}
-                                        <label translate="user_profile.CLAP"></label>
-                                    </span>
-                                </div>
                             </div>
-                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
+                            <div class="padding-right-15 paddingLeft15XS">
                                 <a type="button" ng-click="makeQRCode()" ng-show="user.qrcode == ''" class="btn btn-primary btn-wide btn-scroll btn-scroll-top ti-settings ButtonRadius col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                     <span translate="user_profile.GENERATE_QR"></span>
                                 </a>
                             </div>
-                            <div class="padding-right-15 paddingLeft15XS hidden-xs">
-                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="borderQR col-xs-12" />
-                                <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12" ng-show="user.qrcode != ''">
+                            <div class="padding-right-15 paddingLeft15XS">
+                                <img ng-show="user.qrcode != ''" ng-src="{{user.qrcode}}" class="borderQR padding-15 col-xs-12" />
+                                <div class="col-xs-12 col-sm-12 col-md-12 col-ls-12 padding-0 margin-top-10" ng-show="user.qrcode != ''">
                                     <a type="button" ng-click="makeQRCode()" class="btn btn-primary ButtonRadius col-lg-5 col-md-5 col-sm-5 col-xs-5">
                                         <i class="ti-reload"></i>
                                     </a>
