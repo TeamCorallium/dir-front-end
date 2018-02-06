@@ -728,7 +728,7 @@
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 102px !important;
-        margin-left: 280px !important;
+        margin-left: 250px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -994,7 +994,7 @@
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 90px !important;
-        margin-left: 70px !important;
+        margin-left: 90px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1099,9 +1099,6 @@
 }
 
 @media (max-width: 415px) {
-    .marginButtonBuy {
-        margin-left: 60px !important;
-    }
     .BoxXsWidth {
         max-width: 415px !important;
     }
@@ -1132,7 +1129,7 @@
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 80px !important;
-        margin-left: 70px !important;
+        margin-left: 60px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1269,14 +1266,8 @@
     }
     .ButtonCarouselPosition {
         position: absolute !important;
-        margin-top: 60px !important;
-        margin-left: 70px !important;
-        color: white !important;
-    }
-    .ButtonCarouselPosition {
-        position: absolute !important;
         margin-top: 62px !important;
-        margin-left: 80px !important;
+        margin-left: 45px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1414,7 +1405,7 @@
     .ButtonCarouselPosition {
         position: absolute !important;
         margin-top: 62px !important;
-        margin-left: 75px !important;
+        margin-left: 35px !important;
         color: white !important;
     }
     .marginPictureFollowerFollowingXS {
@@ -1522,6 +1513,9 @@
 }
 
 @media (max-width: 320px) {
+    .marginButtonBuy {
+        margin-left: 60px !important;
+    }
     .BoxXsWidth {
         max-width: 320px !important;
     }
@@ -2683,7 +2677,7 @@ span.stars span {
 }
 
 .styleBoxUserHidden {
-    min-height: 556px !important;
+    min-height: 483px !important;
 }
 
 .margin-top--5 {
