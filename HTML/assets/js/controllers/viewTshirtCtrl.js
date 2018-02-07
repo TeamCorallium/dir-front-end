@@ -596,5 +596,22 @@ app.controller('ViewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
                 $scope.showEmail = $scope.user.email;
             }
         };
+
+        $scope.mouseOverSocial = function(name, event) {
+            $scope.SocialActive = name;
+
+            var element = document.getElementById('HintSocialNetwork');
+
+            element.style.position = "absolute";
+            element.style.left = event.pageX + 15 + "px";
+            element.style.top = event.pageY + "px";
+            element.style.visibility = "visible";
+        };
+
+        $scope.mouseLeaveSocial = function() {
+            var element = document.getElementById('HintSocialNetwork');
+            element.style.visibility = "hidden";
+            $scope.SocialActive = '';
+        };
     }
 ]);
