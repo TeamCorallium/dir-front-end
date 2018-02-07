@@ -2060,6 +2060,61 @@ ul li a.social-ti-foursquare {
     }
 }
 
+@media (min-width: 1440px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 26% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 145px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1536px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 27% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 175px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1600px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 28% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 195px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1680px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 29.1% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 220px !important;
+        margin-top: 9px !important;
+    }
+}
+
+@media (min-width: 1920px) {
+    .SocialIcon {
+        margin-top: 2px !important;
+        margin-left: 31.8% !important;
+    }
+    .marginButtonEdit {
+        margin-right: 300px !important;
+        margin-top: 9px !important;
+    }
+}
+
 a.ButtonImageSize {
     min-width: 50px !important;
     min-height: 50px !important;
