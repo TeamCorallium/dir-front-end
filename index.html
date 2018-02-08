@@ -86,11 +86,11 @@
                         <a ui-sref="home" class="navbar-brand" id="floatLogo">
                             <img class="max-width-100" src="HTML/assets/images/logo.png">
                         </a>
-                        <div ng-show="(userdata.connected)" class="styleNotification hidden-md hidden-lg pointerHover" ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                            <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationXSIcon pointerHover">
+                        <div ng-show="(userdata.connected)" class="styleNotification hidden-md hidden-lg pointerHover" ui-sref="notifications" ng-controller="TopNavBarCtrl" ng-cloak>
+                            <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationXSIcon pointerHover" ng-cloak>
                                 <i class="ti-bell fontSize20"></i>
                             </notification-icon>
-                            <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationXSIcon pointerHover">
+                            <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationXSIcon pointerHover" ng-cloak>
                                 <i class="ti-bell fontSize20"></i>
                                 <label class="labelPlusXS">+</label>
                             </notification-icon>
@@ -182,11 +182,11 @@
                                 <h4 class="cursordefault">|</h4>
                             </li>
                             <li class="hidden-xs margin-top3" ng-show="userdata.connected" ng-cloak>
-                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl">
-                                    <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationMDIcon pointerHover">
+                                <a ui-sref="notifications" ng-controller="TopNavBarCtrl" ng-cloak>
+                                    <notification-icon ng-show="notificationCount != 10" count='notificationCount' class="notificationMDIcon pointerHover" ng-cloak>
                                         <i class="ti-bell fontSize18"></i>
                                     </notification-icon>
-                                    <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationMDIcon pointerHover">
+                                    <notification-icon ng-hide="notificationCount != 10" count='9' class="notificationMDIcon pointerHover" ng-cloak>
                                         <i class="ti-bell fontSize18"></i>
                                         <label class="labelPlus">+</label>
                                     </notification-icon>
