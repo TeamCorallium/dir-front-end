@@ -237,7 +237,7 @@
         "ENTER_EMAIL": "Enter your email address"
     },
     "home": {
-        "TEXT_TSHIRTS": "The Dirstuff Project",
+        "TEXT_TSHIRTS": "Dirstuff Portal",
         "TEXT_HOME": "Wear your own ideas. Express yourself at all cost. Reinvent fashion.",
         "REGISTER": "Register",
         "LOG_IN": "Log In",
@@ -245,7 +245,7 @@
         "EXPLORE_MORE": "Explore more...",
         "BUY_TSHIRTS": "Buy all technology from alibaba.com.",
         "MEET_TEAM": "Check our project details on Kickstarter",
-        "MEET_TEXT": "The Dirs Portal works like a business card. Just that its not only for business, and its definitely not a card.",
+        "MEET_TEXT": "The <DIRS> Portal works like a business card. Just that it's not only for business, and it's definitely not a card.",
         "TOTAL_VISITS": "TOTAL OF VISITS",
         "RETURN_RATIO": "RETURN RATIO",
         "TIME_ON_SITE": "TIME ON SITE",

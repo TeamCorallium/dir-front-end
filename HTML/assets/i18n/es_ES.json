@@ -199,7 +199,7 @@
         "ASCENDING": "Ascendente",
         "DESCENDING": "Descendente",
         "ORDER_BY_DATE": "Ordenar por fecha:",
-        "ORDER_BY_RATING": "Ordenr por valoración",
+        "ORDER_BY_RATING": "Ordenar por valoración",
         "SEARCH": "Buscar",
         "SEE_PROFILE": "Ver perfil",
         "PREVIOUS": "« Anterior",
@@ -235,15 +235,15 @@
         "ENTER_EMAIL": "Ingrese su correo electrónico"
     },
     "home": {
-        "TEXT_TSHIRTS": "Camisetas con tecnología",
-        "TEXT_HOME": "Una nueva manera de llegar a sus clientes, ponerse en contacto con usted y visitar su negocio.",
+        "TEXT_TSHIRTS": "Portal Dirstuff",
+        "TEXT_HOME": "Vístete con tus propias ideas. Exprésate a toda costa. Reinventa la moda.",
         "REGISTER": "Registrarse",
         "LOG_IN": "Iniciar Sesión",
         "SEE_PROFILE": "Ver perfil",
         "EXPLORE_MORE": "Explorar más...",
         "BUY_TSHIRTS": "Compra toda la tecnología desde alibaba.com.",
         "MEET_TEAM": "Visita nuestro proyecto en Kickstarter",
-        "MEET_TEXT": "Somos solamente una pasarela, visite los perfiles de su preferencia. Cada perfil ofrece una breve descripción y vínculos a las redes sociales.",
+        "MEET_TEXT": "<DIRS> Portal funciona como una tarjeta de presentación pero no es sólo para negocios, y definitivamente no es una tarjeta.",
         "TOTAL_VISITS": "TOTAL DE VISITAS",
         "RETURN_RATIO": "PORCIENTO DE RETORNO",
         "TIME_ON_SITE": "TIEMPO EN LA WEB",
@@ -254,7 +254,7 @@
         "NETWORK_CONNECTION": "Conexión de red",
         "OUR_BACKERS": "Nuestros patrocinadores",
         "TITLE_GALLERY": "Nuestra galería",
-        "TEXT_GALLERY": "Algunas fotos al azar de nuestro equipo vistiendo nuestro producto.",
+        "TEXT_GALLERY": "Algunas fotos de nuestro equipo de trabajo vistiendo nuestro producto.",
         "LINE_BLUE": "Apoya nuestra campaña de Kickstarter",
         "BUY": "Comprar"
     },
@@ -345,7 +345,7 @@
         "PROFILE": "Ir al profile"
     },
     "faq": {
-        "TITLE": "Preguntas más frecuentes",
+        "TITLE": "Preguntas frecuentes",
         "SUB_TITLE": "",
         "HEAD1": "Acerca del producto Dirstuff",
         "QUESTION1": "¿Qué puedo hacer acerca de un producto Dirstuff que compré que es defectuoso?",
@@ -377,7 +377,7 @@
     "privacy": {
         "TITLE": "Políticas de privacidad",
         "SUB_TITLE": "Nuestras políticas de privacidad deben ser respetadas por todos los usuarios",
-        "HEADER1": "Politica",
+        "HEADER1": "Política",
         "HEADER": "Su privacidad es muy importante para nosotros. En consecuencia, hemos desarrollado esta política para que usted entienda cómo recopilamos, utilizamos, comunicamos y divulgamos y hacemos uso de la información personal. El siguiente describe nuestra política de privacidad.",
         "FOOTER": "Estamos comprometidos a llevar a cabo nuestro negocio de acuerdo con estos principios con el fin de asegurar que la confidencialidad de la información personal está protegida y mantenida.",
         "TEXT1": "Antes o en el momento de recolectar información personal, identificaremos los propósitos para los cuales se recolecta la información.",
@@ -389,8 +389,8 @@
         "TEXT7": "Vamos a poner a disposición de los clientes información sobre nuestras políticas y prácticas relacionadas con la gestión de la información personal."
     },
     "terms": {
-        "TITLE": "Términos y condiciones de uso del sitio web",
-        "SUB_TITLE": "Normas de contenido y uso de nuestro sitio web",
+        "TITLE": "Términos y condiciones de uso",
+        "SUB_TITLE": "Normas de contenido y uso",
         "TERM1": "Términos",
         "SUB_TERM1": "Al acceder a este sitio web, usted está de acuerdo en estar obligado por estos términos y condiciones de uso del sitio web, todas las leyes y reglamentos aplicables, y acepta que usted es responsable del cumplimiento de las leyes locales aplicables. Si usted no está de acuerdo con cualquiera de estos términos, se le prohíbe utilizar o acceder a este sitio. Los materiales contenidos en este sitio web están protegidos por la legislación aplicable en materia de derecho de autor y marcas.",
         "USE_LICENSE": "Licencia de uso",
