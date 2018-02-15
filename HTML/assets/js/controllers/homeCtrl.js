@@ -1,5 +1,6 @@
-app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate", "Carousel",
-    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate, Carousel) {
+app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$cookies", "growl", "$translate", "Carousel", "$window",
+
+    function($scope, $state, $rootScope, RestService, $cookies, growl, $translate, Carousel, $window) {
 
         $rootScope.OptionsEdit = false;
         $cookies.remove("exploreUser", {
@@ -273,5 +274,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             ]
         };
 
+        $scope.goToLink = function() {
+            $window.location.href = 'https://www.kickstarter.com/projects/856235450/797702255?ref=429235&token=9c07d5af';
+        };
     }
 ]);
