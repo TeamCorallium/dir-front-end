@@ -19,7 +19,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             totalVisits: 0,
             returnRatio: 0,
             timeOnSite: 0,
-            satisfiedCustomers: 0
+            unique: 0
         };
 
         if ($(window).width() >= 992) {
@@ -128,6 +128,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                     $scope.tracks.totalVisits = data.total;
                     $scope.tracks.returnRatio = Math.round(data.return_ratio * 100) / 100;
                     $scope.tracks.timeOnSite = data.time_on_site;
+                    $scope.tracks.unique = data.unique;
                 },
                 function(errResponse) {
                     console.log(errResponse);
