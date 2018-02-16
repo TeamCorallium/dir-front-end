@@ -79,7 +79,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                             }
 
                             $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
-                            $scope.profiles[i].username = shortUserFunction($scope.profiles[i].username);
                         }
                     },
                     function(errResponse) {

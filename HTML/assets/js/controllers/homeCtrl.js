@@ -98,7 +98,6 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                             }
 
                             $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
-                            $scope.profiles[i].username = shortUserFunction($scope.profiles[i].username);
                         }
                     },
                     function(errResponse) {
