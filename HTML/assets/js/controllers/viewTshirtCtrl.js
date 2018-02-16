@@ -640,6 +640,7 @@ app.controller('ViewTshirtCtrl', ["$rootScope", "$scope", "$stateParams", "RestS
         };
 
         var shortUserFunction = function(user) {
+            console.log(user + " user");
             var arrayUser = user;
             var nameAux = "";
 
