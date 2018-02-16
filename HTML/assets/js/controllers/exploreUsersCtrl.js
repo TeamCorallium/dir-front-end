@@ -269,8 +269,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             var array = name.toString();
             var nameAux = "";
 
-            if (array.length > 21) {
-                for (var i = 0; i <= 21; i++) {
+            if (array.length > 14) {
+                for (var i = 0; i <= 14; i++) {
                     nameAux = nameAux + array.charAt(i);
                 }
                 nameAux = nameAux + '...';
@@ -285,8 +285,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             var arrayUser = user;
             var nameAux = "";
 
-            if (arrayUser.length > 21) {
-                for (var i = 0; i <= 21; i++) {
+            if (arrayUser.length > 14) {
+                for (var i = 0; i <= 14; i++) {
                     nameAux = nameAux + arrayUser.charAt(i);
                 }
                 nameAux = nameAux + '...';

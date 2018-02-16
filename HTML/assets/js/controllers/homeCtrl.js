@@ -282,8 +282,8 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
             var array = name;
             var nameAux = "";
 
-            if (array.length > 21) {
-                for (var i = 0; i <= 21; i++) {
+            if (array.length > 14) {
+                for (var i = 0; i <= 14; i++) {
                     nameAux = nameAux + array.charAt(i);
                 }
                 nameAux = nameAux + '...';
@@ -295,12 +295,11 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         var shortUserFunction = function(user) {
-            console.log(user + " user");
             var arrayUser = user;
             var nameAux = "";
 
-            if (arrayUser.length > 21) {
-                for (var i = 0; i <= 21; i++) {
+            if (arrayUser.length > 14) {
+                for (var i = 0; i <= 14; i++) {
                     nameAux = nameAux + arrayUser.charAt(i);
                 }
                 nameAux = nameAux + '...';
