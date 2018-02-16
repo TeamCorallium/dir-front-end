@@ -628,12 +628,12 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var shortUserFunction = function(user) {
-            var array = user.toString();
+            var arrayUser = user;
             var nameAux = "";
 
-            if (array.length > 21) {
+            if (arrayUser.length > 21) {
                 for (var i = 0; i <= 21; i++) {
-                    nameAux = nameAux + array.charAt(i);
+                    nameAux = nameAux + arrayUser.charAt(i);
                 }
                 nameAux = nameAux + '...';
             } else {
