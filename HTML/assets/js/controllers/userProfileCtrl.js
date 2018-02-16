@@ -8,7 +8,9 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         });
 
         $scope.showEmail = '';
+        $scope.showName = '';
         $scope.showShortEmailBox = false;
+        $scope.showShortNameBox = false;
 
         $scope.SocialActive = '';
 
@@ -105,6 +107,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         if (data.length > 0) {
                             $scope.user.profileUrl = data[0].profiles[0];
                             $scope.user.username = data[0].username;
+                            $scope.user.username = shortUserFunction($scope.user.username);
                             $scope.user.firstname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
 
@@ -147,6 +150,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                             }
                             $scope.user.rating = data.rating;
                             $scope.user.fullname = data.fullname;
+                            $scope.shortName();
                             $scope.user.phone = data.phone;
                             $scope.user.profileurl = data.url;
                             $scope.user.configVisible = data.confVisible;
@@ -572,6 +576,10 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 .then(
                     function(data) {
                         $scope.users = data.results;
+
+                        for (var i = 0; i < $scope.user.length; i++) {
+                            $scope.users[i].fullname = shortNameFunction($scope.users[i].fullname);
+                        }
                     },
                     function(errResponse) {
                         console.log(errResponse);
@@ -1372,6 +1380,55 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                 $scope.showShortEmailBox = false;
                 $scope.showEmail = $scope.user.email;
             }
+        };
+
+        $scope.shortName = function() {
+            var array = $scope.user.fullname.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                $scope.showShortNameBox = true;
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+                $scope.showName = nameAux;
+            } else {
+                $scope.showShortNameBox = false;
+                $scope.showName = $scope.user.fullname;
+            }
+        };
+
+        var shortNameFunction = function(name) {
+            var array = name.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = name;
+            }
+
+            return nameAux;
+        };
+
+        var shortUserFunction = function(user) {
+            var array = user.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = user;
+            }
+
+            return nameAux;
         };
 
         $scope.mouseOverSocial = function(name, event) {

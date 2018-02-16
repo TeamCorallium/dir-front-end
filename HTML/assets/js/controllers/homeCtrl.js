@@ -96,6 +96,9 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
                             } else {
                                 $scope.profiles[i].avatar = 'HTML/assets/images/default-user.png';
                             }
+
+                            $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
+                            $scope.profiles[i].username = shortUserFunction($scope.profiles[i].username);
                         }
                     },
                     function(errResponse) {
@@ -233,12 +236,10 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.prevImageModal = function() {
             $scope.imageOpenModal--;
-            console.log($scope.imageOpenModal + " num");
         };
 
         $scope.nextImageModal = function() {
             $scope.imageOpenModal++;
-            console.log($scope.imageOpenModal + " num");
         };
 
         $scope.slickConfig3 = {
@@ -276,6 +277,38 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
 
         $scope.goToLink = function() {
             $window.location.href = 'https://www.kickstarter.com/projects/856235450/797702255?ref=429235&token=9c07d5af';
+        };
+
+        var shortNameFunction = function(name) {
+            var array = name.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = name;
+            }
+
+            return nameAux;
+        };
+
+        var shortUserFunction = function(user) {
+            var array = user.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = user;
+            }
+
+            return nameAux;
         };
     }
 ]);

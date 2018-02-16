@@ -77,6 +77,9 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                             } else {
                                 $scope.profiles[i].avatar = 'HTML/assets/images/default-user.png';
                             }
+
+                            $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
+                            $scope.profiles[i].username = shortUserFunction($scope.profiles[i].username);
                         }
                     },
                     function(errResponse) {
@@ -261,6 +264,38 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                     $scope.orderRating = 'DescendingRating';
                 }
             }
+        };
+
+        var shortNameFunction = function(name) {
+            var array = name.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = name;
+            }
+
+            return nameAux;
+        };
+
+        var shortUserFunction = function(user) {
+            var array = user.toString();
+            var nameAux = "";
+
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = user;
+            }
+
+            return nameAux;
         };
     }
 ]);

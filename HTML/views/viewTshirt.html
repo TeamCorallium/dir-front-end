@@ -13,7 +13,7 @@
                 </div>
                 <div class="UserInfoBox">
                     <h4 class="padding-0 margin-top-10">
-                        <strong>{{user.fullname}}</strong>
+                        <strong>{{user.showName}}</strong>
                     </h4>
                     <h5 class="padding-0">@{{user.username}}</h5>
                 </div>
@@ -89,7 +89,7 @@
                             </div>
                             <div class="UserInfoBox hidden-xs">
                                 <h4 class="col-xs-12 padding-0 margin-top-10" ng-show="user.fullname != ''">
-                                    <strong>{{user.fullname}}</strong>
+                                    <strong>{{user.showName}}</strong>
                                 </h4>
                                 <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.username}}</h4>
                                 <h5 class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">
@@ -237,7 +237,7 @@
                                                     </div>
                                                     <div class="post-info">
                                                         <a ng-disabled="!popularUser.configVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
+                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.showName}}</a>
                                                         <h5 class="lineHeight20">{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
