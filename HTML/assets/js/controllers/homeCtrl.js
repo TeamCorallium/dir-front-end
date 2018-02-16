@@ -280,7 +280,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         var shortNameFunction = function(name) {
-            var array = name.toString();
+            var array = name;
             var nameAux = "";
 
             if (array.length > 21) {
@@ -296,6 +296,7 @@ app.controller('HomeCtrl', ["$scope", "$state", "$rootScope", "RestService", "$c
         };
 
         var shortUserFunction = function(user) {
+            console.log(user + " user");
             var arrayUser = user;
             var nameAux = "";
 
