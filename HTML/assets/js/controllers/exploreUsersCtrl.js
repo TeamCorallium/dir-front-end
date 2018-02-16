@@ -283,7 +283,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
         };
 
         var shortUserFunction = function(user) {
-            var array = user.toString();
+            var array = user;
             var nameAux = "";
 
             if (array.length > 21) {

@@ -1400,7 +1400,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var shortNameFunction = function(name) {
-            var array = name.toString();
+            var array = name;
             var nameAux = "";
 
             if (array.length > 21) {
@@ -1416,7 +1416,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         };
 
         var shortUserFunction = function(user) {
-            var array = user.toString();
+            var array = user;
             var nameAux = "";
 
             if (array.length > 21) {
