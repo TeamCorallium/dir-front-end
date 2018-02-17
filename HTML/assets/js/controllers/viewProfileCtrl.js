@@ -316,6 +316,7 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         for (var i = 0; i < $scope.users.length; i++) {
                             $scope.users[i].fullname = shortNameFunction($scope.users[i].fullname);
+                            $scope.users[i].owner = shortUserFunction($scope.users[i].owner);
                         }
                     },
                     function(errResponse) {
@@ -615,9 +616,9 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             var array = $scope.user.fullname.toString();
             var nameAux = "";
 
-            if (array.length > 14) {
+            if (array.length > 21) {
                 $scope.showShortNameBox = true;
-                for (var i = 0; i <= 14; i++) {
+                for (var i = 0; i <= 21; i++) {
                     nameAux = nameAux + array.charAt(i);
                 }
                 nameAux = nameAux + '...';
@@ -628,17 +629,33 @@ app.controller('ViewProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
             }
         };
 
-        var shortUserFunction = function(user) {
-            var arrayUser = user;
+        var shortNameFunction = function(name) {
+            var array = name;
             var nameAux = "";
 
-            if (arrayUser.length > 14) {
-                for (var i = 0; i <= 14; i++) {
-                    nameAux = nameAux + arrayUser.charAt(i);
+            if (array.length > 21) {
+                for (var i = 0; i <= 21; i++) {
+                    nameAux = nameAux + array.charAt(i);
                 }
                 nameAux = nameAux + '...';
             } else {
-                nameAux = user;
+                nameAux = name;
+            }
+
+            return nameAux;
+        };
+
+        var shortUserFunction = function(name) {
+            var array = name.toString();
+            var nameAux = "";
+
+            if (array.length > 14) {
+                for (var i = 0; i <= 14; i++) {
+                    nameAux = nameAux + array.charAt(i);
+                }
+                nameAux = nameAux + '...';
+            } else {
+                nameAux = name;
             }
 
             return nameAux;

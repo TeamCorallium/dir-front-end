@@ -78,8 +78,8 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                                 $scope.profiles[i].avatar = 'HTML/assets/images/default-user.png';
                             }
 
-                            $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
-                            $scope.profiles[i].owner = shortNameFunction($scope.profiles[i].owner);
+                            $scope.profiles[i].showFullname = shortName($scope.profiles[i].fullname);
+                            $scope.profiles[i].showOwner = shortName($scope.profiles[i].owner);
                         }
                     },
                     function(errResponse) {
@@ -266,7 +266,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
             }
         };
 
-        var shortNameFunction = function(name) {
+        var shortName = function(name) {
             var array = name.toString();
             var nameAux = "";
 
@@ -277,22 +277,6 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                 nameAux = nameAux + '...';
             } else {
                 nameAux = name;
-            }
-
-            return nameAux;
-        };
-
-        var shortUserFunction = function(user) {
-            var arrayUser = user;
-            var nameAux = "";
-
-            if (arrayUser.length > 14) {
-                for (var i = 0; i <= 14; i++) {
-                    nameAux = nameAux + arrayUser.charAt(i);
-                }
-                nameAux = nameAux + '...';
-            } else {
-                nameAux = user;
             }
 
             return nameAux;
