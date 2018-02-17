@@ -580,6 +580,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
 
                         for (var i = 0; i < $scope.users.length; i++) {
                             $scope.users[i].fullname = shortNameFunction($scope.users[i].fullname);
+                            $scope.users[i].owner = shortUserFunction($scope.users[i].owner);
                         }
                     },
                     function(errResponse) {

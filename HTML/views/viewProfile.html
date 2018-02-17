@@ -237,7 +237,7 @@
                                                     </div>
                                                     <div class="post-info">
                                                         <a ng-disabled="!popularUser.configVisible" ng-show="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.owner}}</a>
-                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.showName}}</a>
+                                                        <a ng-disabled="!popularUser.configVisible" ng-hide="popularUser.fullname == ''" ng-click="goToProfile(popularUser.owner)">{{popularUser.fullname}}</a>
                                                         <h5 class="lineHeight20">{{popularUser.info | htmlToPlaintext | words:10 :true}}</h5>
                                                     </div>
                                                 </li>
