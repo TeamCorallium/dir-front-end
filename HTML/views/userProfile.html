@@ -21,7 +21,7 @@
                         <strong>{{user.showName}}</strong>
                     </h4>
                     <input class="col-xs-12 padding-0 margin-top-10 margin-bottom-5" ng-show="EditInfoFlag" type="text" placeholder="{{ 'user_profile.ENTER_FULL_NAME' | translate }}" ng-model="user.fullname">
-                    <h5 class="padding-0">@{{user.username}}</h5>
+                    <h5 class="padding-0">@{{user.showUsername}}</h5>
                 </div>
                 <div class="col-xs-12">
                     <h5 ng-show="!EditInfoFlag" class="testimonial-text padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}</h5>
@@ -122,7 +122,7 @@
                                 <h4 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10" ng-show="user.fullname != ''">
                                     <strong>{{user.showName}}</strong>
                                 </h4>
-                                <h4 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.username}}</h4>
+                                <h4 ng-show="!EditInfoFlag" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0">@{{user.showUsername}}</h4>
                                 <h5 ng-show="!EditInfoFlag" class="testimonial-text col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 lineHeight20" data-appears-class="fadeInUp" data-appears-delay="100">{{user.info}}
                                 </h5>
                                 <a ng-show="!EditInfoFlag && user.email != '' && showShortEmailBox" class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 mailtoStyle" href="mailto:{{user.email}}">
@@ -150,7 +150,7 @@
                                     </div>
                                 </div>
                                 <form ng-show="EditInfoFlag" name="editUserMD" role="form" ng-controller="FormController">
-                                    <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10">@{{user.username}}</h4>
+                                    <h4 class="col-xs-12 col-sm-11 col-md-11 col-lg-11 padding-0 margin-top-10">@{{user.showUsername}}</h4>
                                     <input type="text" placeholder="{{ 'user_profile.ENTER_FULL_NAME' | translate }}" class="col-xs-12 padding-0 margin-top-10" ng-model="user.fullname">
                                     <textarea class="testimonial-text col-xs-12 padding-0 resize-none min-height-80 margin-top-10" data-appears-class="fadeInUp" ng-model="user.info" placeholder="{{ 'user_profile.ENTER_INFO' | translate }}"></textarea>
                                     <div class="form-group">

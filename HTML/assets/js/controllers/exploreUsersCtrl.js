@@ -79,6 +79,7 @@ app.controller('ExploreUsersCtrl', ["$scope", "RestService", "$state", "$rootSco
                             }
 
                             $scope.profiles[i].fullname = shortNameFunction($scope.profiles[i].fullname);
+                            $scope.profiles[i].owner = shortNameFunction($scope.profiles[i].owner);
                         }
                     },
                     function(errResponse) {

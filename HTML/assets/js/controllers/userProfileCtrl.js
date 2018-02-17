@@ -17,6 +17,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
         $scope.user = {
             profileUrl: '',
             username: '',
+            showUsername: '',
             firstname: '',
             lastname: '',
             email: '',
@@ -107,7 +108,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                         if (data.length > 0) {
                             $scope.user.profileUrl = data[0].profiles[0];
                             $scope.user.username = data[0].username;
-                            $scope.user.username = shortUserFunction($scope.user.username);
+                            $scope.user.showUsername = shortUserFunction($scope.user.username);
                             $scope.user.firstname = data[0].first_name;
                             $scope.user.lastname = data[0].last_name;
 
@@ -577,7 +578,7 @@ app.controller('UserProfileCtrl', ["$rootScope", "$scope", "$stateParams", "Rest
                     function(data) {
                         $scope.users = data.results;
 
-                        for (var i = 0; i < $scope.user.length; i++) {
+                        for (var i = 0; i < $scope.users.length; i++) {
                             $scope.users[i].fullname = shortNameFunction($scope.users[i].fullname);
                         }
                     },
