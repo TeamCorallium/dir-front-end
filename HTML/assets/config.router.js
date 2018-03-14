@@ -84,6 +84,10 @@ app.config(['$stateProvider', '$urlRouterProvider', '$controllerProvider', '$com
             url: '/terms',
             templateUrl: 'HTML/views/termsAndConditions.html',
             resolve: loadSequence('termsCtrl')
+        }).state('ar', {
+            url: '/ar',
+            templateUrl: 'HTML/views/ar/ar.html',
+            resolve: loadSequence('arCtrl')
         });
 
         // Generates a resolve object previously configured in constant.JS_REQUIRES (config.constant.js)
