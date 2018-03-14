@@ -1,5 +1,5 @@
-app.controller('ArCtrl', ["$scope", "$state", "$cookies",
-    function($scope, $state, $cookies) {
+app.controller('ArCtrl', ["$scope", "$state", "$cookies", "$window",
+    function($scope, $state, $cookies, $window) {
 
     }
 ]);
